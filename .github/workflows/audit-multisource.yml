@@ -3,6 +3,10 @@ on:
   push:
     branches: [main]
     paths:
+      - 'governance/source_rights.json'
+      - 'governance/series_events.json'
+      - 'pipeline/data_governance.py'
+      - 'tests/test_data_governance.py'
       - 'pipeline/audit_multisource.py'
       - 'pipeline/data_governance.py'
       - 'governance/**'
