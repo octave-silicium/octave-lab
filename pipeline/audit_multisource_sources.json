@@ -8,7 +8,9 @@
       "required_columns": [],
       "legal_state": "Licence Ouverte v2.0 on precise monthly dataset; raw still withheld from repo pending source review",
       "dependency_cluster": "FT_DARES_STMT",
-      "unit_of_observation": "monthly job offers filed through France Travail; counts rounded to hundreds; not hires"
+      "unit_of_observation": "monthly job offers filed through France Travail; counts rounded to hundreds; not hires",
+      "open_license_confirmed": true,
+      "license_evidence_url": "https://www.data.gouv.fr/datasets/offres-collectees-et-satisfaites-par-france-travail-brutes-mensuelles"
     },
     {
       "id": "DS-015_urssaf_private_sector_na88",

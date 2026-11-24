@@ -153,13 +153,13 @@ def run(specs, opener=urllib.request.urlopen):
               'purpose': 'SOURCE_ACCESS_AND_SCHEMA_AUDIT_ONLY',
               'source_registry': 'pipeline/audit_multisource_sources.json',
               'no_data_fusion': True, 'no_causal_inference': True,
-              'raw_data_published': False, 'sources': {}}
+              'raw_data_published_by_this_script': False, 'sources': {}}
     for s in specs:
         record = {'source_url': s['url'], 'publisher': s['publisher'],
                   'legal_state': s['legal_state'], 'dependency_cluster': s['dependency_cluster'],
                   'unit_of_observation': s['unit_of_observation'],
-                  'allowed_to_publish_raw': False,
-                  'publication_gate': 'BLOCKED_PENDING_SEMANTIC_AND_LEGAL_REVIEW'}
+                  'allowed_to_publish_raw': bool(s.get('open_license_confirmed', False)),
+                  'publication_gate': 'RAW_ARCHIVE_ONLY_NO_ECONOMIC_JOIN' if s.get('open_license_confirmed', False) else 'BLOCKED_PENDING_SEMANTIC_AND_LEGAL_REVIEW'}
         err = None
         for attempt in range(2):
             try:

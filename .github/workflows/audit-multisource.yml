@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - 'pipeline/audit_multisource.py'
+      - 'pipeline/archive_dares.py'
       - 'pipeline/audit_multisource_sources.json'
       - 'tests/test_audit_multisource.py'
       - '.github/workflows/audit-multisource.yml'
@@ -28,7 +29,9 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_audit_multisource.py' -v
       - name: Fetch official source datasets and validate schemas
         run: python pipeline/audit_multisource.py
-      - name: Commit manifest with source provenance, without redistributing raw data
+      - name: Archive lossless monthly Dares original under Licence Ouverte v2.0
+        run: python pipeline/archive_dares.py
+      - name: Commit audit manifest and Dares attributed monthly source archive
         if: always()
         shell: bash
         run: |
@@ -36,6 +39,7 @@ jobs:
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
             git add audits/latest_multisource.json
+            if [ -d snapshots/dares-ft-monthly ]; then git add snapshots/dares-ft-monthly; fi
             git diff --cached --quiet || (git commit -m 'audit(data): source access and schema manifest' && git push)
           fi
       - name: Preserve audit report artifact
