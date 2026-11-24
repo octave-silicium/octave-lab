@@ -1,5 +1,5 @@
 {
-  "version": "0.2",
+  "version": "0.3",
   "language": "fr",
   "status": "INITIAL_INTERNAL_NOT_UI_VALIDATED",
   "entries": {
@@ -210,6 +210,62 @@
       "caution": "Non actualisé, évalué uniquement aux dates annuelles; inconnu si non atteint.",
       "technical_name": "sustained_payback_year",
       "method_ref": "docs/G3-FIRM.md"
+    },
+    "ending_headcount": {
+      "label": "Personnes encore salariées à la fin",
+      "definition": "Nombre de personnes présentes dans le périmètre de paie à la fin de la trajectoire.",
+      "unit": "personnes",
+      "caution": "Pas une mesure d'emploi national ni des équivalents temps plein.",
+      "technical_name": "ending_headcount",
+      "method_ref": "docs/G3-TRANSITION.md"
+    },
+    "cumulative_hires": {
+      "label": "Embauches réalisées sur la période",
+      "definition": "Somme des entrées de salariés dans le périmètre étudié.",
+      "unit": "personnes embauchées",
+      "caution": "Ne compte pas les intentions ou annonces.",
+      "technical_name": "cumulative_hires",
+      "method_ref": "docs/G3-TRANSITION.md"
+    },
+    "cumulative_layoffs": {
+      "label": "Départs à l'initiative de l'employeur",
+      "definition": "Somme des sorties de salariés affectées à la catégorie licenciements dans le scénario.",
+      "unit": "personnes",
+      "caution": "Qualification juridique non vérifiée ; ne mesure pas tous les départs.",
+      "technical_name": "cumulative_layoffs",
+      "method_ref": "docs/G3-TRANSITION.md"
+    },
+    "cumulative_frozen_hires": {
+      "label": "Embauches budgétées mais gelées",
+      "definition": "Somme des places de recrutement explicitement gelées dans le scénario.",
+      "unit": "places budgétées",
+      "caution": "Ne sont pas des licenciements ni une estimation causale des emplois manquants.",
+      "technical_name": "cumulative_frozen_hires",
+      "method_ref": "docs/G3-TRANSITION.md"
+    },
+    "closing_cash_eur": {
+      "label": "Trésorerie à la fin de la période",
+      "definition": "Solde des encaissements et décaissements, financement inclus.",
+      "unit": "EUR",
+      "caution": "Un solde négatif est un manque de financement, pas une poursuite viable prouvée.",
+      "technical_name": "closing_cash_eur",
+      "method_ref": "docs/G3-TRANSITION.md"
+    },
+    "closing_debt_eur": {
+      "label": "Dette financière restante",
+      "definition": "Montant de principal restant après tirages et remboursements.",
+      "unit": "EUR",
+      "caution": "Hors autres engagements non modélisés.",
+      "technical_name": "closing_debt_eur",
+      "method_ref": "docs/G3-TRANSITION.md"
+    },
+    "funding_gap_at_sampled_dates_eur": {
+      "label": "Financement manquant aux dates examinées",
+      "definition": "Montant nécessaire pour ramener à zéro le plus bas solde de trésorerie simulé.",
+      "unit": "EUR",
+      "caution": "Les fluctuations entre dates ne sont pas simulées.",
+      "technical_name": "funding_gap_at_sampled_dates_eur",
+      "method_ref": "docs/G3-TRANSITION.md"
     }
   }
 }
