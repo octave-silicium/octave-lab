@@ -76,3 +76,6 @@ La cible intégrale validée est [ARCH-002](ARCH-002.md) et son [registre machin
 
 ## G3.1 v0.3 — Prospective structural contracts
 [Documentation](G3-PROSPECTIVE-ENGINE.md) : scénario de référence et alternatives, ordre et délai distincts, acteurs, chemins concurrents, interactions, frontière et arrêt, dix familles évaluées, replay épinglé. Pas de propagation chiffrée ni gate scientifique. Recette CI réussie : 249 tests, [audit](../audits/economic_prospective_v03_verified.json). Prochaine tranche G3.2 W001 opérationnelle.
+
+## G3.2 v0.1 — Operational transformation
+[Documentation](G3-OPERATIONS.md) : enveloppe déterministe de capacité/charge et qualité, benchmark MIT/NIST/SimPy, W001 synthétique. Recette CI à confirmer. E-G1 non franchi. Suite : files/calendriers et reprises, refonte structurelle, intégration investigation puis G3.3/G3.4.
