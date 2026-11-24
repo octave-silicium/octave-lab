@@ -89,3 +89,6 @@ Décision utilisateur : [UX-001](UX-001.md) et [RESULT-001](RESULT-001.md) compl
 
 ## Précision utilisateur — régimes de contrôle et responsabilité (24/11/2026)
 [TRANSFORM-001](TRANSFORM-001.md) : distinguer exécution, vérification, autorisation et responsabilité à chaque action/point de contrôle; familles composables jusqu'à autonomie nominale complète, contrôle humain non présumé permanent, qualification technique et réglementaire par contexte, criticité et repli. Exploration de variantes paramétrables selon matérialité, limites explicites, pas d'exhaustivité combinatoire. Zéro erreur observée ≠ risque nul; fiabilité parfaite hypothétique admise en scénario. W001 redesign historique = assistance IA et contrôle humain accéléré, pas refonte. G3.2 v0.3 : implémentation progressive et tests, exigences scientifiques inchangées.
+
+## G3.2 v0.3 — Refonte structurelle, première tranche
+[Documentation](G3-TRANSFORM.md) : fusion effective et rôles distincts, variants W001 machine/autorisation/échantillon/autonomie et défaut critique, qualité symétrique humain-machine. Recette à confirmer. TRANSFORM-001 précisé. Suite : second processus, politiques de file, synchronisation, sensibilité et raccordement avant G3.3/G3.4.
