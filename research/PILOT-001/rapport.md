@@ -1,31 +1,33 @@
 # OCTAVE LAB · PILOT-001 | Information et communication (NACE J)
 
 **Statut : descriptif source par source. AUCUNE inférence causale ni jointure économique autorisée.**  
-**Collecte UTC : 2026-11-24T05:21:56.643737+00:00**
+**Collecte UTC : 2026-11-24T05:23:22.263618+00:00**
 
 ## Question
 Que disent trois indicateurs différents sur les entreprises du secteur information-communication français, sans confondre emploi, déclarations d'embauche et usage déclaré de l'IA ?
 
 ## 1 · Effectifs des employeurs (Urssaf, NA88 divisions 58-63)
-- T4 2024 : **944,659** salariés CVS.
-- T4 2025 : **924,452** salariés CVS.
-- Variation annuelle descriptive : **-2.14 %**.
-- T2 2026 vs T2 2025 : **-1.80 %**.
+- T4 2024 : **944 659** salariés CVS.
+- T4 2025 : **924 452** salariés CVS.
+- Variation annuelle descriptive : **-2,14 %**.
+- T2 2026 vs T2 2025 : **-1,80 %**.
 - Définition : secteur privé couvert par l'Urssaf ; activités d'employeurs NACE 58 à 63, non métiers du numérique. Première collecte, révisions à surveiller.
 
 ## 2 · Déclarations préalables à l'embauche (Urssaf, NA38 JA+JB+JC)
-- T4 2023 : **73,972** déclarations CVS de CDI et CDD de plus d'un mois.
-- T4 2024 : **63,568** déclarations CVS de même catégorie.
-- Variation descriptive : **-14.06 %**.
+- T4 2023 : **73 972** déclarations CVS de CDI et CDD de plus d'un mois.
+- T4 2024 : **63 568** déclarations CVS de même catégorie.
+- Variation descriptive : **-14,06 %**.
 - Les mois et trimestres 2025 restent exclus du calcul, en raison des anomalies déclaratives signalées par le producteur.
 - Ces déclarations ne sont ni des embauches effectivement réalisées ni un solde net d'emploi.
 
 ## 3 · Adoption déclarée de l'IA (Eurostat, isoc_eb_ain2)
-- 2023 : **29.56 %** des entreprises concernées.
-- 2024 : **41.76 %**.
-- 2025 : **58.98 %**.
-- Variation 2023-2024 (ancien panier) : **+12.20 points**. **Pas de taux de croissance 2024-2025 publié** : le panier de technologies suivi s’élargit en 2025 (génération d’images, vidéos et sons).
+- 2023 : **29,56 %** des entreprises concernées.
+- 2024 : **41,76 %**.
+- 2025 : **58,98 %**.
+- Variation 2023-2024 (ancien panier) : **+12,20 points**. **Pas de taux de croissance 2024-2025 publié** : le panier de technologies suivi s’élargit en 2025 (génération d’images, vidéos et sons).
 - Champ : entreprises de 10 personnes occupées ou plus, section NACE J, France ; résultat d'enquête, non mesure de tâches remplacées.
+
+Note méthodologique de l’enquête Eurostat : https://ec.europa.eu/eurostat/documents/3859598/22759373/KS-01-25-065-EN-N.pdf .
 
 ## 4 · Confrontation méthodologique
 Ces trois indicateurs NE FORMENT PAS une analyse causale. L'Urssaf fournit une famille administrative liée de mesures d'effectifs et de déclarations ; Eurostat fournit une enquête d'entreprises. Une hausse d'adoption de l'IA ne démontre ni suppression d'emploi ni hausse de productivité. Le secteur J mélange services informatiques, édition, médias et télécommunications.
