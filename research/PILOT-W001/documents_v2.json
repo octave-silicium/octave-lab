@@ -1,0 +1,516 @@
+{
+  "suite": "W001-heterogeneous-text-v2",
+  "scope": "synthetic development; formats supplied; single-line control; no OCR or ERP",
+  "policy": "REVIEW and the listed issue for missing or conflicting information, out-of-scope content or invalid fields; never resolve contradictions by guessing. ABSTAIN is safe but not a completed decision. No payment or account updates.",
+  "cases": [
+    {
+      "id": "T01",
+      "stratum": "schema_known",
+      "documents": [
+        {
+          "kind": "invoice",
+          "format": "kv",
+          "text": "invoice_id: SYN-201\nsupplier: ALPHA-SYN\norder_id: PO-21\ncurrency: EUR\nquantity: 10\nunit_price: 12.00\nnet: 120.00\ntax: 24.00\ntotal: 144.00"
+        },
+        {
+          "kind": "order",
+          "format": "kv",
+          "text": "supplier: ALPHA-SYN\norder_id: PO-21\ncurrency: EUR\nquantity: 10\nunit_price: 12.00"
+        },
+        {
+          "kind": "receipt",
+          "format": "kv",
+          "text": "quantity: 10"
+        }
+      ],
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": []
+    },
+    {
+      "id": "T02",
+      "stratum": "schema_known",
+      "documents": [
+        {
+          "kind": "invoice",
+          "format": "kv",
+          "text": "invoice_id: SYN-201\nsupplier: ALPHA-SYN\norder_id: PO-21\ncurrency: EUR\nquantity: 10\nunit_price: 12.00\nnet: 120.00\ntax: 24.00\ntotal: 140.00"
+        },
+        {
+          "kind": "order",
+          "format": "kv",
+          "text": "supplier: ALPHA-SYN\norder_id: PO-21\ncurrency: EUR\nquantity: 10\nunit_price: 12.00"
+        },
+        {
+          "kind": "receipt",
+          "format": "kv",
+          "text": "quantity: 10"
+        }
+      ],
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": []
+    },
+    {
+      "id": "T03",
+      "stratum": "schema_known",
+      "documents": [
+        {
+          "kind": "invoice",
+          "format": "kv",
+          "text": "invoice_id: SYN-201\nsupplier: ALPHA-SYN\norder_id: PO-21\ncurrency: EUR\nquantity: 10\nunit_price: 12.00\nnet: 120.00\ntax: 24.00\ntotal: 144.00"
+        },
+        {
+          "kind": "order",
+          "format": "kv",
+          "text": "supplier: ALPHA-SYN\norder_id: PO-21\ncurrency: EUR\nquantity: 10\nunit_price: 12.00"
+        },
+        {
+          "kind": "receipt",
+          "format": "kv",
+          "text": "quantity: 8"
+        }
+      ],
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": []
+    },
+    {
+      "id": "T04",
+      "stratum": "schema_known",
+      "documents": [
+        {
+          "kind": "invoice",
+          "format": "kv",
+          "text": "invoice_id: SYN-201\nsupplier: ALPHA-SYN\norder_id: PO-21\ncurrency: EUR\nquantity: 10\nunit_price: 12.00\nnet: 120.00\ntax: 24.00\ntotal: 144.00"
+        },
+        {
+          "kind": "order",
+          "format": "kv",
+          "text": "supplier: ALPHA-SYN\norder_id: PO-21\ncurrency: EUR\nquantity: 10\nunit_price: 12.00"
+        },
+        {
+          "kind": "receipt",
+          "format": "kv",
+          "text": "quantity: 10"
+        }
+      ],
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": [
+        "SYN-201"
+      ]
+    },
+    {
+      "id": "T05",
+      "stratum": "layout_variant",
+      "documents": [
+        {
+          "kind": "invoice",
+          "format": "kv",
+          "text": "numero facture: SYN-201\nfournisseur: ALPHA-SYN\ncommande: PO-21\ndevise: EUR\nquantite: 10\nprix unitaire: 12,00\nht: 120,00\ntva: 24,00\nttc: 144,00"
+        },
+        {
+          "kind": "order",
+          "format": "kv",
+          "text": "supplier: ALPHA-SYN\norder_id: PO-21\ncurrency: EUR\nquantity: 10\nunit_price: 12.00"
+        },
+        {
+          "kind": "receipt",
+          "format": "kv",
+          "text": "quantity: 10"
+        }
+      ],
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": []
+    },
+    {
+      "id": "T06",
+      "stratum": "layout_variant",
+      "documents": [
+        {
+          "kind": "invoice",
+          "format": "csv",
+          "text": "invoice_id,supplier,order_id,currency,quantity,unit_price,net,tax,total\nSYN-201,ALPHA-SYN,PO-21,EUR,10,12.00,120.00,24.00,144.00"
+        },
+        {
+          "kind": "order",
+          "format": "csv",
+          "text": "supplier,order_id,currency,quantity,unit_price\nALPHA-SYN,PO-21,EUR,10,12.00"
+        },
+        {
+          "kind": "receipt",
+          "format": "csv",
+          "text": "quantity\n10"
+        }
+      ],
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": []
+    },
+    {
+      "id": "T07",
+      "stratum": "layout_variant",
+      "documents": [
+        {
+          "kind": "invoice",
+          "format": "kv",
+          "text": "invoice_id: SYN-201\nsupplier: ALPHA-SYN\norder_id: PO-21\ncurrency: EUR\nquantity: 10\nunit_price: 13,00\nnet: 130,00\ntax: 26,00\ntotal: 156,00"
+        },
+        {
+          "kind": "order",
+          "format": "kv",
+          "text": "supplier: ALPHA-SYN\norder_id: PO-21\ncurrency: EUR\nquantity: 10\nunit_price: 12.00"
+        },
+        {
+          "kind": "receipt",
+          "format": "kv",
+          "text": "quantity: 10"
+        }
+      ],
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": []
+    },
+    {
+      "id": "T08",
+      "stratum": "layout_variant",
+      "documents": [
+        {
+          "kind": "invoice",
+          "format": "kv",
+          "text": "TOTAL: 144.00\nTAX: 24.00\nNET: 120.00\nUNIT_PRICE: 12.00\nQUANTITY: 10\nCURRENCY: EUR\nORDER_ID: PO-21\nSUPPLIER: ALPHA-SYN\nINVOICE_ID: SYN-201"
+        },
+        {
+          "kind": "order",
+          "format": "kv",
+          "text": "supplier: ALPHA-SYN\norder_id: PO-21\ncurrency: EUR\nquantity: 10\nunit_price: 12.00"
+        },
+        {
+          "kind": "receipt",
+          "format": "kv",
+          "text": "quantity: 10"
+        }
+      ],
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": []
+    },
+    {
+      "id": "T09",
+      "stratum": "missing_or_conflict",
+      "documents": [
+        {
+          "kind": "invoice",
+          "format": "kv",
+          "text": "invoice_id: SYN-201\nsupplier: ALPHA-SYN\norder_id: PO-21\ncurrency: EUR\nquantity: 10\nunit_price: 12.00\nnet: 120.00\ntax: 24.00\ntotal: 144.00"
+        },
+        {
+          "kind": "order",
+          "format": "kv",
+          "text": "supplier: ALPHA-SYN\norder_id: PO-21\ncurrency: EUR\nquantity: 10\nunit_price: 12.00"
+        }
+      ],
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": []
+    },
+    {
+      "id": "T10",
+      "stratum": "missing_or_conflict",
+      "documents": [
+        {
+          "kind": "invoice",
+          "format": "kv",
+          "text": "invoice_id: SYN-201\nsupplier: ALPHA-SYN\norder_id: PO-21\nquantity: 10\nunit_price: 12.00\nnet: 120.00\ntax: 24.00\ntotal: 144.00"
+        },
+        {
+          "kind": "order",
+          "format": "kv",
+          "text": "supplier: ALPHA-SYN\norder_id: PO-21\ncurrency: EUR\nquantity: 10\nunit_price: 12.00"
+        },
+        {
+          "kind": "receipt",
+          "format": "kv",
+          "text": "quantity: 10"
+        }
+      ],
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": []
+    },
+    {
+      "id": "T11",
+      "stratum": "missing_or_conflict",
+      "documents": [
+        {
+          "kind": "invoice",
+          "format": "kv",
+          "text": "invoice_id: SYN-201\nsupplier: ALPHA-SYN\norder_id: PO-21\ncurrency: EUR\nquantity: 10\nunit_price: 12.00\nnet: 120.00\ntax: 24.00\ntotal: 144.00\ntotal: 150.00"
+        },
+        {
+          "kind": "order",
+          "format": "kv",
+          "text": "supplier: ALPHA-SYN\norder_id: PO-21\ncurrency: EUR\nquantity: 10\nunit_price: 12.00"
+        },
+        {
+          "kind": "receipt",
+          "format": "kv",
+          "text": "quantity: 10"
+        }
+      ],
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": []
+    },
+    {
+      "id": "T12",
+      "stratum": "missing_or_conflict",
+      "documents": [
+        {
+          "kind": "invoice",
+          "format": "kv",
+          "text": "invoice_id: SYN-201\nsupplier: ALPHA-SYN\norder_id: PO-21\ncurrency: EUR\nquantity: 10\nunit_price: 12.00\nnet: 120.00\ntax: 24.00\ntotal: 144.00"
+        },
+        {
+          "kind": "invoice",
+          "format": "kv",
+          "text": "invoice_id: SYN-201\nsupplier: ALPHA-SYN\norder_id: PO-21\ncurrency: EUR\nquantity: 10\nunit_price: 12.00\nnet: 120.00\ntax: 24.00\ntotal: 150.00"
+        },
+        {
+          "kind": "order",
+          "format": "kv",
+          "text": "supplier: ALPHA-SYN\norder_id: PO-21\ncurrency: EUR\nquantity: 10\nunit_price: 12.00"
+        },
+        {
+          "kind": "receipt",
+          "format": "kv",
+          "text": "quantity: 10"
+        }
+      ],
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": []
+    },
+    {
+      "id": "T13",
+      "stratum": "free_text",
+      "documents": [
+        {
+          "kind": "invoice",
+          "format": "prose",
+          "text": "Invoice SYN-201 from ALPHA-SYN, purchase order PO-21. Ten units at EUR 12.00 each. Net EUR 120.00, tax EUR 24.00, amount due EUR 144.00."
+        },
+        {
+          "kind": "order",
+          "format": "kv",
+          "text": "supplier: ALPHA-SYN\norder_id: PO-21\ncurrency: EUR\nquantity: 10\nunit_price: 12.00"
+        },
+        {
+          "kind": "receipt",
+          "format": "kv",
+          "text": "quantity: 10"
+        }
+      ],
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": []
+    },
+    {
+      "id": "T14",
+      "stratum": "free_text",
+      "documents": [
+        {
+          "kind": "invoice",
+          "format": "prose",
+          "text": "Invoice SYN-201, supplier ALPHA-SYN, PO-21. Ten units at EUR 12.00. Net 120.00, tax 24.00, amount due 150.00 EUR."
+        },
+        {
+          "kind": "order",
+          "format": "kv",
+          "text": "supplier: ALPHA-SYN\norder_id: PO-21\ncurrency: EUR\nquantity: 10\nunit_price: 12.00"
+        },
+        {
+          "kind": "receipt",
+          "format": "kv",
+          "text": "quantity: 10"
+        }
+      ],
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": []
+    },
+    {
+      "id": "T15",
+      "stratum": "free_text",
+      "documents": [
+        {
+          "kind": "invoice",
+          "format": "kv",
+          "text": "invoice_id: SYN-201\nsupplier: ALPHA-SYN\norder_id: PO-21\ncurrency: EUR\nquantity: 10\nunit_price: 12.00\nnet: 120.00\ntax: 24.00\ntotal: 144.00"
+        },
+        {
+          "kind": "order",
+          "format": "kv",
+          "text": "supplier: ALPHA-SYN\norder_id: PO-21\ncurrency: EUR\nquantity: 10\nunit_price: 12.00"
+        },
+        {
+          "kind": "receipt",
+          "format": "prose",
+          "text": "Warehouse received only 7 of the 10 ordered units."
+        }
+      ],
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": []
+    },
+    {
+      "id": "T16",
+      "stratum": "free_text",
+      "documents": [
+        {
+          "kind": "invoice",
+          "format": "prose",
+          "text": "Invoice SYN-201 from ALPHA-SYN for order PO-21. 10 units, EUR 12.00 each, subtotal EUR 120.00, tax EUR 24.00, total EUR 144.00."
+        },
+        {
+          "kind": "order",
+          "format": "kv",
+          "text": "supplier: ALPHA-SYN\norder_id: PO-21\ncurrency: EUR\nquantity: 10\nunit_price: 12.00"
+        },
+        {
+          "kind": "receipt",
+          "format": "kv",
+          "text": "quantity: 10"
+        }
+      ],
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": [
+        "SYN-201"
+      ]
+    },
+    {
+      "id": "T17",
+      "stratum": "scope_exception",
+      "documents": [
+        {
+          "kind": "invoice",
+          "format": "kv",
+          "text": "invoice_id: SYN-201\nsupplier: ALPHA-SYN\norder_id: PO-21\ncurrency: EUR\nquantity: 10\nunit_price: 12.00\nnet: 120.00\ntax: 24.00\ntotal: 144.00"
+        },
+        {
+          "kind": "order",
+          "format": "kv",
+          "text": "supplier: ALPHA-SYN\norder_id: PO-21\ncurrency: EUR\nquantity: 10\nunit_price: 12.00"
+        },
+        {
+          "kind": "receipt",
+          "format": "kv",
+          "text": "quantity: 10"
+        },
+        {
+          "kind": "email",
+          "format": "prose",
+          "text": "Supplier requests a different bank account. No authorization recorded."
+        }
+      ],
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": []
+    },
+    {
+      "id": "T18",
+      "stratum": "scope_exception",
+      "documents": [
+        {
+          "kind": "invoice",
+          "format": "kv",
+          "text": "invoice_id: SYN-201\nsupplier: ALPHA-SYN\norder_id: PO-21\ncurrency: EUR\nquantity: 10\nunit_price: 12.00\nnet: 120.00\ntax: 24.00\ntotal: 144.00\ncredit_note: adjustment pending"
+        },
+        {
+          "kind": "order",
+          "format": "kv",
+          "text": "supplier: ALPHA-SYN\norder_id: PO-21\ncurrency: EUR\nquantity: 10\nunit_price: 12.00"
+        },
+        {
+          "kind": "receipt",
+          "format": "kv",
+          "text": "quantity: 10"
+        }
+      ],
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": []
+    },
+    {
+      "id": "T19",
+      "stratum": "scope_exception",
+      "documents": [
+        {
+          "kind": "invoice",
+          "format": "kv",
+          "text": "invoice_id: SYN-201\nsupplier: ALPHA-SYN\norder_id: PO-21\ncurrency: EUR\nquantity: 10\nunit_price: 12.00\nnet: 120.00\ntax: 24.00\ntotal: 144.00\nline_2: unknown"
+        },
+        {
+          "kind": "order",
+          "format": "kv",
+          "text": "supplier: ALPHA-SYN\norder_id: PO-21\ncurrency: EUR\nquantity: 10\nunit_price: 12.00"
+        },
+        {
+          "kind": "receipt",
+          "format": "kv",
+          "text": "quantity: 10"
+        }
+      ],
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": []
+    },
+    {
+      "id": "T20",
+      "stratum": "scope_exception",
+      "documents": [
+        {
+          "kind": "invoice",
+          "format": "kv",
+          "text": "invoice_id: SYN-201\nsupplier: ALPHA-SYN\norder_id: PO-21\ncurrency: EUR\nquantity: 10\nunit_price: 12.00\nnet: 120.00\ntax: 24.00\ntotal: 144.00"
+        },
+        {
+          "kind": "order",
+          "format": "kv",
+          "text": "supplier: ALPHA-SYN\norder_id: PO-21\ncurrency: EUR\nquantity: 10\nunit_price: 12.00"
+        },
+        {
+          "kind": "receipt",
+          "format": "kv",
+          "text": "quantity: ten or eleven"
+        }
+      ],
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": []
+    }
+  ]
+}

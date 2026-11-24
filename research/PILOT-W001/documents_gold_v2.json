@@ -1,0 +1,115 @@
+{
+  "cases_sha256": "bda8091f326a68a650a3080aefcf31823cc9e6ccf80b6501a71ed54aa5f237ef",
+  "expected": {
+    "T01": {
+      "decision": "ACCEPT",
+      "issues": []
+    },
+    "T02": {
+      "decision": "REVIEW",
+      "issues": [
+        "TOTAL_MISMATCH"
+      ]
+    },
+    "T03": {
+      "decision": "REVIEW",
+      "issues": [
+        "QUANTITY_MISMATCH"
+      ]
+    },
+    "T04": {
+      "decision": "REVIEW",
+      "issues": [
+        "DUPLICATE"
+      ]
+    },
+    "T05": {
+      "decision": "ACCEPT",
+      "issues": []
+    },
+    "T06": {
+      "decision": "ACCEPT",
+      "issues": []
+    },
+    "T07": {
+      "decision": "REVIEW",
+      "issues": [
+        "PRICE_MISMATCH"
+      ]
+    },
+    "T08": {
+      "decision": "ACCEPT",
+      "issues": []
+    },
+    "T09": {
+      "decision": "REVIEW",
+      "issues": [
+        "MISSING_DOCUMENT"
+      ]
+    },
+    "T10": {
+      "decision": "REVIEW",
+      "issues": [
+        "MISSING_FIELD"
+      ]
+    },
+    "T11": {
+      "decision": "REVIEW",
+      "issues": [
+        "CONTRADICTORY_FIELD"
+      ]
+    },
+    "T12": {
+      "decision": "REVIEW",
+      "issues": [
+        "CONTRADICTORY_DOCUMENT"
+      ]
+    },
+    "T13": {
+      "decision": "ACCEPT",
+      "issues": []
+    },
+    "T14": {
+      "decision": "REVIEW",
+      "issues": [
+        "TOTAL_MISMATCH"
+      ]
+    },
+    "T15": {
+      "decision": "REVIEW",
+      "issues": [
+        "QUANTITY_MISMATCH"
+      ]
+    },
+    "T16": {
+      "decision": "REVIEW",
+      "issues": [
+        "DUPLICATE"
+      ]
+    },
+    "T17": {
+      "decision": "REVIEW",
+      "issues": [
+        "OUT_OF_SCOPE_DOCUMENT"
+      ]
+    },
+    "T18": {
+      "decision": "REVIEW",
+      "issues": [
+        "OUT_OF_SCOPE_FIELD"
+      ]
+    },
+    "T19": {
+      "decision": "REVIEW",
+      "issues": [
+        "OUT_OF_SCOPE_FIELD"
+      ]
+    },
+    "T20": {
+      "decision": "REVIEW",
+      "issues": [
+        "INVALID_FIELD"
+      ]
+    }
+  }
+}
