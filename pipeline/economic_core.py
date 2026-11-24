@@ -28,7 +28,7 @@ def day(x):
     except ValueError:return False
 def ref(x):return isinstance(x,str) and re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9:._/-]{0,255}@[1-9][0-9]*",x) is not None
 def identity(i,r):
-    require(type(r) is int and r>0 and ref(f"{i}@{r}"),"IDENTITY")
+    require(isinstance(i,str) and type(r) is int and r>0 and ref(f"{i}@{r}"),"IDENTITY")
     return f"{i}@{r}"
 def digest(b):return hashlib.sha256(b).hexdigest()
 def canonical(x):
@@ -208,13 +208,18 @@ class Graph:
             ev=[self.evidence[k] for k in p.evidence_refs]
             if p.basis=="OBSERVED":
                 require(bool(ev) and all(e.kind=="NATIVE_SOURCE" and e.quality=="DESCRIPTIVE_ONLY" and e.rights=="INTERNAL_ONLY" for e in ev),"OBSERVED_PARAMETER_BLOCKED")
-            if p.basis=="ASSUMPTION":require(any(e.kind=="ASSUMPTION" for e in ev),"ASSUMPTION_REF")
+            if p.basis=="ASSUMPTION":require(any(e.kind=="ASSUMPTION" for e in ev) and all(e.rights=="INTERNAL_ONLY" and e.quality not in {"WITHHELD","RESTRICTED","REVIEW_REQUIRED"} for e in ev),"ASSUMPTION_REF")
         for c in self.claims.values():
             require(set(c.evidence_refs)<=self.evidence.keys() and set(c.dependency_refs)<=self.claims.keys() and set(c.parameter_refs)<=self.parameters.keys() and set(c.mechanism_refs)<=requirements.mechanisms,"CLAIM_REFERENCE")
             ev=[self.evidence[k] for k in c.evidence_refs]
             if c.claim_type=="OBSERVATION":
                 require(not c.dependency_refs and not c.parameter_refs and all(e.kind=="NATIVE_SOURCE" and e.quality=="DESCRIPTIVE_ONLY" and e.rights=="INTERNAL_ONLY" for e in ev),"OBSERVATION_BLOCKED")
             if c.quantity is not None and c.quantity.value is not None:
+                # No qualified arithmetic or cross-scope comparison in v0.1.
+                require(c.claim_type in {"OBSERVATION","CONDITIONAL_SCENARIO"},"NUMERIC_METHOD_GATE")
+                if c.claim_type=="CONDITIONAL_SCENARIO":
+                    require(bool(c.parameter_refs) and any(self.parameters[k].basis=="ASSUMPTION" for k in c.parameter_refs),"SCENARIO_ASSUMPTION_REQUIRED")
+                    require(all(self.parameters[k].scope==c.scope for k in c.parameter_refs) and all(self.claims[k].scope==c.scope for k in c.dependency_refs),"SCOPE_TRANSFER_NOT_QUALIFIED")
                 require(all(e.quality not in {"WITHHELD","RESTRICTED","REVIEW_REQUIRED"} and e.rights=="INTERNAL_ONLY" for e in ev),"NUMERIC_EVIDENCE_BLOCKED")
                 require(all(self.parameters[k].quantity.value is not None for k in c.parameter_refs),"UNKNOWN_DEPENDENCY")
                 require(all(self.claims[k].quantity is not None and self.claims[k].quantity.value is not None for k in c.dependency_refs),"UNKNOWN_DEPENDENCY")

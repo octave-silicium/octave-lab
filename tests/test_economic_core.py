@@ -54,3 +54,23 @@ class CoreTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,"NUMERIC"):Quantity(0.1,"FRACTION")
         with self.assertRaisesRegex(ValueError,"RATIO_RANGE"):Quantity(Decimal("101"),"PERCENT")
         with self.assertRaisesRegex(ValueError,"BOUNDS"):Quantity(Decimal("1"),"EUR",lower=Decimal("2"),upper=Decimal("3"))
+
+    def test_structural_path_order_not_delay(self):
+        from pipeline.economic_paths import Scenario,Path,trace
+        g=graph();s=Scenario("fixture:scenario",1,None,"synthetic",("fixture:time@1",),("future",),"bounded","unknown","measurement")
+        p=Path(s.key,"fixture:action@1",("fixture:edge@1",),"No qualified onward link")
+        result=trace(g,s,p)
+        self.assertEqual(result["steps"][0]["order"],1)
+        self.assertEqual(result["steps"][0]["elapsed_model_steps"],0)
+        self.assertIsNone(result["computed_effect"])
+        with self.assertRaisesRegex(ValueError,"DISCONTINUITY"):trace(g,s,replace(p,shock_entity="fixture:process@1"))
+    def test_no_zero_lag_feedback(self):
+        from pipeline.economic_paths import Scenario,Path,trace
+        r,e,p,c,a,b,edge=example()
+        back=replace(edge,id="fixture:back",origin=b.key,target=a.key)
+        g=Graph(r,entities=(a,b),evidence=(e,),parameters=(p,),claims=(c,),assertions=(edge,back))
+        s=Scenario("fixture:scenario",1,None,"synthetic",(p.key,),("future",),"bounded","unknown","measurement")
+        path=Path(s.key,a.key,(edge.key,back.key),"stop")
+        with self.assertRaisesRegex(ValueError,"FEEDBACK"):trace(g,s,path)
+        g=Graph(r,entities=(a,b),evidence=(e,),parameters=(p,),claims=(c,),assertions=(edge,replace(back,delay_steps=1)))
+        self.assertEqual(trace(g,s,path)["steps"][-1]["elapsed_model_steps"],1)
