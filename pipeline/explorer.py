@@ -240,7 +240,7 @@ class LazyExplorer:
         return {"decision":"MATCH","series":x.detail(source,sid,start,end)}
 
 
-def make_handler(explorer):
+def make_handler(explorer,private=None):
     class Handler(BaseHTTPRequestHandler):
         def log_message(self,*args):
             pass
@@ -267,6 +267,9 @@ def make_handler(explorer):
                 if any(len(v)!=1 for v in q.values()):
                     raise ValueError("DUPLICATE_PARAMETER")
                 q={k:v[0] for k,v in q.items()}
+                if u.path.startswith("/api/private/"):
+                    if private is None:return self.j(404,{"error":"Ressource privée non configurée."})
+                    return self.j(200,private.dispatch(u.path,q))
                 if u.path=="/api/sources" and not q:
                     return self.j(200,{"version":VERSION,"sources":explorer.sources(),"mode":"LOCAL_INTERNAL","labels":DIM_LABELS})
                 if u.path=="/api/discover" and set(q)<={"source","filters","q"}:
@@ -294,14 +297,22 @@ def main():
     ap=argparse.ArgumentParser()
     ap.add_argument("--live",action="store_true")
     ap.add_argument("--port",type=int,default=8765)
+    ap.add_argument("--private-db")
+    ap.add_argument("--private-sha")
     args=ap.parse_args()
+    if bool(args.private_db)!=bool(args.private_sha):ap.error("--private-db and --private-sha must be supplied together")
+    private=None
+    if args.private_db:
+        from .private_api import PrivateRoutes
+        private=PrivateRoutes(args.private_db,args.private_sha)
     t=time.perf_counter()
-    server=ThreadingHTTPServer(("127.0.0.1",args.port),make_handler(LazyExplorer(live=args.live)))
+    server=ThreadingHTTPServer(("127.0.0.1",args.port),make_handler(LazyExplorer(live=args.live),private))
     print(f"Octave Lab local : http://127.0.0.1:{server.server_port} | prêt en {time.perf_counter()-t:.2f}s",flush=True)
     try:
         server.serve_forever()
     finally:
         server.server_close()
+        if private:private.close()
 
 if __name__=="__main__":
     main()

@@ -6,14 +6,14 @@ HEX=re.compile(r"[0-9a-f]{64}")
 PERIOD=re.compile(r"\d{4}(?:-T[1-4])?")
 
 class PrivateLot:
-    def __init__(self,path,expected_sha):
+    def __init__(self,path,expected_sha,*,cross_thread=False):
         self.path=Path(path).expanduser().resolve()
         if not HEX.fullmatch(expected_sha):raise ValueError("SHA256")
         if not self.path.is_file() or any(Path(str(self.path)+s).exists() for s in ("-wal","-journal","-shm")):raise ValueError("NOT_CLOSED_SNAPSHOT")
         with self.path.open("rb") as f:
             if hashlib.file_digest(f,"sha256").hexdigest()!=expected_sha:raise ValueError("SNAPSHOT_INTEGRITY")
         self.sha=expected_sha
-        self.db=sqlite3.connect(self.path.as_uri()+"?mode=ro&immutable=1",uri=True)
+        self.db=sqlite3.connect(self.path.as_uri()+"?mode=ro&immutable=1",uri=True,check_same_thread=not cross_thread)
         self.db.row_factory=sqlite3.Row
         self.db.execute("PRAGMA query_only=ON")
         self.db.execute("PRAGMA trusted_schema=OFF")
