@@ -1,0 +1,374 @@
+{
+  "date": "2026-11-24",
+  "status": "TECHNICAL_ACCEPTANCE",
+  "tested_commit": "1af8b4186cfef281f72a1c2d65aa4f5a58b840a9",
+  "run_id": 45400889575,
+  "job_id": 138468866180,
+  "tests": 303,
+  "seconds": 10.832,
+  "conclusion": "success",
+  "fixture": "W002_DIMENSIONAL_SYNTHETIC",
+  "native_task_id": "onet:31.0:task:51-9061.00:12474",
+  "native_task_row": 17432,
+  "source_sha256": "4568e14d8db6f05551ad37e056e909b13ebae4a26bcb5ff915bb5f281d582c57",
+  "process_sha256": "1f6d21e10e3f88d63419fde35ca582510aa4523d3733daa3f1fa3ff92f1831b7",
+  "baseline": {
+    "label": "Manipulation et décision humaines, mesure instrumentale ; 1 instrument(s), cycle de mesure 300 s",
+    "arrivals": 36,
+    "completed_pieces": 23,
+    "correct_completed_pieces": 23,
+    "unfinished_pieces": 13,
+    "human_seconds": 5730,
+    "resources": [
+      {
+        "resource": "gauge",
+        "kind": "MACHINE",
+        "available_seconds": 7200,
+        "busy_seconds": 6900,
+        "idle_available_seconds": 300,
+        "utilization": "23/24",
+        "queue_case_seconds": 73710,
+        "unfinished_waiting_cases": 13
+      },
+      {
+        "resource": "operator",
+        "kind": "HUMAN",
+        "available_seconds": 7200,
+        "busy_seconds": 5730,
+        "idle_available_seconds": 1470,
+        "utilization": "191/240",
+        "queue_case_seconds": 1530,
+        "unfinished_waiting_cases": 0
+      },
+      {
+        "resource": "robot",
+        "kind": "MACHINE",
+        "available_seconds": 7200,
+        "busy_seconds": 0,
+        "idle_available_seconds": 7200,
+        "utilization": "0",
+        "queue_case_seconds": 0,
+        "unfinished_waiting_cases": 0
+      },
+      {
+        "resource": "software",
+        "kind": "MACHINE",
+        "available_seconds": 7200,
+        "busy_seconds": 0,
+        "idle_available_seconds": 7200,
+        "utilization": "0",
+        "queue_case_seconds": 0,
+        "unfinished_waiting_cases": 0
+      }
+    ],
+    "critical_defects": 0
+  },
+  "alternatives": {
+    "w002:digital-300-1": {
+      "alternative": {
+        "label": "Décision et rapport automatisés, manipulation humaine ; 1 instrument(s), cycle de mesure 300 s",
+        "arrivals": 36,
+        "completed_pieces": 23,
+        "correct_completed_pieces": 23,
+        "unfinished_pieces": 13,
+        "human_seconds": 2850,
+        "resources": [
+          {
+            "resource": "gauge",
+            "kind": "MACHINE",
+            "available_seconds": 7200,
+            "busy_seconds": 6900,
+            "idle_available_seconds": 300,
+            "utilization": "23/24",
+            "queue_case_seconds": 74220,
+            "unfinished_waiting_cases": 13
+          },
+          {
+            "resource": "operator",
+            "kind": "HUMAN",
+            "available_seconds": 7200,
+            "busy_seconds": 2850,
+            "idle_available_seconds": 4350,
+            "utilization": "19/48",
+            "queue_case_seconds": 0,
+            "unfinished_waiting_cases": 0
+          },
+          {
+            "resource": "robot",
+            "kind": "MACHINE",
+            "available_seconds": 7200,
+            "busy_seconds": 0,
+            "idle_available_seconds": 7200,
+            "utilization": "0",
+            "queue_case_seconds": 0,
+            "unfinished_waiting_cases": 0
+          },
+          {
+            "resource": "software",
+            "kind": "MACHINE",
+            "available_seconds": 7200,
+            "busy_seconds": 365,
+            "idle_available_seconds": 6835,
+            "utilization": "73/1440",
+            "queue_case_seconds": 0,
+            "unfinished_waiting_cases": 0
+          }
+        ],
+        "critical_defects": 0
+      },
+      "quality_comparable": true,
+      "delta": {
+        "completed_cases": 0,
+        "correct_completed_cases": 0,
+        "unfinished_cases": 0,
+        "human_service_seconds": -2880,
+        "total_wait_case_seconds": -1020
+      },
+      "sha256": "66d7a716026efaa5315be72dcbc25a7091aeb7caf145d1dd05aca12f78ed83f6"
+    },
+    "w002:robot-300-1": {
+      "alternative": {
+        "label": "Manipulation et décision automatisées ; 1 instrument(s), cycle de mesure 300 s",
+        "arrivals": 36,
+        "completed_pieces": 23,
+        "correct_completed_pieces": 23,
+        "unfinished_pieces": 13,
+        "human_seconds": 0,
+        "resources": [
+          {
+            "resource": "gauge",
+            "kind": "MACHINE",
+            "available_seconds": 7200,
+            "busy_seconds": 6900,
+            "idle_available_seconds": 300,
+            "utilization": "23/24",
+            "queue_case_seconds": 74220,
+            "unfinished_waiting_cases": 13
+          },
+          {
+            "resource": "operator",
+            "kind": "HUMAN",
+            "available_seconds": 7200,
+            "busy_seconds": 0,
+            "idle_available_seconds": 7200,
+            "utilization": "0",
+            "queue_case_seconds": 0,
+            "unfinished_waiting_cases": 0
+          },
+          {
+            "resource": "robot",
+            "kind": "MACHINE",
+            "available_seconds": 7200,
+            "busy_seconds": 2850,
+            "idle_available_seconds": 4350,
+            "utilization": "19/48",
+            "queue_case_seconds": 0,
+            "unfinished_waiting_cases": 0
+          },
+          {
+            "resource": "software",
+            "kind": "MACHINE",
+            "available_seconds": 7200,
+            "busy_seconds": 365,
+            "idle_available_seconds": 6835,
+            "utilization": "73/1440",
+            "queue_case_seconds": 0,
+            "unfinished_waiting_cases": 0
+          }
+        ],
+        "critical_defects": 0
+      },
+      "quality_comparable": true,
+      "delta": {
+        "completed_cases": 0,
+        "correct_completed_cases": 0,
+        "unfinished_cases": 0,
+        "human_service_seconds": -5730,
+        "total_wait_case_seconds": -1020
+      },
+      "sha256": "7f5d8e88b1451a230892d5f9396571a6dad258b8235666556415248b05366c59"
+    },
+    "w002:robot-300-2": {
+      "alternative": {
+        "label": "Manipulation et décision automatisées ; 2 instrument(s), cycle de mesure 300 s",
+        "arrivals": 36,
+        "completed_pieces": 36,
+        "correct_completed_pieces": 36,
+        "unfinished_pieces": 0,
+        "human_seconds": 0,
+        "resources": [
+          {
+            "resource": "gauge",
+            "kind": "MACHINE",
+            "available_seconds": 14400,
+            "busy_seconds": 10800,
+            "idle_available_seconds": 3600,
+            "utilization": "3/4",
+            "queue_case_seconds": 0,
+            "unfinished_waiting_cases": 0
+          },
+          {
+            "resource": "operator",
+            "kind": "HUMAN",
+            "available_seconds": 7200,
+            "busy_seconds": 0,
+            "idle_available_seconds": 7200,
+            "utilization": "0",
+            "queue_case_seconds": 0,
+            "unfinished_waiting_cases": 0
+          },
+          {
+            "resource": "robot",
+            "kind": "MACHINE",
+            "available_seconds": 7200,
+            "busy_seconds": 3240,
+            "idle_available_seconds": 3960,
+            "utilization": "9/20",
+            "queue_case_seconds": 0,
+            "unfinished_waiting_cases": 0
+          },
+          {
+            "resource": "software",
+            "kind": "MACHINE",
+            "available_seconds": 7200,
+            "busy_seconds": 570,
+            "idle_available_seconds": 6630,
+            "utilization": "19/240",
+            "queue_case_seconds": 0,
+            "unfinished_waiting_cases": 0
+          }
+        ],
+        "critical_defects": 0
+      },
+      "quality_comparable": true,
+      "delta": {
+        "completed_cases": 13,
+        "correct_completed_cases": 13,
+        "unfinished_cases": -13,
+        "human_service_seconds": -5730,
+        "total_wait_case_seconds": -75240
+      },
+      "sha256": "e36e876085ec0cf267f424bb026bbafc6a9a80567502dba1918d880278af5ac7"
+    },
+    "w002:robot-180-1": {
+      "alternative": {
+        "label": "Manipulation et décision automatisées ; 1 instrument(s), cycle de mesure 180 s",
+        "arrivals": 36,
+        "completed_pieces": 36,
+        "correct_completed_pieces": 36,
+        "unfinished_pieces": 0,
+        "human_seconds": 0,
+        "resources": [
+          {
+            "resource": "gauge",
+            "kind": "MACHINE",
+            "available_seconds": 7200,
+            "busy_seconds": 6480,
+            "idle_available_seconds": 720,
+            "utilization": "9/10",
+            "queue_case_seconds": 18720,
+            "unfinished_waiting_cases": 0
+          },
+          {
+            "resource": "operator",
+            "kind": "HUMAN",
+            "available_seconds": 7200,
+            "busy_seconds": 0,
+            "idle_available_seconds": 7200,
+            "utilization": "0",
+            "queue_case_seconds": 0,
+            "unfinished_waiting_cases": 0
+          },
+          {
+            "resource": "robot",
+            "kind": "MACHINE",
+            "available_seconds": 7200,
+            "busy_seconds": 3240,
+            "idle_available_seconds": 3960,
+            "utilization": "9/20",
+            "queue_case_seconds": 360,
+            "unfinished_waiting_cases": 0
+          },
+          {
+            "resource": "software",
+            "kind": "MACHINE",
+            "available_seconds": 7200,
+            "busy_seconds": 570,
+            "idle_available_seconds": 6630,
+            "utilization": "19/240",
+            "queue_case_seconds": 0,
+            "unfinished_waiting_cases": 0
+          }
+        ],
+        "critical_defects": 0
+      },
+      "quality_comparable": true,
+      "delta": {
+        "completed_cases": 13,
+        "correct_completed_cases": 13,
+        "unfinished_cases": -13,
+        "human_service_seconds": -5730,
+        "total_wait_case_seconds": -56160
+      },
+      "sha256": "798d6d15cd784392d6a0aa14d01f27395f6787be9cdf93faec3e4b965fa0b1f3"
+    },
+    "w002:robot-300-1-stress": {
+      "alternative": {
+        "label": "Manipulation et décision automatisées ; 1 instrument(s), cycle de mesure 300 s ; défaut critique supposé",
+        "arrivals": 36,
+        "completed_pieces": 23,
+        "correct_completed_pieces": 22,
+        "unfinished_pieces": 13,
+        "human_seconds": 0,
+        "resources": [
+          {
+            "resource": "gauge",
+            "kind": "MACHINE",
+            "available_seconds": 7200,
+            "busy_seconds": 6900,
+            "idle_available_seconds": 300,
+            "utilization": "23/24",
+            "queue_case_seconds": 74220,
+            "unfinished_waiting_cases": 13
+          },
+          {
+            "resource": "operator",
+            "kind": "HUMAN",
+            "available_seconds": 7200,
+            "busy_seconds": 0,
+            "idle_available_seconds": 7200,
+            "utilization": "0",
+            "queue_case_seconds": 0,
+            "unfinished_waiting_cases": 0
+          },
+          {
+            "resource": "robot",
+            "kind": "MACHINE",
+            "available_seconds": 7200,
+            "busy_seconds": 2850,
+            "idle_available_seconds": 4350,
+            "utilization": "19/48",
+            "queue_case_seconds": 0,
+            "unfinished_waiting_cases": 0
+          },
+          {
+            "resource": "software",
+            "kind": "MACHINE",
+            "available_seconds": 7200,
+            "busy_seconds": 365,
+            "idle_available_seconds": 6835,
+            "utilization": "73/1440",
+            "queue_case_seconds": 0,
+            "unfinished_waiting_cases": 0
+          }
+        ],
+        "critical_defects": 1
+      },
+      "quality_comparable": false,
+      "delta": null,
+      "sha256": "63be175aef275cc108d590bb6284ddc2f4be862044147a1164545185cc6247ff"
+    }
+  },
+  "publication": "BLOCK_PUBLICATION",
+  "scientific_gate_promoted": false
+}
