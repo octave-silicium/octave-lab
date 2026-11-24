@@ -37,8 +37,9 @@ class Graph:
 def load(raw):
     m=inspect(raw);tables={}
     with zipfile.ZipFile(io.BytesIO(raw)) as z:
-        release=z.read("version.txt").decode("utf-8-sig").strip()
-        if not release or len(release)>1000:raise ValueError("VERSION")
+        version_bytes=z.read("version.txt")
+        release={"filename_token":VERSION,"version_file_bytes":len(version_bytes),"version_file_sha256":m["members"]["version.txt"]["sha256"],"status":"UNCONFIRMED_VERSION_FILE_CONTENT"}
+        # Filename token is explicit; an empty or extended version file does not authenticate a release.
         for name,meta in m["members"].items():
             if not name.endswith(".csv"):continue
             x=re.fullmatch(r"unix_(.+)_"+VERSION+r"_utf8\.csv",name)
