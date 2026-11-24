@@ -38,3 +38,6 @@ Cabinet fictif : 120 à 66 minutes humaines par dossier (-45%), capacité initia
 - Tests d'usage auprès d'acheteurs sur décisions concrètes : temps, compréhension, erreurs, décisions améliorées, disposition à payer, comparaison avec alternatives; pas de revendication de différenciation sans preuve.
 - E-G5 et E-G6 restent non franchis. Implémenter le contrat dès la première tranche G3, sections futures clairement bloquées; ne pas attendre tous les moteurs pour livrer une investigation honnête. BENCH-001 reste obligatoire pour méthodes et interface.
 Registre machine-readable : governance/investigation_result_v1.json. 
+
+## Prospective multi-ordres — précision du 24/11/2026
+[PROSPECT-001](PROSPECT-001.md) et [contrat computationnel](../governance/multi_order_prospective_v1.json) précisent l'exigence transversale : O1/O2/O3/O4+ selon chemins qualifiés, ordre distinct d'horizon/scénario/preuve, branches concurrentes, réactions stratégiques, interactions et rétroactions, seuils et règles d'arrêt. Comparer trajectoires cohérentes, pas sommer les chemins; aucune extrapolation causale ou probabilité fictive. Restitution D12/D13/D15/D16/D17 et preuve D18, dès tranche G3 avec limitations explicites. Les six moteurs, neuf couches et 64 mécanismes initiaux sont conservés. Spécification uniquement, gates inchangés.

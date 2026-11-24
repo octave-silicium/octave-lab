@@ -1,0 +1,90 @@
+{
+  "id": "PROSPECT-001",
+  "version": "1.0",
+  "date": "2026-11-24",
+  "status": "REQUIREMENT_EXTENSION_NOT_IMPLEMENTED",
+  "architecture": "ARCH-002 v2.0",
+  "result_contract": "RESULT-001 v1.0",
+  "scope": "Multi-order forward and inverse scenario investigation across all nine layers; six existing engines, not a seventh isolated engine.",
+  "distinctions": {
+    "order": "Number of explicit transmission steps from a declared shock in a versioned graph/model, relative to its resolution. An accounting or classification join is not a causal step. Multiple paths to one effect retain distinct path orders.",
+    "time": "Event, adoption, delay, observation and publication dates or intervals; independent of order.",
+    "scenario": "Coherent joint assumptions, initial conditions, interventions and boundary conditions; not a path order.",
+    "evidence": "Observed, conditional, hypothesized or causally identified; independent of order."
+  },
+  "mandatory_dimensions": [
+    "Direct effects O1",
+    "Indirect effects O2",
+    "Higher-order effects O3 and beyond while material and supported",
+    "Actor responses and strategic adaptation",
+    "Feedback and time lags",
+    "Nonlinear thresholds and tipping conditions",
+    "Compensating and reinforcing mechanisms",
+    "Distribution by actor, population, firm, sector and geography",
+    "Multiple interacting shocks and structural alternatives",
+    "Explicit unknowns and stopped paths"
+  ],
+  "scenario_families": [
+    "No shock reference",
+    "Shock without adoption",
+    "Partial and heterogeneous adoption",
+    "Complementarity and new tasks",
+    "Substitution and redesign",
+    "Demand rebound versus weak demand",
+    "Competitive diffusion and price compression",
+    "Market expansion versus share transfers versus internalization",
+    "Adverse quality, financing, integration and supply stress",
+    "Policy, institutional and external shocks where relevant"
+  ],
+  "node_path_required": [
+    "scenario_id",
+    "shock_ref",
+    "graph_version",
+    "ordered_mechanism_refs",
+    "input_claim_refs",
+    "output_claim_ref",
+    "path_order",
+    "affected_actor",
+    "scope_and_units",
+    "time_window_or_unknown",
+    "condition_and_assumption_refs",
+    "evidence_type",
+    "direction_or_unknown",
+    "magnitude_or_unknown",
+    "competing_paths",
+    "limitations",
+    "stop_reason_if_applicable"
+  ],
+  "scenario_required": [
+    "id",
+    "revision",
+    "baseline_ref",
+    "decision_and_scope",
+    "initial_state_refs",
+    "shock_and_intervention_refs",
+    "assumption_refs",
+    "model_versions",
+    "horizons",
+    "constraints_and_closure",
+    "comparison_metrics",
+    "uncertainty_method",
+    "falsification_and_update_triggers"
+  ],
+  "stop_rules": [
+    "Unsupported or blocked transmission: retain hypothesis and missing evidence; do not compute invented effect.",
+    "Outside declared scope, rights or materiality threshold: record justified exclusion and potential decision impact.",
+    "Budget or depth limit: mark truncated and retain frontier; never equate truncation with no effect.",
+    "Feedback cycles must be time-indexed or explicitly solved under a qualified simultaneous model; flag instability or nonconvergence.",
+    "Avoid counting the same effect across paths: calculate total as difference from a coherent counterfactual; only decompose interactions with a documented method and retain residual.",
+    "No probabilities without defensible calibration; no extrapolation of causal identification through unqualified links."
+  ],
+  "acceptance": [
+    "Traceable O1/O2/O3+ paths where relevant, with coverage and stopped paths; no mandatory fabricated effects.",
+    "Null shock and no adoption tests; opposing scenarios and competing hypotheses; monotonicity only where justified.",
+    "Reconciled quantities and value flows under multi-path, interactions, capacity and feedback.",
+    "Time horizon distinct from order; delayed and simultaneous effects labeled.",
+    "Reverse investigation proposes competing mechanisms and discriminating tests, not reverse causality.",
+    "Scenario tree and comparison across orders, thresholds and actors in D12/D13/D15/D16/D17; alerts link to predicted or hypothesized signatures and revisions.",
+    "Reproducible pinned inputs, model, scenario and rights; benchmark methods under BENCH-001; no scientific or product gate promoted solely from this specification."
+  ]
+}
