@@ -11,8 +11,8 @@ Référence publique au 24 novembre 2026. Le statut d'une décision ne vaut pas 
 ## Ordre de développement validé
 | Jalon | Résultat attendu | Statut initial |
 |---|---|---|
-| S0 | Synchronisation README, spécification METH-003, état et feuille de route | Documentation |
-| S1 / G1 | Contrats sémantiques communs : mesure, unité, population, dimensions et référentiels versionnés, période/vintage, provenance, licence, comparabilité, preuve ; préparer G-M0 | Validé, non implémenté |
+| S0 | Synchronisation README, spécification METH-003, état et feuille de route | VÉRIFIÉ |
+| S1 / G1 | Contrats sémantiques communs : mesure, unité, population, dimensions et référentiels versionnés, période/vintage, provenance, licence, comparabilité, preuve ; préparer G-M0 | PARTIELLEMENT IMPLÉMENTÉ : [S1 v0.1.0](SEMANTIC.md), 19 tests locaux réussis ; intégration complète à confirmer |
 | S2 / G1 | Explorateur multisource : recherche, filtres de couverture, historiques, comparaison conditionnelle, provenance et exports autorisés | Validé, non implémenté |
 | S3 / G2 | Qualification ROME/ESCO/O*NET, ontologie G-M0 et petit pilote G-M1 ; processus réel, vérification humaine | Validé, non implémenté |
 | S4 / G3–G5 | Investigations, tests G-M2–G-M5, approfondissement sectoriel et moteur économique, validation empirique puis extension progressive | Validé, non implémenté |
