@@ -86,6 +86,60 @@ def audit_jsonstat(content, required):
             'unit': 'as declared in dataset dimension; no implicit conversion'}
 
 
+def semantic_profile(content, spec):
+    """Descriptive structural coverage only; never infers causation or cross-source joins."""
+    sid = spec['id']
+    if spec['format'] == 'jsonstat':
+        d = json.loads(content.decode('utf-8-sig'))
+        dimensions = d.get('dimension', {})
+        card = {}
+        for field in ['geo','time','nace_r2','size_emp','indic_is','unit']:
+            if field in dimensions:
+                idx = dimensions[field].get('category', {}).get('index', {})
+                card[field] = len(idx)
+        years = sorted(dimensions.get('time', {}).get('category', {}).get('index', {}))
+        return {'category_counts': card, 'years': years,
+                'scope_check': 'Geo and NACE/enterprise-size filters are separate from occupation',
+                'evidence_group': spec['dependency_cluster']}
+    text = content.decode('utf-8-sig')
+    records = csv.DictReader(io.StringIO(text), delimiter=';')
+    distinct = {}
+    if sid.startswith('DS-004'):
+        keys=['Date','Code région','Code département','Type de données',
+              "Type d'offre d'emploi", "Type d'emploi", 'Qualification']
+    else:
+        keys=['annee','trimestre','secteur_na88i','secteur_na38i']
+    for key in keys:
+        distinct[key]=set()
+    measure_key='Nombre d’offres d’emploi' if sid.startswith('DS-004') else 'effectifs_salaries_brut'
+    if sid.startswith('DS-004'):
+        measure_key="Nombre d'offres d'emploi"
+    values_present=0
+    missing_values=0
+    duplicate_keys=0
+    seen=set()
+    for row in records:
+        for key in keys:
+            if row.get(key) is not None and row.get(key)!='': distinct[key].add(row[key])
+        v=row.get(measure_key)
+        if v not in (None,''):values_present+=1
+        else:missing_values+=1
+        if sid.startswith('DS-015'):
+            k=(row.get('annee'),row.get('trimestre'),row.get('secteur_na88i'))
+            if k in seen:duplicate_keys+=1
+            seen.add(k)
+    periods=sorted(distinct['Date'] if sid.startswith('DS-004') else distinct['annee'])
+    return {
+        'period_min_raw': periods[0] if periods else None,
+        'period_max_raw': periods[-1] if periods else None,
+        'distinct_counts': {k:len(v) for k,v in distinct.items()},
+        'measure_nonempty_rows': values_present,
+        'measure_empty_rows': missing_values,
+        'duplicate_industry_year_quarter_keys': duplicate_keys if sid.startswith('DS-015') else None,
+        'economic_join_gate': 'NOT_READY: verify exact units, historical breaks, nomenclature mappings',
+        'evidence_group': spec['dependency_cluster']}
+
+
 def validate(content, spec):
     if spec['format'] == 'csv':
         return audit_csv(content, spec.get('required_columns', []))
@@ -111,9 +165,10 @@ def run(specs, opener=urllib.request.urlopen):
             try:
                 payload, headers = read_limited(s['url'], opener=opener)
                 checks = validate(payload, s)
+                profile = semantic_profile(payload, s)
                 record.update({'result': 'FETCH_AND_SCHEMA_PASS',
                                'sha256': hashlib.sha256(payload).hexdigest(),
-                               'n_bytes': len(payload), 'checks': checks, **headers})
+                               'n_bytes': len(payload), 'checks': checks, 'structural_profile': profile, **headers})
                 err = None
                 break
             except (OSError, ValueError, UnicodeError, json.JSONDecodeError) as exc:

@@ -6,7 +6,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import MagicMock
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'pipeline'))
-from audit_multisource import audit_csv, audit_jsonstat, read_limited, run
+from audit_multisource import audit_csv, audit_jsonstat, read_limited, run, semantic_profile
 
 
 class SourceAuditTests(unittest.TestCase):
@@ -33,6 +33,16 @@ class SourceAuditTests(unittest.TestCase):
         d={'dimension':{'geo':{'category':{'index':{'FR':0}}},'time':{'category':{'index':{'2025':0}}}},'value':{'0':20.0}}
         r=audit_jsonstat(json.dumps(d).encode(),['geo','time'])
         self.assertEqual(r['n_nonmissing_values'],1)
+
+    def test_semantic_profile_urssaf_unique_keys(self):
+        c=b'annee;trimestre;secteur_na88i;secteur_na38i;effectifs_salaries_brut\n'+b'2023;1;62;JZ;5\n'*12
+        p=semantic_profile(c,{'id':'DS-015_any','format':'csv','dependency_cluster':'DSN'})
+        self.assertEqual(p['duplicate_industry_year_quarter_keys'],11)
+
+    def test_semantic_profile_eurostat_metadata(self):
+        d={'dimension':{'geo':{'category':{'index':{'FR':0}}}, 'time':{'category':{'index':{'2025':0}}}},'value':{'0':20.0}}
+        p=semantic_profile(json.dumps(d).encode(),{'id':'DS-031a_any','format':'jsonstat','dependency_cluster':'ICT'})
+        self.assertEqual(p['years'],['2025'])
 
     def test_no_fake_success(self):
         d={'dimension':{'geo':{}},'value':{}}
