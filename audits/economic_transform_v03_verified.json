@@ -1,0 +1,226 @@
+{
+  "date": "2026-11-24",
+  "status": "TECHNICAL_ACCEPTANCE",
+  "tested_commit": "4b040965c0786dffd8516eb838110d1f191856d8",
+  "run_id": 45399655558,
+  "job_id": 138464579792,
+  "tests": 294,
+  "seconds": 14.803,
+  "conclusion": "success",
+  "fixture": "W001_STRUCTURAL_SYNTHETIC",
+  "baseline": {
+    "label": "Traitement et contrôle humains",
+    "steps": 6,
+    "completed": 5,
+    "correct_completed": 5,
+    "human_seconds": 17970,
+    "human_touched_cases": 31,
+    "human_verification_started_cases": 11,
+    "human_authorization_started_cases": 0,
+    "quality_assigned": "59/60",
+    "critical_defects_assigned": 0,
+    "quality_by_class": {
+      "STANDARD": {
+        "assigned": 48,
+        "assigned_correct": 47,
+        "completed": 2,
+        "completed_correct": 2
+      },
+      "HIGH": {
+        "assigned": 12,
+        "assigned_correct": 12,
+        "completed": 3,
+        "completed_correct": 3
+      }
+    },
+    "deployment": "BLOCK_DEPLOYMENT_UNQUALIFIED"
+  },
+  "alternatives": {
+    "w001:struct-machine-control": {
+      "alternative": {
+        "label": "Vérification automatisée, intervention humaine sur anomalies",
+        "steps": 4,
+        "completed": 60,
+        "correct_completed": 60,
+        "human_seconds": 2160,
+        "human_touched_cases": 12,
+        "human_verification_started_cases": 12,
+        "human_authorization_started_cases": 0,
+        "quality_assigned": "1",
+        "critical_defects_assigned": 0,
+        "quality_by_class": {
+          "STANDARD": {
+            "assigned": 48,
+            "assigned_correct": 48,
+            "completed": 48,
+            "completed_correct": 48
+          },
+          "HIGH": {
+            "assigned": 12,
+            "assigned_correct": 12,
+            "completed": 12,
+            "completed_correct": 12
+          }
+        },
+        "deployment": "BLOCK_DEPLOYMENT_UNQUALIFIED"
+      },
+      "quality_comparable": true,
+      "delta": {
+        "completed_cases": 55,
+        "correct_completed_cases": 55,
+        "unfinished_cases": -55,
+        "human_service_seconds": -15810,
+        "total_wait_case_seconds": -492930
+      },
+      "sha256": "62cd1629e3bd28844b09e05994b6cd5cba5c57f86d3f9f9bb78207b0705a9147"
+    },
+    "w001:struct-human-release": {
+      "alternative": {
+        "label": "Vérification automatisée, autorisation humaine des dossiers normaux",
+        "steps": 5,
+        "completed": 60,
+        "correct_completed": 60,
+        "human_seconds": 5040,
+        "human_touched_cases": 60,
+        "human_verification_started_cases": 12,
+        "human_authorization_started_cases": 48,
+        "quality_assigned": "1",
+        "critical_defects_assigned": 0,
+        "quality_by_class": {
+          "STANDARD": {
+            "assigned": 48,
+            "assigned_correct": 48,
+            "completed": 48,
+            "completed_correct": 48
+          },
+          "HIGH": {
+            "assigned": 12,
+            "assigned_correct": 12,
+            "completed": 12,
+            "completed_correct": 12
+          }
+        },
+        "deployment": "BLOCK_DEPLOYMENT_UNQUALIFIED"
+      },
+      "quality_comparable": true,
+      "delta": {
+        "completed_cases": 55,
+        "correct_completed_cases": 55,
+        "unfinished_cases": -55,
+        "human_service_seconds": -12930,
+        "total_wait_case_seconds": -473550
+      },
+      "sha256": "dd9e0c66af6e6212377fc74641d76bab18d1e21d83fa87f493e5a03ba904f199"
+    },
+    "w001:struct-sample": {
+      "alternative": {
+        "label": "Vérification automatisée, contrôle humain d'un échantillon",
+        "steps": 5,
+        "completed": 60,
+        "correct_completed": 60,
+        "human_seconds": 2880,
+        "human_touched_cases": 24,
+        "human_verification_started_cases": 24,
+        "human_authorization_started_cases": 0,
+        "quality_assigned": "1",
+        "critical_defects_assigned": 0,
+        "quality_by_class": {
+          "STANDARD": {
+            "assigned": 48,
+            "assigned_correct": 48,
+            "completed": 48,
+            "completed_correct": 48
+          },
+          "HIGH": {
+            "assigned": 12,
+            "assigned_correct": 12,
+            "completed": 12,
+            "completed_correct": 12
+          }
+        },
+        "deployment": "BLOCK_DEPLOYMENT_UNQUALIFIED"
+      },
+      "quality_comparable": true,
+      "delta": {
+        "completed_cases": 55,
+        "correct_completed_cases": 55,
+        "unfinished_cases": -55,
+        "human_service_seconds": -15090,
+        "total_wait_case_seconds": -489210
+      },
+      "sha256": "9b0dc970c2238f6b04a46acefcb13cf084023f6f522f1c95169e93dbdcf345d4"
+    },
+    "w001:struct-autonomy": {
+      "alternative": {
+        "label": "Traitement et contrôle automatisés sans intervention humaine par dossier",
+        "steps": 4,
+        "completed": 60,
+        "correct_completed": 60,
+        "human_seconds": 0,
+        "human_touched_cases": 0,
+        "human_verification_started_cases": 0,
+        "human_authorization_started_cases": 0,
+        "quality_assigned": "1",
+        "critical_defects_assigned": 0,
+        "quality_by_class": {
+          "STANDARD": {
+            "assigned": 48,
+            "assigned_correct": 48,
+            "completed": 48,
+            "completed_correct": 48
+          },
+          "HIGH": {
+            "assigned": 12,
+            "assigned_correct": 12,
+            "completed": 12,
+            "completed_correct": 12
+          }
+        },
+        "deployment": "BLOCK_DEPLOYMENT_UNQUALIFIED"
+      },
+      "quality_comparable": true,
+      "delta": {
+        "completed_cases": 55,
+        "correct_completed_cases": 55,
+        "unfinished_cases": -55,
+        "human_service_seconds": -17970,
+        "total_wait_case_seconds": -471510
+      },
+      "sha256": "039551604e6ac7095748fb631b354b4728036a1188d330707e3da7d1651c6b1d"
+    },
+    "w001:struct-autonomy-stress": {
+      "alternative": {
+        "label": "Traitement et contrôle automatisés sans intervention humaine par dossier — erreur critique supposée",
+        "steps": 4,
+        "completed": 60,
+        "correct_completed": 59,
+        "human_seconds": 0,
+        "human_touched_cases": 0,
+        "human_verification_started_cases": 0,
+        "human_authorization_started_cases": 0,
+        "quality_assigned": "59/60",
+        "critical_defects_assigned": 1,
+        "quality_by_class": {
+          "STANDARD": {
+            "assigned": 48,
+            "assigned_correct": 48,
+            "completed": 48,
+            "completed_correct": 48
+          },
+          "HIGH": {
+            "assigned": 12,
+            "assigned_correct": 11,
+            "completed": 12,
+            "completed_correct": 11
+          }
+        },
+        "deployment": "BLOCK_DEPLOYMENT_UNQUALIFIED"
+      },
+      "quality_comparable": false,
+      "delta": null,
+      "sha256": "07be62b3d5d7e9fc47b97f3878cd100f5ec9a173591506161ee98a1057c8bb46"
+    }
+  },
+  "scientific_gate_promoted": false,
+  "publication": "BLOCK_PUBLICATION"
+}
