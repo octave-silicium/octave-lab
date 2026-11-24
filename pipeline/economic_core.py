@@ -217,11 +217,11 @@ class Graph:
             if c.quantity is not None and c.quantity.value is not None:
                 # No qualified arithmetic or cross-scope comparison in v0.1.
                 require(c.claim_type in {"OBSERVATION","CONDITIONAL_SCENARIO"},"NUMERIC_METHOD_GATE")
+                require(all(self.parameters[k].quantity.value is not None for k in c.parameter_refs),"UNKNOWN_DEPENDENCY")
                 if c.claim_type=="CONDITIONAL_SCENARIO":
                     require(bool(c.parameter_refs) and any(self.parameters[k].basis=="ASSUMPTION" for k in c.parameter_refs),"SCENARIO_ASSUMPTION_REQUIRED")
                     require(all(self.parameters[k].scope==c.scope for k in c.parameter_refs) and all(self.claims[k].scope==c.scope for k in c.dependency_refs),"SCOPE_TRANSFER_NOT_QUALIFIED")
                 require(all(e.quality not in {"WITHHELD","RESTRICTED","REVIEW_REQUIRED"} and e.rights=="INTERNAL_ONLY" for e in ev),"NUMERIC_EVIDENCE_BLOCKED")
-                require(all(self.parameters[k].quantity.value is not None for k in c.parameter_refs),"UNKNOWN_DEPENDENCY")
                 require(all(self.claims[k].quantity is not None and self.claims[k].quantity.value is not None for k in c.dependency_refs),"UNKNOWN_DEPENDENCY")
         # Provenance graph must be acyclic (distinct from feedback in economic relationships).
         pending={k:len(c.dependency_refs) for k,c in self.claims.items()}
