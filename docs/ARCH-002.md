@@ -139,3 +139,7 @@ Les travaux R01/R03 autorisent des mécanismes concurrents, pas le postulat de c
 
 ## G3.1 v0.1 — Economic Core
 [Documentation](G3-ECONOMIC-CORE.md), [audit](../audits/economic_core_v01_verified.json), 224 tests et pont G1 Eurostat NACE vérifiés (12 400 cellules, 6 593 admises, 5 807 bloquées). Contrats versionnés, graphe de provenance, 110 entrées de couverture et chemins structurels; aucun calcul d'effet ni validation causale. E-G0 partiel. Suite : compléter jonctions et contrats minimaux puis G3.2 transformation opérationnelle, tranche verticale; G2 indépendant, données et déploiement restent ouverts.
+
+
+## Précision utilisateur — régimes de contrôle et responsabilité (24/11/2026)
+[TRANSFORM-001](TRANSFORM-001.md) : distinguer exécution, vérification, autorisation et responsabilité à chaque action/point de contrôle; familles composables jusqu'à autonomie nominale complète, contrôle humain non présumé permanent, qualification technique et réglementaire par contexte, criticité et repli. Exploration de variantes paramétrables selon matérialité, limites explicites, pas d'exhaustivité combinatoire. Zéro erreur observée ≠ risque nul; fiabilité parfaite hypothétique admise en scénario. W001 redesign historique = assistance IA et contrôle humain accéléré, pas refonte. G3.2 v0.3 : implémentation progressive et tests, exigences scientifiques inchangées.

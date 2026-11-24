@@ -85,3 +85,7 @@ Décision utilisateur : [UX-001](UX-001.md) et [RESULT-001](RESULT-001.md) compl
 
 ## G3.2 v0.2 — Simulation des opérations dans le temps
 [Documentation](G3-EVENTS.md) : événements discrets à entrées explicites, calendriers, ressources partagées, reprises bornées, arrivées groupées, files et censures, comparaison qualité et cohorte, glossaire FR initial. Recette réussie : 281 tests, [audit](../audits/economic_events_v02_verified.json) ; pas de validation terrain. Suite : refonte structurelle, deuxième processus, raccordement puis G3.3/G3.4.
+
+
+## Précision utilisateur — régimes de contrôle et responsabilité (24/11/2026)
+[TRANSFORM-001](TRANSFORM-001.md) : distinguer exécution, vérification, autorisation et responsabilité à chaque action/point de contrôle; familles composables jusqu'à autonomie nominale complète, contrôle humain non présumé permanent, qualification technique et réglementaire par contexte, criticité et repli. Exploration de variantes paramétrables selon matérialité, limites explicites, pas d'exhaustivité combinatoire. Zéro erreur observée ≠ risque nul; fiabilité parfaite hypothétique admise en scénario. W001 redesign historique = assistance IA et contrôle humain accéléré, pas refonte. G3.2 v0.3 : implémentation progressive et tests, exigences scientifiques inchangées.
