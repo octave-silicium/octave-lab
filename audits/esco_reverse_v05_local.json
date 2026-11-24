@@ -1,0 +1,17 @@
+{
+  "scope": "REAL_PRIVATE_SQL_VALIDATION_NOT_API",
+  "snapshot_sha256": "6dcb624b8938e58feab132a92770ab4937eb2b2eb780bb85673a014fdfc0935a",
+  "languages": {
+    "fr": {
+      "linked_concepts": 13475,
+      "relations": 126051,
+      "occupation_counts_match": true
+    },
+    "en": {
+      "linked_concepts": 13475,
+      "relations": 126051,
+      "occupation_counts_match": true
+    }
+  },
+  "method": "Search distinct skill URIs linked by esco_relation and group exact occupation relations with proof member per language; all counts checked; no values or private files published."
+}

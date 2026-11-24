@@ -1,0 +1,54 @@
+{
+  "run_id": 45368041299,
+  "job_id": 138354798107,
+  "status": "success",
+  "tests": "Ran 193 tests in 8.744s",
+  "audit": {
+    "pilot": {
+      "id": "octave:process:invoice-control",
+      "revision": 1,
+      "steps": 6,
+      "transitions": 5,
+      "terminals": [
+        "accept",
+        "escalate"
+      ],
+      "status": "PROPOSED",
+      "human_review_required": true,
+      "observed_process": false,
+      "duration_estimate": null,
+      "automation_score": null,
+      "employment_impact": null,
+      "limitations": [
+        "Exclusive paths only; conditions not executable or proven exhaustive",
+        "No loops or parallel synchronization",
+        "No process timing, probabilities or capacity model"
+      ],
+      "publication": "BLOCK_PUBLICATION"
+    },
+    "pilot_task_id": "onet:31.0:task:43-3031.00:2486",
+    "pilot_task_row": 12533,
+    "scope": "REAL_ONET_ROME_HTTP_ESCO_NOT_CONFIGURED",
+    "sources": {
+      "onet": {
+        "occupations": 1016,
+        "profile_http": "PASS",
+        "profile_native_rows": 30,
+        "linked_concepts": 2085,
+        "reverse_http": "PASS"
+      },
+      "rome": {
+        "occupations": 1923,
+        "profile_http": "PASS",
+        "profile_native_rows": 99,
+        "linked_concepts": 32432,
+        "reverse_http": "PASS"
+      }
+    },
+    "assets": "PASS",
+    "no_fallback": "PASS",
+    "public": false
+  },
+  "errors": [],
+  "commit": "aab304d025e2dadae829247073e10dd01bcdf78d"
+}
