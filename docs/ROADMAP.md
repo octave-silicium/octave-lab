@@ -108,3 +108,6 @@ Décision utilisateur : [UX-001](UX-001.md) et [RESULT-001](RESULT-001.md) compl
 
 ## G3.3 v0.2a — Effectifs et liquidité dans le temps
 [G3-TRANSITION](G3-TRANSITION.md) : stocks/flux, gel avant déploiement, attrition et réaffectation, paie, créances/dettes fournisseurs et financement trimestriels, W002 synthétique. SH02/03/04 partiels, SH17 exploratoire. Recette réussie : 347 tests, [audit](../audits/economic_transition_v02a_verified.json). G3.3 v0.2b : compétences/délais, transition et sensibilité, VAN dynamique, jonction RESULT/PROSPECT; P0 empirique ouvert. Aucun gate scientifique.
+
+## G3.3 v0.2b1 — Renouvellement de l'expertise et VAN dynamique
+[G3-SKILLS](G3-SKILLS.md) : slots fictifs, délais et seuils de formation/pratique, mentorat, capacité individuelle, pénurie d'expertise distincte, VAN trimestrielle hors dette, seuil de valeur de l'expertise et sensibilité taux. SH04 partiel. Recette à confirmer. Suite v0.2b2 montée en cadence et raccordement, puis G3.4 ; P0 empirique ouvert.

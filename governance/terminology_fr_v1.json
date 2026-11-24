@@ -1,5 +1,5 @@
 {
-  "version": "0.3",
+  "version": "0.4",
   "language": "fr",
   "status": "INITIAL_INTERNAL_NOT_UI_VALIDATED",
   "entries": {
@@ -266,6 +266,54 @@
       "caution": "Les fluctuations entre dates ne sont pas simulées.",
       "technical_name": "funding_gap_at_sampled_dates_eur",
       "method_ref": "docs/G3-TRANSITION.md"
+    },
+    "ending_experts": {
+      "label": "Personnes qualifiées pour l'expertise en fin de période",
+      "definition": "Nombre de personnes classées seniors selon le scénario.",
+      "unit": "personnes",
+      "caution": "Qualification supposée, pas certification ni mesure de compétence.",
+      "technical_name": "ending_experts",
+      "method_ref": "docs/G3-SKILLS.md"
+    },
+    "total_expert_shortfall_hours": {
+      "label": "Heures d'expertise non couvertes",
+      "definition": "Somme des heures demandées pour une activité distincte dépassant la capacité disponible des seniors.",
+      "unit": "heures-personnes",
+      "caution": "Besoin supposé, pas une mesure de pénurie réelle.",
+      "technical_name": "total_expert_shortfall_hours",
+      "method_ref": "docs/G3-SKILLS.md"
+    },
+    "total_expert_served_hours": {
+      "label": "Heures d'expertise couvertes",
+      "definition": "Heures de capacité senior affectées au besoin d'expertise distinct.",
+      "unit": "heures-personnes",
+      "caution": "Ne démontre pas une prestation réalisée correctement ni un revenu.",
+      "technical_name": "total_expert_served_hours",
+      "method_ref": "docs/G3-SKILLS.md"
+    },
+    "total_promotions": {
+      "label": "Passages au niveau expert",
+      "definition": "Nombre de promotions après les seuils d'expérience et une évaluation supposée réussie.",
+      "unit": "personnes",
+      "caution": "Pas une reconnaissance professionnelle réelle.",
+      "technical_name": "total_promotions",
+      "method_ref": "docs/G3-SKILLS.md"
+    },
+    "incremental_unlevered_npv_eur": {
+      "label": "Valeur financière supplémentaire hors financement",
+      "definition": "Différence des flux d'exploitation et d'investissement actualisés avant dette et impôt.",
+      "unit": "EUR",
+      "caution": "Horizon fini, valeur terminale explicite, expertise non monétisée.",
+      "technical_name": "incremental_unlevered_npv_eur",
+      "method_ref": "docs/G3-SKILLS.md"
+    },
+    "expert_hour_break_even_eur": {
+      "label": "Valeur nette minimale par heure d'expertise supplémentaire",
+      "definition": "Flux net additionnel par heure différentielle nécessaire pour compenser une valeur financière inférieure.",
+      "unit": "EUR/heure-personne",
+      "caution": "Seuil conditionnel, pas prix de marché ni revenu prédit.",
+      "technical_name": "expert_hour_break_even_eur",
+      "method_ref": "docs/G3-SKILLS.md"
     }
   }
 }
