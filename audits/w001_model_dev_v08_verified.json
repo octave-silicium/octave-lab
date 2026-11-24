@@ -1,0 +1,161 @@
+{
+  "run_id": 45371211816,
+  "job_id": 138365656960,
+  "commit": "d9edc3f482f4664de250e44352149d4bbd8f4c12",
+  "tests_passed": 212,
+  "audit": {
+    "suite_sha256": "bda8091f326a68a650a3080aefcf31823cc9e6ccf80b6501a71ed54aa5f237ef",
+    "cases": 20,
+    "runs": [
+      {
+        "run_id": "W001-classic-v2.1",
+        "mode": "RULE_BASELINE",
+        "suite_sha256": "bda8091f326a68a650a3080aefcf31823cc9e6ccf80b6501a71ed54aa5f237ef",
+        "cases": 20,
+        "counts": {
+          "decision_correct": 16,
+          "exact_case_correct": 16,
+          "false_accept": 0,
+          "false_review": 0,
+          "abstain_or_error": 4,
+          "issue_tp": 12,
+          "issue_fp": 0,
+          "issue_fn": 3
+        },
+        "decision_accuracy": 0.8,
+        "exact_case_accuracy": 0.8,
+        "false_accept_rate_on_anomalies": 0,
+        "issue_precision": 1,
+        "issue_recall": 0.8,
+        "measured_wall_cases": 0,
+        "median_wall_seconds": null,
+        "measured_cost_cases": 0,
+        "total_cost_eur": null,
+        "scope": "SYNTHETIC_HETEROGENEOUS_TEXT_DEVELOPMENT_ONLY",
+        "measurement_authentication": "NOT_INDEPENDENTLY_VERIFIED",
+        "production_readiness": false,
+        "employment_impact": null,
+        "publication": "BLOCK_PUBLICATION",
+        "strata": {
+          "schema_known": {
+            "cases": 4,
+            "exact": 4,
+            "abstain_or_error": 0,
+            "unsafe_accept": 0
+          },
+          "layout_variant": {
+            "cases": 4,
+            "exact": 4,
+            "abstain_or_error": 0,
+            "unsafe_accept": 0
+          },
+          "missing_or_conflict": {
+            "cases": 4,
+            "exact": 4,
+            "abstain_or_error": 0,
+            "unsafe_accept": 0
+          },
+          "free_text": {
+            "cases": 4,
+            "exact": 0,
+            "abstain_or_error": 4,
+            "unsafe_accept": 0
+          },
+          "scope_exception": {
+            "cases": 4,
+            "exact": 4,
+            "abstain_or_error": 0,
+            "unsafe_accept": 0
+          }
+        },
+        "blind_test": false,
+        "representative": false,
+        "cost_ledger": null,
+        "flat_cost_is_not_full_cost": true
+      },
+      {
+        "run_id": "W001-GPT62-conversation-dev-20261124",
+        "mode": "AI",
+        "suite_sha256": "bda8091f326a68a650a3080aefcf31823cc9e6ccf80b6501a71ed54aa5f237ef",
+        "cases": 20,
+        "counts": {
+          "decision_correct": 20,
+          "exact_case_correct": 20,
+          "false_accept": 0,
+          "false_review": 0,
+          "abstain_or_error": 0,
+          "issue_tp": 15,
+          "issue_fp": 0,
+          "issue_fn": 0
+        },
+        "decision_accuracy": 1,
+        "exact_case_accuracy": 1,
+        "false_accept_rate_on_anomalies": 0,
+        "issue_precision": 1,
+        "issue_recall": 1,
+        "measured_wall_cases": 0,
+        "median_wall_seconds": null,
+        "measured_cost_cases": 0,
+        "total_cost_eur": null,
+        "scope": "SYNTHETIC_HETEROGENEOUS_TEXT_DEVELOPMENT_ONLY",
+        "measurement_authentication": "NOT_INDEPENDENTLY_VERIFIED",
+        "production_readiness": false,
+        "employment_impact": null,
+        "publication": "BLOCK_PUBLICATION",
+        "strata": {
+          "schema_known": {
+            "cases": 4,
+            "exact": 4,
+            "abstain_or_error": 0,
+            "unsafe_accept": 0
+          },
+          "layout_variant": {
+            "cases": 4,
+            "exact": 4,
+            "abstain_or_error": 0,
+            "unsafe_accept": 0
+          },
+          "missing_or_conflict": {
+            "cases": 4,
+            "exact": 4,
+            "abstain_or_error": 0,
+            "unsafe_accept": 0
+          },
+          "free_text": {
+            "cases": 4,
+            "exact": 4,
+            "abstain_or_error": 0,
+            "unsafe_accept": 0
+          },
+          "scope_exception": {
+            "cases": 4,
+            "exact": 4,
+            "abstain_or_error": 0,
+            "unsafe_accept": 0
+          }
+        },
+        "blind_test": false,
+        "representative": false,
+        "cost_ledger": null,
+        "flat_cost_is_not_full_cost": true
+      }
+    ],
+    "paired": [
+      {
+        "a": "W001-classic-v2.1",
+        "b": "W001-GPT62-conversation-dev-20261124",
+        "counts": {
+          "both_correct": 16,
+          "a_only": 0,
+          "b_only": 4,
+          "neither_correct": 0
+        },
+        "exact_difference_cases": 4
+      }
+    ],
+    "scope": "DESCRIPTIVE_DEVELOPMENT_COMPARISON",
+    "independent_validation": false,
+    "significance_or_generalization": null,
+    "publication": "BLOCK_PUBLICATION"
+  }
+}

@@ -47,3 +47,6 @@ Risques : biais des descriptions, généralisation, poids fictifs, dérive de mo
 
 ## Avancement G2 v0.7
 [G2-DOCUMENTS](G2-DOCUMENTS.md) : dossiers textuels synthétiques et règle conventionnelle prudente ; baseline v2 11/20 exacts et 9 abstentions, aucun faux accepté. Module temps mural/temps humain, supervision, correction et coût complet conditionnel aux données, valeurs manquantes non imputées. Jeu fermé, praticiens et résultats IA réels absents ; aucun impact validé.
+
+## Avancement G2 v0.8
+[G2-MODEL-COMPARISON](G2-MODEL-COMPARISON.md) : premier test de développement GPT-6.2 en contexte, 20/20 contre 16/20 classique, 4 cas supplémentaires texte libre ; non aveugle, aucune mesure réelle de temps/coût, aucune supériorité démontrée. Protocole de transfert indépendant et export candidat seul. G-M1/G-M2 ouverts, dépendances externes ; les scénarios économiques peuvent être développés conditionnellement sans franchir les gates.

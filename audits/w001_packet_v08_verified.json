@@ -1,0 +1,12 @@
+{
+  "run_id": 45371385372,
+  "job_id": 138366239012,
+  "commit": "0e72d691e1acab77fea87e7be23903740a2969f5",
+  "tests": "Ran 214 tests in 8.625s",
+  "packet": {
+    "cases": 20,
+    "suite_sha256": "bda8091f326a68a650a3080aefcf31823cc9e6ccf80b6501a71ed54aa5f237ef",
+    "prompt_sha256": "39275a089c31233ca34c09e7867429025c1fe9c29bfd6e19b4786a0bc99025c2",
+    "gold_exported": false
+  }
+}
