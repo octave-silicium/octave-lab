@@ -27,7 +27,7 @@ Les travaux transversaux continuent en parallèle ; les jalons ne certifient pas
 | OPEN-02 | Dares MMO | BLOQUÉ : récupérer par accès officiel le fichier, qualifier licence et schéma |
 | OPEN-03 | Triangulation | PROPOSÉ/à vérifier : troisième lignée suffisamment indépendante et compatible ; trois fichiers ne constituent pas trois preuves |
 | OPEN-04 | Sources candidates | En cours : qualification progressive des 79 entrées, droits, couverture, fréquences |
-| OPEN-05 | Benchmark méthodologique US | PROPOSÉ : auditer méthodes et distinguer propositions non approuvées |
+| OPEN-05 | Benchmark d'excellence scientifique, architecture et UX, notamment US | Exigence transversale validée : [BENCH-001](BENCH-001.md) ; audits détaillés et adoption des méthodes restent à qualifier |
 | OPEN-06 | ODbL | BLOQUÉ pour les usages publics/commerciaux concernés non qualifiés ; revue par cas d'usage |
 | OPEN-07 | Pilote NACE J | En cours : décomposition JA/JB/JC, série d'emploi compatible indépendante, flags et adoption à définition stable |
 | OPEN-08 | Validation commerciale | À tester : demande B2B distincte de l'audience X |
