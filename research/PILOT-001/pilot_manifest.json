@@ -1,0 +1,99 @@
+{
+  "run_at_utc": "2026-11-24T05:21:56.643737+00:00",
+  "study": "PILOT-001",
+  "sector": "Information et communication (NACE Rev2 J)",
+  "scope": "Source-specific descriptive observations; no numeric cross-source merging",
+  "selected_studies": {
+    "private_employment": {
+      "unit": "employee count, seasonally adjusted, private sector",
+      "classification": "NACE Rev2 section J, six NA88 divisions 58-63",
+      "geography": "France entière (Urssaf scope)",
+      "selected_periods": {
+        "2024Q4": 944659.0,
+        "2025Q4": 924452.0,
+        "2025Q2": 935431.0,
+        "2026Q2": 918598.0
+      },
+      "change_2025Q4_vs_2024Q4_pct": -2.14,
+      "change_2026Q2_vs_2025Q2_pct": -1.8,
+      "method": "Sum exactly one row for each NA88 division 58,59,60,61,62,63; no occupational mapping.",
+      "quality_gate": "PRELIMINARY: sector mapping checked; revision and ODbL product gates pending"
+    },
+    "dpae": {
+      "unit": "DPAE declarations for CDI and CDD >1 month, seasonally adjusted",
+      "classification": "NA38 JA (editing/audio-visual), JB (telecom), JC (IT); three components of NACE J",
+      "geography": "France entière, Urssaf DPAE field",
+      "selected_periods": {
+        "2023Q4": 73972,
+        "2024Q4": 63568
+      },
+      "subsector_decomposition": {
+        "2023Q4": {
+          "JA": 27392,
+          "JB": 5194,
+          "JC": 41386
+        },
+        "2024Q4": {
+          "JA": 25136,
+          "JB": 4139,
+          "JC": 34293
+        }
+      },
+      "change_2024Q4_vs_2023Q4_pct": -14.06,
+      "method": "Sum exactly 3 NA38 components times 2 nonoverlapping contract types, no 2025 periods",
+      "quality_gate": "PRELIMINARY: first-vintage descriptive only; not actual hires and not net employment"
+    },
+    "ai_adoption": {
+      "indicator_code": "E_AI_TANY",
+      "indicator_label": "Enterprises using at least one of the AI technologies: AI_TTM, AI_TSR, AI_TNLG, AI_TIR, AI_TML, AI_TPA, AI_TAR, E_AI_TPVSG",
+      "unit": "% enterprises using at least one AI technology",
+      "population": "Enterprises with 10+ persons employed in NACE Rev2 section J, France; survey sample, not all employers",
+      "classification": "NACE Rev2 section J",
+      "selected_years": {
+        "2023": 29.56,
+        "2024": 41.76,
+        "2025": 58.98
+      },
+      "change_2024_vs_2023_pp": 12.2,
+      "change_2025_vs_2024_pp": null,
+      "comparability_warning": "2025 AI technology basket adds generative image/video/audio category vs prior years; do not interpret 2024-2025 difference as same-definition growth without official bridge.",
+      "quality_gate": "SURVEY_DESCRIPTION_ONLY: no inference on automation, job losses or firm productivity",
+      "selected_codes": {
+        "geo": "FR",
+        "nace_r2": "J",
+        "indic_is": "E_AI_TANY",
+        "unit": "PC_ENT",
+        "size_emp": "GE10",
+        "freq": "A"
+      }
+    }
+  },
+  "sources": {
+    "urssaf_headcount": {
+      "url": "https://open.urssaf.fr/api/explore/v2.1/catalog/datasets/effectifs-salaries-et-masse-salariale-du-secteur-prive-france-entiere-x-na88/exports/csv?use_labels=false",
+      "sha256": "9ec16fb077e554518f5a1ade579684a8c91d56f293c7b9897f07b40226833222"
+    },
+    "urssaf_dpae": {
+      "url": "https://open.urssaf.fr/api/explore/v2.1/catalog/datasets/dpae-france-entiere-x-na38/exports/csv?use_labels=false",
+      "sha256": "42cd99124b1ef5f0a39afc481c42e70d5adc0fbfb535a7cb53f2653dfd41f549"
+    },
+    "eurostat_ai": {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/isoc_eb_ain2?geo=FR&lang=EN&sinceTimePeriod=2022",
+      "sha256": "0c701942ea3d15bd1350e6938b27a5713f9d39f366b620723995b98077a469a8"
+    }
+  },
+  "limitations": [
+    "Urssaf employment and DPAE come from one administrative family, not independent causal replications.",
+    "Eurostat ICT adoption is an enterprise survey covering 10+ persons and NACE J, not employment or occupational exposure.",
+    "Insee tertiary marchand is broader than NACE J; it cannot substitute for an independent ICT headcount.",
+    "Indeed technical occupations do not equal NACE J employers; no crosswalk has been approved.",
+    "2025 DPAE are withheld due to published contract-duration error warnings.",
+    "Eurostat E_AI_TANY AI technology basket expanded in 2025 to include generating image/video/sound; 2025 level is not strict like-for-like adoption change.",
+    "Information and communication covers publishing, media and telecoms, not just software firms.",
+    "ODbL 1.0: attribution and derivative-database obligations; commercial product review not complete."
+  ],
+  "evidence_gate": "DESCRIPTIVE_SIDEBY_SIDE_ONLY",
+  "business_licence_gate": "NOT_APPROVED_FOR_COMMERCIAL_DERIVED_DATABASE",
+  "causal_claims_permitted": false,
+  "methodology": "pipeline/pilot_ict.py"
+}
