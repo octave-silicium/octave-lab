@@ -1,7 +1,7 @@
 """Browser smoke tests on real archived data; no screenshot publication."""
-import json,time
+import json,time,re
 from pathlib import Path
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright, expect
 base="http://127.0.0.1:8765"
 out=Path("browser-audit");out.mkdir(exist_ok=True)
 checks=[]
@@ -10,40 +10,40 @@ with sync_playwright() as p:
     for width,height in [(1440,900),(1280,800),(768,1024),(390,844)]:
         page=browser.new_page(viewport={"width":width,"height":height})
         errors=[];page.on("pageerror",lambda e:errors.append(str(e)))
-        t=time.perf_counter();page.goto(base);page.wait_for_function("document.querySelector('#count').textContent !== '—'")
+        t=time.perf_counter();page.goto(base);expect(page.locator("#count")).to_have_text(re.compile(r"2\s?478"),timeout=15000)
         ready_ms=round((time.perf_counter()-t)*1000)
         assert page.locator("#count").inner_text().replace("\u202f","").replace("\xa0","")=="2478"
-        assert page.locator("#plot svg").count()==1
-        assert page.evaluate("document.documentElement.scrollWidth <= innerWidth+1")
+        expect(page.locator("#plot svg")).to_have_count(1)
+        assert page.evaluate("() => document.documentElement.scrollWidth <= innerWidth+1")
         page.locator("#table-tab").click()
         page.locator("#rows button").first.click()
         assert page.locator("#proof .proof-value").inner_text()=="100"
         page.locator("#next").click()
-        page.wait_for_function("document.querySelector('#page').textContent.startsWith('51')")
+        expect(page.locator("#page")).to_have_text(re.compile(r"^51"))
         page.locator("#theme").click()
         assert page.locator("html").get_attribute("data-theme")=="light"
         page.locator("#theme").click()
         page.locator("#chart-tab").click()
         page.locator("#start").fill("2020-02-01");page.locator("#end").fill("2020-02-02")
         page.locator("#range button[type=submit]").click()
-        page.wait_for_function("document.querySelector('#count').textContent==='2'")
+        expect(page.locator("#count")).to_have_text("2")
         page.locator("#plot circle").first.click()
-        page.wait_for_function("document.querySelector('#proof .proof-value')?.textContent==='100'")
+        expect(page.locator("#proof .proof-value")).to_have_text("100")
         page.locator(".compare-panel summary").click()
         page.locator("#compare-form button").click()
-        page.wait_for_function("document.querySelector('#compare-result').textContent.includes('Aucun taux calculé')")
+        expect(page.locator("#compare-result")).to_contain_text("Aucun taux calculé")
         page.locator("#windows button").first.click()
-        page.wait_for_function("document.querySelector('#count').textContent==='30'")
+        expect(page.locator("#count")).to_have_text("30")
         page.locator("#sources button").filter(has_text="Insee").click()
         page.locator("#series-query").fill("industrie")
         page.locator("#series-search button").click()
-        page.wait_for_function("document.querySelector('#active-filters').textContent.includes('industrie')")
+        expect(page.locator("#active-filters")).to_contain_text("industrie")
         page.locator("#active-filters button").first.click()
         page.wait_for_selector("#series-select")
-        page.wait_for_function("document.querySelector('#series-select option[value=\"0\"]') !== null")
+        expect(page.locator('#series-select option[value="0"]')).to_have_count(1)
         page.locator("#series-select").select_option("0")
-        page.wait_for_function("document.querySelector('#count').textContent==='50'")
-        assert page.evaluate("document.documentElement.scrollWidth <= innerWidth+1")
+        expect(page.locator("#count")).to_have_text("50")
+        assert page.evaluate("() => document.documentElement.scrollWidth <= innerWidth+1")
         page.screenshot(path=str(out/f"viewport-{width}.png"),full_page=True)
         assert not errors
         checks.append({"width":width,"height":height,"ready_ms":ready_ms,"journey_pass":True,"no_horizontal_overflow":True,"no_js_errors":True,"screenshot_rendered":True})

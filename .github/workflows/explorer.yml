@@ -28,6 +28,7 @@ jobs:
           python -m playwright install --with-deps chromium
       - name: Real archive browser journeys
         run: |
+          set -o pipefail
           python -m pipeline.explorer > /tmp/octave-explorer.log 2>&1 &
           PID=$!
           trap 'kill "$PID" 2>/dev/null || true' EXIT
