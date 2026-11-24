@@ -1,0 +1,456 @@
+{
+  "suite": "W001-synthetic-structured-v1",
+  "scope": "synthetic, single-line invoices, exact equality, no rounding tolerance, missing field short-circuit, no OCR or ERP",
+  "cases": [
+    {
+      "id": "W001-01",
+      "invoice": {
+        "invoice_id": "INV-SYN-01",
+        "supplier": "SYN-A",
+        "order_id": "PO-SYN",
+        "currency": "EUR",
+        "quantity": 10,
+        "unit_price": "12.00",
+        "net": "120.00",
+        "tax": "24.00",
+        "total": "144.00"
+      },
+      "order": {
+        "supplier": "SYN-A",
+        "order_id": "PO-SYN",
+        "currency": "EUR",
+        "quantity": 10,
+        "unit_price": "12.00"
+      },
+      "receipt": {
+        "quantity": 10
+      },
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": []
+    },
+    {
+      "id": "W001-02",
+      "invoice": {
+        "invoice_id": "INV-SYN-01",
+        "supplier": "SYN-A",
+        "order_id": "PO-SYN",
+        "currency": "EUR",
+        "quantity": 9,
+        "unit_price": "12.00",
+        "net": "108.00",
+        "tax": "21.60",
+        "total": "129.60"
+      },
+      "order": {
+        "supplier": "SYN-A",
+        "order_id": "PO-SYN",
+        "currency": "EUR",
+        "quantity": 10,
+        "unit_price": "12.00"
+      },
+      "receipt": {
+        "quantity": 10
+      },
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": []
+    },
+    {
+      "id": "W001-03",
+      "invoice": {
+        "invoice_id": "INV-SYN-01",
+        "supplier": "SYN-A",
+        "order_id": "PO-SYN",
+        "currency": "EUR",
+        "quantity": 10,
+        "unit_price": "13.00",
+        "net": "130.00",
+        "tax": "26.00",
+        "total": "156.00"
+      },
+      "order": {
+        "supplier": "SYN-A",
+        "order_id": "PO-SYN",
+        "currency": "EUR",
+        "quantity": 10,
+        "unit_price": "12.00"
+      },
+      "receipt": {
+        "quantity": 10
+      },
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": []
+    },
+    {
+      "id": "W001-04",
+      "invoice": {
+        "invoice_id": "INV-SYN-01",
+        "supplier": "SYN-A",
+        "order_id": "PO-SYN",
+        "currency": "EUR",
+        "quantity": 10,
+        "unit_price": "12.00",
+        "net": "119.00",
+        "tax": "23.80",
+        "total": "142.80"
+      },
+      "order": {
+        "supplier": "SYN-A",
+        "order_id": "PO-SYN",
+        "currency": "EUR",
+        "quantity": 10,
+        "unit_price": "12.00"
+      },
+      "receipt": {
+        "quantity": 10
+      },
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": []
+    },
+    {
+      "id": "W001-05",
+      "invoice": {
+        "invoice_id": "INV-SYN-01",
+        "supplier": "SYN-A",
+        "order_id": "PO-SYN",
+        "currency": "EUR",
+        "quantity": 10,
+        "unit_price": "12.00",
+        "net": "120.00",
+        "tax": "20.00",
+        "total": "140.00"
+      },
+      "order": {
+        "supplier": "SYN-A",
+        "order_id": "PO-SYN",
+        "currency": "EUR",
+        "quantity": 10,
+        "unit_price": "12.00"
+      },
+      "receipt": {
+        "quantity": 10
+      },
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": []
+    },
+    {
+      "id": "W001-06",
+      "invoice": {
+        "invoice_id": "INV-SYN-01",
+        "supplier": "SYN-A",
+        "order_id": "PO-SYN",
+        "currency": "EUR",
+        "quantity": 10,
+        "unit_price": "12.00",
+        "net": "120.00",
+        "tax": "24.00",
+        "total": "145.00"
+      },
+      "order": {
+        "supplier": "SYN-A",
+        "order_id": "PO-SYN",
+        "currency": "EUR",
+        "quantity": 10,
+        "unit_price": "12.00"
+      },
+      "receipt": {
+        "quantity": 10
+      },
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": []
+    },
+    {
+      "id": "W001-07",
+      "invoice": {
+        "invoice_id": "INV-SYN-01",
+        "supplier": "SYN-B",
+        "order_id": "PO-SYN",
+        "currency": "EUR",
+        "quantity": 10,
+        "unit_price": "12.00",
+        "net": "120.00",
+        "tax": "24.00",
+        "total": "144.00"
+      },
+      "order": {
+        "supplier": "SYN-A",
+        "order_id": "PO-SYN",
+        "currency": "EUR",
+        "quantity": 10,
+        "unit_price": "12.00"
+      },
+      "receipt": {
+        "quantity": 10
+      },
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": []
+    },
+    {
+      "id": "W001-08",
+      "invoice": {
+        "invoice_id": "INV-SYN-01",
+        "supplier": "SYN-A",
+        "order_id": "PO-OTHER",
+        "currency": "EUR",
+        "quantity": 10,
+        "unit_price": "12.00",
+        "net": "120.00",
+        "tax": "24.00",
+        "total": "144.00"
+      },
+      "order": {
+        "supplier": "SYN-A",
+        "order_id": "PO-SYN",
+        "currency": "EUR",
+        "quantity": 10,
+        "unit_price": "12.00"
+      },
+      "receipt": {
+        "quantity": 10
+      },
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": []
+    },
+    {
+      "id": "W001-09",
+      "invoice": {
+        "invoice_id": "INV-SYN-01",
+        "supplier": "SYN-A",
+        "order_id": "PO-SYN",
+        "currency": "USD",
+        "quantity": 10,
+        "unit_price": "12.00",
+        "net": "120.00",
+        "tax": "24.00",
+        "total": "144.00"
+      },
+      "order": {
+        "supplier": "SYN-A",
+        "order_id": "PO-SYN",
+        "currency": "EUR",
+        "quantity": 10,
+        "unit_price": "12.00"
+      },
+      "receipt": {
+        "quantity": 10
+      },
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": []
+    },
+    {
+      "id": "W001-10",
+      "invoice": {
+        "invoice_id": "INV-SYN-01",
+        "supplier": "SYN-A",
+        "order_id": "PO-SYN",
+        "currency": "EUR",
+        "quantity": 10,
+        "unit_price": "12.00",
+        "net": "120.00",
+        "tax": "24.00",
+        "total": "144.00"
+      },
+      "order": {
+        "supplier": "SYN-A",
+        "order_id": "PO-SYN",
+        "currency": "EUR",
+        "quantity": 10,
+        "unit_price": "12.00"
+      },
+      "receipt": {
+        "quantity": 10
+      },
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": [
+        "INV-SYN-01"
+      ]
+    },
+    {
+      "id": "W001-11",
+      "invoice": {
+        "invoice_id": "INV-SYN-01",
+        "supplier": "SYN-A",
+        "order_id": "PO-SYN",
+        "currency": "EUR",
+        "quantity": null,
+        "unit_price": "12.00",
+        "net": "120.00",
+        "tax": "24.00",
+        "total": "144.00"
+      },
+      "order": {
+        "supplier": "SYN-A",
+        "order_id": "PO-SYN",
+        "currency": "EUR",
+        "quantity": 10,
+        "unit_price": "12.00"
+      },
+      "receipt": {
+        "quantity": 10
+      },
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": []
+    },
+    {
+      "id": "W001-12",
+      "invoice": {
+        "invoice_id": "INV-SYN-01",
+        "supplier": "SYN-A",
+        "order_id": "PO-SYN",
+        "currency": "EUR",
+        "quantity": 10,
+        "unit_price": "12.00",
+        "net": "120.00",
+        "tax": "24.00",
+        "total": "144.00"
+      },
+      "order": {
+        "supplier": "SYN-A",
+        "order_id": "PO-SYN",
+        "currency": "EUR",
+        "quantity": 10,
+        "unit_price": "12.00"
+      },
+      "receipt": {
+        "quantity": 8
+      },
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": []
+    },
+    {
+      "id": "W001-13",
+      "invoice": {
+        "invoice_id": "INV-SYN-01",
+        "supplier": "SYN-B",
+        "order_id": "PO-SYN",
+        "currency": "EUR",
+        "quantity": 10,
+        "unit_price": "12.00",
+        "net": "120.00",
+        "tax": "24.00",
+        "total": "140.00"
+      },
+      "order": {
+        "supplier": "SYN-A",
+        "order_id": "PO-SYN",
+        "currency": "EUR",
+        "quantity": 10,
+        "unit_price": "12.00"
+      },
+      "receipt": {
+        "quantity": 10
+      },
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": []
+    },
+    {
+      "id": "W001-14",
+      "invoice": {
+        "invoice_id": "INV-SYN-01",
+        "supplier": "SYN-A",
+        "order_id": "PO-SYN",
+        "currency": "EUR",
+        "quantity": 10,
+        "unit_price": "12",
+        "net": "120",
+        "tax": "24",
+        "total": "144"
+      },
+      "order": {
+        "supplier": "SYN-A",
+        "order_id": "PO-SYN",
+        "currency": "EUR",
+        "quantity": 10,
+        "unit_price": "12.00"
+      },
+      "receipt": {
+        "quantity": 10
+      },
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": []
+    },
+    {
+      "id": "W001-15",
+      "invoice": {
+        "invoice_id": "INV-SYN-01",
+        "supplier": "SYN-A",
+        "order_id": "PO-SYN",
+        "currency": "EUR",
+        "quantity": 3,
+        "unit_price": "1.25",
+        "net": "3.75",
+        "tax": "0.75",
+        "total": "4.50"
+      },
+      "order": {
+        "supplier": "SYN-A",
+        "order_id": "PO-SYN",
+        "currency": "EUR",
+        "quantity": 3,
+        "unit_price": "1.25"
+      },
+      "receipt": {
+        "quantity": 3
+      },
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": []
+    },
+    {
+      "id": "W001-16",
+      "invoice": {
+        "invoice_id": "INV-SYN-01",
+        "supplier": "SYN-A",
+        "order_id": "PO-SYN",
+        "currency": "EUR",
+        "quantity": 3,
+        "unit_price": "1.25",
+        "net": "3.75",
+        "tax": "0.74",
+        "total": "4.49"
+      },
+      "order": {
+        "supplier": "SYN-A",
+        "order_id": "PO-SYN",
+        "currency": "EUR",
+        "quantity": 3,
+        "unit_price": "1.25"
+      },
+      "receipt": {
+        "quantity": 3
+      },
+      "rules": {
+        "tax_rate": "0.20"
+      },
+      "previous_invoice_ids": []
+    }
+  ]
+}

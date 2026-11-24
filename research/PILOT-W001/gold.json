@@ -1,0 +1,96 @@
+{
+  "cases_sha256": "fb2b0c64212da744931c13a0cc1c83dea9b0d784f1411dca683951c26d9462c5",
+  "expected": {
+    "W001-01": {
+      "decision": "ACCEPT",
+      "issues": []
+    },
+    "W001-02": {
+      "decision": "REVIEW",
+      "issues": [
+        "QUANTITY_MISMATCH"
+      ]
+    },
+    "W001-03": {
+      "decision": "REVIEW",
+      "issues": [
+        "PRICE_MISMATCH"
+      ]
+    },
+    "W001-04": {
+      "decision": "REVIEW",
+      "issues": [
+        "NET_MISMATCH"
+      ]
+    },
+    "W001-05": {
+      "decision": "REVIEW",
+      "issues": [
+        "TAX_MISMATCH"
+      ]
+    },
+    "W001-06": {
+      "decision": "REVIEW",
+      "issues": [
+        "TOTAL_MISMATCH"
+      ]
+    },
+    "W001-07": {
+      "decision": "REVIEW",
+      "issues": [
+        "SUPPLIER_MISMATCH"
+      ]
+    },
+    "W001-08": {
+      "decision": "REVIEW",
+      "issues": [
+        "ORDER_MISMATCH"
+      ]
+    },
+    "W001-09": {
+      "decision": "REVIEW",
+      "issues": [
+        "CURRENCY_MISMATCH"
+      ]
+    },
+    "W001-10": {
+      "decision": "REVIEW",
+      "issues": [
+        "DUPLICATE"
+      ]
+    },
+    "W001-11": {
+      "decision": "REVIEW",
+      "issues": [
+        "MISSING_FIELD"
+      ]
+    },
+    "W001-12": {
+      "decision": "REVIEW",
+      "issues": [
+        "QUANTITY_MISMATCH"
+      ]
+    },
+    "W001-13": {
+      "decision": "REVIEW",
+      "issues": [
+        "SUPPLIER_MISMATCH",
+        "TOTAL_MISMATCH"
+      ]
+    },
+    "W001-14": {
+      "decision": "ACCEPT",
+      "issues": []
+    },
+    "W001-15": {
+      "decision": "ACCEPT",
+      "issues": []
+    },
+    "W001-16": {
+      "decision": "REVIEW",
+      "issues": [
+        "TAX_MISMATCH"
+      ]
+    }
+  }
+}
