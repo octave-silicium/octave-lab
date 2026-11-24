@@ -1,0 +1,72 @@
+{
+  "run_id": 45360868458,
+  "job_id": 138330303202,
+  "status": "success",
+  "tests": "Ran 171 tests in 6.214s",
+  "audit": {
+    "status": "NATIVE_GRAPH_LOADED",
+    "version_token": "v462",
+    "release": {
+      "filename_token": "v462",
+      "version_file_bytes": 2672,
+      "version_file_sha256": "0c66d97c871f54e30abdc6b0be2a8c47a78538bf08996f3255cb243706a7917c",
+      "status": "UNCONFIRMED_VERSION_FILE_CONTENT"
+    },
+    "archive_sha256": "ae63cf9155c59710175ed214b9ad4310e5d52c88582eb9a8c90e8505cacf7fcb",
+    "tables": {
+      "arborescence_centre_interet": 5698,
+      "arborescence_competences": 19598,
+      "arborescence_secteur_activite": 4341,
+      "arborescence_secteur_naf": 3626,
+      "arborescence_thematique": 1660,
+      "centre_interet": 30,
+      "coherence_item": 124910,
+      "composition_bloc": 8,
+      "cr_gd_dp_appellations": 16377,
+      "cr_gd_dp": 1923,
+      "descriptif_rubrique": 3,
+      "domaine_professionnel": 110,
+      "grand_domaine": 14,
+      "item": 35981,
+      "liens_rome_referentiels": 141163,
+      "referentiel_appellation": 14330,
+      "referentiel_code_rome_riasec": 1923,
+      "referentiel_code_rome": 1923,
+      "referentiel_competence": 20088,
+      "referentiel_contexte_travail": 194,
+      "referentiel_macro_competence_riasec": 506,
+      "referentiel_savoir": 15699,
+      "rubrique_mobilite": 18601,
+      "secteur_activite": 35,
+      "secteur_naf": 89,
+      "sous_secteur_activite": 40,
+      "texte": 15048,
+      "themes": 17,
+      "type_referentiel": 0
+    },
+    "occupations": 1923,
+    "occupations_with_links": 1923,
+    "link_status": {
+      "UNRESOLVED_ITEM": 16253,
+      "NATIVE_REFERENCED": 124910
+    },
+    "link_type_candidates": {
+      "unresolved_or_multiple": 16253,
+      "referentiel_competence": 66860,
+      "referentiel_savoir": 40715,
+      "referentiel_contexte_travail": 17335
+    },
+    "duplicate_native_ids": {
+      "referentiel_code_rome": 0,
+      "referentiel_appellation": 0,
+      "referentiel_competence": 0,
+      "referentiel_savoir": 0,
+      "referentiel_contexte_travail": 0,
+      "item": 0
+    },
+    "crosswalks_validated": 0,
+    "actions": 0,
+    "publication": "BLOCK_PUBLICATION"
+  },
+  "errors": []
+}

@@ -1,0 +1,263 @@
+{
+  "run_id": 45360513288,
+  "job_id": 138329083535,
+  "status": "failure",
+  "tests": "Ran 170 tests in 7.472s",
+  "audit": {
+    "version": "0.1",
+    "at": "2026-11-24T08:57:16.735327+00:00",
+    "mode": "METADATA_MONITOR",
+    "registered": 14,
+    "due": 14,
+    "not_due": 0,
+    "statuses": {
+      "CHECKED": 9,
+      "FAILED": 1,
+      "PINNED_VERSION_VERIFIED": 1,
+      "MANUAL_REVIEW": 3
+    },
+    "results": [
+      {
+        "id": "indeed_national_total_daily",
+        "checked_at": "2026-11-24T08:56:56.436042+00:00",
+        "mode": "indeed_national",
+        "publication": "BLOCK_PUBLICATION",
+        "promotion": "NOT_PERFORMED",
+        "status": "CHECKED",
+        "validation_scope": "SOURCE_NATIVE",
+        "bytes": 204420,
+        "sha256": "ab1873dd2cef837504c473299356d5d53390dc620d6a661cf659c0c28a38e10f",
+        "change_vs_reference": "SAME",
+        "coverage": {
+          "selected_rows": 2478,
+          "first": "2020-02-01",
+          "last": "2026-11-13"
+        }
+      },
+      {
+        "id": "indeed_sector_total_daily",
+        "checked_at": "2026-11-24T08:56:56.436950+00:00",
+        "mode": "indeed_sector",
+        "publication": "BLOCK_PUBLICATION",
+        "promotion": "NOT_PERFORMED",
+        "status": "CHECKED",
+        "validation_scope": "SOURCE_NATIVE",
+        "bytes": 8859432,
+        "sha256": "9d7ce5aecd8269931a273ae5a13583adbcebc1a2bca0960980b7e0ab647e347a",
+        "change_vs_reference": "SAME",
+        "coverage": {
+          "selected_rows": 84252,
+          "first": "2020-02-01",
+          "last": "2026-11-13"
+        }
+      },
+      {
+        "id": "dares_offers_monthly",
+        "checked_at": "2026-11-24T08:56:56.437113+00:00",
+        "mode": "dares",
+        "publication": "BLOCK_PUBLICATION",
+        "promotion": "NOT_PERFORMED",
+        "status": "CHECKED",
+        "validation_scope": "SOURCE_NATIVE",
+        "bytes": 10645494,
+        "sha256": "1ea5f3f5a0dea3ba3c9b58f486cd965ab30802204882578b16d11b81f4b82cb7",
+        "change_vs_reference": "SAME",
+        "coverage": {
+          "rows": 96252,
+          "first": "1996-01",
+          "last": "2026-09"
+        }
+      },
+      {
+        "id": "insee_employment",
+        "checked_at": "2026-11-24T08:56:56.665214+00:00",
+        "mode": "xlsx",
+        "publication": "BLOCK_PUBLICATION",
+        "promotion": "NOT_PERFORMED",
+        "status": "FAILED",
+        "error_type": "URLError"
+      },
+      {
+        "id": "urssaf_na88",
+        "checked_at": "2026-11-24T08:56:57.245404+00:00",
+        "mode": "live_native",
+        "publication": "BLOCK_PUBLICATION",
+        "promotion": "NOT_PERFORMED",
+        "status": "CHECKED",
+        "validation_scope": "SOURCE_NATIVE",
+        "bytes": 1572724,
+        "sha256": "9ec16fb077e554518f5a1ade579684a8c91d56f293c7b9897f07b40226833222",
+        "change_vs_reference": "SAME",
+        "coverage": {
+          "cells": 18144,
+          "first": "1998Q3",
+          "last": "2026Q2",
+          "quality": {
+            "DESCRIPTIVE_ONLY": 18144
+          }
+        }
+      },
+      {
+        "id": "urssaf_dpae_na38",
+        "checked_at": "2026-11-24T08:56:59.651262+00:00",
+        "mode": "live_native",
+        "publication": "BLOCK_PUBLICATION",
+        "promotion": "NOT_PERFORMED",
+        "status": "CHECKED",
+        "validation_scope": "SOURCE_NATIVE",
+        "bytes": 1945716,
+        "sha256": "42cd99124b1ef5f0a39afc481c42e70d5adc0fbfb535a7cb53f2653dfd41f549",
+        "change_vs_reference": "SAME",
+        "coverage": {
+          "cells": 23754,
+          "first": "2000Q1",
+          "last": "2026Q3",
+          "quality": {
+            "DESCRIPTIVE_ONLY": 23310,
+            "RESTRICTED": 444
+          }
+        }
+      },
+      {
+        "id": "urssaf_dpae_monthly",
+        "checked_at": "2026-11-24T08:57:02.790556+00:00",
+        "mode": "live_native",
+        "publication": "BLOCK_PUBLICATION",
+        "promotion": "NOT_PERFORMED",
+        "status": "CHECKED",
+        "validation_scope": "SOURCE_NATIVE",
+        "bytes": 46316,
+        "sha256": "e0789b561ae47d5ce444e8f87f84fd2d076a3c460fba4a54f1cb6de7027a4a7b",
+        "change_vs_reference": "SAME",
+        "coverage": {
+          "cells": 1284,
+          "first": "2000-01",
+          "last": "2026-09",
+          "quality": {
+            "DESCRIPTIVE_ONLY": 1260,
+            "RESTRICTED": 24
+          }
+        }
+      },
+      {
+        "id": "eurostat_size",
+        "checked_at": "2026-11-24T08:57:03.351670+00:00",
+        "mode": "live_native",
+        "publication": "BLOCK_PUBLICATION",
+        "promotion": "NOT_PERFORMED",
+        "status": "CHECKED",
+        "validation_scope": "SOURCE_NATIVE",
+        "bytes": 54121,
+        "sha256": "f5f541e46daefe16722efeced6d8bfeb99578eedc1e8c12476a029f5f45edd73",
+        "change_vs_reference": "SAME",
+        "coverage": {
+          "cells": 2930,
+          "first": "2023",
+          "last": "2025",
+          "quality": {
+            "DESCRIPTIVE_ONLY": 2592,
+            "REVIEW_REQUIRED": 218,
+            "WITHHELD": 120
+          }
+        }
+      },
+      {
+        "id": "eurostat_nace",
+        "checked_at": "2026-11-24T08:57:03.915417+00:00",
+        "mode": "live_native",
+        "publication": "BLOCK_PUBLICATION",
+        "promotion": "NOT_PERFORMED",
+        "status": "CHECKED",
+        "validation_scope": "SOURCE_NATIVE",
+        "bytes": 191957,
+        "sha256": "0c701942ea3d15bd1350e6938b27a5713f9d39f366b620723995b98077a469a8",
+        "change_vs_reference": "SAME",
+        "coverage": {
+          "cells": 12400,
+          "first": "2023",
+          "last": "2025",
+          "quality": {
+            "REVIEW_REQUIRED": 1400,
+            "DESCRIPTIVE_ONLY": 6593,
+            "WITHHELD": 4407
+          }
+        }
+      },
+      {
+        "id": "rome",
+        "checked_at": "2026-11-24T08:57:04.567159+00:00",
+        "mode": "rome_inventory",
+        "publication": "BLOCK_PUBLICATION",
+        "promotion": "NOT_PERFORMED",
+        "status": "CHECKED",
+        "validation_scope": "CONTAINER_OR_INVENTORY",
+        "bytes": 4556970,
+        "sha256": "ae63cf9155c59710175ed214b9ad4310e5d52c88582eb9a8c90e8505cacf7fcb",
+        "change_vs_reference": "SAME",
+        "coverage": {
+          "members": 30,
+          "scope": "NATIVE_INVENTORY_ONLY"
+        }
+      },
+      {
+        "id": "onet",
+        "checked_at": "2026-11-24T08:57:07.165478+00:00",
+        "mode": "onet_pinned",
+        "publication": "BLOCK_PUBLICATION",
+        "promotion": "NOT_PERFORMED",
+        "status": "PINNED_VERSION_VERIFIED",
+        "version": "31.0",
+        "nodes": {
+          "occupation": 1016,
+          "task": 18838,
+          "gwa": 41,
+          "iwa": 332,
+          "dwa": 2087
+        },
+        "edges": {
+          "OCCUPATION_TASK": 18838,
+          "GWA_IWA": 332,
+          "IWA_DWA": 2087,
+          "TASK_DWA": 24087
+        },
+        "latest_release_verified": false,
+        "source_hashes": {
+          "occupation_data": "a09eae1d6609686e44e05b7290993a1c8b523d8ca224bc0eedc194c855c3ee02",
+          "task_statements": "4568e14d8db6f05551ad37e056e909b13ebae4a26bcb5ff915bb5f281d582c57",
+          "gwas_to_iwas_to_dwas": "ae4e9f166187bfe8e6328a21470689ed188e7ed831090ace2a21c66cebb31a49",
+          "tasks_to_dwas": "15624d31acb85627736a87dc7c485edffe30361262571c8242fad4ae9e7678a6"
+        }
+      },
+      {
+        "id": "esco",
+        "checked_at": "2026-11-24T08:57:07.846808+00:00",
+        "mode": "manual",
+        "publication": "BLOCK_PUBLICATION",
+        "promotion": "NOT_PERFORMED",
+        "status": "MANUAL_REVIEW",
+        "reason": "Full versioned archive obtained manually; full API equivalence not validated"
+      },
+      {
+        "id": "dares_mmo",
+        "checked_at": "2026-11-24T08:57:07.846836+00:00",
+        "mode": "manual",
+        "publication": "BLOCK_PUBLICATION",
+        "promotion": "NOT_PERFORMED",
+        "status": "MANUAL_REVIEW",
+        "reason": "Official automated access blocked; user-supplied corrected quarterly and annual files"
+      },
+      {
+        "id": "dares_fap",
+        "checked_at": "2026-11-24T08:57:07.846843+00:00",
+        "mode": "manual",
+        "publication": "BLOCK_PUBLICATION",
+        "promotion": "NOT_PERFORMED",
+        "status": "MANUAL_REVIEW",
+        "reason": "Official mapping downloads not yet qualified for automatic collection"
+      }
+    ],
+    "automatic_promotion": false,
+    "vault_provisioned": false
+  },
+  "errors": []
+}

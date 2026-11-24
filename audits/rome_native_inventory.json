@@ -1,0 +1,512 @@
+{
+  "run_id": 45360352892,
+  "job_id": 138328533757,
+  "status": "success",
+  "tests": null,
+  "audit": {
+    "sha256": "ae63cf9155c59710175ed214b9ad4310e5d52c88582eb9a8c90e8505cacf7fcb",
+    "bytes": 4556970,
+    "members": {
+      "unix_arborescence_centre_interet_v462_utf8.csv": {
+        "bytes": 605261,
+        "sha256": "84da428c6ed8364841279c0d33380832e4aba4aa637ed187b8405466228102fd",
+        "encoding": "utf-8-sig",
+        "separator": ",",
+        "columns": [
+          "code_centre_interet",
+          "libelle_centre_interet",
+          "code_ogr_rome",
+          "code_rome",
+          "libelle_rome",
+          "principal"
+        ],
+        "rows": 5698,
+        "row_widths": {
+          "6": 5698
+        }
+      },
+      "unix_arborescence_competences_v462_utf8.csv": {
+        "bytes": 5262882,
+        "sha256": "d5651da858db6862bd725aa7629b7f818441d928181e063ad5aa5159db67037e",
+        "encoding": "utf-8-sig",
+        "separator": ",",
+        "columns": [
+          "code_domaine_competence",
+          "domaine_competence",
+          "code_enjeu",
+          "enjeu",
+          "code_objectif",
+          "objectif",
+          "code_macro_competence",
+          "code_ogr_macro_competence",
+          "libelle_macro_competence",
+          "code_ogr_competence",
+          "libelle_competence"
+        ],
+        "rows": 19598,
+        "row_widths": {
+          "11": 19598
+        }
+      },
+      "unix_arborescence_secteur_activite_v462_utf8.csv": {
+        "bytes": 496424,
+        "sha256": "f584c1ad0b8e486994c816a94dce5173d27979bd980d8cf337a4f276458dcdd1",
+        "encoding": "utf-8-sig",
+        "separator": ",",
+        "columns": [
+          "code_sect_activite",
+          "libelle_sect_activite",
+          "code_ss_sect_activite",
+          "libelle_ss_sect_activite",
+          "code_ogr_rome",
+          "code_rome",
+          "libelle_rome",
+          "principal"
+        ],
+        "rows": 4341,
+        "row_widths": {
+          "8": 4341
+        }
+      },
+      "unix_arborescence_secteur_naf_v462_utf8.csv": {
+        "bytes": 410320,
+        "sha256": "ef8eadaa4fd3028b72b78c7beb33f4c4ec15ced6ec0b127d1f0d4b18505dedd3",
+        "encoding": "cp1252",
+        "separator": ",",
+        "columns": [
+          "code_secteur_naf",
+          "libelle_secteur_naf",
+          "code_ogr_rome",
+          "code_rome",
+          "libelle_rome"
+        ],
+        "rows": 3626,
+        "row_widths": {
+          "5": 3626
+        }
+      },
+      "unix_arborescence_thematique_v462_utf8.csv": {
+        "bytes": 191800,
+        "sha256": "9e7e162ec976f9a8c0025d6937530617168bcda3604bfa60e5e766f61c87e7dc",
+        "encoding": "utf-8-sig",
+        "separator": ",",
+        "columns": [
+          "code_theme",
+          "libelle_theme",
+          "code_ogr_rome",
+          "code_rome",
+          "libelle_rome"
+        ],
+        "rows": 1660,
+        "row_widths": {
+          "5": 1660
+        }
+      },
+      "unix_centre_interet_v462_utf8.csv": {
+        "bytes": 12134,
+        "sha256": "b40c518ddba37011f9f91ec3049b721c37fa9baf896f902bc18e2f1901079a41",
+        "encoding": "utf-8-sig",
+        "separator": ",",
+        "columns": [
+          "code_centre_interet",
+          "libelle_centre_interet",
+          "definition_centre_interet"
+        ],
+        "rows": 30,
+        "row_widths": {
+          "3": 30
+        }
+      },
+      "unix_coherence_item_v462_utf8.csv": {
+        "bytes": 2716634,
+        "sha256": "c5d9f29252e5f18ccb56068d3aaeb05c1821336eb77caf2df3383086c344f5da",
+        "encoding": "utf-8-sig",
+        "separator": ",",
+        "columns": [
+          "code_rome",
+          "code_ogr",
+          "coeur_metier"
+        ],
+        "rows": 124910,
+        "row_widths": {
+          "3": 124910
+        }
+      },
+      "unix_composition_bloc_v462_utf8.csv": {
+        "bytes": 223,
+        "sha256": "b9263f60976e67699e45c9b1457046d68d76d3ec853a2655c60f1655d71c8d06",
+        "encoding": "utf-8-sig",
+        "separator": ",",
+        "columns": [
+          "code_compo_bloc",
+          "libelle_bloc"
+        ],
+        "rows": 8,
+        "row_widths": {
+          "2": 8
+        }
+      },
+      "unix_cr_gd_dp_appellations_v462_utf8.csv": {
+        "bytes": 2078447,
+        "sha256": "e47838b2559b6fdffc649c53aee8e25a3d957525828fb2c1a3e76f3521aefb3f",
+        "encoding": "utf-8-sig",
+        "separator": ",",
+        "columns": [
+          "code_grand_domaine",
+          "code_domaine_professionnel",
+          "numero_fiche_rome",
+          "intitule",
+          "libelle_appellation_long",
+          "libelle_appellation_court",
+          "type_provenance",
+          "code_fiche",
+          "ogr_rome",
+          "ogr_appellation"
+        ],
+        "rows": 16377,
+        "row_widths": {
+          "10": 16377
+        }
+      },
+      "unix_cr_gd_dp_v462_utf8.csv": {
+        "bytes": 254317,
+        "sha256": "818a62a0979d4231b090533e914af3f55f68d2069793fc0b9ad51bcfe8f6ec3a",
+        "encoding": "utf-8-sig",
+        "separator": ",",
+        "columns": [
+          "code_rome",
+          "libelle_rome",
+          "code_grand_domaine",
+          "libelle_grand_domaine",
+          "code_domaine_professionel",
+          "libelle_domaine_professionel"
+        ],
+        "rows": 1923,
+        "row_widths": {
+          "6": 1923
+        }
+      },
+      "unix_descriptif_rubrique_v462_utf8.csv": {
+        "bytes": 164,
+        "sha256": "0d7aa7c6dbed8395cbee33c41767980854cf4ecf55beb64c2592f0dc18b9ac15",
+        "encoding": "utf-8-sig",
+        "separator": ",",
+        "columns": [
+          "code_rubrique",
+          "code_compo_bloc",
+          "position_rubrique",
+          "libelle_rubrique"
+        ],
+        "rows": 3,
+        "row_widths": {
+          "4": 3
+        }
+      },
+      "unix_domaine_professionnel_v462_utf8.csv": {
+        "bytes": 4190,
+        "sha256": "3f5902f626ec115357bd5a8dcea89160de6d452b97cabfd7d8a95537807d1072",
+        "encoding": "utf-8-sig",
+        "separator": ",",
+        "columns": [
+          "code_domaine_professionnel",
+          "libelle_domaine_professionnel"
+        ],
+        "rows": 110,
+        "row_widths": {
+          "2": 110
+        }
+      },
+      "unix_grand_domaine_v462_utf8.csv": {
+        "bytes": 597,
+        "sha256": "4e888cc41f2ede7a16f3983c72d9c0bbb5404d5c802933acadb78c3c2a1928ff",
+        "encoding": "utf-8-sig",
+        "separator": ",",
+        "columns": [
+          "code_grand_domaine",
+          "libelle_grand_domaine"
+        ],
+        "rows": 14,
+        "row_widths": {
+          "2": 14
+        }
+      },
+      "unix_item_v462_utf8.csv": {
+        "bytes": 2573229,
+        "sha256": "0f961e86697d49ded847decdded0bd97a124592602a53dccef74a152f307ae35",
+        "encoding": "utf-8-sig",
+        "separator": ",",
+        "columns": [
+          "code_ogr",
+          "libelle",
+          "code_rubrique"
+        ],
+        "rows": 35981,
+        "row_widths": {
+          "3": 35981
+        }
+      },
+      "unix_liens_rome_referentiels_v462_utf8.csv": {
+        "bytes": 3480982,
+        "sha256": "1a09cb86f6f5e25511331fd82436b90ff1b63df0739a666ce899613e32da39af",
+        "encoding": "utf-8-sig",
+        "separator": ",",
+        "columns": [
+          "code_rome",
+          "code_compo_bloc",
+          "code_rubrique",
+          "code_ogr"
+        ],
+        "rows": 141163,
+        "row_widths": {
+          "4": 141163
+        }
+      },
+      "unix_referentiel_appellation_v462_utf8.csv": {
+        "bytes": 2490554,
+        "sha256": "8473788e6cb65899c25bd0ab13a173644561a6bf03c7a3f6b45d47f87a141999",
+        "encoding": "utf-8-sig",
+        "separator": ",",
+        "columns": [
+          "code_ogr",
+          "libelle_appellation_long",
+          "libelle_appellation_court",
+          "code_rome",
+          "transition_eco",
+          "transition_num",
+          "transition_demo",
+          "emploi_reglemente",
+          "emploi_cadre",
+          "classification",
+          "origine",
+          "code_rome_parent",
+          "peu_usite"
+        ],
+        "rows": 14330,
+        "row_widths": {
+          "13": 14330
+        }
+      },
+      "unix_referentiel_code_rome_riasec_v462_utf8.csv": {
+        "bytes": 30383,
+        "sha256": "6d9932a869f92d726975e116064526144f264d64219a3d944428fada6b39cd0e",
+        "encoding": "utf-8-sig",
+        "separator": ",",
+        "columns": [
+          "code_rome",
+          "riasec_majeur",
+          "riasec_mineur"
+        ],
+        "rows": 1923,
+        "row_widths": {
+          "3": 1923
+        }
+      },
+      "unix_referentiel_code_rome_v462_utf8.csv": {
+        "bytes": 220251,
+        "sha256": "5290b6610e26c740ec97bd0d6f79b50754d3bdf0daaf13990e5cf115137b5f9f",
+        "encoding": "utf-8-sig",
+        "separator": ",",
+        "columns": [
+          "code_rome",
+          "code_fiche_metier",
+          "code_ogr",
+          "libelle_rome",
+          "transition_eco",
+          "transition_num",
+          "transition_demo",
+          "emploi_reglemente",
+          "emploi_cadre",
+          "code_rome_parent"
+        ],
+        "rows": 1923,
+        "row_widths": {
+          "10": 1923
+        }
+      },
+      "unix_referentiel_competence_v462_utf8.csv": {
+        "bytes": 3103811,
+        "sha256": "80a55b2577167eb7ad5f8033f65adfe7e1d2dca3dba9f4475c5fa854d81e6b23",
+        "encoding": "utf-8-sig",
+        "separator": ",",
+        "columns": [
+          "code_ogr",
+          "nature",
+          "libelle_competence",
+          "definition",
+          "code_ogr_macro_comp",
+          "code_macro_comp",
+          "cat_comp",
+          "sous_cat_comp",
+          "transition_eco",
+          "transition_num",
+          "libelle_heterogeneite",
+          "libelle_origine"
+        ],
+        "rows": 20088,
+        "row_widths": {
+          "12": 20088
+        }
+      },
+      "unix_referentiel_contexte_travail_v462_utf8.csv": {
+        "bytes": 14399,
+        "sha256": "e346f1cd9c89791db95124dd018f4fd5f0f3edc4371522e697be14347f8f4073",
+        "encoding": "utf-8-sig",
+        "separator": ",",
+        "columns": [
+          "code_ogr",
+          "libelle_cont_travail",
+          "code_type_cont_trav",
+          "libelle_type_cont_trav"
+        ],
+        "rows": 194,
+        "row_widths": {
+          "4": 194
+        }
+      },
+      "unix_referentiel_macro_competence_riasec_v462_utf8.csv": {
+        "bytes": 8109,
+        "sha256": "205e68620e7ab053e9f1d2624f394034c492a673b7f1c6caff39af13e8231b7c",
+        "encoding": "utf-8-sig",
+        "separator": ",",
+        "columns": [
+          "code_ogr",
+          "riasec_majeur",
+          "riasec_mineur"
+        ],
+        "rows": 506,
+        "row_widths": {
+          "3": 506
+        }
+      },
+      "unix_referentiel_savoir_v462_utf8.csv": {
+        "bytes": 1882229,
+        "sha256": "33d758c3b7548bb7b83d4d01d5541f5277ebe08a5c80955d3011f82625821f86",
+        "encoding": "utf-8-sig",
+        "separator": ",",
+        "columns": [
+          "code_ogr_savoir",
+          "libelle_savoir",
+          "categorie_savoir",
+          "sous_categorie_savoir",
+          "transition_eco",
+          "transition_num"
+        ],
+        "rows": 15699,
+        "row_widths": {
+          "6": 15699
+        }
+      },
+      "unix_rubrique_mobilite_v462_utf8.csv": {
+        "bytes": 373665,
+        "sha256": "b67faa884380afc481d209830870b75aeda20a5b2deffd72e7ed9529baf8d7d2",
+        "encoding": "utf-8-sig",
+        "separator": ",",
+        "columns": [
+          "code_rome",
+          "code_rome_cible",
+          "numero_ordre"
+        ],
+        "rows": 18601,
+        "row_widths": {
+          "3": 18601
+        }
+      },
+      "unix_secteur_activite_v462_utf8.csv": {
+        "bytes": 23139,
+        "sha256": "36f3418af0b849563f1f97f1acf23168fc522711e5089a87f671182a9ea4585b",
+        "encoding": "utf-8-sig",
+        "separator": ",",
+        "columns": [
+          "code_sect_activite",
+          "libelle_sect_activite",
+          "definition_sect_activite"
+        ],
+        "rows": 35,
+        "row_widths": {
+          "3": 35
+        }
+      },
+      "unix_secteur_naf_v462_utf8.csv": {
+        "bytes": 4952,
+        "sha256": "635e45adce3faebb23bf33d77db599acaf22814edd032796f7c28f1c5767aa7d",
+        "encoding": "utf-8-sig",
+        "separator": ",",
+        "columns": [
+          "code_tech_secteur_naf",
+          "code_secteur_naf",
+          "libelle_secteur_naf"
+        ],
+        "rows": 89,
+        "row_widths": {
+          "3": 89
+        }
+      },
+      "unix_sous_secteur_activite_v462_utf8.csv": {
+        "bytes": 1346,
+        "sha256": "6d65b5f39ffe565dec55a72ecb0af1966b883a99daeced6a98c5107452d72c35",
+        "encoding": "utf-8-sig",
+        "separator": ",",
+        "columns": [
+          "code_ss_sect_activite",
+          "libelle_ss_sect_activite",
+          "definition_ss_sect_activite",
+          "code_sect_activite"
+        ],
+        "rows": 40,
+        "row_widths": {
+          "4": 40
+        }
+      },
+      "unix_texte_v462_utf8.csv": {
+        "bytes": 2208733,
+        "sha256": "83b614873198ae9728864f4542af90c67c294f093fcd27c5d32e92c58b7c9a80",
+        "encoding": "utf-8-sig",
+        "separator": ",",
+        "columns": [
+          "code_rome",
+          "code_compo_bloc",
+          "libelle_type_texte",
+          "position_phrase",
+          "libelle_texte"
+        ],
+        "rows": 15048,
+        "row_widths": {
+          "5": 15048
+        }
+      },
+      "unix_themes_v462_utf8.csv": {
+        "bytes": 3960,
+        "sha256": "c9e987d9d08741cd83809d94b1b1692613ba91279ceaf9c9d16bd29cde95207d",
+        "encoding": "utf-8-sig",
+        "separator": ",",
+        "columns": [
+          "code_theme",
+          "libelle_theme",
+          "definition_theme"
+        ],
+        "rows": 17,
+        "row_widths": {
+          "3": 17
+        }
+      },
+      "unix_type_referentiel_v462_utf8.csv": {
+        "bytes": 51,
+        "sha256": "d110e6742a00ef9e9cde692f9c5a6f112a617cf8c7fa9ff5b9833d8a4f5ee608",
+        "encoding": "utf-8-sig",
+        "separator": ",",
+        "columns": [
+          "code_type_referentiel",
+          "libelle_type_referentiel"
+        ],
+        "rows": 0,
+        "row_widths": {}
+      },
+      "version.txt": {
+        "bytes": 2672,
+        "sha256": "0c66d97c871f54e30abdc6b0be2a8c47a78538bf08996f3255cb243706a7917c"
+      }
+    },
+    "status": "INVENTORY_ONLY"
+  },
+  "errors": []
+}
