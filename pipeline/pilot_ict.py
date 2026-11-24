@@ -169,7 +169,7 @@ def eurostat_value(dataset, selectors):
 
 def eurostat_ict(data):
     j = json.loads(data)
-    required = {'geo':'FR','nace_r2':'J','indic_is':'E_AI_TPVSG','unit':'PC_ENT'}
+    required = {'geo':'FR','nace_r2':'J','indic_is':'E_AI_TANY','unit':'PC_ENT'}
     # Only accept explicit 10+ enterprise scope; do not infer from ignored size dimension.
     size_codes = get_index(j['dimension']['size_emp']['category'])
     matches = [code for code in ['GE10', '10_C_EMP', 'GE10_C_EMP'] if code in size_codes]
@@ -182,13 +182,15 @@ def eurostat_ict(data):
     for year in ('2023','2024','2025'):
         values[year] = eurostat_value(j,{**required,'time':year})
     return {
-      'indicator_code':'E_AI_TPVSG',
-      'indicator_label':j['dimension']['indic_is']['category'].get('label',{}).get('E_AI_TPVSG'),
+      'indicator_code':'E_AI_TANY',
+      'indicator_label':j['dimension']['indic_is']['category'].get('label',{}).get('E_AI_TANY'),
       'unit':'% enterprises using at least one AI technology',
       'population':'Enterprises with 10+ persons employed in NACE Rev2 section J, France; survey sample, not all employers',
       'classification':'NACE Rev2 section J',
       'selected_years':values,
-      'change_2025_vs_2023_pp':round(values['2025']-values['2023'],2),
+      'change_2024_vs_2023_pp':round(values['2024']-values['2023'],2),
+      'change_2025_vs_2024_pp':None,
+      'comparability_warning':'2025 AI technology basket adds generative image/video/audio category vs prior years; do not interpret 2024-2025 difference as same-definition growth without official bridge.',
       'quality_gate':'SURVEY_DESCRIPTION_ONLY: no inference on automation, job losses or firm productivity',
       'selected_codes':required,
     }
@@ -212,6 +214,7 @@ def run(fetcher=retrieve):
         'Insee tertiary marchand is broader than NACE J; it cannot substitute for an independent ICT headcount.',
         'Indeed technical occupations do not equal NACE J employers; no crosswalk has been approved.',
         '2025 DPAE are withheld due to published contract-duration error warnings.',
+        'Eurostat E_AI_TANY AI technology basket expanded in 2025 to include generating image/video/sound; 2025 level is not strict like-for-like adoption change.',
         'Information and communication covers publishing, media and telecoms, not just software firms.',
         'ODbL 1.0: attribution and derivative-database obligations; commercial product review not complete.',
       ],
@@ -250,7 +253,7 @@ Que disent trois indicateurs différents sur les entreprises du secteur informat
 - 2023 : **{e['selected_years']['2023']:.2f} %** des entreprises concernées.
 - 2024 : **{e['selected_years']['2024']:.2f} %**.
 - 2025 : **{e['selected_years']['2025']:.2f} %**.
-- Variation 2023-2025 : **{e['change_2025_vs_2023_pp']:+.2f} points**.
+- Variation 2023-2024 (ancien panier) : **{e['change_2024_vs_2023_pp']:+.2f} points**. **Pas de taux de croissance 2024-2025 publié** : le panier de technologies suivi s’élargit en 2025 (génération d’images, vidéos et sons).
 - Champ : entreprises de 10 personnes occupées ou plus, section NACE J, France ; résultat d'enquête, non mesure de tâches remplacées.
 
 ## 4 · Confrontation méthodologique
