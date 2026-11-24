@@ -26,3 +26,10 @@ class RatingTests(unittest.TestCase):
     def test_unknown_precision(self):
         g,r,c,t=data("")
         self.assertEqual(Ratings(g,r,c).task(t)["ratings"][0]["status"],"REVIEW_REQUIRED")
+
+    def test_api_opt_in(self):
+        from pipeline.work_explorer import WorkExplorer
+        g,r,c,t=data()
+        with self.assertRaises(ValueError):WorkExplorer(onet=g).dispatch("/api/work/ratings",{"id":t})
+        x=WorkExplorer(onet=g,ratings=Ratings(g,r,c))
+        self.assertEqual(x.dispatch("/api/work/ratings",{"id":t})["ratings"][0]["value"],"4.2")

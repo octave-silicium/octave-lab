@@ -332,7 +332,13 @@ def main():
             onet=work_graph.build(lambda name:read_pinned(m["onet"][name]["path"],m["onet"][name]["sha256"]))
         if "rome" in m:rome=rome_graph.load(read_pinned(m["rome"]["path"],m["rome"]["sha256"]))
         if "esco" in m:esco=PrivateLot(m["esco"]["path"],m["esco"]["sha256"],cross_thread=True)
-        work=WorkExplorer(onet,rome,esco)
+        ratings=None
+        if "ratings" in m:
+            if onet is None:raise ValueError("RATINGS_REQUIRE_ONET")
+            from .task_ratings import Ratings
+            r=m["ratings"]
+            ratings=Ratings(onet,read_pinned(r["task_ratings"]["path"],r["task_ratings"]["sha256"]),read_pinned(r["task_categories"]["path"],r["task_categories"]["sha256"]))
+        work=WorkExplorer(onet,rome,esco,ratings)
     server=ThreadingHTTPServer(("127.0.0.1",args.port),make_handler(explorer,private,work))
     print(f"Octave Lab local : http://127.0.0.1:{server.server_port} | prêt en {time.perf_counter()-t:.2f}s",flush=True)
     try:

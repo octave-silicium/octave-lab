@@ -13,8 +13,8 @@ def read_pinned(path,sha):
     return raw
 
 class WorkExplorer:
-    def __init__(self,onet=None,rome=None,esco=None):
-        self.onet=onet;self.rome=rome;self.esco=esco;self.lock=threading.RLock()
+    def __init__(self,onet=None,rome=None,esco=None,ratings=None):
+        self.onet=onet;self.rome=rome;self.esco=esco;self.ratings=ratings;self.lock=threading.RLock()
         from .work_reverse import ReverseIndex
         self.reverse=ReverseIndex(self)
     def close(self):
@@ -71,6 +71,8 @@ class WorkExplorer:
     def dispatch(self,path,q):
         if path=="/api/work/sources" and not q:
             with self.lock:return {"sources":self.sources()}
+        if path=="/api/work/ratings" and set(q)=={"id"} and self.ratings:
+            return self.ratings.task(q["id"])
         common={"source","lang","limit","offset"}
         if path in {"/api/work/concepts","/api/work/reverse"}:
             return self.reverse.dispatch(path,q)

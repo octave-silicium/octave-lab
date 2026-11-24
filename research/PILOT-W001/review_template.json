@@ -1,0 +1,92 @@
+{
+  "protocol": "W001-EXP-001",
+  "process_id": "octave:process:invoice-control",
+  "revision": 1,
+  "reviewer_code": null,
+  "experience_context": null,
+  "consent": null,
+  "independent_description": null,
+  "actions": [
+    {
+      "id": "extract",
+      "presence": null,
+      "granularity": null,
+      "inputs": null,
+      "outputs": null,
+      "acceptance": null,
+      "actor": null,
+      "system": null,
+      "exceptions": null,
+      "dependencies": null,
+      "justification": null
+    },
+    {
+      "id": "match",
+      "presence": null,
+      "granularity": null,
+      "inputs": null,
+      "outputs": null,
+      "acceptance": null,
+      "actor": null,
+      "system": null,
+      "exceptions": null,
+      "dependencies": null,
+      "justification": null
+    },
+    {
+      "id": "check",
+      "presence": null,
+      "granularity": null,
+      "inputs": null,
+      "outputs": null,
+      "acceptance": null,
+      "actor": null,
+      "system": null,
+      "exceptions": null,
+      "dependencies": null,
+      "justification": null
+    },
+    {
+      "id": "accept",
+      "presence": null,
+      "granularity": null,
+      "inputs": null,
+      "outputs": null,
+      "acceptance": null,
+      "actor": null,
+      "system": null,
+      "exceptions": null,
+      "dependencies": null,
+      "justification": null
+    },
+    {
+      "id": "exception",
+      "presence": null,
+      "granularity": null,
+      "inputs": null,
+      "outputs": null,
+      "acceptance": null,
+      "actor": null,
+      "system": null,
+      "exceptions": null,
+      "dependencies": null,
+      "justification": null
+    },
+    {
+      "id": "escalate",
+      "presence": null,
+      "granularity": null,
+      "inputs": null,
+      "outputs": null,
+      "acceptance": null,
+      "actor": null,
+      "system": null,
+      "exceptions": null,
+      "dependencies": null,
+      "justification": null
+    }
+  ],
+  "missing_steps": [],
+  "scope_comments": null,
+  "status": "UNFILLED_NOT_EVIDENCE"
+}
