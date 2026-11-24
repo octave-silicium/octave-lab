@@ -1,0 +1,367 @@
+{
+  "id": "RESULT-001",
+  "version": "1.0",
+  "date": "2026-11-24",
+  "status": "TARGET_REQUIREMENT_VALIDATED_NO_IMPLEMENTATION_CLAIM",
+  "architecture": "ARCH-002 v2.0",
+  "registry": "governance/economic_mechanisms_v2.json",
+  "depth_levels": [
+    "EXECUTIVE_OVERVIEW",
+    "FULL_INVESTIGATION",
+    "INSPECTABLE_EVIDENCE_AND_REPRODUCTION"
+  ],
+  "sections": [
+    {
+      "id": "D01",
+      "title": "Mandat et décision",
+      "requirements": "Question précise, décision, alternatives, fonction de perte, horizon, géographie, unités, population et exclusions; état de disponibilité.",
+      "mandatory": "ANSWER_OR_EXPLICIT_LIMIT"
+    },
+    {
+      "id": "D02",
+      "title": "Verdict analytique",
+      "requirements": "Résultats les plus matériels et non triviaux, signes conditionnels, ampleur si calculable, contradictions, pourquoi ils importent, niveau de preuve et renvoi aux fiches.",
+      "mandatory": "ANSWER_OR_EXPLICIT_LIMIT"
+    },
+    {
+      "id": "D03",
+      "title": "Couverture et représentativité",
+      "requirements": "Sources, vintage, dates, granularités, dénominateurs, biais, ruptures, accès, couverture réellement calculable, sous-populations absentes, incompatibilités.",
+      "mandatory": "ANSWER_OR_EXPLICIT_LIMIT"
+    },
+    {
+      "id": "D04",
+      "title": "Technologie et capacité",
+      "requirements": "Versions, configuration, benchmarks, qualité, autonomie, coût, limites, risques et écarts entre laboratoire et exploitation.",
+      "mandatory": "ANSWER_OR_EXPLICIT_LIMIT"
+    },
+    {
+      "id": "D05",
+      "title": "Travail et compétences",
+      "requirements": "Tâches/actions, suppressions, substitutions, compléments, nouvelles tâches, apprentissage, cohortes, mesure ou absence des poids; répartition de l'exposition et du travail résiduel.",
+      "mandatory": "ANSWER_OR_EXPLICIT_LIMIT"
+    },
+    {
+      "id": "D06",
+      "title": "Processus et organisation",
+      "requirements": "Avant/après et alternatives, dépendances, goulots, files, qualité, rework, supervision, ressources, charge, coordination, structures et contraintes de transition.",
+      "mandatory": "ANSWER_OR_EXPLICIT_LIMIT"
+    },
+    {
+      "id": "D07",
+      "title": "Entreprise et investissement",
+      "requirements": "Coûts unitaires/marginaux/fixes, prix-volume-marge, cash flows, VAN, utilisation, seuils, financement, effectifs ajustables, coûts d'erreur et de transition; distributions par type de firme.",
+      "mandatory": "ANSWER_OR_EXPLICIT_LIMIT"
+    },
+    {
+      "id": "D08",
+      "title": "Marchés et dynamique concurrentielle",
+      "requirements": "Demande et élasticités, pass-through, adoption, innovation, différenciation, entrées/sorties, concentration, substitution et réallocation; distinguer marché pertinent et secteur.",
+      "mandatory": "ANSWER_OR_EXPLICIT_LIMIT"
+    },
+    {
+      "id": "D09",
+      "title": "Chaînes de valeur et territoires",
+      "requirements": "Réseaux amont/aval, biens/services, fournisseurs/clients, imports, goulots, substitution d'intrants, valeur ajoutée domestique, hétérogénéité territoriale et propagation indirecte.",
+      "mandatory": "ANSWER_OR_EXPLICIT_LIMIT"
+    },
+    {
+      "id": "D10",
+      "title": "Travail et macroéconomie",
+      "requirements": "Heures/ETP/emplois et stocks/flux, mobilités, cohortes, salaires, revenu du capital, pouvoir d'achat, demande, investissement, fiscalité et rétroactions; effets distributifs.",
+      "mandatory": "ANSWER_OR_EXPLICIT_LIMIT"
+    },
+    {
+      "id": "D11",
+      "title": "Incidence et capture de valeur",
+      "requirements": "Pont comptable avant/après, création/destruction/transfert, bénéficiaires et perdants conditionnels, part domestique/étrangère, surplus distinct de revenus, coûts communs et doubles comptes contrôlés.",
+      "mandatory": "ANSWER_OR_EXPLICIT_LIMIT"
+    },
+    {
+      "id": "D12",
+      "title": "Graphe de mécanismes et interactions",
+      "requirements": "Chemins directs, indirects et rétroactions datées, médiateurs, contraintes, seuils, signes opposés, conditions de fonctionnement, mécanismes dominants si identifiés; inspection de chaque arête.",
+      "mandatory": "ANSWER_OR_EXPLICIT_LIMIT"
+    },
+    {
+      "id": "D13",
+      "title": "Scénarios et sensibilités",
+      "requirements": "Référence sans choc, sans adoption, adoption partielle/hétérogène, complémentarité, substitution, nouvelles tâches, refonte, stress et alternatives pertinentes; matrices de sensibilité, seuils de changement de signe, bornes et hypothèses; probabilités uniquement justifiées.",
+      "mandatory": "ANSWER_OR_EXPLICIT_LIMIT"
+    },
+    {
+      "id": "D14",
+      "title": "Confrontation empirique",
+      "requirements": "Observations compatibles, anomalies, révisions, séries et comparaisons, hypothèses rivales, estimands, tests discriminants, résultats négatifs, design causal ou NON_IDENTIFIABLE; pas d'attribution par défaut.",
+      "mandatory": "ANSWER_OR_EXPLICIT_LIMIT"
+    },
+    {
+      "id": "D15",
+      "title": "Prospective et alertes",
+      "requirements": "Signaux avancés/retardés, seuils justifiés, horizon, conditions de déclenchement, conséquences, indicateurs de réfutation, actualisation et historique; distinguer alertes mesurées et surveillance proposée.",
+      "mandatory": "ANSWER_OR_EXPLICIT_LIMIT"
+    },
+    {
+      "id": "D16",
+      "title": "Décisions et opportunités",
+      "requirements": "Alternatives par acteur, leviers, arbitrages, conditions de rentabilité, risques et coûts d'erreur, actions réversibles, informations à collecter; aucune recommandation sans lien à une preuve ou hypothèse.",
+      "mandatory": "ANSWER_OR_EXPLICIT_LIMIT"
+    },
+    {
+      "id": "D17",
+      "title": "Angles morts et contre-analyse",
+      "requirements": "Registre de couverture de tous les mécanismes, motifs d'exclusion, paramètres inconnus, conclusions qui pourraient s'inverser, objections fortes, biais et plan d'acquisition priorisé selon valeur informationnelle.",
+      "mandatory": "ANSWER_OR_EXPLICIT_LIMIT"
+    },
+    {
+      "id": "D18",
+      "title": "Annexes auditables et révisions",
+      "requirements": "Sources autorisées, équations, requêtes, code/version, paramètres, snapshots, unités, logs et preuves, droits, contradictions, manifeste de reconstruction, historique des modifications et impact sur les conclusions.",
+      "mandatory": "ANSWER_OR_EXPLICIT_LIMIT"
+    }
+  ],
+  "coverage": {
+    "mechanism_ids": [
+      "M001",
+      "M002",
+      "M003",
+      "M004",
+      "M005",
+      "M006",
+      "M007",
+      "M008",
+      "M009",
+      "M010",
+      "M011",
+      "M012",
+      "M013",
+      "M014",
+      "M015",
+      "M016",
+      "M017",
+      "M018",
+      "M019",
+      "M020",
+      "M021",
+      "M022",
+      "M023",
+      "M024",
+      "M025",
+      "M026",
+      "M027",
+      "M028",
+      "M029",
+      "M030",
+      "M031",
+      "M032",
+      "M033",
+      "M034",
+      "M035",
+      "M036",
+      "M037",
+      "M038",
+      "M039",
+      "M040",
+      "M041",
+      "M042",
+      "M043",
+      "M044",
+      "M045",
+      "M046",
+      "M047",
+      "M048",
+      "M049",
+      "M050",
+      "M051",
+      "M052",
+      "M053",
+      "M054",
+      "M055",
+      "M056",
+      "M057",
+      "M058",
+      "M059",
+      "M060",
+      "M061",
+      "M062",
+      "M063",
+      "M064"
+    ],
+    "layers": [
+      "L01",
+      "L02",
+      "L03",
+      "L04",
+      "L05",
+      "L06",
+      "L07",
+      "L08",
+      "L09"
+    ],
+    "engines": [
+      "E01",
+      "E02",
+      "E03",
+      "E04",
+      "E05",
+      "E06"
+    ],
+    "interfaces": [
+      {
+        "id": "I01",
+        "from": "L01",
+        "to": "L02",
+        "flow": "capability and feasible action sets",
+        "mode": "CONDITIONAL_FORWARD",
+        "status": "SPECIFICATION"
+      },
+      {
+        "id": "I02",
+        "from": "L02",
+        "to": "L03",
+        "flow": "action requirements and resource time",
+        "mode": "CONDITIONAL_FORWARD",
+        "status": "SPECIFICATION"
+      },
+      {
+        "id": "I03",
+        "from": "L03",
+        "to": "L04",
+        "flow": "process constraints and redesign",
+        "mode": "CONDITIONAL_FORWARD",
+        "status": "SPECIFICATION"
+      },
+      {
+        "id": "I04",
+        "from": "L04",
+        "to": "L05",
+        "flow": "organization alternatives and transition costs",
+        "mode": "CONDITIONAL_FORWARD",
+        "status": "SPECIFICATION"
+      },
+      {
+        "id": "I05",
+        "from": "L05",
+        "to": "L06",
+        "flow": "price/capacity/cost and firm choices",
+        "mode": "CONDITIONAL_FORWARD",
+        "status": "SPECIFICATION"
+      },
+      {
+        "id": "I06",
+        "from": "L06",
+        "to": "L07",
+        "flow": "market demand and input sourcing",
+        "mode": "CONDITIONAL_FORWARD",
+        "status": "SPECIFICATION"
+      },
+      {
+        "id": "I07",
+        "from": "L07",
+        "to": "L08",
+        "flow": "sector value added and labor demand",
+        "mode": "CONDITIONAL_FORWARD",
+        "status": "SPECIFICATION"
+      },
+      {
+        "id": "I08",
+        "from": "L08",
+        "to": "L06",
+        "flow": "lagged income, demand and institutions",
+        "mode": "LAGGED_FEEDBACK",
+        "status": "SPECIFICATION"
+      },
+      {
+        "id": "I09",
+        "from": "L08",
+        "to": "L05",
+        "flow": "lagged wages, rates, taxation and finance",
+        "mode": "LAGGED_FEEDBACK",
+        "status": "SPECIFICATION"
+      },
+      {
+        "id": "I10",
+        "from": "L06",
+        "to": "L01",
+        "flow": "lagged market demand, investment and diffusion",
+        "mode": "LAGGED_FEEDBACK",
+        "status": "SPECIFICATION"
+      },
+      {
+        "id": "I11",
+        "from": "L05",
+        "to": "L04",
+        "flow": "lagged investment and adoption decisions",
+        "mode": "LAGGED_FEEDBACK",
+        "status": "SPECIFICATION"
+      },
+      {
+        "id": "I12",
+        "from": "L07",
+        "to": "L03",
+        "flow": "lagged input availability and input prices",
+        "mode": "LAGGED_FEEDBACK",
+        "status": "SPECIFICATION"
+      },
+      {
+        "id": "I13",
+        "from": "L08",
+        "to": "L02",
+        "flow": "lagged workforce, skills and participation",
+        "mode": "LAGGED_FEEDBACK",
+        "status": "SPECIFICATION"
+      }
+    ],
+    "dispositions": [
+      "APPLIED_QUALIFIED",
+      "HYPOTHESIS_ONLY",
+      "NOT_APPLICABLE_JUSTIFIED",
+      "BLOCKED_MISSING_DATA",
+      "BLOCKED_METHOD_OR_RIGHTS",
+      "PENDING_QUALIFICATION"
+    ],
+    "require_reason": true,
+    "require_claim_refs_if_applied": true,
+    "no_silent_omission": true,
+    "registry_version_pinned": true
+  },
+  "claim_required": [
+    "id",
+    "revision",
+    "claim_type",
+    "statement",
+    "decision_relevance",
+    "population",
+    "period",
+    "geography",
+    "units_or_non_quantifiable",
+    "source_and_vintage_refs",
+    "mechanism_refs",
+    "method_and_assumptions",
+    "uncertainty_and_limits",
+    "competing_explanations",
+    "falsification_or_revision_trigger",
+    "dependency_refs",
+    "publication_status"
+  ],
+  "claim_types": [
+    "OBSERVATION",
+    "DESCRIPTIVE_COMPARISON",
+    "ACCOUNTING_IDENTITY",
+    "MECHANISM_HYPOTHESIS",
+    "CONDITIONAL_SCENARIO",
+    "CAUSAL_ESTIMATE",
+    "FORECAST_VALIDATED",
+    "NON_IDENTIFIABLE"
+  ],
+  "acceptance": [
+    "Each section answered or explicit reason not possible",
+    "Every current mechanism/layer/engine/interface assessed with justified scope and availability; new registry entries included at run time",
+    "Every material finding has drill-down to exact authorized evidence, calculations or assumptions",
+    "Counter-analysis and materially different alternative scenarios; no forced claim of novelty or sign",
+    "Reconciled quantities and value flows; no double counting; feedback timing explicit",
+    "Decision thresholds and sensitivity exposed if supported; no fake precision",
+    "Replay from pinned data/model versions; authorization checks for every view/export",
+    "Independent review appropriate to claim type; user task tests on decision utility; no gate promotion without evidence"
+  ]
+}
