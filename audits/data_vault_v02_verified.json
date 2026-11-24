@@ -1,0 +1,21 @@
+{
+  "run_id": 45361896920,
+  "job_id": 138333766407,
+  "commit": "98de802fd5666def6f9a1d47929dbde5f319ad62",
+  "tests": "Ran 177 tests in 8.230s",
+  "audit": {
+    "scope": "TEMPORARY_CI_VAULT_REAL_ARCHIVED_INDEED",
+    "sha256": "ab1873dd2cef837504c473299356d5d53390dc620d6a661cf659c0c28a38e10f",
+    "validated_rows": 2478,
+    "reopen_and_integrity": "PASS",
+    "failed_update_preserved_active": true,
+    "verification": {
+      "integrity": "PASS",
+      "objects": 1,
+      "active_sources": 1,
+      "events": 4
+    },
+    "production_vault": false,
+    "raw_data_uploaded": false
+  }
+}

@@ -42,3 +42,5 @@ VALIDÉ = décision approuvée ; IMPLÉMENTÉ = code présent ; VÉRIFIÉ = preu
 G2 v0.3 : [lot utilisateur importé localement](G2-LOCAL-INTAKE.md), ESCO bilingue, FAP natif et probabilités PCS, MMO ; G-M0 partiel, pas de raccordement à l'API ni de publication.
 
 Consolidation infrastructure : [Data Observatory v0.1](DATA-OBSERVATORY.md), registre et workflow configurés, première exécution réelle, inventaire ROME vérifié ; stockage/promotion/raccordement à réaliser avant explorateur des métiers.
+
+Consolidation v0.2 : [coffre local et pont privé G2](DATA-VAULT.md) ; stockage durable, orchestration/promotion et raccordement HTTP restent ouverts. Explorateur métier après consolidation.
