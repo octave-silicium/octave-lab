@@ -1,4 +1,4 @@
-"""G1 v0.1: loopback-only research explorer, no public publication."""
+"""G1 v0.2: loopback-only research explorer, no public publication."""
 import argparse
 from collections import defaultdict, Counter
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -8,11 +8,12 @@ from itertools import chain
 import json
 import re
 import time
+import unicodedata
 from . import semantic_v4 as v4
 
 ROOT=Path(__file__).resolve().parents[1]
 STATIC=ROOT/"explorer"
-VERSION="0.1.0"
+VERSION="0.2.0"
 LABELS={
  "indeed_sector_total_daily":("Indeed · Familles professionnelles","Indice d'annonces par intitulé professionnel, pas des embauches."),
  "indeed_national_total_daily":("Indeed · France","Indice national d'annonces sur Indeed, CVS."),
@@ -26,6 +27,11 @@ LABELS={
 }
 DIM_LABELS={"country":"Champ géographique","industry":"Activité économique","category_kind":"Type de catégorie","occupation_family":"Famille professionnelle","region_code":"Code région","region_label":"Région (source)","department_code":"Code département","department_label":"Département (source)","offer_type":"Type d'offre","employment_type":"Type d'emploi","qualification":"Qualification","data_type":"Type de données","geo":"Zone","nace_r2":"Activité NACE","size_emp":"Taille d'entreprise","indic_is":"Indicateur","freq":"Fréquence","unit":"Unité","secteur_na88i":"Activité NA88","secteur_na38i":"Activité NA38","secteur_na38":"Activité NA38","grand_secteur_d_activite":"Grand secteur","grand_secteur_d_activite_agrege":"Grand secteur agrégé","duree_de_contrat":"Durée du contrat","nature_de_contrat":"Nature du contrat"}
 UNITS={"index_points":"Points d'indice","thousand_employees":"Milliers de salariés","offers_rounded_to_hundred":"Offres (arrondies à la centaine)","employees":"Salariés","declarations":"Déclarations","PC_ENT":"% des entreprises"}
+
+def normalized(text):
+    return "".join(c for c in unicodedata.normalize("NFKD",text.casefold()) if not unicodedata.combining(c))
+
+WINDOWS={"D":(30,90,365),"M":(12,36,60),"Q":(4,12,20),"A":(3,5,10)}
 
 class Explorer:
     def __init__(self,catalog):
@@ -42,19 +48,23 @@ class Explorer:
                 self.series[source].append({"id":str(i),"dims":dict(dims),"measure":measure,"unit":unit,"rows":recs})
     def sources(self):
         return [{"id":s,"label":LABELS[s][0],"description":LABELS[s][1],"series":len(self.series[s]),"frequency":v4.FREQ[s],"persistence":"ARCHIVE" if s in v4.ARCHIVE_SOURCES else "LIVE","vintage":self.catalog.vintages[s][0],"license":v4.LICENSE[s]} for s in LABELS if s in self.series]
-    def discover(self,source,filters):
+    def discover(self,source,filters,query=""):
         if source not in self.series or not isinstance(filters,dict) or not set(filters)<=v4.NATIVE_DIMS[source]|{"_measure","_unit"}:
             raise ValueError("FILTER")
         if any(not isinstance(v,str) or len(v)>500 for v in filters.values()):
             raise ValueError("FILTER_VALUE")
         def fields(g):
             return {**g["dims"],"_measure":g["measure"],"_unit":g["unit"]}
-        groups=[g for g in self.series[source] if all(fields(g).get(k)==v for k,v in filters.items())]
+        if not isinstance(query,str) or len(query)>160:
+            raise ValueError("SEARCH_QUERY")
+        terms=normalized(query).split()
+        eligible=[g for g in self.series[source] if all(t in normalized(" ".join(fields(g).values())) for t in terms)]
+        groups=[g for g in eligible if all(fields(g).get(k)==v for k,v in filters.items())]
         choices={}
         for key in sorted(v4.NATIVE_DIMS[source]|{"_measure","_unit"}):
-            counts=Counter(fields(g)[key] for g in groups)
+            counts=Counter(fields(g)[key] for g in eligible if all(k==key or fields(g).get(k)==v for k,v in filters.items()))
             choices[key]=[{"value":v,"count":n} for v,n in sorted(counts.items())]
-        return {"total":len(groups),"choices":choices,"series":[{"id":g["id"],"dimensions":g["dims"],"measure":g["measure"],"unit":g["unit"],"count":len(g["rows"]),"start":g["rows"][0].period,"end":g["rows"][-1].period} for g in groups[:100]],"truncated":len(groups)>100}
+        return {"total":len(groups),"query":query,"choices":choices,"series":[{"id":g["id"],"dimensions":g["dims"],"measure":g["measure"],"unit":g["unit"],"count":len(g["rows"]),"start":g["rows"][0].period,"end":g["rows"][-1].period} for g in groups[:100]],"truncated":len(groups)>100}
     def detail(self,source,sid,start=None,end=None,offset=0,limit=50):
         if source not in self.series or not re.fullmatch(r"0|[1-9]\d{0,6}",sid) or int(sid)>=len(self.series[source]):
             raise ValueError("SERIES")
@@ -76,7 +86,24 @@ class Explorer:
             if d["quality"] in {"WITHHELD","RESTRICTED"}:
                 d["value"]=None
             records.append(d)
-        return {"source":source,"id":sid,"dimensions":g["dims"],"measure":g["measure"],"unit":g["unit"],"unit_label":UNITS.get(g["unit"],g["unit"]),"total":len(rows),"offset":offset,"next_offset":offset+limit if offset+limit<len(rows) else None,"points":points,"records":records,"quality":dict(Counter(r.quality[0] for r in rows)),"full_start":g["rows"][0].period,"full_end":g["rows"][-1].period,"comparison":"REVIEW_REQUIRED","publication":"BLOCK_PUBLICATION"}
+        windows=[{"count":n,"start":g["rows"][-n].period,"end":g["rows"][-1].period} for n in WINDOWS[v4.FREQ[source]] if len(g["rows"])>=n]
+        return {"windows":windows,"source":source,"id":sid,"dimensions":g["dims"],"measure":g["measure"],"unit":g["unit"],"unit_label":UNITS.get(g["unit"],g["unit"]),"total":len(rows),"offset":offset,"next_offset":offset+limit if offset+limit<len(rows) else None,"points":points,"records":records,"quality":dict(Counter(r.quality[0] for r in rows)),"full_start":g["rows"][0].period,"full_end":g["rows"][-1].period,"comparison":"REVIEW_REQUIRED","publication":"BLOCK_PUBLICATION"}
+    def comparison(self,source,sid,start,end):
+        # Exact observations, same native series and vintage. No change calculated.
+        if not start or not end or not v4.valid_period(source,start) or not v4.valid_period(source,end) or start>=end:
+            raise ValueError("COMPARISON_PERIOD")
+        self.detail(source,sid,start,end,limit=1)  # validate identifiers and bounds
+        rows=[r for r in self.series[source][int(sid)]["rows"] if start<=r.period<=end]
+        if not rows or rows[0].period!=start or rows[-1].period!=end:
+            return {"decision":"BLOCK","reason":"MISSING_ENDPOINT","periods":[start,end],"change":None}
+        blockers=Counter(reason for r in rows if r.quality[0] in {"RESTRICTED","WITHHELD"} for reason in r.quality[1])
+        if blockers:
+            return {"decision":"BLOCK","reason":"QUALITY_RESTRICTION_IN_INTERVAL","quality_reasons":sorted(blockers),"periods":[start,end],"change":None}
+        if any(r.flag for r in rows):
+            return {"decision":"REVIEW_REQUIRED","reason":"SOURCE_FLAG_IN_INTERVAL","periods":[start,end],"change":None}
+        decision=v4.compare(rows[0],rows[-1])
+        return {"decision":"BLOCK" if decision.startswith("BLOCK") else "REVIEW_REQUIRED","reason":decision,"periods":[start,end],"change":None}
+
     def point(self,source,sid,period):
         result=self.detail(source,sid,period,period,limit=1)
         if result["total"]!=1:
@@ -116,8 +143,10 @@ def make_handler(explorer):
                 q={k:v[0] for k,v in q.items()}
                 if u.path=="/api/sources" and not q:
                     return self.j(200,{"version":VERSION,"sources":explorer.sources(),"mode":"LOCAL_INTERNAL","labels":DIM_LABELS})
-                if u.path=="/api/discover" and set(q)<={"source","filters"}:
-                    return self.j(200,explorer.discover(q["source"],json.loads(q.get("filters","{}"))))
+                if u.path=="/api/discover" and set(q)<={"source","filters","q"}:
+                    return self.j(200,explorer.discover(q["source"],json.loads(q.get("filters","{}")),q.get("q","")))
+                if u.path=="/api/compare" and set(q)=={"source","id","start","end"}:
+                    return self.j(200,explorer.comparison(q["source"],q["id"],q["start"],q["end"]))
                 if u.path=="/api/series" and set(q)<={"source","id","start","end","offset"}:
                     return self.j(200,explorer.detail(q["source"],q["id"],q.get("start") or None,q.get("end") or None,int(q.get("offset","0"))))
                 if u.path=="/api/point" and set(q)=={"source","id","period"}:

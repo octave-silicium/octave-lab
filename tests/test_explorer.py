@@ -46,3 +46,32 @@ class ExplorerTests(unittest.TestCase):
         d=Explorer(v4.Catalog([v4.wrap_live(c)])).detail("eurostat_nace","0")
         self.assertIsNone(d["points"][0]["value"])
         self.assertIsNone(d["records"][0]["value"])
+
+    def test_native_search_and_facet_counts(self):
+        s="insee_employment"
+        self.assertTrue(self.x.discover(s,{},"industrie")["total"]>=1)
+        d=self.x.discover(s,{},"tertiaire marchand")
+        self.assertTrue(d["total"]>=1)
+        self.assertEqual(self.x.discover(s,{},"impossible_xyz")["total"],0)
+        self.assertEqual(self.x.discover(s,{},"INDUSTRIE")["total"],self.x.discover(s,{},"industrie")["total"])
+        g=self.x.discover(s,{})["series"][0]
+        filtered=self.x.discover(s,{"industry":g["dimensions"]["industry"]})
+        self.assertGreater(len(filtered["choices"]["industry"]),1)
+    def test_temporal_windows(self):
+        d=self.x.detail("indeed_national_total_daily","0")
+        w=d["windows"][0]
+        self.assertEqual(w["count"],30)
+        self.assertEqual(self.x.detail("indeed_national_total_daily","0",w["start"],w["end"])["total"],30)
+    def test_comparison_gate_no_change(self):
+        s="indeed_national_total_daily"
+        d=self.x.comparison(s,"0","2020-02-01","2020-02-02")
+        self.assertEqual(d["decision"],"REVIEW_REQUIRED")
+        self.assertIsNone(d["change"])
+        d=self.x.comparison(s,"0","2019-01-01","2020-02-02")
+        self.assertEqual(d["reason"],"MISSING_ENDPOINT")
+    def test_comparison_restricted_interval(self):
+        dims=tuple(sorted((k,"native") for k in v4.v3.URSSAF["urssaf_dpae_na38"]["dims"]))
+        cells=[v4.wrap_live(v4.v3.Cell("urssaf_dpae_na38",p,dims,"dpae_cvs","declarations",Decimal("20"),"","a"*64,"2026-11-24T06:00:00+00:00","fixture")) for p in ("2025Q1","2025Q2","2025Q4")]
+        d=Explorer(v4.Catalog(cells)).comparison("urssaf_dpae_na38","0","2025Q1","2025Q4")
+        self.assertEqual(d["reason"],"QUALITY_RESTRICTION_IN_INTERVAL")
+        self.assertIsNone(d["change"])
