@@ -73,3 +73,6 @@ La cible intégrale validée est [ARCH-002](ARCH-002.md) et son [registre machin
 
 ## G3.1 v0.2 — ponts et calculs conditionnels
 [Documentation](G3-ECONOMIC-BRIDGE.md) : implémentation pont archives/vault, profil O*NET/W001 candidat, cinq opérations conditionnelles et manifeste interne reproductible. Recette CI réussie : 229 tests, Eurostat, O*NET officiel et coffre Indeed temporaire ; [audit](../audits/economic_bridge_v02_verified.json). Aucun gate promu. Suite : compléter PROSPECT-001 et lancer G3.2 sur W001.
+
+## G3.1 v0.3 — Prospective structural contracts
+[Documentation](G3-PROSPECTIVE-ENGINE.md) : scénario de référence et alternatives, ordre et délai distincts, acteurs, chemins concurrents, interactions, frontière et arrêt, dix familles évaluées, replay épinglé. Pas de propagation chiffrée ni gate scientifique. Recette CI à confirmer. Prochaine tranche G3.2 W001 opérationnelle.

@@ -18,7 +18,7 @@ class Investigation:
     @property
     def key(self):return identity(self.id,self.revision)
 
-def assemble(inv,graph,coverage,calculations=(),scenario_paths=()):
+def assemble(inv,graph,coverage,calculations=(),scenario_paths=(),prospective=None):
     inv.key
     require(all(words(x) for x in (inv.question,inv.decision,inv.loss_function,inv.exclusions)) and texts(inv.alternatives) and len(inv.alternatives)>=2,"MANDATE")
     from .economic_core import sha
@@ -33,10 +33,16 @@ def assemble(inv,graph,coverage,calculations=(),scenario_paths=()):
     for scenario,path in scenario_paths:
         if scenario.baseline_ref is not None:require(scenario.baseline_ref in {s.key for s,p in scenario_paths} and scenario.baseline_ref!=scenario.key,"BASELINE_MISSING")
         paths.append(trace(graph,scenario,path))
+    prospective_result=None
+    if prospective is not None:
+        from .economic_prospective import build,model_pins
+        require(not scenario_paths,"MIXED_PATH_CONTRACT")
+        require(inv.model_sha256==digest(canonical(model_pins())),"MODEL_PIN_MISMATCH")
+        prospective_result=build(graph,*prospective)
     sections=[asdict(c) for c in coverage if c.kind=="section"]
-    result={"mandate":asdict(inv),"requirements":dict(graph.requirements.pins),"coverage":sorted((asdict(c) for c in coverage),key=lambda x:(x["kind"],x["id"])),"sections":sorted(sections,key=lambda x:x["id"]),"coverage_audit":audit,"calculations":receipts,"paths":paths,"scientific_validation":False,"publication":"BLOCK_PUBLICATION"}
+    result={"mandate":asdict(inv),"requirements":dict(graph.requirements.pins),"coverage":sorted((asdict(c) for c in coverage),key=lambda x:(x["kind"],x["id"])),"sections":sorted(sections,key=lambda x:x["id"]),"coverage_audit":audit,"calculations":receipts,"paths":paths,"prospective":prospective_result,"scientific_validation":False,"publication":"BLOCK_PUBLICATION"}
     return {"manifest":result,"manifest_sha256":digest(canonical(result))}
 
-def verify_replay(expected,inv,graph,coverage,calculations=(),scenario_paths=()):
-    require(expected==assemble(inv,graph,coverage,calculations,scenario_paths),"REPLAY_MISMATCH")
+def verify_replay(expected,inv,graph,coverage,calculations=(),scenario_paths=(),prospective=None):
+    require(expected==assemble(inv,graph,coverage,calculations,scenario_paths,prospective),"REPLAY_MISMATCH")
     return True
