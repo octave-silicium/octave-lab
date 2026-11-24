@@ -95,7 +95,7 @@ def access_audit(fetcher=fetch):
         probes=[]
         for r in candidates[:2]:
             u=r["url"];host=urlsplit(u).hostname or ""
-            if urlsplit(u).scheme!="https" or not (host=="francetravail.org" or host.endswith(".francetravail.org") or host=="data.gouv.fr" or host.endswith(".data.gouv.fr")):continue
+            if urlsplit(u).scheme!="https" or not (host=="api.francetravail.fr" or host=="francetravail.org" or host.endswith(".francetravail.org") or host=="data.gouv.fr" or host.endswith(".data.gouv.fr")):continue
             try:
                 b,ct,end=fetcher(u,MAX_BYTES)
                 actual="ZIP_CONTAINER" if b.startswith(b"PK\x03\x04") else "HTML_OR_OTHER"
