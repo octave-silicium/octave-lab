@@ -1,5 +1,11 @@
 name: Collecte Indeed France
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'pipeline/**'
+      - 'tests/**'
+      - '.github/workflows/collect-public-sector.yml'
   workflow_dispatch:
   schedule:
     - cron: '17 7 * * 2'  # Mardi UTC, selon disponibilite du fournisseur
