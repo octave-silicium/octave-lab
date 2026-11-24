@@ -13,7 +13,7 @@
 | Gouvernance | [Contrôles provisoires](pipeline/data_governance.py), [droits](governance/source_rights.json), [ruptures](governance/series_events.json) |
 | PILOT-001 | [Rapport descriptif NACE J](research/PILOT-001/rapport.md), [manifeste](research/PILOT-001/pilot_manifest.json), [code](pipeline/pilot_ict.py) |
 | Moteur métier–tâche–action–processus | [METH-003](docs/METH-003.md), spécification validée, non implémentée |
-| Socle sémantique | [S1 v0.1.0](docs/SEMANTIC.md) : quatre contrats implémentés, 19 tests locaux réussis, CI complète à confirmer |
+| Socle sémantique | [S1 v0.2.0](docs/SEMANTIC-V2.md) : sept contrats, 183 491 cellules, 104 tests du dépôt réussis ; qualification complète encore ouverte |
 | Explorateur multisource | Cible G1, non implémenté |
 
 79 sources/programmes candidats recensés, non 79 bases intégrées. PILOT-001 mobilise deux lignées principales (Urssaf et Eurostat), sans inférence causale. Les comparaisons DPAE touchées par les anomalies 2025 restent bloquées ; le périmètre des technologies IA Eurostat change en 2025. Les sources Dares MMO et les droits commerciaux concernés nécessitent encore qualification.

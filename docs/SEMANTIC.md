@@ -1,5 +1,5 @@
 # S1 — Contrats sémantiques v0.1.0
-**Statut : IMPLÉMENTÉ, tests locaux sur échantillon réussis ; intégration complète GitHub Actions à confirmer.** Ce premier incrément ne clôt pas S1, ne valide pas G-M0 et ne qualifie pas l'ensemble du catalogue DATA-002.
+**Statut : VÉRIFIÉ dans le périmètre v0.1 : intégration complète GitHub Actions réussie.** Ce premier incrément ne clôt pas S1, ne valide pas G-M0 et ne qualifie pas l'ensemble du catalogue DATA-002.
 
 ## Périmètre
 - Insee : niveaux d'emploi trimestriels (500 lignes attendues d'après le manifeste actuel), unité en milliers, France hors Mayotte, catégories sources séparées, y compris agrégats et sous-catégories. Aucune somme automatique.
@@ -33,3 +33,6 @@ python -m pipeline.semantic
 2. Ajouter les adaptateurs Indeed et Dares, tester couverture, dimensions, unités et licences ; compléter le registre Eurostat et les événements Insee.
 3. Compléter le contrat extensible pour géographies, taille d'entreprise, catégories professionnelles et observations manquantes/flags ; préparer les identifiants d'ontologie métier/tâche/action/processus (G-M0 reste distinct).
 4. Vérification des métadonnées de provenance, révisions, droits et couverture pour toute nouvelle série ; audit des dépendances et test de non-régression. Pas de publication automatique, pas d'inférence causale, pas de projection d'emploi.
+
+## Confirmation CI v0.1
+Run [45337895029](https://github.com/octave-silicium/octave-lab/actions/runs/45337895029), job 138254215736 : 19/19 tests, 509 observations ; artefact semantic-audit 14894339520. Les conditions de clôture S1 restent ouvertes ; voir [v0.2](SEMANTIC-V2.md).

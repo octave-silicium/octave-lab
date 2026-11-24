@@ -1,0 +1,104 @@
+{
+  "run_id": 45338403115,
+  "job_id": 138255863398,
+  "commit": "060e6b3c2e80ff15cc2b9ad4bb3e1f44d7aa927d",
+  "run_url": "https://github.com/octave-silicium/octave-lab/actions/runs/45338403115",
+  "tests_passed": 104,
+  "artifact_ids": [
+    14895585744
+  ],
+  "audit": {
+    "version": "0.2.0",
+    "counts": {
+      "insee_employment": 500,
+      "urssaf_na88_effectifs_salaries_cvs": 4,
+      "urssaf_dpae_na38_quarterly": 2,
+      "eurostat_ai_tany": 3,
+      "indeed_sector_total_daily": 84252,
+      "indeed_national_total_daily": 2478,
+      "dares_offers_monthly": 96252
+    },
+    "missing": {},
+    "total": 183491,
+    "coverage": {
+      "insee_employment": {
+        "category_kind": 3,
+        "country": 1,
+        "industry": 10
+      },
+      "urssaf_na88_effectifs_salaries_cvs": {
+        "category_kind": 1,
+        "country": 1,
+        "industry": 1
+      },
+      "urssaf_dpae_na38_quarterly": {
+        "category_kind": 1,
+        "country": 1,
+        "industry": 1
+      },
+      "eurostat_ai_tany": {
+        "category_kind": 1,
+        "country": 1,
+        "enterprise_size": 1,
+        "industry": 1
+      },
+      "indeed_sector_total_daily": {
+        "country": 1,
+        "occupation_family": 34
+      },
+      "indeed_national_total_daily": {
+        "country": 1
+      },
+      "dares_offers_monthly": {
+        "data_type": 1,
+        "department_code": 101,
+        "department_label": 101,
+        "employment_type": 4,
+        "offer_type": 2,
+        "qualification": 9,
+        "region_code": 20,
+        "region_label": 20
+      }
+    },
+    "periods": {
+      "insee_employment": [
+        "2014Q1",
+        "2026Q2"
+      ],
+      "urssaf_na88_effectifs_salaries_cvs": [
+        "2024Q4",
+        "2026Q2"
+      ],
+      "urssaf_dpae_na38_quarterly": [
+        "2023Q4",
+        "2024Q4"
+      ],
+      "eurostat_ai_tany": [
+        "2023",
+        "2025"
+      ],
+      "indeed_sector_total_daily": [
+        "2020-02-01",
+        "2026-11-13"
+      ],
+      "indeed_national_total_daily": [
+        "2020-02-01",
+        "2026-11-13"
+      ],
+      "dares_offers_monthly": [
+        "1996-01",
+        "2026-09"
+      ]
+    },
+    "verified_original_archive_bytes": [
+      "indeed_fr_sector",
+      "indeed_fr_national",
+      "DS-004_dares_offers_monthly"
+    ],
+    "status": "SOURCE_NATIVE_DESCRIPTIVE_ONLY",
+    "causal_claims_permitted": false,
+    "cross_source_join_permitted": false,
+    "full_source_qualification": false
+  },
+  "qualification": "Technical validation of pinned artifacts, not full source qualification or causal evidence."
+}
