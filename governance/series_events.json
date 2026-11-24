@@ -1,0 +1,61 @@
+{
+  "version": "2026-11-24-v1",
+  "policy": "A documented change of definition is a comparability gate, not a statistical adjustment coefficient.",
+  "events": [
+    {
+      "id": "URSSAF-APPRENTICES-2023Q1",
+      "source_id": "DS-015_urssaf_private_sector_na88",
+      "affected_series": [
+        "urssaf_na88_effectifs_salaries_brut",
+        "urssaf_na88_effectifs_salaries_cvs"
+      ],
+      "kind": "DEFINITION_BREAK",
+      "effective_period": "2023Q1",
+      "status": "CONFIRMED_PUBLISHER_NOTE",
+      "description": "Apprentices included in employee headcount from publication of first quarter 2023. Do not conflate a definitional change with employment growth.",
+      "action": "BLOCK_CROSS_BREAK_COMPARISON_UNTIL_DOCUMENTED_BRIDGE",
+      "source_url": "https://open.urssaf.fr/explore/dataset/effectifs-salaries-et-masse-salariale-du-secteur-prive-france-entiere-x-na88/custom/"
+    },
+    {
+      "id": "URSSAF-DSN-2021Q1",
+      "source_id": "DS-015_urssaf_private_sector_na88",
+      "affected_series": [
+        "urssaf_na88_effectifs_salaries_brut",
+        "urssaf_na88_effectifs_salaries_cvs"
+      ],
+      "kind": "METHOD_REVISION_REVIEW",
+      "effective_period": "2021Q1",
+      "status": "DOCUMENTED_CONVERSION_REVIEW_REQUIRED",
+      "description": "Completion of transition to individual contract-level DSN headcount compilation in 2021; review vintage and comparability.",
+      "action": "REVIEW_METHOD_AND_REVISIONS_BEFORE_PUBLISHING_CROSS_PERIOD_CLAIMS",
+      "source_url": "https://open.urssaf.fr/explore/dataset/effectifs-salaries-et-masse-salariale-du-secteur-prive-france-entiere-x-na88/custom/"
+    },
+    {
+      "id": "URSSAF-DPAE-2025-ERRORS",
+      "source_id": "urssaf_dpae_mensuelles_france_entiere",
+      "affected_series": [
+        "urssaf_dpae_cdi_cdd_over_1_month"
+      ],
+      "kind": "DATA_QUALITY_SUSPICION",
+      "start_period": "2025-04",
+      "end_period": "2025-09",
+      "status": "PUBLISHER_CAUTION_REVISED_RELEASES_NEED_CHECK",
+      "description": "DPAE online form change in late March 2025 produced errors in contract type and expected duration; data published for Apr-Sep 2025 were explicitly cautioned. Publication resumed 30 Oct 2026; reassess revised vintages.",
+      "action": "BLOCK_PUBLIC_INFERENCE_USING_AFFECTED_MONTHS_UNTIL_VINTAGE_REVIEW",
+      "source_url": "https://open.urssaf.fr/explore/dataset/dpae-mensuelles-france-entiere/export/"
+    },
+    {
+      "id": "INSEE-NAF-2027",
+      "source_id": "insee_naf_classification",
+      "affected_series": [
+        "naf_sector_series"
+      ],
+      "kind": "CLASSIFICATION_BREAK",
+      "effective_period": "2027Q1",
+      "status": "ANNOUNCED_FUTURE_CHANGE",
+      "description": "NAF 2025 replaces NAF rev.2 for APE from 1 January 2027; use valid official mappings, never an unconditional identity crosswalk.",
+      "action": "BLOCK_CROSS_CLASSIFICATION_JOIN_WITHOUT_VALIDATED_CROSSWALK",
+      "source_url": "https://www.insee.fr/fr/information/8181066"
+    }
+  ]
+}

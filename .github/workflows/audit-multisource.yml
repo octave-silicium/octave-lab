@@ -4,6 +4,9 @@ on:
     branches: [main]
     paths:
       - 'pipeline/audit_multisource.py'
+      - 'pipeline/data_governance.py'
+      - 'governance/**'
+      - 'tests/test_data_governance.py'
       - 'pipeline/archive_dares.py'
       - 'pipeline/audit_multisource_sources.json'
       - 'tests/test_audit_multisource.py'
