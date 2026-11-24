@@ -92,3 +92,6 @@ Décision utilisateur : [UX-001](UX-001.md) et [RESULT-001](RESULT-001.md) compl
 
 ## G3.2 v0.3 — Refonte structurelle, première tranche
 [Documentation](G3-TRANSFORM.md) : fusion effective et rôles distincts, variants W001 machine/autorisation/échantillon/autonomie et défaut critique, qualité symétrique humain-machine. Recette réussie : 294 tests, [audit](../audits/economic_transform_v03_verified.json). TRANSFORM-001 précisé. Suite : second processus, politiques de file, synchronisation, sensibilité et raccordement avant G3.3/G3.4.
+
+## G3.2 v0.4a — Deuxième processus et contributions
+[W002](G3-PHYSICAL.md) : contrôle dimensionnel industriel, même moteur, ancrage O*NET, contraintes instrumentales, variantes numériques et physiques, stress. [CONTRIB-001](CONTRIB-001.md) admission interne et revue indépendante. Recette à confirmer ; aucun gate scientifique. Suite : politiques de file, synchronisation, audits/repli, liaison investigation, G3.3/G3.4.
