@@ -114,7 +114,7 @@ def quarterly_dpae(rows, required_periods=('2023Q4','2024Q4')):
     result = {}
     for p in required_periods:
         if set(periods[p]) != {'CDI', "CDD de plus d'un mois"}:
-            raise ValueError(f'MISSING_DPAE_CONTRACT_TYPES:{p}:{list(periods[p])}')
+            raise ValueError(f'MISSING_DPAE_CONTRACT_TYPES:{p}:{list(periods[p])}; sector_candidates='+str(sorted({r.get('secteur_na38','') for r in rows if 'Information' in r.get('secteur_na38','') or r.get('secteur_na38','').startswith('J')})[:12])+'; duration_candidates='+str(sorted({r.get('duree_de_contrat','') for r in rows})[:8])+'; nature_candidates='+str(sorted({r.get('nature_de_contrat','') for r in rows})[:8]))
         result[p] = round(sum(periods[p].values()))
     return {
        'unit': 'DPAE declarations for CDI and CDD >1 month, seasonally adjusted',
