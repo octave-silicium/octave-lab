@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-24",
+  "status": "TECHNICAL_ACCEPTANCE",
+  "tested_commit": "8ad0b62b63c45e6afea91fdf7fc14595187abe6c",
+  "run_id": 45387376839,
+  "job_id": 138421739790,
+  "tests": 249,
+  "seconds": 10.578,
+  "first_run": 45387284859,
+  "first_tests": 247,
+  "synthetic_fixture": {
+    "trajectories": 3,
+    "paths": 5,
+    "convergent_paths": 3,
+    "scenario_families_assessed": 10,
+    "conditional_shocks": 2
+  },
+  "real_regression": {
+    "eurostat_cells": 12400,
+    "eurostat_admitted": 6593,
+    "eurostat_blocked": 5807,
+    "onet_assertions": 35,
+    "indeed_admitted": 2478
+  },
+  "scientific_gate_promoted": false,
+  "publication": "BLOCK_PUBLICATION",
+  "numerical_propagation": false
+}

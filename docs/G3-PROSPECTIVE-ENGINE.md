@@ -6,5 +6,8 @@
 - Explicit interaction hypotheses with tests; converging paths not summed. Counterfactual total, threshold quantification, numerical dynamics and simultaneous feedback solver remain blocked. Inverse exploration lists rival candidate paths with tests, not inverse causality.
 - Ten scenario families assessed explicitly (represented or reason); six engines and nine layers unchanged. Structural labels do not prove a family is substantively modeled. Manifests can rebuild the scenario package and verify actual model-file hashes. Persistence and external proof authentication remain open.
 - Direct tests for the remaining four arithmetic operations and division by zero. Scope meaning/denominator qualification still required.
-- Acceptance fixture synthetic (not W001 empirical evidence). CI pending. E-G0 partial, G-M1/G-M2 open.
+- Acceptance fixture synthetic (not W001 empirical evidence). CI passed. E-G0 partial, G-M1/G-M2 open.
 Next: G3.2 bounded operational simulation (resources, throughput, workload and quality, exceptions, redesign, alternative demand), then G3.3/3.4 and real validation. No expansion of infrastructure scope before this vertical slice.
+
+## Verified acceptance
+Final CI run 45387376839 (tested commit 8ad0b62b63c45e6afea91fdf7fc14595187abe6c): 249 tests passed in 10.578 seconds; official Eurostat, O*NET and approved temporary Indeed vault bridges passed again. First run 45387284859: 247 tests passed. Final correction explicitly requires zero adoption parameter, pins the scenario registry and distinguishes competing from interacting paths. [Audit](../audits/economic_prospective_v03_verified.json). Synthetic structural fixture: three trajectories, five paths, three convergent paths, two shocks in conditional trajectory, unknown and explicit positive lags; no quantitative impact or scientific gate promoted.
