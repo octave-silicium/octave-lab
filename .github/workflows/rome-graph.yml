@@ -1,0 +1,29 @@
+name: OCTAVE LAB | ROME native graph
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'pipeline/rome_graph.py'
+      - 'tests/test_rome_graph.py'
+      - '.github/workflows/rome-graph.yml'
+permissions:
+  contents: read
+jobs:
+  graph:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest discover -s tests -v
+      - name: Parse official ROME archive
+        run: |
+          set -o pipefail
+          python -m pipeline.rome_graph | tee rome_graph.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rome-graph-metadata
+          path: rome_graph.json
