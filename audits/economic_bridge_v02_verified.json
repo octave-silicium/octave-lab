@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-24",
+  "scope": "G3.1 v0.2 technical acceptance only",
+  "run_id": 45381888895,
+  "job_id": 138402733392,
+  "tested_commit": "0c43c1becc0a6607cf3068708aa57509d80e367a",
+  "conclusion": "success",
+  "python_tests": 229,
+  "python_seconds": 13.458,
+  "eurostat": {
+    "native_rows": 12400,
+    "admitted": 6593,
+    "blocked": 5807,
+    "source_sha256": "0c701942ea3d15bd1350e6938b27a5713f9d39f366b620723995b98077a469a8"
+  },
+  "onet": {
+    "occupation": 1,
+    "task": 28,
+    "candidate_process": 1,
+    "candidate_actions": 6,
+    "assertions": 35,
+    "graph_sha256": "d39d656860d24d253b63b47f1fdf6a411c32b68e40a7b0bf358d05f5c9a3705e"
+  },
+  "vault": {
+    "source": "indeed_national_total_daily",
+    "admitted": 2478,
+    "blocked": 0,
+    "sha256": "ab1873dd2cef837504c473299356d5d53390dc620d6a661cf659c0c28a38e10f",
+    "storage": "APPROVED_SESSION_PIN",
+    "temporary": true
+  },
+  "publication": "BLOCK_PUBLICATION",
+  "scientific_gate_promoted": false,
+  "production_deployed": false
+}
