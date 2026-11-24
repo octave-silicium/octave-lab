@@ -1,0 +1,136 @@
+{
+  "run_at_utc": "2026-11-24T04:21:47.509227+00:00",
+  "purpose": "SOURCE_ACCESS_AND_SCHEMA_AUDIT_ONLY",
+  "source_registry": "pipeline/audit_multisource_sources.json",
+  "no_data_fusion": true,
+  "no_causal_inference": true,
+  "raw_data_published": false,
+  "sources": {
+    "DS-004_dares_offers_monthly": {
+      "source_url": "https://data.dares.travail-emploi.gouv.fr/api/explore/v2.1/catalog/datasets/dares_offres_collectees_satisfaites_france_travail_brutes_mens/exports/csv?use_labels=true",
+      "publisher": "Dares / France Travail",
+      "legal_state": "Licence Ouverte v2.0 on precise monthly dataset; raw still withheld from repo pending source review",
+      "dependency_cluster": "FT_DARES_STMT",
+      "unit_of_observation": "monthly job offers filed through France Travail; counts rounded to hundreds; not hires",
+      "allowed_to_publish_raw": false,
+      "publication_gate": "BLOCKED_PENDING_SEMANTIC_AND_LEGAL_REVIEW",
+      "result": "FETCH_AND_SCHEMA_PASS",
+      "sha256": "1ea5f3f5a0dea3ba3c9b58f486cd965ab30802204882578b16d11b81f4b82cb7",
+      "n_bytes": 10645494,
+      "checks": {
+        "n_rows": 96252,
+        "columns": [
+          "Date",
+          "Code région",
+          "Région",
+          "Code département",
+          "Département",
+          "Type de données",
+          "Type d'offre d'emploi",
+          "Type d'emploi",
+          "Qualification",
+          "Nombre d'offres d'emploi"
+        ],
+        "encoding": "utf-8-sig",
+        "delimiter": ";"
+      },
+      "content_type": "text/csv; charset=utf-8",
+      "etag": null,
+      "last_modified": null
+    },
+    "DS-015_urssaf_private_sector_na88": {
+      "source_url": "https://open.urssaf.fr/api/explore/v2.1/catalog/datasets/effectifs-salaries-et-masse-salariale-du-secteur-prive-france-entiere-x-na88/exports/csv?use_labels=false",
+      "publisher": "Urssaf Caisse nationale",
+      "legal_state": "ODbL portal; attribution and derivative-database obligations to assess before redistribution",
+      "dependency_cluster": "DSN_URSSAF_DARES_INSEE",
+      "unit_of_observation": "private-sector payroll by economic activity NA88 and quarter (NOT occupation); apprenticeship change 2023Q1",
+      "allowed_to_publish_raw": false,
+      "publication_gate": "BLOCKED_PENDING_SEMANTIC_AND_LEGAL_REVIEW",
+      "result": "FETCH_AND_SCHEMA_PASS",
+      "sha256": "9ec16fb077e554518f5a1ade579684a8c91d56f293c7b9897f07b40226833222",
+      "n_bytes": 1572724,
+      "checks": {
+        "n_rows": 9072,
+        "columns": [
+          "grand_secteur_d_activite",
+          "secteur_na38i",
+          "secteur_na88i",
+          "annee",
+          "trimestre",
+          "dernier_jour_du_trimestre",
+          "effectifs_salaries_brut",
+          "effectifs_salaries_cvs",
+          "masse_salariale_brut",
+          "masse_salariale_cvs"
+        ],
+        "encoding": "utf-8-sig",
+        "delimiter": ";"
+      },
+      "content_type": "text/csv; charset=utf-8",
+      "etag": null,
+      "last_modified": null
+    },
+    "DS-031a_eurostat_ai_enterprises_size": {
+      "source_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/isoc_eb_ai?geo=FR&geo=EU27_2020&lang=EN&sinceTimePeriod=2022",
+      "publisher": "Eurostat",
+      "legal_state": "Eurostat reuse policy applies; check third-party exceptions and exact dataset before publication",
+      "dependency_cluster": "EUROSTAT_ICT_SURVEY_INSEE_TIC",
+      "unit_of_observation": "sampled enterprises employing 10+; reported AI use by enterprise size, not occupation",
+      "allowed_to_publish_raw": false,
+      "publication_gate": "BLOCKED_PENDING_SEMANTIC_AND_LEGAL_REVIEW",
+      "result": "FETCH_AND_SCHEMA_PASS",
+      "sha256": "f5f541e46daefe16722efeced6d8bfeb99578eedc1e8c12476a029f5f45edd73",
+      "n_bytes": 54121,
+      "checks": {
+        "dimensions": [
+          "freq",
+          "geo",
+          "indic_is",
+          "nace_r2",
+          "size_emp",
+          "time",
+          "unit"
+        ],
+        "n_nonmissing_values": 2810,
+        "unit": "as declared in dataset dimension; no implicit conversion"
+      },
+      "content_type": "application/json",
+      "etag": null,
+      "last_modified": null
+    },
+    "DS-031b_eurostat_ai_enterprises_nace": {
+      "source_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/isoc_eb_ain2?geo=FR&lang=EN&sinceTimePeriod=2022",
+      "publisher": "Eurostat",
+      "legal_state": "Eurostat reuse policy; check code-level metadata and confidentiality/suppression",
+      "dependency_cluster": "EUROSTAT_ICT_SURVEY_INSEE_TIC",
+      "unit_of_observation": "sampled enterprises by NACE Rev2 sector; exposure and adoption are not synonymous",
+      "allowed_to_publish_raw": false,
+      "publication_gate": "BLOCKED_PENDING_SEMANTIC_AND_LEGAL_REVIEW",
+      "result": "FETCH_AND_SCHEMA_PASS",
+      "sha256": "0c701942ea3d15bd1350e6938b27a5713f9d39f366b620723995b98077a469a8",
+      "n_bytes": 191957,
+      "checks": {
+        "dimensions": [
+          "freq",
+          "geo",
+          "indic_is",
+          "nace_r2",
+          "size_emp",
+          "time",
+          "unit"
+        ],
+        "n_nonmissing_values": 7993,
+        "unit": "as declared in dataset dimension; no implicit conversion"
+      },
+      "content_type": "application/json",
+      "etag": null,
+      "last_modified": null
+    }
+  },
+  "summary": {
+    "attempted": 4,
+    "passed": 4,
+    "failed": 0,
+    "ready_for_economic_join": 0
+  }
+}
