@@ -1,0 +1,8 @@
+{
+  "sources": [
+    {"id":"indeed_fr_sector","url":"https://raw.githubusercontent.com/hiring-lab/job_postings_tracker/master/FR/job_postings_by_sector_FR.csv","format":"csv","license":"CC BY 4.0","public_redistribution":true,"required":true,"classification":"Indeed occupation inferred from job titles","cadence":"weekly"},
+    {"id":"indeed_fr_national","url":"https://raw.githubusercontent.com/hiring-lab/job_postings_tracker/master/FR/aggregate_job_postings_FR.csv","format":"csv","license":"CC BY 4.0","public_redistribution":true,"required":true,"classification":"Indeed national index","cadence":"weekly"},
+    {"id":"dares_ft_collected_quarterly","url":"https://data.dares.travail-emploi.gouv.fr/api/explore/v2.1/catalog/datasets/dares_offres_collectees_satisfaites_france_travail_brutes_trim/exports/csv?use_labels=true","format":"csv","license":"not specified at source catalog - review required","public_redistribution":false,"required":false,"classification":"France Travail offers collected/satisfied (not occupation-level employer sector)","cadence":"quarterly"},
+    {"id":"insee_employment_quarterly","url":"https://www.insee.fr/fr/statistiques/fichier/2496914/econ-gen-empl-salarie-trim.xlsx","format":"xlsx","license":"specific re-use terms to be checked","public_redistribution":false,"required":false,"classification":"INSEE aggregate employment sector A5","cadence":"quarterly"}
+  ]
+}

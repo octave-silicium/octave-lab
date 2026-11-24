@@ -1,0 +1,52 @@
+name: Collecte Indeed France
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 7 * * 2'  # Mardi UTC, selon disponibilite du fournisseur
+concurrency:
+  group: octave-indeed-fr-ingestion
+  cancel-in-progress: false
+permissions:
+  contents: write
+jobs:
+  ingestion:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Tests de controle qualite
+        run: python -m unittest discover -s tests -v
+      - name: Recuperer et verifier les series Indeed (CC BY 4.0)
+        run: python pipeline/run.py --only-open
+      - name: Archiver les originaux CC BY en snapshot mensuel permanent
+        if: success()
+        shell: bash
+        run: |
+          bucket="$(date -u +%Y-%m)"
+          target="snapshots/indeed-fr/${bucket}"
+          if [ -e "$target" ]; then
+            echo "Snapshot du mois deja present, aucun doublon archive"
+            exit 0
+          fi
+          mkdir -p "$target"
+          cp archive/raw/*/indeed_fr_* "$target/"
+          printf "Source: Indeed Hiring Lab | Licence CC BY 4.0 | https://github.com/hiring-lab/job_postings_tracker\n" > "$target/ATTRIBUTION.txt"
+          cp outputs/live/manifest.json "$target/manifest.json"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git add "$target"
+          git commit -m "data(indeed): snapshot mensuel ${bucket} (CC BY 4.0)"
+          git push
+      - name: Conserver les donnees versionnees et calculs a revoir
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: octave-lab-snapshot-${{ github.run_id }}
+          path: |
+            archive/raw/
+            outputs/live/
+          if-no-files-found: warn
+          retention-days: 30
