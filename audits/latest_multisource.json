@@ -1,5 +1,5 @@
 {
-  "run_at_utc": "2026-11-24T04:21:47.509227+00:00",
+  "run_at_utc": "2026-11-24T04:22:57.883512+00:00",
   "purpose": "SOURCE_ACCESS_AND_SCHEMA_AUDIT_ONLY",
   "source_registry": "pipeline/audit_multisource_sources.json",
   "no_data_fusion": true,
@@ -34,6 +34,24 @@
         "encoding": "utf-8-sig",
         "delimiter": ";"
       },
+      "structural_profile": {
+        "period_min_raw": "1996-01",
+        "period_max_raw": "2026-09",
+        "distinct_counts": {
+          "Date": 369,
+          "Code région": 19,
+          "Code département": 101,
+          "Type de données": 1,
+          "Type d'offre d'emploi": 2,
+          "Type d'emploi": 4,
+          "Qualification": 9
+        },
+        "measure_nonempty_rows": 96252,
+        "measure_empty_rows": 0,
+        "duplicate_industry_year_quarter_keys": null,
+        "economic_join_gate": "NOT_READY: verify exact units, historical breaks, nomenclature mappings",
+        "evidence_group": "FT_DARES_STMT"
+      },
       "content_type": "text/csv; charset=utf-8",
       "etag": null,
       "last_modified": null
@@ -66,6 +84,21 @@
         "encoding": "utf-8-sig",
         "delimiter": ";"
       },
+      "structural_profile": {
+        "period_min_raw": "1998",
+        "period_max_raw": "2026",
+        "distinct_counts": {
+          "annee": 29,
+          "trimestre": 4,
+          "secteur_na88i": 81,
+          "secteur_na38i": 36
+        },
+        "measure_nonempty_rows": 9072,
+        "measure_empty_rows": 0,
+        "duplicate_industry_year_quarter_keys": 0,
+        "economic_join_gate": "NOT_READY: verify exact units, historical breaks, nomenclature mappings",
+        "evidence_group": "DSN_URSSAF_DARES_INSEE"
+      },
       "content_type": "text/csv; charset=utf-8",
       "etag": null,
       "last_modified": null
@@ -94,6 +127,23 @@
         "n_nonmissing_values": 2810,
         "unit": "as declared in dataset dimension; no implicit conversion"
       },
+      "structural_profile": {
+        "category_counts": {
+          "geo": 2,
+          "time": 3,
+          "nace_r2": 1,
+          "size_emp": 8,
+          "indic_is": 63,
+          "unit": 6
+        },
+        "years": [
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "scope_check": "Geo and NACE/enterprise-size filters are separate from occupation",
+        "evidence_group": "EUROSTAT_ICT_SURVEY_INSEE_TIC"
+      },
       "content_type": "application/json",
       "etag": null,
       "last_modified": null
@@ -121,6 +171,23 @@
         ],
         "n_nonmissing_values": 7993,
         "unit": "as declared in dataset dimension; no implicit conversion"
+      },
+      "structural_profile": {
+        "category_counts": {
+          "geo": 1,
+          "time": 3,
+          "nace_r2": 50,
+          "size_emp": 1,
+          "indic_is": 63,
+          "unit": 6
+        },
+        "years": [
+          "2023",
+          "2024",
+          "2025"
+        ],
+        "scope_check": "Geo and NACE/enterprise-size filters are separate from occupation",
+        "evidence_group": "EUROSTAT_ICT_SURVEY_INSEE_TIC"
       },
       "content_type": "application/json",
       "etag": null,
