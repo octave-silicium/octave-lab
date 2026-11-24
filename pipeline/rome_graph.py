@@ -16,11 +16,21 @@ class Graph:
                 if r[k].strip():ix[r[k]].append((n,r))
             self.index[t]=dict(ix)
         self.occ=self.index["referentiel_code_rome"]
+        by_ogr=defaultdict(list)
+        for n,r in tables["referentiel_code_rome"]:
+            if r.get("code_ogr","").strip():by_ogr[r["code_ogr"]].append((n,r))
+        self.index["referentiel_code_rome_ogr"]=dict(by_ogr)
         if len(self.occ)!=len(tables["referentiel_code_rome"]) or any(len(v)!=1 or not re.fullmatch(r"[A-Z]\d{4}",k) for k,v in self.occ.items()):raise ValueError("OCCUPATION_KEY")
         self.links=defaultdict(list);self.counts=Counter();self.types=Counter()
         for n,r in tables["liens_rome_referentiels"]:
             o,k=r["code_rome"],r["code_ogr"]
             candidates=[t for t in (*TYPES,"item") if k in self.index[t]]
+            # Empty-rubric identity and appellation blocks are distinct from skill items.
+            block=r.get("code_compo_bloc")
+            if r.get("code_rubrique")=="" and block in {"1","2"}:
+                target="referentiel_code_rome_ogr" if block=="1" else "referentiel_appellation"
+                matches=self.index[target].get(k,[])
+                candidates=[target] if len(matches)==1 and matches[0][1].get("code_rome")==o else []
             types=[t for t in candidates if t!="item"]
             if o not in self.occ:status="ORPHAN_OCCUPATION"
             elif not candidates:status="UNRESOLVED_ITEM"
@@ -31,7 +41,7 @@ class Graph:
     def profile(self,code):
         if code not in self.occ:raise ValueError("UNKNOWN_OCCUPATION")
         n,r=self.occ[code][0]
-        return {"occupation":r,"row":n,"release":self.release,"links":[{"row":i,"native":v,"status":s,"references":[{"table":t,"row":j,"native":w} for t in c for j,w in self.index[t][v["code_ogr"]]] if s=="NATIVE_REFERENCED" else []} for i,v,c,s in self.links.get(code,[])],"tasks":[],"actions":[],"publication":"BLOCK_PUBLICATION","attribution":"France Travail, ROME, données ouvertes ; réorganisation Octave Lab."}
+        return {"occupation":r,"row":n,"release":self.release,"links":[{"row":i,"native":v,"status":s,"references":[{"table":"referentiel_code_rome" if t=="referentiel_code_rome_ogr" else t,"row":j,"native":w} for t in c for j,w in self.index[t][v["code_ogr"]]] if s=="NATIVE_REFERENCED" else []} for i,v,c,s in self.links.get(code,[])],"tasks":[],"actions":[],"publication":"BLOCK_PUBLICATION","attribution":"France Travail, ROME, données ouvertes ; réorganisation Octave Lab."}
     def audit(self):
         return {"status":"NATIVE_GRAPH_LOADED","version_token":VERSION,"release":self.release,"archive_sha256":self.manifest["sha256"],"tables":{k:len(v) for k,v in self.tables.items()},"occupations":len(self.occ),"occupations_with_links":sum(k in self.links for k in self.occ),"link_status":dict(self.counts),"link_type_candidates":dict(self.types),"duplicate_native_ids":{t:sum(len(v)-1 for v in ix.values()) for t,ix in self.index.items()},"crosswalks_validated":0,"actions":0,"publication":"BLOCK_PUBLICATION"}
 def load(raw):
