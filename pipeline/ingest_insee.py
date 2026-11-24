@@ -17,7 +17,10 @@ import sys
 import zipfile
 import xml.etree.ElementTree as ET
 
-from semantic_audit import download, read_shared, sample_cell, col_index, XML, SOURCE_ENDPOINTS
+if __package__:
+    from .semantic_audit import download, read_shared, sample_cell, col_index, XML, SOURCE_ENDPOINTS
+else:
+    from semantic_audit import download, read_shared, sample_cell, col_index, XML, SOURCE_ENDPOINTS
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT_DIR = ROOT / 'data' / 'curated'

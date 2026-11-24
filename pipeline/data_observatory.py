@@ -6,7 +6,7 @@ from datetime import date,datetime,timezone
 from decimal import Decimal
 from pathlib import Path
 from . import semantic_v3 as v3,semantic_v4 as v4
-from . import work_graph,rome_inventory
+from . import work_graph,rome_inventory,ingest_insee
 from .european_work import fetch
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -75,17 +75,24 @@ def check(s,fetcher=fetch):
             a=g.audit()
             return {**result,"status":"PINNED_VERSION_VERIFIED","version":a["version"],"nodes":a["nodes"],"edges":a["edges"],"latest_release_verified":False,"source_hashes":{k:v["sha256"] for k,v in a["sources"].items()}}
         url=v3.SOURCES[s["id"]] if kind=="live_native" else s["url"]
-        raw,_,_=fetcher(url,100_000_000)
+        if kind=="xlsx" and fetcher is fetch:
+            raw,_=ingest_insee.download(url,{"www.insee.fr"})
+        else:
+            raw,_,_=fetcher(url,100_000_000)
         sha=digest(raw)
         if kind.startswith("indeed_"):meta=validate_indeed(raw,kind)
         elif kind=="dares":meta=validate_dares(raw)
-        elif kind=="xlsx":meta=validate_xlsx(raw)
+        elif kind=="xlsx":
+            validate_xlsx(raw)
+            _,a=ingest_insee.extract(raw)
+            meta={"rows":a["data_rows"],"first":a["first_quarter"],"last":a["last_quarter"],"arithmetic_anomalies":a["reported_arithmetic_anomalies"],"gate":a["publication_gate"]}
+            if a["publication_gate"]!="PASS_INSEE_DESCRIPTIVE_ONLY":return {**result,"status":"REVIEW_REQUIRED","sha256":sha,"coverage":meta}
         elif kind=="rome_inventory":
             inv=rome_inventory.inspect(raw)
             meta={"members":len(inv["members"]),"scope":"NATIVE_INVENTORY_ONLY"}
         elif kind=="live_native":meta=validate_live(s["id"],raw,result["checked_at"])
         else:raise ValueError("UNSUPPORTED_KIND")
-        return {**result,"status":"CHECKED","validation_scope":"CONTAINER_OR_INVENTORY" if kind in {"xlsx","rome_inventory"} else "SOURCE_NATIVE","bytes":len(raw),"sha256":sha,"change_vs_reference":"SAME" if sha==s.get("baseline_sha256") else "CHANGED_OR_UNPINNED","coverage":meta}
+        return {**result,"status":"CHECKED","validation_scope":"CONTAINER_OR_INVENTORY" if kind=="rome_inventory" else "SOURCE_NATIVE","bytes":len(raw),"sha256":sha,"change_vs_reference":"SAME" if sha==s.get("baseline_sha256") else "CHANGED_OR_UNPINNED","coverage":meta}
     except Exception as exc:
         # No raw values, response bodies, credentials or exception details in public logs.
         return {**result,"status":"FAILED","error_type":type(exc).__name__}
@@ -98,5 +105,5 @@ def main():
     p=argparse.ArgumentParser();p.add_argument("--scheduled",action="store_true");a=p.parse_args()
     r=run(read_registry(),a.scheduled)
     print(json.dumps(r,ensure_ascii=False,indent=2))
-    if r["statuses"].get("FAILED"):raise SystemExit(2)
+    if r["statuses"].get("FAILED") or r["statuses"].get("REVIEW_REQUIRED"):raise SystemExit(2)
 if __name__=="__main__":main()
