@@ -11,7 +11,7 @@ from .economic_paths import Scenario,Path as LegacyPath,trace
 VERSION="0.3"
 MODES={"NO_SHOCK","NO_ADOPTION","CONDITIONAL"}
 STOPS={"NO_ONWARD_LINK","MISSING_EVIDENCE","METHOD_OR_RIGHTS","OUTSIDE_SCOPE","MATERIALITY_UNQUALIFIED","DEPTH_LIMIT","BUDGET_LIMIT","NO_ADOPTION","PENDING_QUALIFICATION"}
-INTERACTIONS={"REINFORCING","COMPENSATING","THRESHOLD","STRATEGIC_RESPONSE","SHARED_EFFECT","MULTIPLE_SHOCKS","UNKNOWN"}
+INTERACTIONS={"COMPETING","REINFORCING","COMPENSATING","THRESHOLD","STRATEGIC_RESPONSE","SHARED_EFFECT","MULTIPLE_SHOCKS","UNKNOWN"}
 ACTORS={"ACTOR","FIRM","GROUP","ROLE","POPULATION","ESTABLISHMENT","SECTOR","MARKET","TERRITORY"}
 FILES=("economic_core.py","economic_paths.py","economic_prospective.py","economic_calculations.py","economic_investigation.py")
 
@@ -46,6 +46,7 @@ class Trajectory:
     comparison_metrics:tuple
     uncertainty_method:str
     falsification_and_update_triggers:str
+    adoption_parameter_ref:str|None=None
     @property
     def key(self):return identity(self.id,self.revision)
 
@@ -87,9 +88,11 @@ class Rival:
     path_ref:str
     test:str
 
-def families():
+def families(requirements=None):
     file=Path(__file__).resolve().parents[1]/"governance"/"multi_order_prospective_v1.json"
-    return tuple(json.loads(file.read_text())["scenario_families"])
+    raw=file.read_bytes()
+    if requirements is not None:require(digest(raw)==requirements.pins[file.name],"PROSPECT_REGISTRY_DRIFT")
+    return tuple(json.loads(raw)["scenario_families"])
 
 def build(graph,trajectories,branches,interactions=(),family_assessments=()):
     ss=unique(trajectories,lambda s:s.key);ps=unique(branches,lambda p:p.key)
@@ -99,6 +102,7 @@ def build(graph,trajectories,branches,interactions=(),family_assessments=()):
     baseline=[s for s in ss.values() if s.mode=="NO_SHOCK"]
     require(len(baseline)==1,"SINGLE_NO_SHOCK_REFERENCE")
     base=baseline[0]
+    family_names=families(graph.requirements)
     pins=model_pins();scenario_rows=[];path_rows=[];prefix_next=defaultdict(set);prefix_stop=defaultdict(list)
     prefix_target={};seen_shocks=defaultdict(set);by_end=defaultdict(list);path_signatures=set()
     for s in sorted(ss.values(),key=lambda x:x.key):
@@ -114,8 +118,14 @@ def build(graph,trajectories,branches,interactions=(),family_assessments=()):
         else:
             require(s.baseline_ref==base.key and s.scope==base.scope and s.initial_state_refs==base.initial_state_refs and s.comparison_metrics==base.comparison_metrics and s.horizons==base.horizons and s.step_unit==base.step_unit,"BASELINE_COMPARABILITY")
             require(bool(s.shock_refs) and bool(s.assumption_refs),"SHOCK_ASSUMPTION_REQUIRED")
-        if s.mode=="NO_ADOPTION":require(not s.intervention_refs,"NO_ADOPTION_INTERVENTION")
-        scenario_rows.append({"id":s.id,"revision":s.revision,"scenario_ref":s.key,"mode":s.mode,"baseline_ref":s.baseline_ref,"decision_and_scope":{"decision":s.decision,"scope":scope_result(s.scope)},"initial_state_refs":list(s.initial_state_refs),"shock_and_intervention_refs":{"shocks":list(s.shock_refs),"interventions":list(s.intervention_refs)},"assumption_refs":list(s.assumption_refs),"model_versions":pins,"horizons":list(s.horizons),"step_unit":s.step_unit,"constraints_and_closure":s.constraints_and_closure,"comparison_metrics":list(s.comparison_metrics),"uncertainty_method":s.uncertainty_method,"falsification_and_update_triggers":s.falsification_and_update_triggers,"probability":None})
+        if s.adoption_parameter_ref is not None:
+            require(s.adoption_parameter_ref in s.assumption_refs,"ADOPTION_PARAMETER_REF")
+            adoption=graph.parameters[s.adoption_parameter_ref].quantity
+            require(adoption.unit=="FRACTION" and adoption.value is not None,"ADOPTION_PARAMETER_UNIT")
+        if s.mode=="NO_ADOPTION":
+            require(not s.intervention_refs,"NO_ADOPTION_INTERVENTION")
+            require(s.adoption_parameter_ref is not None and adoption.value==0 and adoption.lower is None,"NO_ADOPTION_NOT_ZERO")
+        scenario_rows.append({"id":s.id,"revision":s.revision,"scenario_ref":s.key,"mode":s.mode,"baseline_ref":s.baseline_ref,"decision_and_scope":{"decision":s.decision,"scope":scope_result(s.scope)},"initial_state_refs":list(s.initial_state_refs),"shock_and_intervention_refs":{"shocks":list(s.shock_refs),"interventions":list(s.intervention_refs)},"assumption_refs":list(s.assumption_refs),"adoption_parameter_ref":s.adoption_parameter_ref,"model_versions":pins,"horizons":list(s.horizons),"step_unit":s.step_unit,"constraints_and_closure":s.constraints_and_closure,"comparison_metrics":list(s.comparison_metrics),"uncertainty_method":s.uncertainty_method,"falsification_and_update_triggers":s.falsification_and_update_triggers,"probability":None})
     for p in sorted(ps.values(),key=lambda x:x.key):
         s=ss[p.scenario_ref]
         require(p.shock_ref in s.shock_refs and s.mode!="NO_SHOCK","UNDECLARED_SHOCK")
@@ -142,7 +152,7 @@ def build(graph,trajectories,branches,interactions=(),family_assessments=()):
             require(c.key not in ctx.input_claim_refs and (prior_claim in ctx.input_claim_refs if prior_claim else set(ctx.input_claim_refs)<=set(s.initial_state_refs)),"PATH_CLAIM_CHAIN")
             require(c.claim_type in {"MECHANISM_HYPOTHESIS","CONDITIONAL_SCENARIO"},"PATH_EVIDENCE")
             prefix=(s.key,p.shock_ref,p.assertion_refs[:i]);prefix_target[prefix]=current;prefix_next[prefix].add(edge_key)
-            steps.append({"scenario_id":s.key,"shock_ref":p.shock_ref,"graph_version":graph.fingerprint,"ordered_mechanism_refs":[list(graph.claims[graph.assertions[k].claim_ref].mechanism_refs) for k in p.assertion_refs[:i+1]],"assertion_ref":edge_key,"input_claim_refs":list(ctx.input_claim_refs),"output_claim_ref":c.key,"path_order":i+1,"affected_actor":ctx.actor_ref,"scope_and_units":{"scope":scope_result(c.scope),"unit":c.quantity.unit if c.quantity else "NON_QUANTIFIED"},"time_window_or_unknown":ctx.horizon_or_unknown,"elapsed_model_steps":tr["elapsed_model_steps"],"step_unit":s.step_unit,"condition_and_assumption_refs":{"condition":e.condition,"parameters":list(ctx.assumption_refs)},"evidence_type":c.claim_type,"direction_or_unknown":e.direction,"magnitude_or_unknown":None,"competing_paths":[],"limitations":ctx.limitations,"stop_reason_if_applicable":p.stop_reason if i==len(p.assertion_refs)-1 else None})
+            steps.append({"scenario_id":s.key,"shock_ref":p.shock_ref,"graph_version":graph.fingerprint,"ordered_mechanism_refs":[list(graph.claims[graph.assertions[k].claim_ref].mechanism_refs) for k in p.assertion_refs[:i+1]],"assertion_ref":edge_key,"input_claim_refs":list(ctx.input_claim_refs),"output_claim_ref":c.key,"path_order":i+1,"affected_actor":ctx.actor_ref,"scope_and_units":{"scope":scope_result(c.scope),"unit":c.quantity.unit if c.quantity else "NON_QUANTIFIED"},"time_window_or_unknown":ctx.horizon_or_unknown,"elapsed_model_steps":tr["elapsed_model_steps"],"step_unit":s.step_unit,"condition_and_assumption_refs":{"condition":e.condition,"parameters":list(ctx.assumption_refs)},"evidence_type":c.claim_type,"direction_or_unknown":e.direction,"magnitude_or_unknown":None,"competing_paths":[],"related_interaction_paths":[],"limitations":ctx.limitations,"stop_reason_if_applicable":p.stop_reason if i==len(p.assertion_refs)-1 else None})
             prior_claim=c.key;current=e.target
         prefix=(s.key,p.shock_ref,p.assertion_refs);prefix_target[prefix]=current;prefix_stop[prefix].append((p.stop_code,p.stop_reason))
         by_end[(s.key,current)].append(p.key)
@@ -166,18 +176,21 @@ def build(graph,trajectories,branches,interactions=(),family_assessments=()):
         require(isinstance(item,Interaction) and item.kind in INTERACTIONS and texts(item.path_refs) and len(item.path_refs)>=2 and set(item.path_refs)<=ps.keys() and item.claim_ref in graph.claims and words(item.condition) and words(item.discriminating_test),"INTERACTION")
         c=graph.claims[item.claim_ref]
         require(c.claim_type=="MECHANISM_HYPOTHESIS" and bool(c.mechanism_refs) and all(ss[ps[k].scenario_ref].scope==c.scope for k in item.path_refs),"INTERACTION_EVIDENCE")
+        if item.kind!="COMPETING":require(len({ps[k].scenario_ref for k in item.path_refs})==1,"INTERACTION_SCENARIO")
         if item.kind=="MULTIPLE_SHOCKS":require(len({ps[k].shock_ref for k in item.path_refs})>=2,"MULTIPLE_SHOCKS_REQUIRED")
         inter.append({**asdict(item),"interaction_ref":item.key,"magnitude":None,"status":"HYPOTHESIS_ONLY"})
         for row in path_rows:
             if row["path_ref"] in item.path_refs:
-                for step in row["steps"]:step["competing_paths"]=sorted(set(step["competing_paths"])|(set(item.path_refs)-{row["path_ref"]}))
+                for step in row["steps"]:
+                    field="competing_paths" if item.kind=="COMPETING" else "related_interaction_paths"
+                    step[field]=sorted(set(step[field])|(set(item.path_refs)-{row["path_ref"]}))
     frows=unique(family_assessments,lambda x:x[0])
-    require(set(frows)==set(families()),"FAMILY_COVERAGE")
+    require(set(frows)==set(family_names),"FAMILY_COVERAGE")
     for family,(name,scenarios,reason) in frows.items():
         require(texts(scenarios) and set(scenarios)<=ss.keys() and words(reason),"FAMILY_ASSESSMENT")
-    require(frows[families()[0]][1]==(base.key,),"REFERENCE_FAMILY")
-    require(all(ss[k].mode=="NO_ADOPTION" for k in frows[families()[1]][1]),"NO_ADOPTION_FAMILY")
-    result={"version":VERSION,"graph_sha256":graph.fingerprint,"requirement_sha256":graph.requirements.fingerprint,"model_versions":pins,"scenarios":scenario_rows,"paths":path_rows,"frontier":frontier,"convergences":convergence,"interactions":inter,"families":[{"family":name,"scenario_refs":list(frows[name][1]),"reason":frows[name][2]} for name in families()],"comparison":{"baseline_ref":base.key,"metrics":list(base.comparison_metrics),"horizons":list(base.horizons),"total_effect":None,"method":"COUNTERFACTUAL_DIFFERENCE_NOT_IMPLEMENTED","path_sum_allowed":False},"causal_validation":False,"publication":"BLOCK_PUBLICATION"}
+    require(frows[family_names[0]][1]==(base.key,),"REFERENCE_FAMILY")
+    require(set(frows[family_names[1]][1])=={s.key for s in ss.values() if s.mode=="NO_ADOPTION"},"NO_ADOPTION_FAMILY")
+    result={"version":VERSION,"graph_sha256":graph.fingerprint,"requirement_sha256":graph.requirements.fingerprint,"model_versions":pins,"scenarios":scenario_rows,"paths":path_rows,"frontier":frontier,"convergences":convergence,"interactions":inter,"families":[{"family":name,"scenario_refs":list(frows[name][1]),"reason":frows[name][2]} for name in family_names],"comparison":{"baseline_ref":base.key,"metrics":list(base.comparison_metrics),"horizons":list(base.horizons),"total_effect":None,"method":"COUNTERFACTUAL_DIFFERENCE_NOT_IMPLEMENTED","path_sum_allowed":False},"causal_validation":False,"publication":"BLOCK_PUBLICATION"}
     # Normalize tuple fields so JSON roundtrip remains exact.
     result=json.loads(canonical(result))
     return {"result":result,"sha256":digest(canonical(result))}

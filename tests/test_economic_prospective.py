@@ -11,6 +11,7 @@ def fixture():
     ev=Evidence("p:assume",1,"ASSUMPTION","fixture","assumption","a"*64,"synthetic","2026-11-24",None,"INTERNAL_ONLY","ASSUMED")
     nat=Evidence("p:native",1,"NATIVE_SOURCE","synthetic fixture only","state","b"*64,"synthetic","2026-11-24",None,"INTERNAL_ONLY","DESCRIPTIVE_ONLY")
     p=Parameter("p:adopt",1,S,Quantity(Decimal("0.5"),"FRACTION"),"ASSUMPTION",(ev.key,),"scenario adoption assumption")
+    zero=replace(p,id="p:zero-adopt",quantity=Quantity(Decimal("0"),"FRACTION"),meaning="zero adoption")
     initial=Claim("p:initial",1,"OBSERVATION","Synthetic initial state (test only)","decision",S,None,(nat.key,),(),"test fixture not real data","fictional","other state","measure",())
     nodes=[Entity("p:"+k,1,t,k,"fixture") for k,t in [("tech","TECHNOLOGY"),("task","ACTION"),("process","PROCESS"),("firm","FIRM"),("market","MARKET"),("actor","ACTOR"),("shock2","TECHNOLOGY")]]
     links=[("tech","task",0,"NEGATIVE"),("task","process",None,"UNKNOWN"),("process","firm",1,"POSITIVE"),("tech","firm",2,"NEGATIVE"),("firm","market",1,"UNKNOWN"),("market","tech",1,"UNKNOWN"),("shock2","firm",1,"UNKNOWN")]
@@ -18,10 +19,10 @@ def fixture():
     for i,(a,b,lag,direction) in enumerate(links):
         c=Claim("p:claim:"+str(i),1,"MECHANISM_HYPOTHESIS","candidate "+a+" to "+b,"decision",S,None,(ev.key,),("M010",),"hypothesis only","not measured","rival","test",())
         claims.append(c);edges.append(Assertion("p:edge:"+str(i),1,"p:"+a+"@1","p:"+b+"@1","CAUSAL_HYPOTHESIS",c.key,"if conditions hold",lag,direction))
-    g=Graph(Requirements(),entities=nodes,evidence=(ev,nat),parameters=(p,),claims=claims,assertions=edges)
+    g=Graph(Requirements(),entities=nodes,evidence=(ev,nat),parameters=(p,zero),claims=claims,assertions=edges)
     baseline=Trajectory("p:baseline",1,"NO_SHOCK",None,"comparison",S,(initial.key,),(),(),(),("short","long"),"month","fixed boundary",("hours","cost"),"unknown","measure")
-    noad=replace(baseline,id="p:noad",mode="NO_ADOPTION",baseline_ref=baseline.key,shock_refs=(nodes[0].key,),assumption_refs=(p.key,))
-    adopted=replace(noad,id="p:adopted",mode="CONDITIONAL",shock_refs=(nodes[0].key,nodes[-1].key),intervention_refs=(nodes[2].key,))
+    noad=replace(baseline,id="p:noad",mode="NO_ADOPTION",baseline_ref=baseline.key,shock_refs=(nodes[0].key,),assumption_refs=(zero.key,),adoption_parameter_ref=zero.key)
+    adopted=replace(noad,id="p:adopted",mode="CONDITIONAL",shock_refs=(nodes[0].key,nodes[-1].key),intervention_refs=(nodes[2].key,),assumption_refs=(p.key,),adoption_parameter_ref=p.key)
     def branch(id,sc,shock,indices,code="MISSING_EVIDENCE"):
         cs=[];prior=initial.key
         for i in indices:
@@ -64,6 +65,12 @@ class ProspectiveTests(unittest.TestCase):
         g,s,p,i,f=fixture()
         bad=replace(p[0],assertion_refs=p[2].assertion_refs,contexts=p[2].contexts)
         with self.assertRaisesRegex(ValueError,"NO_ADOPTION_TRANSMISSION"):build(g,s,(bad,*p[1:]),i,f)
+    def test_no_adoption_not_zero(self):
+        g,s,p,i,f=fixture()
+        with self.assertRaisesRegex(ValueError,"NO_ADOPTION_NOT_ZERO"):build(g,(s[0],replace(s[1],assumption_refs=s[2].assumption_refs,adoption_parameter_ref=s[2].adoption_parameter_ref),s[2]),p,i,f)
+    def test_interaction_not_rival(self):
+        g,*args=fixture();r=build(g,*args)["result"];step=next(p for p in r["paths"] if p["path_ref"]=="p:long@1")["steps"][0]
+        self.assertEqual(step["competing_paths"],[]);self.assertEqual(step["related_interaction_paths"],["p:short@1"])
     def test_false_stop(self):
         g,s,p,i,f=fixture()
         with self.assertRaisesRegex(ValueError,"FALSE_NO_ONWARD_LINK"):build(g,s,(p[0],replace(p[1],stop_code="NO_ONWARD_LINK"),*p[2:]),i,f)
