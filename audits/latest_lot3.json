@@ -1,5 +1,5 @@
 {
-  "observed_at_utc": "2026-11-24T04:53:09.469621+00:00",
+  "observed_at_utc": "2026-11-24T04:56:55.994434+00:00",
   "analysis_level": "DESCRIPTIVE_SOURCE_QUALIFICATION_ONLY",
   "no_raw_data_published": true,
   "source_count": 4,
@@ -1281,8 +1281,8 @@
     "dares_mmo_page": {
       "result": "BLOCKED_OFFICIAL_SITE_ANTIBOT",
       "evidence": {
-        "sha256": "e2c8e17d752d1985461f60d218980c022c445643e15334659f233fad4c0c251d",
-        "bytes": 58905,
+        "sha256": "eacb70793fbe3a56823b866b43ea7d9cd24d4bd10a1775e17f70584cf8f82beb",
+        "bytes": 55051,
         "content_type": "text/html",
         "url": "https://dares.travail-emploi.gouv.fr/donnees/les-mouvements-de-main-doeuvre"
       },
