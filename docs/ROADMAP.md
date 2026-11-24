@@ -79,3 +79,6 @@ La cible intégrale validée est [ARCH-002](ARCH-002.md) et son [registre machin
 
 ## G3.2 v0.1 — Operational transformation
 [Documentation](G3-OPERATIONS.md) : enveloppe déterministe de capacité/charge et qualité, benchmark MIT/NIST/SimPy, W001 synthétique. Recette CI réussie : 263 tests ; [audit](../audits/economic_operations_v01_verified.json). E-G1 non franchi. Suite : files/calendriers et reprises, refonte structurelle, intégration investigation puis G3.3/G3.4.
+
+## Exigence transversale — clarté terminologique et pédagogie (24/11/2026)
+Décision utilisateur : [UX-001](UX-001.md) et [RESULT-001](RESULT-001.md) complétés. Intitulés clairs pour tous, aide contextuelle discrète et accessible, registre terminologique commun, détails progressifs, unités/périmètres et réserves visibles, contrôle de compréhension non spécialiste. Appliquer dès les nouveaux écrans et restitutions ; audit/rétrofit des écrans existants avant recette publique. Implémentation UI et recette à faire ; G3.2 v0.2 reste la prochaine tranche scientifique.

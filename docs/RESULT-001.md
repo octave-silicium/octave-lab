@@ -41,3 +41,7 @@ Registre machine-readable : governance/investigation_result_v1.json.
 
 ## Prospective multi-ordres — précision du 24/11/2026
 [PROSPECT-001](PROSPECT-001.md) et [contrat computationnel](../governance/multi_order_prospective_v1.json) précisent l'exigence transversale : O1/O2/O3/O4+ selon chemins qualifiés, ordre distinct d'horizon/scénario/preuve, branches concurrentes, réactions stratégiques, interactions et rétroactions, seuils et règles d'arrêt. Comparer trajectoires cohérentes, pas sommer les chemins; aucune extrapolation causale ou probabilité fictive. Restitution D12/D13/D15/D16/D17 et preuve D18, dès tranche G3 avec limitations explicites. Les six moteurs, neuf couches et 64 mécanismes initiaux sont conservés. Spécification uniquement, gates inchangés.
+
+
+## Clarté et pédagogie intégrée (24/11/2026)
+Exigence normative [UX-001 — Clarté terminologique et pédagogie intégrée](UX-001.md) applicable aux trois niveaux de restitution, aux 18 sections, aux indicateurs, résultats, scénarios, preuves et exports. Libellés compréhensibles sans expertise préalable, définitions techniques contextuelles accessibles et détails progressifs ; ne jamais simplifier la signification scientifique ni cacher les réserves indispensables. Registre terminologique commun versionné et critères de compréhension non spécialiste obligatoires avant recette produit. Aucun changement de périmètre scientifique ni gate franchi.
