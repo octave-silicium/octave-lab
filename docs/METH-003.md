@@ -1,5 +1,5 @@
 # METH-003 — Décomposition du travail
-Décision validée le 24 novembre 2026. Statut : SPÉCIFICATION CIBLE, NON IMPLÉMENTÉE. Version publique 1.0.
+Décision validée le 24 novembre 2026. Statut : SPÉCIFICATION CIBLE ; première implémentation partielle [G2 v0.1](G2-WORK-GRAPH.md), collecte à confirmer. Version publique 1.0.
 
 ## Objet
 Pilier transversal aux six niveaux d'analyse : capacités IA, tâches, métiers, entreprises/processus, marchés/chaînes de valeur, macroéconomie. Étudier les mécanismes opérationnels et leurs conséquences économiques, sans déduire des pertes d'emploi de scores d'exposition.
@@ -31,4 +31,4 @@ ROME, ESCO, O*NET, ISCO/SOC et observations de terrain : qualifier versions, cou
 | G-M4 | Raccordement aux observations économiques ; identification et revue adaptées pour causalité | À construire |
 | G-M5 | Exports autorisés, provenance, reproductibilité point-in-time, avertissements et corrections | À construire |
 
-Risques : biais des descriptions, généralisation, poids fictifs, dérive de modèles, dépendances, demande, correspondances ROME/ESCO/O*NET/NAF, confidentialité, propriété intellectuelle et absence de validation humaine/causale. Étiqueter explicitement exposition, capacité testée, adoption observée ou impact estimé. La qualification et l'ontologie préliminaire accompagnent G1 ; aucun module déjà opérationnel n'est revendiqué.
+Risques : biais des descriptions, généralisation, poids fictifs, dérive de modèles, dépendances, demande, correspondances ROME/ESCO/O*NET/NAF, confidentialité, propriété intellectuelle et absence de validation humaine/causale. Étiqueter explicitement exposition, capacité testée, adoption observée ou impact estimé. La qualification et l'ontologie préliminaire accompagnent G1 ; le socle natif O*NET est en cours de qualification ; aucun modèle d'action, processus ou impact validé n'est revendiqué.

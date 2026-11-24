@@ -6,15 +6,15 @@ Référence publique au 24 novembre 2026. Le statut d'une décision ne vaut pas 
 - 79 entrées candidates recensées ; ni 79 bases intégrées, ni 79 lignées indépendantes.
 - [PILOT-001](../research/PILOT-001/rapport.md) : observations descriptives sur NACE J ; deux lignées principales (Urssaf et Eurostat). Pas de preuve causale.
 - [Gouvernance](../pipeline/data_governance.py) : contrôles provisoires de droits et ruptures ; leur intégration systématique aux futures sorties reste à faire.
-- METH-003 : décision validée, moteur non implémenté.
+- METH-003 : décision validée, première implémentation partielle G2.
 
 ## Ordre de développement validé
 | Jalon | Résultat attendu | Statut initial |
 |---|---|---|
 | S0 | Synchronisation README, spécification METH-003, état et feuille de route | VÉRIFIÉ |
 | S1 / G1 | Contrats sémantiques communs : mesure, unité, population, dimensions et référentiels versionnés, période/vintage, provenance, licence, comparabilité, preuve ; préparer G-M0 | PARTIELLEMENT VÉRIFIÉ : [S1 v0.4](SEMANTIC-V4.md), 130 tests, neuf jeux interrogeables ; coffre de production, droits, qualification géographique et comparabilité restent ouverts |
-| S2 / G1 | Explorateur multisource : recherche, filtres de couverture, historiques, comparaison conditionnelle, provenance et exports autorisés ; exigences [UX-001](UX-001.md), gates UX-G0 à UX-G4 | [G1 v0.4](G1-EXPLORER.md) table de confrontation et pistes natives implémentées ; v0.3 vérifié en Chromium sur quatre tailles, audit esthétique et gates restants ouverts |
-| S3 / G2 | Qualification ROME/ESCO/O*NET, ontologie G-M0 et petit pilote G-M1 ; processus réel, vérification humaine | Validé, non implémenté |
+| S2 / G1 | Explorateur multisource : recherche, filtres de couverture, historiques, comparaison conditionnelle, provenance et exports autorisés ; exigences [UX-001](UX-001.md), gates UX-G0 à UX-G4 | [G1 v0.4](G1-EXPLORER.md) table de confrontation et pistes natives implémentées ; v0.4 vérifié en Chromium sur quatre tailles, audit esthétique et gates restants ouverts |
+| S3 / G2 | Qualification ROME/ESCO/O*NET, ontologie G-M0 et petit pilote G-M1 ; processus réel, vérification humaine | [G2 v0.1](G2-WORK-GRAPH.md) implémenté, ingestion à confirmer ; G-M0 partiel |
 | S4 / G3–G5 | Investigations, tests G-M2–G-M5, approfondissement sectoriel et moteur économique, validation empirique puis extension progressive | Validé, non implémenté |
 | S5 | Démonstration publique reproductible et validation de la demande professionnelle | À préparer |
 

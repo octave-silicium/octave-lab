@@ -52,3 +52,6 @@ Python 3.11+ ; accès réseau nécessaire pour les collectes. Les commandes ci-d
 [Indeed Hiring Lab](https://github.com/hiring-lab/job_postings_tracker) · [FAQ Indeed](https://hiringlab.indeed.com/indeed-data-faq-2/) · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) · [Urssaf Open Data](https://open.urssaf.fr/) · [Dares](https://dares.travail-emploi.gouv.fr/) · [Insee](https://www.insee.fr/) · [Eurostat](https://ec.europa.eu/eurostat/) · [Méthodologie initiale](docs/METHODOLOGIE.md)
 
 Projet **Octave Silicium**. Les observations factuelles, hypothèses et opinions sont distinguées.
+
+### G2 — Décomposition du travail
+[Socle O*NET 31.0](docs/G2-WORK-GRAPH.md), collecte officielle à confirmer. Aucun mapping France ni score IA. G1 v0.4 : quatre parcours Chromium et 151 tests réussis ([preuve](audits/explorer_browser_v04_verified.json)).
