@@ -1,0 +1,18 @@
+{
+  "currency": "EUR",
+  "scope": "DECLARED_PROCESS_BOUNDARY",
+  "hourly_rates": {},
+  "annual_fixed": {},
+  "annual_volume": null,
+  "cases": [
+    {
+      "id": "REPLACE_WITH_CASE_ID",
+      "wall_seconds": null,
+      "human_time_complete": false,
+      "reference": null,
+      "human_intervals": null,
+      "direct_costs": {},
+      "error_cost": null
+    }
+  ]
+}

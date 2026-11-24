@@ -23,6 +23,7 @@ def cost_ledger(case_ids,ledger):
     """One record per case, per-human intervals on common relative monotonic timeline.
     All monetary values EUR; time seconds; fixed annual allocations use declared volume."""
     if ledger.get("currency")!="EUR" or ledger.get("scope")!="DECLARED_PROCESS_BOUNDARY":raise ValueError("LEDGER_SCOPE")
+    if not case_ids or len(case_ids)!=len(set(case_ids)):raise ValueError("CASE_IDS")
     records=ledger["cases"]
     if len(records)!=len(case_ids) or {r["id"] for r in records}!=set(case_ids):raise ValueError("LEDGER_COVERAGE")
     rates=ledger.get("hourly_rates",{})

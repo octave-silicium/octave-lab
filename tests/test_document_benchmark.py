@@ -14,3 +14,13 @@ class DocumentBenchTests(unittest.TestCase):
         self.assertEqual(classic(cases["T11"])["issues"],["CONTRADICTORY_FIELD"])
         self.assertEqual(classic(cases["T12"])["decision"],"ABSTAIN")
         self.assertEqual(classic(cases["T09"])["issues"],["MISSING_DOCUMENT"])
+
+    def test_exception_aware_reference(self):
+        r=run_classic(True)
+        self.assertEqual(r["counts"]["exact_case_correct"],16)
+        self.assertEqual(r["counts"]["abstain_or_error"],4)
+        self.assertEqual(r["counts"]["false_accept"],0)
+        self.assertEqual(r["strata"]["scope_exception"]["exact"],4)
+    def test_private_suite_pair_required(self):
+        from pathlib import Path
+        with self.assertRaisesRegex(ValueError,"BOTH_SUITE_PATHS"):suite(Path("not-read"))

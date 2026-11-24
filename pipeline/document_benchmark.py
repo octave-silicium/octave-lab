@@ -42,24 +42,27 @@ def parse_doc(doc):
         result[name]=value
     if set(result)!=set(fields):return None,"MISSING_FIELD"
     return result,None
-def classic(case):
+def classic(case,*,exception_aware=False):
     # Scope first: do not silently discard extra documents or instructions.
     docs=case["documents"]
     bykind={}
     for d in docs:
-        if d["kind"] not in FIELDS:return {"decision":"ABSTAIN","issues":[]}
-        if d["kind"] in bykind:return {"decision":"ABSTAIN","issues":[]}
+        if d["kind"] not in FIELDS:return {"decision":"REVIEW","issues":["OUT_OF_SCOPE_DOCUMENT"]} if exception_aware else {"decision":"ABSTAIN","issues":[]}
+        if d["kind"] in bykind:return {"decision":"REVIEW","issues":["CONTRADICTORY_DOCUMENT"]} if exception_aware and d!=bykind[d["kind"]] else {"decision":"ABSTAIN","issues":[]}
         bykind[d["kind"]]=d
     if set(bykind)!=set(FIELDS):return {"decision":"REVIEW","issues":["MISSING_DOCUMENT"]}
     data={}
     for kind in FIELDS:
         row,err=parse_doc(bykind[kind])
         if err in {"MISSING_FIELD","CONTRADICTORY_FIELD"}:return {"decision":"REVIEW","issues":[err]}
+        if exception_aware and err in {"UNSUPPORTED_FIELD","INVALID_FIELD"}:
+            return {"decision":"REVIEW","issues":["OUT_OF_SCOPE_FIELD" if err=="UNSUPPORTED_FIELD" else err]}
         if err:return {"decision":"ABSTAIN","issues":[]}
         data[kind]=row
     return baseline({**data,"rules":case["rules"],"previous_invoice_ids":case["previous_invoice_ids"]})
-def suite():
-    d=json.loads((ROOT/"documents_v2.json").read_text());g=json.loads((ROOT/"documents_gold_v2.json").read_text())
+def suite(cases_path=None,gold_path=None):
+    if (cases_path is None)!=(gold_path is None):raise ValueError("BOTH_SUITE_PATHS_REQUIRED")
+    d=json.loads((cases_path or ROOT/"documents_v2.json").read_text());g=json.loads((gold_path or ROOT/"documents_gold_v2.json").read_text())
     ids=[c["id"] for c in d["cases"]]
     if len(ids)!=len(set(ids)) or not ids or set(ids)!=set(g["expected"]) or digest(d)!=g["cases_sha256"]:raise ValueError("SUITE_INTEGRITY")
     return d,g
@@ -81,19 +84,23 @@ def assess(sub,d,g):
     # Legacy flat costs are declarations, not validated full costs.
     r["flat_cost_is_not_full_cost"]=True
     return r
-def run_classic():
-    d,g=suite()
+def run_classic(exception_aware=False,*,data=None,gold=None):
+    if (data is None)!=(gold is None):raise ValueError("SUITE_PAIR")
+    d,g=suite() if data is None else (data,gold)
     outputs=[];latencies=[]
     for case in d["cases"]:
-        start=time.perf_counter_ns();out=classic(case);latencies.append(time.perf_counter_ns()-start)
+        start=time.perf_counter_ns();out=classic(case,exception_aware=exception_aware);latencies.append(time.perf_counter_ns()-start)
         outputs.append({"id":case["id"],**out})
-    sub={"run_id":"W001-text-classic-v2","mode":"RULE_BASELINE","suite_sha256":digest(d),"configuration":{"implementation":"document_benchmark.classic v2"},"outputs":outputs}
+    version="2.1" if exception_aware else "2"
+    sub={"run_id":"W001-text-classic-v"+version,"mode":"RULE_BASELINE","suite_sha256":digest(d),"configuration":{"implementation":"document_benchmark.classic v"+version},"outputs":outputs}
     r=assess(sub,d,g)
     r["local_compute_only"]={"cases":len(latencies),"median_ns":statistics.median(latencies),"max_ns":max(latencies),"timer":"perf_counter_ns","includes":"one in-memory parser and rules call per case; no I/O, review or integration","not_end_to_end":True}
     return r
 if __name__=="__main__":
-    p=argparse.ArgumentParser();p.add_argument("--submission",type=Path);a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument("--submission",type=Path);p.add_argument("--cases",type=Path);p.add_argument("--gold",type=Path);p.add_argument("--exception-aware",action="store_true");a=p.parse_args()
+    d,g=suite(a.cases,a.gold)
     if a.submission:
-        d,g=suite();result=assess(json.loads(a.submission.read_text()),d,g)
-    else:result=run_classic()
+        result=assess(json.loads(a.submission.read_text()),d,g)
+    else:result=run_classic(a.exception_aware,data=d,gold=g)
+    if a.cases:result["scope"]="USER_SUPPLIED_TEST_SUITE_UNVERIFIED_REPRESENTATIVENESS"
     print(json.dumps(result,indent=2))
