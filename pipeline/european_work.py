@@ -90,7 +90,8 @@ def access_audit(fetcher=fetch):
             res.append({"id":r["id"],"title":r.get("title"),"format":r.get("format"),"url":r.get("url"),"last_modified":r.get("last_modified"),"provider_check_available":extra.get("check:available"),"provider_check_status":extra.get("check:status")})
         report["rome"].update({"status":"METADATA_VERIFIED","license":d.get("license"),"last_modified":d.get("last_modified"),"metadata_sha256":digest(raw),"resources":res,"resource_count":len(res),"provider_unavailable_count":sum(r["provider_check_available"] is False for r in res)})
         # Probe only explicitly published resource URLs for official métier files.
-        candidates=[r for r in res if r["format"] in {"xlsx","csv","zip","json"} and any(t in (r["title"] or "").casefold() for t in ("fiches métiers","référentiel des métiers","arborescence des métiers"))]
+        candidates=[r for r in res if r["format"] in {"xlsx","csv","zip","json"} and any(t in (r["title"] or "").casefold() for t in ("toutes les données du rome","fiches métiers","référentiel des métiers","arborescence principale"))]
+        candidates.sort(key=lambda r: (0 if r["format"]=="csv" else 1 if r["format"]=="json" else 2,r["title"]))
         probes=[]
         for r in candidates[:2]:
             u=r["url"];host=urlsplit(u).hostname or ""
