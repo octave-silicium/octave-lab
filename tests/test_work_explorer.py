@@ -15,3 +15,13 @@ class WorkExplorerTests(unittest.TestCase):
         self.assertEqual(p["actions"],[])
         with self.assertRaises(ValueError):x.search("rome")
         with self.assertRaises(ValueError):x.search("onet",limit=101)
+
+    def test_reverse_native_dwa(self):
+        x=WorkExplorer(onet=Graph(fixture(),{}))
+        concepts=x.reverse.concepts("onet")
+        self.assertGreater(concepts["total"],0)
+        r=x.reverse.reverse("onet",concepts["rows"][0]["id"])
+        self.assertEqual(r["total"],1)
+        self.assertEqual(r["rows"][0]["id"],"11-1111.00")
+        self.assertEqual(r["rows"][0]["relations"][0]["relation"],"TASK_DWA")
+        with self.assertRaises(ValueError):x.reverse.reverse("rome",concepts["rows"][0]["id"])
