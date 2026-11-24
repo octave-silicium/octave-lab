@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-24-v2",
+  "version": "2026-11-24-v3",
   "purpose": "Conservative machine-readable decision register, not legal advice or legal sign-off.",
   "sources": {
     "DS-015_urssaf_private_sector_na88": {
@@ -58,6 +58,17 @@
         "Are proprietary or third-party datasets legally compatible with the chosen combined data product?",
         "What source attribution and download path must be provided in public and paid deliverables?"
       ]
+    },
+    "INSEE_EMPLOI_SECTORIEL_TRIMESTRIEL": {
+      "publisher": "Insee",
+      "dataset": "Emploi salarié par secteur",
+      "license": "LO-2.0",
+      "license_url": "https://www.insee.fr/fr/information/2008466?page=copyright.htm",
+      "dataset_url": "https://www.insee.fr/fr/statistiques/2496914",
+      "commercial_use": "PERMITTED_WITH_ATTRIBUTION_AND_FAITHFUL_MEANING",
+      "public_reuse": "PERMITTED_UNDER_OPEN_LICENSE_2_0",
+      "publication_approval": "DESCRIPTIVE_VALIDATED_FROM_2026_08_28_VINTAGE_ONLY",
+      "caveats": "Insee employment estimates combine Urssaf/Dares/Insee and are not an independent corroboration of administrative DPAE/DSN; source-level methodological vintage review required."
     }
   }
 }

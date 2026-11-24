@@ -23,6 +23,14 @@ def public_use_gate(source_id, purpose, *, attributed=False, adapted_database=Fa
         return {"decision": "ALLOW_INTERNAL", "reason": "No public re-use. Source rights still apply."}
     if purpose not in {"public_chart", "paid_report", "public_dataset_export"}:
         return {"decision": "BLOCK", "reason": "Unsupported use type."}
+    licence = sources[source_id].get("license")
+    if licence == "LO-2.0":
+        if not attributed:
+            return {"decision": "BLOCK", "reason": "Insee / Licence Ouverte 2.0 attribution is required."}
+        return {"decision": "CONDITIONAL_OPEN_LICENSE_REUSE",
+                "reason": "Attribution and faithful meaning required; economic quality/vintage gates still apply. No causal claim granted."}
+    if licence != "ODbL-1.0":
+        return {"decision": "BLOCK_LEGAL_REVIEW", "reason": "Unsupported or unqualified licence."}
     if not attributed:
         return {"decision": "BLOCK", "reason": "Source + ODbL licence notice missing."}
     if adapted_database:

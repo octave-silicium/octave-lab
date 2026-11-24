@@ -18,6 +18,12 @@ class GovernanceTests(unittest.TestCase):
         self.assertEqual(public_use_gate("DS-015_urssaf_private_sector_na88", "paid_report", attributed=True, adapted_database=True)["decision"], "BLOCK_LEGAL_REVIEW")
     def test_public_export_requires_review(self):
         self.assertEqual(public_use_gate("DS-015_urssaf_private_sector_na88", "public_dataset_export", attributed=True)["decision"], "BLOCK_LEGAL_REVIEW")
+    def test_insee_open_licence_requires_attribution(self):
+        self.assertEqual(public_use_gate("INSEE_EMPLOI_SECTORIEL_TRIMESTRIEL","public_chart")["decision"],"BLOCK")
+    def test_insee_open_licence_does_not_inherit_odbl_sharealike(self):
+        self.assertEqual(public_use_gate("INSEE_EMPLOI_SECTORIEL_TRIMESTRIEL","public_dataset_export",attributed=True,adapted_database=True)["decision"],"CONDITIONAL_OPEN_LICENSE_REUSE")
+    def test_urssaf_still_odbl(self):
+        self.assertEqual(public_use_gate("URSSAF_DPAE_MONTHLY_NATIONAL","public_dataset_export",attributed=True)["decision"],"BLOCK_LEGAL_REVIEW")
     def test_apprentice_break(self):
         result=comparison_gate("urssaf_na88_effectifs_salaries_cvs","2022Q4","2023Q1")
         self.assertEqual(result["decision"], "BLOCK")
