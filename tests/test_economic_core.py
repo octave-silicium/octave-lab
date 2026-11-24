@@ -40,7 +40,7 @@ class CoreTests(unittest.TestCase):
     def test_restricted_no_numeric(self):
         r,e,p,c,*_=example()
         e=replace(e,rights="RESTRICTED")
-        with self.assertRaisesRegex(ValueError,"NUMERIC_EVIDENCE_BLOCKED"):Graph(r,evidence=(e,),parameters=(p,),claims=(c,))
+        with self.assertRaisesRegex(ValueError,"ASSUMPTION_REF"):Graph(r,evidence=(e,),parameters=(p,),claims=(c,))
     def test_cycles_in_provenance(self):
         r,e,p,c,*_=example()
         with self.assertRaisesRegex(ValueError,"PROVENANCE_CYCLE"):Graph(r,evidence=(e,),parameters=(p,),claims=(replace(c,dependency_refs=(c.key,)),))
