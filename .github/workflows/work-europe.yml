@@ -1,0 +1,31 @@
+name: OCTAVE LAB | G2 Europe source qualification
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'pipeline/european_work.py'
+      - 'pipeline/work_actions.py'
+      - 'tests/test_european_work.py'
+      - '.github/workflows/work-europe.yml'
+permissions:
+  contents: read
+jobs:
+  europe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Regression and contract tests
+        run: python -m unittest discover -s tests -v
+      - name: Audit official access without bypass
+        run: |
+          set -o pipefail
+          python -m pipeline.european_work | tee work_europe_audit.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: work-europe-audit
+          path: work_europe_audit.json
