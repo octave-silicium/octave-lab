@@ -240,7 +240,7 @@ class LazyExplorer:
         return {"decision":"MATCH","series":x.detail(source,sid,start,end)}
 
 
-def make_handler(explorer,private=None):
+def make_handler(explorer,private=None,work=None):
     class Handler(BaseHTTPRequestHandler):
         def log_message(self,*args):
             pass
@@ -267,6 +267,14 @@ def make_handler(explorer,private=None):
                 if any(len(v)!=1 for v in q.values()):
                     raise ValueError("DUPLICATE_PARAMETER")
                 q={k:v[0] for k,v in q.items()}
+                if u.path in {"/work","/work.js","/work.css"}:
+                    if work is None:return self.j(404,{"error":"Explorateur métiers non configuré."})
+                    name={"/work":"work.html","/work.js":"work.js","/work.css":"work.css"}[u.path]
+                    typ={"work.html":"text/html; charset=utf-8","work.js":"text/javascript; charset=utf-8","work.css":"text/css; charset=utf-8"}[name]
+                    return self.send(200,(STATIC/name).read_bytes(),typ)
+                if u.path.startswith("/api/work/"):
+                    if work is None:return self.j(404,{"error":"Explorateur métiers non configuré."})
+                    return self.j(200,work.dispatch(u.path,q))
                 if u.path.startswith("/api/private/"):
                     if private is None:return self.j(404,{"error":"Ressource privée non configurée."})
                     return self.j(200,private.dispatch(u.path,q))
@@ -298,6 +306,7 @@ def main():
     ap.add_argument("--live",action="store_true")
     ap.add_argument("--port",type=int,default=8765)
     ap.add_argument("--vault",help="Use only approved vault snapshots, pinned for this process")
+    ap.add_argument("--work-manifest",help="Local pinned O*NET/ROME files manifest; optional ESCO private snapshot")
     ap.add_argument("--private-db")
     ap.add_argument("--private-sha")
     args=ap.parse_args()
@@ -312,13 +321,26 @@ def main():
         from .active_catalog import VaultExplorer
         explorer=VaultExplorer(args.vault)
     else:explorer=LazyExplorer(live=args.live)
-    server=ThreadingHTTPServer(("127.0.0.1",args.port),make_handler(explorer,private))
+    work=None
+    if args.work_manifest:
+        from .work_explorer import WorkExplorer,read_pinned
+        from . import work_graph,rome_graph
+        from .private_lot import PrivateLot
+        m=json.loads(Path(args.work_manifest).read_text())
+        onet=None;rome=None;esco=None
+        if "onet" in m:
+            onet=work_graph.build(lambda name:read_pinned(m["onet"][name]["path"],m["onet"][name]["sha256"]))
+        if "rome" in m:rome=rome_graph.load(read_pinned(m["rome"]["path"],m["rome"]["sha256"]))
+        if "esco" in m:esco=PrivateLot(m["esco"]["path"],m["esco"]["sha256"],cross_thread=True)
+        work=WorkExplorer(onet,rome,esco)
+    server=ThreadingHTTPServer(("127.0.0.1",args.port),make_handler(explorer,private,work))
     print(f"Octave Lab local : http://127.0.0.1:{server.server_port} | prêt en {time.perf_counter()-t:.2f}s",flush=True)
     try:
         server.serve_forever()
     finally:
         server.server_close()
         if private:private.close()
+        if work:work.close()
 
 if __name__=="__main__":
     main()
