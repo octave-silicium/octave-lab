@@ -1,0 +1,32 @@
+name: OCTAVE LAB | S1 v0.4 unified research facade
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'pipeline/semantic_v4.py'
+      - 'tests/test_semantic_v4.py'
+      - '.github/workflows/semantic-v4.yml'
+permissions:
+  contents: read
+jobs:
+  unified:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Full repository test suite
+        run: python -m unittest discover -s tests -v
+      - name: Validate unified catalog and flag metadata
+        run: |
+          python -m pipeline.semantic_v4 | tee semantic_v4_audit.json
+          python -c 'import json; d=json.load(open("semantic_v4_audit.json")); assert len(d["counts"])==9 and d["public_values_emitted"] is False and d["production_vault_provisioned"] is False'
+        shell: bash
+      - uses: actions/upload-artifact@v4
+        with:
+          name: semantic-v4-metadata
+          path: semantic_v4_audit.json
+          if-no-files-found: error
