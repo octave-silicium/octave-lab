@@ -1,0 +1,141 @@
+{
+  "date": "2026-11-24",
+  "run_id": 45395440179,
+  "job_id": 138449850903,
+  "tested_commit": "f2e2e2cb28162c022017386c596d4dad640d0fb4",
+  "tests": 263,
+  "seconds": 14.334,
+  "conclusion": "success",
+  "regression": [
+    "Eurostat native",
+    "O*NET and Indeed approved temporary vault"
+  ],
+  "fixture": "W001_SYNTHETIC_ONLY",
+  "process_ref": "octave:process:invoice-control@1",
+  "process_sha256": "bdfe20ab6f191ff11a62c5f745f04527d6db94a9cda5550427de5a522eec6298",
+  "cases": {
+    "assisted": {
+      "baseline": {
+        "capacity_upper_bound_cases": "2000/3",
+        "processed_cases_envelope": "2000/3",
+        "human_hours": "1540/9",
+        "quality": "99/100",
+        "binding_resources": [
+          "clerk"
+        ],
+        "nonlabor_variable_eur": "0"
+      },
+      "alternative": {
+        "capacity_upper_bound_cases": "18000/23",
+        "processed_cases_envelope": "18000/23",
+        "human_hours": "2520/23",
+        "quality": "99/100",
+        "binding_resources": [
+          "review"
+        ],
+        "nonlabor_variable_eur": "1800/23"
+      },
+      "quality_comparable": true,
+      "delta": {
+        "capacity_upper_bound_cases": "8000/69",
+        "processed_cases_envelope": "8000/69",
+        "correct_dispositions_envelope": "2640/23",
+        "human_hours": "-12740/207",
+        "nonlabor_variable_eur": "1800/23",
+        "unserved_demand_cases": "-8000/69"
+      },
+      "receipt_sha256": "2afd040ac137a603e43d1149544d69c34c46b8d5c3c60e0696216a820f62f562"
+    },
+    "stress": {
+      "baseline": {
+        "capacity_upper_bound_cases": "2000/3",
+        "processed_cases_envelope": "2000/3",
+        "human_hours": "1540/9",
+        "quality": "99/100",
+        "binding_resources": [
+          "clerk"
+        ],
+        "nonlabor_variable_eur": "0"
+      },
+      "alternative": {
+        "capacity_upper_bound_cases": "3300/7",
+        "processed_cases_envelope": "3300/7",
+        "human_hours": "175/2",
+        "quality": "24/25",
+        "binding_resources": [
+          "review"
+        ],
+        "nonlabor_variable_eur": "330/7"
+      },
+      "quality_comparable": false,
+      "delta": null,
+      "receipt_sha256": "a0ce80d59a6b720dbf89b34752022560581ed513f887e7b2c57951a930e1ee61"
+    },
+    "redesign": {
+      "baseline": {
+        "capacity_upper_bound_cases": "2000/3",
+        "processed_cases_envelope": "2000/3",
+        "human_hours": "1540/9",
+        "quality": "99/100",
+        "binding_resources": [
+          "clerk"
+        ],
+        "nonlabor_variable_eur": "0"
+      },
+      "alternative": {
+        "capacity_upper_bound_cases": "1440",
+        "processed_cases_envelope": "1000",
+        "human_hours": "105",
+        "quality": "99/100",
+        "binding_resources": [
+          "review"
+        ],
+        "nonlabor_variable_eur": "100"
+      },
+      "quality_comparable": true,
+      "delta": {
+        "capacity_upper_bound_cases": "2320/3",
+        "processed_cases_envelope": "1000/3",
+        "correct_dispositions_envelope": "330",
+        "human_hours": "-595/9",
+        "nonlabor_variable_eur": "100",
+        "unserved_demand_cases": "-1000/3"
+      },
+      "receipt_sha256": "34fbfe32b62a08cca45347ffb653140b79b8f8213b5d5997c09021d60bdfad28"
+    },
+    "assisted high demand": {
+      "baseline": {
+        "capacity_upper_bound_cases": "2000/3",
+        "processed_cases_envelope": "2000/3",
+        "human_hours": "1540/9",
+        "quality": "99/100",
+        "binding_resources": [
+          "clerk"
+        ],
+        "nonlabor_variable_eur": "0"
+      },
+      "alternative": {
+        "capacity_upper_bound_cases": "18000/23",
+        "processed_cases_envelope": "18000/23",
+        "human_hours": "2520/23",
+        "quality": "99/100",
+        "binding_resources": [
+          "review"
+        ],
+        "nonlabor_variable_eur": "1800/23"
+      },
+      "quality_comparable": true,
+      "delta": {
+        "capacity_upper_bound_cases": "8000/69",
+        "processed_cases_envelope": "8000/69",
+        "correct_dispositions_envelope": "2640/23",
+        "human_hours": "-12740/207",
+        "nonlabor_variable_eur": "1800/23",
+        "unserved_demand_cases": "-8000/69"
+      },
+      "receipt_sha256": "14f533f29c9f92374b521850bb801f0a2947c7994774356d90aef9b5c8ef6ff3"
+    }
+  },
+  "scientific_gate_promoted": false,
+  "publication": "BLOCK_PUBLICATION"
+}
