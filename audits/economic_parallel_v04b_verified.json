@@ -1,0 +1,129 @@
+{
+  "date": "2026-11-24",
+  "status": "TECHNICAL_ACCEPTANCE",
+  "tested_commit": "c50d75534b87020a7bafc8b1dfa70b8df2c32a96",
+  "run_id": 45402831580,
+  "job_id": 138475611767,
+  "tests": 316,
+  "seconds": 10.028,
+  "conclusion": "success",
+  "fixture": "W002_PARALLEL_SYNTHETIC",
+  "baseline": {
+    "completed_cases": 16,
+    "unfinished_cases": 8,
+    "human_service_seconds": 1920,
+    "audit_human_seconds": 0,
+    "production_human_seconds": 1920,
+    "audit_due_count": 0,
+    "audit_on_time_count": 0,
+    "audit_missed_count": 0,
+    "mean_completed_elapsed_seconds": "18595/8",
+    "total_ready_task_wait_seconds": 54630
+  },
+  "alternatives": {
+    "w002:parallel-robot": {
+      "alternative": {
+        "completed_cases": 16,
+        "unfinished_cases": 8,
+        "human_service_seconds": 0,
+        "audit_human_seconds": 0,
+        "production_human_seconds": 0,
+        "audit_due_count": 0,
+        "audit_on_time_count": 0,
+        "audit_missed_count": 0,
+        "mean_completed_elapsed_seconds": "18595/8",
+        "total_ready_task_wait_seconds": 54630
+      },
+      "quality_comparable": true,
+      "audit_obligations_met_both": true,
+      "sha256": "d99996a991897d248ed18db659b6adb4b7c351d001fe3567b0b92b804cce2988"
+    },
+    "w002:parallel-parallel": {
+      "alternative": {
+        "completed_cases": 16,
+        "unfinished_cases": 8,
+        "human_service_seconds": 0,
+        "audit_human_seconds": 0,
+        "production_human_seconds": 0,
+        "audit_due_count": 0,
+        "audit_on_time_count": 0,
+        "audit_missed_count": 0,
+        "mean_completed_elapsed_seconds": "18195/8",
+        "total_ready_task_wait_seconds": 54480
+      },
+      "quality_comparable": true,
+      "audit_obligations_met_both": true,
+      "sha256": "3fba0fe35015afd38a65a2c947517f46c5bf5ca1b8842ca12b228d9664d7fc90"
+    },
+    "w002:parallel-audit": {
+      "alternative": {
+        "completed_cases": 16,
+        "unfinished_cases": 8,
+        "human_service_seconds": 600,
+        "audit_human_seconds": 600,
+        "production_human_seconds": 0,
+        "audit_due_count": 2,
+        "audit_on_time_count": 2,
+        "audit_missed_count": 0,
+        "mean_completed_elapsed_seconds": "18215/8",
+        "total_ready_task_wait_seconds": 54520
+      },
+      "quality_comparable": true,
+      "audit_obligations_met_both": true,
+      "sha256": "55942f1d8c4e16e67452e77c85658cfe396a6cda4ff1da6d61d8251d34f0a388"
+    },
+    "w002:parallel-priority": {
+      "alternative": {
+        "completed_cases": 18,
+        "unfinished_cases": 6,
+        "human_service_seconds": 600,
+        "audit_human_seconds": 600,
+        "production_human_seconds": 0,
+        "audit_due_count": 2,
+        "audit_on_time_count": 2,
+        "audit_missed_count": 0,
+        "mean_completed_elapsed_seconds": "22025/9",
+        "total_ready_task_wait_seconds": 54830
+      },
+      "quality_comparable": true,
+      "audit_obligations_met_both": true,
+      "sha256": "c79342896b64ab1d776b3a0a97984d664b33ed9a59a72b2305e0c8e11bd67bbc"
+    },
+    "w002:parallel-outage": {
+      "alternative": {
+        "completed_cases": 11,
+        "unfinished_cases": 13,
+        "human_service_seconds": 600,
+        "audit_human_seconds": 600,
+        "production_human_seconds": 0,
+        "audit_due_count": 2,
+        "audit_on_time_count": 2,
+        "audit_missed_count": 0,
+        "mean_completed_elapsed_seconds": "24440/11",
+        "total_ready_task_wait_seconds": 69900
+      },
+      "quality_comparable": true,
+      "audit_obligations_met_both": true,
+      "sha256": "b83f1afcdc8d783980999506282589a40c142418bdac3da142726264cba04072"
+    },
+    "w002:parallel-fallback": {
+      "alternative": {
+        "completed_cases": 11,
+        "unfinished_cases": 13,
+        "human_service_seconds": 1150,
+        "audit_human_seconds": 600,
+        "production_human_seconds": 550,
+        "audit_due_count": 2,
+        "audit_on_time_count": 2,
+        "audit_missed_count": 0,
+        "mean_completed_elapsed_seconds": "24350/11",
+        "total_ready_task_wait_seconds": 69780
+      },
+      "quality_comparable": true,
+      "audit_obligations_met_both": true,
+      "sha256": "63a7533f6f6ba6d7902ac7761985fa9176d3d5a545385f31cf8fa1d522e6cdfe"
+    }
+  },
+  "publication": "BLOCK_PUBLICATION",
+  "scientific_gate_promoted": false
+}
