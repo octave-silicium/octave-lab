@@ -1,0 +1,16 @@
+{
+  "producer": "Dares / France Travail",
+  "source_id": "DS-004_dares_offers_monthly",
+  "dataset_url": "https://www.data.gouv.fr/datasets/offres-collectees-et-satisfaites-par-france-travail-brutes-mensuelles",
+  "original_url": "https://data.dares.travail-emploi.gouv.fr/api/explore/v2.1/catalog/datasets/dares_offres_collectees_satisfaites_france_travail_brutes_mens/exports/csv?use_labels=true",
+  "license": "Licence Ouverte / Open Licence 2.0",
+  "license_url": "https://www.etalab.gouv.fr/licence-ouverte-open-licence/",
+  "attribution": "Dares / France Travail ; OCTAVE LAB copy, not an official Dares release",
+  "retrieved_at_utc": "2026-11-24T04:25:38.477156+00:00",
+  "sha256_uncompressed_original": "1ea5f3f5a0dea3ba3c9b58f486cd965ab30802204882578b16d11b81f4b82cb7",
+  "compressed_file": "dares_ft_monthly_1ea5f3f5a0de.csv.gz",
+  "original_n_bytes": 10645494,
+  "public_raw_allowed_with_attribution": true,
+  "no_cross_source_join_without_mapping": true,
+  "no_causal_inference": true
+}

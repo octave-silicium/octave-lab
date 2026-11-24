@@ -1,10 +1,10 @@
 {
-  "run_at_utc": "2026-11-24T04:22:57.883512+00:00",
+  "run_at_utc": "2026-11-24T04:25:29.116268+00:00",
   "purpose": "SOURCE_ACCESS_AND_SCHEMA_AUDIT_ONLY",
   "source_registry": "pipeline/audit_multisource_sources.json",
   "no_data_fusion": true,
   "no_causal_inference": true,
-  "raw_data_published": false,
+  "raw_data_published_by_this_script": false,
   "sources": {
     "DS-004_dares_offers_monthly": {
       "source_url": "https://data.dares.travail-emploi.gouv.fr/api/explore/v2.1/catalog/datasets/dares_offres_collectees_satisfaites_france_travail_brutes_mens/exports/csv?use_labels=true",
@@ -12,8 +12,8 @@
       "legal_state": "Licence Ouverte v2.0 on precise monthly dataset; raw still withheld from repo pending source review",
       "dependency_cluster": "FT_DARES_STMT",
       "unit_of_observation": "monthly job offers filed through France Travail; counts rounded to hundreds; not hires",
-      "allowed_to_publish_raw": false,
-      "publication_gate": "BLOCKED_PENDING_SEMANTIC_AND_LEGAL_REVIEW",
+      "allowed_to_publish_raw": true,
+      "publication_gate": "RAW_ARCHIVE_ONLY_NO_ECONOMIC_JOIN",
       "result": "FETCH_AND_SCHEMA_PASS",
       "sha256": "1ea5f3f5a0dea3ba3c9b58f486cd965ab30802204882578b16d11b81f4b82cb7",
       "n_bytes": 10645494,

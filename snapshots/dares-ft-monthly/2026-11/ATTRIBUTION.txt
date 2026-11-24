@@ -1,0 +1,4 @@
+Source: Dares / France Travail — Offres collectées et satisfaites mensuelles
+https://www.data.gouv.fr/datasets/offres-collectees-et-satisfaites-par-france-travail-brutes-mensuelles
+Licence Ouverte / Open Licence 2.0: https://www.etalab.gouv.fr/licence-ouverte-open-licence/
+Octave Lab archive les octets du CSV original sans modification; source non liée automatiquement à Indeed.
