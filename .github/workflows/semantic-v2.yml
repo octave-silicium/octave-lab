@@ -1,0 +1,38 @@
+name: OCTAVE LAB | S1 v0.2 native dimensions
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'pipeline/semantic*.py'
+      - 'tests/test_semantic*.py'
+      - 'pipeline/data_governance.py'
+      - 'governance/**'
+      - 'data/curated/insee_employment*'
+      - 'research/PILOT-001/pilot_manifest.json'
+      - 'snapshots/indeed-fr/**'
+      - 'snapshots/dares-ft-monthly/**'
+      - '.github/workflows/semantic-v2.yml'
+permissions:
+  contents: read
+jobs:
+  semantic-v2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Full repository test suite
+        run: python -m unittest discover -s tests -v
+      - name: Verify archive bytes and validate all observations
+        run: |
+          python -m pipeline.semantic_v2 | tee semantic_v2_audit.json
+          python -c 'import json; d=json.load(open("semantic_v2_audit.json")); assert len(d["counts"])==7 and d["causal_claims_permitted"] is False and d["cross_source_join_permitted"] is False'
+        shell: bash
+      - uses: actions/upload-artifact@v4
+        with:
+          name: semantic-v2-audit
+          path: semantic_v2_audit.json
+          if-no-files-found: error
