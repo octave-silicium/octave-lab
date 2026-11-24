@@ -54,3 +54,5 @@ G2 v0.4 : [référentiels natifs et explorateur métiers](G2-WORK-EXPLORER.md), 
 G2 v0.5 : [navigation inverse et W001](G2-PILOT-W001.md), 193 tests, HTTP O*NET/ROME vérifiés, SQL ESCO réel, premier processus proposé lié à une tâche native. G-M1 ouvert, revue par praticiens non faite ; prochaine étape : paquet de revue et qualification du protocole de mesure, données task ratings et tests de capacité distincts.
 
 G2 v0.6 : [ratings et protocole expérimental](G2-EXPERIMENT.md), 165 780 ratings O*NET intégrés, navigateur v0.5 vérifié, baseline W001 synthétique 16/16 ; revue humaine et essais comparatifs réels non réalisés, G-M1/G-M2 ouverts.
+
+G2 v0.7 : [documents et coût complet](G2-DOCUMENTS.md), 20 dossiers synthétiques hétérogènes, baseline v2 11/20, module coût/temps testé, v2.1 et support jeu indépendant vérifiés. G-M1/G-M2 ouverts, priorité essai fermé indépendant et collecte mesures humaines/IA.

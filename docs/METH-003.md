@@ -44,3 +44,6 @@ Risques : biais des descriptions, généralisation, poids fictifs, dérive de mo
 
 ## Avancement G2 v0.6
 [G2-EXPERIMENT](G2-EXPERIMENT.md) : évaluations O*NET IM/RT/FT natives avec date/incertitude et masquage ; pas de durée. W001 synthétique : règles classiques comme 4e bras de comparaison, 16/16 sur cas construits, aucun humain/IA mesuré ; protocole et formulaire de revue vierge. G-M1/G-M2 non franchis.
+
+## Avancement G2 v0.7
+[G2-DOCUMENTS](G2-DOCUMENTS.md) : dossiers textuels synthétiques et règle conventionnelle prudente ; baseline v2 11/20 exacts et 9 abstentions, aucun faux accepté. Module temps mural/temps humain, supervision, correction et coût complet conditionnel aux données, valeurs manquantes non imputées. Jeu fermé, praticiens et résultats IA réels absents ; aucun impact validé.

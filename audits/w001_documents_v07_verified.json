@@ -1,0 +1,84 @@
+{
+  "commit": "4681150cfbf00721b3176e92901ed7e42a25ec5b",
+  "run_id": 45370326074,
+  "job_id": 138362658469,
+  "status": "success",
+  "tests": "Ran 208 tests in 8.620s",
+  "audits": [
+    {
+      "run_id": "W001-text-classic-v2",
+      "mode": "RULE_BASELINE",
+      "suite_sha256": "bda8091f326a68a650a3080aefcf31823cc9e6ccf80b6501a71ed54aa5f237ef",
+      "cases": 20,
+      "counts": {
+        "decision_correct": 11,
+        "exact_case_correct": 11,
+        "false_accept": 0,
+        "false_review": 0,
+        "abstain_or_error": 9,
+        "issue_tp": 7,
+        "issue_fp": 0,
+        "issue_fn": 8
+      },
+      "decision_accuracy": 0.55,
+      "exact_case_accuracy": 0.55,
+      "false_accept_rate_on_anomalies": 0,
+      "issue_precision": 1,
+      "issue_recall": 0.4666666666666667,
+      "measured_wall_cases": 0,
+      "median_wall_seconds": null,
+      "measured_cost_cases": 0,
+      "total_cost_eur": null,
+      "scope": "SYNTHETIC_HETEROGENEOUS_TEXT_DEVELOPMENT_ONLY",
+      "measurement_authentication": "NOT_INDEPENDENTLY_VERIFIED",
+      "production_readiness": false,
+      "employment_impact": null,
+      "publication": "BLOCK_PUBLICATION",
+      "strata": {
+        "schema_known": {
+          "cases": 4,
+          "exact": 4,
+          "abstain_or_error": 0,
+          "unsafe_accept": 0
+        },
+        "layout_variant": {
+          "cases": 4,
+          "exact": 4,
+          "abstain_or_error": 0,
+          "unsafe_accept": 0
+        },
+        "missing_or_conflict": {
+          "cases": 4,
+          "exact": 3,
+          "abstain_or_error": 1,
+          "unsafe_accept": 0
+        },
+        "free_text": {
+          "cases": 4,
+          "exact": 0,
+          "abstain_or_error": 4,
+          "unsafe_accept": 0
+        },
+        "scope_exception": {
+          "cases": 4,
+          "exact": 0,
+          "abstain_or_error": 4,
+          "unsafe_accept": 0
+        }
+      },
+      "blind_test": false,
+      "representative": false,
+      "cost_ledger": null,
+      "flat_cost_is_not_full_cost": true,
+      "local_compute_only": {
+        "cases": 20,
+        "median_ns": 11096,
+        "max_ns": 216445,
+        "timer": "perf_counter_ns",
+        "includes": "one in-memory parser and rules call per case; no I/O, review or integration",
+        "not_end_to_end": true
+      }
+    }
+  ],
+  "errors": []
+}
