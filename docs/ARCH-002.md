@@ -136,3 +136,6 @@ Les travaux R01/R03 autorisent des mécanismes concurrents, pas le postulat de c
 
 ## Prospective multi-ordres — précision du 24/11/2026
 [PROSPECT-001](PROSPECT-001.md) et [contrat computationnel](../governance/multi_order_prospective_v1.json) précisent l'exigence transversale : O1/O2/O3/O4+ selon chemins qualifiés, ordre distinct d'horizon/scénario/preuve, branches concurrentes, réactions stratégiques, interactions et rétroactions, seuils et règles d'arrêt. Comparer trajectoires cohérentes, pas sommer les chemins; aucune extrapolation causale ou probabilité fictive. Restitution D12/D13/D15/D16/D17 et preuve D18, dès tranche G3 avec limitations explicites. Les six moteurs, neuf couches et 64 mécanismes initiaux sont conservés. Spécification uniquement, gates inchangés.
+
+## G3.1 v0.1 — Economic Core
+[Documentation](G3-ECONOMIC-CORE.md), [audit](../audits/economic_core_v01_verified.json), 224 tests et pont G1 Eurostat NACE vérifiés (12 400 cellules, 6 593 admises, 5 807 bloquées). Contrats versionnés, graphe de provenance, 110 entrées de couverture et chemins structurels; aucun calcul d'effet ni validation causale. E-G0 partiel. Suite : compléter jonctions et contrats minimaux puis G3.2 transformation opérationnelle, tranche verticale; G2 indépendant, données et déploiement restent ouverts.

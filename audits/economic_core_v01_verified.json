@@ -1,0 +1,18 @@
+{
+  "run_id": 45380414690,
+  "job_id": 138397677355,
+  "commit": "183b68875a62a27c221fd26597a483dcfd005924",
+  "tests": "Ran 224 tests in 8.705s",
+  "audit": {
+    "source": "eurostat_nace",
+    "source_sha256": "0c701942ea3d15bd1350e6938b27a5713f9d39f366b620723995b98077a469a8",
+    "collected_at": "2026-11-24T11:02:41.520876+00:00",
+    "native_rows": 12400,
+    "admitted": 6593,
+    "blocked": 5807,
+    "exact_value_unit_preserved": true,
+    "graph_sha256": "9281524f1aa5f8e1f76f5fb36397129cddff886e104394f38478c5244f0faa0d",
+    "raw_values_emitted": false,
+    "production_or_publication_approved": false
+  }
+}
