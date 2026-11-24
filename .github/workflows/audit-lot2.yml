@@ -1,0 +1,48 @@
+name: OCTAVE LAB | Lot 2 emploi embauches
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'pipeline/audit_lot2.py'
+      - 'pipeline/audit_lot2_sources.json'
+      - 'tests/test_audit_lot2.py'
+      - '.github/workflows/audit-lot2.yml'
+  schedule:
+    - cron: '43 8 12 * *'  # 12th of month, UTC. Audit only; not publication.
+permissions:
+  contents: write
+concurrency:
+  group: octave-lab-lot2-audit
+  cancel-in-progress: false
+jobs:
+  source-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: All source governance and regression tests
+        run: python -m unittest discover -s tests -v
+      - name: Audit original DPAE and Insee source access without redistribution
+        run: python pipeline/audit_lot2.py
+      - name: Commit manifest only (never original files)
+        if: always()
+        shell: bash
+        run: |
+          if [ -s audits/latest_lot2.json ]; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add audits/latest_lot2.json
+            git diff --cached --quiet || (git commit -m 'audit(lot2): preserve checked source-access evidence' && git push)
+          fi
+      - name: Preserve audit result for 30 days
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: octave-lot2-audit-${{ github.run_id }}
+          path: audits/latest_lot2.json
+          if-no-files-found: warn
+          retention-days: 30

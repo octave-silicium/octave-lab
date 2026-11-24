@@ -1,0 +1,61 @@
+{
+  "version": "2026-11-24-v1",
+  "intent": "Auditer les fichiers originaux et la compatibilite technique ; aucun rapprochement economique automatique.",
+  "sources": [
+    {
+      "id": "URSSAF_DPAE_NA38_QUARTERLY",
+      "publisher": "Urssaf Caisse nationale",
+      "url": "https://open.urssaf.fr/api/explore/v2.1/catalog/datasets/dpae-france-entiere-x-na38/exports/csv?use_labels=false",
+      "documentation_url": "https://open.urssaf.fr/explore/dataset/dpae-france-entiere-x-na38/",
+      "format": "csv",
+      "dependency_group": "URSSAF_ADMINISTRATIVE_DPAE",
+      "concept": "Declarations prealables a l'embauche, pas embauches realisees ni emplois nets",
+      "population": "Regime general hors interim, France entiere, activite employeur NA38, trimestriel",
+      "legal": "ODbL 1.0 ; utilisation publique et base derivee a instruire avant diffusion",
+      "public_raw_archive": false,
+      "caution": "Erreur de declaration de contrat/duree depuis mars 2025, publication suspendue et revisions a controler",
+      "minimum_rows": 30
+    },
+    {
+      "id": "URSSAF_DPAE_MONTHLY_NATIONAL",
+      "publisher": "Urssaf Caisse nationale",
+      "url": "https://open.urssaf.fr/api/explore/v2.1/catalog/datasets/dpae-mensuelles-france-entiere/exports/csv?use_labels=false",
+      "documentation_url": "https://open.urssaf.fr/explore/dataset/dpae-mensuelles-france-entiere/",
+      "format": "csv",
+      "dependency_group": "URSSAF_ADMINISTRATIVE_DPAE",
+      "concept": "Declarations prealables a l'embauche de plus d'un mois ; pas embauches effectives",
+      "population": "France entiere, selon definition Urssaf, mensuel",
+      "legal": "ODbL 1.0 ; utilisation publique et base derivee a instruire avant diffusion",
+      "public_raw_archive": false,
+      "caution": "Erreur de declaration de contrat/duree depuis mars 2025, publication suspendue et revisions a controler",
+      "minimum_rows": 15
+    },
+    {
+      "id": "INSEE_EMPLOI_SECTORIEL_TRIMESTRIEL",
+      "publisher": "Insee",
+      "url": "https://www.insee.fr/fr/statistiques/fichier/2496914/econ-gen-empl-salarie-trim.xlsx",
+      "documentation_url": "https://www.insee.fr/fr/statistiques/2496914",
+      "format": "xlsx",
+      "dependency_group": "DSN_URSSAF_DARES_INSEE_EMPLOYMENT_ESTIMATES",
+      "concept": "Stock d'emplois salaries en fin de trimestre ; pas flux de contrats ou DPAE",
+      "population": "France hors Mayotte ; champ sectoriel detaille selon publications Insee ; millesime et CVS a confirmer par tableau",
+      "legal": "Conditions de reutilisation du fichier exact a confirmer pour rediffusion commerciale",
+      "public_raw_archive": false,
+      "caution": "T2 2026 dans l'edition du 28/08/2026 ; series revisees et unite en milliers",
+      "minimum_sheets": 1
+    },
+    {
+      "id": "DARES_MMO_TRIMESTRIEL",
+      "publisher": "Dares",
+      "documentation_url": "https://dares.travail-emploi.gouv.fr/donnees/les-mouvements-de-main-doeuvre",
+      "format": "xlsx",
+      "dependency_group": "DSN_DARES_MMO",
+      "concept": "Entrees/sorties de contrats en date de mouvement ; ne pas deduire variation nette d'emploi Insee",
+      "population": "Prive France metropolitaine, hors agriculture, interim, particuliers employeurs ; detail selon publication",
+      "legal": "Licence du fichier XLSX exact et droits de rediffusion a confirmer",
+      "public_raw_archive": false,
+      "caution": "Revisions 2023, differences d'amplitude et de perimetre avec Insee ; URL XLSX stable non encore confirmees",
+      "status": "PENDING_EXACT_DOWNLOAD_URL"
+    }
+  ]
+}
