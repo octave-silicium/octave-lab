@@ -1,0 +1,59 @@
+{
+  "run_id": 45343188289,
+  "job_id": 138271428935,
+  "commit": "3050dc272d6a6054cfa499eeb6eff1f8751e2c16",
+  "audit": {
+    "version": "0.3.0",
+    "sources": {
+      "eurostat_nace": {
+        "series": 4950,
+        "cells": 12400,
+        "masked": 4407,
+        "first_access_ms": 1648.52,
+        "http_discover_detail_point": "PASS",
+        "live_restore": "BLOCKED",
+        "sha256": "0c701942ea3d15bd1350e6938b27a5713f9d39f366b620723995b98077a469a8"
+      },
+      "eurostat_size": {
+        "series": 1165,
+        "cells": 2930,
+        "masked": 120,
+        "first_access_ms": 866.22,
+        "http_discover_detail_point": "PASS",
+        "live_restore": "BLOCKED",
+        "sha256": "f5f541e46daefe16722efeced6d8bfeb99578eedc1e8c12476a029f5f45edd73"
+      },
+      "urssaf_dpae_monthly": {
+        "series": 4,
+        "cells": 1284,
+        "masked": 24,
+        "first_access_ms": 1190.33,
+        "http_discover_detail_point": "PASS",
+        "live_restore": "BLOCKED",
+        "sha256": "e0789b561ae47d5ce444e8f87f84fd2d076a3c460fba4a54f1cb6de7027a4a7b"
+      },
+      "urssaf_dpae_na38": {
+        "series": 222,
+        "cells": 23754,
+        "masked": 444,
+        "first_access_ms": 2342.77,
+        "http_discover_detail_point": "PASS",
+        "live_restore": "BLOCKED",
+        "sha256": "42cd99124b1ef5f0a39afc481c42e70d5adc0fbfb535a7cb53f2653dfd41f549"
+      },
+      "urssaf_na88": {
+        "series": 162,
+        "cells": 18144,
+        "masked": 0,
+        "first_access_ms": 2046.78,
+        "http_discover_detail_point": "PASS",
+        "live_restore": "BLOCKED",
+        "sha256": "9ec16fb077e554518f5a1ade579684a8c91d56f293c7b9897f07b40226833222"
+      }
+    },
+    "loaded_live_sources": 5,
+    "values_emitted": false,
+    "browser_live_tested": false,
+    "production_vault_provisioned": false
+  }
+}

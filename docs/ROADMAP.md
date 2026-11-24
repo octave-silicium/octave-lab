@@ -13,7 +13,7 @@ Référence publique au 24 novembre 2026. Le statut d'une décision ne vaut pas 
 |---|---|---|
 | S0 | Synchronisation README, spécification METH-003, état et feuille de route | VÉRIFIÉ |
 | S1 / G1 | Contrats sémantiques communs : mesure, unité, population, dimensions et référentiels versionnés, période/vintage, provenance, licence, comparabilité, preuve ; préparer G-M0 | PARTIELLEMENT VÉRIFIÉ : [S1 v0.4](SEMANTIC-V4.md), 130 tests, neuf jeux interrogeables ; coffre de production, droits, qualification géographique et comparabilité restent ouverts |
-| S2 / G1 | Explorateur multisource : recherche, filtres de couverture, historiques, comparaison conditionnelle, provenance et exports autorisés ; exigences [UX-001](UX-001.md), gates UX-G0 à UX-G4 | [G1 v0.2](G1-EXPLORER.md) moteur vérifié, 144 tests, recherche/facettes/fenêtres et contrôle de comparaison ; navigateur et gates UX à confirmer |
+| S2 / G1 | Explorateur multisource : recherche, filtres de couverture, historiques, comparaison conditionnelle, provenance et exports autorisés ; exigences [UX-001](UX-001.md), gates UX-G0 à UX-G4 | [G1 v0.3](G1-EXPLORER.md) moteur vérifié, 148 tests, chargement sélectif, identifiants stables, zoom et vues locales ; navigateur et gates UX à confirmer |
 | S3 / G2 | Qualification ROME/ESCO/O*NET, ontologie G-M0 et petit pilote G-M1 ; processus réel, vérification humaine | Validé, non implémenté |
 | S4 / G3–G5 | Investigations, tests G-M2–G-M5, approfondissement sectoriel et moteur économique, validation empirique puis extension progressive | Validé, non implémenté |
 | S5 | Démonstration publique reproductible et validation de la demande professionnelle | À préparer |

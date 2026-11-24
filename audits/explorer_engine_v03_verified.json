@@ -1,0 +1,62 @@
+{
+  "run_id": 45343111662,
+  "job_id": 138271191890,
+  "commit": "8c6eda79eec1cc6759aa88189eb448bbca6376b7",
+  "tests_passed": 148,
+  "run_url": "https://github.com/octave-silicium/octave-lab/actions/runs/45343111662",
+  "audit": {
+    "version": "0.3.0",
+    "lazy_setup_ms": 0.019,
+    "lazy_first_series_ms": 55.571,
+    "lazy_other_first_access_ms": {
+      "insee_employment": 16.088,
+      "indeed_sector_total_daily": 3636.23,
+      "dares_offers_monthly": 5797.975
+    },
+    "lazy_sources_loaded": 4,
+    "environment": {
+      "python": "3.11.18",
+      "system": "Linux",
+      "machine": "x86_64"
+    },
+    "catalog_build_ms": 7099.53,
+    "source_count": 4,
+    "archived_cells": 183482,
+    "benchmarks": {
+      "indeed_exact_filter": {
+        "iterations": 40,
+        "median_ms": 0.106,
+        "p95_ms": 0.118,
+        "max_ms": 0.121
+      },
+      "dares_catalog": {
+        "iterations": 40,
+        "median_ms": 1.344,
+        "p95_ms": 1.38,
+        "max_ms": 1.396
+      },
+      "dares_native_series": {
+        "iterations": 40,
+        "median_ms": 0.903,
+        "p95_ms": 0.941,
+        "max_ms": 1.009
+      },
+      "indeed_full_daily": {
+        "iterations": 40,
+        "median_ms": 2.917,
+        "p95_ms": 2.945,
+        "max_ms": 5.62
+      },
+      "indeed_comparison_gate": {
+        "iterations": 40,
+        "median_ms": 0.165,
+        "p95_ms": 0.182,
+        "max_ms": 0.187
+      }
+    },
+    "scope": "Python functions on loaded archive catalog; no HTTP or browser, no live collection, no field metrics",
+    "values_emitted": false,
+    "public_release_approved": false
+  },
+  "limitation": "Selective load measured after eager catalog in same process; possible warm OS cache, not full cold-start/browser metrics."
+}
