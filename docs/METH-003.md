@@ -41,3 +41,6 @@ Risques : biais des descriptions, généralisation, poids fictifs, dérive de mo
 
 ## Avancement G2 v0.5
 [W001](G2-PILOT-W001.md) : graphe inverse et premier processus candidat à chemins exclusifs, 6 actions et 5 transitions, ancrage O*NET vérifié ; 193 tests et HTTP O*NET/ROME réussis. SQL ESCO réel vérifié, pas HTTP. G-M0 partiel, G-M1 non franchi faute de revue indépendante, aucune observation, durée, capacité IA ou estimation économique validée. Protocole de revue humaine défini, benchmark BPMN/O*NET/NBER documenté.
+
+## Avancement G2 v0.6
+[G2-EXPERIMENT](G2-EXPERIMENT.md) : évaluations O*NET IM/RT/FT natives avec date/incertitude et masquage ; pas de durée. W001 synthétique : règles classiques comme 4e bras de comparaison, 16/16 sur cas construits, aucun humain/IA mesuré ; protocole et formulaire de revue vierge. G-M1/G-M2 non franchis.

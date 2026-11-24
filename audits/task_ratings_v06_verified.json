@@ -1,0 +1,228 @@
+{
+  "run_id": 45369356187,
+  "job_id": 138359286807,
+  "status": "success",
+  "tests": "Ran 197 tests in 13.362s",
+  "audit": {
+    "ratings": {
+      "rows": 165780,
+      "rows_by_scale": {
+        "FT": 128940,
+        "IM": 18420,
+        "RT": 18420
+      },
+      "tasks_with_ratings": 18420,
+      "tasks_without_ratings": 418,
+      "tasks_by_scale": {
+        "IM": 18420,
+        "FT": 18420,
+        "RT": 18420
+      },
+      "quality_and_issues": {
+        "DESCRIPTIVE_ONLY": 116906,
+        "WITHHELD": 1903,
+        "REVIEW_REQUIRED": 46971
+      },
+      "complete_visible_ft_distributions": 12367,
+      "ft_sum_review": 0,
+      "source_manifest": {
+        "task_ratings": {
+          "sha256": "52ee4ad320f1ca3c3865795aefc7393d422a9bfbfea3a5b5d9eaf2928c10eafe",
+          "bytes": 39006755,
+          "url": "https://www.onetcenter.org/dl_files/database/db_31_0_csv/task_ratings.csv"
+        },
+        "task_categories": {
+          "sha256": "675ee2007335624ab2df2b292669a690486d942415216fa24a8f523f7ab12bf9",
+          "bytes": 446,
+          "url": "https://www.onetcenter.org/dl_files/database/db_31_0_csv/task_categories.csv"
+        }
+      },
+      "scope": "US_NATIVE_SCALES_ONLY",
+      "duration_weights": null,
+      "publication": "BLOCK_PUBLICATION"
+    },
+    "pilot": {
+      "task": "onet:31.0:task:43-3031.00:2486",
+      "ratings": [
+        {
+          "scale": "FT",
+          "scale_name": "Frequency of Task (Categories 1-7)",
+          "category": "1",
+          "category_label": "Yearly or less",
+          "value": "0.00",
+          "n": "119",
+          "standard_error": "0.0000",
+          "lower_ci": null,
+          "upper_ci": null,
+          "flag": "N",
+          "date": "07/2017",
+          "domain_source": "Incumbent",
+          "status": "DESCRIPTIVE_ONLY",
+          "row": 109658,
+          "member": "task_ratings",
+          "source_sha256": "52ee4ad320f1ca3c3865795aefc7393d422a9bfbfea3a5b5d9eaf2928c10eafe"
+        },
+        {
+          "scale": "FT",
+          "scale_name": "Frequency of Task (Categories 1-7)",
+          "category": "2",
+          "category_label": "More than yearly",
+          "value": "0.19",
+          "n": "119",
+          "standard_error": "0.1802",
+          "lower_ci": "0.0276",
+          "upper_ci": "1.2529",
+          "flag": "N",
+          "date": "07/2017",
+          "domain_source": "Incumbent",
+          "status": "DESCRIPTIVE_ONLY",
+          "row": 109659,
+          "member": "task_ratings",
+          "source_sha256": "52ee4ad320f1ca3c3865795aefc7393d422a9bfbfea3a5b5d9eaf2928c10eafe"
+        },
+        {
+          "scale": "FT",
+          "scale_name": "Frequency of Task (Categories 1-7)",
+          "category": "3",
+          "category_label": "More than monthly",
+          "value": "0.94",
+          "n": "119",
+          "standard_error": "0.7990",
+          "lower_ci": "0.1728",
+          "upper_ci": "4.9369",
+          "flag": "N",
+          "date": "07/2017",
+          "domain_source": "Incumbent",
+          "status": "DESCRIPTIVE_ONLY",
+          "row": 109660,
+          "member": "task_ratings",
+          "source_sha256": "52ee4ad320f1ca3c3865795aefc7393d422a9bfbfea3a5b5d9eaf2928c10eafe"
+        },
+        {
+          "scale": "FT",
+          "scale_name": "Frequency of Task (Categories 1-7)",
+          "category": "4",
+          "category_label": "More than weekly",
+          "value": "1.31",
+          "n": "119",
+          "standard_error": "0.8996",
+          "lower_ci": "0.3324",
+          "upper_ci": "5.0044",
+          "flag": "N",
+          "date": "07/2017",
+          "domain_source": "Incumbent",
+          "status": "DESCRIPTIVE_ONLY",
+          "row": 109661,
+          "member": "task_ratings",
+          "source_sha256": "52ee4ad320f1ca3c3865795aefc7393d422a9bfbfea3a5b5d9eaf2928c10eafe"
+        },
+        {
+          "scale": "FT",
+          "scale_name": "Frequency of Task (Categories 1-7)",
+          "category": "5",
+          "category_label": "Daily",
+          "value": "52.57",
+          "n": "119",
+          "standard_error": "7.7155",
+          "lower_ci": "37.5234",
+          "upper_ci": "67.1662",
+          "flag": "N",
+          "date": "07/2017",
+          "domain_source": "Incumbent",
+          "status": "DESCRIPTIVE_ONLY",
+          "row": 109662,
+          "member": "task_ratings",
+          "source_sha256": "52ee4ad320f1ca3c3865795aefc7393d422a9bfbfea3a5b5d9eaf2928c10eafe"
+        },
+        {
+          "scale": "FT",
+          "scale_name": "Frequency of Task (Categories 1-7)",
+          "category": "6",
+          "category_label": "Several times daily",
+          "value": "27.54",
+          "n": "119",
+          "standard_error": "6.9792",
+          "lower_ci": "15.9778",
+          "upper_ci": "43.1735",
+          "flag": "N",
+          "date": "07/2017",
+          "domain_source": "Incumbent",
+          "status": "DESCRIPTIVE_ONLY",
+          "row": 109663,
+          "member": "task_ratings",
+          "source_sha256": "52ee4ad320f1ca3c3865795aefc7393d422a9bfbfea3a5b5d9eaf2928c10eafe"
+        },
+        {
+          "scale": "FT",
+          "scale_name": "Frequency of Task (Categories 1-7)",
+          "category": "7",
+          "category_label": "Hourly or more",
+          "value": "17.45",
+          "n": "119",
+          "standard_error": "4.4481",
+          "lower_ci": "10.2917",
+          "upper_ci": "28.0409",
+          "flag": "N",
+          "date": "07/2017",
+          "domain_source": "Incumbent",
+          "status": "DESCRIPTIVE_ONLY",
+          "row": 109664,
+          "member": "task_ratings",
+          "source_sha256": "52ee4ad320f1ca3c3865795aefc7393d422a9bfbfea3a5b5d9eaf2928c10eafe"
+        },
+        {
+          "scale": "IM",
+          "scale_name": "Importance",
+          "category": null,
+          "category_label": null,
+          "value": "4.68",
+          "n": "122",
+          "standard_error": "0.0875",
+          "lower_ci": "4.5048",
+          "upper_ci": "4.8511",
+          "flag": "N",
+          "date": "07/2017",
+          "domain_source": "Incumbent",
+          "status": "DESCRIPTIVE_ONLY",
+          "row": 109665,
+          "member": "task_ratings",
+          "source_sha256": "52ee4ad320f1ca3c3865795aefc7393d422a9bfbfea3a5b5d9eaf2928c10eafe"
+        },
+        {
+          "scale": "RT",
+          "scale_name": "Relevance of Task",
+          "category": null,
+          "category_label": null,
+          "value": "95.14",
+          "n": "129",
+          "standard_error": "2.1224",
+          "lower_ci": "88.7561",
+          "upper_ci": "97.9812",
+          "flag": "N",
+          "date": "07/2017",
+          "domain_source": "Incumbent",
+          "status": "DESCRIPTIVE_ONLY",
+          "row": 109666,
+          "member": "task_ratings",
+          "source_sha256": "52ee4ad320f1ca3c3865795aefc7393d422a9bfbfea3a5b5d9eaf2928c10eafe"
+        }
+      ],
+      "sources": {
+        "task_ratings": {
+          "sha256": "52ee4ad320f1ca3c3865795aefc7393d422a9bfbfea3a5b5d9eaf2928c10eafe",
+          "bytes": 39006755,
+          "url": "https://www.onetcenter.org/dl_files/database/db_31_0_csv/task_ratings.csv"
+        },
+        "task_categories": {
+          "sha256": "675ee2007335624ab2df2b292669a690486d942415216fa24a8f523f7ab12bf9",
+          "bytes": 446,
+          "url": "https://www.onetcenter.org/dl_files/database/db_31_0_csv/task_categories.csv"
+        }
+      },
+      "scope": "US_TASK_SURVEY_NOT_TIME_SHARE",
+      "duration_seconds": null,
+      "publication": "BLOCK_PUBLICATION"
+    }
+  },
+  "commit": "5eb617e152727e7dc71447db0f03e0da941060f9"
+}

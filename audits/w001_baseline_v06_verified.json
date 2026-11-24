@@ -1,0 +1,37 @@
+{
+  "run_id": 45369490454,
+  "job_id": 138359747753,
+  "status": "success",
+  "tests": "Ran 200 tests in 11.498s",
+  "audit": {
+    "run_id": "W001-rules-v1",
+    "mode": "RULE_BASELINE",
+    "suite_sha256": "fb2b0c64212da744931c13a0cc1c83dea9b0d784f1411dca683951c26d9462c5",
+    "cases": 16,
+    "counts": {
+      "decision_correct": 16,
+      "exact_case_correct": 16,
+      "false_accept": 0,
+      "false_review": 0,
+      "abstain_or_error": 0,
+      "issue_tp": 14,
+      "issue_fp": 0,
+      "issue_fn": 0
+    },
+    "decision_accuracy": 1,
+    "exact_case_accuracy": 1,
+    "false_accept_rate_on_anomalies": 0,
+    "issue_precision": 1,
+    "issue_recall": 1,
+    "measured_wall_cases": 0,
+    "median_wall_seconds": null,
+    "measured_cost_cases": 0,
+    "total_cost_eur": null,
+    "scope": "SYNTHETIC_STRUCTURED_CONTROL_ONLY",
+    "measurement_authentication": "NOT_INDEPENDENTLY_VERIFIED",
+    "production_readiness": false,
+    "employment_impact": null,
+    "publication": "BLOCK_PUBLICATION"
+  },
+  "commit": "b47ddc60035ec7a3abd12e23e4d4b4c477a7579f"
+}

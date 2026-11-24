@@ -1,0 +1,51 @@
+{
+  "run_id": 45368350106,
+  "job_id": 138355838813,
+  "status": "success",
+  "audit": {
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 900,
+        "ready_ms": 750,
+        "journey_pass": true,
+        "screenshot_rendered": true,
+        "no_js_errors": true,
+        "no_horizontal_overflow": true
+      },
+      {
+        "width": 1280,
+        "height": 800,
+        "ready_ms": 108,
+        "journey_pass": true,
+        "screenshot_rendered": true,
+        "no_js_errors": true,
+        "no_horizontal_overflow": true
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "ready_ms": 71,
+        "journey_pass": true,
+        "screenshot_rendered": true,
+        "no_js_errors": true,
+        "no_horizontal_overflow": true
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "ready_ms": 83,
+        "journey_pass": true,
+        "screenshot_rendered": true,
+        "no_js_errors": true,
+        "no_horizontal_overflow": true
+      }
+    ],
+    "scope": "REAL_ONET_ROME_BROWSER",
+    "visual_review": "NOT_PERFORMED",
+    "wcag": "NOT_AUDITED",
+    "screenshots_uploaded": false,
+    "esco_browser": "NOT_TESTED"
+  },
+  "commit": "3644b2bc885b51c5cf696c24906a32983b2101d3"
+}
