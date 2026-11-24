@@ -37,5 +37,12 @@ class VaultTests(unittest.TestCase):
     def test_reopen(self):
         v=self.v;s=SPEC["id"];v.stage(SPEC,A);v.promote(s,sha(A),None,"REVIEW")
         v.close();self.v=Vault(self.tmp.name);self.assertEqual(self.v.read(s),A)
+    def test_revision_counts(self):
+        v=self.v;s=SPEC["id"]
+        C=B.replace(b",100\n",b",99\n")
+        v.stage(SPEC,A);v.stage(SPEC,C)
+        result=v.revisions(s,sha(A),sha(C))
+        self.assertEqual((result["added"],result["removed"],result["changed"],result["unchanged"]),(1,0,1,0))
+        self.assertEqual(v.revisions(s,sha(C),sha(C))["status"],"IDENTICAL_BYTES")
     def test_reject_unknown_spec(self):
         with self.assertRaisesRegex(ValueError,"UNQUALIFIED_SOURCE"):self.v.stage({**SPEC,"url":"https://example.org"},A)

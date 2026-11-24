@@ -90,7 +90,7 @@ class Vault:
             r=self.db.execute("SELECT c.validation,o.raw,o.size FROM candidate c JOIN object o USING(sha) WHERE c.source=? AND c.sha=?",(source,digest)).fetchone()
             if not r or sha(r["raw"])!=digest or len(r["raw"])!=r["size"]:raise ValueError("MISSING_OR_CORRUPT_CANDIDATE")
             validation=json.loads(r["validation"])
-            if validation.get("status")!="CHECKED" or validation.get("sha256")!=digest or validation.get("id")!=source:raise ValueError("INVALID_VALIDATION")
+            if validation.get("status")!="CHECKED" or validation.get("validation_scope")!="SOURCE_NATIVE" or validation.get("sha256")!=digest or validation.get("id")!=source:raise ValueError("INVALID_VALIDATION")
             self.db.execute("INSERT INTO active VALUES(?,?) ON CONFLICT(source) DO UPDATE SET sha=excluded.sha",(source,digest))
             self.event(source,"PROMOTED" if old!=digest else "CONFIRMED",digest,old,reason)
         return {"source":source,"active":digest,"previous":old,"publication":"BLOCK_PUBLICATION"}
@@ -102,6 +102,21 @@ class Vault:
         r=self.db.execute("SELECT o.raw,o.size FROM candidate c JOIN object o USING(sha) WHERE c.source=? AND c.sha=?",(source,d)).fetchone()
         if not r or len(r["raw"])!=r["size"] or sha(r["raw"])!=d:raise ValueError("INTEGRITY")
         return r["raw"]
+    def revisions(self,source,previous,candidate):
+        checked_id(source);checked_hash(previous);checked_hash(candidate)
+        a=self.read(source,previous);b=self.read(source,candidate)
+        if previous==candidate:return {"source":source,"status":"IDENTICAL_BYTES","added":0,"removed":0,"changed":0}
+        spec=next(s for s in obs.read_registry() if s["id"]==source)
+        if spec["kind"] not in {"indeed_national","indeed_sector"}:
+            return {"source":source,"status":"REVIEW_REQUIRED","reason":"NATIVE_REVISION_COMPARATOR_NOT_IMPLEMENTED"}
+        from decimal import Decimal
+        field="indeed_job_postings_index_SA" if spec["kind"]=="indeed_national" else "indeed_job_postings_index"
+        def index(raw):
+            obs.validate_indeed(raw,spec["kind"])
+            return {(r["date"],r.get("display_name","")):Decimal(r[field]) for r in obs.csv_reader(raw,{"date","variable",field}) if r["variable"]=="total postings"}
+        old,new=index(a),index(b)
+        shared=set(old)&set(new)
+        return {"source":source,"status":"NATIVE_REVISION_COUNTS","added":len(set(new)-set(old)),"removed":len(set(old)-set(new)),"changed":sum(old[k]!=new[k] for k in shared),"unchanged":sum(old[k]==new[k] for k in shared),"comparison_scope":"SELECTED_TOTAL_POSTINGS_INDEX_ONLY","publication":"BLOCK_PUBLICATION"}
     def history(self,source):
         checked_id(source)
         return {"source":source,"active":self.active_hash(source),"candidates":[{"sha":r["sha"],"created":r["created"],"validation":json.loads(r["validation"])} for r in self.db.execute("SELECT sha,created,validation FROM candidate WHERE source=? ORDER BY created,sha",(source,))],"events":[dict(r) for r in self.db.execute("SELECT id,at,kind,sha,previous_sha,reason FROM event WHERE source=? ORDER BY id",(source,))]}
@@ -117,8 +132,10 @@ class Vault:
 def main():
     p=argparse.ArgumentParser();p.add_argument("--vault",required=True)
     sub=p.add_subparsers(dest="cmd",required=True)
-    for cmd in ("history","collect","promote"):
+    for cmd in ("history","collect","promote","revisions"):
         s=sub.add_parser(cmd);s.add_argument("source")
+        if cmd=="revisions":
+            s.add_argument("previous");s.add_argument("candidate")
         if cmd=="promote":
             s.add_argument("sha");s.add_argument("--expected",required=True,help="current hash, or NONE");s.add_argument("--reason",required=True)
     sub.add_parser("verify")
@@ -127,6 +144,7 @@ def main():
     try:
         if a.cmd=="history":r=v.history(a.source)
         elif a.cmd=="verify":r=v.verify()
+        elif a.cmd=="revisions":r=v.revisions(a.source,a.previous,a.candidate)
         elif a.cmd=="promote":r=v.promote(a.source,a.sha,None if a.expected=="NONE" else a.expected,a.reason)
         else:
             s=next(x for x in obs.read_registry() if x["id"]==a.source)

@@ -1,0 +1,26 @@
+{
+  "scope": "REAL_PRIVATE_SQLITE_G2_V03",
+  "snapshot_sha256": "ce037a2277cf88452b10f4153ae66f19910cb096d45dded05951a7773ba6220c",
+  "source_code_sha256": "126e09c354a326424e66b9fbc2a6a660eeeba2c09e764561e85532592dc473e9",
+  "checks": {
+    "esco_search_fr_en": "PASS",
+    "esco_skills": "PASS",
+    "fap_exact_rome": "PASS",
+    "mmo_exact_native_series": "PASS",
+    "restricted_value_masked": "PASS",
+    "query_parameterization": "PASS",
+    "read_only_write_rejected": "PASS",
+    "period_type_rejected": "PASS",
+    "wrong_snapshot_sha_rejected": "PASS"
+  },
+  "counts": {
+    "esco_fr_search_returned": 7,
+    "esco_en_search_returned": 2,
+    "esco_skills_returned": 28,
+    "fap_rows_returned": 10,
+    "mmo_rows_returned": 4
+  },
+  "public_release": false,
+  "http_integration": false,
+  "limitations": "Pinned closed snapshot; no concurrent writes allowed, no crosswalk approval, no storage service or endpoint."
+}
