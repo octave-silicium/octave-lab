@@ -3,8 +3,9 @@ on:
   push:
     branches: [main]
     paths:
-      - 'pipeline/**'
-      - 'tests/**'
+      - 'pipeline/run.py'
+      - 'pipeline/sources.json'
+      - 'tests/test_pipeline.py'
       - '.github/workflows/collect-public-sector.yml'
   workflow_dispatch:
   schedule:
