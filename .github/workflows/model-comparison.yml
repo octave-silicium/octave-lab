@@ -1,0 +1,23 @@
+name: OCTAVE LAB | W001 model development comparison
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'pipeline/model_comparison.py'
+      - 'tests/test_model_comparison.py'
+      - 'research/PILOT-W001/gpt62_conversation_dev.json'
+      - '.github/workflows/model-comparison.yml'
+permissions:
+  contents: read
+jobs:
+  compare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest discover -s tests -v
+      - run: python -m pipeline.model_comparison

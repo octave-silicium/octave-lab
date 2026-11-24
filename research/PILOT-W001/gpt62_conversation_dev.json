@@ -1,0 +1,167 @@
+{
+  "run_id": "W001-GPT62-conversation-dev-20261124",
+  "mode": "AI",
+  "suite_sha256": "bda8091f326a68a650a3080aefcf31823cc9e6ccf80b6501a71ed54aa5f237ef",
+  "configuration": {
+    "model_version": "GPT-6.2 (conversation identity; exact serving snapshot not independently verified)",
+    "prompt_sha256": "923866d3de5a540e48778bad129dd80035dd21ba8baf0973c6d79b9b8e20198e",
+    "tool_policy": "Conversation context includes benchmark and prior results; no independent isolation, no model API call; answers authored in this turn.",
+    "execution_date": "2026-11-24",
+    "prompt_text": "Evaluate every W001 v2 synthetic case against its supplied documents, prior invoice IDs and stated tax rate. Apply exact matching and arithmetic, identify missing/contradictory/out-of-scope/invalid fields, never guess, return ACCEPT or REVIEW with issue codes or ABSTAIN if not resolvable. No external data or payment. This is a known development suite; prior discussion and code are visible, not a blind model test.",
+    "prior_suite_access": true,
+    "repeat_count": 1,
+    "independent": false
+  },
+  "outputs": [
+    {
+      "id": "T01",
+      "decision": "ACCEPT",
+      "issues": [],
+      "explanation": "All required fields agree; 10 x 12 = 120; tax 24; total 144."
+    },
+    {
+      "id": "T02",
+      "decision": "REVIEW",
+      "issues": [
+        "TOTAL_MISMATCH"
+      ],
+      "explanation": "120 + 24 = 144, not 140."
+    },
+    {
+      "id": "T03",
+      "decision": "REVIEW",
+      "issues": [
+        "QUANTITY_MISMATCH"
+      ],
+      "explanation": "Receipt 8 versus invoice and order 10."
+    },
+    {
+      "id": "T04",
+      "decision": "REVIEW",
+      "issues": [
+        "DUPLICATE"
+      ],
+      "explanation": "SYN-201 appears in previous invoices."
+    },
+    {
+      "id": "T05",
+      "decision": "ACCEPT",
+      "issues": [],
+      "explanation": "French labels and decimal commas represent matching fields."
+    },
+    {
+      "id": "T06",
+      "decision": "ACCEPT",
+      "issues": [],
+      "explanation": "CSV fields agree, including receipt and computed amounts."
+    },
+    {
+      "id": "T07",
+      "decision": "REVIEW",
+      "issues": [
+        "PRICE_MISMATCH"
+      ],
+      "explanation": "Invoice 13.00 versus order 12.00; invoice arithmetic is internally consistent."
+    },
+    {
+      "id": "T08",
+      "decision": "ACCEPT",
+      "issues": [],
+      "explanation": "Reordered uppercase labels; amounts and quantities agree."
+    },
+    {
+      "id": "T09",
+      "decision": "REVIEW",
+      "issues": [
+        "MISSING_DOCUMENT"
+      ],
+      "explanation": "No receipt supplied."
+    },
+    {
+      "id": "T10",
+      "decision": "REVIEW",
+      "issues": [
+        "MISSING_FIELD"
+      ],
+      "explanation": "Currency missing from invoice; cannot infer it from the order."
+    },
+    {
+      "id": "T11",
+      "decision": "REVIEW",
+      "issues": [
+        "CONTRADICTORY_FIELD"
+      ],
+      "explanation": "Two invoice totals, 144 and 150."
+    },
+    {
+      "id": "T12",
+      "decision": "REVIEW",
+      "issues": [
+        "CONTRADICTORY_DOCUMENT"
+      ],
+      "explanation": "Two invoices with the same identifier and conflicting totals."
+    },
+    {
+      "id": "T13",
+      "decision": "ACCEPT",
+      "issues": [],
+      "explanation": "Text states all required values, which agree with order and receipt."
+    },
+    {
+      "id": "T14",
+      "decision": "REVIEW",
+      "issues": [
+        "TOTAL_MISMATCH"
+      ],
+      "explanation": "Text states amount due 150; net 120 and tax 24 sum to 144."
+    },
+    {
+      "id": "T15",
+      "decision": "REVIEW",
+      "issues": [
+        "QUANTITY_MISMATCH"
+      ],
+      "explanation": "Warehouse received only seven units; invoice and order ten."
+    },
+    {
+      "id": "T16",
+      "decision": "REVIEW",
+      "issues": [
+        "DUPLICATE"
+      ],
+      "explanation": "Text invoice SYN-201 appears in previous invoices."
+    },
+    {
+      "id": "T17",
+      "decision": "REVIEW",
+      "issues": [
+        "OUT_OF_SCOPE_DOCUMENT"
+      ],
+      "explanation": "Additional email requests bank account change, outside control scope."
+    },
+    {
+      "id": "T18",
+      "decision": "REVIEW",
+      "issues": [
+        "OUT_OF_SCOPE_FIELD"
+      ],
+      "explanation": "Pending credit-note adjustment outside defined single-line control."
+    },
+    {
+      "id": "T19",
+      "decision": "REVIEW",
+      "issues": [
+        "OUT_OF_SCOPE_FIELD"
+      ],
+      "explanation": "Second line outside declared single-line scope."
+    },
+    {
+      "id": "T20",
+      "decision": "REVIEW",
+      "issues": [
+        "INVALID_FIELD"
+      ],
+      "explanation": "Receipt quantity ambiguous: ten or eleven, not a determinate integer."
+    }
+  ]
+}
