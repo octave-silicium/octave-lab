@@ -26,7 +26,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: Test source audit logic
-        run: python -m unittest discover -s tests -p 'test_audit_multisource.py' -v
+        run: python -m unittest discover -s tests -v
       - name: Fetch official source datasets and validate schemas
         run: python pipeline/audit_multisource.py
       - name: Archive lossless monthly Dares original under Licence Ouverte v2.0
