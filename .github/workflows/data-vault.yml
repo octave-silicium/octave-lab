@@ -1,0 +1,30 @@
+name: OCTAVE LAB | Private vault acceptance
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'pipeline/data_vault.py'
+      - 'pipeline/vault_audit.py'
+      - 'tests/test_data_vault.py'
+      - '.github/workflows/data-vault.yml'
+permissions:
+  contents: read
+jobs:
+  vault:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest discover -s tests -v
+      - name: Verify real archive in temporary private vault
+        run: |
+          set -o pipefail
+          python -m pipeline.vault_audit | tee vault_audit.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: vault-audit-metadata
+          path: vault_audit.json
