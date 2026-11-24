@@ -101,3 +101,7 @@ Décision utilisateur : [UX-001](UX-001.md) et [RESULT-001](RESULT-001.md) compl
 
 ## G3.3 v0.1 — Économie de l'entreprise
 [Documentation](G3-FIRM.md) : jonction G3.2 avec qualité/criticité, ledger coûts/ventes/masse salariale, VAN différentielle, trésorerie échantillonnée, W002 conditionnel, glossaire enrichi. Recette G3 intégrale réussie : 331 tests, [audit](../audits/economic_firm_v01_verified.json). E-G1 non franchi. Suite : transition et financement, effectifs, sensibilité et intégration G3.1/RESULT/PROSPECT, G3.4.
+
+
+## DD-SHAPIRO-001 — Enrichissements validés (25/11/2026)
+[Rapport intégral](DD-SHAPIRO-001.md), [décision d'intégration](DD-SHAPIRO-001-INTEGRATION.md), [registre des 21 exigences](../governance/shapiro_enrichment_v1.json), [rejeu des calculs](../audits/shapiro_due_diligence_replay_v1.json). Conserver tous les apports et contre-scénarios, la fin progressive du travail humain comme thèse prospective majeure non imposée aux résultats, rigueur et réfutation dans la durée. Enrichir les mécanismes existants sans septième moteur, sans réduction de périmètre ni qualification automatique. P0 audit empirique/US/flux en parallèle, G3.3 anticipations/effectifs/expertise, G3.4 préférence humaine/prix/demande/rentes, G4 propriété/cohortes/fiscalité/transferts et boucles, G5 validation/démonstrations, P3 indicateurs intelligence. G3.3 v0.2 reste la prochaine tranche principale. Méthodes, données, droits et implémentation à qualifier; gates inchangés.
