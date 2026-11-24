@@ -32,3 +32,6 @@ ROME, ESCO, O*NET, ISCO/SOC et observations de terrain : qualifier versions, cou
 | G-M5 | Exports autorisés, provenance, reproductibilité point-in-time, avertissements et corrections | À construire |
 
 Risques : biais des descriptions, généralisation, poids fictifs, dérive de modèles, dépendances, demande, correspondances ROME/ESCO/O*NET/NAF, confidentialité, propriété intellectuelle et absence de validation humaine/causale. Étiqueter explicitement exposition, capacité testée, adoption observée ou impact estimé. La qualification et l'ontologie préliminaire accompagnent G1 ; le socle natif O*NET 31.0 est vérifié dans son périmètre ; aucun modèle d'action, processus ou impact validé n'est revendiqué.
+
+## Avancement G-M0 v0.2
+[Contrats actions et crosswalks, qualification Europe](G2-EUROPE.md) : modèle initial testé sur fixtures, aucune action réelle ni correspondance validée. ROME/ESCO restent des référentiels distincts ; import ESCO prêt pour archive officielle, ROME accès à qualifier. 164 tests Python et audit d'accès réussis ; G-M0 partiel.

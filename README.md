@@ -55,3 +55,5 @@ Projet **Octave Silicium**. Les observations factuelles, hypothèses et opinions
 
 ### G2 — Décomposition du travail
 [Socle O*NET 31.0](docs/G2-WORK-GRAPH.md), quatre CSV officiels vérifiés, 22 314 nœuds et 45 344 relations, 156 tests. Aucun mapping France ni score IA. G1 v0.4 : quatre parcours Chromium et 151 tests réussis ([preuve](audits/explorer_browser_v04_verified.json)).
+
+G2 v0.2 : [qualification Europe et contrat d'actions](docs/G2-EUROPE.md) ; 164 tests, aucune ingestion complète ESCO/ROME revendiquée.

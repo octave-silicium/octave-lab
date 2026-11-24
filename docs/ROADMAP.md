@@ -14,7 +14,7 @@ Référence publique au 24 novembre 2026. Le statut d'une décision ne vaut pas 
 | S0 | Synchronisation README, spécification METH-003, état et feuille de route | VÉRIFIÉ |
 | S1 / G1 | Contrats sémantiques communs : mesure, unité, population, dimensions et référentiels versionnés, période/vintage, provenance, licence, comparabilité, preuve ; préparer G-M0 | PARTIELLEMENT VÉRIFIÉ : [S1 v0.4](SEMANTIC-V4.md), 130 tests, neuf jeux interrogeables ; coffre de production, droits, qualification géographique et comparabilité restent ouverts |
 | S2 / G1 | Explorateur multisource : recherche, filtres de couverture, historiques, comparaison conditionnelle, provenance et exports autorisés ; exigences [UX-001](UX-001.md), gates UX-G0 à UX-G4 | [G1 v0.4](G1-EXPLORER.md) table de confrontation et pistes natives implémentées ; v0.4 vérifié en Chromium sur quatre tailles, audit esthétique et gates restants ouverts |
-| S3 / G2 | Qualification ROME/ESCO/O*NET, ontologie G-M0 et petit pilote G-M1 ; processus réel, vérification humaine | [G2 v0.1](G2-WORK-GRAPH.md) socle O*NET vérifié, 156 tests ; G-M0 partiel, ROME/ESCO/actions/processus à construire |
+| S3 / G2 | Qualification ROME/ESCO/O*NET, ontologie G-M0 et petit pilote G-M1 ; processus réel, vérification humaine | [G2 v0.1](G2-WORK-GRAPH.md) socle O*NET vérifié ; [G2 v0.2](G2-EUROPE.md) import ESCO et contrat d'action testés, accès européens audités, 164 tests ; G-M0 partiel, fichiers réels Europe et processus non validés |
 | S4 / G3–G5 | Investigations, tests G-M2–G-M5, approfondissement sectoriel et moteur économique, validation empirique puis extension progressive | Validé, non implémenté |
 | S5 | Démonstration publique reproductible et validation de la demande professionnelle | À préparer |
 
