@@ -1,0 +1,28 @@
+name: OCTAVE LAB | G2 native reverse and process pilot
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'pipeline/work_explorer.py'
+      - 'pipeline/work_reverse.py'
+      - 'pipeline/work_process.py'
+      - 'pipeline/invoice_pilot.py'
+      - 'pipeline/work_explorer_audit.py'
+      - 'tests/test_work_process.py'
+      - 'tests/test_work_explorer.py'
+      - 'explorer/work.*'
+      - '.github/workflows/work-pilot.yml'
+permissions:
+  contents: read
+jobs:
+  acceptance:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest discover -s tests -v
+      - run: python -m pipeline.work_explorer_audit

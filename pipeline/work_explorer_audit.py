@@ -25,8 +25,14 @@ def run():
             d=json.loads(b);ident=d["rows"][0]["id"]
             status,b=get("/api/work/profile",{"source":source,"id":ident,"limit":1});assert status==200
             p=json.loads(b);assert p["actions"]==[] and p["publication"]=="BLOCK_PUBLICATION"
-            result[source]={"occupations":d["total"],"profile_http":"PASS","profile_native_rows":p["total"]}
+            status,b=get("/api/work/concepts",{"source":source,"limit":1});assert status==200
+            concepts=json.loads(b);c=concepts["rows"][0]
+            status,b=get("/api/work/reverse",{"source":source,"id":c["id"],"limit":1});assert status==200
+            reverse=json.loads(b);assert reverse["total"]==c["occupations"] and reverse["rows"][0]["relations"]
+            result[source]={"occupations":d["total"],"profile_http":"PASS","profile_native_rows":p["total"],"linked_concepts":concepts["total"],"reverse_http":"PASS"}
         assert get("/api/work/search",{"source":"esco"})[0]==400
-        return {"scope":"REAL_ONET_ROME_HTTP_ESCO_NOT_CONFIGURED","sources":result,"assets":"PASS","no_fallback":"PASS","public":False}
+        from .invoice_pilot import make
+        process,task=make(x.onet)
+        return {"pilot":process.audit(),"pilot_task_id":task["id"],"pilot_task_row":task["source_row"],"scope":"REAL_ONET_ROME_HTTP_ESCO_NOT_CONFIGURED","sources":result,"assets":"PASS","no_fallback":"PASS","public":False}
     finally:server.shutdown();server.server_close();t.join()
 if __name__=="__main__":print(json.dumps(run(),indent=2))
