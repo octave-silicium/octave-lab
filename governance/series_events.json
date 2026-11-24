@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-24-v1",
+  "version": "2026-11-24-v2",
   "policy": "A documented change of definition is a comparability gate, not a statistical adjustment coefficient.",
   "events": [
     {
@@ -34,7 +34,8 @@
       "id": "URSSAF-DPAE-2025-ERRORS",
       "source_id": "urssaf_dpae_mensuelles_france_entiere",
       "affected_series": [
-        "urssaf_dpae_cdi_cdd_over_1_month"
+        "urssaf_dpae_cdi_cdd_over_1_month",
+        "urssaf_dpae_monthly_over_1_month"
       ],
       "kind": "DATA_QUALITY_SUSPICION",
       "start_period": "2025-04",
@@ -56,6 +57,34 @@
       "description": "NAF 2025 replaces NAF rev.2 for APE from 1 January 2027; use valid official mappings, never an unconditional identity crosswalk.",
       "action": "BLOCK_CROSS_CLASSIFICATION_JOIN_WITHOUT_VALIDATED_CROSSWALK",
       "source_url": "https://www.insee.fr/fr/information/8181066"
+    },
+    {
+      "id": "URSSAF-DPAE-2025-NA38-SUSPECT_QUARTERS",
+      "source_id": "URSSAF_DPAE_NA38_QUARTERLY",
+      "affected_series": [
+        "urssaf_dpae_na38_quarterly"
+      ],
+      "kind": "DATA_QUALITY_SUSPICION",
+      "start_period": "2025Q2",
+      "end_period": "2025Q3",
+      "status": "PUBLISHER_WARNING_AND_REVISED_VINTAGE_AUDIT_PENDING",
+      "description": "DPAE contract type and duration incorrectly declared since online form change in late March 2025. Official caution for Apr-Sep 2025; do not infer NA38 quarterly trends across affected period without revision review.",
+      "action": "BLOCK_PUBLIC_COMPARISONS_ACROSS_AFFECTED_QUARTERS",
+      "source_url": "https://open.urssaf.fr/explore/dataset/dpae-france-entiere-x-na38/"
+    },
+    {
+      "id": "DARES-MMO-2023-METHODOLOGY_REVISIONS",
+      "source_id": "DARES_MMO_TRIMESTRIEL",
+      "affected_series": [
+        "dares_mmo_hirings_quarterly",
+        "dares_mmo_exits_quarterly"
+      ],
+      "kind": "METHOD_REVISION_REVIEW",
+      "effective_period": "2023Q1",
+      "status": "PUBLISHER_REVISION_NOTICE_2023_NOT_A_PROVEN_STRUCTURAL_BREAK",
+      "description": "Dares revised MMO historical series with first-quarter 2023 publication and extended detailed sectoral breakdown to 15 sectors since 2017; inspect vintages before comparisons; do not assume numerical discontinuity.",
+      "action": "REVIEW_HISTORICAL_VINTAGE_AND_SECTOR_CLASSIFICATION",
+      "source_url": "https://dares.travail-emploi.gouv.fr/donnees/les-mouvements-de-main-doeuvre"
     }
   ]
 }

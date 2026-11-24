@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-24-v1",
+  "version": "2026-11-24-v2",
   "purpose": "Conservative machine-readable decision register, not legal advice or legal sign-off.",
   "sources": {
     "DS-015_urssaf_private_sector_na88": {
@@ -14,6 +14,44 @@
       "public_produced_work": "ATTRIBUTION_AND_LICENSE_NOTICE_REQUIRED",
       "public_derivative_database": "ODBL_SHAREALIKE_AND_MACHINE_READABLE_AVAILABILITY_REQUIRED",
       "publication_approval": "NOT_REVIEWED_FOR_OCTAVE_LAB_DERIVATIVE_PRODUCTS",
+      "counsel_questions": [
+        "Do occupational/sector joins form a Derivative Database, a Collective Database, or a Produced Work in the actual implementation?",
+        "What exact adapted data, delta or algorithm must be offered under clauses 4.4-4.6 if outputs are public?",
+        "Are proprietary or third-party datasets legally compatible with the chosen combined data product?",
+        "What source attribution and download path must be provided in public and paid deliverables?"
+      ]
+    },
+    "URSSAF_DPAE_NA38_QUARTERLY": {
+      "publisher": "Urssaf Caisse nationale",
+      "dataset": "dpae-france-entiere-x-na38",
+      "license": "ODbL-1.0",
+      "terms_url": "https://open.urssaf.fr/terms/terms-and-conditions/",
+      "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "dataset_url": "https://open.urssaf.fr/explore/dataset/dpae-france-entiere-x-na38/",
+      "commercial_use": "PERMITTED_UNDER_LICENSE_TERMS",
+      "internal_analysis": "PERMITTED_UNDER_LICENSE_TERMS",
+      "public_produced_work": "ATTRIBUTION_AND_LICENSE_NOTICE_REQUIRED",
+      "public_derivative_database": "ODBL_SHAREALIKE_AND_MACHINE_READABLE_AVAILABILITY_REQUIRED",
+      "publication_approval": "NOT_REVIEWED_FOR_LOT2_PUBLIC_PRODUCT",
+      "counsel_questions": [
+        "Do occupational/sector joins form a Derivative Database, a Collective Database, or a Produced Work in the actual implementation?",
+        "What exact adapted data, delta or algorithm must be offered under clauses 4.4-4.6 if outputs are public?",
+        "Are proprietary or third-party datasets legally compatible with the chosen combined data product?",
+        "What source attribution and download path must be provided in public and paid deliverables?"
+      ]
+    },
+    "URSSAF_DPAE_MONTHLY_NATIONAL": {
+      "publisher": "Urssaf Caisse nationale",
+      "dataset": "dpae-mensuelles-france-entiere",
+      "license": "ODbL-1.0",
+      "terms_url": "https://open.urssaf.fr/terms/terms-and-conditions/",
+      "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "dataset_url": "https://open.urssaf.fr/explore/dataset/dpae-mensuelles-france-entiere/",
+      "commercial_use": "PERMITTED_UNDER_LICENSE_TERMS",
+      "internal_analysis": "PERMITTED_UNDER_LICENSE_TERMS",
+      "public_produced_work": "ATTRIBUTION_AND_LICENSE_NOTICE_REQUIRED",
+      "public_derivative_database": "ODBL_SHAREALIKE_AND_MACHINE_READABLE_AVAILABILITY_REQUIRED",
+      "publication_approval": "NOT_REVIEWED_FOR_LOT2_PUBLIC_PRODUCT",
       "counsel_questions": [
         "Do occupational/sector joins form a Derivative Database, a Collective Database, or a Produced Work in the actual implementation?",
         "What exact adapted data, delta or algorithm must be offered under clauses 4.4-4.6 if outputs are public?",

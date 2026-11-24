@@ -72,13 +72,10 @@ def profile_csv(data, minimum_rows):
         raise ValueError('INVALID_CSV_HEADER')
     n = 0
     empty = 0
-    sample = []
     for row in source:
         if None in row: raise ValueError('INCONSISTENT_CSV_COLUMNS')
         n += 1
         if all(v is None or v.strip() == '' for v in row.values()): empty += 1
-        if len(sample) < 3:
-            sample.append({k: (row.get(k, '') or '')[:65] for k in fields[:8]})
     if n < minimum_rows:
         raise ValueError(f'INSUFFICIENT_ROWS_{n}')
     lower = ' '.join(fields).lower()
@@ -87,7 +84,7 @@ def profile_csv(data, minimum_rows):
     if not any(x in lower for x in ('annee', 'année', 'trimestre', 'date', 'mois', 'jour')):
         raise ValueError('PERIOD_COLUMN_NOT_FOUND')
     return {'rows': n, 'columns': fields, 'delimiter': sep, 'encoding': enc,
-            'empty_rows': empty, 'first_3_rows_preview': sample,
+            'empty_rows': empty,
             'date_range': 'NOT_ASSERTED_UNTIL_SEMANTIC_DICTIONARY_REVIEW'}
 
 
