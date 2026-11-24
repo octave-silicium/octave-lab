@@ -1,0 +1,36 @@
+name: OCTAVE LAB | S1 semantic contracts
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'pipeline/semantic.py'
+      - 'tests/test_semantic.py'
+      - 'pipeline/data_governance.py'
+      - 'governance/**'
+      - 'data/curated/insee_employment*'
+      - 'research/PILOT-001/pilot_manifest.json'
+      - '.github/workflows/semantic.yml'
+permissions:
+  contents: read
+jobs:
+  semantic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Semantic contract tests
+        run: python -m unittest discover -s tests -p test_semantic.py -v
+      - name: Validate checked-in source-specific artifacts
+        run: |
+          python -m pipeline.semantic | tee semantic_audit.json
+          python -c 'import json; d=json.load(open("semantic_audit.json")); assert d["total"] > 0 and d["cross_source_join_permitted"] is False and d["causal_claims_permitted"] is False'
+        shell: bash
+      - uses: actions/upload-artifact@v4
+        with:
+          name: semantic-audit
+          path: semantic_audit.json
+          if-no-files-found: error
