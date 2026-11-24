@@ -1,0 +1,4 @@
+Source : Insee, Emploi salarié par secteur, https://www.insee.fr/fr/statistiques/2496914
+Licence Ouverte / Open License 2.0 (Etalab): https://www.insee.fr/fr/information/2008466?page=copyright.htm
+Transformation: OCTAVE LAB, data/curated/insee_employment_sector_quarterly.csv
+Publication initiale de référence : 28/08/2026. Les valeurs sont en milliers et CVS, France hors Mayotte.

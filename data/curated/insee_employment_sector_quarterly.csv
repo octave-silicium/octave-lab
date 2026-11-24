@@ -1,0 +1,501 @@
+quarter,sector_label,change_qoq_thousands,change_yoy_thousands,employees_thousands,category_kind,geography,unit,seasonal_adjustment,source,underlying_source_sha256
+2014-T1,Agriculture,4.3,9.9,280.4,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T1,Industrie,-5.0,-33.8,3237.8,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T1,dont industrie manufacturière,-5.5,-34.2,2854.9,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T1,Construction,-6.5,-23.3,1452.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T1,Tertiaire marchand,-3.3,18.0,11511.5,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T1,dont intérim1,-4.9,7.3,564.1,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T1,Tertiaire non marchand,13.7,118.1,8180.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T1,Ensemble,3.3,88.9,24661.6,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T1,Secteur privé,-14.7,-11.8,18840.4,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T1,Fonction publique,18.0,100.8,5821.3,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T2,Agriculture,3.2,15.4,283.6,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T2,Industrie,-9.7,-27.7,3228.1,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T2,dont industrie manufacturière,-9.5,-27.7,2845.4,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T2,Construction,-11.5,-29.5,1440.4,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T2,Tertiaire marchand,27.2,79.7,11538.6,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T2,dont intérim1,10.9,24.9,575.1,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T2,Tertiaire non marchand,1.5,97.3,8181.5,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T2,Ensemble,10.6,135.2,24672.3,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T2,Secteur privé,11.5,55.8,18851.8,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T2,Fonction publique,-0.8,79.4,5820.5,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T3,Agriculture,-3.1,9.4,280.5,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T3,Industrie,-11.1,-30.7,3217.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T3,dont industrie manufacturière,-11.1,-31.0,2834.3,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T3,Construction,-14.4,-39.0,1426.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T3,Tertiaire marchand,-14.4,28.1,11524.2,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T3,dont intérim1,-15.2,-6.3,559.8,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T3,Tertiaire non marchand,14.6,91.3,8196.1,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T3,Ensemble,-28.5,59.1,24643.8,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T3,Secteur privé,-31.3,-11.9,18820.5,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T3,Fonction publique,2.9,71.0,5823.3,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T4,Agriculture,-2.5,1.9,278.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T4,Industrie,-8.5,-34.2,3208.6,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T4,dont industrie manufacturière,-10.5,-36.6,2823.8,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T4,Construction,-16.0,-48.4,1410.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T4,Tertiaire marchand,29.3,38.8,11553.6,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T4,dont intérim1,6.6,-2.6,566.5,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T4,Tertiaire non marchand,23.7,53.5,8219.8,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T4,Ensemble,26.1,11.6,24669.9,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T4,Secteur privé,5.3,-29.2,18825.9,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2014-T4,Fonction publique,20.7,40.7,5844.1,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T1,Agriculture,1.6,-0.9,279.5,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T1,Industrie,-9.2,-38.4,3199.3,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T1,dont industrie manufacturière,-8.4,-39.5,2815.4,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T1,Construction,-12.8,-54.7,1397.2,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T1,Tertiaire marchand,11.4,53.5,11565.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T1,dont intérim1,-1.2,1.1,565.3,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T1,Tertiaire non marchand,-7.0,32.7,8212.8,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T1,Ensemble,-16.0,-7.8,24653.9,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T1,Secteur privé,-11.2,-25.7,18814.7,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T1,Fonction publique,-4.8,17.9,5839.2,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T2,Agriculture,6.2,2.2,285.8,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T2,Industrie,-7.9,-36.7,3191.4,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T2,dont industrie manufacturière,-8.0,-38.0,2807.4,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T2,Construction,-11.4,-54.6,1385.9,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T2,Tertiaire marchand,49.2,75.6,11614.2,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T2,dont intérim1,22.8,13.0,588.1,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T2,Tertiaire non marchand,18.2,49.5,8231.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T2,Ensemble,54.4,36.0,24708.3,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T2,Secteur privé,38.6,1.5,18853.3,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T2,Fonction publique,15.8,34.5,5855.0,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T3,Agriculture,-4.9,0.3,280.8,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T3,Industrie,-9.4,-35.0,3182.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T3,dont industrie manufacturière,-9.8,-36.7,2797.6,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T3,Construction,-10.1,-50.3,1375.7,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T3,Tertiaire marchand,48.2,138.2,11662.5,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T3,dont intérim1,21.6,49.9,609.7,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T3,Tertiaire non marchand,1.6,36.5,8232.6,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T3,Ensemble,25.4,89.8,24733.7,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T3,Secteur privé,28.2,60.9,18881.5,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T3,Fonction publique,-2.8,28.9,5852.2,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T4,Agriculture,1.1,4.0,282.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T4,Industrie,-7.4,-34.0,3174.6,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T4,dont industrie manufacturière,-7.4,-33.6,2790.2,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T4,Construction,-3.3,-37.6,1372.4,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T4,Tertiaire marchand,42.3,151.2,11704.8,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T4,dont intérim1,13.0,56.2,622.7,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T4,Tertiaire non marchand,7.3,20.1,8239.9,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T4,Ensemble,40.0,103.7,24773.7,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T4,Secteur privé,35.7,91.3,18917.2,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2015-T4,Fonction publique,4.3,12.4,5856.5,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T1,Agriculture,1.4,3.9,283.4,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T1,Industrie,-7.0,-31.7,3167.6,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T1,dont industrie manufacturière,-6.9,-32.1,2783.3,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T1,Construction,-2.2,-27.0,1370.2,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T1,Tertiaire marchand,50.1,189.9,11754.9,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T1,dont intérim1,0.5,57.9,623.2,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T1,Tertiaire non marchand,2.9,30.0,8242.8,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T1,Ensemble,45.2,165.0,24818.9,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T1,Secteur privé,41.7,144.2,18958.9,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T1,Fonction publique,3.5,20.7,5860.0,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T2,Agriculture,4.4,2.0,287.8,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T2,Industrie,-9.3,-33.2,3158.2,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T2,dont industrie manufacturière,-8.9,-33.1,2774.3,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T2,Construction,-1.4,-17.1,1368.8,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T2,Tertiaire marchand,46.3,187.0,11801.2,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T2,dont intérim1,15.7,50.8,638.9,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T2,Tertiaire non marchand,13.1,24.9,8255.9,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T2,Ensemble,53.0,163.6,24871.9,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T2,Secteur privé,48.2,153.8,19007.1,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T2,Fonction publique,4.8,9.8,5864.8,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T3,Agriculture,4.4,11.3,292.1,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T3,Industrie,-3.2,-27.0,3155.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T3,dont industrie manufacturière,-2.8,-26.1,2771.5,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T3,Construction,-1.1,-8.1,1367.7,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T3,Tertiaire marchand,55.0,193.8,11856.2,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T3,dont intérim1,23.5,52.7,662.4,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T3,Tertiaire non marchand,21.3,44.6,8277.2,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T3,Ensemble,76.4,214.6,24948.3,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T3,Secteur privé,66.0,191.7,19073.1,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T3,Fonction publique,10.4,23.0,5875.1,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T4,Agriculture,-9.8,0.4,282.4,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T4,Industrie,-8.1,-27.6,3147.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T4,dont industrie manufacturière,-6.0,-24.7,2765.5,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T4,Construction,-4.1,-8.8,1363.6,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T4,Tertiaire marchand,37.3,188.7,11893.5,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T4,dont intérim1,26.9,66.6,689.3,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T4,Tertiaire non marchand,-3.6,33.7,8273.6,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T4,Ensemble,11.8,186.4,24960.1,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T4,Secteur privé,11.4,167.4,19084.6,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2016-T4,Fonction publique,0.4,19.0,5875.5,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T1,Agriculture,15.3,14.3,297.7,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T1,Industrie,0.9,-19.7,3147.8,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T1,dont industrie manufacturière,3.6,-14.2,2769.1,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T1,Construction,6.8,0.2,1370.4,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T1,Tertiaire marchand,72.6,211.2,11966.1,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T1,dont intérim1,28.4,94.6,717.7,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T1,Tertiaire non marchand,14.2,45.1,8287.9,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T1,Ensemble,109.8,251.0,25069.9,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T1,Secteur privé,105.8,231.4,19190.3,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T1,Fonction publique,4.0,19.6,5879.6,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T2,Agriculture,-1.9,8.1,295.8,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T2,Industrie,3.2,-7.2,3151.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T2,dont industrie manufacturière,2.6,-2.6,2771.7,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T2,Construction,6.0,7.6,1376.4,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T2,Tertiaire marchand,90.1,254.9,12056.2,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T2,dont intérim1,35.9,114.8,753.7,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T2,Tertiaire non marchand,11.2,43.2,8299.1,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T2,Ensemble,108.6,306.6,25178.5,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T2,Secteur privé,105.7,289.0,19296.1,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T2,Fonction publique,2.9,17.7,5882.4,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T3,Agriculture,-9.0,-5.3,286.8,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T3,Industrie,-6.6,-10.6,3144.4,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T3,dont industrie manufacturière,-6.0,-5.8,2765.8,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T3,Construction,3.9,12.7,1380.3,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T3,Tertiaire marchand,26.0,225.9,12082.1,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T3,dont intérim1,25.7,116.9,779.4,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T3,Tertiaire non marchand,-29.2,-7.3,8269.9,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T3,Ensemble,-15.0,215.3,25163.5,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T3,Secteur privé,-0.9,222.1,19295.2,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T3,Fonction publique,-14.1,-6.8,5868.3,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T4,Agriculture,1.3,5.7,288.1,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T4,Industrie,3.6,1.0,3148.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T4,dont industrie manufacturière,2.8,3.1,2768.6,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T4,Construction,5.2,21.9,1385.5,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T4,Tertiaire marchand,116.6,305.2,12198.7,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T4,dont intérim1,24.3,114.4,803.6,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T4,Tertiaire non marchand,-8.0,-11.7,8261.9,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T4,Ensemble,118.7,322.1,25282.2,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T4,Secteur privé,131.4,342.1,19426.6,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2017-T4,Fonction publique,-12.8,-19.9,5855.6,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T1,Agriculture,-3.1,-12.7,285.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T1,Industrie,3.8,3.9,3151.8,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T1,dont industrie manufacturière,4.9,4.4,2773.5,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T1,Construction,7.2,22.3,1392.7,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T1,Tertiaire marchand,54.9,287.6,12253.7,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T1,dont intérim1,7.4,93.4,811.1,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T1,Tertiaire non marchand,-1.6,-27.6,8260.3,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T1,Ensemble,61.3,273.6,25343.5,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T1,Secteur privé,61.2,297.5,19487.8,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T1,Fonction publique,0.1,-23.9,5855.7,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T2,Agriculture,4.9,-5.9,290.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T2,Industrie,5.1,5.8,3156.9,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T2,dont industrie manufacturière,4.0,5.8,2777.5,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T2,Construction,7.1,23.4,1399.8,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T2,Tertiaire marchand,16.3,213.8,12269.9,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T2,dont intérim1,-9.5,47.9,801.6,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T2,Tertiaire non marchand,-28.6,-67.4,8231.7,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T2,Ensemble,4.7,169.7,25348.2,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T2,Secteur privé,28.4,220.1,19516.2,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T2,Fonction publique,-23.6,-50.4,5832.0,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T3,Agriculture,20.1,23.2,310.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T3,Industrie,-3.7,8.7,3153.2,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T3,dont industrie manufacturière,-3.8,8.0,2773.7,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T3,Construction,14.2,33.6,1414.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T3,Tertiaire marchand,2.2,190.0,12272.1,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T3,dont intérim1,-0.7,21.5,800.9,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T3,Tertiaire non marchand,-18.7,-56.9,8213.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T3,Ensemble,14.1,198.8,25362.3,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T3,Secteur privé,23.2,244.2,19539.4,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T3,Fonction publique,-9.1,-45.4,5822.9,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T4,Agriculture,-14.5,7.4,295.5,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T4,Industrie,5.9,11.1,3159.1,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T4,dont industrie manufacturière,3.4,8.6,2777.2,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T4,Construction,7.5,36.0,1421.5,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T4,Tertiaire marchand,52.4,125.8,12324.5,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T4,dont intérim1,-25.9,-28.6,775.0,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T4,Tertiaire non marchand,17.0,-31.9,8230.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T4,Ensemble,68.3,148.4,25430.6,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T4,Secteur privé,61.3,174.1,19600.7,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2018-T4,Fonction publique,7.0,-25.7,5829.9,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T1,Agriculture,6.3,16.8,301.8,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T1,Industrie,16.9,24.2,3176.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T1,dont industrie manufacturière,15.6,19.3,2792.8,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T1,Construction,18.8,47.5,1440.3,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T1,Tertiaire marchand,119.7,190.6,12444.3,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T1,dont intérim1,29.4,-6.7,804.4,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T1,Tertiaire non marchand,13.7,-16.6,8243.7,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T1,Ensemble,175.4,262.5,25606.0,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T1,Secteur privé,166.1,279.0,19766.8,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T1,Fonction publique,9.3,-16.5,5839.2,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T2,Agriculture,1.6,13.5,303.4,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T2,Industrie,7.5,26.7,3183.5,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T2,dont industrie manufacturière,7.1,22.3,2799.8,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T2,Construction,12.7,53.1,1452.9,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T2,Tertiaire marchand,5.9,180.2,12450.2,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T2,dont intérim1,-2.8,0.0,801.6,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T2,Tertiaire non marchand,8.3,20.4,8252.1,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T2,Ensemble,36.1,293.9,25642.1,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T2,Secteur privé,26.0,276.7,19792.9,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T2,Fonction publique,10.0,17.2,5849.2,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T3,Agriculture,16.2,9.6,319.7,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T3,Industrie,-1.1,29.3,3182.5,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T3,dont industrie manufacturière,0.0,26.1,2799.9,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T3,Construction,14.6,53.5,1467.5,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T3,Tertiaire marchand,5.9,184.0,12456.1,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T3,dont intérim1,-4.6,-3.8,797.1,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T3,Tertiaire non marchand,8.7,47.8,8260.8,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T3,Ensemble,44.4,324.2,25686.5,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T3,Secteur privé,40.7,294.2,19833.6,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T3,Fonction publique,3.7,30.1,5853.0,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T4,Agriculture,-17.3,6.9,302.4,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T4,Industrie,3.0,26.4,3185.5,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T4,dont industrie manufacturière,0.6,23.3,2800.5,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T4,Construction,11.6,57.6,1479.1,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T4,Tertiaire marchand,115.9,247.5,12572.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T4,dont intérim1,-21.1,0.9,775.9,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T4,Tertiaire non marchand,13.4,44.2,8274.2,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T4,Ensemble,126.7,382.6,25813.2,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T4,Secteur privé,115.5,348.4,19949.1,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2019-T4,Fonction publique,11.2,34.3,5864.1,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T1,Agriculture,-6.3,-5.7,296.1,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T1,Industrie,-4.5,5.0,3181.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T1,dont industrie manufacturière,-5.6,2.1,2794.9,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T1,Construction,-3.0,35.8,1476.1,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T1,Tertiaire marchand,-453.4,-325.6,12118.6,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T1,dont intérim1,-297.2,-325.7,478.7,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T1,Tertiaire non marchand,-8.7,21.8,8265.5,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T1,Ensemble,-475.9,-268.7,25337.3,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T1,Secteur privé,-471.6,-289.3,19477.5,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T1,Fonction publique,-4.3,20.6,5859.8,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T2,Agriculture,4.9,-2.5,301.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T2,Industrie,-15.3,-17.8,3165.7,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T2,dont industrie manufacturière,-14.8,-19.7,2780.1,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T2,Construction,15.2,38.4,1491.3,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T2,Tertiaire marchand,-72.2,-403.8,12046.4,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T2,dont intérim1,107.4,-215.4,586.2,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T2,Tertiaire non marchand,-78.5,-65.1,8187.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T2,Ensemble,-146.0,-450.7,25191.4,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T2,Secteur privé,-76.7,-392.0,19400.8,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T2,Fonction publique,-69.3,-58.7,5790.5,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T3,Agriculture,3.5,-15.2,304.4,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T3,Industrie,-5.2,-22.0,3160.5,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T3,dont industrie manufacturière,-6.4,-26.2,2773.7,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T3,Construction,24.5,48.3,1515.8,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T3,Tertiaire marchand,366.9,-42.8,12413.3,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T3,dont intérim1,126.5,-84.4,712.7,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T3,Tertiaire non marchand,127.2,53.4,8314.2,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T3,Ensemble,516.8,21.7,25708.2,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T3,Secteur privé,425.3,-7.4,19826.2,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T3,Fonction publique,91.5,29.0,5882.0,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T4,Agriculture,5.1,7.1,309.5,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T4,Industrie,-4.7,-29.7,3155.8,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T4,dont industrie manufacturière,-6.3,-33.1,2767.4,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T4,Construction,15.5,52.2,1531.3,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T4,Tertiaire marchand,-1.1,-159.8,12412.2,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T4,dont intérim1,19.5,-43.8,732.1,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T4,Tertiaire non marchand,29.6,69.6,8343.8,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T4,Ensemble,44.4,-60.6,25752.6,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T4,Secteur privé,33.6,-89.3,19859.8,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2020-T4,Fonction publique,10.9,28.7,5892.8,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T1,Agriculture,-3.9,9.5,305.6,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T1,Industrie,18.4,-6.8,3174.2,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T1,dont industrie manufacturière,16.1,-11.4,2783.5,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T1,Construction,22.4,77.6,1553.7,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T1,Tertiaire marchand,130.5,424.0,12542.7,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T1,dont intérim1,21.2,274.6,753.3,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T1,Tertiaire non marchand,23.2,101.4,8366.9,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T1,Ensemble,190.6,605.9,25943.2,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T1,Secteur privé,195.0,577.2,20054.7,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T1,Fonction publique,-4.4,28.7,5888.5,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T2,Agriculture,6.3,11.0,312.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T2,Industrie,9.4,17.9,3183.6,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T2,dont industrie manufacturière,7.9,11.2,2791.4,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T2,Construction,12.4,74.8,1566.2,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T2,Tertiaire marchand,204.7,700.9,12747.3,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T2,dont intérim1,26.9,194.1,780.3,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T2,Tertiaire non marchand,14.0,193.9,8380.9,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T2,Ensemble,246.8,998.7,26190.0,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T2,Secteur privé,236.9,890.8,20291.7,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T2,Fonction publique,9.9,107.8,5898.3,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T3,Agriculture,-1.4,6.1,310.6,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T3,Industrie,8.7,31.9,3192.4,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T3,dont industrie manufacturière,8.2,25.9,2799.6,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T3,Construction,9.9,60.3,1576.1,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T3,Tertiaire marchand,186.9,521.0,12934.2,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T3,dont intérim1,7.0,74.6,787.3,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T3,Tertiaire non marchand,32.2,99.0,8413.2,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T3,Ensemble,236.4,718.2,26426.4,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T3,Secteur privé,212.3,677.8,20504.0,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T3,Fonction publique,24.1,40.4,5922.4,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T4,Agriculture,6.9,7.9,317.5,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T4,Industrie,3.8,40.4,3196.2,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T4,dont industrie manufacturière,2.1,34.3,2801.7,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T4,Construction,4.3,49.0,1580.3,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T4,Tertiaire marchand,136.9,659.0,13071.1,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T4,dont intérim1,33.9,89.1,821.2,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T4,Tertiaire non marchand,-14.0,55.4,8399.1,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T4,Ensemble,137.8,811.6,26564.2,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T4,Secteur privé,145.9,790.1,20649.9,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2021-T4,Fonction publique,-8.0,21.5,5914.4,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T1,Agriculture,9.2,21.0,326.6,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T1,Industrie,8.9,30.8,3205.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T1,dont industrie manufacturière,9.3,27.5,2811.0,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T1,Construction,6.6,33.2,1586.9,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T1,Tertiaire marchand,91.1,619.5,13162.2,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T1,dont intérim1,-10.4,57.4,810.8,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T1,Tertiaire non marchand,18.3,50.5,8417.5,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T1,Ensemble,134.0,755.0,26698.2,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T1,Secteur privé,121.2,716.3,20771.1,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T1,Fonction publique,12.8,38.7,5927.2,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T2,Agriculture,-7.5,7.2,319.1,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T2,Industrie,5.8,27.2,3210.8,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T2,dont industrie manufacturière,4.6,24.3,2815.6,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T2,Construction,-1.5,19.2,1585.4,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T2,Tertiaire marchand,35.8,450.6,13198.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T2,dont intérim1,-13.3,17.2,797.5,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T2,Tertiaire non marchand,9.7,46.3,8427.2,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T2,Ensemble,42.3,550.5,26740.5,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T2,Secteur privé,36.7,516.1,20807.8,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T2,Fonction publique,5.6,34.4,5932.7,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T3,Agriculture,-3.9,4.7,315.3,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T3,Industrie,8.8,27.3,3219.6,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T3,dont industrie manufacturière,7.1,23.2,2822.7,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T3,Construction,2.0,11.3,1587.3,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T3,Tertiaire marchand,37.9,301.6,13235.8,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T3,dont intérim1,11.4,21.5,808.8,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T3,Tertiaire non marchand,-5.8,8.2,8421.3,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T3,Ensemble,38.9,353.0,26779.4,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T3,Secteur privé,47.0,350.8,20854.8,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T3,Fonction publique,-8.1,2.2,5924.6,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T4,Agriculture,4.9,2.7,320.1,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T4,Industrie,4.5,28.0,3224.2,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T4,dont industrie manufacturière,1.1,22.1,2823.8,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T4,Construction,0.4,7.4,1587.8,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T4,Tertiaire marchand,85.1,249.8,13320.9,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T4,dont intérim1,2.3,-10.1,811.2,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T4,Tertiaire non marchand,22.8,45.1,8444.2,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T4,Ensemble,117.8,332.9,26897.2,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T4,Secteur privé,101.4,306.3,20956.2,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2022-T4,Fonction publique,16.4,26.6,5941.0,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T1,Agriculture,-1.1,-7.6,319.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T1,Industrie,10.3,29.4,3234.5,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T1,dont industrie manufacturière,8.5,21.3,2832.3,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T1,Construction,0.1,1.0,1587.9,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T1,Tertiaire marchand,34.6,193.3,13355.5,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T1,dont intérim1,-19.2,-18.8,792.0,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T1,Tertiaire non marchand,20.8,47.5,8465.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T1,Ensemble,64.7,263.7,26961.9,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T1,Secteur privé,43.7,228.8,20999.9,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T1,Fonction publique,21.1,34.9,5962.0,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T2,Agriculture,8.3,8.2,327.3,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T2,Industrie,7.0,30.6,3241.4,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T2,dont industrie manufacturière,5.6,22.3,2838.0,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T2,Construction,-1.7,0.8,1586.2,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T2,Tertiaire marchand,7.7,165.2,13363.2,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T2,dont intérim1,-5.8,-11.3,786.2,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T2,Tertiaire non marchand,16.0,53.8,8481.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T2,Ensemble,37.2,258.6,26999.1,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T2,Secteur privé,26.6,218.7,21026.4,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T2,Fonction publique,10.6,39.9,5972.7,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T3,Agriculture,6.1,18.2,333.4,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T3,Industrie,7.0,28.8,3248.4,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T3,dont industrie manufacturière,4.9,20.1,2842.9,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T3,Construction,-3.8,-5.0,1582.4,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T3,Tertiaire marchand,-0.1,127.3,13363.1,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T3,dont intérim1,-18.9,-41.6,767.3,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T3,Tertiaire non marchand,7.9,67.5,8488.9,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T3,Ensemble,17.0,236.8,27016.1,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T3,Secteur privé,15.2,186.9,21041.7,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T3,Fonction publique,1.8,49.9,5974.5,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T4,Agriculture,-10.3,2.9,323.1,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T4,Industrie,7.6,31.9,3256.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T4,dont industrie manufacturière,3.9,22.9,2846.7,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T4,Construction,-3.6,-9.0,1578.8,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T4,Tertiaire marchand,9.4,51.5,13372.5,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T4,dont intérim1,-9.5,-53.3,757.8,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T4,Tertiaire non marchand,50.9,95.6,8539.8,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T4,Ensemble,53.9,172.9,27070.1,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T4,Secteur privé,9.4,94.9,21051.1,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2023-T4,Fonction publique,44.5,78.0,6019.0,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T1,Agriculture,0.1,4.2,323.2,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T1,Industrie,5.8,27.4,3261.9,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T1,dont industrie manufacturière,3.7,18.1,2850.4,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T1,Construction,-5.0,-14.1,1573.8,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T1,Tertiaire marchand,22.1,39.0,13394.5,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T1,dont intérim1,-3.9,-38.1,753.9,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T1,Tertiaire non marchand,15.2,90.0,8555.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T1,Ensemble,38.3,146.5,27108.4,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T1,Secteur privé,28.4,79.6,21079.5,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T1,Fonction publique,9.9,66.9,6028.9,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T2,Agriculture,-0.8,-4.9,322.4,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T2,Industrie,4.9,25.3,3266.8,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T2,dont industrie manufacturière,3.1,15.5,2853.5,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T2,Construction,-7.9,-20.2,1565.9,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T2,Tertiaire marchand,-24.6,6.8,13369.9,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T2,dont intérim1,-18.0,-50.3,735.9,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T2,Tertiaire non marchand,22.1,96.1,8577.1,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T2,Ensemble,-6.2,103.1,27102.2,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T2,Secteur privé,-21.1,31.9,21058.4,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T2,Fonction publique,14.9,71.1,6043.8,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T3,Agriculture,6.5,-4.5,328.9,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T3,Industrie,1.6,20.0,3268.4,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T3,dont industrie manufacturière,0.0,10.7,2853.5,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T3,Construction,-6.8,-23.2,1559.2,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T3,Tertiaire marchand,7.5,14.3,13377.4,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T3,dont intérim1,-8.1,-39.5,727.8,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T3,Tertiaire non marchand,22.6,110.8,8599.7,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T3,Ensemble,31.4,117.4,27133.5,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T3,Secteur privé,18.6,35.3,21077.0,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T3,Fonction publique,12.8,82.1,6056.6,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T4,Agriculture,-4.3,1.5,324.6,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T4,Industrie,-0.4,11.9,3268.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T4,dont industrie manufacturière,-2.3,4.5,2851.2,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T4,Construction,-7.1,-26.7,1552.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T4,Tertiaire marchand,-20.6,-15.6,13356.8,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T4,dont intérim1,-15.4,-45.4,712.4,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T4,Tertiaire non marchand,-8.7,51.1,8590.9,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T4,Ensemble,-41.2,22.2,27092.3,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T4,Secteur privé,-26.6,-0.7,21050.4,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2024-T4,Fonction publique,-14.7,22.9,6041.9,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T1,Agriculture,-0.4,1.0,324.2,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T1,Industrie,-3.0,3.1,3265.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T1,dont industrie manufacturière,-4.5,-3.7,2846.7,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T1,Construction,-6.3,-28.1,1545.7,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T1,Tertiaire marchand,-10.4,-48.0,13346.5,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T1,dont intérim1,-2.6,-44.1,709.8,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T1,Tertiaire non marchand,9.0,45.0,8600.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T1,Ensemble,-11.0,-27.0,27081.4,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T1,Secteur privé,-18.3,-47.4,21032.1,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T1,Fonction publique,7.3,20.3,6049.2,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T2,Agriculture,3.5,5.2,327.6,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T2,Industrie,-9.3,-11.1,3255.7,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T2,dont industrie manufacturière,-11.1,-17.9,2835.6,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T2,Construction,-4.7,-24.9,1541.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T2,Tertiaire marchand,21.1,-2.3,13367.6,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T2,dont intérim1,2.0,-24.0,711.8,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T2,Tertiaire non marchand,1.6,24.5,8601.6,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T2,Ensemble,12.2,-8.6,27093.5,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T2,Secteur privé,5.8,-20.5,21037.9,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T2,Fonction publique,6.4,11.9,6055.6,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T3,Agriculture,-15.1,-16.3,312.6,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T3,Industrie,-3.8,-16.5,3251.9,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T3,dont industrie manufacturière,-5.0,-22.9,2830.6,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T3,Construction,-2.5,-20.7,1538.5,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T3,Tertiaire marchand,-15.6,-25.4,13352.0,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T3,dont intérim1,-4.7,-20.6,707.1,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T3,Tertiaire non marchand,19.1,21.0,8620.7,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T3,Ensemble,-17.9,-57.9,27075.7,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T3,Secteur privé,-37.0,-76.0,21001.0,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T3,Fonction publique,19.1,18.2,6074.7,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T4,Agriculture,16.3,4.4,328.9,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T4,Industrie,-5.0,-21.1,3246.9,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T4,dont industrie manufacturière,-5.6,-26.2,2825.0,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T4,Construction,-5.0,-18.5,1533.5,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T4,Tertiaire marchand,-10.8,-15.6,13341.2,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T4,dont intérim1,0.3,-5.0,707.4,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T4,Tertiaire non marchand,-27.4,2.4,8593.3,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T4,Ensemble,-31.8,-48.5,27043.9,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T4,Secteur privé,-12.2,-61.7,20988.8,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2025-T4,Fonction publique,-19.6,13.2,6055.1,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2026-T1,Agriculture,-5.2,-0.5,323.7,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2026-T1,Industrie,-3.7,-21.8,3243.2,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2026-T1,dont industrie manufacturière,-5.3,-26.9,2819.7,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2026-T1,Construction,-7.4,-19.6,1526.1,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2026-T1,Tertiaire marchand,4.0,-1.3,13345.2,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2026-T1,dont intérim1,-1.2,-3.6,706.2,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2026-T1,Tertiaire non marchand,13.1,6.4,8606.4,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2026-T1,Ensemble,0.7,-36.8,27044.6,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2026-T1,Secteur privé,-7.5,-50.8,20981.3,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2026-T1,Fonction publique,8.1,14.0,6063.3,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2026-T2,Agriculture,-8.4,-12.3,315.3,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2026-T2,Industrie,-2.6,-15.1,3240.6,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2026-T2,dont industrie manufacturière,-3.6,-19.4,2816.2,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2026-T2,Construction,-6.7,-21.6,1519.4,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2026-T2,Tertiaire marchand,-8.6,-31.0,13336.6,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2026-T2,dont intérim1,-6.7,-12.4,699.5,SUBCATEGORY,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2026-T2,Tertiaire non marchand,2.8,7.6,8609.2,BROAD_SECTOR,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2026-T2,Ensemble,-23.5,-72.5,27021.1,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2026-T2,Secteur privé,-24.3,-80.9,20957.0,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48
+2026-T2,Fonction publique,0.8,8.5,6064.1,AGGREGATE,France hors Mayotte,thousands of employees,CVS,Insee,a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48

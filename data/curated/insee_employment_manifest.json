@@ -1,0 +1,34 @@
+{
+  "quarter_count": 50,
+  "sector_count": 10,
+  "data_rows": 500,
+  "first_quarter": "2014-T1",
+  "last_quarter": "2026-T2",
+  "reported_arithmetic_anomalies": 0,
+  "anomalies_sample": [],
+  "primary_source_2026_T2_total_anchor_27021_1_thousands": {
+    "observed": 27021.1,
+    "matches_original_release": true
+  },
+  "raw_sha256": "a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48",
+  "publisher": "Insee",
+  "geography": "France hors Mayotte",
+  "unit": "thousands of employees",
+  "denominator": "employees aged 15+ at end of quarter",
+  "temporal_adjustment": "seasonally adjusted (CVS)",
+  "data_are_stock_not_hiring_flows": true,
+  "method_vintage": "2026-08-28 first reference edition; future revisions require review",
+  "economic_join_with_NA38": false,
+  "independent_of_urssaf": false,
+  "license": "Licence Ouverte / Open Licence 2.0 (Etalab)",
+  "license_url": "https://www.insee.fr/fr/information/2008466?page=copyright.htm",
+  "dataset_url": "https://www.insee.fr/fr/statistiques/2496914",
+  "publication_gate": "PASS_INSEE_DESCRIPTIVE_ONLY",
+  "observed_at_utc": "2026-11-24T04:52:04.875329+00:00",
+  "download_evidence": {
+    "sha256": "a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48",
+    "bytes": 51977,
+    "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "url": "https://www.insee.fr/fr/statistiques/fichier/2496914/econ-gen-empl-salarie-trim.xlsx"
+  }
+}

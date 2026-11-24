@@ -1,0 +1,11 @@
+{
+  "source_name": "insee_sector_a13c18d4fd17.xlsx",
+  "original_sha256": "a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48",
+  "downloaded_at_utc": "2026-11-24T04:52:04.875329+00:00",
+  "license": "Licence Ouverte / Open Licence 2.0 (Etalab)",
+  "source": "https://www.insee.fr/fr/statistiques/2496914",
+  "publication_gate": "PASS_INSEE_DESCRIPTIVE_ONLY",
+  "quarters": 50,
+  "sector_categories": 10,
+  "derived_observations": 500
+}
