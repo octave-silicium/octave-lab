@@ -113,3 +113,28 @@ class ExplorerTests(unittest.TestCase):
         cat=load_source(source)
         self.assertEqual(set(cat.by),{source})
         self.assertEqual(len(cat.by[source]),2478)
+
+    def test_neighbor_leads_native(self):
+        s="indeed_sector_total_daily"
+        a=self.x.discover(s,{})["series"][0]
+        r=self.x.suggestions(s,a["id"])
+        self.assertEqual(r["publication"],"BLOCK_PUBLICATION")
+        self.assertTrue(1<=len(r["leads"])<=3)
+        for n in r["leads"]:
+            self.assertEqual(n["kind"],"NATIVE_NEIGHBOR")
+            self.assertEqual(n["dimension"],"occupation_family")
+            self.assertEqual(n["source"],s)
+            self.assertGreater(n["shared_periods"],0)
+            self.assertEqual(n["comparison"],"REVIEW_REQUIRED")
+    def test_suggestions_no_cross_source(self):
+        s="indeed_national_total_daily"
+        self.assertEqual(self.x.suggestions(s,"0")["leads"],[])
+        with self.assertRaises(ValueError):self.x.suggestions(s,"0","2024Q1")
+    def test_quality_suggestion_no_value(self):
+        dims=tuple(sorted((k,"native") for k in v4.v3.URSSAF["urssaf_dpae_na38"]["dims"]))
+        c=v4.wrap_live(v4.v3.Cell("urssaf_dpae_na38","2025Q2",dims,"dpae_cvs","declarations",Decimal("20"),"","a"*64,"2026-11-24T06:00:00+00:00","fixture"))
+        x=Explorer(v4.Catalog([c]))
+        lead=x.suggestions("urssaf_dpae_na38","0")["leads"][0]
+        self.assertEqual(lead["kind"],"QUALITY_REVIEW")
+        self.assertNotIn("value",lead)
+        self.assertEqual(lead["period"],"2025Q2")

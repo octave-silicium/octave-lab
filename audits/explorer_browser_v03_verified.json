@@ -1,0 +1,50 @@
+{
+  "run_id": 45343111647,
+  "job_id": 138271191555,
+  "commit": "8c6eda79eec1cc6759aa88189eb448bbca6376b7",
+  "tests_passed": 148,
+  "audit": {
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 900,
+        "ready_ms": 170,
+        "journey_pass": true,
+        "no_horizontal_overflow": true,
+        "no_js_errors": true,
+        "screenshot_rendered": true
+      },
+      {
+        "width": 1280,
+        "height": 800,
+        "ready_ms": 153,
+        "journey_pass": true,
+        "no_horizontal_overflow": true,
+        "no_js_errors": true,
+        "screenshot_rendered": true
+      },
+      {
+        "width": 768,
+        "height": 1024,
+        "ready_ms": 150,
+        "journey_pass": true,
+        "no_horizontal_overflow": true,
+        "no_js_errors": true,
+        "screenshot_rendered": true
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "ready_ms": 151,
+        "journey_pass": true,
+        "no_horizontal_overflow": true,
+        "no_js_errors": true,
+        "screenshot_rendered": true
+      }
+    ],
+    "security_smoke": "PASS",
+    "screenshots_publicly_uploaded": false,
+    "visual_review": "NOT_PERFORMED",
+    "wcag_conformance": "NOT_AUDITED"
+  }
+}

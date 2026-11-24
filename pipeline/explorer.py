@@ -16,7 +16,7 @@ from . import semantic_v4 as v4
 
 ROOT=Path(__file__).resolve().parents[1]
 STATIC=ROOT/"explorer"
-VERSION="0.3.0"
+VERSION="0.4.0"
 LABELS={
  "indeed_sector_total_daily":("Indeed · Familles professionnelles","Indice d'annonces par intitulé professionnel, pas des embauches."),
  "indeed_national_total_daily":("Indeed · France","Indice national d'annonces sur Indeed, CVS."),
@@ -111,6 +111,40 @@ class Explorer:
             records.append(d)
         windows=[{"count":n,"start":g["rows"][-n].period,"end":g["rows"][-1].period} for n in WINDOWS[v4.FREQ[source]] if len(g["rows"])>=n]
         return {"windows":windows,"source":source,"id":g["id"],"snapshot_sha256":self.catalog.vintages[source][1],"vintage":self.catalog.vintages[source][0],"persistence":"ARCHIVE" if source in v4.ARCHIVE_SOURCES else "LIVE","dimensions":g["dims"],"measure":g["measure"],"unit":g["unit"],"unit_label":UNITS.get(g["unit"],g["unit"]),"total":len(rows),"offset":offset,"next_offset":offset+limit if offset+limit<len(rows) else None,"points":points,"records":records,"quality":dict(Counter(r.quality[0] for r in rows)),"full_start":g["rows"][0].period,"full_end":g["rows"][-1].period,"comparison":"REVIEW_REQUIRED","publication":"BLOCK_PUBLICATION"}
+    def suggestions(self,source,sid,start=None,end=None):
+        """Deterministic investigation leads, not signals or inference."""
+        g=self.group(source,sid)
+        if any(p is not None and not v4.valid_period(source,p) for p in (start,end)) or start and end and start>end:
+            raise ValueError("PERIOD")
+        rows=[r for r in g["rows"] if (start is None or r.period>=start) and (end is None or r.period<=end)]
+        leads=[]
+        flagged=[r for r in rows if r.flag or r.quality[0] in {"RESTRICTED","WITHHELD"}]
+        if flagged:
+            leads.append({"kind":"QUALITY_REVIEW","period":flagged[0].period,"count":len(flagged),
+                "reason":"SOURCE_FLAG_OR_RESTRICTION","id":g["id"],"source":source})
+        # Neighbor only if exact same source, measure and unit, one differing native field.
+        # Exclude geographic-code/name and classification aliases, not a claim of comparability.
+        allowed={"occupation_family","industry","size_emp","nace_r2","secteur_na88i","duree_de_contrat","nature_de_contrat"}
+        neighbors=[]
+        if rows:
+            lo,hi=rows[0].period,rows[-1].period
+            for other in self.series[source]:
+                if other["id"]==g["id"] or (other["measure"],other["unit"])!=(g["measure"],g["unit"]):
+                    continue
+                diff=[k for k in g["dims"] if g["dims"][k]!=other["dims"].get(k)]
+                if len(diff)!=1 or diff[0] not in allowed or other["rows"][-1].period<lo or other["rows"][0].period>hi:
+                    continue
+                # Require an actual shared period, not simply overlapping bounds.
+                dates={r.period for r in rows}
+                overlap=sum(r.period in dates for r in other["rows"])
+                if overlap:
+                    k=diff[0]
+                    neighbors.append({"kind":"NATIVE_NEIGHBOR","source":source,"id":other["id"],"dimension":k,
+                        "from":g["dims"][k],"to":other["dims"][k],"shared_periods":overlap,
+                        "reason":"ONE_NATIVE_FIELD_DIFFERS","comparison":"REVIEW_REQUIRED"})
+            neighbors.sort(key=lambda n:(-n["shared_periods"],n["dimension"],n["to"],n["id"]))
+        return {"source":source,"id":g["id"],"leads":leads+neighbors[:3],"evidence":"DESCRIPTIVE_ONLY","publication":"BLOCK_PUBLICATION"}
+
     def comparison(self,source,sid,start,end):
         # Exact observations, same native series and vintage. No change calculated.
         if not start or not end or not v4.valid_period(source,start) or not v4.valid_period(source,end) or start>=end:
@@ -191,6 +225,8 @@ class LazyExplorer:
         return d
     def detail(self,source,*args,**kwargs):
         return self.get(source).detail(source,*args,**kwargs)
+    def suggestions(self,source,*args,**kwargs):
+        return self.get(source).suggestions(source,*args,**kwargs)
     def point(self,source,*args,**kwargs):
         return self.get(source).point(source,*args,**kwargs)
     def comparison(self,source,*args,**kwargs):
@@ -235,6 +271,8 @@ def make_handler(explorer):
                     return self.j(200,{"version":VERSION,"sources":explorer.sources(),"mode":"LOCAL_INTERNAL","labels":DIM_LABELS})
                 if u.path=="/api/discover" and set(q)<={"source","filters","q"}:
                     return self.j(200,explorer.discover(q["source"],json.loads(q.get("filters","{}")),q.get("q","")))
+                if u.path=="/api/suggestions" and set(q)<={"source","id","start","end"}:
+                    return self.j(200,explorer.suggestions(q["source"],q["id"],q.get("start") or None,q.get("end") or None))
                 if u.path=="/api/compare" and set(q)=={"source","id","start","end"}:
                     return self.j(200,explorer.comparison(q["source"],q["id"],q["start"],q["end"]))
                 if u.path=="/api/series" and set(q)<={"source","id","start","end","offset"}:
