@@ -1,0 +1,68 @@
+{
+  "run_at": "2026-11-24T03:56:10.620628+00:00",
+  "status": {
+    "indeed_fr_sector": {
+      "result": "OK",
+      "rows": 168504,
+      "columns": [
+        "date",
+        "jobcountry",
+        "indeed_job_postings_index",
+        "variable",
+        "display_name"
+      ],
+      "bytes": 8859432,
+      "format": "csv",
+      "sha256": "9d7ce5aecd8269931a273ae5a13583adbcebc1a2bca0960980b7e0ab647e347a",
+      "filename": "archive/raw/20261124T035610Z/indeed_fr_sector_9d7ce5aecd82.csv",
+      "url": "https://raw.githubusercontent.com/hiring-lab/job_postings_tracker/master/FR/job_postings_by_sector_FR.csv",
+      "etag": "\"26533d4731933b17af2a7845d747e61aca6bcb2d2c289c2ec414af78157a0697\"",
+      "last_modified": null,
+      "license": "CC BY 4.0",
+      "public_redistribution": true,
+      "downloaded_at": "2026-11-24T03:56:11.398001+00:00",
+      "analysis": {
+        "valid_sector_rows": 84252,
+        "sectors": 34,
+        "quarterly_records": 884,
+        "yoy_comparisons": 748,
+        "earliest": "2020-02-01",
+        "latest": "2026-11-13",
+        "note": "Quarterly medians of a seasonally adjusted seven-day moving-average index; not independent observations or employment counts"
+      }
+    },
+    "indeed_fr_national": {
+      "result": "OK",
+      "rows": 4956,
+      "columns": [
+        "date",
+        "jobcountry",
+        "indeed_job_postings_index_SA",
+        "indeed_job_postings_index_NSA",
+        "variable"
+      ],
+      "bytes": 204420,
+      "format": "csv",
+      "sha256": "ab1873dd2cef837504c473299356d5d53390dc620d6a661cf659c0c28a38e10f",
+      "filename": "archive/raw/20261124T035610Z/indeed_fr_national_ab1873dd2cef.csv",
+      "url": "https://raw.githubusercontent.com/hiring-lab/job_postings_tracker/master/FR/aggregate_job_postings_FR.csv",
+      "etag": "\"53805251885ab1dd04c248c9af9c56aebf5c39e23bc4a5c40dfe79d2f7bcf22f\"",
+      "last_modified": null,
+      "license": "CC BY 4.0",
+      "public_redistribution": true,
+      "downloaded_at": "2026-11-24T03:56:11.952729+00:00"
+    },
+    "dares_ft_collected_quarterly": {
+      "result": "SKIPPED_LICENSE_REVIEW",
+      "reason": "not specified at source catalog - review required"
+    },
+    "insee_employment_quarterly": {
+      "result": "SKIPPED_LICENSE_REVIEW",
+      "reason": "specific re-use terms to be checked"
+    }
+  },
+  "source_registry_version": "pipeline/sources.json",
+  "no_causal_inference": true,
+  "license_gate": true,
+  "publish_gate": "PASS_DESCRIPTIVE_ONLY: original histories archived and validated"
+}
