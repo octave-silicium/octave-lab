@@ -1,46 +1,53 @@
 # OCTAVE LAB · Observatoire IA & transformations du travail
 
-**Prototype de pipeline de données économiques français, en construction publique.** Ce dépôt contient un collecteur de séries historiques d'annonces d'emploi Indeed, des validations automatiques et un calcul descriptif par famille professionnelle. Il **ne démontre pas** l'effet causal de l'IA sur l'emploi.
+**Plateforme de renseignement économique en construction publique.** Objectif : observer et expliquer les transformations du travail, des capacités technologiques aux conséquences économiques. Périmètre initial : France. Le dépôt contient des pipelines et résultats descriptifs vérifiés, pas encore un explorateur professionnel ni un moteur causal validé.
 
-## Statut
+## État vérifié au 24 novembre 2026
 
-- Source primaire : Indeed Hiring Lab, France, indicateurs quotidiens CVS depuis février 2020, licence CC BY 4.0.
-- Sorties : archive des octets originaux avec empreintes SHA256 et métadonnées, médianes de trimestres complets, variations sur un an par famille de métiers, manifeste d'exécution.
-- La collecte du fichier source n'est déclarée réussie **que si** GitHub Actions produit un manifeste `PASS_DESCRIPTIVE_ONLY` et les fichiers téléchargés sont présents.
-- **Données non disponibles** = échec documenté et **aucun graphique sectoriel présenté comme réel**.
+| Composant | État / preuve |
+|---|---|
+| Indeed France | Collecte historique vérifiée, [snapshot et manifeste](snapshots/indeed-fr/2026-11/) |
+| Dares mensuel, Urssaf NA88, Eurostat IA | Collectes et schémas audités, [manifeste multisource](audits/latest_multisource.json) |
+| Urssaf DPAE et Insee | [Audit emploi/embauches](audits/latest_lot2.json), [audit sémantique](audits/latest_lot3.json) |
+| Insee trimestriel | [Série normalisée](data/curated/insee_employment_sector_quarterly.csv), [manifeste](data/curated/insee_employment_manifest.json) |
+| Gouvernance | [Contrôles provisoires](pipeline/data_governance.py), [droits](governance/source_rights.json), [ruptures](governance/series_events.json) |
+| PILOT-001 | [Rapport descriptif NACE J](research/PILOT-001/rapport.md), [manifeste](research/PILOT-001/pilot_manifest.json), [code](pipeline/pilot_ict.py) |
+| Moteur métier–tâche–action–processus | [METH-003](docs/METH-003.md), spécification validée, non implémentée |
+| Explorateur multisource | Cible G1, non implémenté |
+
+79 sources/programmes candidats recensés, non 79 bases intégrées. PILOT-001 mobilise deux lignées principales (Urssaf et Eurostat), sans inférence causale. Les comparaisons DPAE touchées par les anomalies 2025 restent bloquées ; le périmètre des technologies IA Eurostat change en 2025. Les sources Dares MMO et les droits commerciaux concernés nécessitent encore qualification.
+
+## Architecture et feuille de route
+
+Six niveaux reliés : capacités IA, tâches/actions, métiers, entreprises/processus, marchés/chaînes de valeur, macroéconomie. Le [moteur de décomposition du travail](docs/METH-003.md) est transversal. Prochaine étape technique : contrats de données sémantiques communs puis explorateur G1. Voir [feuille de route et chantiers ouverts](docs/ROADMAP.md).
 
 ## Exécution GitHub Actions
 
-Après ajout de ce code au dépôt :
+- Collecte Indeed France : [workflow](.github/workflows/collect-public-sector.yml), déclenchement manuel ou hebdomadaire. Consulter `outputs/live/manifest.json` dans les artefacts ; `PASS_DESCRIPTIVE_ONLY` valide uniquement les séries descriptives. Le premier run réussi du mois archive les originaux et SHA256 dans `snapshots/indeed-fr/YYYY-MM/`.
+- Audit multisource : [preuves](audits/latest_multisource.json). Emploi et embauches : [workflow](.github/workflows/audit-lot2.yml).
+- Insee : [workflow mensuel](.github/workflows/collect-insee.yml).
+- Pilote ICT : [workflow](.github/workflows/pilot-ict.yml), [exécution réussie](https://github.com/octave-silicium/octave-lab/actions/runs/45332943616).
+- Pour les workflows d'archivage, les permissions d'écriture nécessaires sont limitées aux opérations prévues et dépendent des paramètres du dépôt.
 
-1. Dans **Settings → Actions → General**, autoriser les actions nécessaires et, pour l'archivage automatique, choisir les droits du jeton de workflow **Read and write permissions** (si GitHub le permet). Les paramètres peuvent différer selon les politiques de compte.
-2. Ouvrir **Actions → Collecte Indeed France** et cliquer sur **Run workflow**. Le déclencheur manuel et le déclencheur hebdomadaire sont dans `.github/workflows/collect-public-sector.yml`.
-3. Consulter `outputs/live/manifest.json` dans les artefacts du run. La sortie `PASS_DESCRIPTIVE_ONLY` indique seulement une validation des séries descriptives, pas une validation de conclusions économiques sur l'IA.
-4. Le premier run réussi d'un mois archive les fichiers originaux Indeed avec manifeste SHA256 sous `snapshots/indeed-fr/YYYY-MM/` et les versions restent dans l'historique Git. Les autres runs du mois produisent uniquement leurs artefacts temporaires.
-
-## Exécution locale
+## Exécution locale du collecteur initial
 
 ```bash
 python -m unittest discover -s tests -v
 python pipeline/run.py --only-open
 ```
 
-Python 3.11+ standard library. Besoin d'un accès réseau à `raw.githubusercontent.com`.
+Python 3.11+ ; accès réseau nécessaire pour les collectes. Les commandes ci-dessus ne constituent pas un test de toute la plateforme cible.
 
 ## Périmètre et garde-fous
 
-- Les « secteurs » d'Indeed désignent des **familles professionnelles**, pas les secteurs économiques de l'entreprise.
-- Un recul de l'indice d'annonces ne prouve ni des suppressions de postes, ni une causalité liée à l'IA.
-- Les séries peuvent être révisées par Indeed. Le pipeline conserve les originaux par vintage.
-- Les comparaisons annuelles exigent deux trimestres **complets** ; aucun trimestre en cours ou incomplet n'est comparé.
-- `pipeline/sources.json` contient aussi des sources candidates (Dares, Insee) désactivées pour toute redistribution avant revue des droits et des schémas.
-- Aucun dossier client, clé API ou donnée personnelle ne doit être ajouté à ce dépôt public.
+- Les « secteurs » Indeed sont des familles professionnelles, pas des secteurs économiques NAF/NACE. Les annonces ne sont ni des embauches effectives ni des emplois supprimés.
+- Comparer des trimestres complets, conserver les versions des sources, vérifier ruptures, unités, populations et nomenclatures. Pas de correspondance métier/secteur automatique.
+- Distinguer exposition, capacité testée, adoption observée, substitution et impact estimé. Pas de causalité sans stratégie d'identification adaptée.
+- Vérifier les licences jeu par jeu ; pas de diffusion de données brutes Urssaf ODbL ici, ni d'autorisation présumée d'un produit commercial dérivé. Aucun secret, donnée personnelle ou dossier client dans le dépôt public.
+- Données absentes ou comparabilité insuffisante : afficher le blocage, jamais inventer un résultat.
 
 ## Sources et méthode
 
-- [Indeed Hiring Lab : source et schéma](https://github.com/hiring-lab/job_postings_tracker)
-- [Indeed Hiring Lab : méthodologie](https://hiringlab.indeed.com/indeed-data-faq-2/)
-- [Conditions de la licence CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-- [Conditions de reproductibilité](docs/METHODOLOGIE.md)
+[Indeed Hiring Lab](https://github.com/hiring-lab/job_postings_tracker) · [FAQ Indeed](https://hiringlab.indeed.com/indeed-data-faq-2/) · [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) · [Urssaf Open Data](https://open.urssaf.fr/) · [Dares](https://dares.travail-emploi.gouv.fr/) · [Insee](https://www.insee.fr/) · [Eurostat](https://ec.europa.eu/eurostat/) · [Méthodologie initiale](docs/METHODOLOGIE.md)
 
-Projet éditorial et économique **Octave Silicium**. Les analyses factuelles, hypothèses causales et opinions de l'auteur sont volontairement séparées.
+Projet **Octave Silicium**. Les observations factuelles, hypothèses et opinions sont distinguées.
