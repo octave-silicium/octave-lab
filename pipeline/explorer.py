@@ -1,4 +1,4 @@
-"""G1 v0.2: loopback-only research explorer, no public publication."""
+"""G1 v0.3: loopback-only research explorer, no public publication."""
 import argparse
 from collections import defaultdict, Counter
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -9,11 +9,14 @@ import json
 import re
 import time
 import unicodedata
+import hashlib
+import threading
+from datetime import datetime, timezone
 from . import semantic_v4 as v4
 
 ROOT=Path(__file__).resolve().parents[1]
 STATIC=ROOT/"explorer"
-VERSION="0.2.0"
+VERSION="0.3.0"
 LABELS={
  "indeed_sector_total_daily":("Indeed · Familles professionnelles","Indice d'annonces par intitulé professionnel, pas des embauches."),
  "indeed_national_total_daily":("Indeed · France","Indice national d'annonces sur Indeed, CVS."),
@@ -33,19 +36,41 @@ def normalized(text):
 
 WINDOWS={"D":(30,90,365),"M":(12,36,60),"Q":(4,12,20),"A":(3,5,10)}
 
+def series_key(source,dimensions,measure,unit):
+    # Native identity, independent of row ordering and observation values.
+    # This is not a crosswalk and does not prove comparability across vintages.
+    payload=json.dumps(["native-series-v1",source,sorted(dimensions),measure,unit,v4.FREQ[source]],ensure_ascii=False,separators=(",",":"))
+    return hashlib.sha256(payload.encode()).hexdigest()
+
 class Explorer:
     def __init__(self,catalog):
         self.catalog=catalog
         self.series={}
+        self.by_key={}
         for source,rows in catalog.by.items():
             groups=defaultdict(list)
             for r in rows:
                 groups[(r.dimensions,r.measure,r.unit)].append(r)
             self.series[source]=[]
+            self.by_key[source]={}
             for i,(key,recs) in enumerate(sorted(groups.items())):
                 dims,measure,unit=key
                 recs.sort(key=lambda r:r.period)
-                self.series[source].append({"id":str(i),"dims":dict(dims),"measure":measure,"unit":unit,"rows":recs})
+                sid=series_key(source,dims,measure,unit)
+                g={"id":sid,"dims":dict(dims),"measure":measure,"unit":unit,"rows":recs}
+                if sid in self.by_key[source]:
+                    raise ValueError("SERIES_KEY_COLLISION")
+                self.series[source].append(g)
+                self.by_key[source][sid]=g
+    def group(self,source,sid):
+        if source not in self.series or not isinstance(sid,str):
+            raise ValueError("SERIES")
+        if sid in self.by_key[source]:
+            return self.by_key[source][sid]
+        # Compatibility for old local callers only. Never save a numeric alias.
+        if re.fullmatch(r"0|[1-9]\d{0,6}",sid) and int(sid)<len(self.series[source]):
+            return self.series[source][int(sid)]
+        raise ValueError("SERIES")
     def sources(self):
         return [{"id":s,"label":LABELS[s][0],"description":LABELS[s][1],"series":len(self.series[s]),"frequency":v4.FREQ[s],"persistence":"ARCHIVE" if s in v4.ARCHIVE_SOURCES else "LIVE","vintage":self.catalog.vintages[s][0],"license":v4.LICENSE[s]} for s in LABELS if s in self.series]
     def discover(self,source,filters,query=""):
@@ -66,13 +91,11 @@ class Explorer:
             choices[key]=[{"value":v,"count":n} for v,n in sorted(counts.items())]
         return {"total":len(groups),"query":query,"choices":choices,"series":[{"id":g["id"],"dimensions":g["dims"],"measure":g["measure"],"unit":g["unit"],"count":len(g["rows"]),"start":g["rows"][0].period,"end":g["rows"][-1].period} for g in groups[:100]],"truncated":len(groups)>100}
     def detail(self,source,sid,start=None,end=None,offset=0,limit=50):
-        if source not in self.series or not re.fullmatch(r"0|[1-9]\d{0,6}",sid) or int(sid)>=len(self.series[source]):
-            raise ValueError("SERIES")
+        g=self.group(source,sid)
         if any(p is not None and not v4.valid_period(source,p) for p in (start,end)) or start and end and start>end:
             raise ValueError("PERIOD")
         if type(offset) is not int or offset<0 or type(limit) is not int or not 1<=limit<=100:
             raise ValueError("PAGE")
-        g=self.series[source][int(sid)]
         rows=[r for r in g["rows"] if (start is None or r.period>=start) and (end is None or r.period<=end)]
         if len(rows)>4000:
             raise ValueError("NARROW_PERIOD")
@@ -87,13 +110,13 @@ class Explorer:
                 d["value"]=None
             records.append(d)
         windows=[{"count":n,"start":g["rows"][-n].period,"end":g["rows"][-1].period} for n in WINDOWS[v4.FREQ[source]] if len(g["rows"])>=n]
-        return {"windows":windows,"source":source,"id":sid,"dimensions":g["dims"],"measure":g["measure"],"unit":g["unit"],"unit_label":UNITS.get(g["unit"],g["unit"]),"total":len(rows),"offset":offset,"next_offset":offset+limit if offset+limit<len(rows) else None,"points":points,"records":records,"quality":dict(Counter(r.quality[0] for r in rows)),"full_start":g["rows"][0].period,"full_end":g["rows"][-1].period,"comparison":"REVIEW_REQUIRED","publication":"BLOCK_PUBLICATION"}
+        return {"windows":windows,"source":source,"id":g["id"],"snapshot_sha256":self.catalog.vintages[source][1],"vintage":self.catalog.vintages[source][0],"persistence":"ARCHIVE" if source in v4.ARCHIVE_SOURCES else "LIVE","dimensions":g["dims"],"measure":g["measure"],"unit":g["unit"],"unit_label":UNITS.get(g["unit"],g["unit"]),"total":len(rows),"offset":offset,"next_offset":offset+limit if offset+limit<len(rows) else None,"points":points,"records":records,"quality":dict(Counter(r.quality[0] for r in rows)),"full_start":g["rows"][0].period,"full_end":g["rows"][-1].period,"comparison":"REVIEW_REQUIRED","publication":"BLOCK_PUBLICATION"}
     def comparison(self,source,sid,start,end):
         # Exact observations, same native series and vintage. No change calculated.
         if not start or not end or not v4.valid_period(source,start) or not v4.valid_period(source,end) or start>=end:
             raise ValueError("COMPARISON_PERIOD")
         self.detail(source,sid,start,end,limit=1)  # validate identifiers and bounds
-        rows=[r for r in self.series[source][int(sid)]["rows"] if start<=r.period<=end]
+        rows=[r for r in self.group(source,sid)["rows"] if start<=r.period<=end]
         if not rows or rows[0].period!=start or rows[-1].period!=end:
             return {"decision":"BLOCK","reason":"MISSING_ENDPOINT","periods":[start,end],"change":None}
         blockers=Counter(reason for r in rows if r.quality[0] in {"RESTRICTED","WITHHELD"} for reason in r.quality[1])
@@ -113,6 +136,73 @@ class Explorer:
 def archive_catalog():
     records=chain((v4.v2.wrap(o) for o in v4.v2.v1.read_insee()),v4.v2.iter_indeed(),v4.v2.iter_dares())
     return v4.Catalog(v4.wrap_archive(c) for c in records)
+
+def load_source(source):
+    if source=="insee_employment":
+        cells=(v4.v2.wrap(o) for o in v4.v2.v1.read_insee())
+    elif source.startswith("indeed_") and source in v4.ARCHIVE_SOURCES:
+        cells=v4.v2.iter_indeed(only_series=source)
+    elif source=="dares_offers_monthly":
+        cells=v4.v2.iter_dares()
+    elif source in v4.LIVE_SOURCES:
+        raw=v4.v3.retrieve(v4.v3.SOURCES[source])
+        stamp=datetime.now(timezone.utc).isoformat()
+        rows,_=(v4.v3.read_urssaf if source in v4.v3.URSSAF else v4.v3.read_euro)(source,raw,stamp)
+        return v4.Catalog(v4.wrap_live(r) for r in rows)
+    else:
+        raise ValueError("SOURCE")
+    return v4.Catalog(v4.wrap_archive(c) for c in cells)
+
+
+class LazyExplorer:
+    """Single verified load per source and process. Failures do not poison other sources."""
+    def __init__(self,live=False,loader=load_source):
+        self.allowed=set(v4.ARCHIVE_SOURCES)|(set(v4.LIVE_SOURCES) if live else set())
+        self.loader=loader
+        self.loaded={}
+        self.locks={s:threading.Lock() for s in self.allowed}
+    def sources(self):
+        result=[]
+        for s in LABELS:
+            if s not in self.allowed:
+                continue
+            loaded=self.loaded.get(s)
+            if loaded:
+                result.extend(loaded.sources())
+            else:
+                result.append({"id":s,"label":LABELS[s][0],"description":LABELS[s][1],
+                    "series":None,"frequency":v4.FREQ[s],"persistence":"ARCHIVE" if s in v4.ARCHIVE_SOURCES else "LIVE",
+                    "vintage":None,"license":v4.LICENSE[s]})
+        return result
+    def get(self,source):
+        if source not in self.allowed:
+            raise ValueError("SOURCE")
+        with self.locks[source]:
+            if source not in self.loaded:
+                cat=self.loader(source)
+                if set(cat.by)!={source}:
+                    raise ValueError("SOURCE_SCOPE")
+                self.loaded[source]=Explorer(cat)
+            return self.loaded[source]
+    def discover(self,source,filters,query=""):
+        x=self.get(source)
+        d=x.discover(source,filters,query)
+        d["source_meta"]=x.sources()[0]
+        return d
+    def detail(self,source,*args,**kwargs):
+        return self.get(source).detail(source,*args,**kwargs)
+    def point(self,source,*args,**kwargs):
+        return self.get(source).point(source,*args,**kwargs)
+    def comparison(self,source,*args,**kwargs):
+        return self.get(source).comparison(source,*args,**kwargs)
+    def restore(self,source,sid,sha,start=None,end=None):
+        if source not in v4.ARCHIVE_SOURCES or not re.fullmatch(r"[0-9a-f]{64}",sid) or not re.fullmatch(r"[0-9a-f]{64}",sha):
+            raise ValueError("SAVED_RESEARCH_SCOPE")
+        x=self.get(source)
+        if x.catalog.vintages[source][1]!=sha:
+            return {"decision":"VINTAGE_MISMATCH","publication":"BLOCK_PUBLICATION"}
+        return {"decision":"MATCH","series":x.detail(source,sid,start,end)}
+
 
 def make_handler(explorer):
     class Handler(BaseHTTPRequestHandler):
@@ -149,6 +239,8 @@ def make_handler(explorer):
                     return self.j(200,explorer.comparison(q["source"],q["id"],q["start"],q["end"]))
                 if u.path=="/api/series" and set(q)<={"source","id","start","end","offset"}:
                     return self.j(200,explorer.detail(q["source"],q["id"],q.get("start") or None,q.get("end") or None,int(q.get("offset","0"))))
+                if u.path=="/api/restore" and set(q)=={"source","id","sha","start","end"} and isinstance(explorer,LazyExplorer):
+                    return self.j(200,explorer.restore(q["source"],q["id"],q["sha"],q["start"] or None,q["end"] or None))
                 if u.path=="/api/point" and set(q)=={"source","id","period"}:
                     return self.j(200,explorer.point(q["source"],q["id"],q["period"]))
                 return self.j(404,{"error":"Ressource inconnue ou non autorisée."})
@@ -166,8 +258,7 @@ def main():
     ap.add_argument("--port",type=int,default=8765)
     args=ap.parse_args()
     t=time.perf_counter()
-    catalog=v4.build_catalog()[0] if args.live else archive_catalog()
-    server=ThreadingHTTPServer(("127.0.0.1",args.port),make_handler(Explorer(catalog)))
+    server=ThreadingHTTPServer(("127.0.0.1",args.port),make_handler(LazyExplorer(live=args.live)))
     print(f"Octave Lab local : http://127.0.0.1:{server.server_port} | prêt en {time.perf_counter()-t:.2f}s",flush=True)
     try:
         server.serve_forever()

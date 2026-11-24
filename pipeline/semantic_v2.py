@@ -177,13 +177,15 @@ def raw_verified(path,sha,size,compressed=False):
     return raw
 
 
-def iter_indeed(root=ROOT):
+def iter_indeed(root=ROOT, only_series=None):
     folder=root/"snapshots/indeed-fr/2026-11"
     m=json.loads((folder/"manifest.json").read_text(encoding="utf-8"))
     if not m["publish_gate"].startswith("PASS_DESCRIPTIVE_ONLY") or m["no_causal_inference"] is not True:
         raise ValueError("INDEED_MANIFEST_GATE")
     for source, series, field in (("indeed_fr_sector","indeed_sector_total_daily","indeed_job_postings_index"),
         ("indeed_fr_national","indeed_national_total_daily","indeed_job_postings_index_SA")):
+        if only_series is not None and series!=only_series:
+            continue
         s=m["status"][source]
         if s["result"]!="OK" or s["license"]!="CC BY 4.0":
             raise ValueError("INDEED_SOURCE_GATE")

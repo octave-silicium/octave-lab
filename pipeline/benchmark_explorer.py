@@ -3,7 +3,7 @@ import json
 import platform
 import statistics
 import time
-from pipeline.explorer import Explorer,archive_catalog
+from pipeline.explorer import Explorer,archive_catalog,LazyExplorer
 
 def measure(fn,n=40):
     fn()
@@ -26,8 +26,22 @@ def main():
     d=x.discover(dares,{})
     assert d["total"]>0
     sid=d["series"][0]["id"]
+    t=time.perf_counter()
+    lazy=LazyExplorer()
+    lazy.sources()
+    lazy_setup=round((time.perf_counter()-t)*1000,3)
+    t=time.perf_counter()
+    first=lazy.discover("indeed_national_total_daily",{})
+    lazy.detail("indeed_national_total_daily",first["series"][0]["id"])
+    first_series=round((time.perf_counter()-t)*1000,3)
+    assert set(lazy.loaded)=={"indeed_national_total_daily"}
+    first_access={}
+    for source in ("insee_employment","indeed_sector_total_daily","dares_offers_monthly"):
+        t=time.perf_counter()
+        lazy.discover(source,{})
+        first_access[source]=round((time.perf_counter()-t)*1000,3)
     result={
-        "version":"0.2.0","environment":{"python":platform.python_version(),"system":platform.system(),"machine":platform.machine()},
+        "version":"0.3.0","lazy_setup_ms":lazy_setup,"lazy_first_series_ms":first_series,"lazy_other_first_access_ms":first_access,"lazy_sources_loaded":len(lazy.loaded),"environment":{"python":platform.python_version(),"system":platform.system(),"machine":platform.machine()},
         "catalog_build_ms":cold,"source_count":len(x.sources()),
         "archived_cells":sum(len(rows) for rows in x.catalog.by.values()),
         "benchmarks":{

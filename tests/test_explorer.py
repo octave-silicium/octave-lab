@@ -1,6 +1,6 @@
 import unittest
 from decimal import Decimal
-from pipeline.explorer import Explorer,archive_catalog
+from pipeline.explorer import Explorer,archive_catalog,LazyExplorer,series_key
 from pipeline import semantic_v4 as v4
 
 class ExplorerTests(unittest.TestCase):
@@ -75,3 +75,41 @@ class ExplorerTests(unittest.TestCase):
         d=Explorer(v4.Catalog(cells)).comparison("urssaf_dpae_na38","0","2025Q1","2025Q4")
         self.assertEqual(d["reason"],"QUALITY_RESTRICTION_IN_INTERVAL")
         self.assertIsNone(d["change"])
+
+    def test_stable_identity(self):
+        source="indeed_sector_total_daily"
+        g=self.x.discover(source,{})["series"][0]
+        self.assertEqual(len(g["id"]),64)
+        self.assertEqual(g["id"],series_key(source,g["dimensions"].items(),g["measure"],g["unit"]))
+        self.assertEqual(self.x.detail(source,g["id"])["id"],g["id"])
+        self.assertNotEqual(g["id"],series_key(source,g["dimensions"].items(),g["measure"],"other"))
+    def test_lazy_scope_and_restore(self):
+        source="indeed_national_total_daily"
+        calls=[]
+        def loader(s):
+            calls.append(s)
+            return v4.Catalog(self.x.catalog.by[s])
+        x=LazyExplorer(loader=loader)
+        self.assertEqual(len(x.sources()),4)
+        self.assertEqual(calls,[])
+        g=x.discover(source,{})["series"][0]
+        d=x.detail(source,g["id"])
+        self.assertEqual(calls,[source])
+        self.assertEqual(x.restore(source,g["id"],d["snapshot_sha256"])["decision"],"MATCH")
+        self.assertEqual(x.restore(source,g["id"],"0"*64)["decision"],"VINTAGE_MISMATCH")
+        self.assertEqual(calls,[source])
+        with self.assertRaises(ValueError):x.get("eurostat_nace")
+    def test_lazy_failure_isolated(self):
+        source="indeed_national_total_daily"
+        def loader(s):
+            if s=="dares_offers_monthly":raise OSError("fixture")
+            return v4.Catalog(self.x.catalog.by[s])
+        x=LazyExplorer(loader=loader)
+        with self.assertRaises(OSError):x.get("dares_offers_monthly")
+        self.assertEqual(x.discover(source,{})["total"],1)
+    def test_real_selective_loader(self):
+        from pipeline.explorer import load_source
+        source="indeed_national_total_daily"
+        cat=load_source(source)
+        self.assertEqual(set(cat.by),{source})
+        self.assertEqual(len(cat.by[source]),2478)
