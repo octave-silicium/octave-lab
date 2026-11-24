@@ -1,0 +1,30 @@
+{
+  "scope": "REAL_PRIVATE_G2_DISPATCH_NOT_HTTP",
+  "snapshot_sha256": "ce037a2277cf88452b10f4153ae66f19910cb096d45dded05951a7773ba6220c",
+  "checks": {
+    "status": "PASS",
+    "esco_fr": "PASS",
+    "esco_en": "PASS",
+    "esco_skills": "PASS",
+    "fap_rome": "PASS",
+    "mmo_mask": "PASS",
+    "unknown": "PASS",
+    "invalid_limit": "PASS",
+    "unexpected_parameter": "PASS",
+    "concurrent_read": "PASS",
+    "wrong_hash": "PASS"
+  },
+  "counts": {
+    "status": 0,
+    "esco_fr": 7,
+    "esco_en": 2,
+    "esco_skills": 28,
+    "fap_rome": 10,
+    "mmo_mask": 1
+  },
+  "git_blob_sha": {
+    "private_api.py": "32e37e5d4fc9e2be169ac0d284f02163e637f0ef",
+    "private_lot.py": "81cb6fdcee51f154b472f66290f5d93d97b2da3a"
+  },
+  "public_release": false
+}

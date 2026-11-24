@@ -44,3 +44,5 @@ G2 v0.3 : [lot utilisateur importé localement](G2-LOCAL-INTAKE.md), ESCO biling
 Consolidation infrastructure : [Data Observatory v0.1](DATA-OBSERVATORY.md), registre et workflow configurés, première exécution réelle, inventaire ROME vérifié ; stockage/promotion/raccordement à réaliser avant explorateur des métiers.
 
 Consolidation v0.2 : [coffre local et pont privé G2](DATA-VAULT.md) ; stockage durable, orchestration/promotion et raccordement HTTP restent ouverts. Explorateur métier après consolidation.
+
+Consolidation v0.3 : [maintenance locale](DATA-MAINTENANCE.md) sauvegarde/restauration et révisions sept jeux, calendrier persistant, API G2 opt-in. Stockage durable et activation planifiée, rattachement des versions actives au catalogue et validation scientifique restent ouverts.

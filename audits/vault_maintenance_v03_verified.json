@@ -1,0 +1,115 @@
+{
+  "run_id": 45363426255,
+  "job_id": 138338940488,
+  "commit": "995c4fb16f605ec7d22ea6b873d7c8d62c2ba1fc",
+  "tests_passed": 183,
+  "audit": {
+    "scope": "TEMPORARY_PRIVATE_CI",
+    "sources": 6,
+    "native_revisions": {
+      "urssaf_na88": {
+        "sha256": "9ec16fb077e554518f5a1ade579684a8c91d56f293c7b9897f07b40226833222",
+        "native_key_equivalence": {
+          "source": "urssaf_na88",
+          "status": "NATIVE_REVISION_COUNTS",
+          "added": 0,
+          "removed": 0,
+          "shared": 18144,
+          "visible_value_changed": 0,
+          "visible_value_unchanged": 18144,
+          "numeric_comparison_withheld": 0,
+          "flag_changed": 0,
+          "quality_changed": 0,
+          "comparison_scope": "NATIVE_KEYS_ACROSS_VINTAGES_TECHNICAL_ONLY",
+          "methodological_review": "REQUIRED",
+          "publication": "BLOCK_PUBLICATION"
+        }
+      },
+      "urssaf_dpae_na38": {
+        "sha256": "42cd99124b1ef5f0a39afc481c42e70d5adc0fbfb535a7cb53f2653dfd41f549",
+        "native_key_equivalence": {
+          "source": "urssaf_dpae_na38",
+          "status": "NATIVE_REVISION_COUNTS",
+          "added": 0,
+          "removed": 0,
+          "shared": 23754,
+          "visible_value_changed": 0,
+          "visible_value_unchanged": 23310,
+          "numeric_comparison_withheld": 444,
+          "flag_changed": 0,
+          "quality_changed": 0,
+          "comparison_scope": "NATIVE_KEYS_ACROSS_VINTAGES_TECHNICAL_ONLY",
+          "methodological_review": "REQUIRED",
+          "publication": "BLOCK_PUBLICATION"
+        }
+      },
+      "urssaf_dpae_monthly": {
+        "sha256": "e0789b561ae47d5ce444e8f87f84fd2d076a3c460fba4a54f1cb6de7027a4a7b",
+        "native_key_equivalence": {
+          "source": "urssaf_dpae_monthly",
+          "status": "NATIVE_REVISION_COUNTS",
+          "added": 0,
+          "removed": 0,
+          "shared": 1284,
+          "visible_value_changed": 0,
+          "visible_value_unchanged": 1260,
+          "numeric_comparison_withheld": 24,
+          "flag_changed": 0,
+          "quality_changed": 0,
+          "comparison_scope": "NATIVE_KEYS_ACROSS_VINTAGES_TECHNICAL_ONLY",
+          "methodological_review": "REQUIRED",
+          "publication": "BLOCK_PUBLICATION"
+        }
+      },
+      "eurostat_size": {
+        "sha256": "f5f541e46daefe16722efeced6d8bfeb99578eedc1e8c12476a029f5f45edd73",
+        "native_key_equivalence": {
+          "source": "eurostat_size",
+          "status": "NATIVE_REVISION_COUNTS",
+          "added": 0,
+          "removed": 0,
+          "shared": 2930,
+          "visible_value_changed": 0,
+          "visible_value_unchanged": 2810,
+          "numeric_comparison_withheld": 120,
+          "flag_changed": 0,
+          "quality_changed": 0,
+          "comparison_scope": "NATIVE_KEYS_ACROSS_VINTAGES_TECHNICAL_ONLY",
+          "methodological_review": "REQUIRED",
+          "publication": "BLOCK_PUBLICATION"
+        }
+      },
+      "eurostat_nace": {
+        "sha256": "0c701942ea3d15bd1350e6938b27a5713f9d39f366b620723995b98077a469a8",
+        "native_key_equivalence": {
+          "source": "eurostat_nace",
+          "status": "NATIVE_REVISION_COUNTS",
+          "added": 0,
+          "removed": 0,
+          "shared": 12400,
+          "visible_value_changed": 0,
+          "visible_value_unchanged": 7993,
+          "numeric_comparison_withheld": 4407,
+          "flag_changed": 0,
+          "quality_changed": 0,
+          "comparison_scope": "NATIVE_KEYS_ACROSS_VINTAGES_TECHNICAL_ONLY",
+          "methodological_review": "REQUIRED",
+          "publication": "BLOCK_PUBLICATION"
+        }
+      }
+    },
+    "backup_sha256": "010b9b5c4605b08f1cca120ecd76ddcf379d65f16817fafb3c690cb65c65a029",
+    "backup_bytes": 4059136,
+    "restored": {
+      "integrity": "PASS",
+      "objects": 6,
+      "active_sources": 6,
+      "events": 12
+    },
+    "reopen_schedule": "PASS",
+    "invalid_update_preserved_all_active": "PASS",
+    "real_second_vintage_tested": false,
+    "raw_data_uploaded": false,
+    "production_storage": false
+  }
+}

@@ -7,3 +7,6 @@ Première exécution 45360513288 : 170 tests réussis, 9 CHECKED, 1 PINNED_VERSI
 Coffre privé versionné et historique durable, contrôle des révisions, file de validation, promotion atomique après approbation, alertes et reprises ; raccorder données privées locales au moteur ; compléter ROME/ESCO/FAP, qualification des canaux manuels ; explorateur des métiers ensuite. Ne pas attendre la totalité des 79 candidats pour entamer G-M1.
 ## v0.2
 [DATA-VAULT](DATA-VAULT.md) : coffre local vérifié en CI temporaire et pont privé vérifié sur la base réelle, promotion explicite, révisions Indeed ; aucun déploiement durable ni connexion automatique à la planification à ce stade.
+
+## v0.3
+[Maintenance et API privée](DATA-MAINTENANCE.md) : sauvegarde/restauration, orchestration locale et comparateurs natifs vérifiés ; planificateur de production non déployé.
