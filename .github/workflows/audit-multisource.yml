@@ -43,7 +43,16 @@ jobs:
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
             git add audits/latest_multisource.json
             if [ -d snapshots/dares-ft-monthly ]; then git add snapshots/dares-ft-monthly; fi
-            git diff --cached --quiet || (git commit -m 'audit(data): source access and schema manifest' && git push)
+            if ! git diff --cached --quiet; then
+              git commit -m 'audit(data): source access and schema manifest'
+              for attempt in 1 2 3; do
+                git fetch origin main
+                git rebase origin/main || exit 1
+                if git push origin HEAD:main; then exit 0; fi
+                sleep 2
+              done
+              exit 1
+            fi
           fi
       - name: Preserve audit report artifact
         if: always()

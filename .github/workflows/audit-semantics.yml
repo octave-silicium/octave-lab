@@ -35,7 +35,16 @@ jobs:
             git config user.name 'github-actions[bot]'
             git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
             git add audits/latest_lot3.json
-            git diff --cached --quiet || (git commit -m 'audit(lot3): semantic source metadata and DPAE vintage fingerprints' && git push)
+            if ! git diff --cached --quiet; then
+              git commit -m 'audit(lot3): semantic source metadata and DPAE vintage fingerprints'
+              for attempt in 1 2 3; do
+                git fetch origin main
+                git rebase origin/main || exit 1
+                if git push origin HEAD:main; then exit 0; fi
+                sleep 2
+              done
+              exit 1
+            fi
           fi
       - name: Preserve audit report for review
         if: always()
