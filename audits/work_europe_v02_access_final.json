@@ -1,0 +1,224 @@
+{
+  "run_id": 45349626620,
+  "job_id": 138292522003,
+  "commit": "d3050fa07147dc3964ab397e87a464fa9575cf6e",
+  "tests_passed": 164,
+  "audit": {
+    "retrieved_at": "2026-11-24T07:39:17.222235+00:00",
+    "esco": {
+      "target_version": "1.2.1",
+      "full_zip": "OFFICIAL_FORM_HUMAN_DOWNLOAD_REQUIRED",
+      "terms": "https://esco.ec.europa.eu/en/use-esco/download/privacy-statement",
+      "api_probe": {
+        "status": "PROFILE_RESPONSE_VERIFIED",
+        "requested_version": "v1.2.0",
+        "response_version_verified": false,
+        "uri": "http://data.europa.eu/esco/occupation/528f90ed-e250-48bd-aacc-ffb7b1de5654",
+        "sha256": "c2b0cbca76c38461ec3c09bd4cdfeaf705b4c8a9c27f3d1e50e2f1f4a0253b29",
+        "link_keys": [
+          "broaderOccupation",
+          "hasEssentialSkill",
+          "hasOptionalSkill",
+          "isInScheme",
+          "regulatedProfessionNote",
+          "self"
+        ],
+        "bytes": 39398,
+        "note": "Not a full 1.2.1 dataset; no graph ingestion."
+      }
+    },
+    "rome": {
+      "terms": "https://www.francetravail.org/files/live/sites/peorg/files/documents/Statistiques-et-analyses/Open-data/ROME/rome_licence_ouverte.pdf",
+      "status": "METADATA_VERIFIED",
+      "license": "fr-lo",
+      "last_modified": "2026-10-20T07:43:13.300000+00:00",
+      "metadata_sha256": "eb1d4b61344d311f0fc899c2027df5303232958c33df4b00c8a08ac993fb7cdb",
+      "resources": [
+        {
+          "id": "05362f4e-5654-443d-9231-e2f5b4778365",
+          "title": "ROME - Engagements de service",
+          "format": "pdf",
+          "url": "https://www.francetravail.org/files/live/sites/peorg/files/documents/Statistiques-et-analyses/Open-data/ROME/engagements_pe_rome.pdf",
+          "last_modified": "2023-12-14T09:19:46+00:00",
+          "provider_check_available": false,
+          "provider_check_status": 409
+        },
+        {
+          "id": "88342be1-06b8-4ab6-8ce9-83e117d21346",
+          "title": "Les arborescences du ROME - Arborescence principale",
+          "format": "xlsx",
+          "url": "https://www.francetravail.org/files/live/sites/peorg/files/documents/Statistiques-et-analyses/Open-data/ROME/261014-rome_arboprincipale-octobre-2026.xlsx",
+          "last_modified": "2023-12-14T09:19:46+00:00",
+          "provider_check_available": false,
+          "provider_check_status": 409
+        },
+        {
+          "id": "155e8692-c6bd-4d6a-ab95-bd8f86c2c00a",
+          "title": "Les arborescences du ROME - Arborescence centres d'intérêt",
+          "format": "xlsx",
+          "url": "https://www.francetravail.org/files/live/sites/peorg/files/documents/Statistiques-et-analyses/Open-data/ROME/261014-rome_arbocentresdinteret-octobre-2026.xlsx",
+          "last_modified": "2023-12-14T09:19:46+00:00",
+          "provider_check_available": false,
+          "provider_check_status": 409
+        },
+        {
+          "id": "4c3e7dc9-a5d1-4b35-a339-f5e36d9197f7",
+          "title": "Les arborescences du ROME - Arborescence secteurs d'activité",
+          "format": "xlsx",
+          "url": "https://www.francetravail.org/files/live/sites/peorg/files/documents/Statistiques-et-analyses/Open-data/ROME/261014-rome_arbosecteursdactivite-octobre-2026.xlsx",
+          "last_modified": "2023-12-14T09:19:46+00:00",
+          "provider_check_available": false,
+          "provider_check_status": 409
+        },
+        {
+          "id": "3502f58a-b9a3-4a09-8ccc-fdeb42525b4e",
+          "title": "Les arborescences du ROME - Arborescence des compétences",
+          "format": "xlsx",
+          "url": "https://www.francetravail.org/files/live/sites/peorg/files/documents/Statistiques-et-analyses/Open-data/ROME/261014-rome_arbocompetences-octobre-2026.xlsx",
+          "last_modified": "2023-12-14T09:19:46+00:00",
+          "provider_check_available": false,
+          "provider_check_status": 409
+        },
+        {
+          "id": "7e0cf5b5-aed3-4b4b-881c-1e3578f15909",
+          "title": "Les arborescences du ROME - Arborescence simplifiée des compétences",
+          "format": "xlsx",
+          "url": "https://www.francetravail.org/files/live/sites/peorg/files/documents/Statistiques-et-analyses/Open-data/ROME/261014-arborescence-simplifiee-des-competences-26m10.xlsx",
+          "last_modified": "2026-10-20T07:40:22.158000+00:00",
+          "provider_check_available": false,
+          "provider_check_status": 409
+        },
+        {
+          "id": "a93b5a23-a049-4a7d-b4b1-7b5c1f9c7779",
+          "title": "Les arborescences du ROME - Arborescence des savoirs",
+          "format": "xlsx",
+          "url": "https://www.francetravail.org/files/live/sites/peorg/files/documents/Statistiques-et-analyses/Open-data/ROME/261014-rome_arbosavoir-octobre-2026.xlsx",
+          "last_modified": "2023-12-14T09:19:46+00:00",
+          "provider_check_available": false,
+          "provider_check_status": 409
+        },
+        {
+          "id": "4aebfcd3-b6e7-45dc-aa98-dc52111a7931",
+          "title": "Les arborescences du ROME - Arborescence des contextes de travail",
+          "format": "xlsx",
+          "url": "https://www.francetravail.org/files/live/sites/peorg/files/documents/Statistiques-et-analyses/Open-data/ROME/261014-rome_arbocontextedetravail-octobre-2026.xlsx",
+          "last_modified": "2023-12-14T09:19:46+00:00",
+          "provider_check_available": false,
+          "provider_check_status": 409
+        },
+        {
+          "id": "9ed5d77e-180f-4358-909c-91d64f277a49",
+          "title": "Fiches métiers",
+          "format": "pdf",
+          "url": "https://api.francetravail.fr/api-nomenclatureemploi/v1/open-data/pdf",
+          "last_modified": "2024-12-12T11:49:23.556116+00:00",
+          "provider_check_available": false,
+          "provider_check_status": 409
+        },
+        {
+          "id": "b5c2606a-0418-42b7-b2c9-fd43ddb8386d",
+          "title": "Les tags de fiches métier du ROME",
+          "format": "xlsx",
+          "url": "https://www.francetravail.org/files/live/sites/peorg/files/documents/Statistiques-et-analyses/Open-data/ROME/261014-fiches-rome-26m10-tag-pour-diffusion.xlsx",
+          "last_modified": "2023-12-14T09:19:46+00:00",
+          "provider_check_available": false,
+          "provider_check_status": 409
+        },
+        {
+          "id": "3cf88405-3362-417e-9dda-d93c31880b93",
+          "title": "Toutes les données du ROME",
+          "format": "xml",
+          "url": "https://api.francetravail.fr/api-nomenclatureemploi/v1/open-data/xml",
+          "last_modified": "2024-12-12T13:21:06.093254+00:00",
+          "provider_check_available": false,
+          "provider_check_status": 409
+        },
+        {
+          "id": "8cf674b6-ef21-446a-8190-178e2defd6fc",
+          "title": "Toutes les données du ROME",
+          "format": "csv",
+          "url": "https://api.francetravail.fr/api-nomenclatureemploi/v1/open-data/csv",
+          "last_modified": "2024-12-12T04:21:07.150200+00:00",
+          "provider_check_available": false,
+          "provider_check_status": 409
+        },
+        {
+          "id": "1c893376-8476-4262-9a0e-8df519883e1e",
+          "title": "Toutes les données du ROME",
+          "format": "json",
+          "url": "https://api.francetravail.fr/api-nomenclatureemploi/v1/open-data/json",
+          "last_modified": "2024-12-12T01:41:56.510299+00:00",
+          "provider_check_available": false,
+          "provider_check_status": 409
+        },
+        {
+          "id": "0c746141-b3fc-4e76-b12f-1263b259c981",
+          "title": "Documentation technique - Intègre maintenant les schémas de données ",
+          "format": "pdf",
+          "url": "https://www.francetravail.org/files/live/sites/peorg/files/documents/Statistiques-et-analyses/Open-data/ROME/open_data_v3.1.pdf",
+          "last_modified": "2023-12-14T09:19:46+00:00",
+          "provider_check_available": false,
+          "provider_check_status": 409
+        },
+        {
+          "id": "720ae7d1-f589-419c-ae8a-6c6bb343c3b1",
+          "title": "Les tables de correspondance ROME / autres référentiels - ROME/NAF",
+          "format": "xlsx",
+          "url": "https://www.francetravail.org/files/live/sites/peorg/files/documents/Statistiques-et-analyses/Open-data/ROME/261014-rome_arbosecteursnaf-octobre-2026.xlsx",
+          "last_modified": "2023-12-14T09:19:46+00:00",
+          "provider_check_available": false,
+          "provider_check_status": 409
+        },
+        {
+          "id": "21eb4c5f-cc47-4287-8737-929b72c4b767",
+          "title": "Les tables de correspondance ROME / autres référentiels - ROME/Formacode V14",
+          "format": "xlsx",
+          "url": "https://www.francetravail.org/files/live/sites/peorg/files/documents/Statistiques-et-analyses/Open-data/ROME/261014-ref-formacode-v14-rome-26m10-v62-pour-open-data.xlsx",
+          "last_modified": "2023-12-14T09:19:46+00:00",
+          "provider_check_available": false,
+          "provider_check_status": 409
+        },
+        {
+          "id": "f06af5cc-f710-448e-9ecc-d9d83500f183",
+          "title": "Les tables de correspondance ROME / autres référentiels - FAP / PCS / ROME",
+          "format": "html",
+          "url": "https://dares.travail-emploi.gouv.fr/donnees/la-nomenclature-des-familles-professionnelles-2021",
+          "last_modified": "2026-05-10T10:59:24.131707+00:00",
+          "provider_check_available": false,
+          "provider_check_status": 400
+        },
+        {
+          "id": "4402774f-fe5d-45e7-b907-dab59b403e8f",
+          "title": "CHANGELOG",
+          "format": "xlsx",
+          "url": "https://www.francetravail.org/files/live/sites/peorg/files/documents/Statistiques-et-analyses/Open-data/ROME/261014-changelogv61-v62.xlsx",
+          "last_modified": "2026-10-20T07:43:13.300000+00:00",
+          "provider_check_available": false,
+          "provider_check_status": 409
+        }
+      ],
+      "resource_count": 18,
+      "provider_unavailable_count": 18,
+      "probes": [
+        {
+          "id": "8cf674b6-ef21-446a-8190-178e2defd6fc",
+          "status": "BYTES_RECEIVED",
+          "content_type": "application/zip",
+          "format_check": "ZIP_CONTAINER",
+          "bytes": 4556970,
+          "sha256": "ae63cf9155c59710175ed214b9ad4310e5d52c88582eb9a8c90e8505cacf7fcb"
+        },
+        {
+          "id": "1c893376-8476-4262-9a0e-8df519883e1e",
+          "status": "BYTES_RECEIVED",
+          "content_type": "application/zip",
+          "format_check": "ZIP_CONTAINER",
+          "bytes": 5530686,
+          "sha256": "eaf2923df8b51b6d7819f21e5eedd2c8e1689ccb42d6f356770169bb3178432f"
+        }
+      ],
+      "ingestion": "NOT_VALIDATED"
+    },
+    "crosswalks": 0
+  }
+}

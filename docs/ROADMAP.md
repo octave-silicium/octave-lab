@@ -35,3 +35,6 @@ Les travaux transversaux continuent en parallèle ; les jalons ne certifient pas
 
 ## Discipline
 VALIDÉ = décision approuvée ; IMPLÉMENTÉ = code présent ; VÉRIFIÉ = preuve d'exécution et critères satisfaits ; BLOQUÉ = obstacle documenté ; PROPOSÉ = piste non approuvée. Les états peuvent coexister à des niveaux différents. Chaque jalon clôturé exige preuves, limites, chantiers ouverts et cohérence entre documentation stratégique et dépôt. Les analyses descriptives, hypothèses et conclusions causales restent séparées.
+
+## Actualisation des sources
+[DATA-REFRESH-001](DATA-REFRESH-001.md) : maximiser l'automatisation licite ; registre de fraîcheur, validation et versionnement à implémenter. ROME ZIP CSV/JSON récupérés automatiquement (parsing à faire), ESCO ZIP et Dares protégés en file manuelle.
