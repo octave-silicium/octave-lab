@@ -1,0 +1,31 @@
+name: OCTAVE LAB | G2 official work graph
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'pipeline/work_graph.py'
+      - 'tests/test_work_graph.py'
+      - '.github/workflows/work-graph.yml'
+permissions:
+  contents: read
+jobs:
+  work-graph:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Full regression suite
+        run: python -m unittest discover -s tests -v
+      - name: Load four official O*NET 31.0 CSVs
+        run: |
+          set -o pipefail
+          python -m pipeline.work_graph | tee work_graph_audit.json
+          python -c 'import json; d=json.load(open("work_graph_audit.json")); assert d["nodes"]["occupation"]==1016 and d["nodes"]["task"]==18838 and d["edges"]["TASK_DWA"]==24087 and d["impact_estimates"]==0'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: work-graph-audit
+          path: work_graph_audit.json
