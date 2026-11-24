@@ -95,34 +95,48 @@ def quarterly_urssaf(rows, required_periods=('2024Q4', '2025Q4', '2025Q2', '2026
 
 
 def quarterly_dpae(rows, required_periods=('2023Q4','2024Q4')):
-    """Distinct contract types only, same quarter comparison, before 2025 DPAE warnings."""
+    """NACE J = three nonoverlapping NA38 categories JA, JB, JC.
+
+    JA edition/audiovisual, JB telecom, JC IT services. Require both contract
+    types for every component, same-season comparison before DPAE 2025 errors.
+    """
     periods = defaultdict(dict)
+    sectors = {'JA','JB','JC'}
+    contracts = {'CDI', "CDD de plus d'un mois"}
     for row in rows:
-        if not row['secteur_na38'].startswith('JZ '):
+        sector_label = row['secteur_na38'].strip()
+        sector = sector_label.split(' ')[0]
+        if sector not in sectors:
             continue
         if row['duree_de_contrat'].strip() != "Contrat de plus d'un mois":
             continue
         contract = row['nature_de_contrat'].strip()
-        if contract not in ('CDI', "CDD de plus d'un mois"):
+        if contract not in contracts:
             continue
         p = f"{int(row['annee'])}Q{int(row['trimestre'])}"
         if p not in required_periods:
             continue
-        if contract in periods[p]:
-            raise ValueError('DUPLICATE_NA38_CONTRACT_CATEGORY')
-        periods[p][contract] = numeric(row['dpae_cvs'])
+        key = (sector, contract)
+        if key in periods[p]:
+            raise ValueError('DUPLICATE_NA38_COMPONENT_CONTRACT')
+        periods[p][key] = numeric(row['dpae_cvs'])
     result = {}
+    sector_detail = {}
+    expected = {(sector,contract) for sector in sectors for contract in contracts}
     for p in required_periods:
-        if set(periods[p]) != {'CDI', "CDD de plus d'un mois"}:
-            raise ValueError(f'MISSING_DPAE_CONTRACT_TYPES:{p}:{list(periods[p])}; sector_candidates='+str(sorted({r.get('secteur_na38','') for r in rows if 'Information' in r.get('secteur_na38','') or r.get('secteur_na38','').startswith('J')})[:12])+'; duration_candidates='+str(sorted({r.get('duree_de_contrat','') for r in rows})[:8])+'; nature_candidates='+str(sorted({r.get('nature_de_contrat','') for r in rows})[:8]))
+        if set(periods[p]) != expected:
+            missing = sorted(expected-set(periods[p]))
+            raise ValueError(f'MISSING_NA38_COMPONENTS:{p}:{missing}')
         result[p] = round(sum(periods[p].values()))
+        sector_detail[p] = {sec:round(sum(v for (s,c),v in periods[p].items() if s == sec)) for sec in sorted(sectors)}
     return {
        'unit': 'DPAE declarations for CDI and CDD >1 month, seasonally adjusted',
-       'classification': 'NA38 JZ Information et communication (activity of employer)',
+       'classification': 'NA38 JA (editing/audio-visual), JB (telecom), JC (IT); three components of NACE J',
        'geography': 'France entière, Urssaf DPAE field',
        'selected_periods': result,
+       'subsector_decomposition': sector_detail,
        'change_2024Q4_vs_2023Q4_pct': round(100*(result['2024Q4']/result['2023Q4']-1),2),
-       'method': 'Sum CDI and CDD >1 month at quarterly NA38 JZ; avoid 2025 periods affected by declaration anomalies',
+       'method': 'Sum exactly 3 NA38 components times 2 nonoverlapping contract types, no 2025 periods',
        'quality_gate': 'PRELIMINARY: first-vintage descriptive only; not actual hires and not net employment',
     }
 
@@ -225,7 +239,7 @@ Que disent trois indicateurs différents sur les entreprises du secteur informat
 - T2 2026 vs T2 2025 : **{u['change_2026Q2_vs_2025Q2_pct']:+.2f} %**.
 - Définition : secteur privé couvert par l'Urssaf ; activités d'employeurs NACE 58 à 63, non métiers du numérique. Première collecte, révisions à surveiller.
 
-## 2 · Déclarations préalables à l'embauche (Urssaf, NA38 JZ)
+## 2 · Déclarations préalables à l'embauche (Urssaf, NA38 JA+JB+JC)
 - T4 2023 : **{d['selected_periods']['2023Q4']:,.0f}** déclarations CVS de CDI et CDD de plus d'un mois.
 - T4 2024 : **{d['selected_periods']['2024Q4']:,.0f}** déclarations CVS de même catégorie.
 - Variation descriptive : **{d['change_2024Q4_vs_2023Q4_pct']:+.2f} %**.

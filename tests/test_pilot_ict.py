@@ -22,8 +22,20 @@ class PilotTests(unittest.TestCase):
         rows.append(rows[0].copy())
         with self.assertRaises(ValueError):quarterly_urssaf(rows)
     def test_dpae_requires_both_contracts(self):
-        rows=[{'annee':'2023','trimestre':'4','secteur_na38':'JZ Test','duree_de_contrat':"Contrat de plus d'un mois",'nature_de_contrat':'CDI','dpae_cvs':'100'}]
+        rows=[{'annee':'2023','trimestre':'4','secteur_na38':'JC Activités informatiques','duree_de_contrat':"Contrat de plus d'un mois",'nature_de_contrat':'CDI','dpae_cvs':'100'}]
         with self.assertRaises(ValueError):quarterly_dpae(rows)
+    def test_dpae_three_components_six_contract_cells(self):
+        rows=[]
+        for year in [2023,2024]:
+            for code in ['JA','JB','JC']:
+                for nature in ['CDI',"CDD de plus d'un mois"]:
+                    rows.append({'annee':str(year),'trimestre':'4',
+                        'secteur_na38':code+' Test',
+                        'duree_de_contrat':"Contrat de plus d'un mois",
+                        'nature_de_contrat':nature,'dpae_cvs':'10'})
+        r=quarterly_dpae(rows)
+        self.assertEqual(r['selected_periods']['2023Q4'],60)
+        self.assertEqual(r['subsector_decomposition']['2024Q4'],{'JA':20,'JB':20,'JC':20})
     def test_eurostat_flatten(self):
         data={'id':['geo','time'],'size':[2,2],'dimension':{'geo':{'category':{'index':{'FR':0,'DE':1}}},'time':{'category':{'index':{'2024':0,'2025':1}}}},'value':{'0':11,'1':12,'2':31,'3':32}}
         self.assertEqual(eurostat_value(data,{'geo':'FR','time':'2025'}),12)
