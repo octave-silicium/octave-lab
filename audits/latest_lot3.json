@@ -1,0 +1,1298 @@
+{
+  "observed_at_utc": "2026-11-24T04:49:40.579130+00:00",
+  "analysis_level": "DESCRIPTIVE_SOURCE_QUALIFICATION_ONLY",
+  "no_raw_data_published": true,
+  "source_count": 4,
+  "sources": {
+    "insee_employment": {
+      "result": "XLSX_SEMANTIC_METADATA_PARSED",
+      "evidence": {
+        "sha256": "a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48",
+        "bytes": 51977,
+        "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+        "url": "https://www.insee.fr/fr/statistiques/fichier/2496914/econ-gen-empl-salarie-trim.xlsx"
+      },
+      "detail": {
+        "status": "SEMANTIC_PROFILING_ONLY",
+        "shared_string_entries": 71,
+        "sheets": [
+          {
+            "worksheet": "xl/worksheets/sheet1.xml",
+            "physical_rows": 21,
+            "cells": 15365,
+            "nonempty_cells": 1718,
+            "numeric_cells": 1500,
+            "max_column_number": 1024,
+            "heading_samples": [
+              {
+                "row": 1,
+                "cells": [
+                  {
+                    "col": "A1",
+                    "kind": "label",
+                    "label": "Emploi salarié par secteur"
+                  }
+                ]
+              },
+              {
+                "row": 3,
+                "cells": [
+                  {
+                    "col": "A3",
+                    "kind": "label",
+                    "label": "en milliers"
+                  }
+                ]
+              },
+              {
+                "row": 4,
+                "cells": [
+                  {
+                    "col": "A4",
+                    "kind": "label",
+                    "label": "Secteur "
+                  },
+                  {
+                    "col": "B4",
+                    "kind": "label",
+                    "label": "2014-T1"
+                  },
+                  {
+                    "col": "E4",
+                    "kind": "label",
+                    "label": "2014-T2"
+                  },
+                  {
+                    "col": "H4",
+                    "kind": "label",
+                    "label": "2014-T3"
+                  },
+                  {
+                    "col": "K4",
+                    "kind": "label",
+                    "label": "2014-T4"
+                  },
+                  {
+                    "col": "N4",
+                    "kind": "label",
+                    "label": "2015-T1"
+                  },
+                  {
+                    "col": "Q4",
+                    "kind": "label",
+                    "label": "2015-T2"
+                  },
+                  {
+                    "col": "T4",
+                    "kind": "label",
+                    "label": "2015-T3"
+                  }
+                ]
+              },
+              {
+                "row": 5,
+                "cells": [
+                  {
+                    "col": "B5",
+                    "kind": "label",
+                    "label": "Évolution sur trois mois"
+                  },
+                  {
+                    "col": "C5",
+                    "kind": "label",
+                    "label": "Évolution sur un an"
+                  },
+                  {
+                    "col": "D5",
+                    "kind": "label",
+                    "label": "Emploi salarié"
+                  },
+                  {
+                    "col": "E5",
+                    "kind": "label",
+                    "label": "Évolution sur trois mois"
+                  },
+                  {
+                    "col": "F5",
+                    "kind": "label",
+                    "label": "Évolution sur un an"
+                  },
+                  {
+                    "col": "G5",
+                    "kind": "label",
+                    "label": "Emploi salarié"
+                  },
+                  {
+                    "col": "H5",
+                    "kind": "label",
+                    "label": "Évolution sur trois mois"
+                  },
+                  {
+                    "col": "I5",
+                    "kind": "label",
+                    "label": "Évolution sur un an"
+                  }
+                ]
+              },
+              {
+                "row": 6,
+                "cells": [
+                  {
+                    "col": "A6",
+                    "kind": "label",
+                    "label": "Agriculture"
+                  },
+                  {
+                    "col": "B6",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "C6",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "D6",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "E6",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "F6",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "G6",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "H6",
+                    "kind": "numeric",
+                    "label": null
+                  }
+                ]
+              },
+              {
+                "row": 7,
+                "cells": [
+                  {
+                    "col": "A7",
+                    "kind": "label",
+                    "label": "Industrie"
+                  },
+                  {
+                    "col": "B7",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "C7",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "D7",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "E7",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "F7",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "G7",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "H7",
+                    "kind": "numeric",
+                    "label": null
+                  }
+                ]
+              },
+              {
+                "row": 8,
+                "cells": [
+                  {
+                    "col": "A8",
+                    "kind": "label",
+                    "label": "   dont industrie manufacturière"
+                  },
+                  {
+                    "col": "B8",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "C8",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "D8",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "E8",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "F8",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "G8",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "H8",
+                    "kind": "numeric",
+                    "label": null
+                  }
+                ]
+              },
+              {
+                "row": 9,
+                "cells": [
+                  {
+                    "col": "A9",
+                    "kind": "label",
+                    "label": "Construction"
+                  },
+                  {
+                    "col": "B9",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "C9",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "D9",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "E9",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "F9",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "G9",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "H9",
+                    "kind": "numeric",
+                    "label": null
+                  }
+                ]
+              },
+              {
+                "row": 10,
+                "cells": [
+                  {
+                    "col": "A10",
+                    "kind": "label",
+                    "label": "Tertiaire marchand"
+                  },
+                  {
+                    "col": "B10",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "C10",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "D10",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "E10",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "F10",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "G10",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "H10",
+                    "kind": "numeric",
+                    "label": null
+                  }
+                ]
+              },
+              {
+                "row": 11,
+                "cells": [
+                  {
+                    "col": "A11",
+                    "kind": "label",
+                    "label": "   dont intérim1"
+                  },
+                  {
+                    "col": "B11",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "C11",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "D11",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "E11",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "F11",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "G11",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "H11",
+                    "kind": "numeric",
+                    "label": null
+                  }
+                ]
+              },
+              {
+                "row": 12,
+                "cells": [
+                  {
+                    "col": "A12",
+                    "kind": "label",
+                    "label": "Tertiaire non marchand"
+                  },
+                  {
+                    "col": "B12",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "C12",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "D12",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "E12",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "F12",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "G12",
+                    "kind": "numeric",
+                    "label": null
+                  },
+                  {
+                    "col": "H12",
+                    "kind": "numeric",
+                    "label": null
+                  }
+                ]
+              }
+            ],
+            "label_samples": [
+              {
+                "row": 1,
+                "column": 1,
+                "label": "Emploi salarié par secteur"
+              },
+              {
+                "row": 3,
+                "column": 1,
+                "label": "en milliers"
+              },
+              {
+                "row": 4,
+                "column": 1,
+                "label": "Secteur"
+              },
+              {
+                "row": 4,
+                "column": 2,
+                "label": "2014-T1"
+              },
+              {
+                "row": 5,
+                "column": 2,
+                "label": "Évolution sur trois mois"
+              },
+              {
+                "row": 5,
+                "column": 3,
+                "label": "Évolution sur un an"
+              },
+              {
+                "row": 5,
+                "column": 4,
+                "label": "Emploi salarié"
+              },
+              {
+                "row": 6,
+                "column": 1,
+                "label": "Agriculture"
+              },
+              {
+                "row": 7,
+                "column": 1,
+                "label": "Industrie"
+              },
+              {
+                "row": 8,
+                "column": 1,
+                "label": "dont industrie manufacturière"
+              },
+              {
+                "row": 9,
+                "column": 1,
+                "label": "Construction"
+              },
+              {
+                "row": 10,
+                "column": 1,
+                "label": "Tertiaire marchand"
+              },
+              {
+                "row": 11,
+                "column": 1,
+                "label": "dont intérim1"
+              },
+              {
+                "row": 12,
+                "column": 1,
+                "label": "Tertiaire non marchand"
+              },
+              {
+                "row": 13,
+                "column": 1,
+                "label": "Ensemble"
+              },
+              {
+                "row": 14,
+                "column": 1,
+                "label": "Secteur privé"
+              },
+              {
+                "row": 15,
+                "column": 1,
+                "label": "Fonction publique"
+              },
+              {
+                "row": 16,
+                "column": 1,
+                "label": "1. Les intérimaires sont comptabilisés dans le secteur tertiaire quel que soit le secteur dans lequel ils effe"
+              },
+              {
+                "row": 17,
+                "column": 1,
+                "label": "Note : données révisées ; données corrigées des variations saisonnières en fin de trimestre."
+              },
+              {
+                "row": 18,
+                "column": 1,
+                "label": "Lecture : au 2e trimestre 2026, les destructions nettes d’emploi salarié dans le tertiaire marchand sont de 8 "
+              },
+              {
+                "row": 19,
+                "column": 1,
+                "label": "Champ : France hors Mayotte, personnes de 15 ans ou plus."
+              },
+              {
+                "row": 20,
+                "column": 1,
+                "label": "Sources : Insee, estimations d'emploi ; estimations trimestrielles Acoss-Urssaf, Dares, Insee."
+              }
+            ],
+            "year_period_tokens": [
+              {
+                "cell": "B4",
+                "label": "2014-T1"
+              },
+              {
+                "cell": "E4",
+                "label": "2014-T2"
+              },
+              {
+                "cell": "H4",
+                "label": "2014-T3"
+              },
+              {
+                "cell": "K4",
+                "label": "2014-T4"
+              },
+              {
+                "cell": "N4",
+                "label": "2015-T1"
+              },
+              {
+                "cell": "Q4",
+                "label": "2015-T2"
+              },
+              {
+                "cell": "T4",
+                "label": "2015-T3"
+              },
+              {
+                "cell": "W4",
+                "label": "2015-T4"
+              },
+              {
+                "cell": "Z4",
+                "label": "2016-T1"
+              },
+              {
+                "cell": "AC4",
+                "label": "2016-T2"
+              },
+              {
+                "cell": "AF4",
+                "label": "2016-T3"
+              },
+              {
+                "cell": "AI4",
+                "label": "2016-T4"
+              },
+              {
+                "cell": "AL4",
+                "label": "2017-T1"
+              },
+              {
+                "cell": "AO4",
+                "label": "2017-T2"
+              },
+              {
+                "cell": "AR4",
+                "label": "2017-T3"
+              },
+              {
+                "cell": "AU4",
+                "label": "2017-T4"
+              },
+              {
+                "cell": "AX4",
+                "label": "2018-T1"
+              },
+              {
+                "cell": "BA4",
+                "label": "2018-T2"
+              },
+              {
+                "cell": "BD4",
+                "label": "2018-T3"
+              },
+              {
+                "cell": "BG4",
+                "label": "2018-T4"
+              },
+              {
+                "cell": "BJ4",
+                "label": "2019-T1"
+              },
+              {
+                "cell": "BM4",
+                "label": "2019-T2"
+              },
+              {
+                "cell": "BP4",
+                "label": "2019-T3"
+              },
+              {
+                "cell": "BS4",
+                "label": "2019-T4"
+              },
+              {
+                "cell": "BV4",
+                "label": "2020-T1"
+              },
+              {
+                "cell": "BY4",
+                "label": "2020-T2"
+              },
+              {
+                "cell": "CB4",
+                "label": "2020-T3"
+              },
+              {
+                "cell": "CE4",
+                "label": "2020-T4"
+              },
+              {
+                "cell": "CH4",
+                "label": "2021-T1"
+              },
+              {
+                "cell": "CK4",
+                "label": "2021-T2"
+              },
+              {
+                "cell": "CN4",
+                "label": "2021-T3"
+              },
+              {
+                "cell": "CQ4",
+                "label": "2021-T4"
+              },
+              {
+                "cell": "CT4",
+                "label": "2022-T1"
+              },
+              {
+                "cell": "CW4",
+                "label": "2022-T2"
+              },
+              {
+                "cell": "CZ4",
+                "label": "2022-T3"
+              },
+              {
+                "cell": "DC4",
+                "label": "2022-T4"
+              },
+              {
+                "cell": "DF4",
+                "label": "2023-T1"
+              },
+              {
+                "cell": "DI4",
+                "label": "2023-T2"
+              },
+              {
+                "cell": "DL4",
+                "label": "2023-T3"
+              },
+              {
+                "cell": "DO4",
+                "label": "2023-T4"
+              }
+            ],
+            "unit_and_definition_clues": [
+              "Emploi salarié par secteur",
+              "en milliers",
+              "Secteur",
+              "Emploi salarié",
+              "Emploi salarié",
+              "Emploi salarié",
+              "Emploi salarié",
+              "Emploi salarié",
+              "Emploi salarié",
+              "Emploi salarié",
+              "Emploi salarié",
+              "Emploi salarié",
+              "Emploi salarié",
+              "Emploi salarié",
+              "Emploi salarié",
+              "Emploi salarié",
+              "Emploi salarié",
+              "Emploi salarié",
+              "Emploi salarié",
+              "Emploi salarié",
+              "Emploi salarié",
+              "Emploi salarié",
+              "Emploi salarié",
+              "Emploi salarié"
+            ],
+            "join_gate": "BLOCKED_PENDING_ROW_COLUMN_DICTIONARY_AND_UNIT_VALIDATION"
+          }
+        ],
+        "economic_values_published": false
+      },
+      "ready_for_economic_join": false
+    },
+    "urssaf_dpae_monthly": {
+      "result": "DPAE_PERIODS_AND_PROVENANCE_VALIDATED_NOT_ECONOMICALLY_CLEARED",
+      "evidence": {
+        "sha256": "e0789b561ae47d5ce444e8f87f84fd2d076a3c460fba4a54f1cb6de7027a4a7b",
+        "bytes": 46316,
+        "content_type": "text/csv; charset=utf-8",
+        "url": "https://open.urssaf.fr/api/explore/v2.1/catalog/datasets/dpae-mensuelles-france-entiere/exports/csv?use_labels=false"
+      },
+      "detail": {
+        "total_rows": 642,
+        "min_period": "2000-01",
+        "max_period": "2026-09",
+        "distinct_dimension_counts": {
+          "nature_de_contrat": 2,
+          "duree_de_contrat": 1
+        },
+        "measure_parse_warnings": 0,
+        "period_count": 321,
+        "historically_flagged_periods": {
+          "2025-04": {
+            "row_count": 2,
+            "sha256": "0577705c7e9395081d227a15e452ba22e64b8b0ae9d62397812080e82c8cd537"
+          },
+          "2025-05": {
+            "row_count": 2,
+            "sha256": "bdf0938a533463448eccc90046bdb407384d1668358aaf8468a59a822d157824"
+          },
+          "2025-06": {
+            "row_count": 2,
+            "sha256": "490a058222968b373f58a89ba435effefa6dc52ae983ba454060da544520eb3e"
+          },
+          "2025-07": {
+            "row_count": 2,
+            "sha256": "326782edade3cc08ef684b8130313cb5e754104b0e5e50b78eb3f93c92d3d754"
+          },
+          "2025-08": {
+            "row_count": 2,
+            "sha256": "0642d64232a19c0996dd357df69eb27008ae85af82cfc3388fd04c859e7ed354"
+          },
+          "2025-09": {
+            "row_count": 2,
+            "sha256": "2aa700a7ca1bd07dea3a90db43b38f909a1c7dad06dda6933e728d9c8ec6a62a"
+          }
+        },
+        "period_hashes": {
+          "2000-01": "7a87e94a08f95f378f05a2064029f9a66d7913ef8389d3bd495f9c82c9ea6b6c",
+          "2000-02": "6673cff33a899f880638197fa60547f89b9c907265916b828041c6ce5dde9a93",
+          "2000-03": "a4aa9655cd93c65ac86c7bb5015d9bf78c3b214cc6a8b7923f7ec725244aed1a",
+          "2000-04": "9bb0cf8b137e5f87036e3986b05fa37b37562b3f042d33e0ef9776e5f8dfeb43",
+          "2000-05": "6b61f2b96362658cf87706e4410c894246a3671db127cfc3d035f3ab9066895a",
+          "2000-06": "c9df77f987b31bb31a90daf9e6fcd356af8178ff7cd0c1530c7b5f084b23abae",
+          "2000-07": "e2e5b92ffc3b80e18c92bb1dd4579a6d66bbd87c7937aae519a646777b252d8a",
+          "2000-08": "6324d3e305f0d68167da02cb45b2fd7d4c2a2b7e31b38553b0b683a8d33b5399",
+          "2000-09": "2d12d93e530b9854aa636591d76014c356f1285d1825ac9ecd522bfb7f5889f7",
+          "2000-10": "7a9c7b9ebfd428ace832992d2bc9f9e856374f6458b3b913c0f5e8c5c86ccca1",
+          "2000-11": "eb0d36e87e76b178416e3f01ffe90a8b001a8ab3ef8f2397ab1b29e0c9bd9033",
+          "2000-12": "40a2773d228962ee8b79cc18a2d61e1381332a2be811bfa4a9895158a143374c",
+          "2001-01": "40e015e0d7e33411dac95d67a45bd1dd170caaa404904422e40b0f905a95ab2b",
+          "2001-02": "1d4d5456b63b1fe1baaf653e21d7cc9684dee2e5b6bce2af6a0f1c71f101d3c2",
+          "2001-03": "2ea680f26b73c5da35d36437b6041535d0af42d948123e846936ac478822d978",
+          "2001-04": "f38812eb21076355e3f3f6be2b2efb6e8f67db5ebff3c15f946a95bd6a0e2328",
+          "2001-05": "beafbdc888a824fb7848a8c5898619d5d7a2c61ed14256057a8aaec0e7e1418c",
+          "2001-06": "034b404e3c222e33a0f52c16cc793f1fb2aa832440db713e46197a4432797e3f",
+          "2001-07": "aa1b4776f22ada48c0588f0ac73d3176ed5cf6f75947e6edd03646efae56a877",
+          "2001-08": "fd7ba26f517d4c25bf75cc240a1667cb45c46dd8958fe60eda486197af80c806",
+          "2001-09": "d4742e1cc445a4c64715aa1b77394fa05b2f95bb797ac7c3cdc966a4cd8e5279",
+          "2001-10": "69fbd0f8b2ed960b0f589c1cf52227f0a8b67da1f706ca86c72e78e1c2cb05c8",
+          "2001-11": "9ee9bb5d7dc8c5395df03796db2e98a87e888766e77a86a113f174bc462031a2",
+          "2001-12": "b129e1b9c97cc42ea861224ba83932aba51fb540087d493afd47913bd208e796",
+          "2002-01": "ffa1c2401033846c13eb7464c9122acc4e3af736d628f257005b92033db8612e",
+          "2002-02": "adb183f4d864c08f0ed05515bd6a83646d0789906fd1b9fd312db4806e38f9df",
+          "2002-03": "40f0a380be69c1f77a8cdc023314dda7db03fdad221db548da456de1995a6c97",
+          "2002-04": "281f2d853257225b7ec5594623874203bd23e8c4e0686c8fd1ee7b1f13b1b4e9",
+          "2002-05": "f8307511e071ef65786e2c35b2afe98b7e12b1d1703671dd2840be18c126b8b8",
+          "2002-06": "ced606c149730af269bfed9a21bbdb17b7153c5b8b39064bb44f01caf27ac882",
+          "2002-07": "a47f56d81e62c5ae1757e8ac8686ffbba2863e1d38792d29f58b53fd8b846348",
+          "2002-08": "5a3f692c56dd7027dded59d869545980808735464ca4147682697ee4b9fd25c8",
+          "2002-09": "c5ece45040d284afd9f508ae72b7b8dd2fffa71d9608cee8d2d267d7b434b11d",
+          "2002-10": "4f78287eeef2a7cc77a0b1b4f6a5aaec91115e3063d51b9237af632e411162b7",
+          "2002-11": "85cf811c02ea44897e2c7d6dd6d8c44977080dae60db5f3af15a1aa59a3e4e1d",
+          "2002-12": "83bc06cda8afaa8850ee72a06bd89ddc601d4afb124811797bc3d73eee6f8853",
+          "2003-01": "737df98ca546599c3109a57b93290371ba8c073d743d4480bc1db2685c900b57",
+          "2003-02": "1b9751b1cbdbdc17d05f45362975a1191620a23d20bd8b0ca462c66801b46d77",
+          "2003-03": "70cb975bc4bf1149ed75fe7f6dca2a73d972d69d6a5f72805c5f764841fdb845",
+          "2003-04": "be508de5192da9a2e2be43f175eaf669a037d6c8dd1a8ccb9df1f40b4fc65ae3",
+          "2003-05": "5a09b59b6e398681285bac66bcadaae43c397cb0ff80aac65d10a753e3c51cf1",
+          "2003-06": "d56ebc3bf8f6e92e0da0cdb3230a4351908de373ef2cc9cadc786a92782f681c",
+          "2003-07": "0255c20be7e83a1084e9caa53d0d1016d83d5496fe2aa8159d4f9473c2f56f57",
+          "2003-08": "fc4b2a6a6af2df7997a0fd56c2ab1b821864aafec12daa4f57fda2bb0540c0c2",
+          "2003-09": "79d261d379a75c8cb75778e769b49493df410afa6fd644d72917b356e1a41a47",
+          "2003-10": "f8ffbf6a0744d93f3ce3bbe8b65f5e086de9d657dc97411ed295c4fe2b395673",
+          "2003-11": "ed793198a46007edc47a4eff784650ff8a0ff2f541934c15faf4d8d455423f82",
+          "2003-12": "b6358fff97d0467f971f35b03d0ffe2bc41071bd7aac76376e681906a3ef73ca",
+          "2004-01": "ef86fb8b924f3a378aa30db0478989d2b0fe41211eccc2ba28e9b10b3cbeee8d",
+          "2004-02": "a4afacd388f5487254c29ecd1f1792295675895e256fbd4edc712c9aea96a5b6",
+          "2004-03": "8fa814be5ea7f58a310f6c3f9bb6dd2b133b15d5f0ecb20c863e1f396b9d0383",
+          "2004-04": "561af18b89838b22b71151d11369baf9f066a86ebd5808181255ca4e4e0f8d92",
+          "2004-05": "03845e34bda5793bcf2430dc03d6c240e889abb87876d5349a0258787a727c1c",
+          "2004-06": "18f84fa639be49292b978d9db862d7ca34b6683162f68aa8ffeeac0729c9cca3",
+          "2004-07": "b108e2b686d3abcc948e2f25da3e792de587b3a2b99743342f1475cbfe2743ba",
+          "2004-08": "d033a4eaa87c3e46a390d89e7c8b25db7274c97cf84cab5d6cfd260ec777c672",
+          "2004-09": "c38f38e043ea01a5aed9f65e1874f34afdd86630688a46ffdf8bac3d042abfa5",
+          "2004-10": "d2fa0301e6c3f4a11244cad5e895f10672d25f87b9c307e5c2925317cb2bcd76",
+          "2004-11": "54730cc41a0114d8405e4f71264eb4cf80979da627e99d1799658bf2fa0021e7",
+          "2004-12": "ce90605109fe098f50480706a7140cf0baf0b10ed2221058d85004fca6cec00f",
+          "2005-01": "0196892b00d75f9fe02210a6633997a4be91e453241b92260f4727c0c14b9be2",
+          "2005-02": "0f235f78749bfd76424715334aed58399053ba83b38fd310d06f25b792c881ed",
+          "2005-03": "4071a03f65f75173664110ba6254aaacb4878e030a51a1ca9c05f89c400e70de",
+          "2005-04": "580ad643ab726fb92bb91cd368aa445ccd748496cd276b37010afa7a3da33683",
+          "2005-05": "bccb0dd76a7d87b56f86c150bae90b78c1dcd586ca3d6e9df8a5a0b226ec506b",
+          "2005-06": "b8a1bfc18cbdfa417548f6cb82b07c5441713cd554f6a3377faea4ae1a42fdaf",
+          "2005-07": "8f67a135ba20d30d05c3fa8f0525cb208132b19e50a6bc8d03a52a6b0674a67d",
+          "2005-08": "5f9fbaf246989ef6de65d437ac9142e72e1e525901f480f24708eb048dfbeb80",
+          "2005-09": "0ca9f012299759c12062dac4e9eef2a3bddad6e293de91e39a069bd502bb4394",
+          "2005-10": "0126ce2c834764a96c7cec348b34e6e359028b5cd31d40542577b13006c867f0",
+          "2005-11": "1fd0f0241e1991fb2e47d5b827b84616fed5829355cee96f11a4ad8fdc0d3739",
+          "2005-12": "096716ffeccf51786e2e0601ee63c8876c6b536210f87258554673ef28a7a7f3",
+          "2006-01": "eb08de23c64b605f6e5d1f8063d845891bd1f977d18042abac0cc3afa3d59dc4",
+          "2006-02": "de4c96e9dc8880dd3842570650379a4f5a0838b80dfb0d98390d1ae56c0e5e81",
+          "2006-03": "cce72e847ee84f4e902e60cff4dd2c7cd26520d0d8d2cab5f49328fdfb476aca",
+          "2006-04": "9645dd25e375f5254ccd676bbe20f56b4e437991e2831d614387d2230fb5ef06",
+          "2006-05": "dd19741889a164cab4373f5e5af3ada64d12f29e1c3e08e35e8e58bdbb4c4c41",
+          "2006-06": "48d531d8fc7a808a0e57ed1f1ee278431ff2616f5517bb0e603588b2adb95ef3",
+          "2006-07": "6d70076cb75e2fd42f0fcff533611dd527cd8452c23551f804049bf07198a38b",
+          "2006-08": "217fa57b1bad8baf18e116bdca8a3a27f8cfa718c44bb673a83975b3e082e98f",
+          "2006-09": "1d60a8dba3a44792e055835f840f4281f7c2b293c53467ab78d0d4138d7f0a19",
+          "2006-10": "43d11d37dff658a32f2d567893e72fa22981ba3bb283caee416ec0a667a84527",
+          "2006-11": "db905bf4167c05602ba80c4726c738040ecc11fdc414ee64dddd37b4970f5573",
+          "2006-12": "b88859dce914b5a002ec7707af6c8a3f8d60c894a847953b8e0dcd82b6d816bf",
+          "2007-01": "802a46f093a054ff134617319e7a170006746f6b8aaa8e6518c4eb492b0cf25e",
+          "2007-02": "af106ecb46502008013b8988acaa8eb93d2356e1f05e8bafc0a2c000794cdbab",
+          "2007-03": "060a5907c3eaaeaf67bfb130c539832173ee39ffd24c6d33101223dc712166a8",
+          "2007-04": "10f77ef26f8c0c4899042abb7252bd86251fde0d6f9560beb16b262e6338447f",
+          "2007-05": "dce14ce51a6c323fdbbbe2badf767661d2ad1f4f000230dac0a493a2bc5403be",
+          "2007-06": "bc5011db23b1019c322b39829b01df39d07333c4aff3d6fbf2e0ab12dc8b8cd7",
+          "2007-07": "1a2c19be381bbf30553a3866c86444aa0f7c02df7c63df0f4ca6decc8709015a",
+          "2007-08": "cbfa022dadae3cf0b5b38993a34334f7fcf838a318de5c05bc47e717b0f5b02d",
+          "2007-09": "7671a927d0981c9da33ddfcb9f328438d94d78db648bdc8b4f0e205536109a4f",
+          "2007-10": "57762deb7db1266761a86a35b0cf9bc5c629d4991d125b2447cfe99cbc72b9f7",
+          "2007-11": "f0a8c59c60620b310b2ac93c68fef94a34825c3a7fb6aec090971ecb5cb03fc9",
+          "2007-12": "a8eb7878141a934a8c5a428f2ca55cf715b43883c5ce3bc879472eefc24173d5",
+          "2008-01": "9b50dbae09eca658310563a8235faf6d59f38d34c30237a7a7d888216fd1499a",
+          "2008-02": "2abaf78e33413f4ef03ba2372740822bb21655cf61be2d7d0fcb4048c033c0cb",
+          "2008-03": "b762b2e070defb0211fea5f6140273ee5c74218f128037527385e19bd18d0e5e",
+          "2008-04": "0b273bca72e02ec77d56943f766a2d79184fb9d1a7943b0b3084b3624e0358a6",
+          "2008-05": "f8ca6317753167aaa8fc6f69777db3a85601897537552454d997fc1cb976b5de",
+          "2008-06": "869f696c718b959c94cc73001ad3e60c546e1373c951c21c22f8e916c8fa615a",
+          "2008-07": "87d5642ea9dbfa8eb5dc9353c4060154e1f8e07cf5a282c000a258b3eaf60240",
+          "2008-08": "659473859367fe18e6e02d85ee95983ea53636bad20c2ac817af5fe40403a8ff",
+          "2008-09": "4bc6b0639eef8d7900162bf2d2a6ec43a5934316f710cd8b733f2cfa64c5cbb0",
+          "2008-10": "40c7fccab7d9cb85028402c8a2ca0737ff9e1554e0757083cc747fe46fc1b202",
+          "2008-11": "40fecb7c83d121d4bbe8bb1c3879abdc8df8205e38273a47aab166994a8df275",
+          "2008-12": "51684703444925068441998ae258f60cb2bcada194dd9ebcc52270312a35894b",
+          "2009-01": "639ca1642fc498913953f6ed5e78159a2cac1252465363eac06637316db70fc9",
+          "2009-02": "c464a09cc743fe27cf0df8f926013c6f2ebcf7997869424fdf7e13e666708c55",
+          "2009-03": "44ad79fe14779cdc826197ca6d74522978d121e2845554e69704a82681fd8e2e",
+          "2009-04": "96bd1ad06bff88858e4f8481d372d29720b1e3a80a79900a39f82de2e050185a",
+          "2009-05": "253b551eb5dc7f89f02afa0aeb865a47eccb71e2f0c1f76311262304595c8fc1",
+          "2009-06": "e05206c9c57e87f7581b4b33ac6e8925c00257b19a35059cf78c867fbafc8531",
+          "2009-07": "d9e908653cfa30bddc9002d231f5052d074fc0ec5224efc09f9a3f1bd60e205c",
+          "2009-08": "461510fcf612c588edb289cef5d68ae706279e773ace0dc2cdd88662cac89286",
+          "2009-09": "36394758b28e236ca601d6637a7ef8c8b80123f5abf6facb4bcc01a07d5fd9cb",
+          "2009-10": "d4190617b3033673c7272c88e44479c0f8e5c01ddddd549ad56d0e1cc956e1aa",
+          "2009-11": "f9a377ae4e22790b8002fc666c29cd9effcefd28064d6cc8c9eee71b26a92186",
+          "2009-12": "d529097debfa6d8d88c9d669efad09168a046a02a535b8c1785a795e38ba8eac",
+          "2010-01": "38f5870d6143bdf442cd1d25bdb420e2802f226ef2d1e36e255af43b01b4fbf4",
+          "2010-02": "5c7a041a77cf67f83a9669cdd10fa11c5a96c41c9b4da8cfa338444a5e9d0321",
+          "2010-03": "84e8145d011ea5208aaac9083f11d30714ae4cd9f5b264c5578ab7f670f7a6a2",
+          "2010-04": "55400b4349aa713f2ede3d68889e83293d7bfde9bcd4ab4da2e790b46c90dada",
+          "2010-05": "fe9767eff33c6739f2ae7e35e3be63bc386a67c313abfa6fe50060927b762008",
+          "2010-06": "7bea3a7180d5802ed55f07bcb241579d1dc79372d858de17f68ad04b28e272b9",
+          "2010-07": "35878b05f59c3e12f297eccf224ae83439b6495cd6cef8c5061573c674b2b7ad",
+          "2010-08": "7a87408bfa94a1c03d0d9f31fb09aa31a406b833c1b78e68abefc3242660c416",
+          "2010-09": "1413909def7db5512d3c0c60f5a7ac3f383b0872ef157d03edf4ab1ccb498261",
+          "2010-10": "90d534e5eeed4ee60372690da909125ef43d1f4f96d4493fd72edfae6c6a53e4",
+          "2010-11": "bd38038a49c01efe9b911ea0a8ca5a1372e8160bcc27fe05e252a9de45578b5f",
+          "2010-12": "d0721c71ca6c7fb0c40aecce6809db5f95c069cb943cbacc751789dc8bc15f31",
+          "2011-01": "0f5318d22aa2cf17096cd96620b61f13703a2193da99802ac0503d58e2fc8c0d",
+          "2011-02": "85a10a1204ccb270caf15c68a72dac37f680fda015e2f62a34b6f868d1a9c348",
+          "2011-03": "2b86d217cd9c0ebf2509754d2a8baccd363d983b060165bddc23545a82594509",
+          "2011-04": "57d92df1b39dc20944e07a8891b2f2149ebfbb4d1bd7ccd8c944671935581255",
+          "2011-05": "2946e8b1cfb620ba8ed72039a2d14ece4dcb5e602013c75f03fcc46a2fb22b73",
+          "2011-06": "dc69d2302cf04a7796ad0fd8221e7b14772fa17692db9f3c828bb72bd02b2018",
+          "2011-07": "66dd48a6076235439e8bdaf4767e1f28f783985c854efe81be860fc92334fa52",
+          "2011-08": "89ed17749222c77d8b44699e7de8b2626e0823fb1a9b2dd5afbb4cd5867765e2",
+          "2011-09": "b19796211f29ecce113a6ce93dc252741681e51d0e196443e102edd5b9038526",
+          "2011-10": "c7f3bf02a06a2b2a252bcdd36812f811fa523f222bd4f6658d8d589eb2106294",
+          "2011-11": "eb054807559735e24d1049236566d9dac120f7a39985d47bcd0a04f22748a2bd",
+          "2011-12": "50640ce734014a9ccbdaf644add3c79cf96dada479fd866bfb85268bcdc4dbd9",
+          "2012-01": "10586552f52908065f3daab17e089cddb106bfc6d744bf1e4df38110d3e69b33",
+          "2012-02": "ab1931f36f637c2b62c00bc74c3afe9b667392116f459a6186877f4bd23efc4b",
+          "2012-03": "542d19d48354c03da01739d7d266531f4023179cbcbccedf3d22baa72046cfe9",
+          "2012-04": "ae3c2e34d8005aef75bdb0ecf6ade02527e86bedbb0e97f3a110b75771451d6a",
+          "2012-05": "8389656d5439a5d64b496d20eedbc9e747d0d03ba4d3379d858dfd3317e06851",
+          "2012-06": "feba4992d94c24b27f64ba71adc72e15cca7c9bf2555b3b5e6180d7881e274b4",
+          "2012-07": "9b1a555e3e124dfa7a5bfd0e0530d88ec5733295857f95751cf45b843a95b500",
+          "2012-08": "bf985a99aa4286c112c0f53f864c4c221eda3aeaa5efa900896cbda5c7062322",
+          "2012-09": "f03bda8d89d8d93661f76c96b549dbdda7d3c7df2d64dbd80eb7aab6d5abcb35",
+          "2012-10": "2e2b8b4e06e67d64d804894fe64c861bfff6bce28af99e819e463874ced41c0d",
+          "2012-11": "ab5814549daeaacf6fffcb9723c8d44536fb1bf1541010b78d7a39b701850188",
+          "2012-12": "006f84abb210beca850448e24f6572173a81f0b31d379c85eb455cfc7fc22963",
+          "2013-01": "b4b9deaaff7d36837b12a0814c6dddfe679cf326bc202725bcba7ef29f88718e",
+          "2013-02": "28b70e7e192bf07216f3541216f4d4023bcb443ebf3ee576b6cfd297440bc581",
+          "2013-03": "7779605e00a2d1fb730534ba600eab0354f3ccc6b8d9f025f4de58fedc149cb8",
+          "2013-04": "d1a843ca1019d28363478bf57888b937641ff9f2425203d2afcb4d9b9fc84b14",
+          "2013-05": "06e2a737a59fa8390c589c5d315225c7b24ce008530cf4d1d8a0fea1e12221ab",
+          "2013-06": "162b1d7d1f9f1066023a3e400f9f9141e051f36d64cf57a2f3e18be986a5dd75",
+          "2013-07": "03dc056c03e84f165fd1cddd28ba5f8bfb2059dcda3566a572c910b8a0fb63af",
+          "2013-08": "cb456ba95d73fdc9e759351c33d2812a6d8de6cbd6eb8eda574af87632b9ddb6",
+          "2013-09": "ec7d8b3abfc8b5ee9bb02d91bdc5071de1d5ecf7bc7765c0ecad9d4af1101a14",
+          "2013-10": "51af0403320dae6f04334ccb711465f35e928553d86a78b557d4765fa116f906",
+          "2013-11": "34fd849b5dee42016557010d498877da5ec871ac6f198892aa7b7517445e6453",
+          "2013-12": "805d8d76b5c808bc360d415454fc4a6e1398e9477a20595f10a59da753510f0b",
+          "2014-01": "4cf72c6c0df21021ed8ee0e992abf2afa48ca38ed06618c745acee267806eed1",
+          "2014-02": "46efcf757350c06ed17e9b1e6d0002cfded30644c265c6765de22eacedd6099b",
+          "2014-03": "0aca5edf8e31f388048edaf7b6977f10a3deadb43259fc4f8aa3e09bfb5cb9a8",
+          "2014-04": "c3a1f32a93e5f0092ae102098d0b203d623c6101fb04cb99f05ec1c4135684c0",
+          "2014-05": "4769aeb52d34df85b3b7d52be79ae81fa3b2109b020fecc21df58f472159ac47",
+          "2014-06": "a15dac86543c40f5228379d4187f12671d2b4bfb21020aa039b910ede3b91ab7",
+          "2014-07": "fff52d207e2910eddd9aa6316a3407b43aae322d4877e92f7f3f4dfea50d0776",
+          "2014-08": "0d58904888295002e8e3d01aaa0216a7c74ed738c8cec4016cbc8a52e6db7746",
+          "2014-09": "61d7c80e5c9906f1f546b49c61862bb27e90429fe2520b55868417e1f2d464d4",
+          "2014-10": "1ab212d40601f17dc8ddfd18ead277523166786df1f77fdf17122a9af6d22067",
+          "2014-11": "2febe8e81dac3cff58fade502bf8b5bb380a01bb78091d6d8cdf92cdc01e2ae7",
+          "2014-12": "8586b9008bd6b8d4c05f4246302374bdfc2cc782c3b982ce9d92242bdae26a41",
+          "2015-01": "f8d27e619809f041927ff62bc00f5281986336421fee4ecc822c0f3e78b76f2c",
+          "2015-02": "8099db372592a3a3f281d7c54c44e03b1904d36a268302eef81ceaabbe941e71",
+          "2015-03": "d1822290786b21afc5411bb82d883394f04e79ba17818aab558ac95054940080",
+          "2015-04": "9f5aeb1e1ec861c6e69d837cf0c10f3ce01db1cc4027b921c69a87522c6c74e7",
+          "2015-05": "bfedc92a8dbb0f79cd6985941542324ead04673c60bbe16e8a1a034b80bd9280",
+          "2015-06": "1173a94c41ac8581cc884f8f5962062c37268edc6a768083c70ed7bd70fa4eee",
+          "2015-07": "b82b353cd4a6ba79d407f904480e9ba9bab3252ff8a963288e181679dacb0123",
+          "2015-08": "cd857ef2cafc576b2bf17b7e7041a1447d6e2d8219a14b0764f12069b8398614",
+          "2015-09": "434bd3168e311e03a942ce85734d72ae37352907dd3dfe8db2b47aaffcc73868",
+          "2015-10": "aa23e9236aa8e7f99d3e0c16af00601fdf5992961e46e3d1b8bfdddbb538a9c8",
+          "2015-11": "7a3394057e031a47b2c5bf88a4021c23d0176f8912be068e60362155bce07b7c",
+          "2015-12": "b2721a1cdff1f333141974a92a0448697994fbd6cfe0e1ee7c9d470e3e3d0686",
+          "2016-01": "5fd3b9d7e509fca05ad1328bc037cc5b40db3eb9c7a7a948ebac2d61927a5a26",
+          "2016-02": "11d25e0eab7f38f38bfb930a1d5154879ed6327109e185d9f8be65d6e85e6cf9",
+          "2016-03": "c32e2171f2d6356743644bcaadc045cd5ada02e5dd6ca618cc4bd41b70df47f5",
+          "2016-04": "6171b27f4b33fe23b80ebbbf0d46cb2f3c3ee3ca92836963b09763b77d2a7dad",
+          "2016-05": "0243e9ae26f604fb9c4b8a65d1e319adf06231c905f61132e2cc8039488bac84",
+          "2016-06": "52d6017ee7d778969ca0a08bf0731e2514fe28c51df6bdeecd0bb900fe3f151e",
+          "2016-07": "e1df960f826d5100a8a994a6f7c07032cf6379e9820baf1c7215f521090a8078",
+          "2016-08": "238f4153364bbbb369791574dcad5572144f1a3f50b95ebeb86ca56aeadf9b09",
+          "2016-09": "118e328e62b5a42d2c76a7d2bc1829c8de353aa77ac88c0d1015e2fa4581f8e6",
+          "2016-10": "332f38b610c0f8b81bf9e7585a0c1e8ee06b2ec4b4aca045321ae1c70266688c",
+          "2016-11": "fc25da878c2009afec3d9d8552a9e61ec5a9fffec6ac5a64e3fdb8d7b0334550",
+          "2016-12": "14d29f4353a1417e54eff4374ac61a3a88388b4bc843f970da587e2cd299cd12",
+          "2017-01": "68664723e67bac8ba173294e6a098a400f06a944e1e05fdf4fd78af24ca1914d",
+          "2017-02": "eda983f6a459f7d5772460955a2ef4cf2448c44ba91d182e07eb419233e96a16",
+          "2017-03": "0cbdaaf635d2a5c359e13c14ff97b0d7bafc3a3e027b232c9b7aff60de14cf9d",
+          "2017-04": "e28ff1bc6490f65e1e85927fefe918c624035134032532f6e0fbac2bf27db646",
+          "2017-05": "ff1ee94deff4edbc6b71e65ff859d3da7f5a1ab4672fcb969c9746a645b8e079",
+          "2017-06": "93f868e9606d5f1a3e403356a3b23390bf4d4fefd178852e9d2b391bfabf5df1",
+          "2017-07": "1d0f84d9f36207c91e6fe4dfeb3ae68cb0e4b93462c8111ebd520d69281d0413",
+          "2017-08": "4f2e5a09bacdf092fbbb6b2b2656a5703306faecd6ecb2d09593e2417851c4d7",
+          "2017-09": "035dcc3862c03dd5c1dec1783620557b70f6e030dbd73d43ae593956f4ba8b20",
+          "2017-10": "94d30ae7883f9bf64dad0e5b09c06353ec3ea1cd91c534e2cac93dbe202a179c",
+          "2017-11": "ff9d70e9704ca1ebd42414542832ac80857675f8011a6c7e5fce4aaffc51cc6d",
+          "2017-12": "07a459ae9a3dff1a34bafd1d1c75f3da97d57768b87272e78e5df39ca9de5491",
+          "2018-01": "e30db4be3daf1d04d6d963aa17e0033f6372dd24222ad2f99b6d5e29d76b618a",
+          "2018-02": "2a5a91683079e2c9e3fc0cfc109a66abce36db74ee4da519583b4954882d21c1",
+          "2018-03": "03936917cfbd5d9c80da8600b7dbb5fe6d4ba2e0b4b9b73c86413a2e9ae4e5a8",
+          "2018-04": "6890a6905c98ea29a357b4afca584c9fa39d70dadaffd2894beee46939268570",
+          "2018-05": "1bc9e0532dd84c53b9f9c14e164ef29759fbfa990ca30e6e97577b6dfcdcd90f",
+          "2018-06": "3b93ef55d90b8ba16342dad1c83e0242f444883846230b6aa038dfba8da2d98e",
+          "2018-07": "3ef66efedf649328a8c86b0c8fa7c9a6a0c1b24e9a6bd477f91d3e8791a3ddc0",
+          "2018-08": "a6157cacc57d2c3616efe67307249f8e60f6295ff838dbe41a016a3cc6db2d6c",
+          "2018-09": "91486640acbff64a9b79c97c3c3ba7adb4ee7e7d54f7a2581ea15a375d0535e3",
+          "2018-10": "e1f48747821e435312fdb44bf13bac09e4b283b7307ae9d47907506be9d0a424",
+          "2018-11": "8571f321efc7eec52bbe69bee9cbe50b60f8746667dd71f58d0ee1d63d06420d",
+          "2018-12": "0ab929b5ed39b00655b422b925186913a3dee5263c77c6f314b1a87a30048a7e",
+          "2019-01": "5d16dc72128593842463088fbdf084035ff0f20adbb1391ec5bb4060f179b9f0",
+          "2019-02": "d373a35ce2ea0fb0f4a5049cb4f94d95107e2412bc278de0b199474ab76b1b35",
+          "2019-03": "47b07a5ff81bfd8b90db86025e6e922ac2d1d801781ad339cf8cc8b5aa9e272e",
+          "2019-04": "aacd560f97936f403ea11bbac1c98b10b92dceaf248182249060405d8bb72ef2",
+          "2019-05": "820b93985dd7b827ea728778c7dc8486bcb937451868b10c6d8a2e74eee6e723",
+          "2019-06": "ea60d9b4ed01d4860776176a04f2e3a041725f3db6598e4b2c198d77bc74c8d3",
+          "2019-07": "c632543bde268b6e7c015b8c08f99f10c90fe51fe1666e36b5b131bc04858afe",
+          "2019-08": "d8fa034e78202b3139cd2a445a5e2bbbaf7fb0f87e5bcdd5c29b3b991638a37a",
+          "2019-09": "c8370b6340ed92e4d5577ff7dfd4fdbee8399a8f524294d28199d7f556c13ed1",
+          "2019-10": "d608240d335d4e2a789ce60e1d6e01a4854a47a479981e4058ab8e157a4a12ca",
+          "2019-11": "c3dccd7588bde70467d76f74d812ec6c50c667804235b86abe26855f84f40249",
+          "2019-12": "49f2ee4e929261a74d44c8954fd3d0dabd8d86231a24108169f8429ea620f068",
+          "2020-01": "be8682d999b8c6d702362c763abc74b9798c3206cda459d487081b1bfba9a1c5",
+          "2020-02": "7ba23ab7ac18b50bfd746f8921d649a41f5fff22ab3267e81b9c40d92c104296",
+          "2020-03": "3ceb1762eacf9f7f5a48426864c428326b59122f02af1d650d27bc5a01c7b5eb",
+          "2020-04": "6902d80fa873de0da27eb3394596855a4bfa3310a1cf3d365e6c1c81bbd77b09",
+          "2020-05": "851f4b60abb7f465996b5e6e3fa81b3b3848feb7d4ad1520ef64ecc3f7447b39",
+          "2020-06": "4a00af970f3f303162f9bd026bbc29126daca2951128854ef4d1837c3b336ef4",
+          "2020-07": "aa64180024e53e16f6b83ddaed95141e7e02a4d81f496d71500542545b88c615",
+          "2020-08": "0de9329094e24284115fae0f4c8e8e8911593a985bd94848513a6334ed043974",
+          "2020-09": "44afdde3d9f90bea4c2db6abb55a13449b26eb553db01fe08a2783966a0d9290",
+          "2020-10": "50aaea3542c39a1e133bc22befbfbfb7d0a555a8c000dc6910aa658caea504ad",
+          "2020-11": "bda8c9a02e216a3742e220f01f49c32ae3bb8c1f9f2754ba2df41393933a1f9b",
+          "2020-12": "b95460e652715e2f05f3a1cfc9d77d5b14b1ea34e3097dbc8b7157d5e66a326e",
+          "2021-01": "a0b3135196890382da7c6b2f68b2872069ea964a26b8a8cf6002d1bc9ea37c0b",
+          "2021-02": "74d74efe6cedfc390962f75464a74eadd2b057c160548af9b7ba7a2fa1ac8621",
+          "2021-03": "ba6850d01a227718b08a2243413a983e8fc7ca56df0d5ae3a70287a9068c7469",
+          "2021-04": "1cb2d8a569d8655ec77f33e0c71b9ca4cca880e98773cf8757b4c5b77ef9dcc4",
+          "2021-05": "d97e1dfcccd910c4f54bda736ca4ca46a386c8512867115f61a35f50d468222b",
+          "2021-06": "ad959a1330bde2ffb2adc118b84142f2e0df9bb941c73a0fde438476fe2356ea",
+          "2021-07": "8f06438e6aa09e2342b12473363e31520f20cc8812e4ce3ee108a5705d8a9615",
+          "2021-08": "a61d24935f757cf664a7d1255ec5f63690d4566340f4863f94b1dd266b0f01cd",
+          "2021-09": "07a7bc2201d7dd4d803bfa2c00efaa0243de33ef29143829dda8e64eb5172638",
+          "2021-10": "131ea04444ae8b05b25e1011c2f05fcc33eadc2d6336896d5c7c0e343d6dc354",
+          "2021-11": "cbfe35885eab535e19040528b937cab629af8acdebcc12c9fe904642bd21ea98",
+          "2021-12": "6c41cc24356926e1fe06c3bb9b02667c4a94fe70d0ff3cfb2ca83f1a6444e01f",
+          "2022-01": "516e4c04c6a69d032dd3935b6b0822eb877020118450fe5d8ef46e0bfa81cc1a",
+          "2022-02": "002dd6a22ef7518ea62c7ba49a915b15ba31290277c20945633931aab6f615f9",
+          "2022-03": "52170496466e671c5186017303c937df851a99a214c3536e5ea90ad961a1ead1",
+          "2022-04": "29bfa93bee202e9f16f80ad3cdca1d9092903bb376c0db94c71ca914ec564618",
+          "2022-05": "ac5530ea0d135ec3648fd594499ef5ef77d6e78346ec07515609261b8474c2c8",
+          "2022-06": "3fe7601b69c94d08dc2c87d5dc1e1da9ef85c0f719074ca8e2a84d899e4ffc25",
+          "2022-07": "901de1d2458ed1ebecad27592e7ae6b02905d09887c2ac69269ec4f558620773",
+          "2022-08": "bff164a6ba55eef1663a7ddb1f60047dfb929a1d0609a193ab15f3f26fd04be7",
+          "2022-09": "fb6f515e3f933c7e6a292469bba60afec655e8a64b4447d19b78cbfcc86c7ebd",
+          "2022-10": "7cdef033892e389f4dfced8b8095210ecdbdcba559e3a24e5e84f811a74eeb75",
+          "2022-11": "3b9126cdeef6697b13a9a624c838fe0a2851771702ff9da38292fa133546780b",
+          "2022-12": "7d1eb17874e49d7d5021432d3ac3a462dbc3971e497da37eb118a62772f5da25",
+          "2023-01": "5b49bc9ea39975f5e7396fbae6885e805663bca1196c4df19ab8415560e2d193",
+          "2023-02": "e44ccfc443ab64ba61056cd937bd9cb111a579693c86a67b938a490504882b51",
+          "2023-03": "45123d427d57e81695e2c76e6a9b87f9fe27c64db887130679706393758584bf",
+          "2023-04": "b3ed7dbc3d3f97cb3134446ae8e1f75d12ffd689c207022a212cf68562c675bf",
+          "2023-05": "31ababda2ff64ce94b07972458bca948908f60a138502ab89914c1661fa329b1",
+          "2023-06": "8da1b657d6511bae51b5bfe53ea2cb1fad285e629e21acb537cd42b3f2723d4f",
+          "2023-07": "aefa1d91a325f7bd984fcaab6e1ef3c75423f402e8fb312f468037f99fda488e",
+          "2023-08": "2684070c7b56eacabde2e15efc5ec4140a68824b29f18d29729bfae6a407dd48",
+          "2023-09": "59c16400dd32ae4fd5706f691bc486a1dce5f299975365dd9cd3e2097841225b",
+          "2023-10": "16f01d2b59471eae2bf81c97cf44f16f129a4c863701aab7ea7f0f0a936e2fa3",
+          "2023-11": "7e99d33246c0f7188fa0f6d0456a011c0b0b464f173d44088d2d570d72b2f379",
+          "2023-12": "6a048a50995c6b889a81ef98f8644d30fe5f634bd81b214c6a3d3fb23beacd63",
+          "2024-01": "53f0a123436b0faf1fbde824ca17b65f73a6fceff833b3c25a5e57bf626fa878",
+          "2024-02": "c6509b3d5c4280a23ed766c8ebba5d127b1200ab39b82d64daf9434dfb6b4f43",
+          "2024-03": "de36f50fbe211cc8bbdd26c5b578ddd732f6199151fdfde296b9f1b9611a457c",
+          "2024-04": "ac4c70fada937c6ecfca7b905d42716861672fa06941543d0efb3aed12a6abf8",
+          "2024-05": "bbc357a2735be92b51239623bd43cabbeca4c82d49411dfa513c4a1d1d811575",
+          "2024-06": "80b64aa1cf4505a2c3f39dac4facedc3814e48f146de550965858572dd0719a7",
+          "2024-07": "1349262624f01b39ecc5c9d9086a362d4f4b27fe4249c632bf69a5eacd93825b",
+          "2024-08": "e366de9e0d0f30b3559c3a12afd30278c6a892b8cd341b1413f9941be6d0846f",
+          "2024-09": "e516946aabcdef21a34208e8adea63604270f7693ea46b6af0003f665debe19e",
+          "2024-10": "46a0484b37803dbe66b8435f17b11305d29380711c0ace6604644360fc58b26c",
+          "2024-11": "909c01116f48060b8f5532d3aca31748eedbfa50728446e1cb20d055b65bf1c7",
+          "2024-12": "723df7f1465d8d9c6b452c67677f6eaaafdb97127e4ff1bb08ce6f6113e5afae",
+          "2025-01": "284184cfd3e9b29634e8a1fab7c401595f3e1f06ea5035f9c3be78731a7cb7e6",
+          "2025-02": "cf6f3b903b612a2ce79e01a9e9d53b4d7fb637902196189b5662a35f8caf86a8",
+          "2025-03": "166b1e6e5785cab6226e31c76c7bec624646b1157d05c2cfcf246c3228dcc609",
+          "2025-04": "0577705c7e9395081d227a15e452ba22e64b8b0ae9d62397812080e82c8cd537",
+          "2025-05": "bdf0938a533463448eccc90046bdb407384d1668358aaf8468a59a822d157824",
+          "2025-06": "490a058222968b373f58a89ba435effefa6dc52ae983ba454060da544520eb3e",
+          "2025-07": "326782edade3cc08ef684b8130313cb5e754104b0e5e50b78eb3f93c92d3d754",
+          "2025-08": "0642d64232a19c0996dd357df69eb27008ae85af82cfc3388fd04c859e7ed354",
+          "2025-09": "2aa700a7ca1bd07dea3a90db43b38f909a1c7dad06dda6933e728d9c8ec6a62a",
+          "2025-10": "226976dc87febf24e8821815752de1aa7f482c4d609fbf4f6a9896ec5d925948",
+          "2025-11": "5f8e1fb45c5f4a299d3ddd4388faad1290b860d1f20393f43991818d51e10e2b",
+          "2025-12": "c68ceaa0f28f683eaa82afd3b737c43ffa7c7ac954aa7a27314ca2b16367e89c",
+          "2026-01": "d503201d10750e8e6e0fe0a8e77c8a9a6f63a8c300264eca2f527074e9d00ce2",
+          "2026-02": "2040c4589a49fc2847c04a6772e3b6d133cdb8aaebd6e25021b2f497d9ec2f2b",
+          "2026-03": "ae79fdcc3e50a9c18827f6c6b5857aef9d64e5127d3bda73f44d6700cff0c833",
+          "2026-04": "e06cfa726406860882c4cc150b32634ed213063d44a7465814325cdbe80d75ef",
+          "2026-05": "d317d6aab55cb9bebade3dd41a7e0644ad41f58fd040e5f31028013bbf7b0232",
+          "2026-06": "6a7a22ad873cf79608f192c2aa26389f6a5ee775793bb9d2bf0cfc12da09463a",
+          "2026-07": "e1b192b81216ba02128592b1d4e85b1b5c017ffce9e7061e484838a452e50a4c",
+          "2026-08": "a900b78d13fc3dd50e11da4000bd38c08150e72e0eb262a37eaed09e35ac299d",
+          "2026-09": "cf1022a8c6cc1007ddc67feb4b0f79f4b11ce931b9a00218e60eaf9ddd78c6b8"
+        },
+        "changed_periods_against_previous_vintage": [],
+        "first_vintage_for_this_source": true,
+        "causality": "NONE",
+        "2025_anomaly_gate": "BLOCKED_UNTIL_CORRECTED_VINTAGE_AND_SCOPE_REVIEW",
+        "next_requirement": "Obtain official pre/post correction vintages or an Urssaf correction notice; hashes do not establish accuracy."
+      },
+      "ready_for_economic_join": false
+    },
+    "urssaf_dpae_na38": {
+      "result": "DPAE_PERIODS_AND_PROVENANCE_VALIDATED_NOT_ECONOMICALLY_CLEARED",
+      "evidence": {
+        "sha256": "42cd99124b1ef5f0a39afc481c42e70d5adc0fbfb535a7cb53f2653dfd41f549",
+        "bytes": 1945716,
+        "content_type": "text/csv; charset=utf-8",
+        "url": "https://open.urssaf.fr/api/explore/v2.1/catalog/datasets/dpae-france-entiere-x-na38/exports/csv?use_labels=false"
+      },
+      "detail": {
+        "total_rows": 11877,
+        "min_period": "2000Q1",
+        "max_period": "2026Q3",
+        "distinct_dimension_counts": {
+          "secteur_na38": 37,
+          "nature_de_contrat": 3,
+          "duree_de_contrat": 2
+        },
+        "measure_parse_warnings": 0,
+        "period_count": 107,
+        "historically_flagged_periods": {
+          "2025Q3": {
+            "row_count": 111,
+            "sha256": "744c6238a6d5cc7f78c96e96a808b5396c9d38f206e8162880dfcf8a6ccae687"
+          },
+          "2025Q2": {
+            "row_count": 111,
+            "sha256": "aa1c2af4e872d0100913aec9fd10ddb60452d64ade989bdc5e44430ee90e5f99"
+          }
+        },
+        "period_hashes": {
+          "2026Q3": "ca624f874fc28e146fa61f86ebe1ff30b2662c013541247219100d9a41bc0350",
+          "2026Q2": "4479a002001e1db53d1a21b8e3485e080515cd9ac86824d820af6bb58c63c226",
+          "2026Q1": "167f536889dfeb4852c5f800763dff6587a3fe7aeee7388214c10e0c151b017a",
+          "2025Q4": "283b0aeba022410007f28d80f160465ecf7f2fe3fb3a0e7a37148900e9492d04",
+          "2025Q3": "744c6238a6d5cc7f78c96e96a808b5396c9d38f206e8162880dfcf8a6ccae687",
+          "2025Q2": "aa1c2af4e872d0100913aec9fd10ddb60452d64ade989bdc5e44430ee90e5f99",
+          "2025Q1": "1458b72f402ce47f056531ba921ae841697bc204157443b0cce2708f12f73337",
+          "2024Q4": "135edf86c9e51a4779398e5366b3d35e5c4cadc4e0315fd559819a4bf4c4fcec",
+          "2024Q3": "62d5c83bf4aedbf0e4164e030b8ac35c01a181eb4d1e81c8a003623270da006b",
+          "2024Q2": "55c0973d453acb4ada713aad2784eba9717272a368c42ecbbf3101bb4e9f6d2e",
+          "2024Q1": "f13174d5ac6f84d81388de7b1eac4d9ce7af9b5f7d5868ba803b02e06ef5cde8",
+          "2023Q4": "708a08c73e27383220ec650314113577b1dd111b17600f293a9bca6b0e1fe09e",
+          "2023Q3": "8ad035c899043a0e948fdb0ffc21a321192c5f27c933a858dce6a36eb907d55c",
+          "2023Q2": "9f2f12f3fe91c0964425940e003168c94183c582fb90e90fd921c2933d70c905",
+          "2023Q1": "2ce09421b4685fb4674bfddcb48a7e14537e77cfad90bd59a78ecd7da7e88d7a",
+          "2022Q4": "1c7c658702f86b70f00a7a10e8a4290e54646c3f63f7a5028ee0dc48d98befae",
+          "2022Q3": "1bd494764143cfc1361c854cad7e8b5d03a1a47197a7fb74a5a0763b47566bcf",
+          "2022Q2": "1f8c12f6b3b9c0ef2b1ad52db18cdd13ac80f83f32fd2a19ea294bfc1d5fe3fb",
+          "2022Q1": "379fd67438c449c7c24f3f010f22cdcdb3f3d5079065b1b5f5e21fca1a2bd24d",
+          "2021Q4": "3a25ce52b7624db4b718340ba0774654383a2c7f5169d8f3f15071c6e6ec7bba",
+          "2021Q3": "eb1be32aa325b58208868d5dbb3b91b8239d34cf362356eb695d6c9c4012b745",
+          "2021Q2": "ebffb4720f3023855717b1f7420ba704f89e6f3cb6588a2019d9ed108b6acba1",
+          "2021Q1": "016dfae4c4c8d07aea496e43d8fa286d02d9262287348e0f6d5e2cc572dfd47d",
+          "2020Q4": "2eefa922fd88507b1da5bd078dc0ede47dfb70657e978395bd67fb02ef201270",
+          "2020Q3": "cf8edd89e467c64b6fa59b311c883fe4ac178c7bd2434feac29fb70b801c43ff",
+          "2020Q2": "f0ac358f25938122c5373601c7f3ea28d2f03faa27c59d26b33af396cc80e37f",
+          "2020Q1": "81a67685216bed3157337ff1318d9f8091a8fe981c6c49c2171bbce9e200d2a8",
+          "2019Q4": "840afc7912056ae7c4ab6cf130f17e626119fb08c82e04e1dd1fda839268e3fe",
+          "2019Q3": "4736d574566d8a4e584d572605853022cdbb4662220f359ba6de50484185f486",
+          "2019Q2": "d20d0679ec4e1e960483512e6756e706b77880e1e95d42c79910b71518e62f45",
+          "2019Q1": "7de66dc6d94783545f589f74ed40c1eb67741630e519f2e49d148b345251405a",
+          "2018Q4": "0cd49155a31533d48c6991144bef156cb2c5dd671f7e23475d4d5d51c77e78a0",
+          "2018Q3": "9c7ed225266d7439db222a7de5e3038db8ca1115ace1ff6389e20caf8fc16659",
+          "2018Q2": "8a33f3488b56d6a29714c499592f3fceb3e1494baa414298608679aa3c66ebb9",
+          "2018Q1": "a78d4357b8fbac7ff0a70ada891c234b7383707673ba45fbb1215c968436db50",
+          "2017Q4": "69abfe5fe95b53cafb0da324b3a282867493959e09a5cc5ac48d44a7d9567147",
+          "2017Q3": "122dec62d1a7ca6721deb8170797ae638a6eb7e9b4d60b4ad07f30181725f188",
+          "2017Q2": "b091cdf7994cacefec9613be898b17db25de49f2bc81b13fc8e52429817536af",
+          "2017Q1": "f30286060478b4542f7f20730df6fa4ad83194038323c2cd3715ceb90db7bb4f",
+          "2016Q4": "fec083212cb77fcce65799dde42389dade69e9db16464d2c5a7865a55c7f14d6",
+          "2016Q3": "59f35aad3c7fbbf75a21c62631ad5c217f13e359fcca2c5f2e9356695283aa21",
+          "2016Q2": "d5b0576dd9e86fc2bfe9caea1cbab363be3eecec395b24202ed769d984ba49e0",
+          "2016Q1": "8ba236ebbaa8fe43076b473c93fce751e04091b263d5a15f6df5562b0c20164d",
+          "2015Q4": "da3f37a0599e927f103f994805837821c5f34e17722b593c1a8f8bf53af0b7f0",
+          "2015Q3": "8e6826d839d844d6dff80fff9b8230410e82f9e68925c98c742572513a6a76f1",
+          "2015Q2": "354469a98d3c7fa7957d5fde931e424d4116f16bfea987b09c67e376f22aa9b2",
+          "2015Q1": "15e4203bac99cf5d9d9787d18c6ceb405c3fd9e2c207b9cf57f1098b1247d290",
+          "2014Q4": "54c5c4acf5e624529440878c44e29b1f6958b84862c0bf14d681da0108655bbb",
+          "2014Q3": "87edf52a7f42510697fe9a9277173c9d2095bd7d6e50999976282bcf3fe3fe8b",
+          "2014Q2": "d1db03fbcbc6911fa0660223c456c40c2377091beba4cf714003cd5a936c0979",
+          "2014Q1": "58fce51696619533f1fc0f30aaf4f669a18a0863ed32a1c465ba013c1321008f",
+          "2013Q4": "b539509cfee471df1c94339b99285c3aa270ae8ab0c6a12df3077c6613d57f9c",
+          "2013Q3": "a8ac008e6195d6c65d6fadd19a52b157460f0c4e01c38c2f2850cd471252178a",
+          "2013Q2": "e0934856476d9f7c40d771ddbb41373d90354258bf2fe75760cdd1fee495d77e",
+          "2013Q1": "94783bfe33d669858a6342c7e659e62d80db15e245e7f165a2343ee56a99253d",
+          "2012Q4": "888c9764632810b5a52ec672cf3e610a969c8756c74ee5bd5979dcf582590894",
+          "2012Q3": "849f62845a8f0f8867709a5b00518691af788f79a5f5c69d43e6fe10bfdb0dd2",
+          "2012Q2": "ce74b006ba63b0e5ce5b2b61d34008d4c3371b5ba19af0ed528bfb15723c985b",
+          "2012Q1": "278768751659299aaaf160f5d7118df17cfae8e5306f711297885e2528d7e4a4",
+          "2011Q4": "6ed51a0e48a6966fa2edea29e24b14d0628653a685e613257a8a30c8a51c9a14",
+          "2011Q3": "f34bfe0cbc304fa30b90790fc26047a65523bdb186a7be9b52d08ef5c49c7fe7",
+          "2011Q2": "ca5ce121923399a9e965d2e30dcab59471c10ae343cb39a190fa324c0be4a8a7",
+          "2011Q1": "7cb6682e85a8b29488e1e95f5d2da3a933d05f4e8947b649997a9e78f77ab88f",
+          "2010Q4": "ab418b072fd1f0d4a9e9dba96609a49c74c58a38ec88f3a138ff849a7dffea82",
+          "2010Q3": "48297b0408c360d20c15baf00aa0f964dd710a988aa9527e02e67a94e6a85ce6",
+          "2010Q2": "4ff23261c551559a91163e75dddd2186eb6215cba779f3b21f226f948f927f2b",
+          "2010Q1": "e7a419409e1824122dc40e15659129470870b9df5042e8664c2c1cf2a0a3f1a5",
+          "2009Q4": "d310849e4b4d869870ffde53976e4923c269cf95183c4a9168950170207ef2a2",
+          "2009Q3": "3c864ce5eb4e2bb8db17fec9d34f853cf4a72fd702afce3fac3809b8deda2fc2",
+          "2009Q2": "a02fdc96e85448efca185d31bd12248dd935a925bf896dcc5d1ed81146316534",
+          "2009Q1": "1671df4c28f3acdd095291f576a5e419b0aa806f62ab209b354aa3dccfbd9577",
+          "2008Q4": "6df2a00fa237ee16434677c48c9596f5a9dc37d5068c08ee74a5b7bed8704c59",
+          "2008Q3": "75b35986c25b5d14354d1284d4ba13058c19ea22050371d956735ace3ac8bfa2",
+          "2008Q2": "6f73dc04ec6e866e2c2fc40eaf72dd102b34c612a5592108531a5ea759b7701c",
+          "2008Q1": "b91aa235600e15c6a095e056605ca65928eddf4478779fc69c78f0dbd01b3a49",
+          "2007Q4": "4458013186cfeb617644c7973845263f6a70130832549816b3e88680c89f0cd0",
+          "2007Q3": "6ff81a237981af25693661d5001b70f55a2fc4fc4e9c031fb5c97bc9f5f0656c",
+          "2007Q2": "65610b2b2593e3f1f7a2e157e7cab98ad90a5599e5c178125c4b743f5c102ebc",
+          "2007Q1": "9fba8a2c00c70b430d207474a8b7ebc295ed94ad987806a38c41a1f269574cb2",
+          "2006Q4": "12ba38ac364a7dde3a43fa5bd724ca7252edbd634caf86b079d7b45a8cedd767",
+          "2006Q3": "dbee1c908f8ea507a572a6150251d49077887a94f7dd58eb8c3ca51aaf941c90",
+          "2006Q2": "1500eabee32a6a3836b435e6290ac945c6279490d15ee3e85d5e49d7acfd2325",
+          "2006Q1": "99e9b016803ad5fea793e9ef3da6342ea1193949ba451b3c4f329d2e2f619afc",
+          "2005Q4": "e0e03f97fa8369ecf9ef251d8ed92af9db8ba3ad25f3cadfe533ddb2ba1cf35d",
+          "2005Q3": "ba8bcc24841c438b3d26119ab4e1af23f84937736dcd63fd5c4f91cbd930529c",
+          "2005Q2": "0872031c950e7de2df8dda3fa8dae9e3725dff564cbcfa0ede3dc8789ccc2ec6",
+          "2005Q1": "b7845b96776712778417e2d6db57d7f6dfd419d2f2f51efaa2eeceee68ff16c1",
+          "2004Q4": "3ba28c20c4bd9200897b11edcf3e88e387e61c248a1482d26f8ae080b8a1707c",
+          "2004Q3": "c9fce1bf7085d33def111df922fd1ed7a78162e075d06cf75bff472944e293e3",
+          "2004Q2": "a95fef61a8a0edde459bec1b43db550786ed60fa955b293ce619e8a92d6e190a",
+          "2004Q1": "fa73fb07ce690dda60cc923418a60307c21a671b38bf6bcae29d56697d8e05b7",
+          "2003Q4": "0c83d1bda935fdc21f69ae9d65de0062e65cb114dd897b82e618d3932576713e",
+          "2003Q3": "a2942bed6a04c27aacc1327f44acf9cd68a3c0df7ed56bd88ddb4dfb2a7d57df",
+          "2003Q2": "51ca4e55853d7a94619c9c76baa8f7266b72774fe3b171b89dc66d23f67f5600",
+          "2003Q1": "ae3ad76d252cf387dd7d7ba312f05028ecee94674f031fff478a56368f066baa",
+          "2002Q4": "2b29eef9e92900ce35c0abeaaa54895365326c97bf6ec36d491ba1383fd39f17",
+          "2002Q3": "c0d7420a8bb7b92c1c72c87d37b5bff90e83687d30c83167b9a7a377f0f69cdf",
+          "2002Q2": "f36a578d635612197b7f1b83d57c93c3012ac9524bec37c8c4c33e63a5c7a2fd",
+          "2002Q1": "e5614101ba4440b1b685e8f5dc85f378ae383764ea22af339810375a4c306912",
+          "2001Q4": "a8c81397d548c324b31103a04351f70bb9f782b28854eb7a5a988b11552d7383",
+          "2001Q3": "8033fe8726f91ac9230d5c79e61bd288c4b41c7052bd592aacd25fdaac542932",
+          "2001Q2": "caa5dc98e4ca68d7689d240eaec471f3067dfab463dd00b5ca47aa25817fcb42",
+          "2001Q1": "9b94a615179d3fd3cb74af30bdfe85265989dd53d7c72bb9dd61599f77347367",
+          "2000Q4": "e3ebce1b05c8008678a8f2ed844a438c787584a5393c08b61c7647aebde6c72b",
+          "2000Q3": "0513dbf0ccc46f231dcf733707d948a1732a009ec36c55f26fc1589b09892bf7",
+          "2000Q2": "570d1abff66a7095ea3136317b46b7fcbcae9a2ca1098386775d96182ea9ceed",
+          "2000Q1": "463e4836210a0935568697d1f36bdec410864d06c8634bb92dc7c447b541cd16"
+        },
+        "changed_periods_against_previous_vintage": [],
+        "first_vintage_for_this_source": true,
+        "causality": "NONE",
+        "2025_anomaly_gate": "BLOCKED_UNTIL_CORRECTED_VINTAGE_AND_SCOPE_REVIEW",
+        "next_requirement": "Obtain official pre/post correction vintages or an Urssaf correction notice; hashes do not establish accuracy."
+      },
+      "ready_for_economic_join": false
+    },
+    "dares_mmo_page": {
+      "result": "BLOCKED_OFFICIAL_SITE_ANTIBOT",
+      "evidence": {
+        "sha256": "84bdfb9774d9adf3d237ba7b2328c3a3afc17d96501f16b5f0302b4be8a450d0",
+        "bytes": 60701,
+        "content_type": "text/html",
+        "url": "https://dares.travail-emploi.gouv.fr/donnees/les-mouvements-de-main-doeuvre"
+      },
+      "detail": {
+        "result": "BLOCKED_OFFICIAL_SITE_ANTIBOT",
+        "reason": "Publisher challenge; no bypass attempted."
+      },
+      "ready_for_economic_join": false
+    }
+  },
+  "publication_gate": "BLOCKED_ECONOMIC_JOIN_AND_CAUSALITY",
+  "note": "DPAE 2025 hashes track revisions, not whether Urssaf has repaired source classification errors. Insee table headings do not establish units or interpretation."
+}
