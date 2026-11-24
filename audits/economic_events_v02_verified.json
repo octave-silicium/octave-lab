@@ -1,0 +1,358 @@
+{
+  "date": "2026-11-24",
+  "status": "TECHNICAL_ACCEPTANCE",
+  "tested_commit": "95de64f33f5ffd7982398efe7e7d552590c13050",
+  "run_id": 45397541870,
+  "job_id": 138457195191,
+  "tests": 281,
+  "seconds": 8.833,
+  "conclusion": "success",
+  "regression_workflows": [
+    45397541984,
+    45397541890,
+    45397541886
+  ],
+  "fixture": "W001_SCRIPTED_SYNTHETIC",
+  "process_sha256": "bdfe20ab6f191ff11a62c5f745f04527d6db94a9cda5550427de5a522eec6298",
+  "comparisons": {
+    "assisted": {
+      "baseline": {
+        "arrivals": 60,
+        "completed_cases": 5,
+        "correct_completed_cases": 5,
+        "unfinished_cases": 55,
+        "waiting_cases": 55,
+        "in_service_cases": 0,
+        "quality_completed": "1",
+        "quality_assigned_cohort": "1",
+        "human_service_seconds": 17970,
+        "mean_completed_elapsed_seconds": "7500",
+        "p90_completed_elapsed_seconds": 12480,
+        "total_wait_case_seconds": 496170,
+        "time_weighted_mean_cases_in_system": "8569/240",
+        "planned_rework_executions": 0,
+        "rework_visits_started": 0
+      },
+      "alternative": {
+        "arrivals": 60,
+        "completed_cases": 38,
+        "correct_completed_cases": 38,
+        "unfinished_cases": 22,
+        "waiting_cases": 22,
+        "in_service_cases": 0,
+        "quality_completed": "1",
+        "quality_assigned_cohort": "1",
+        "human_service_seconds": 26130,
+        "mean_completed_elapsed_seconds": "96090/19",
+        "p90_completed_elapsed_seconds": 7260,
+        "total_wait_case_seconds": 291630,
+        "time_weighted_mean_cases_in_system": "2683/120",
+        "planned_rework_executions": 0,
+        "rework_visits_started": 0
+      },
+      "quality_comparable": true,
+      "delta": {
+        "completed_cases": 33,
+        "correct_completed_cases": 33,
+        "unfinished_cases": -33,
+        "human_service_seconds": 8160,
+        "total_wait_case_seconds": -204540
+      },
+      "paired_completed": {
+        "count": 5,
+        "mean_elapsed_delta_seconds": "-4986",
+        "selection_warning": "Only cases completed in both scenarios; not whole cohort."
+      },
+      "sha256": "4c8caa2b521b957f6407d746b3986e64c0497cdbdd9efca5c3762ecd4c1a10e0"
+    },
+    "redesign": {
+      "baseline": {
+        "arrivals": 60,
+        "completed_cases": 5,
+        "correct_completed_cases": 5,
+        "unfinished_cases": 55,
+        "waiting_cases": 55,
+        "in_service_cases": 0,
+        "quality_completed": "1",
+        "quality_assigned_cohort": "1",
+        "human_service_seconds": 17970,
+        "mean_completed_elapsed_seconds": "7500",
+        "p90_completed_elapsed_seconds": 12480,
+        "total_wait_case_seconds": 496170,
+        "time_weighted_mean_cases_in_system": "8569/240",
+        "planned_rework_executions": 0,
+        "rework_visits_started": 0
+      },
+      "alternative": {
+        "arrivals": 60,
+        "completed_cases": 48,
+        "correct_completed_cases": 48,
+        "unfinished_cases": 12,
+        "waiting_cases": 12,
+        "in_service_cases": 0,
+        "quality_completed": "1",
+        "quality_assigned_cohort": "1",
+        "human_service_seconds": 23340,
+        "mean_completed_elapsed_seconds": "14785/4",
+        "p90_completed_elapsed_seconds": 5730,
+        "total_wait_case_seconds": 207660,
+        "time_weighted_mean_cases_in_system": "49/3",
+        "planned_rework_executions": 0,
+        "rework_visits_started": 0
+      },
+      "quality_comparable": true,
+      "delta": {
+        "completed_cases": 43,
+        "correct_completed_cases": 43,
+        "unfinished_cases": -43,
+        "human_service_seconds": 5370,
+        "total_wait_case_seconds": -288510
+      },
+      "paired_completed": {
+        "count": 5,
+        "mean_elapsed_delta_seconds": "-6468",
+        "selection_warning": "Only cases completed in both scenarios; not whole cohort."
+      },
+      "sha256": "446293adaa690c77525c7b0bf87259ff00f81e16ea434097fb3d4dff20d09fcf"
+    },
+    "stress": {
+      "baseline": {
+        "arrivals": 60,
+        "completed_cases": 5,
+        "correct_completed_cases": 5,
+        "unfinished_cases": 55,
+        "waiting_cases": 55,
+        "in_service_cases": 0,
+        "quality_completed": "1",
+        "quality_assigned_cohort": "1",
+        "human_service_seconds": 17970,
+        "mean_completed_elapsed_seconds": "7500",
+        "p90_completed_elapsed_seconds": 12480,
+        "total_wait_case_seconds": 496170,
+        "time_weighted_mean_cases_in_system": "8569/240",
+        "planned_rework_executions": 0,
+        "rework_visits_started": 0
+      },
+      "alternative": {
+        "arrivals": 60,
+        "completed_cases": 16,
+        "correct_completed_cases": 14,
+        "unfinished_cases": 44,
+        "waiting_cases": 44,
+        "in_service_cases": 0,
+        "quality_completed": "7/8",
+        "quality_assigned_cohort": "17/20",
+        "human_service_seconds": 24600,
+        "mean_completed_elapsed_seconds": "48765/8",
+        "p90_completed_elapsed_seconds": 10050,
+        "total_wait_case_seconds": 416490,
+        "time_weighted_mean_cases_in_system": "14843/480",
+        "planned_rework_executions": 20,
+        "rework_visits_started": 6
+      },
+      "quality_comparable": false,
+      "delta": null,
+      "paired_completed": null,
+      "sha256": "5743303f8558fdc9a3568a58e5da7c37beac20914129230a5962d87b0504c9f6"
+    },
+    "burst-assisted": {
+      "baseline": {
+        "arrivals": 60,
+        "completed_cases": 0,
+        "correct_completed_cases": 0,
+        "unfinished_cases": 60,
+        "waiting_cases": 60,
+        "in_service_cases": 0,
+        "quality_completed": null,
+        "quality_assigned_cohort": "1",
+        "human_service_seconds": 14070,
+        "mean_completed_elapsed_seconds": null,
+        "p90_completed_elapsed_seconds": null,
+        "total_wait_case_seconds": 849930,
+        "time_weighted_mean_cases_in_system": "60",
+        "planned_rework_executions": 0,
+        "rework_visits_started": 0
+      },
+      "alternative": {
+        "arrivals": 60,
+        "completed_cases": 38,
+        "correct_completed_cases": 38,
+        "unfinished_cases": 22,
+        "waiting_cases": 22,
+        "in_service_cases": 0,
+        "quality_completed": "1",
+        "quality_assigned_cohort": "1",
+        "human_service_seconds": 26340,
+        "mean_completed_elapsed_seconds": "10350",
+        "p90_completed_elapsed_seconds": 14190,
+        "total_wait_case_seconds": 679560,
+        "time_weighted_mean_cases_in_system": "789/16",
+        "planned_rework_executions": 0,
+        "rework_visits_started": 0
+      },
+      "quality_comparable": false,
+      "delta": null,
+      "paired_completed": null,
+      "sha256": "1f06733858b15bf6b304cbf0adf55e5c0ddcfa5c504bc77b0acf8195167a1dc3"
+    }
+  },
+  "terminology_example": {
+    "glossary_sha256": "c9904c53d25f0501d6fb6c9bbc68ffafd354b154d2b395b9cf0cca249e703d5a",
+    "language": "fr",
+    "items": [
+      {
+        "metric_id": "arrivals",
+        "value": 60,
+        "label": "Dossiers arrivés",
+        "definition": "Nombre de dossiers entrés pendant la période.",
+        "unit": "dossiers",
+        "caution": "Ne compte pas les dossiers arrivés après la fin de la simulation.",
+        "technical_name": "arrivals",
+        "method_ref": "docs/G3-EVENTS.md"
+      },
+      {
+        "metric_id": "completed_cases",
+        "value": 38,
+        "label": "Dossiers terminés",
+        "definition": "Dossiers dont toutes les opérations prévues sont terminées.",
+        "unit": "dossiers",
+        "caution": "Un dossier terminé peut être incorrect.",
+        "technical_name": "completed_cases",
+        "method_ref": "docs/G3-EVENTS.md"
+      },
+      {
+        "metric_id": "correct_completed_cases",
+        "value": 38,
+        "label": "Dossiers terminés correctement",
+        "definition": "Dossiers terminés avec un résultat considéré correct dans le scénario.",
+        "unit": "dossiers",
+        "caution": "La qualité est supposée, non mesurée.",
+        "technical_name": "correct_completed_cases",
+        "method_ref": "docs/G3-EVENTS.md"
+      },
+      {
+        "metric_id": "unfinished_cases",
+        "value": 22,
+        "label": "Dossiers non terminés",
+        "definition": "Dossiers encore en attente ou en traitement à la fin de la période.",
+        "unit": "dossiers",
+        "caution": "Ce ne sont pas nécessairement des dossiers perdus.",
+        "technical_name": "unfinished_cases",
+        "method_ref": "docs/G3-EVENTS.md"
+      },
+      {
+        "metric_id": "waiting_cases",
+        "value": 22,
+        "label": "Dossiers en attente",
+        "definition": "Dossiers non terminés qui attendent une ressource.",
+        "unit": "dossiers",
+        "caution": "Ne comprend pas ceux en traitement.",
+        "technical_name": "waiting_cases",
+        "method_ref": "docs/G3-EVENTS.md"
+      },
+      {
+        "metric_id": "in_service_cases",
+        "value": 0,
+        "label": "Dossiers en cours de traitement",
+        "definition": "Dossiers dont une opération est en cours à la fin de la période.",
+        "unit": "dossiers",
+        "caution": "Ne comprend pas ceux en attente.",
+        "technical_name": "in_service_cases",
+        "method_ref": "docs/G3-EVENTS.md"
+      },
+      {
+        "metric_id": "quality_completed",
+        "value": "1",
+        "label": "Part des dossiers terminés correctement",
+        "definition": "Part correcte parmi les seuls dossiers terminés.",
+        "unit": "fraction",
+        "caution": "Les dossiers inachevés sont exclus ; attention au biais de sélection.",
+        "technical_name": "quality_completed",
+        "method_ref": "docs/G3-EVENTS.md"
+      },
+      {
+        "metric_id": "quality_assigned_cohort",
+        "value": "1",
+        "label": "Part correcte supposée sur tous les dossiers",
+        "definition": "Part des résultats corrects assignés à l'ensemble des dossiers du scénario.",
+        "unit": "fraction",
+        "caution": "Hypothèse de simulation, pas taux de qualité mesuré.",
+        "technical_name": "quality_assigned_cohort",
+        "method_ref": "docs/G3-EVENTS.md"
+      },
+      {
+        "metric_id": "human_service_seconds",
+        "value": 26130,
+        "label": "Temps humain consacré aux opérations",
+        "definition": "Somme du temps de service des ressources humaines sur la période.",
+        "unit": "secondes-personnes",
+        "caution": "Ne mesure ni les salaires, ni les emplois, ni le temps calendaire.",
+        "technical_name": "human_service_seconds",
+        "method_ref": "docs/G3-EVENTS.md"
+      },
+      {
+        "metric_id": "mean_completed_elapsed_seconds",
+        "value": "96090/19",
+        "label": "Délai moyen des dossiers terminés",
+        "definition": "Temps moyen entre l'arrivée et la fin, attente comprise, parmi les dossiers terminés.",
+        "unit": "secondes",
+        "caution": "Ne représente pas les dossiers non terminés.",
+        "technical_name": "mean_completed_elapsed_seconds",
+        "method_ref": "docs/G3-EVENTS.md"
+      },
+      {
+        "metric_id": "p90_completed_elapsed_seconds",
+        "value": 7260,
+        "label": "Délai sous lequel 90 % des dossiers terminés aboutissent",
+        "definition": "Valeur au rang correspondant à 90 % des délais des dossiers terminés.",
+        "unit": "secondes",
+        "caution": "Percentile empirique du scénario, pas probabilité future.",
+        "technical_name": "p90_completed_elapsed_seconds",
+        "method_ref": "docs/G3-EVENTS.md"
+      },
+      {
+        "metric_id": "total_wait_case_seconds",
+        "value": 291630,
+        "label": "Temps d'attente cumulé des dossiers",
+        "definition": "Somme des temps passés à attendre, y compris pour les dossiers non terminés jusqu'à la fin.",
+        "unit": "secondes-dossiers",
+        "caution": "Plusieurs dossiers peuvent attendre en même temps.",
+        "technical_name": "total_wait_case_seconds",
+        "method_ref": "docs/G3-EVENTS.md"
+      },
+      {
+        "metric_id": "time_weighted_mean_cases_in_system",
+        "value": "2683/120",
+        "label": "Nombre moyen de dossiers en attente ou en cours",
+        "definition": "Temps total passé par les dossiers dans le système divisé par la durée de la période.",
+        "unit": "dossiers",
+        "caution": "Moyenne temporelle sur une période finie, pas une hypothèse de régime stable.",
+        "technical_name": "time_weighted_mean_cases_in_system",
+        "method_ref": "docs/G3-EVENTS.md"
+      },
+      {
+        "metric_id": "planned_rework_executions",
+        "value": 0,
+        "label": "Reprises prévues",
+        "definition": "Nombre de répétitions d'étapes explicitement programmées dans les scénarios.",
+        "unit": "reprises",
+        "caution": "Ne signifie pas que toutes les reprises ont effectivement commencé.",
+        "technical_name": "planned_rework_executions",
+        "method_ref": "docs/G3-EVENTS.md"
+      },
+      {
+        "metric_id": "rework_visits_started",
+        "value": 0,
+        "label": "Opérations de reprise commencées",
+        "definition": "Nombre d'utilisations de ressources associées aux reprises qui ont commencé avant la fin.",
+        "unit": "opérations",
+        "caution": "Une reprise peut comporter plusieurs opérations.",
+        "technical_name": "rework_visits_started",
+        "method_ref": "docs/G3-EVENTS.md"
+      }
+    ],
+    "visible_notice": "Simulation conditionnelle, paramètres fictifs ; aucune mesure d'entreprise."
+  },
+  "scientific_gate_promoted": false,
+  "publication": "BLOCK_PUBLICATION"
+}
