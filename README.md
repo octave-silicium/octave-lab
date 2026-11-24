@@ -54,4 +54,4 @@ Python 3.11+ ; accès réseau nécessaire pour les collectes. Les commandes ci-d
 Projet **Octave Silicium**. Les observations factuelles, hypothèses et opinions sont distinguées.
 
 ### G2 — Décomposition du travail
-[Socle O*NET 31.0](docs/G2-WORK-GRAPH.md), collecte officielle à confirmer. Aucun mapping France ni score IA. G1 v0.4 : quatre parcours Chromium et 151 tests réussis ([preuve](audits/explorer_browser_v04_verified.json)).
+[Socle O*NET 31.0](docs/G2-WORK-GRAPH.md), quatre CSV officiels vérifiés, 22 314 nœuds et 45 344 relations, 156 tests. Aucun mapping France ni score IA. G1 v0.4 : quatre parcours Chromium et 151 tests réussis ([preuve](audits/explorer_browser_v04_verified.json)).

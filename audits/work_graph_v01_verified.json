@@ -1,0 +1,67 @@
+{
+  "run_id": 45348633805,
+  "job_id": 138289261391,
+  "commit": "3c60de68ce0b707efd2e4438867b5205c440b743",
+  "tests_passed": 156,
+  "audit": {
+    "version": "31.0",
+    "geography": "US",
+    "nodes": {
+      "occupation": 1016,
+      "task": 18838,
+      "gwa": 41,
+      "iwa": 332,
+      "dwa": 2087
+    },
+    "edges": {
+      "OCCUPATION_TASK": 18838,
+      "GWA_IWA": 332,
+      "IWA_DWA": 2087,
+      "TASK_DWA": 24087
+    },
+    "occupations_with_tasks": 923,
+    "occupations_without_tasks": 93,
+    "mapped_tasks": 18838,
+    "unmapped_tasks": 0,
+    "tasks_with_multiple_dwas": 4475,
+    "dwas_used": 2085,
+    "atomic_actions": 0,
+    "processes": 0,
+    "impact_estimates": 0,
+    "crosswalks": 0,
+    "sources": {
+      "occupation_data": {
+        "url": "https://www.onetcenter.org/dl_files/database/db_31_0_csv/occupation_data.csv",
+        "sha256": "a09eae1d6609686e44e05b7290993a1c8b523d8ca224bc0eedc194c855c3ee02",
+        "bytes": 268030,
+        "rows": 1016,
+        "retrieved_at": "2026-11-24T07:31:45.344098+00:00"
+      },
+      "task_statements": {
+        "url": "https://www.onetcenter.org/dl_files/database/db_31_0_csv/task_statements.csv",
+        "sha256": "4568e14d8db6f05551ad37e056e909b13ebae4a26bcb5ff915bb5f281d582c57",
+        "bytes": 3461375,
+        "rows": 18838,
+        "retrieved_at": "2026-11-24T07:31:48.517514+00:00"
+      },
+      "gwas_to_iwas_to_dwas": {
+        "url": "https://www.onetcenter.org/dl_files/database/db_31_0_csv/gwas_to_iwas_to_dwas.csv",
+        "sha256": "ae4e9f166187bfe8e6328a21470689ed188e7ed831090ace2a21c66cebb31a49",
+        "bytes": 351780,
+        "rows": 2087,
+        "retrieved_at": "2026-11-24T07:31:49.260349+00:00"
+      },
+      "tasks_to_dwas": {
+        "url": "https://www.onetcenter.org/dl_files/database/db_31_0_csv/tasks_to_dwas.csv",
+        "sha256": "15624d31acb85627736a87dc7c485edffe30361262571c8242fad4ae9e7678a6",
+        "bytes": 5602660,
+        "rows": 24087,
+        "retrieved_at": "2026-11-24T07:31:54.501673+00:00"
+      }
+    },
+    "attribution": "Includes information from the O*NET 31.0 Database by the U.S. Department of Labor, Employment and Training Administration (USDOL/ETA), under CC BY 4.0. O*NET® is a trademark of USDOL/ETA. Octave Lab has reorganized the data; USDOL/ETA has not approved, endorsed or tested these modifications.",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "gate": "G-M0_PARTIAL",
+    "values_emitted": false
+  }
+}
