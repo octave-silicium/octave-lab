@@ -1,0 +1,55 @@
+{
+  "sources": [
+    {
+      "id": "DS-004_dares_offers_monthly",
+      "publisher": "Dares / France Travail",
+      "url": "https://data.dares.travail-emploi.gouv.fr/api/explore/v2.1/catalog/datasets/dares_offres_collectees_satisfaites_france_travail_brutes_mens/exports/csv?use_labels=true",
+      "format": "csv",
+      "required_columns": [],
+      "legal_state": "Licence Ouverte v2.0 on precise monthly dataset; raw still withheld from repo pending source review",
+      "dependency_cluster": "FT_DARES_STMT",
+      "unit_of_observation": "monthly job offers filed through France Travail; counts rounded to hundreds; not hires"
+    },
+    {
+      "id": "DS-015_urssaf_private_sector_na88",
+      "publisher": "Urssaf Caisse nationale",
+      "url": "https://open.urssaf.fr/api/explore/v2.1/catalog/datasets/effectifs-salaries-et-masse-salariale-du-secteur-prive-france-entiere-x-na88/exports/csv?use_labels=false",
+      "format": "csv",
+      "required_columns": [
+        "annee",
+        "trimestre",
+        "effectifs_salaries_brut",
+        "effectifs_salaries_cvs"
+      ],
+      "legal_state": "ODbL portal; attribution and derivative-database obligations to assess before redistribution",
+      "dependency_cluster": "DSN_URSSAF_DARES_INSEE",
+      "unit_of_observation": "private-sector payroll by economic activity NA88 and quarter (NOT occupation); apprenticeship change 2023Q1"
+    },
+    {
+      "id": "DS-031a_eurostat_ai_enterprises_size",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/isoc_eb_ai?geo=FR&geo=EU27_2020&lang=EN&sinceTimePeriod=2022",
+      "format": "jsonstat",
+      "required_dimensions": [
+        "geo",
+        "time"
+      ],
+      "legal_state": "Eurostat reuse policy applies; check third-party exceptions and exact dataset before publication",
+      "dependency_cluster": "EUROSTAT_ICT_SURVEY_INSEE_TIC",
+      "unit_of_observation": "sampled enterprises employing 10+; reported AI use by enterprise size, not occupation"
+    },
+    {
+      "id": "DS-031b_eurostat_ai_enterprises_nace",
+      "publisher": "Eurostat",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/isoc_eb_ain2?geo=FR&lang=EN&sinceTimePeriod=2022",
+      "format": "jsonstat",
+      "required_dimensions": [
+        "geo",
+        "time"
+      ],
+      "legal_state": "Eurostat reuse policy; check code-level metadata and confidentiality/suppression",
+      "dependency_cluster": "EUROSTAT_ICT_SURVEY_INSEE_TIC",
+      "unit_of_observation": "sampled enterprises by NACE Rev2 sector; exposure and adoption are not synonymous"
+    }
+  ]
+}

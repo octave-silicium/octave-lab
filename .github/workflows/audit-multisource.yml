@@ -1,0 +1,48 @@
+name: OCTAVE LAB | Audit multi-sources
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'pipeline/audit_multisource.py'
+      - 'pipeline/audit_multisource_sources.json'
+      - 'tests/test_audit_multisource.py'
+      - '.github/workflows/audit-multisource.yml'
+  workflow_dispatch:
+  schedule:
+    - cron: '29 8 5 * *'  # Monthly, UTC
+permissions:
+  contents: write
+concurrency:
+  group: octave-multisource-audit
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Test source audit logic
+        run: python -m unittest discover -s tests -p 'test_audit_multisource.py' -v
+      - name: Fetch official source datasets and validate schemas
+        run: python pipeline/audit_multisource.py
+      - name: Commit manifest with source provenance, without redistributing raw data
+        if: always()
+        shell: bash
+        run: |
+          if [ -s audits/latest_multisource.json ]; then
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git add audits/latest_multisource.json
+            git diff --cached --quiet || (git commit -m 'audit(data): source access and schema manifest' && git push)
+          fi
+      - name: Preserve audit report artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: octave-multisource-audit-${{ github.run_id }}
+          path: audits/latest_multisource.json
+          if-no-files-found: warn
+          retention-days: 30
