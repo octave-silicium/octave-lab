@@ -1,5 +1,5 @@
 {
-  "run_at_utc": "2026-11-24T05:23:22.263618+00:00",
+  "run_at_utc": "2026-11-24T06:20:35.468503+00:00",
   "study": "PILOT-001",
   "sector": "Information et communication (NACE Rev2 J)",
   "scope": "Source-specific descriptive observations; no numeric cross-source merging",
@@ -9,10 +9,10 @@
       "classification": "NACE Rev2 section J, six NA88 divisions 58-63",
       "geography": "France entière (Urssaf scope)",
       "selected_periods": {
-        "2024Q4": 944659,
-        "2025Q4": 924452,
-        "2025Q2": 935431,
-        "2026Q2": 918598
+        "2024Q4": 944659.0,
+        "2025Q4": 924452.0,
+        "2025Q2": 935431.0,
+        "2026Q2": 918598.0
       },
       "change_2025Q4_vs_2024Q4_pct": -2.14,
       "change_2026Q2_vs_2025Q2_pct": -1.8,
@@ -54,7 +54,13 @@
         "2024": 41.76,
         "2025": 58.98
       },
+      "source_flags": {
+        "2023": "b",
+        "2024": "",
+        "2025": ""
+      },
       "change_2024_vs_2023_pp": null,
+      "change_2024_vs_2023_gate": "REVIEW_REQUIRED: inspect source flags and comparability; no validated change",
       "change_2025_vs_2024_pp": null,
       "comparability_warning": "2025 AI technology basket adds generative image/video/audio category vs prior years; do not interpret 2024-2025 difference as same-definition growth without official bridge.",
       "quality_gate": "SURVEY_DESCRIPTION_ONLY: no inference on automation, job losses or firm productivity",
@@ -65,16 +71,6 @@
         "unit": "PC_ENT",
         "size_emp": "GE10",
         "freq": "A"
-      },
-      "source_flags": {
-        "2023": "b",
-        "2024": "",
-        "2025": ""
-      },
-      "change_2024_vs_2023_gate": "REVIEW_REQUIRED: 2023 source flag b (break in series); 2023-2024 change not validated; arithmetic difference is not proof of comparability",
-      "flag_verification": {
-        "run_id": 45339526530,
-        "source_sha256": "0c701942ea3d15bd1350e6938b27a5713f9d39f366b620723995b98077a469a8"
       }
     }
   },
@@ -100,8 +96,7 @@
     "2025 DPAE are withheld due to published contract-duration error warnings.",
     "Eurostat E_AI_TANY AI technology basket expanded in 2025 to include generating image/video/sound; 2025 level is not strict like-for-like adoption change.",
     "Information and communication covers publishing, media and telecoms, not just software firms.",
-    "ODbL 1.0: attribution and derivative-database obligations; commercial product review not complete.",
-    "Eurostat E_AI_TANY NACE J FR 2023 carries b (break in series); 2023-2024 comparison remains under review, not an approved trend."
+    "ODbL 1.0: attribution and derivative-database obligations; commercial product review not complete."
   ],
   "evidence_gate": "DESCRIPTIVE_SIDEBY_SIDE_ONLY",
   "business_licence_gate": "NOT_APPROVED_FOR_COMMERCIAL_DERIVED_DATABASE",
