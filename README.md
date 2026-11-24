@@ -14,7 +14,7 @@
 | PILOT-001 | [Rapport descriptif NACE J](research/PILOT-001/rapport.md), [manifeste](research/PILOT-001/pilot_manifest.json), [code](pipeline/pilot_ict.py) |
 | Moteur métier–tâche–action–processus | [METH-003](docs/METH-003.md), spécification validée, non implémentée |
 | Socle sémantique | [S1 v0.2.0](docs/SEMANTIC-V2.md) : 183 491 cellules archivées ; [v0.3.0](docs/SEMANTIC-V3.md) : 58 512 cellules transitoires, 118 tests du dépôt réussis ; [v0.4](docs/SEMANTIC-V4.md) : 9 jeux interrogeables en interne, 130 tests réussis ; stockage de production et qualification ouverts |
-| Explorateur multisource | [G1 v0.3](docs/G1-EXPLORER.md) moteur local vérifié, 148 tests, chargement sélectif et vues enregistrées ; navigateur à confirmer ; [UX-001](docs/UX-001.md) standard de design, ergonomie et recette ; [BENCH-001](docs/BENCH-001.md) benchmark transversal |
+| Explorateur multisource | [G1 v0.4](docs/G1-EXPLORER.md) table de confrontation et pistes natives implémentées ; recette v0.3 vérifiée sur quatre tailles ; recette v0.4 à confirmer ; [UX-001](docs/UX-001.md) standard de design, ergonomie et recette ; [BENCH-001](docs/BENCH-001.md) benchmark transversal |
 
 79 sources/programmes candidats recensés, non 79 bases intégrées. PILOT-001 mobilise deux lignées principales (Urssaf et Eurostat), sans inférence causale. Les comparaisons DPAE touchées par les anomalies 2025 restent bloquées ; le périmètre des technologies IA Eurostat change en 2025. Les sources Dares MMO et les droits commerciaux concernés nécessitent encore qualification.
 
