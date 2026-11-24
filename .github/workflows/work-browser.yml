@@ -1,0 +1,31 @@
+name: OCTAVE LAB | G2 work browser
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'tests/browser_work.py'
+      - 'explorer/work.*'
+      - 'pipeline/work_reverse.py'
+      - '.github/workflows/work-browser.yml'
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: |
+          python -m pip install playwright==1.51.0
+          if ! command -v google-chrome && ! command -v chromium; then python -m playwright install --with-deps chromium; fi
+      - run: |
+          set -o pipefail
+          PYTHONPATH=. python tests/browser_work.py | tee work_browser.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: work-browser-metadata
+          path: work_browser.json
