@@ -1,0 +1,320 @@
+{
+  "date": "2026-11-24",
+  "status": "TECHNICAL_ACCEPTANCE",
+  "tested_commit": "2d077c4a72e940642e0ebd48b011b32847fa7896",
+  "run_id": 45403852773,
+  "job_id": 138479197215,
+  "tests": 331,
+  "seconds": 10.851,
+  "conclusion": "success",
+  "prior_failed_run": 45403699046,
+  "correction": "Event resource contract uses available_seconds and busy_seconds, not fluid-model hours. Earlier source audit and native-dimensions workflows also failed at test step for same reason; not separately rerun.",
+  "fixture": "W002_FIRM_SYNTHETIC",
+  "process_sha256": "1f6d21e10e3f88d63419fde35ca582510aa4523d3733daa3f1fa3ff92f1831b7",
+  "cases": {
+    "firm:digital": {
+      "baseline": {
+        "sales": 23,
+        "correct_outputs": 23,
+        "paid_human_seconds": 7200,
+        "active_human_seconds": 5730,
+        "revenue_eur": "276",
+        "payroll_eur": "80",
+        "cash_cost_eur": "430/3",
+        "cash_operating_surplus_eur": "398/3",
+        "accounting_operating_result_eur": "392/3",
+        "cost_per_correct_output_eur": "436/69",
+        "annual_cash_surplus_eur": "199000/3",
+        "npv_eur": "11400913975000/43046721",
+        "funding_gap_at_sampled_dates_eur": "0"
+      },
+      "alternative": {
+        "sales": 23,
+        "correct_outputs": 23,
+        "paid_human_seconds": 7200,
+        "active_human_seconds": 2850,
+        "revenue_eur": "276",
+        "payroll_eur": "80",
+        "cash_cost_eur": "53473/360",
+        "cash_operating_surplus_eur": "45887/360",
+        "accounting_operating_result_eur": "44447/360",
+        "cost_per_correct_output_eur": "54913/8280",
+        "annual_cash_surplus_eur": "1147175/18",
+        "npv_eur": "64173149648375/258280326",
+        "funding_gap_at_sampled_dates_eur": "0"
+      },
+      "comparison": {
+        "incremental_npv_eur": "-4232334201625/258280326",
+        "incremental_revenue_eur": "0",
+        "incremental_cash_surplus_eur": "-1873/360",
+        "incremental_accounting_result_eur": "-2593/360",
+        "payroll_saving_eur": "0",
+        "active_human_seconds_released": 2880,
+        "max_incremental_investment_at_zero_npv_eur": "-2940932571625/258280326",
+        "sustained_payback_year": null
+      },
+      "receipt_sha256": "84d61e1cfea8fedbdc6c43ac7e70b591344dc9949810a8a9f7fa54c63f935fa7"
+    },
+    "firm:robot-retain": {
+      "baseline": {
+        "sales": 23,
+        "correct_outputs": 23,
+        "paid_human_seconds": 7200,
+        "active_human_seconds": 5730,
+        "revenue_eur": "276",
+        "payroll_eur": "80",
+        "cash_cost_eur": "430/3",
+        "cash_operating_surplus_eur": "398/3",
+        "accounting_operating_result_eur": "392/3",
+        "cost_per_correct_output_eur": "436/69",
+        "annual_cash_surplus_eur": "199000/3",
+        "npv_eur": "11400913975000/43046721",
+        "funding_gap_at_sampled_dates_eur": "0"
+      },
+      "alternative": {
+        "sales": 23,
+        "correct_outputs": 23,
+        "paid_human_seconds": 7200,
+        "active_human_seconds": 0,
+        "revenue_eur": "276",
+        "payroll_eur": "80",
+        "cash_cost_eur": "28349/180",
+        "cash_operating_surplus_eur": "21331/180",
+        "accounting_operating_result_eur": "18091/180",
+        "cost_per_correct_output_eur": "31589/4140",
+        "annual_cash_surplus_eur": "533275/9",
+        "npv_eur": "25127984510875/129140163",
+        "funding_gap_at_sampled_dates_eur": "17000"
+      },
+      "comparison": {
+        "incremental_npv_eur": "-9074757414125/129140163",
+        "incremental_revenue_eur": "0",
+        "incremental_cash_surplus_eur": "-2549/180",
+        "incremental_accounting_result_eur": "-5429/180",
+        "payroll_saving_eur": "0",
+        "active_human_seconds_released": 5730,
+        "max_incremental_investment_at_zero_npv_eur": "-3909150894125/129140163",
+        "sustained_payback_year": null
+      },
+      "receipt_sha256": "ca1403867168cec106a94bef7dc59c7f62b01562b40dd9a950e3952d0fda5bf3"
+    },
+    "firm:robot-release": {
+      "baseline": {
+        "sales": 23,
+        "correct_outputs": 23,
+        "paid_human_seconds": 7200,
+        "active_human_seconds": 5730,
+        "revenue_eur": "276",
+        "payroll_eur": "80",
+        "cash_cost_eur": "430/3",
+        "cash_operating_surplus_eur": "398/3",
+        "accounting_operating_result_eur": "392/3",
+        "cost_per_correct_output_eur": "436/69",
+        "annual_cash_surplus_eur": "199000/3",
+        "npv_eur": "11400913975000/43046721",
+        "funding_gap_at_sampled_dates_eur": "0"
+      },
+      "alternative": {
+        "sales": 23,
+        "correct_outputs": 23,
+        "paid_human_seconds": 0,
+        "active_human_seconds": 0,
+        "revenue_eur": "276",
+        "payroll_eur": "0",
+        "cash_cost_eur": "13949/180",
+        "cash_operating_surplus_eur": "35731/180",
+        "accounting_operating_result_eur": "32491/180",
+        "cost_per_correct_output_eur": "17189/4140",
+        "annual_cash_surplus_eur": "893275/9",
+        "npv_eur": "45752753510875/129140163",
+        "funding_gap_at_sampled_dates_eur": "17000"
+      },
+      "comparison": {
+        "incremental_npv_eur": "11550011585875/129140163",
+        "incremental_revenue_eur": "0",
+        "incremental_cash_surplus_eur": "11851/180",
+        "incremental_accounting_result_eur": "8971/180",
+        "payroll_saving_eur": "80",
+        "active_human_seconds_released": 5730,
+        "max_incremental_investment_at_zero_npv_eur": "16715618105875/129140163",
+        "sustained_payback_year": 2
+      },
+      "receipt_sha256": "cff238129df77e2580576d27dedaf4ee2a56785702074646541967957d8d189b"
+    },
+    "firm:robot-two-instruments": {
+      "baseline": {
+        "sales": 23,
+        "correct_outputs": 23,
+        "paid_human_seconds": 7200,
+        "active_human_seconds": 5730,
+        "revenue_eur": "276",
+        "payroll_eur": "80",
+        "cash_cost_eur": "430/3",
+        "cash_operating_surplus_eur": "398/3",
+        "accounting_operating_result_eur": "392/3",
+        "cost_per_correct_output_eur": "436/69",
+        "annual_cash_surplus_eur": "199000/3",
+        "npv_eur": "11400913975000/43046721",
+        "funding_gap_at_sampled_dates_eur": "0"
+      },
+      "alternative": {
+        "sales": 36,
+        "correct_outputs": 36,
+        "paid_human_seconds": 0,
+        "active_human_seconds": 0,
+        "revenue_eur": "432",
+        "payroll_eur": "0",
+        "cash_cost_eur": "5509/60",
+        "cash_operating_surplus_eur": "20411/60",
+        "accounting_operating_result_eur": "18971/60",
+        "cost_per_correct_output_eur": "6949/2160",
+        "annual_cash_surplus_eur": "510275/3",
+        "npv_eur": "26758991324375/43046721",
+        "funding_gap_at_sampled_dates_eur": "32500"
+      },
+      "comparison": {
+        "incremental_npv_eur": "15358077349375/43046721",
+        "incremental_revenue_eur": "156",
+        "incremental_cash_surplus_eur": "12451/60",
+        "incremental_accounting_result_eur": "11131/60",
+        "payroll_saving_eur": "80",
+        "active_human_seconds_released": 5730,
+        "max_incremental_investment_at_zero_npv_eur": "17725647004375/43046721",
+        "sustained_payback_year": 1
+      },
+      "receipt_sha256": "cb9c9377dcceace1ff715bb1b823227f50d25b03513a4604a71372a7c1614d13"
+    },
+    "limited_sales": {
+      "baseline": {
+        "sales": 23,
+        "correct_outputs": 23,
+        "paid_human_seconds": 7200,
+        "active_human_seconds": 5730,
+        "revenue_eur": "276",
+        "payroll_eur": "80",
+        "cash_cost_eur": "430/3",
+        "cash_operating_surplus_eur": "398/3",
+        "accounting_operating_result_eur": "392/3",
+        "cost_per_correct_output_eur": "436/69",
+        "annual_cash_surplus_eur": "199000/3",
+        "npv_eur": "11400913975000/43046721",
+        "funding_gap_at_sampled_dates_eur": "0"
+      },
+      "alternative": {
+        "sales": 23,
+        "correct_outputs": 36,
+        "paid_human_seconds": 0,
+        "active_human_seconds": 0,
+        "revenue_eur": "276",
+        "payroll_eur": "0",
+        "cash_cost_eur": "5509/60",
+        "cash_operating_surplus_eur": "11051/60",
+        "accounting_operating_result_eur": "9611/60",
+        "cost_per_correct_output_eur": "6949/2160",
+        "annual_cash_surplus_eur": "276275/3",
+        "npv_eur": "13352891474375/43046721",
+        "funding_gap_at_sampled_dates_eur": "32500"
+      },
+      "comparison": {
+        "incremental_npv_eur": "1951977499375/43046721",
+        "incremental_revenue_eur": "0",
+        "incremental_cash_surplus_eur": "3091/60",
+        "incremental_accounting_result_eur": "1771/60",
+        "payroll_saving_eur": "80",
+        "active_human_seconds_released": 5730,
+        "max_incremental_investment_at_zero_npv_eur": "4319547154375/43046721",
+        "sustained_payback_year": 3
+      },
+      "receipt_sha256": "d1f93140a941d6f1d8447c98c740ea7b4da99e300d4f152f9e7d0b437d4f855e"
+    }
+  },
+  "terminology": {
+    "glossary_sha256": "95ec2112852f6ebd35e53ddc4ea2097a17be3d8e648380116a6210096f957d9b",
+    "language": "fr",
+    "items": [
+      {
+        "metric_id": "incremental_npv_eur",
+        "value": "1951977499375/43046721",
+        "label": "Valeur financière supplémentaire sur la durée du projet",
+        "definition": "Somme des flux de trésorerie supplémentaires ramenés à leur valeur d'aujourd'hui (valeur actuelle nette ou VAN).",
+        "unit": "EUR",
+        "caution": "Hypothèses de répétition et de taux, hors impôts, financement et besoin en fonds de roulement.",
+        "technical_name": "incremental_npv_eur",
+        "method_ref": "docs/G3-FIRM.md"
+      },
+      {
+        "metric_id": "incremental_revenue_eur",
+        "value": "0",
+        "label": "Chiffre d'affaires supplémentaire",
+        "definition": "Différence entre les ventes facturables multipliées par leur prix.",
+        "unit": "EUR par période",
+        "caution": "Une capacité supplémentaire n'est pas une vente.",
+        "technical_name": "incremental_revenue_eur",
+        "method_ref": "docs/G3-FIRM.md"
+      },
+      {
+        "metric_id": "incremental_cash_surplus_eur",
+        "value": "3091/60",
+        "label": "Excédent de trésorerie d'exploitation supplémentaire",
+        "definition": "Différence entre revenus encaissés et dépenses récurrentes décaissées, entre scénarios.",
+        "unit": "EUR par période",
+        "caution": "Hors investissement initial, dette et impôts.",
+        "technical_name": "incremental_cash_surplus_eur",
+        "method_ref": "docs/G3-FIRM.md"
+      },
+      {
+        "metric_id": "incremental_accounting_result_eur",
+        "value": "1771/60",
+        "label": "Résultat d'exploitation supplémentaire du processus",
+        "definition": "Différence des revenus moins dépenses et amortissements du périmètre.",
+        "unit": "EUR par période",
+        "caution": "Pas bénéfice net de l'entreprise.",
+        "technical_name": "incremental_accounting_result_eur",
+        "method_ref": "docs/G3-FIRM.md"
+      },
+      {
+        "metric_id": "payroll_saving_eur",
+        "value": "80",
+        "label": "Économie de masse salariale supposée",
+        "definition": "Différence entre rémunérations chargées effectivement imputées aux deux scénarios.",
+        "unit": "EUR par période",
+        "caution": "Dépend d'une réduction réelle de dépenses, pas simplement de temps libéré.",
+        "technical_name": "payroll_saving_eur",
+        "method_ref": "docs/G3-FIRM.md"
+      },
+      {
+        "metric_id": "active_human_seconds_released",
+        "value": 5730,
+        "label": "Temps de travail actif libéré",
+        "definition": "Différence de temps humain effectivement mobilisé dans les deux simulations.",
+        "unit": "secondes-personnes par période",
+        "caution": "Volumes différents possibles; ne pas assimiler à des emplois ni à du cash.",
+        "technical_name": "active_human_seconds_released",
+        "method_ref": "docs/G3-FIRM.md"
+      },
+      {
+        "metric_id": "max_incremental_investment_at_zero_npv_eur",
+        "value": "4319547154375/43046721",
+        "label": "Investissement supplémentaire maximal au seuil de rentabilité financière",
+        "definition": "Investissement initial supplémentaire qui rendrait la VAN différentielle nulle à autres flux inchangés.",
+        "unit": "EUR",
+        "caution": "Peut être négatif; aucun investissement positif justifié par ces flux si négatif. Pas une offre de financement.",
+        "technical_name": "max_incremental_investment_at_zero_npv_eur",
+        "method_ref": "docs/G3-FIRM.md"
+      },
+      {
+        "metric_id": "sustained_payback_year",
+        "value": 3,
+        "label": "Année de récupération durable de l'investissement",
+        "definition": "Première année à partir de laquelle les flux cumulés supplémentaires ne sont plus négatifs jusqu'à la fin.",
+        "unit": "années",
+        "caution": "Non actualisé, évalué uniquement aux dates annuelles; inconnu si non atteint.",
+        "technical_name": "sustained_payback_year",
+        "method_ref": "docs/G3-FIRM.md"
+      }
+    ],
+    "visible_notice": "Simulation conditionnelle, paramètres fictifs ; aucune mesure d'entreprise."
+  },
+  "scientific_gate_promoted": false,
+  "publication": "BLOCK_PUBLICATION"
+}
