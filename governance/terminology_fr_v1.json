@@ -1,5 +1,5 @@
 {
-  "version": "0.1",
+  "version": "0.2",
   "language": "fr",
   "status": "INITIAL_INTERNAL_NOT_UI_VALIDATED",
   "entries": {
@@ -146,6 +146,70 @@
       "caution": "Un goulot peut changer avec la charge ou la réorganisation.",
       "technical_name": "binding_resources",
       "method_ref": "docs/G3-OPERATIONS.md"
+    },
+    "incremental_npv_eur": {
+      "label": "Valeur financière supplémentaire sur la durée du projet",
+      "definition": "Somme des flux de trésorerie supplémentaires ramenés à leur valeur d'aujourd'hui (valeur actuelle nette ou VAN).",
+      "unit": "EUR",
+      "caution": "Hypothèses de répétition et de taux, hors impôts, financement et besoin en fonds de roulement.",
+      "technical_name": "incremental_npv_eur",
+      "method_ref": "docs/G3-FIRM.md"
+    },
+    "incremental_revenue_eur": {
+      "label": "Chiffre d'affaires supplémentaire",
+      "definition": "Différence entre les ventes facturables multipliées par leur prix.",
+      "unit": "EUR par période",
+      "caution": "Une capacité supplémentaire n'est pas une vente.",
+      "technical_name": "incremental_revenue_eur",
+      "method_ref": "docs/G3-FIRM.md"
+    },
+    "incremental_cash_surplus_eur": {
+      "label": "Excédent de trésorerie d'exploitation supplémentaire",
+      "definition": "Différence entre revenus encaissés et dépenses récurrentes décaissées, entre scénarios.",
+      "unit": "EUR par période",
+      "caution": "Hors investissement initial, dette et impôts.",
+      "technical_name": "incremental_cash_surplus_eur",
+      "method_ref": "docs/G3-FIRM.md"
+    },
+    "incremental_accounting_result_eur": {
+      "label": "Résultat d'exploitation supplémentaire du processus",
+      "definition": "Différence des revenus moins dépenses et amortissements du périmètre.",
+      "unit": "EUR par période",
+      "caution": "Pas bénéfice net de l'entreprise.",
+      "technical_name": "incremental_accounting_result_eur",
+      "method_ref": "docs/G3-FIRM.md"
+    },
+    "payroll_saving_eur": {
+      "label": "Économie de masse salariale supposée",
+      "definition": "Différence entre rémunérations chargées effectivement imputées aux deux scénarios.",
+      "unit": "EUR par période",
+      "caution": "Dépend d'une réduction réelle de dépenses, pas simplement de temps libéré.",
+      "technical_name": "payroll_saving_eur",
+      "method_ref": "docs/G3-FIRM.md"
+    },
+    "active_human_seconds_released": {
+      "label": "Temps de travail actif libéré",
+      "definition": "Différence de temps humain effectivement mobilisé dans les deux simulations.",
+      "unit": "secondes-personnes par période",
+      "caution": "Volumes différents possibles; ne pas assimiler à des emplois ni à du cash.",
+      "technical_name": "active_human_seconds_released",
+      "method_ref": "docs/G3-FIRM.md"
+    },
+    "max_incremental_investment_at_zero_npv_eur": {
+      "label": "Investissement supplémentaire maximal au seuil de rentabilité financière",
+      "definition": "Investissement initial supplémentaire qui rendrait la VAN différentielle nulle à autres flux inchangés.",
+      "unit": "EUR",
+      "caution": "Peut être négatif; aucun investissement positif justifié par ces flux si négatif. Pas une offre de financement.",
+      "technical_name": "max_incremental_investment_at_zero_npv_eur",
+      "method_ref": "docs/G3-FIRM.md"
+    },
+    "sustained_payback_year": {
+      "label": "Année de récupération durable de l'investissement",
+      "definition": "Première année à partir de laquelle les flux cumulés supplémentaires ne sont plus négatifs jusqu'à la fin.",
+      "unit": "années",
+      "caution": "Non actualisé, évalué uniquement aux dates annuelles; inconnu si non atteint.",
+      "technical_name": "sustained_payback_year",
+      "method_ref": "docs/G3-FIRM.md"
     }
   }
 }
