@@ -1,0 +1,33 @@
+name: OCTAVE LAB | Vault maintenance acceptance
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'pipeline/vault_ops.py'
+      - 'pipeline/native_revisions.py'
+      - 'pipeline/vault_maintenance_audit.py'
+      - 'tests/test_vault_ops.py'
+      - 'tests/test_native_revisions.py'
+      - '.github/workflows/vault-maintenance.yml'
+permissions:
+  contents: read
+jobs:
+  maintenance:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Regression suite
+        run: python -m unittest discover -s tests -v
+      - name: Real archive and five live datasets in isolated vault
+        run: |
+          set -o pipefail
+          python -m pipeline.vault_maintenance_audit | tee vault_maintenance.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: vault-maintenance-metadata
+          path: vault_maintenance.json

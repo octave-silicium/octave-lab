@@ -79,7 +79,7 @@ def freshness(vault,spec,now=None):
     active=vault.active_hash(source)
     supported=spec["kind"] not in {"manual","onet_pinned"}
     interval={"daily":1,"weekly":7,"monthly":30}[spec["frequency"]]
-    due=supported and (attempt is None or now-attempt>=timedelta(hours=6) if kind=="CHECK_FAILED" else success is None or now-success>=timedelta(days=interval))
+    due=supported and ((now-attempt>=timedelta(hours=6)) if kind=="CHECK_FAILED" else (success is None or now-success>=timedelta(days=interval)))
     # Keep the failure alert even when a retry is not yet due.
     pending=vault.db.execute("SELECT count(*) FROM candidate WHERE source=? AND sha<>coalesce(?, '')",(source,active)).fetchone()[0]
     return {"source":source,"mode":"COLLECTOR" if supported else "MANUAL_OR_BUNDLE","due":bool(due) if supported else False,"last_attempt":attempt.isoformat() if attempt else None,"last_success":success.isoformat() if success else None,"last_status":kind,"active_sha256":active,"nonactive_candidates":pending,"check_overdue":bool(success is None or now-success>=timedelta(days=interval)) if supported else None,"alert":"CHECK_FAILED" if kind=="CHECK_FAILED" else "NO_ACTIVE_VERSION" if supported and active is None else "MANUAL_OR_BUNDLE" if not supported else None,"data_freshness":"NOT_ESTIMATED_FROM_CHECK_TIME"}

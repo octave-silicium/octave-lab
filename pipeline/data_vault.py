@@ -107,6 +107,9 @@ class Vault:
         a=self.read(source,previous);b=self.read(source,candidate)
         if previous==candidate:return {"source":source,"status":"IDENTICAL_BYTES","added":0,"removed":0,"changed":0}
         spec=next(s for s in obs.read_registry() if s["id"]==source)
+        if spec["kind"]=="live_native":
+            from .native_revisions import compare
+            return compare(source,a,b)
         if spec["kind"] not in {"indeed_national","indeed_sector"}:
             return {"source":source,"status":"REVIEW_REQUIRED","reason":"NATIVE_REVISION_COMPARATOR_NOT_IMPLEMENTED"}
         from decimal import Decimal
