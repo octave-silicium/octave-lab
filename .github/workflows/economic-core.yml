@@ -29,3 +29,4 @@ jobs:
       - run: python -m pipeline.economic_events_pilot
       - run: python -m pipeline.economic_transform_pilot
       - run: python -m pipeline.economic_physical_pilot
+      - run: python -m pipeline.economic_parallel_pilot
