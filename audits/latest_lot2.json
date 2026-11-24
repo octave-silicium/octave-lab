@@ -1,5 +1,5 @@
 {
-  "audit_at_utc": "2026-11-24T04:39:40.864861+00:00",
+  "audit_at_utc": "2026-11-24T04:42:17.926515+00:00",
   "status": "ACCESS_AND_STRUCTURE_ONLY",
   "no_raw_redistribution": true,
   "no_automatic_harmonisation": true,
@@ -36,38 +36,6 @@
         "delimiter": ";",
         "encoding": "utf-8-sig",
         "empty_rows": 0,
-        "first_3_rows_preview": [
-          {
-            "grand_secteur_d_activite_agrege": "GSA1 Agriculture - Industrie",
-            "grand_secteur_d_activite": "GS0 Agriculture",
-            "secteur_na38": "AZ Agriculture, sylviculture et pêche",
-            "duree_de_contrat": "Contrat de moins d'un mois",
-            "nature_de_contrat": "CDD de moins d'un mois",
-            "annee": "2026",
-            "trimestre": "3",
-            "dernier_jour_du_trimestre": "2026-09-30"
-          },
-          {
-            "grand_secteur_d_activite_agrege": "GSA1 Agriculture - Industrie",
-            "grand_secteur_d_activite": "GS0 Agriculture",
-            "secteur_na38": "AZ Agriculture, sylviculture et pêche",
-            "duree_de_contrat": "Contrat de plus d'un mois",
-            "nature_de_contrat": "CDD de plus d'un mois",
-            "annee": "2026",
-            "trimestre": "3",
-            "dernier_jour_du_trimestre": "2026-09-30"
-          },
-          {
-            "grand_secteur_d_activite_agrege": "GSA1 Agriculture - Industrie",
-            "grand_secteur_d_activite": "GS0 Agriculture",
-            "secteur_na38": "AZ Agriculture, sylviculture et pêche",
-            "duree_de_contrat": "Contrat de plus d'un mois",
-            "nature_de_contrat": "CDI",
-            "annee": "2026",
-            "trimestre": "3",
-            "dernier_jour_du_trimestre": "2026-09-30"
-          }
-        ],
         "date_range": "NOT_ASSERTED_UNTIL_SEMANTIC_DICTIONARY_REVIEW"
       },
       "content_type": "text/csv; charset=utf-8",
@@ -104,35 +72,6 @@
         "delimiter": ";",
         "encoding": "utf-8-sig",
         "empty_rows": 0,
-        "first_3_rows_preview": [
-          {
-            "annee": "2000",
-            "trimestre": "1",
-            "dernier_jour_du_mois": "2000-01-31",
-            "duree_de_contrat": "Contrat de plus d'un mois",
-            "nature_de_contrat": "CDI",
-            "dpae_brut": "275340",
-            "dpae_cvs": "223814"
-          },
-          {
-            "annee": "2000",
-            "trimestre": "1",
-            "dernier_jour_du_mois": "2000-01-31",
-            "duree_de_contrat": "Contrat de plus d'un mois",
-            "nature_de_contrat": "CDD de plus d'un mois",
-            "dpae_brut": "263340",
-            "dpae_cvs": "312618"
-          },
-          {
-            "annee": "2000",
-            "trimestre": "1",
-            "dernier_jour_du_mois": "2000-02-29",
-            "duree_de_contrat": "Contrat de plus d'un mois",
-            "nature_de_contrat": "CDI",
-            "dpae_brut": "218066",
-            "dpae_cvs": "230166"
-          }
-        ],
         "date_range": "NOT_ASSERTED_UNTIL_SEMANTIC_DICTIONARY_REVIEW"
       },
       "content_type": "text/csv; charset=utf-8",
