@@ -1,0 +1,24 @@
+{
+  "run_id": 45367208006,
+  "job_id": 138351928271,
+  "commit": "d63f97110a31804c13b1f584f294a01a9eb58de9",
+  "tests_passed": 188,
+  "audit": {
+    "scope": "REAL_ONET_ROME_HTTP_ESCO_NOT_CONFIGURED",
+    "sources": {
+      "onet": {
+        "occupations": 1016,
+        "profile_http": "PASS",
+        "profile_native_rows": 30
+      },
+      "rome": {
+        "occupations": 1923,
+        "profile_http": "PASS",
+        "profile_native_rows": 99
+      }
+    },
+    "assets": "PASS",
+    "no_fallback": "PASS",
+    "public": false
+  }
+}

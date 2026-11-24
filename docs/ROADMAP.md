@@ -48,3 +48,5 @@ Consolidation v0.2 : [coffre local et pont privé G2](DATA-VAULT.md) ; stockage 
 Consolidation v0.3 : [maintenance locale](DATA-MAINTENANCE.md) sauvegarde/restauration et révisions sept jeux, calendrier persistant, API G2 opt-in. Stockage durable et activation planifiée, rattachement des versions actives au catalogue et validation scientifique restent ouverts.
 
 Consolidation v0.4 : catalogue sur actifs approuvés, recette intégrale neuf jeux réussie (186 tests) ; [runbook](RUNBOOK-001.md). Gate production non atteint, choix d'hôte distinct. Reprise de G-M0 (liens ROME et tables complémentaires), puis explorateur métiers et pilote processus, sans bloquer sur hébergement ni élargissement des 79 candidats.
+
+G2 v0.4 : [référentiels natifs et explorateur métiers](G2-WORK-EXPLORER.md), 141 163 liens ROME résolus, lot privé ESCO/FAP enrichi, 188 tests et HTTP O*NET/ROME vérifiés ; UI à valider sur navigateur, pas de score ni équivalence internationale. Reprise pilote actions/processus après qualification des parcours.

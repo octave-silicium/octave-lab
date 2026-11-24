@@ -1,0 +1,36 @@
+{
+  "base_sha256": "ce037a2277cf88452b10f4153ae66f19910cb096d45dded05951a7773ba6220c",
+  "inputs": {
+    "esco_fr": "84fe49774fad90bdfd27d080440ffb1fdef1fbd62939f6436d2fc21f4d58d4e8",
+    "esco_en": "f9761b0b52be1828b38a3e5e0ae59a93a7b0ce358bc800f52f57a8b002adeb3e",
+    "fap": "1c09015d52a16249e58cea9ec10dd597b391e3250145a32a2a551764e6f97fd0"
+  },
+  "esco_unique_concepts": 18237,
+  "extra_nodes_per_language": {
+    "ISCOGroup": 619,
+    "SkillGroup": 640
+  },
+  "extra_edges_per_language": {
+    "skillSkillRelations": 5818,
+    "broaderRelationsSkillPillar": 20819,
+    "broaderRelationsOccPillar": 3648
+  },
+  "bilingual_exact": true,
+  "fap_history_total": 9526,
+  "case_only_matches": 1226,
+  "probability_groups": 2844,
+  "max_sum_deviation": "1.7E-15",
+  "workbook_rows_preserved": 27399,
+  "sqlite_integrity": "PASS",
+  "snapshot_sha256": "6dcb624b8938e58feab132a92770ab4937eb2b2eb780bb85673a014fdfc0935a",
+  "enrich_code_sha256": "c1b67117fcefa3d43da04fc8182ccf82174ba7e58f77bb1fcac1842b45661031",
+  "explorer_sql_real_data": {
+    "fr_relation_provenance": "PASS",
+    "en_relation_provenance": "PASS",
+    "parent_label_integrity": "PASS",
+    "relations_per_language": 126051,
+    "scope": "SQL_QUERY_VALIDATION_NOT_HTTP_OR_BROWSER"
+  },
+  "publication": "BLOCK_PUBLICATION",
+  "crosswalk_validation": "NOT_PERFORMED"
+}

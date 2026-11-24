@@ -35,3 +35,6 @@ Risques : biais des descriptions, généralisation, poids fictifs, dérive de mo
 
 ## Avancement G-M0 v0.2
 [Contrats actions et crosswalks, qualification Europe](G2-EUROPE.md) : modèle initial testé sur fixtures, aucune action réelle ni correspondance validée. ROME/ESCO restent des référentiels distincts ; import ESCO prêt pour archive officielle, ROME accès à qualifier. 164 tests Python et audit d'accès réussis ; G-M0 partiel.
+
+## Avancement G2 v0.4
+[Explorateur des référentiels natifs](G2-WORK-EXPLORER.md) : ROME résolu dans son périmètre, ESCO hiérarchies et relations supplémentaires contrôlées sur le lot privé, matrices historiques FAP conservées ; O*NET/ROME HTTP vérifiés, aucune correspondance internationale ni action/processus validés. G-M0 partiel, G-M1 à construire.
