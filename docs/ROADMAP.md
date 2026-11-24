@@ -46,3 +46,5 @@ Consolidation infrastructure : [Data Observatory v0.1](DATA-OBSERVATORY.md), reg
 Consolidation v0.2 : [coffre local et pont privé G2](DATA-VAULT.md) ; stockage durable, orchestration/promotion et raccordement HTTP restent ouverts. Explorateur métier après consolidation.
 
 Consolidation v0.3 : [maintenance locale](DATA-MAINTENANCE.md) sauvegarde/restauration et révisions sept jeux, calendrier persistant, API G2 opt-in. Stockage durable et activation planifiée, rattachement des versions actives au catalogue et validation scientifique restent ouverts.
+
+Consolidation v0.4 : catalogue sur actifs approuvés, recette intégrale neuf jeux réussie (186 tests) ; [runbook](RUNBOOK-001.md). Gate production non atteint, choix d'hôte distinct. Reprise de G-M0 (liens ROME et tables complémentaires), puis explorateur métiers et pilote processus, sans bloquer sur hébergement ni élargissement des 79 candidats.

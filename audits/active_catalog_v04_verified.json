@@ -1,0 +1,104 @@
+{
+  "run_id": 45364342997,
+  "job_id": 138342062630,
+  "commit": "09e92bd7f69be427296e282312be4e58b160e0af",
+  "tests_passed": 186,
+  "audit": {
+    "scope": "TEMPORARY_CI_RESTORED_APPROVED_VAULT",
+    "sources": {
+      "indeed_national_total_daily": {
+        "cells": 2478,
+        "series": 1,
+        "quality": {
+          "DESCRIPTIVE_ONLY": 2478
+        },
+        "sha256": "ab1873dd2cef837504c473299356d5d53390dc620d6a661cf659c0c28a38e10f",
+        "http": "PASS"
+      },
+      "indeed_sector_total_daily": {
+        "cells": 84252,
+        "series": 34,
+        "quality": {
+          "DESCRIPTIVE_ONLY": 84252
+        },
+        "sha256": "9d7ce5aecd8269931a273ae5a13583adbcebc1a2bca0960980b7e0ab647e347a",
+        "http": "PASS"
+      },
+      "dares_offers_monthly": {
+        "cells": 96252,
+        "series": 263,
+        "quality": {
+          "REVIEW_REQUIRED": 96252
+        },
+        "sha256": "1ea5f3f5a0dea3ba3c9b58f486cd965ab30802204882578b16d11b81f4b82cb7",
+        "http": "PASS"
+      },
+      "insee_employment": {
+        "cells": 500,
+        "series": 10,
+        "quality": {
+          "REVIEW_REQUIRED": 500
+        },
+        "sha256": "a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48",
+        "http": "PASS"
+      },
+      "urssaf_na88": {
+        "cells": 18144,
+        "series": 162,
+        "quality": {
+          "DESCRIPTIVE_ONLY": 18144
+        },
+        "sha256": "9ec16fb077e554518f5a1ade579684a8c91d56f293c7b9897f07b40226833222",
+        "http": "PASS"
+      },
+      "urssaf_dpae_na38": {
+        "cells": 23754,
+        "series": 222,
+        "quality": {
+          "DESCRIPTIVE_ONLY": 23310,
+          "RESTRICTED": 444
+        },
+        "sha256": "42cd99124b1ef5f0a39afc481c42e70d5adc0fbfb535a7cb53f2653dfd41f549",
+        "http": "PASS"
+      },
+      "urssaf_dpae_monthly": {
+        "cells": 1284,
+        "series": 4,
+        "quality": {
+          "DESCRIPTIVE_ONLY": 1260,
+          "RESTRICTED": 24
+        },
+        "sha256": "e0789b561ae47d5ce444e8f87f84fd2d076a3c460fba4a54f1cb6de7027a4a7b",
+        "http": "PASS"
+      },
+      "eurostat_size": {
+        "cells": 2930,
+        "series": 1165,
+        "quality": {
+          "DESCRIPTIVE_ONLY": 2592,
+          "REVIEW_REQUIRED": 218,
+          "WITHHELD": 120
+        },
+        "sha256": "f5f541e46daefe16722efeced6d8bfeb99578eedc1e8c12476a029f5f45edd73",
+        "http": "PASS"
+      },
+      "eurostat_nace": {
+        "cells": 12400,
+        "series": 4950,
+        "quality": {
+          "DESCRIPTIVE_ONLY": 6593,
+          "WITHHELD": 4407,
+          "REVIEW_REQUIRED": 1400
+        },
+        "sha256": "0c701942ea3d15bd1350e6938b27a5713f9d39f366b620723995b98077a469a8",
+        "http": "PASS"
+      }
+    },
+    "cells": 241994,
+    "all_sources": 9,
+    "backup_bytes": 23646208,
+    "publication": "BLOCK_PUBLICATION",
+    "raw_data_uploaded": false,
+    "production_deployed": false
+  }
+}

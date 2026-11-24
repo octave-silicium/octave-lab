@@ -1,0 +1,21 @@
+{
+  "run_id": 45364516211,
+  "job_id": 138342661236,
+  "audit": {
+    "archive_sha256": "ae63cf9155c59710175ed214b9ad4310e5d52c88582eb9a8c90e8505cacf7fcb",
+    "unresolved": 16253,
+    "candidate_appellation_matches": {
+      "NO_MATCH": 1923,
+      "PRIMARY_EXACT_OCCUPATION": 14330
+    },
+    "rubrics": {
+      "": 16253
+    },
+    "blocks": {
+      "1": 1923,
+      "2": 14330
+    },
+    "new_resolved_links": 0,
+    "decision": "DIAGNOSTIC_ONLY_REVIEW_REQUIRED"
+  }
+}
