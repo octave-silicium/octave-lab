@@ -1,6 +1,6 @@
 """W001-v2: synthetic document packets, conservative conventional extraction.
 No LLM, OCR, network, payment, or actual business process measurement."""
-import csv,io,json,re,time,statistics
+import argparse,csv,io,json,re,time,statistics
 from pathlib import Path
 from decimal import Decimal,InvalidOperation
 from collections import Counter
@@ -74,6 +74,12 @@ def assess(sub,d,g):
         s["abstain_or_error"]+=int(out["decision"] in {"ABSTAIN","ERROR"})
         s["unsafe_accept"]+=int(out["decision"]=="ACCEPT" and ref["decision"]=="REVIEW")
     r.update({"scope":"SYNTHETIC_HETEROGENEOUS_TEXT_DEVELOPMENT_ONLY","strata":{k:dict(v) for k,v in strata.items()},"blind_test":False,"representative":False})
+    if "cost_ledger" in sub:
+        from .experiment_cost import cost_ledger
+        r["cost_ledger"]=cost_ledger(list(expected),sub["cost_ledger"])
+    else:r["cost_ledger"]=None
+    # Legacy flat costs are declarations, not validated full costs.
+    r["flat_cost_is_not_full_cost"]=True
     return r
 def run_classic():
     d,g=suite()
@@ -85,4 +91,9 @@ def run_classic():
     r=assess(sub,d,g)
     r["local_compute_only"]={"cases":len(latencies),"median_ns":statistics.median(latencies),"max_ns":max(latencies),"timer":"perf_counter_ns","includes":"one in-memory parser and rules call per case; no I/O, review or integration","not_end_to_end":True}
     return r
-if __name__=="__main__":print(json.dumps(run_classic(),indent=2))
+if __name__=="__main__":
+    p=argparse.ArgumentParser();p.add_argument("--submission",type=Path);a=p.parse_args()
+    if a.submission:
+        d,g=suite();result=assess(json.loads(a.submission.read_text()),d,g)
+    else:result=run_classic()
+    print(json.dumps(result,indent=2))
