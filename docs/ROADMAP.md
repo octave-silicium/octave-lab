@@ -58,3 +58,6 @@ G2 v0.6 : [ratings et protocole expérimental](G2-EXPERIMENT.md), 165 780 rating
 G2 v0.7 : [documents et coût complet](G2-DOCUMENTS.md), 20 dossiers synthétiques hétérogènes, baseline v2 11/20, module coût/temps testé, v2.1 et support jeu indépendant vérifiés. G-M1/G-M2 ouverts, priorité essai fermé indépendant et collecte mesures humaines/IA.
 
 G2 v0.8 : [comparateur et transfert expérimental](G2-MODEL-COMPARISON.md), soumission GPT-6.2 en contexte sur jeu connu 20/20 vs 16/20, aucune validation indépendante. Dépendances externes de G-M1/G-M2 explicites ; poursuivre scénarios économiques conditionnels sans résultat inventé.
+
+## Décision de portée 24/11/2026 : ARCH-002 v2.0
+La cible intégrale validée est [ARCH-002](ARCH-002.md) et son [registre machine-readable](../governance/economic_mechanisms_v2.json). Neuf couches, six moteurs et 64 mécanismes initiaux, statut exigences validées, méthodes/paramètres/implémentations à qualifier. Les six niveaux historiques, METH-003, BENCH-001 et gates G-M0…G-M5 restent applicables ; E-G0…E-G6 complémentaires non franchis. G3 est redéfini comme tranche micro→marché, G4 réseaux et agrégation, G5 validation/produit ; acquisition, G2 indépendant et déploiement en parallèle. Aucune preuve de différenciation ou impact nouveau.

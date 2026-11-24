@@ -1,0 +1,1260 @@
+{
+  "version": "2.0",
+  "date": "2026-11-24",
+  "status": "VALIDATED_TARGET_REQUIREMENTS_NOT_IMPLEMENTATION",
+  "layers": [
+    {
+      "id": "L01",
+      "name": "Technologie"
+    },
+    {
+      "id": "L02",
+      "name": "Travail"
+    },
+    {
+      "id": "L03",
+      "name": "Opérations"
+    },
+    {
+      "id": "L04",
+      "name": "Organisation"
+    },
+    {
+      "id": "L05",
+      "name": "Entreprise et capital"
+    },
+    {
+      "id": "L06",
+      "name": "Marchés et concurrence"
+    },
+    {
+      "id": "L07",
+      "name": "Secteurs et territoires"
+    },
+    {
+      "id": "L08",
+      "name": "Travail et macroéconomie"
+    },
+    {
+      "id": "L09",
+      "name": "Validation empirique et prospective"
+    }
+  ],
+  "engines": [
+    {
+      "id": "E01",
+      "name": "Economic Knowledge Graph",
+      "role": "Relier les entités et assertions, dans les deux sens; provenance, temporalité, typage et contradictions.",
+      "acceptance": "Requête bidirectionnelle inspectable, aucun lien inféré présenté comme fait.",
+      "status": "TARGET_PARTIAL_OR_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "E02",
+      "name": "Shock Propagation Engine",
+      "role": "Propager un choc conditionnel via processus, firmes, marchés, réseaux et boucles temporelles.",
+      "acceptance": "Conservation comptable, stabilité, tests de chocs nuls, contraintes de capacité, absence de double comptage.",
+      "status": "TARGET_PARTIAL_OR_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "E03",
+      "name": "Economic Anomaly Detector",
+      "role": "Détecter écarts inhabituels dans séries compatibles; signaler révisions et ruptures.",
+      "acceptance": "Backtest point-in-time, taux de fausses alertes, contrôle multiplicité; anomalie ≠ attribution.",
+      "status": "TARGET_PARTIAL_OR_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "E04",
+      "name": "Counterfactual Engine",
+      "role": "Comparer politiques/scénarios et, si identification suffisante, estimer effets causaux distinctement.",
+      "acceptance": "Contrefactuel explicite, tests placebo/robustesse, refus NON_IDENTIFIABLE.",
+      "status": "TARGET_PARTIAL_OR_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "E05",
+      "name": "Value Capture Engine",
+      "role": "Réconcilier coûts, prix, quantités, revenu du travail/capital, impôts et fournisseurs.",
+      "acceptance": "Identités vérifiées, périmètre et incidence, pas de double comptage de valeur ajoutée.",
+      "status": "TARGET_PARTIAL_OR_NOT_IMPLEMENTED"
+    },
+    {
+      "id": "E06",
+      "name": "Economic Early Warning System",
+      "role": "Registre d'hypothèses prospectives, signaux précurseurs et révision à chaque millésime.",
+      "acceptance": "Replay historique sans fuite, calibrage si probabilités, coûts d'erreur, échéances et réfutation.",
+      "status": "TARGET_PARTIAL_OR_NOT_IMPLEMENTED"
+    }
+  ],
+  "references": {
+    "R01": {
+      "title": "Acemoglu & Restrepo, Automation and New Tasks",
+      "url": "https://www.nber.org/papers/w25684"
+    },
+    "R02": {
+      "title": "MIT FutureTech, Beyond AI Exposure",
+      "url": "https://futuretech.mit.edu/publication/beyond-ai-exposure-which-tasks-are-cost-effective-to-automate-with-computer-vision"
+    },
+    "R03": {
+      "title": "Autor & Salomons, Is Automation Labor-Displacing?",
+      "url": "https://www.nber.org/papers/w24871"
+    },
+    "R04": {
+      "title": "Carvalho & Tahbaz-Salehi, Production Networks: A Primer",
+      "url": "https://www.annualreviews.org/content/journals/10.1146/annurev-economics-080218-030212"
+    },
+    "R05": {
+      "title": "OECD, Miracle or Myth? Assessing macroeconomic productivity gains from AI",
+      "url": "https://www.oecd.org/en/publications/miracle-or-myth-assessing-the-macroeconomic-productivity-gains-from-artificial-intelligence_b524a072-en.html"
+    },
+    "R06": {
+      "title": "Brynjolfsson, Rock & Syverson, Productivity J-Curve",
+      "url": "https://www.nber.org/papers/w25148"
+    },
+    "R07": {
+      "title": "OECD, Digital technology diffusion in the age of AI",
+      "url": "https://www.oecd.org/en/publications/digital-technology-diffusion-in-the-age-of-ai_ebc2debe-en.html"
+    },
+    "R08": {
+      "title": "De Loecker, Eeckhout & Unger, Rise of Market Power",
+      "url": "https://doi.org/10.1093/qje/qjz041"
+    },
+    "R09": {
+      "title": "Davis & Haltiwanger, Gross Job Creation, Gross Job Destruction and Employment Reallocation",
+      "url": "https://www.nber.org/papers/w3728"
+    },
+    "R10": {
+      "title": "Callaway & Sant'Anna, Difference-in-Differences with multiple time periods",
+      "url": "https://doi.org/10.1016/j.jeconom.2020.12.001"
+    },
+    "R11": {
+      "title": "Anthropic Economic Index",
+      "url": "https://www.anthropic.com/research/the-anthropic-economic-index"
+    },
+    "R12": {
+      "title": "GDPval",
+      "url": "https://openai.com/index/gdpval/"
+    },
+    "R13": {
+      "title": "O*NET database",
+      "url": "https://www.onetcenter.org/database.html"
+    },
+    "R14": {
+      "title": "Eurostat FIGARO",
+      "url": "https://ec.europa.eu/eurostat/web/esa-supply-use-input-tables/information-data"
+    },
+    "R15": {
+      "title": "Insee TES TEE 2025",
+      "url": "https://www.insee.fr/fr/statistiques/8988861"
+    },
+    "R16": {
+      "title": "NIST AI RMF",
+      "url": "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/"
+    },
+    "R17": {
+      "title": "Acemoglu & Restrepo, Tasks, Automation, and the Rise in US Wage Inequality",
+      "url": "https://www.nber.org/papers/w28920"
+    },
+    "R18": {
+      "title": "BENCH-001, benchmark transversal existant",
+      "url": "docs/BENCH-001.md"
+    },
+    "R19": {
+      "title": "METH-003, décomposition du travail existante",
+      "url": "docs/METH-003.md"
+    }
+  },
+  "mechanisms": [
+    {
+      "id": "M001",
+      "layer": "L01",
+      "name": "Frontière capacité–qualité",
+      "inputs": "performance, contexte, outils",
+      "outputs": "réussite, qualité, dispersion",
+      "validation": "benchmark répété à difficulté et accès comparables; échecs inclus",
+      "failure_mode": "pas de transfert de benchmark à un métier",
+      "reference_seeds": [
+        "R12",
+        "R16"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M002",
+      "layer": "L01",
+      "name": "Autonomie et horizon",
+      "inputs": "durée, dépendances, interventions",
+      "outputs": "probabilité de succès et escalades",
+      "validation": "mesurer horizon à seuil de réussite défini et interventions",
+      "failure_mode": "temps humain de référence ≠ temps IA",
+      "reference_seeds": [
+        "R12",
+        "R16"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M003",
+      "layer": "L01",
+      "name": "Coût et disponibilité technologique",
+      "inputs": "prix API, énergie, matériel, latence",
+      "outputs": "coût marginal, capacité disponible",
+      "validation": "tests par configuration et charge; coûts observés",
+      "failure_mode": "prix affiché ≠ TCO",
+      "reference_seeds": [
+        "R02"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M004",
+      "layer": "L01",
+      "name": "Agents, outils, robotique et monde physique",
+      "inputs": "capacité numérique/physique, accès, sécurité",
+      "outputs": "actions réalisables sous contraintes",
+      "validation": "tests en environnement approprié; séparation physique/digital",
+      "failure_mode": "pas d'extrapolation LLM→robot",
+      "reference_seeds": [
+        "R16"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M005",
+      "layer": "L01",
+      "name": "Apprentissage et progrès technologique",
+      "inputs": "versions, données, investissement",
+      "outputs": "frontière performance-coût datée",
+      "validation": "vintages comparables; scénarios de progrès",
+      "failure_mode": "pas de loi exponentielle supposée",
+      "reference_seeds": [
+        "R12"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M006",
+      "layer": "L01",
+      "name": "Fiabilité, incidents, sécurité et dérive",
+      "inputs": "fréquence/gravité erreurs, changement de modèle",
+      "outputs": "risque résiduel, coût erreur",
+      "validation": "stress tests, traces, contrôle des queues de distribution",
+      "failure_mode": "erreurs corrélées; risque rare non estimé",
+      "reference_seeds": [
+        "R16"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M007",
+      "layer": "L02",
+      "name": "Substitution d'actions",
+      "inputs": "capacité, coût relatif, contraintes",
+      "outputs": "heures humaines déplacées conditionnellement",
+      "validation": "temps mesurés et taux de réussite équivalents",
+      "failure_mode": "exposition ≠ remplacement",
+      "reference_seeds": [
+        "R01",
+        "R02"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M008",
+      "layer": "L02",
+      "name": "Complémentarité et augmentation",
+      "inputs": "outils, compétences, supervision",
+      "outputs": "qualité, débit, temps résiduel",
+      "validation": "comparaison humain/classique/IA/hybride",
+      "failure_mode": "effets hétérogènes",
+      "reference_seeds": [
+        "R01",
+        "R11"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M009",
+      "layer": "L02",
+      "name": "Création de tâches et nouveaux métiers",
+      "inputs": "nouveaux produits, besoins de contrôle",
+      "outputs": "actions nouvelles, demande de compétences",
+      "validation": "mesurer tâches nouvelles et demande solvable",
+      "failure_mode": "ni compensation automatique ni absence supposée",
+      "reference_seeds": [
+        "R01"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M010",
+      "layer": "L02",
+      "name": "Décomposition et poids du travail",
+      "inputs": "référentiels, durée, fréquence, contexte",
+      "outputs": "matrice d'actions et heures",
+      "validation": "observations et distributions; many-to-many",
+      "failure_mode": "importance/fréquence ≠ durée",
+      "reference_seeds": [
+        "R13",
+        "R19"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M011",
+      "layer": "L02",
+      "name": "Connaissances tacites et responsabilité",
+      "inputs": "contexte, autorisations, jugement",
+      "outputs": "actions non déléguées, exigences humaines",
+      "validation": "revue métier et exceptions",
+      "failure_mode": "classification native ≠ processus observé",
+      "reference_seeds": [
+        "R19"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M012",
+      "layer": "L02",
+      "name": "Apprentissage, désapprentissage et juniors",
+      "inputs": "pratique, mentorat, automatisation",
+      "outputs": "accès à expérience, compétences et progression",
+      "validation": "cohortes longitudinales et comparaisons",
+      "failure_mode": "âge, expérience et conjoncture confondants",
+      "reference_seeds": [
+        "R17"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M013",
+      "layer": "L02",
+      "name": "Intensification et qualité du travail",
+      "inputs": "charge, contrôle, autonomie",
+      "outputs": "conditions de travail, absentéisme, qualité",
+      "validation": "mesures de charge et enquêtes",
+      "failure_mode": "gain de débit ≠ bien-être",
+      "reference_seeds": [
+        "R19"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M014",
+      "layer": "L03",
+      "name": "Goulots et théorie des contraintes",
+      "inputs": "ressources, capacité par étape",
+      "outputs": "débit réalisable",
+      "validation": "minimum de capacités pour chaîne sérielle; simulation adaptée ailleurs",
+      "failure_mode": "gain local ≠ gain global",
+      "reference_seeds": [
+        "R19"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M015",
+      "layer": "L03",
+      "name": "Files d'attente, variabilité et délais",
+      "inputs": "arrivées, service, ressources",
+      "outputs": "attente, stock en cours, SLA",
+      "validation": "simulation événements discrets si distributions; Little sous conditions",
+      "failure_mode": "ne pas appliquer état stationnaire hors régime stable",
+      "reference_seeds": [
+        "R19"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M016",
+      "layer": "L03",
+      "name": "Dépendances, synchronisation et parallélisme",
+      "inputs": "graphe, concurrence ressources",
+      "outputs": "chemin critique, blocages",
+      "validation": "tests de graphes, ressources partagées et ordonnancement",
+      "failure_mode": "pas de somme naïve des durées",
+      "reference_seeds": [
+        "R19"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M017",
+      "layer": "L03",
+      "name": "Exceptions, reprises et erreurs en cascade",
+      "inputs": "probabilités, coûts et corrélations",
+      "outputs": "débit bon, rework, risque",
+      "validation": "journaux et contrôles de qualité, propagation bornée",
+      "failure_mode": "pas d'indépendance implicite",
+      "reference_seeds": [
+        "R16",
+        "R19"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M018",
+      "layer": "L03",
+      "name": "Suppression et refonte des processus",
+      "inputs": "objectif final, étapes, contraintes",
+      "outputs": "processus alternatif et activités supprimées",
+      "validation": "comparer livrable/qualité et dépendances",
+      "failure_mode": "automatiser un processus inutile ne crée pas sa valeur",
+      "reference_seeds": [
+        "R19"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M019",
+      "layer": "L03",
+      "name": "Substitution qualité-prix-délai",
+      "inputs": "qualité, SLA, tolérance défaut",
+      "outputs": "frontière coût/service",
+      "validation": "mesurer résultats comparables ou expliciter arbitrage",
+      "failure_mode": "pas de coût unitaire comparé à qualité différente",
+      "reference_seeds": [
+        "R02",
+        "R19"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M020",
+      "layer": "L03",
+      "name": "Résilience et capacité de secours",
+      "inputs": "pannes, dépendances, capacité de repli",
+      "outputs": "continuité, perte attendue",
+      "validation": "stress tests, coûts de redondance",
+      "failure_mode": "optimisation moyenne peut accroître risque extrême",
+      "reference_seeds": [
+        "R16"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M021",
+      "layer": "L04",
+      "name": "Coordination et compression hiérarchique",
+      "inputs": "interdépendances, droits de décision",
+      "outputs": "temps de coordination, niveaux, contrôle",
+      "validation": "organigrammes et journaux avant/après",
+      "failure_mode": "suppression de manager non déduite d'une tâche",
+      "reference_seeds": [
+        "R19"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M022",
+      "layer": "L04",
+      "name": "Internalisation, externalisation et coûts de transaction",
+      "inputs": "prix prestataire, risque, intégration",
+      "outputs": "frontières firme, volumes achetés",
+      "validation": "coût make-or-buy à qualité égale",
+      "failure_mode": "transfert activité ≠ suppression agrégée",
+      "reference_seeds": [
+        "R19"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M023",
+      "layer": "L04",
+      "name": "Incitations, agence, bureaucratie et pouvoir",
+      "inputs": "objectifs, budgets, asymétrie information",
+      "outputs": "adoption effective, résistance, contrôle",
+      "validation": "enquêtes et observation des décisions",
+      "failure_mode": "ne pas psychologiser sans données",
+      "reference_seeds": [
+        "R07"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M024",
+      "layer": "L04",
+      "name": "Compléments organisationnels et capital immatériel",
+      "inputs": "formation, données, refonte",
+      "outputs": "investissement et gains différés",
+      "validation": "suivi coûts de transition et temps d'apprentissage",
+      "failure_mode": "courbe en J non automatique",
+      "reference_seeds": [
+        "R06",
+        "R07"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M025",
+      "layer": "L04",
+      "name": "Responsabilité et conformité",
+      "inputs": "règles, audit, recours",
+      "outputs": "contrainte, coûts de supervision",
+      "validation": "revue juridique par juridiction et usage",
+      "failure_mode": "réglementation datée; pas d'avis automatique",
+      "reference_seeds": [
+        "R16"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M026",
+      "layer": "L04",
+      "name": "Gestion du changement et dépendance au sentier",
+      "inputs": "legacy, compétences, contrats",
+      "outputs": "délais, réversibilité",
+      "validation": "trajectoires de déploiement et abandons",
+      "failure_mode": "adoption déclarée ≠ intégration",
+      "reference_seeds": [
+        "R07"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M027",
+      "layer": "L05",
+      "name": "Coût complet et coûts marginaux",
+      "inputs": "temps, taux, capital, erreurs, volume",
+      "outputs": "coût par unité bonne",
+      "validation": "ledger complet, réconciliation des postes",
+      "failure_mode": "ne pas allouer fixe deux fois",
+      "reference_seeds": [
+        "R02"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M028",
+      "layer": "L05",
+      "name": "Investissement et rentabilité",
+      "inputs": "cash flows, coût capital, horizon",
+      "outputs": "VAN, seuil rentabilité, délai retour",
+      "validation": "actualisation et scénarios d'utilisation",
+      "failure_mode": "profit comptable ≠ cash flow",
+      "reference_seeds": [
+        "R02",
+        "R06"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M029",
+      "layer": "L05",
+      "name": "Diffusion hétérogène et adoption",
+      "inputs": "taille, financement, maturité, coûts",
+      "outputs": "taux adoption, intensité et délai",
+      "validation": "cohortes par entreprise/secteur; dénominateurs",
+      "failure_mode": "usage d'un outil ≠ adoption par tâche",
+      "reference_seeds": [
+        "R07",
+        "R11"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M030",
+      "layer": "L05",
+      "name": "Substitution capital-travail et coût relatif",
+      "inputs": "prix facteurs, technologie, contraintes",
+      "outputs": "combinaison productive",
+      "validation": "scénarios puis calibration production/coûts",
+      "failure_mode": "pas d'élasticité universelle",
+      "reference_seeds": [
+        "R01",
+        "R02"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M031",
+      "layer": "L05",
+      "name": "Économies d'échelle et de gamme",
+      "inputs": "fixes, partage actifs, volume",
+      "outputs": "coût moyen et portefeuille",
+      "validation": "courbes de coûts et contraintes; coûts communs",
+      "failure_mode": "échelle peut créer congestion",
+      "reference_seeds": [
+        "R02"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M032",
+      "layer": "L05",
+      "name": "Productivité, capacité et utilisation",
+      "inputs": "output bon, ressources, demande",
+      "outputs": "productivité partielle, TFP, capacité",
+      "validation": "unités constantes et comptes; mesure utilisation",
+      "failure_mode": "heures libérées ≠ cash économisé",
+      "reference_seeds": [
+        "R05",
+        "R06"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M033",
+      "layer": "L05",
+      "name": "Ajustement discret des effectifs et réallocation",
+      "inputs": "heures, horaires, indivisibilité, contrats",
+      "outputs": "ETP requis, embauche, attrition, licenciement",
+      "validation": "scénarios postes/horaires et flux distincts",
+      "failure_mode": "ETP théorique ≠ emploi observé",
+      "reference_seeds": [
+        "R09"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M034",
+      "layer": "L05",
+      "name": "Contraintes financières et risque d'insolvabilité",
+      "inputs": "liquidité, crédit, dette, transition",
+      "outputs": "capacité investir, sortie de marché",
+      "validation": "cash flows, bilan, stress financement",
+      "failure_mode": "rentabilité à terme ≠ financement disponible",
+      "reference_seeds": [
+        "R07"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M035",
+      "layer": "L06",
+      "name": "Pass-through prix-coûts",
+      "inputs": "coût marginal, concurrence, stratégie",
+      "outputs": "prix et marge",
+      "validation": "estimation/sensibilité selon marché",
+      "failure_mode": "taux de répercussion non imposé",
+      "reference_seeds": [
+        "R08"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M036",
+      "layer": "L06",
+      "name": "Élasticité demande et effet rebond",
+      "inputs": "prix réel, revenus, substituts",
+      "outputs": "volume, consommation",
+      "validation": "élasticités estimées ou scénarios; capacité plafonne",
+      "failure_mode": "rebond peut être nul ou supérieur au gain",
+      "reference_seeds": [
+        "R03"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M037",
+      "layer": "L06",
+      "name": "Pouvoir de marché et markups",
+      "inputs": "prix, coût marginal, différenciation",
+      "outputs": "markup, rente",
+      "validation": "estimation avec hypothèses et contrôle structure",
+      "failure_mode": "marge comptable ≠ markup",
+      "reference_seeds": [
+        "R08"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M038",
+      "layer": "L06",
+      "name": "Commoditisation et érosion des avantages",
+      "inputs": "diffusion, coûts, substituabilité",
+      "outputs": "prix, marges, durée de rente",
+      "validation": "comparaisons de cohortes et offres",
+      "failure_mode": "pas de disparition universelle de valeur",
+      "reference_seeds": [
+        "R07",
+        "R08"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M039",
+      "layer": "L06",
+      "name": "Entrée, sortie, consolidation et M&A",
+      "inputs": "coûts fixes, barrières, financement",
+      "outputs": "parts, concentration, créations/défaillances",
+      "validation": "dynamique firmes; HHI sur marché défini",
+      "failure_mode": "NAF ≠ marché pertinent",
+      "reference_seeds": [
+        "R08",
+        "R09"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M040",
+      "layer": "L06",
+      "name": "Effets de réseau, lock-in et plateformes",
+      "inputs": "données, switching, distribution",
+      "outputs": "adoption et pouvoir de négociation",
+      "validation": "scénarios multi-acteurs; mesures de changement",
+      "failure_mode": "ne pas supposer tipping inévitable",
+      "reference_seeds": [
+        "R08"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M041",
+      "layer": "L06",
+      "name": "Innovation, nouveaux produits et demande induite",
+      "inputs": "coût, qualité, nouveaux usages",
+      "outputs": "nouvelle demande et surplus",
+      "validation": "données lancement/usage et substitution produits",
+      "failure_mode": "PIB ≠ surplus consommateur",
+      "reference_seeds": [
+        "R01",
+        "R03"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M042",
+      "layer": "L06",
+      "name": "Capture et partage de valeur",
+      "inputs": "prix, volumes, salaires, coûts, impôts",
+      "outputs": "profits, revenus, surplus",
+      "validation": "réconciliation comptable par acteur; transfert vs création",
+      "failure_mode": "éviter double comptage rente fournisseur",
+      "reference_seeds": [
+        "R03",
+        "R08"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M043",
+      "layer": "L07",
+      "name": "Réseaux de production amont/aval",
+      "inputs": "matrice entrées-sorties, demande finale",
+      "outputs": "production sectorielle conditionnelle",
+      "validation": "Leontief sous coefficients fixes puis alternatives",
+      "failure_mode": "choc de demande ≠ choc offre",
+      "reference_seeds": [
+        "R04",
+        "R14",
+        "R15"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M044",
+      "layer": "L07",
+      "name": "Substitution intermédiaires et recomposition chaînes",
+      "inputs": "make-or-buy, prix relatifs, nouveaux inputs",
+      "outputs": "coefficients techniques, fournisseurs",
+      "validation": "scénarios datés et matrices cohérentes",
+      "failure_mode": "matrice historique non prédiction structurelle",
+      "reference_seeds": [
+        "R04",
+        "R14"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M045",
+      "layer": "L07",
+      "name": "Propagation de contraintes d'offre et ruptures",
+      "inputs": "capacités, stocks, fournisseurs critiques",
+      "outputs": "rationnement, délais, pertes",
+      "validation": "modèle contraint; scénarios dépendances",
+      "failure_mode": "inverse Leontief seul insuffisant",
+      "reference_seeds": [
+        "R04"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M046",
+      "layer": "L07",
+      "name": "Commerce, délocalisation et relocalisation",
+      "inputs": "coûts pays, change, barrières, logistique",
+      "outputs": "flux et spécialisation",
+      "validation": "FIGARO/commerce et scénarios cohérents",
+      "failure_mode": "importations brutes ≠ valeur ajoutée domestique",
+      "reference_seeds": [
+        "R14"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M047",
+      "layer": "L07",
+      "name": "Géographie, agglomération et mobilité",
+      "inputs": "emploi local, télétravail, bassin, logement",
+      "outputs": "réallocation territoriale",
+      "validation": "zonage versionné, flux domicile-travail",
+      "failure_mode": "pas d'extrapolation régionale sans données",
+      "reference_seeds": [
+        "R09"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M048",
+      "layer": "L07",
+      "name": "Énergie, compute, ressources et externalités",
+      "inputs": "consommation, prix, matériel, carbone",
+      "outputs": "contraintes, coûts et externalités",
+      "validation": "unités physiques et monétaires séparées",
+      "failure_mode": "pas de facteur environnemental inventé",
+      "reference_seeds": [
+        "R16"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M049",
+      "layer": "L08",
+      "name": "Flux et stocks d'emploi",
+      "inputs": "embauches, séparations, heures",
+      "outputs": "emploi net, créations/destructions brutes",
+      "validation": "identités de population; distinguer annonces/DPAE/embauches",
+      "failure_mode": "flux déclaratif ≠ embauche réelle",
+      "reference_seeds": [
+        "R09"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M050",
+      "layer": "L08",
+      "name": "Mobilité, friction et mismatch",
+      "inputs": "compétences, vacancies, salaires, formation",
+      "outputs": "transition, chômage durée",
+      "validation": "cohortes/panels et modèles de matching si données",
+      "failure_mode": "similarité compétence ≠ probabilité transition",
+      "reference_seeds": [
+        "R01",
+        "R09"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M051",
+      "layer": "L08",
+      "name": "Polarisation, distribution et inégalités",
+      "inputs": "tâches, qualifications, salaires, capital",
+      "outputs": "quantiles, parts revenu, cohortes",
+      "validation": "décomposition et distributions, pas seule moyenne",
+      "failure_mode": "pas de polarisation présupposée",
+      "reference_seeds": [
+        "R17"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M052",
+      "layer": "L08",
+      "name": "Salaires, négociation et part du travail",
+      "inputs": "productivité, institutions, offre/demande",
+      "outputs": "salaires réels, part travail",
+      "validation": "mesurer incidence et contrats",
+      "failure_mode": "productivité ≠ hausse salaire automatique",
+      "reference_seeds": [
+        "R01",
+        "R17"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M053",
+      "layer": "L08",
+      "name": "Demande agrégée et redistribution",
+      "inputs": "revenus travail/capital, propensions, impôts",
+      "outputs": "consommation et activité",
+      "validation": "scénarios distributions/propensions et bouclage",
+      "failure_mode": "gain firme ≠ gain économie",
+      "reference_seeds": [
+        "R03",
+        "R05"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M054",
+      "layer": "L08",
+      "name": "Productivité agrégée et réallocation",
+      "inputs": "valeur ajoutée, heures, capital, parts",
+      "outputs": "PIB réel, productivité, TFP",
+      "validation": "comptes nationaux et décomposition within/between",
+      "failure_mode": "ne pas sommer gains micro non pondérés",
+      "reference_seeds": [
+        "R05",
+        "R15"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M055",
+      "layer": "L08",
+      "name": "Investissement, épargne, finance et cycles",
+      "inputs": "cash flows, taux, crédit, attentes",
+      "outputs": "capital, demande, faillites",
+      "validation": "scénarios macro cohérents stock-flux",
+      "failure_mode": "pas de causalité unique IA",
+      "reference_seeds": [
+        "R05"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M056",
+      "layer": "L08",
+      "name": "Démographie et offre de travail",
+      "inputs": "âge, participation, migration, heures",
+      "outputs": "population active, pénuries",
+      "validation": "cohortes et projections conditionnelles",
+      "failure_mode": "distinguer substitution et pénurie évitée",
+      "reference_seeds": [
+        "R09"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M057",
+      "layer": "L08",
+      "name": "Institutions, fiscalité et protection sociale",
+      "inputs": "taxes, transferts, droit travail, politiques",
+      "outputs": "revenus disponibles et adoption",
+      "validation": "contre-scénarios institutionnels datés",
+      "failure_mode": "incidence fiscale non identique au redevable",
+      "reference_seeds": [
+        "R05"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M058",
+      "layer": "L08",
+      "name": "Prix agrégés, inflation et pouvoir d'achat",
+      "inputs": "prix sectoriels, salaires, panier",
+      "outputs": "revenu réel et inflation",
+      "validation": "déflateurs et pondérations cohérents",
+      "failure_mode": "baisse prix sectorielle ≠ déflation générale",
+      "reference_seeds": [
+        "R05",
+        "R15"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M059",
+      "layer": "L09",
+      "name": "Détection de signaux et ruptures",
+      "inputs": "séries compatibles, vintages, saisonnalité",
+      "outputs": "anomalies horodatées",
+      "validation": "backtests as-of, fausses alertes, révisions",
+      "failure_mode": "anomalie ≠ causalité",
+      "reference_seeds": [
+        "R18"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M060",
+      "layer": "L09",
+      "name": "Identification causale et contrefactuels",
+      "inputs": "traitement, témoins, estimand, timing",
+      "outputs": "effet identifié ou non identifiable",
+      "validation": "design pré-spécifié, placebo et sensibilité",
+      "failure_mode": "pré-tendances ne prouvent pas identification",
+      "reference_seeds": [
+        "R10"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M061",
+      "layer": "L09",
+      "name": "Facteurs concurrents et réfutation",
+      "inputs": "cycles, taux, délocalisation, règles, démographie",
+      "outputs": "hypothèses rivales",
+      "validation": "tests discriminants et contrôle confondants",
+      "failure_mode": "pas de récit mono-causal",
+      "reference_seeds": [
+        "R10",
+        "R18"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M062",
+      "layer": "L09",
+      "name": "Incertitude, sensibilité et non-linéarité",
+      "inputs": "paramètres, distributions, dépendances",
+      "outputs": "intervalles, seuils, scénarios",
+      "validation": "bornes, sensibilité globale et stress",
+      "failure_mode": "pas de distribution probabiliste inventée",
+      "reference_seeds": [
+        "R05",
+        "R18"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M063",
+      "layer": "L09",
+      "name": "Temporalité, révision et validation externe",
+      "inputs": "publication, période, preuves, modèles",
+      "outputs": "replay, correction, calibration",
+      "validation": "backtests hors échantillon, revue et suivi",
+      "failure_mode": "pas de fuite temporelle",
+      "reference_seeds": [
+        "R18"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    },
+    {
+      "id": "M064",
+      "layer": "L09",
+      "name": "Décision et valeur informationnelle",
+      "inputs": "décision, alternatives, perte, coût collecte",
+      "outputs": "recommandation conditionnelle, valeur info",
+      "validation": "test acheteur et valeur décision réelle",
+      "failure_mode": "engagement X ≠ disposition à payer",
+      "reference_seeds": [
+        "R18"
+      ],
+      "status": "REQUIREMENT_VALIDATED_METHOD_PENDING",
+      "parameter_status": "UNQUALIFIED",
+      "implemented": false
+    }
+  ],
+  "interfaces": [
+    {
+      "from": "L01",
+      "to": "L02",
+      "flow": "capability and feasible action sets",
+      "mode": "CONDITIONAL_FORWARD",
+      "status": "SPECIFICATION"
+    },
+    {
+      "from": "L02",
+      "to": "L03",
+      "flow": "action requirements and resource time",
+      "mode": "CONDITIONAL_FORWARD",
+      "status": "SPECIFICATION"
+    },
+    {
+      "from": "L03",
+      "to": "L04",
+      "flow": "process constraints and redesign",
+      "mode": "CONDITIONAL_FORWARD",
+      "status": "SPECIFICATION"
+    },
+    {
+      "from": "L04",
+      "to": "L05",
+      "flow": "organization alternatives and transition costs",
+      "mode": "CONDITIONAL_FORWARD",
+      "status": "SPECIFICATION"
+    },
+    {
+      "from": "L05",
+      "to": "L06",
+      "flow": "price/capacity/cost and firm choices",
+      "mode": "CONDITIONAL_FORWARD",
+      "status": "SPECIFICATION"
+    },
+    {
+      "from": "L06",
+      "to": "L07",
+      "flow": "market demand and input sourcing",
+      "mode": "CONDITIONAL_FORWARD",
+      "status": "SPECIFICATION"
+    },
+    {
+      "from": "L07",
+      "to": "L08",
+      "flow": "sector value added and labor demand",
+      "mode": "CONDITIONAL_FORWARD",
+      "status": "SPECIFICATION"
+    },
+    {
+      "from": "L08",
+      "to": "L06",
+      "flow": "lagged income, demand and institutions",
+      "mode": "LAGGED_FEEDBACK",
+      "status": "SPECIFICATION"
+    },
+    {
+      "from": "L08",
+      "to": "L05",
+      "flow": "lagged wages, rates, taxation and finance",
+      "mode": "LAGGED_FEEDBACK",
+      "status": "SPECIFICATION"
+    },
+    {
+      "from": "L06",
+      "to": "L01",
+      "flow": "lagged market demand, investment and diffusion",
+      "mode": "LAGGED_FEEDBACK",
+      "status": "SPECIFICATION"
+    },
+    {
+      "from": "L05",
+      "to": "L04",
+      "flow": "lagged investment and adoption decisions",
+      "mode": "LAGGED_FEEDBACK",
+      "status": "SPECIFICATION"
+    },
+    {
+      "from": "L07",
+      "to": "L03",
+      "flow": "lagged input availability and input prices",
+      "mode": "LAGGED_FEEDBACK",
+      "status": "SPECIFICATION"
+    },
+    {
+      "from": "L08",
+      "to": "L02",
+      "flow": "lagged workforce, skills and participation",
+      "mode": "LAGGED_FEEDBACK",
+      "status": "SPECIFICATION"
+    }
+  ],
+  "cross_cutting": [
+    "provenance",
+    "vintage",
+    "rights",
+    "measurement units",
+    "uncertainty",
+    "scope",
+    "causal identification",
+    "review",
+    "security",
+    "UX",
+    "commercial validation"
+  ],
+  "limits": "Initial coverage register, open to revision; no exhaustive claim, no empirical calibration, method references are seeds, not endorsements or validated parameters."
+}

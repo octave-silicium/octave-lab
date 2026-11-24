@@ -50,3 +50,6 @@ Risques : biais des descriptions, généralisation, poids fictifs, dérive de mo
 
 ## Avancement G2 v0.8
 [G2-MODEL-COMPARISON](G2-MODEL-COMPARISON.md) : premier test de développement GPT-6.2 en contexte, 20/20 contre 16/20 classique, 4 cas supplémentaires texte libre ; non aveugle, aucune mesure réelle de temps/coût, aucune supériorité démontrée. Protocole de transfert indépendant et export candidat seul. G-M1/G-M2 ouverts, dépendances externes ; les scénarios économiques peuvent être développés conditionnellement sans franchir les gates.
+
+## Décision de portée 24/11/2026 : ARCH-002 v2.0
+La cible intégrale validée est [ARCH-002](ARCH-002.md) et son [registre machine-readable](../governance/economic_mechanisms_v2.json). Neuf couches, six moteurs et 64 mécanismes initiaux, statut exigences validées, méthodes/paramètres/implémentations à qualifier. Les six niveaux historiques, METH-003, BENCH-001 et gates G-M0…G-M5 restent applicables ; E-G0…E-G6 complémentaires non franchis. G3 est redéfini comme tranche micro→marché, G4 réseaux et agrégation, G5 validation/produit ; acquisition, G2 indépendant et déploiement en parallèle. Aucune preuve de différenciation ou impact nouveau.
