@@ -1,0 +1,53 @@
+{
+  "run_id": 45342458481,
+  "job_id": 138269091778,
+  "commit": "6fcf8891f1c98e276ade5a086d53c249d2a5c8f1",
+  "tests_passed": 144,
+  "run_url": "https://github.com/octave-silicium/octave-lab/actions/runs/45342458481",
+  "audit": {
+    "version": "0.2.0",
+    "environment": {
+      "python": "3.11.18",
+      "system": "Linux",
+      "machine": "x86_64"
+    },
+    "catalog_build_ms": 9610.54,
+    "source_count": 4,
+    "archived_cells": 183482,
+    "benchmarks": {
+      "indeed_exact_filter": {
+        "iterations": 40,
+        "median_ms": 0.137,
+        "p95_ms": 0.148,
+        "max_ms": 0.184
+      },
+      "dares_catalog": {
+        "iterations": 40,
+        "median_ms": 1.664,
+        "p95_ms": 1.686,
+        "max_ms": 1.694
+      },
+      "dares_native_series": {
+        "iterations": 40,
+        "median_ms": 1.158,
+        "p95_ms": 1.21,
+        "max_ms": 1.232
+      },
+      "indeed_full_daily": {
+        "iterations": 40,
+        "median_ms": 3.721,
+        "p95_ms": 3.806,
+        "max_ms": 5.949
+      },
+      "indeed_comparison_gate": {
+        "iterations": 40,
+        "median_ms": 0.211,
+        "p95_ms": 0.226,
+        "max_ms": 0.248
+      }
+    },
+    "scope": "Python functions on loaded archive catalog; no HTTP or browser, no live collection, no field metrics",
+    "values_emitted": false,
+    "public_release_approved": false
+  }
+}
