@@ -38,7 +38,7 @@ def variants(base):
             extra="authorize" if mode=="human-release" else "sample-check"
             action=replace(original["check"].action,id="octave:action:invoice-"+extra,verb="Autoriser" if mode=="human-release" else "Vérifier par échantillonnage",object="dossier normal",inputs=("decision",),outputs=("revue_normale",),acceptance=("Trace de la décision humaine",))
             steps.append(Step(extra,action,"Responsable humain","Revue"))
-            rr.append(roles(extra,authorization=("review",) if mode=="human-release" else (),verification=("review",) if mode=="sample" else (),condition="Dossiers normaux uniquement" if mode=="human-release" else "Un dossier normal sur cinq selon règle explicite"))
+            rr.append(roles(extra,authorization=("review",) if mode=="human-release" else (),verification=("review",) if mode=="sample" else (),condition="Dossiers normaux uniquement" if mode=="human-release" else "Un dossier normal sur quatre (indices i modulo 5 = 1 ; anomalies exclues)"))
             changes.append(Change((),(extra,),"Nouveau contrôle ou autorisation distincte"))
             edges.append(Transition("merged",extra,"Normal et soumis à revue"));edges.append(Transition(extra,"accept","Revue terminée"))
             # Require the authorization trace on the mandatory route, not on unsampled paths.
