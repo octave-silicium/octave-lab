@@ -12,7 +12,7 @@ Référence publique au 24 novembre 2026. Le statut d'une décision ne vaut pas 
 | Jalon | Résultat attendu | Statut initial |
 |---|---|---|
 | S0 | Synchronisation README, spécification METH-003, état et feuille de route | VÉRIFIÉ |
-| S1 / G1 | Contrats sémantiques communs : mesure, unité, population, dimensions et référentiels versionnés, période/vintage, provenance, licence, comparabilité, preuve ; préparer G-M0 | PARTIELLEMENT VÉRIFIÉ : [S1 v0.2.0](SEMANTIC-V2.md), 183 491 cellules, 104 tests réussis ; qualification des droits, flags, dimensions et comparaisons encore ouverte |
+| S1 / G1 | Contrats sémantiques communs : mesure, unité, population, dimensions et référentiels versionnés, période/vintage, provenance, licence, comparabilité, preuve ; préparer G-M0 | PARTIELLEMENT VÉRIFIÉ : [S1 v0.3.0](SEMANTIC-V3.md), 118 tests réussis, 58 512 cellules live transitoires en plus du périmètre archivé v0.2 ; interface commune, archivage, droits et flags à qualifier |
 | S2 / G1 | Explorateur multisource : recherche, filtres de couverture, historiques, comparaison conditionnelle, provenance et exports autorisés | Validé, non implémenté |
 | S3 / G2 | Qualification ROME/ESCO/O*NET, ontologie G-M0 et petit pilote G-M1 ; processus réel, vérification humaine | Validé, non implémenté |
 | S4 / G3–G5 | Investigations, tests G-M2–G-M5, approfondissement sectoriel et moteur économique, validation empirique puis extension progressive | Validé, non implémenté |

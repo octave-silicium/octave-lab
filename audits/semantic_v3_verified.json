@@ -1,0 +1,178 @@
+{
+  "run_id": 45339115160,
+  "job_id": 138258202196,
+  "commit": "e00e737e178586d975a89801de1658527dca05aa",
+  "run_url": "https://github.com/octave-silicium/octave-lab/actions/runs/45339115160",
+  "tests_passed": 118,
+  "artifact_ids": [
+    14894853077
+  ],
+  "audit": {
+    "version": "0.3.0",
+    "sources": {
+      "urssaf_na88": {
+        "source_url": "https://open.urssaf.fr/api/explore/v2.1/catalog/datasets/effectifs-salaries-et-masse-salariale-du-secteur-prive-france-entiere-x-na88/exports/csv?use_labels=false",
+        "sha256": "9ec16fb077e554518f5a1ade579684a8c91d56f293c7b9897f07b40226833222",
+        "bytes": 1572724,
+        "retrieved_at": "2026-11-24T06:15:41.315277+00:00",
+        "source_rows": 9072,
+        "measures": [
+          "effectifs_salaries_brut",
+          "effectifs_salaries_cvs"
+        ],
+        "concept": "private employee stock",
+        "native_codes_not_crosswalk": true,
+        "dimension_cardinality": {
+          "grand_secteur_d_activite": 7,
+          "secteur_na38i": 36,
+          "secteur_na88i": 81
+        },
+        "observed_dimension_measure_unit_combinations": 162,
+        "period_min": "1998Q3",
+        "period_max": "2026Q2",
+        "observed": 18144,
+        "missing_flagged": 0,
+        "flag_counts": {},
+        "publication_gate": "BLOCK_PUBLICATION"
+      },
+      "urssaf_dpae_na38": {
+        "source_url": "https://open.urssaf.fr/api/explore/v2.1/catalog/datasets/dpae-france-entiere-x-na38/exports/csv?use_labels=false",
+        "sha256": "42cd99124b1ef5f0a39afc481c42e70d5adc0fbfb535a7cb53f2653dfd41f549",
+        "bytes": 1945716,
+        "retrieved_at": "2026-11-24T06:15:43.440322+00:00",
+        "source_rows": 11877,
+        "measures": [
+          "dpae_brut",
+          "dpae_cvs"
+        ],
+        "concept": "declarations, not realized hires",
+        "native_codes_not_crosswalk": true,
+        "dimension_cardinality": {
+          "duree_de_contrat": 2,
+          "grand_secteur_d_activite": 8,
+          "grand_secteur_d_activite_agrege": 5,
+          "nature_de_contrat": 3,
+          "secteur_na38": 37
+        },
+        "observed_dimension_measure_unit_combinations": 222,
+        "period_min": "2000Q1",
+        "period_max": "2026Q3",
+        "observed": 23754,
+        "missing_flagged": 0,
+        "flag_counts": {},
+        "publication_gate": "BLOCK_PUBLICATION"
+      },
+      "urssaf_dpae_monthly": {
+        "source_url": "https://open.urssaf.fr/api/explore/v2.1/catalog/datasets/dpae-mensuelles-france-entiere/exports/csv?use_labels=false",
+        "sha256": "e0789b561ae47d5ce444e8f87f84fd2d076a3c460fba4a54f1cb6de7027a4a7b",
+        "bytes": 46316,
+        "retrieved_at": "2026-11-24T06:15:44.353742+00:00",
+        "source_rows": 642,
+        "measures": [
+          "dpae_brut",
+          "dpae_cvs"
+        ],
+        "concept": "declarations, not realized hires",
+        "native_codes_not_crosswalk": true,
+        "dimension_cardinality": {
+          "duree_de_contrat": 1,
+          "nature_de_contrat": 2
+        },
+        "observed_dimension_measure_unit_combinations": 4,
+        "period_min": "2000-01",
+        "period_max": "2026-09",
+        "observed": 1284,
+        "missing_flagged": 0,
+        "flag_counts": {},
+        "publication_gate": "BLOCK_PUBLICATION"
+      },
+      "eurostat_size": {
+        "source_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/isoc_eb_ai?geo=FR&geo=EU27_2020&lang=EN&sinceTimePeriod=2022",
+        "sha256": "f5f541e46daefe16722efeced6d8bfeb99578eedc1e8c12476a029f5f45edd73",
+        "bytes": 54121,
+        "retrieved_at": "2026-11-24T06:15:45.039288+00:00",
+        "grid_cells": 18144,
+        "absent_unflagged": 15214,
+        "value_cells": 2810,
+        "flagged_cells": 338,
+        "dimension_sizes": {
+          "freq": 1,
+          "size_emp": 8,
+          "nace_r2": 1,
+          "indic_is": 63,
+          "unit": 6,
+          "geo": 2,
+          "time": 3
+        },
+        "dimension_cardinality": {
+          "freq": 1,
+          "geo": 2,
+          "indic_is": 53,
+          "nace_r2": 1,
+          "size_emp": 5,
+          "unit": 5
+        },
+        "observed_dimension_measure_unit_combinations": 1150,
+        "period_min": "2023",
+        "period_max": "2025",
+        "observed": 2810,
+        "missing_flagged": 120,
+        "flag_counts": {
+          "b": 218,
+          "u": 93,
+          "bu": 27
+        },
+        "publication_gate": "BLOCK_PUBLICATION"
+      },
+      "eurostat_nace": {
+        "source_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/isoc_eb_ain2?geo=FR&lang=EN&sinceTimePeriod=2022",
+        "sha256": "0c701942ea3d15bd1350e6938b27a5713f9d39f366b620723995b98077a469a8",
+        "bytes": 191957,
+        "retrieved_at": "2026-11-24T06:15:45.902513+00:00",
+        "grid_cells": 56700,
+        "absent_unflagged": 44300,
+        "value_cells": 7993,
+        "flagged_cells": 5807,
+        "dimension_sizes": {
+          "freq": 1,
+          "size_emp": 1,
+          "nace_r2": 50,
+          "indic_is": 63,
+          "unit": 6,
+          "geo": 1,
+          "time": 3
+        },
+        "dimension_cardinality": {
+          "freq": 1,
+          "geo": 1,
+          "indic_is": 44,
+          "nace_r2": 50,
+          "size_emp": 1,
+          "unit": 3
+        },
+        "observed_dimension_measure_unit_combinations": 3930,
+        "period_min": "2023",
+        "period_max": "2025",
+        "observed": 7993,
+        "missing_flagged": 4407,
+        "flag_counts": {
+          "b": 1400,
+          "u": 2866,
+          "|C": 712,
+          "bu": 829
+        },
+        "publication_gate": "BLOCK_PUBLICATION"
+      }
+    },
+    "total_cells": 58512,
+    "observed_cells": 53985,
+    "missing_flagged_cells": 4527,
+    "pilot_exact_query_count": 3,
+    "pilot_exact_query_flag_count": 1,
+    "raw_or_derived_values_published": false,
+    "cross_source_join_permitted": false,
+    "causal_claims_permitted": false,
+    "full_source_qualification": false
+  },
+  "qualification": "Live source-native in-memory validation; values not persisted or published. No proof of comparability, independent observations, redistribution rights or causality."
+}
