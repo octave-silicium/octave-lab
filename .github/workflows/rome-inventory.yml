@@ -1,0 +1,27 @@
+name: OCTAVE LAB | ROME schema inventory
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'pipeline/rome_inventory.py'
+      - '.github/workflows/rome-inventory.yml'
+permissions:
+  contents: read
+jobs:
+  inventory:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Inspect actual official CSV archive
+        run: |
+          set -o pipefail
+          python -m pipeline.rome_inventory | tee rome_schema.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rome-schema-metadata
+          path: rome_schema.json
