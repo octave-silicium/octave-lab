@@ -225,6 +225,12 @@ def run(fetcher=retrieve):
     }
 
 
+def fr_int(value):
+    return f"{value:,.0f}".replace(",", "\u202f")
+
+def fr_number(value, sign=False):
+    return (f"{value:+.2f}" if sign else f"{value:.2f}").replace(".", ",")
+
 def build_report(result):
     u=result['selected_studies']['private_employment']; d=result['selected_studies']['dpae']; e=result['selected_studies']['ai_adoption']
     return f'''# OCTAVE LAB · PILOT-001 | Information et communication (NACE J)
@@ -236,25 +242,27 @@ def build_report(result):
 Que disent trois indicateurs différents sur les entreprises du secteur information-communication français, sans confondre emploi, déclarations d'embauche et usage déclaré de l'IA ?
 
 ## 1 · Effectifs des employeurs (Urssaf, NA88 divisions 58-63)
-- T4 2024 : **{u['selected_periods']['2024Q4']:,.0f}** salariés CVS.
-- T4 2025 : **{u['selected_periods']['2025Q4']:,.0f}** salariés CVS.
-- Variation annuelle descriptive : **{u['change_2025Q4_vs_2024Q4_pct']:+.2f} %**.
-- T2 2026 vs T2 2025 : **{u['change_2026Q2_vs_2025Q2_pct']:+.2f} %**.
+- T4 2024 : **{fr_int(u['selected_periods']['2024Q4'])}** salariés CVS.
+- T4 2025 : **{fr_int(u['selected_periods']['2025Q4'])}** salariés CVS.
+- Variation annuelle descriptive : **{fr_number(u['change_2025Q4_vs_2024Q4_pct'],True)} %**.
+- T2 2026 vs T2 2025 : **{fr_number(u['change_2026Q2_vs_2025Q2_pct'],True)} %**.
 - Définition : secteur privé couvert par l'Urssaf ; activités d'employeurs NACE 58 à 63, non métiers du numérique. Première collecte, révisions à surveiller.
 
 ## 2 · Déclarations préalables à l'embauche (Urssaf, NA38 JA+JB+JC)
-- T4 2023 : **{d['selected_periods']['2023Q4']:,.0f}** déclarations CVS de CDI et CDD de plus d'un mois.
-- T4 2024 : **{d['selected_periods']['2024Q4']:,.0f}** déclarations CVS de même catégorie.
-- Variation descriptive : **{d['change_2024Q4_vs_2023Q4_pct']:+.2f} %**.
+- T4 2023 : **{fr_int(d['selected_periods']['2023Q4'])}** déclarations CVS de CDI et CDD de plus d'un mois.
+- T4 2024 : **{fr_int(d['selected_periods']['2024Q4'])}** déclarations CVS de même catégorie.
+- Variation descriptive : **{fr_number(d['change_2024Q4_vs_2023Q4_pct'],True)} %**.
 - Les mois et trimestres 2025 restent exclus du calcul, en raison des anomalies déclaratives signalées par le producteur.
 - Ces déclarations ne sont ni des embauches effectivement réalisées ni un solde net d'emploi.
 
 ## 3 · Adoption déclarée de l'IA (Eurostat, isoc_eb_ain2)
-- 2023 : **{e['selected_years']['2023']:.2f} %** des entreprises concernées.
-- 2024 : **{e['selected_years']['2024']:.2f} %**.
-- 2025 : **{e['selected_years']['2025']:.2f} %**.
-- Variation 2023-2024 (ancien panier) : **{e['change_2024_vs_2023_pp']:+.2f} points**. **Pas de taux de croissance 2024-2025 publié** : le panier de technologies suivi s’élargit en 2025 (génération d’images, vidéos et sons).
+- 2023 : **{fr_number(e['selected_years']['2023'])} %** des entreprises concernées.
+- 2024 : **{fr_number(e['selected_years']['2024'])} %**.
+- 2025 : **{fr_number(e['selected_years']['2025'])} %**.
+- Variation 2023-2024 (ancien panier) : **{fr_number(e['change_2024_vs_2023_pp'],True)} points**. **Pas de taux de croissance 2024-2025 publié** : le panier de technologies suivi s’élargit en 2025 (génération d’images, vidéos et sons).
 - Champ : entreprises de 10 personnes occupées ou plus, section NACE J, France ; résultat d'enquête, non mesure de tâches remplacées.
+
+Note méthodologique de l’enquête Eurostat : https://ec.europa.eu/eurostat/documents/3859598/22759373/KS-01-25-065-EN-N.pdf .
 
 ## 4 · Confrontation méthodologique
 Ces trois indicateurs NE FORMENT PAS une analyse causale. L'Urssaf fournit une famille administrative liée de mesures d'effectifs et de déclarations ; Eurostat fournit une enquête d'entreprises. Une hausse d'adoption de l'IA ne démontre ni suppression d'emploi ni hausse de productivité. Le secteur J mélange services informatiques, édition, médias et télécommunications.
