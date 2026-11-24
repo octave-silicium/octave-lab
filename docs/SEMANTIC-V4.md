@@ -1,5 +1,5 @@
 # S1 v0.4 — Interface commune de recherche interne
-Statut initial : implémentation, validation CI à constater. API Python interne, non service HTTP, non interface publique.
+Statut : VÉRIFIÉ dans son périmètre par le run 45339526530. S1 global partiellement vérifié. API Python interne, non service HTTP, non interface publique.
 
 Neuf jeux natifs : quatre issus des artefacts épinglés (Indeed familles/national, Dares mensuel, Insee) et cinq jeux live v0.3. Exclusion des neuf cellules agrégées du pilote dans le catalogue commun, pour ne pas les cumuler avec les historiques sources. Les deux tableaux Eurostat et les sources administratives peuvent se recouvrir. Pas de décompte de preuves indépendantes. Une version par jeu dans le catalogue ; aucune sélection de vintage implicite.
 
@@ -10,3 +10,8 @@ Eurostat : b rupture de série, u faible fiabilité, bu combinaison ; |C statut 
 Conservation : fonction de coffre local hors dépôt, opt-in explicite et autorisation par source à obtenir, fichier original adressé par SHA256, vérification de l'intégrité et manifeste horodaté distinct pour chaque récupération. Tests sur octets synthétiques uniquement. Aucun coffre de production provisionné, aucun jeu live conservé en CI. Une stratégie de droits, sauvegardes, accès et disponibilité doit être approuvée avant stockage durable réel. Les archives publiques existantes restent distinctes des données live.
 
 Exécution : `python -m unittest discover -s tests -v`, `python -m pipeline.semantic_v4`. Le workflow conserve seulement les métadonnées. Le passage à S2 doit distinguer explorateur interne et publication ; aucune revue juridique, causalité, correspondance métier/secteur ni G-M0 déclarés franchis.
+
+## Résultats CI du 24/11/2026
+[Run 45339526530](https://github.com/octave-silicium/octave-lab/actions/runs/45339526530), job 138259556498 : 130 tests réussis, neuf jeux, 183 482 cellules issues des artefacts archivés et 58 512 cellules live transitoires, soit 241 994 entrées de catalogue durant l'exécution (non indépendantes, non base persistante). Neuf extraits du pilote exclus. 468 cellules DPAE 2025 classées RESTRICTED (444 trimestrielles, 24 mensuelles). 4 527 cellules Eurostat masquées. 263 combinaisons natives observées Dares ; toutes ses cellules restent en revue géographique. Voir [preuve permanente](../audits/semantic_v4_verified.json).
+
+PILOT-001 : 2023 porte b, 2024 et 2025 sans flag, empreinte Eurostat identique à celle du pilote. L'absence de flag en 2025 ne résout pas la rupture de définition du panier IA. Comparaison 2023–2024 mise en revue conservatrice ; ne pas interpréter le flag comme preuve que le changement 2023–2024 est nécessairement invalide, sa cause et son périmètre restent à documenter. Le rapport, le manifeste et le générateur sont rectifiés ; les tests supplémentaires de correction font l'objet d'une nouvelle CI. Coffre local testé sur données synthétiques, pas de stockage réel de production. S2 interne peut être préparé sur les sources déjà qualifiées techniquement ; aucune publication automatique ni clôture intégrale de S1 avant revue des droits, des millésimes et des nomenclatures.

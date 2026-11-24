@@ -3,7 +3,7 @@ import unittest
 import json
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'pipeline'))
-from pilot_ict import quarterly_urssaf, quarterly_dpae, eurostat_value, numeric, read_csv
+from pilot_ict import quarterly_urssaf, quarterly_dpae, eurostat_value, eurostat_flag, eurostat_ict, numeric, read_csv
 
 class PilotTests(unittest.TestCase):
     def test_number(self):
@@ -42,6 +42,18 @@ class PilotTests(unittest.TestCase):
     def test_eurostat_missing_category_blocks(self):
         data={'id':['geo'],'size':[1],'dimension':{'geo':{'category':{'index':{'FR':0}}}},'value':{'0':12}}
         with self.assertRaises(ValueError):eurostat_value(data,{'geo':'US'})
+    def test_eurostat_status_exact(self):
+        data={'id':['geo','time'],'size':[1,2],'dimension':{'geo':{'category':{'index':{'FR':0}}},'time':{'category':{'index':{'2023':0,'2024':1}}}},'status':{'0':'b'}}
+        self.assertEqual(eurostat_flag(data,{'geo':'FR','time':'2023'}),'b')
+        self.assertEqual(eurostat_flag(data,{'geo':'FR','time':'2024'}),'')
+    def test_eurostat_pilot_blocks_unqualified_change(self):
+        codes={'geo':['FR'],'nace_r2':['J'],'indic_is':['E_AI_TANY'],'unit':['PC_ENT'],'size_emp':['GE10'],'freq':['A'],'time':['2023','2024','2025']}
+        data={'id':list(codes),'size':[len(v) for v in codes.values()],'dimension':{k:{'category':{'index':{c:i for i,c in enumerate(v)}}} for k,v in codes.items()},'value':{'0':25,'1':40,'2':55},'status':{'0':'b'}}
+        result=eurostat_ict(json.dumps(data).encode())
+        self.assertEqual(result['source_flags']['2023'],'b')
+        self.assertIsNone(result['change_2024_vs_2023_pp'])
+        data['status']['1']='u'
+        with self.assertRaises(ValueError):eurostat_ict(json.dumps(data).encode())
     def test_schema_fail(self):
         with self.assertRaises(ValueError): read_csv(b'foo;bar\n1;2\n',{'secteur_na88i'})
 if __name__=='__main__': unittest.main()

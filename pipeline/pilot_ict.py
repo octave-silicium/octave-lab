@@ -146,7 +146,7 @@ def get_index(category):
     return idx if isinstance(idx, dict) else {k:i for i,k in enumerate(idx)}
 
 
-def eurostat_value(dataset, selectors):
+def eurostat_offset(dataset, selectors):
     """JSON-stat flattened position, no nearest-match on indicator, unit or NACE."""
     ids = dataset['id']
     sizes = dataset['size']
@@ -160,11 +160,32 @@ def eurostat_value(dataset, selectors):
         if code not in indexes:
             raise ValueError(f'MISSING_CATEGORY:{dim}:{code};options={list(indexes)[:18]}')
         offset = offset * size + indexes[code]
+    return offset
+
+
+def eurostat_value(dataset, selectors):
+    offset = eurostat_offset(dataset, selectors)
     value = dataset.get('value', {})
     result = value.get(str(offset)) if isinstance(value, dict) else value[offset]
     if result is None:
         raise ValueError('MISSING_EUROSTAT_VALUE')
     return float(result)
+
+
+def eurostat_flag(dataset, selectors):
+    offset = eurostat_offset(dataset, selectors)
+    statuses = dataset.get('status', {})
+    if isinstance(statuses, dict):
+        flag = statuses.get(str(offset), '')
+    elif isinstance(statuses, list):
+        flag = statuses[offset] if offset < len(statuses) else ''
+    else:
+        raise ValueError('UNKNOWN_EUROSTAT_STATUS_SCHEMA')
+    if flag is None:
+        flag = ''
+    if not isinstance(flag, str):
+        raise ValueError('INVALID_EUROSTAT_STATUS')
+    return flag
 
 
 def eurostat_ict(data):
@@ -178,9 +199,13 @@ def eurostat_ict(data):
     required['size_emp'] = matches[0]
     if 'freq' in j['id']:
         required['freq'] = 'A'
-    values={}
+    values={}; flags={}
     for year in ('2023','2024','2025'):
-        values[year] = eurostat_value(j,{**required,'time':year})
+        selectors = {**required,'time':year}
+        flags[year] = eurostat_flag(j,selectors)
+        if flags[year] not in {'', 'b'}:
+            raise ValueError('PILOT_PUBLICATION_BLOCKED_FLAG_REVIEW')
+        values[year] = eurostat_value(j,selectors)
     return {
       'indicator_code':'E_AI_TANY',
       'indicator_label':j['dimension']['indic_is']['category'].get('label',{}).get('E_AI_TANY'),
@@ -188,7 +213,9 @@ def eurostat_ict(data):
       'population':'Enterprises with 10+ persons employed in NACE Rev2 section J, France; survey sample, not all employers',
       'classification':'NACE Rev2 section J',
       'selected_years':values,
-      'change_2024_vs_2023_pp':round(values['2024']-values['2023'],2),
+      'source_flags':flags,
+      'change_2024_vs_2023_pp':None,
+      'change_2024_vs_2023_gate':'REVIEW_REQUIRED: inspect source flags and comparability; no validated change',
       'change_2025_vs_2024_pp':None,
       'comparability_warning':'2025 AI technology basket adds generative image/video/audio category vs prior years; do not interpret 2024-2025 difference as same-definition growth without official bridge.',
       'quality_gate':'SURVEY_DESCRIPTION_ONLY: no inference on automation, job losses or firm productivity',
@@ -259,7 +286,7 @@ Que disent trois indicateurs différents sur les entreprises du secteur informat
 - 2023 : **{fr_number(e['selected_years']['2023'])} %** des entreprises concernées.
 - 2024 : **{fr_number(e['selected_years']['2024'])} %**.
 - 2025 : **{fr_number(e['selected_years']['2025'])} %**.
-- Variation 2023-2024 (ancien panier) : **{fr_number(e['change_2024_vs_2023_pp'],True)} points**. **Pas de taux de croissance 2024-2025 publié** : le panier de technologies suivi s’élargit en 2025 (génération d’images, vidéos et sons).
+- Flags Eurostat : {', '.join(year + ': ' + (flag or 'aucun flag') for year, flag in e['source_flags'].items())}. Le code b signale une rupture de série. **Variation 2023-2024 non validée, en revue méthodologique** ; aucune hausse chiffrée présentée comme comparable. **Pas de taux de croissance 2024-2025 publié** : le panier de technologies suivi s’élargit en 2025 (génération d’images, vidéos et sons).
 - Champ : entreprises de 10 personnes occupées ou plus, section NACE J, France ; résultat d'enquête, non mesure de tâches remplacées.
 
 Note méthodologique de l’enquête Eurostat : https://ec.europa.eu/eurostat/documents/3859598/22759373/KS-01-25-065-EN-N.pdf .

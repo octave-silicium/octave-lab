@@ -21,10 +21,10 @@ Que disent trois indicateurs différents sur les entreprises du secteur informat
 - Ces déclarations ne sont ni des embauches effectivement réalisées ni un solde net d'emploi.
 
 ## 3 · Adoption déclarée de l'IA (Eurostat, isoc_eb_ain2)
-- 2023 : **29,56 %** des entreprises concernées.
+- 2023 : **29,56 %** des entreprises concernées (flag Eurostat b : rupture de série).
 - 2024 : **41,76 %**.
 - 2025 : **58,98 %**.
-- Variation 2023-2024 (ancien panier) : **+12,20 points**. **Pas de taux de croissance 2024-2025 publié** : le panier de technologies suivi s’élargit en 2025 (génération d’images, vidéos et sons).
+- **Rectificatif du 24/11/2026 : variation 2023-2024 non validée, revue méthodologique nécessaire.** Le flag b est confirmé dans le même fichier source (SHA256 identique) par le [run S1 v0.4](https://github.com/octave-silicium/octave-lab/actions/runs/45339526530). La différence arithmétique ne prouve pas une évolution comparable. **Pas de taux de croissance 2024-2025 publié** : le panier de technologies suivi s’élargit en 2025 (génération d’images, vidéos et sons).
 - Champ : entreprises de 10 personnes occupées ou plus, section NACE J, France ; résultat d'enquête, non mesure de tâches remplacées.
 
 Note méthodologique de l’enquête Eurostat : https://ec.europa.eu/eurostat/documents/3859598/22759373/KS-01-25-065-EN-N.pdf .

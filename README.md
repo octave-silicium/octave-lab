@@ -13,14 +13,14 @@
 | Gouvernance | [Contrôles provisoires](pipeline/data_governance.py), [droits](governance/source_rights.json), [ruptures](governance/series_events.json) |
 | PILOT-001 | [Rapport descriptif NACE J](research/PILOT-001/rapport.md), [manifeste](research/PILOT-001/pilot_manifest.json), [code](pipeline/pilot_ict.py) |
 | Moteur métier–tâche–action–processus | [METH-003](docs/METH-003.md), spécification validée, non implémentée |
-| Socle sémantique | [S1 v0.2.0](docs/SEMANTIC-V2.md) : 183 491 cellules archivées ; [v0.3.0](docs/SEMANTIC-V3.md) : 58 512 cellules transitoires, 118 tests du dépôt réussis ; pas de base consolidée, qualification ouverte |
+| Socle sémantique | [S1 v0.2.0](docs/SEMANTIC-V2.md) : 183 491 cellules archivées ; [v0.3.0](docs/SEMANTIC-V3.md) : 58 512 cellules transitoires, 118 tests du dépôt réussis ; [v0.4](docs/SEMANTIC-V4.md) : 9 jeux interrogeables en interne, 130 tests réussis ; stockage de production et qualification ouverts |
 | Explorateur multisource | Cible G1, non implémenté |
 
 79 sources/programmes candidats recensés, non 79 bases intégrées. PILOT-001 mobilise deux lignées principales (Urssaf et Eurostat), sans inférence causale. Les comparaisons DPAE touchées par les anomalies 2025 restent bloquées ; le périmètre des technologies IA Eurostat change en 2025. Les sources Dares MMO et les droits commerciaux concernés nécessitent encore qualification.
 
 ## Architecture et feuille de route
 
-Six niveaux reliés : capacités IA, tâches/actions, métiers, entreprises/processus, marchés/chaînes de valeur, macroéconomie. Le [moteur de décomposition du travail](docs/METH-003.md) est transversal. Prochaine étape technique : compléter et vérifier [S1](docs/SEMANTIC-V3.md), puis explorateur G1. Voir [feuille de route et chantiers ouverts](docs/ROADMAP.md).
+Six niveaux reliés : capacités IA, tâches/actions, métiers, entreprises/processus, marchés/chaînes de valeur, macroéconomie. Le [moteur de décomposition du travail](docs/METH-003.md) est transversal. Prochaine étape technique : compléter et vérifier [S1](docs/SEMANTIC-V4.md), puis explorateur G1. Voir [feuille de route et chantiers ouverts](docs/ROADMAP.md).
 
 ## Exécution GitHub Actions
 

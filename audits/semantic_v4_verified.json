@@ -1,0 +1,143 @@
+{
+  "run_id": 45339526530,
+  "job_id": 138259556498,
+  "commit": "759778caa7dedb71f54a02119539b6efa08a2379",
+  "run_url": "https://github.com/octave-silicium/octave-lab/actions/runs/45339526530",
+  "tests_passed": 130,
+  "artifact_ids": [
+    14894519363
+  ],
+  "audit": {
+    "version": "0.4.0",
+    "counts": {
+      "dares_offers_monthly": 96252,
+      "eurostat_nace": 12400,
+      "eurostat_size": 2930,
+      "indeed_national_total_daily": 2478,
+      "indeed_sector_total_daily": 84252,
+      "insee_employment": 500,
+      "urssaf_dpae_monthly": 1284,
+      "urssaf_dpae_na38": 23754,
+      "urssaf_na88": 18144
+    },
+    "coverage": {
+      "dares_offers_monthly": {
+        "combinations": 263,
+        "quality_counts": {
+          "REVIEW_REQUIRED": 96252
+        }
+      },
+      "eurostat_nace": {
+        "combinations": 3930,
+        "quality_counts": {
+          "REVIEW_REQUIRED": 1400,
+          "DESCRIPTIVE_ONLY": 6593,
+          "WITHHELD": 4407
+        }
+      },
+      "eurostat_size": {
+        "combinations": 1150,
+        "quality_counts": {
+          "DESCRIPTIVE_ONLY": 2592,
+          "REVIEW_REQUIRED": 218,
+          "WITHHELD": 120
+        }
+      },
+      "indeed_national_total_daily": {
+        "combinations": 1,
+        "quality_counts": {
+          "DESCRIPTIVE_ONLY": 2478
+        }
+      },
+      "indeed_sector_total_daily": {
+        "combinations": 34,
+        "quality_counts": {
+          "DESCRIPTIVE_ONLY": 84252
+        }
+      },
+      "insee_employment": {
+        "combinations": 10,
+        "quality_counts": {
+          "REVIEW_REQUIRED": 500
+        }
+      },
+      "urssaf_dpae_monthly": {
+        "combinations": 4,
+        "quality_counts": {
+          "DESCRIPTIVE_ONLY": 1260,
+          "RESTRICTED": 24
+        }
+      },
+      "urssaf_dpae_na38": {
+        "combinations": 222,
+        "quality_counts": {
+          "DESCRIPTIVE_ONLY": 23310,
+          "RESTRICTED": 444
+        }
+      },
+      "urssaf_na88": {
+        "combinations": 162,
+        "quality_counts": {
+          "DESCRIPTIVE_ONLY": 18144
+        }
+      }
+    },
+    "archived_cells": 183482,
+    "live_transient_cells": 58512,
+    "excluded_pilot_excerpt_cells": 9,
+    "pilot_flag_metadata": [
+      {
+        "period": "2023",
+        "raw_flag": "b",
+        "quality": "REVIEW_REQUIRED",
+        "reasons": [
+          "SERIES_BREAK"
+        ]
+      },
+      {
+        "period": "2024",
+        "raw_flag": "",
+        "quality": "DESCRIPTIVE_ONLY",
+        "reasons": []
+      },
+      {
+        "period": "2025",
+        "raw_flag": "",
+        "quality": "DESCRIPTIVE_ONLY",
+        "reasons": []
+      }
+    ],
+    "live_source_manifest": {
+      "urssaf_na88": {
+        "sha256": "9ec16fb077e554518f5a1ade579684a8c91d56f293c7b9897f07b40226833222",
+        "bytes": 1572724,
+        "retrieved_at": "2026-11-24T06:19:12.583349+00:00"
+      },
+      "urssaf_dpae_na38": {
+        "sha256": "42cd99124b1ef5f0a39afc481c42e70d5adc0fbfb535a7cb53f2653dfd41f549",
+        "bytes": 1945716,
+        "retrieved_at": "2026-11-24T06:19:14.810445+00:00"
+      },
+      "urssaf_dpae_monthly": {
+        "sha256": "e0789b561ae47d5ce444e8f87f84fd2d076a3c460fba4a54f1cb6de7027a4a7b",
+        "bytes": 46316,
+        "retrieved_at": "2026-11-24T06:19:16.146279+00:00"
+      },
+      "eurostat_size": {
+        "sha256": "f5f541e46daefe16722efeced6d8bfeb99578eedc1e8c12476a029f5f45edd73",
+        "bytes": 54121,
+        "retrieved_at": "2026-11-24T06:19:17.002008+00:00"
+      },
+      "eurostat_nace": {
+        "sha256": "0c701942ea3d15bd1350e6938b27a5713f9d39f366b620723995b98077a469a8",
+        "bytes": 191957,
+        "retrieved_at": "2026-11-24T06:19:18.299751+00:00"
+      }
+    },
+    "production_vault_provisioned": false,
+    "public_values_emitted": false,
+    "cross_source_join_permitted": false,
+    "causal_claims_permitted": false
+  },
+  "qualification": "Internal query and quality gates only. No production vault or approved public data output."
+}
