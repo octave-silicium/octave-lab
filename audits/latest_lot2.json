@@ -1,0 +1,201 @@
+{
+  "audit_at_utc": "2026-11-24T04:39:40.864861+00:00",
+  "status": "ACCESS_AND_STRUCTURE_ONLY",
+  "no_raw_redistribution": true,
+  "no_automatic_harmonisation": true,
+  "no_causal_attribution": true,
+  "sources": {
+    "URSSAF_DPAE_NA38_QUARTERLY": {
+      "url": "https://open.urssaf.fr/api/explore/v2.1/catalog/datasets/dpae-france-entiere-x-na38/exports/csv?use_labels=false",
+      "documentation_url": "https://open.urssaf.fr/explore/dataset/dpae-france-entiere-x-na38/",
+      "publisher": "Urssaf Caisse nationale",
+      "dependency_group": "URSSAF_ADMINISTRATIVE_DPAE",
+      "concept": "Declarations prealables a l'embauche, pas embauches realisees ni emplois nets",
+      "population": "Regime general hors interim, France entiere, activite employeur NA38, trimestriel",
+      "legal": "ODbL 1.0 ; utilisation publique et base derivee a instruire avant diffusion",
+      "public_raw_archive": false,
+      "caution": "Erreur de declaration de contrat/duree depuis mars 2025, publication suspendue et revisions a controler",
+      "economic_join_ready": false,
+      "result": "FETCH_AND_STRUCTURE_PASS",
+      "bytes": 1945716,
+      "sha256": "42cd99124b1ef5f0a39afc481c42e70d5adc0fbfb535a7cb53f2653dfd41f549",
+      "profile": {
+        "rows": 11877,
+        "columns": [
+          "grand_secteur_d_activite_agrege",
+          "grand_secteur_d_activite",
+          "secteur_na38",
+          "duree_de_contrat",
+          "nature_de_contrat",
+          "annee",
+          "trimestre",
+          "dernier_jour_du_trimestre",
+          "dpae_brut",
+          "dpae_cvs"
+        ],
+        "delimiter": ";",
+        "encoding": "utf-8-sig",
+        "empty_rows": 0,
+        "first_3_rows_preview": [
+          {
+            "grand_secteur_d_activite_agrege": "GSA1 Agriculture - Industrie",
+            "grand_secteur_d_activite": "GS0 Agriculture",
+            "secteur_na38": "AZ Agriculture, sylviculture et pêche",
+            "duree_de_contrat": "Contrat de moins d'un mois",
+            "nature_de_contrat": "CDD de moins d'un mois",
+            "annee": "2026",
+            "trimestre": "3",
+            "dernier_jour_du_trimestre": "2026-09-30"
+          },
+          {
+            "grand_secteur_d_activite_agrege": "GSA1 Agriculture - Industrie",
+            "grand_secteur_d_activite": "GS0 Agriculture",
+            "secteur_na38": "AZ Agriculture, sylviculture et pêche",
+            "duree_de_contrat": "Contrat de plus d'un mois",
+            "nature_de_contrat": "CDD de plus d'un mois",
+            "annee": "2026",
+            "trimestre": "3",
+            "dernier_jour_du_trimestre": "2026-09-30"
+          },
+          {
+            "grand_secteur_d_activite_agrege": "GSA1 Agriculture - Industrie",
+            "grand_secteur_d_activite": "GS0 Agriculture",
+            "secteur_na38": "AZ Agriculture, sylviculture et pêche",
+            "duree_de_contrat": "Contrat de plus d'un mois",
+            "nature_de_contrat": "CDI",
+            "annee": "2026",
+            "trimestre": "3",
+            "dernier_jour_du_trimestre": "2026-09-30"
+          }
+        ],
+        "date_range": "NOT_ASSERTED_UNTIL_SEMANTIC_DICTIONARY_REVIEW"
+      },
+      "content_type": "text/csv; charset=utf-8",
+      "etag": null,
+      "last_modified": null,
+      "final_url": "https://open.urssaf.fr/api/explore/v2.1/catalog/datasets/dpae-france-entiere-x-na38/exports/csv?use_labels=false",
+      "next_gate": "MANUAL_CODEBOOK_SCOPE_LICENCE_REVIEW"
+    },
+    "URSSAF_DPAE_MONTHLY_NATIONAL": {
+      "url": "https://open.urssaf.fr/api/explore/v2.1/catalog/datasets/dpae-mensuelles-france-entiere/exports/csv?use_labels=false",
+      "documentation_url": "https://open.urssaf.fr/explore/dataset/dpae-mensuelles-france-entiere/",
+      "publisher": "Urssaf Caisse nationale",
+      "dependency_group": "URSSAF_ADMINISTRATIVE_DPAE",
+      "concept": "Declarations prealables a l'embauche de plus d'un mois ; pas embauches effectives",
+      "population": "France entiere, selon definition Urssaf, mensuel",
+      "legal": "ODbL 1.0 ; utilisation publique et base derivee a instruire avant diffusion",
+      "public_raw_archive": false,
+      "caution": "Erreur de declaration de contrat/duree depuis mars 2025, publication suspendue et revisions a controler",
+      "economic_join_ready": false,
+      "result": "FETCH_AND_STRUCTURE_PASS",
+      "bytes": 46316,
+      "sha256": "e0789b561ae47d5ce444e8f87f84fd2d076a3c460fba4a54f1cb6de7027a4a7b",
+      "profile": {
+        "rows": 642,
+        "columns": [
+          "annee",
+          "trimestre",
+          "dernier_jour_du_mois",
+          "duree_de_contrat",
+          "nature_de_contrat",
+          "dpae_brut",
+          "dpae_cvs"
+        ],
+        "delimiter": ";",
+        "encoding": "utf-8-sig",
+        "empty_rows": 0,
+        "first_3_rows_preview": [
+          {
+            "annee": "2000",
+            "trimestre": "1",
+            "dernier_jour_du_mois": "2000-01-31",
+            "duree_de_contrat": "Contrat de plus d'un mois",
+            "nature_de_contrat": "CDI",
+            "dpae_brut": "275340",
+            "dpae_cvs": "223814"
+          },
+          {
+            "annee": "2000",
+            "trimestre": "1",
+            "dernier_jour_du_mois": "2000-01-31",
+            "duree_de_contrat": "Contrat de plus d'un mois",
+            "nature_de_contrat": "CDD de plus d'un mois",
+            "dpae_brut": "263340",
+            "dpae_cvs": "312618"
+          },
+          {
+            "annee": "2000",
+            "trimestre": "1",
+            "dernier_jour_du_mois": "2000-02-29",
+            "duree_de_contrat": "Contrat de plus d'un mois",
+            "nature_de_contrat": "CDI",
+            "dpae_brut": "218066",
+            "dpae_cvs": "230166"
+          }
+        ],
+        "date_range": "NOT_ASSERTED_UNTIL_SEMANTIC_DICTIONARY_REVIEW"
+      },
+      "content_type": "text/csv; charset=utf-8",
+      "etag": null,
+      "last_modified": null,
+      "final_url": "https://open.urssaf.fr/api/explore/v2.1/catalog/datasets/dpae-mensuelles-france-entiere/exports/csv?use_labels=false",
+      "next_gate": "MANUAL_CODEBOOK_SCOPE_LICENCE_REVIEW"
+    },
+    "INSEE_EMPLOI_SECTORIEL_TRIMESTRIEL": {
+      "url": "https://www.insee.fr/fr/statistiques/fichier/2496914/econ-gen-empl-salarie-trim.xlsx",
+      "documentation_url": "https://www.insee.fr/fr/statistiques/2496914",
+      "publisher": "Insee",
+      "dependency_group": "DSN_URSSAF_DARES_INSEE_EMPLOYMENT_ESTIMATES",
+      "concept": "Stock d'emplois salaries en fin de trimestre ; pas flux de contrats ou DPAE",
+      "population": "France hors Mayotte ; champ sectoriel detaille selon publications Insee ; millesime et CVS a confirmer par tableau",
+      "legal": "Conditions de reutilisation du fichier exact a confirmer pour rediffusion commerciale",
+      "public_raw_archive": false,
+      "caution": "T2 2026 dans l'edition du 28/08/2026 ; series revisees et unite en milliers",
+      "economic_join_ready": false,
+      "result": "FETCH_AND_STRUCTURE_PASS",
+      "bytes": 51977,
+      "sha256": "a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48",
+      "profile": {
+        "worksheets": 1,
+        "sheet_names": [
+          "Données"
+        ],
+        "structure_preview": [
+          {
+            "worksheet": "xl/worksheets/sheet1.xml",
+            "dimension": "A1:AMJ1048576",
+            "xml_rows": 21,
+            "xml_cells": 15365
+          }
+        ],
+        "status": "WORKBOOK_VALIDATED_VALUES_AND_UNITS_NOT_YET_PARSED"
+      },
+      "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "etag": null,
+      "last_modified": null,
+      "final_url": "https://www.insee.fr/fr/statistiques/fichier/2496914/econ-gen-empl-salarie-trim.xlsx",
+      "next_gate": "MANUAL_CODEBOOK_SCOPE_LICENCE_REVIEW"
+    },
+    "DARES_MMO_TRIMESTRIEL": {
+      "url": null,
+      "documentation_url": "https://dares.travail-emploi.gouv.fr/donnees/les-mouvements-de-main-doeuvre",
+      "publisher": "Dares",
+      "dependency_group": "DSN_DARES_MMO",
+      "concept": "Entrees/sorties de contrats en date de mouvement ; ne pas deduire variation nette d'emploi Insee",
+      "population": "Prive France metropolitaine, hors agriculture, interim, particuliers employeurs ; detail selon publication",
+      "legal": "Licence du fichier XLSX exact et droits de rediffusion a confirmer",
+      "public_raw_archive": false,
+      "caution": "Revisions 2023, differences d'amplitude et de perimetre avec Insee ; URL XLSX stable non encore confirmees",
+      "economic_join_ready": false,
+      "result": "PENDING_EXACT_DOWNLOAD_URL",
+      "reason": "Published data page located, but stable official binary URL and licence not yet verified."
+    }
+  },
+  "summary": {
+    "candidate_sources": 4,
+    "passed": 3,
+    "failed": 0,
+    "pending_exact_url": 1,
+    "ready_for_economic_join": 0
+  }
+}
