@@ -1,0 +1,43 @@
+name: OCTAVE LAB | Data Observatory
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '37 5 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'pipeline/data_observatory.py'
+      - 'governance/refresh_sources.json'
+      - 'tests/test_data_observatory.py'
+      - '.github/workflows/data-observatory.yml'
+permissions:
+  contents: read
+concurrency:
+  group: data-observatory
+  cancel-in-progress: false
+jobs:
+  observe:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Regression tests
+        run: python -m unittest discover -s tests -v
+      - name: Check registered sources
+        run: |
+          set -o pipefail
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            python -m pipeline.data_observatory --scheduled | tee data_observatory.json
+          else
+            python -m pipeline.data_observatory | tee data_observatory.json
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: data-observatory-metadata
+          path: data_observatory.json
+          if-no-files-found: warn
+          retention-days: 30

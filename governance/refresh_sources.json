@@ -1,0 +1,109 @@
+{
+  "version": "1.0",
+  "sources": [
+    {
+      "id": "indeed_national_total_daily",
+      "kind": "indeed_national",
+      "url": "https://raw.githubusercontent.com/hiring-lab/job_postings_tracker/master/FR/aggregate_job_postings_FR.csv",
+      "frequency": "daily",
+      "license": "CC-BY-4.0",
+      "baseline_sha256": "ab1873dd2cef837504c473299356d5d53390dc620d6a661cf659c0c28a38e10f"
+    },
+    {
+      "id": "indeed_sector_total_daily",
+      "kind": "indeed_sector",
+      "url": "https://raw.githubusercontent.com/hiring-lab/job_postings_tracker/master/FR/job_postings_by_sector_FR.csv",
+      "frequency": "daily",
+      "license": "CC-BY-4.0",
+      "baseline_sha256": "9d7ce5aecd8269931a273ae5a13583adbcebc1a2bca0960980b7e0ab647e347a"
+    },
+    {
+      "id": "dares_offers_monthly",
+      "kind": "dares",
+      "url": "https://data.dares.travail-emploi.gouv.fr/api/explore/v2.1/catalog/datasets/dares_offres_collectees_satisfaites_france_travail_brutes_mens/exports/csv?use_labels=true",
+      "frequency": "weekly",
+      "license": "LO-2.0",
+      "baseline_sha256": "1ea5f3f5a0dea3ba3c9b58f486cd965ab30802204882578b16d11b81f4b82cb7"
+    },
+    {
+      "id": "insee_employment",
+      "kind": "xlsx",
+      "url": "https://www.insee.fr/fr/statistiques/fichier/2496914/econ-gen-empl-salarie-trim.xlsx",
+      "frequency": "weekly",
+      "license": "LO-2.0",
+      "baseline_sha256": "a13c18d4fd17ff7684db8adb56e92642b31a345af529b46f68e8d0046e159a48"
+    },
+    {
+      "id": "urssaf_na88",
+      "kind": "live_native",
+      "frequency": "weekly",
+      "license": "ODbL-1.0",
+      "baseline_sha256": "9ec16fb077e554518f5a1ade579684a8c91d56f293c7b9897f07b40226833222"
+    },
+    {
+      "id": "urssaf_dpae_na38",
+      "kind": "live_native",
+      "frequency": "weekly",
+      "license": "ODbL-1.0",
+      "baseline_sha256": "42cd99124b1ef5f0a39afc481c42e70d5adc0fbfb535a7cb53f2653dfd41f549"
+    },
+    {
+      "id": "urssaf_dpae_monthly",
+      "kind": "live_native",
+      "frequency": "weekly",
+      "license": "ODbL-1.0",
+      "baseline_sha256": "e0789b561ae47d5ce444e8f87f84fd2d076a3c460fba4a54f1cb6de7027a4a7b"
+    },
+    {
+      "id": "eurostat_size",
+      "kind": "live_native",
+      "frequency": "weekly",
+      "license": "EUROSTAT_TERMS",
+      "baseline_sha256": "f5f541e46daefe16722efeced6d8bfeb99578eedc1e8c12476a029f5f45edd73"
+    },
+    {
+      "id": "eurostat_nace",
+      "kind": "live_native",
+      "frequency": "weekly",
+      "license": "EUROSTAT_TERMS",
+      "baseline_sha256": "0c701942ea3d15bd1350e6938b27a5713f9d39f366b620723995b98077a469a8"
+    },
+    {
+      "id": "rome",
+      "kind": "rome_inventory",
+      "url": "https://api.francetravail.fr/api-nomenclatureemploi/v1/open-data/csv",
+      "frequency": "weekly",
+      "license": "fr-lo",
+      "baseline_sha256": "ae63cf9155c59710175ed214b9ad4310e5d52c88582eb9a8c90e8505cacf7fcb"
+    },
+    {
+      "id": "onet",
+      "kind": "onet_pinned",
+      "frequency": "weekly",
+      "license": "CC-BY-4.0",
+      "version": "31.0",
+      "release_discovery": "NOT_IMPLEMENTED"
+    },
+    {
+      "id": "esco",
+      "kind": "manual",
+      "frequency": "weekly",
+      "license": "EU_REUSE_REVIEW",
+      "reason": "Full versioned archive obtained manually; full API equivalence not validated"
+    },
+    {
+      "id": "dares_mmo",
+      "kind": "manual",
+      "frequency": "weekly",
+      "license": "REVIEW_REQUIRED",
+      "reason": "Official automated access blocked; user-supplied corrected quarterly and annual files"
+    },
+    {
+      "id": "dares_fap",
+      "kind": "manual",
+      "frequency": "monthly",
+      "license": "REVIEW_REQUIRED",
+      "reason": "Official mapping downloads not yet qualified for automatic collection"
+    }
+  ]
+}
