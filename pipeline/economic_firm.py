@@ -53,7 +53,7 @@ def ledger(receipt,config):
     require(set(rows)==set(pools),"COST_POOL_COVERAGE")
     payroll=F(0);running=F(0);paid=0;human_used=0;resource_ledger=[]
     for k,p in sorted(pools.items()):
-        c=rows[k];avail=F(p["available_hours"])*3600;used=F(p["used_hours"])*3600
+        c=rows[k];avail=F(p["available_seconds"]);used=F(p["busy_seconds"])
         require(integer(c.paid_seconds,0,10**9) and money(c.payroll_cents_per_hour) and money(c.running_cents_per_hour),"RESOURCE_COST")
         if p["kind"]=="HUMAN":
             require(c.paid_seconds>=avail and c.running_cents_per_hour==0,"PAID_TIME_OR_DOUBLE_COUNT")
