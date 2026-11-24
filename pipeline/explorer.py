@@ -156,9 +156,9 @@ class Explorer:
         blockers=Counter(reason for r in rows if r.quality[0] in {"RESTRICTED","WITHHELD"} for reason in r.quality[1])
         if blockers:
             return {"decision":"BLOCK","reason":"QUALITY_RESTRICTION_IN_INTERVAL","quality_reasons":sorted(blockers),"periods":[start,end],"change":None}
-        if any(r.flag for r in rows):
-            return {"decision":"REVIEW_REQUIRED","reason":"SOURCE_FLAG_IN_INTERVAL","periods":[start,end],"change":None}
         decision=v4.compare(rows[0],rows[-1])
+        if not decision.startswith("BLOCK") and any(r.flag for r in rows):
+            return {"decision":"REVIEW_REQUIRED","reason":"SOURCE_FLAG_IN_INTERVAL","periods":[start,end],"change":None}
         return {"decision":"BLOCK" if decision.startswith("BLOCK") else "REVIEW_REQUIRED","reason":decision,"periods":[start,end],"change":None}
 
     def point(self,source,sid,period):
@@ -297,16 +297,22 @@ def main():
     ap=argparse.ArgumentParser()
     ap.add_argument("--live",action="store_true")
     ap.add_argument("--port",type=int,default=8765)
+    ap.add_argument("--vault",help="Use only approved vault snapshots, pinned for this process")
     ap.add_argument("--private-db")
     ap.add_argument("--private-sha")
     args=ap.parse_args()
     if bool(args.private_db)!=bool(args.private_sha):ap.error("--private-db and --private-sha must be supplied together")
+    if args.vault and args.live:ap.error("--vault and --live are mutually exclusive")
     private=None
     if args.private_db:
         from .private_api import PrivateRoutes
         private=PrivateRoutes(args.private_db,args.private_sha)
     t=time.perf_counter()
-    server=ThreadingHTTPServer(("127.0.0.1",args.port),make_handler(LazyExplorer(live=args.live),private))
+    if args.vault:
+        from .active_catalog import VaultExplorer
+        explorer=VaultExplorer(args.vault)
+    else:explorer=LazyExplorer(live=args.live)
+    server=ThreadingHTTPServer(("127.0.0.1",args.port),make_handler(explorer,private))
     print(f"Octave Lab local : http://127.0.0.1:{server.server_port} | prêt en {time.perf_counter()-t:.2f}s",flush=True)
     try:
         server.serve_forever()
