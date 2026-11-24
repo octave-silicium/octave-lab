@@ -1,0 +1,151 @@
+{
+  "version": "0.1",
+  "language": "fr",
+  "status": "INITIAL_INTERNAL_NOT_UI_VALIDATED",
+  "entries": {
+    "arrivals": {
+      "label": "Dossiers arrivés",
+      "definition": "Nombre de dossiers entrés pendant la période.",
+      "unit": "dossiers",
+      "caution": "Ne compte pas les dossiers arrivés après la fin de la simulation.",
+      "technical_name": "arrivals",
+      "method_ref": "docs/G3-EVENTS.md"
+    },
+    "completed_cases": {
+      "label": "Dossiers terminés",
+      "definition": "Dossiers dont toutes les opérations prévues sont terminées.",
+      "unit": "dossiers",
+      "caution": "Un dossier terminé peut être incorrect.",
+      "technical_name": "completed_cases",
+      "method_ref": "docs/G3-EVENTS.md"
+    },
+    "correct_completed_cases": {
+      "label": "Dossiers terminés correctement",
+      "definition": "Dossiers terminés avec un résultat considéré correct dans le scénario.",
+      "unit": "dossiers",
+      "caution": "La qualité est supposée, non mesurée.",
+      "technical_name": "correct_completed_cases",
+      "method_ref": "docs/G3-EVENTS.md"
+    },
+    "unfinished_cases": {
+      "label": "Dossiers non terminés",
+      "definition": "Dossiers encore en attente ou en traitement à la fin de la période.",
+      "unit": "dossiers",
+      "caution": "Ce ne sont pas nécessairement des dossiers perdus.",
+      "technical_name": "unfinished_cases",
+      "method_ref": "docs/G3-EVENTS.md"
+    },
+    "waiting_cases": {
+      "label": "Dossiers en attente",
+      "definition": "Dossiers non terminés qui attendent une ressource.",
+      "unit": "dossiers",
+      "caution": "Ne comprend pas ceux en traitement.",
+      "technical_name": "waiting_cases",
+      "method_ref": "docs/G3-EVENTS.md"
+    },
+    "in_service_cases": {
+      "label": "Dossiers en cours de traitement",
+      "definition": "Dossiers dont une opération est en cours à la fin de la période.",
+      "unit": "dossiers",
+      "caution": "Ne comprend pas ceux en attente.",
+      "technical_name": "in_service_cases",
+      "method_ref": "docs/G3-EVENTS.md"
+    },
+    "quality_completed": {
+      "label": "Part des dossiers terminés correctement",
+      "definition": "Part correcte parmi les seuls dossiers terminés.",
+      "unit": "fraction",
+      "caution": "Les dossiers inachevés sont exclus ; attention au biais de sélection.",
+      "technical_name": "quality_completed",
+      "method_ref": "docs/G3-EVENTS.md"
+    },
+    "quality_assigned_cohort": {
+      "label": "Part correcte supposée sur tous les dossiers",
+      "definition": "Part des résultats corrects assignés à l'ensemble des dossiers du scénario.",
+      "unit": "fraction",
+      "caution": "Hypothèse de simulation, pas taux de qualité mesuré.",
+      "technical_name": "quality_assigned_cohort",
+      "method_ref": "docs/G3-EVENTS.md"
+    },
+    "human_service_seconds": {
+      "label": "Temps humain consacré aux opérations",
+      "definition": "Somme du temps de service des ressources humaines sur la période.",
+      "unit": "secondes-personnes",
+      "caution": "Ne mesure ni les salaires, ni les emplois, ni le temps calendaire.",
+      "technical_name": "human_service_seconds",
+      "method_ref": "docs/G3-EVENTS.md"
+    },
+    "mean_completed_elapsed_seconds": {
+      "label": "Délai moyen des dossiers terminés",
+      "definition": "Temps moyen entre l'arrivée et la fin, attente comprise, parmi les dossiers terminés.",
+      "unit": "secondes",
+      "caution": "Ne représente pas les dossiers non terminés.",
+      "technical_name": "mean_completed_elapsed_seconds",
+      "method_ref": "docs/G3-EVENTS.md"
+    },
+    "p90_completed_elapsed_seconds": {
+      "label": "Délai sous lequel 90 % des dossiers terminés aboutissent",
+      "definition": "Valeur au rang correspondant à 90 % des délais des dossiers terminés.",
+      "unit": "secondes",
+      "caution": "Percentile empirique du scénario, pas probabilité future.",
+      "technical_name": "p90_completed_elapsed_seconds",
+      "method_ref": "docs/G3-EVENTS.md"
+    },
+    "total_wait_case_seconds": {
+      "label": "Temps d'attente cumulé des dossiers",
+      "definition": "Somme des temps passés à attendre, y compris pour les dossiers non terminés jusqu'à la fin.",
+      "unit": "secondes-dossiers",
+      "caution": "Plusieurs dossiers peuvent attendre en même temps.",
+      "technical_name": "total_wait_case_seconds",
+      "method_ref": "docs/G3-EVENTS.md"
+    },
+    "time_weighted_mean_cases_in_system": {
+      "label": "Nombre moyen de dossiers en attente ou en cours",
+      "definition": "Temps total passé par les dossiers dans le système divisé par la durée de la période.",
+      "unit": "dossiers",
+      "caution": "Moyenne temporelle sur une période finie, pas une hypothèse de régime stable.",
+      "technical_name": "time_weighted_mean_cases_in_system",
+      "method_ref": "docs/G3-EVENTS.md"
+    },
+    "planned_rework_executions": {
+      "label": "Reprises prévues",
+      "definition": "Nombre de répétitions d'étapes explicitement programmées dans les scénarios.",
+      "unit": "reprises",
+      "caution": "Ne signifie pas que toutes les reprises ont effectivement commencé.",
+      "technical_name": "planned_rework_executions",
+      "method_ref": "docs/G3-EVENTS.md"
+    },
+    "rework_visits_started": {
+      "label": "Opérations de reprise commencées",
+      "definition": "Nombre d'utilisations de ressources associées aux reprises qui ont commencé avant la fin.",
+      "unit": "opérations",
+      "caution": "Une reprise peut comporter plusieurs opérations.",
+      "technical_name": "rework_visits_started",
+      "method_ref": "docs/G3-EVENTS.md"
+    },
+    "capacity_upper_bound_cases": {
+      "label": "Capacité maximale théorique",
+      "definition": "Plafond de dossiers traitables selon les ressources et les hypothèses de charge.",
+      "unit": "dossiers par période",
+      "caution": "Ne garantit pas le volume réellement terminé.",
+      "technical_name": "capacity_upper_bound_cases",
+      "method_ref": "docs/G3-OPERATIONS.md"
+    },
+    "processed_cases_envelope": {
+      "label": "Volume théoriquement traitable",
+      "definition": "Minimum entre demande et capacité dans le modèle de flux moyen.",
+      "unit": "dossiers par période",
+      "caution": "Ce résultat n'est pas un décompte de dossiers terminés.",
+      "technical_name": "processed_cases_envelope",
+      "method_ref": "docs/G3-OPERATIONS.md"
+    },
+    "binding_resources": {
+      "label": "Ressources limitant la capacité",
+      "definition": "Ressources dont la charge limite le volume maximal.",
+      "unit": "ressources",
+      "caution": "Un goulot peut changer avec la charge ou la réorganisation.",
+      "technical_name": "binding_resources",
+      "method_ref": "docs/G3-OPERATIONS.md"
+    }
+  }
+}
