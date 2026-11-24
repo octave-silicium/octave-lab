@@ -42,8 +42,14 @@ class EscoGraph:
         for key,kind,target in (("occupations_fr","occupation",self.occupations),("skills_fr","skill",self.skills)):
             for n,r in rows(files[key],{"conceptUri","preferredLabel"}):
                 uri=concept(r["conceptUri"],kind)
-                if uri in target or not r["preferredLabel"].strip():raise ValueError("CONCEPT_DUPLICATE_OR_EMPTY")
-                target[uri]={"id":f"esco:{ESCO_VERSION}:{uri}","uri":uri,"kind":kind,"label":r["preferredLabel"],"description":r.get("description",""),"native_type":r.get("skillType",""),"source":key,"row":n,"status":"SOURCE_DOCUMENTED","language":"fr"}
+                if not r["preferredLabel"].strip():raise ValueError("CONCEPT_EMPTY")
+                metadata={k:v for k,v in r.items() if k!="modifiedDate"}
+                revision={"row":n,"modifiedDate":r.get("modifiedDate","")}
+                if uri in target:
+                    if target[uri]["metadata"]!=metadata:raise ValueError("CONCEPT_CONFLICT")
+                    target[uri]["revisions"].append(revision)
+                    continue
+                target[uri]={"id":f"esco:{ESCO_VERSION}:{uri}","uri":uri,"kind":kind,"label":r["preferredLabel"],"description":r.get("description",""),"native_type":r.get("skillType",""),"source":key,"row":n,"status":"SOURCE_DOCUMENTED","language":"fr","metadata":metadata,"revisions":[revision]}
         for n,r in rows(files["occupationSkillRelations"],{"occupationUri","skillUri","relationType"}):
             a,b=concept(r["occupationUri"],"occupation"),concept(r["skillUri"],"skill")
             typ=r["relationType"]

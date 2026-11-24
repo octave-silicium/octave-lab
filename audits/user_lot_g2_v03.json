@@ -1,0 +1,77 @@
+{
+  "status": "LOCAL_EXECUTION_VERIFIED",
+  "date": "2026-11-24",
+  "code_sha256": "a04e4ef421e647b8850cf182c5ab3e8d0607e478360b14a80085628213068f12",
+  "sqlite_sha256": "ce037a2277cf88452b10f4153ae66f19910cb096d45dded05951a7773ba6220c",
+  "inputs": {
+    "esco_fr": "84fe49774fad90bdfd27d080440ffb1fdef1fbd62939f6436d2fc21f4d58d4e8",
+    "esco_en": "f9761b0b52be1828b38a3e5e0ae59a93a7b0ce358bc800f52f57a8b002adeb3e",
+    "esco_delta": "d6fae397cb49ef6f21665369100e162e567c1c7339095733808fac009dd829c9",
+    "fap": "1c09015d52a16249e58cea9ec10dd597b391e3250145a32a2a551764e6f97fd0",
+    "mmo_q": "bece71e53408056ce1c1b7f1d95f39ae491dc945c82caa760abe49eead0dfb92",
+    "mmo_a": "5fc7008ad02322a5bd708f9cfc8f06ed24fce81a36c8ae6a6c59356024f4c3cf",
+    "mmo_method": "ad9e18d9e6befb8129c978978263aa51ed1da2abd94c836f3c13d7ccd503c825"
+  },
+  "esco": {
+    "occupation": 3039,
+    "skill": 13939,
+    "relations": 126051,
+    "essential": 67600,
+    "optional": 58451,
+    "duplicate_uri_only_modified_date": {
+      "occupation": 4,
+      "skill": 21
+    },
+    "languages_match": true,
+    "delta_rows": 163559,
+    "delta_applied": false
+  },
+  "fap": {
+    "tree_nodes": 515,
+    "levels": [
+      22,
+      86,
+      228,
+      341
+    ],
+    "rome_qualif_rows": 5320,
+    "pcs_label_qualif_rows": 110180,
+    "label_mismatch": 95,
+    "missing_rome": 3130,
+    "pcs_probabilities": 3092,
+    "pcs_codes_per_level": 311,
+    "probability_max_abs_sum_deviation": "1.509E-15"
+  },
+  "mmo": {
+    "cells": 128010,
+    "numeric": 123075,
+    "missing": 4935,
+    "restricted_range_anomaly": 1,
+    "displayable_pending_review": 123074,
+    "aggregate_quarterly": {
+      "rows": 2072,
+      "measures": 26,
+      "start": "1993-T1",
+      "end": "2026-T2"
+    },
+    "detailed_quarterly": {
+      "rows": 570,
+      "measures": 20,
+      "start": "2017-T1",
+      "end": "2026-T2"
+    },
+    "annual": {
+      "rows": 2413,
+      "measures": 26,
+      "start": "1993",
+      "end": "2025"
+    }
+  },
+  "sqlite_checks": {
+    "integrity": "ok",
+    "foreign_keys": "ok",
+    "restricted_mmo_masked": true,
+    "esco_profile_fr_rows": 126051
+  },
+  "limitations": "Local private ingestion of user-supplied files. Release not independently authenticated, no production vault, no live refresh, no complete ESCO taxonomy or all supplemental FAP workbook tables integrated; no crosswalk validation or causality. SQLite and standalone importer supplied in chat; not in public GitHub."
+}

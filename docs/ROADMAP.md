@@ -38,3 +38,5 @@ VALIDÉ = décision approuvée ; IMPLÉMENTÉ = code présent ; VÉRIFIÉ = preu
 
 ## Actualisation des sources
 [DATA-REFRESH-001](DATA-REFRESH-001.md) : maximiser l'automatisation licite ; registre de fraîcheur, validation et versionnement à implémenter. ROME ZIP CSV/JSON récupérés automatiquement (parsing à faire), ESCO ZIP et Dares protégés en file manuelle.
+
+G2 v0.3 : [lot utilisateur importé localement](G2-LOCAL-INTAKE.md), ESCO bilingue, FAP natif et probabilités PCS, MMO ; G-M0 partiel, pas de raccordement à l'API ni de publication.

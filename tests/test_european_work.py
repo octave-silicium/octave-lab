@@ -12,6 +12,14 @@ class EuropeanTests(unittest.TestCase):
     def test_native_not_task(self):
         g=EscoGraph(files(),{});p=g.profile(O)
         self.assertEqual(len(p["skills"]),1);self.assertEqual(p["tasks"],[]);self.assertEqual(p["crosswalks"],[])
+    def test_repeated_uri_only_dates(self):
+        f=files()
+        f["occupations_fr"]=f"conceptUri,preferredLabel,modifiedDate\n{O},Métier fictif,2025-01-01\n{O},Métier fictif,2025-12-01\n".encode()
+        g=EscoGraph(f,{})
+        self.assertEqual(g.audit()["occupations"],1)
+        self.assertEqual(len(g.profile(O)["occupation"]["revisions"]),2)
+        f["occupations_fr"]=f"conceptUri,preferredLabel,modifiedDate\n{O},Métier fictif,2025-01-01\n{O},Autre,2025-12-01\n".encode()
+        with self.assertRaisesRegex(ValueError,"CONCEPT_CONFLICT"):EscoGraph(f,{})
     def test_dangling(self):
         f=files();f["occupationSkillRelations"]=f["occupationSkillRelations"].replace(b"22222222",b"33333333")
         with self.assertRaisesRegex(ValueError,"DANGLING"):EscoGraph(f,{})
