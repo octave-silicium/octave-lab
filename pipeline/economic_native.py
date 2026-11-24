@@ -10,8 +10,8 @@ def bounds(p,f):
     m=int(p[5:7]) if f=="M" else (int(p[-1])-1)*3+1
     end=m if f=="M" else m+2
     return date(y,m,1).isoformat(),date(y,end,monthrange(y,end)[1]).isoformat()
-def from_live_record(r):
-    require(isinstance(r,v4.Record) and r.persistence=="LIVE_TRANSIENT","LIVE_NATIVE_REQUIRED")
+def from_record(r):
+    require(isinstance(r,v4.Record),"NATIVE_RECORD_REQUIRED")
     require(r.quality[0]=="DESCRIPTIVE_ONLY" and r.value is not None,"NATIVE_QUALITY_BLOCKED")
     stamp=datetime.fromisoformat(r.vintage)
     require(stamp.tzinfo is not None,"VINTAGE_TIMEZONE")
@@ -20,8 +20,27 @@ def from_live_record(r):
     dims=dict(r.dimensions);start,end=bounds(r.period,v4.FREQ[r.source])
     scope=Scope("Source-native: "+canonical(dims).decode(),dims.get("geo",dims.get("country","SOURCE_NATIVE_GEOGRAPHY_UNQUALIFIED")),r.source+" native version unqualified",start,end,"NOT_CONVERTED")
     ev=Evidence("native:evidence:"+ident,1,"NATIVE_SOURCE",r.source_url,r.locator,r.sha256,r.vintage,stamp.date().isoformat(),None,"INTERNAL_ONLY","DESCRIPTIVE_ONLY")
-    c=Claim("native:claim:"+ident,1,"OBSERVATION",r.source+" / "+r.measure+" / "+r.period,"Descriptive input only",scope,Quantity(r.value,"NATIVE",r.unit),(ev.key,),(),"Native record; no conversion or crosswalk; lineage "+native["lineage"]+"; license "+native["license"],"Source native definition; publication and comparative rights not qualified","No causal attribution","Re-evaluate on revised source vintage",())
+    c=Claim("native:claim:"+ident,1,"OBSERVATION",r.source+" / "+r.measure+" / "+r.period,"Descriptive input only",scope,Quantity(r.value,"NATIVE",r.unit),(ev.key,),(),"Native record; no conversion or crosswalk; storage "+r.persistence+"; lineage "+native["lineage"]+"; license "+native["license"],"Source native definition; publication and comparative rights not qualified","No causal attribution","Re-evaluate on revised source vintage",())
     return ev,c
+def from_live_record(r):
+    require(isinstance(r,v4.Record) and r.persistence=="LIVE_TRANSIENT","LIVE_NATIVE_REQUIRED")
+    return from_record(r)
+
+def from_active_catalog(active, source):
+    # ActiveCatalog revalidates the bytes and pins before parsing; no fallback.
+    from .active_catalog import ActiveCatalog
+    require(isinstance(active,ActiveCatalog),"ACTIVE_CATALOG_REQUIRED")
+    catalog=active.load(source)
+    h,stamp=active.pins[source]
+    admitted=[];blocked=0
+    for r in catalog.by[source]:
+        require((r.sha256,r.vintage)==(h,stamp),"ACTIVE_PIN_MISMATCH")
+        if r.quality[0]!="DESCRIPTIVE_ONLY" or r.value is None:
+            blocked+=1
+            continue
+        admitted.append(from_record(r))
+    return admitted,{"source":source,"sha256":h,"vintage":stamp,"admitted":len(admitted),"blocked":blocked,"storage":"APPROVED_SESSION_PIN","publication":"BLOCK_PUBLICATION"}
+
 def audit():
     from datetime import timezone
     from . import semantic_v3 as v3

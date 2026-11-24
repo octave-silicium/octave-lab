@@ -5,7 +5,7 @@ on:
     branches: [main]
     paths:
       - 'pipeline/economic_*.py'
-      - 'tests/test_economic_core.py'
+      - 'tests/test_economic*.py'
       - 'governance/economic_mechanisms_v2.json'
       - 'governance/investigation_result_v1.json'
       - 'governance/multi_order_prospective_v1.json'
@@ -23,3 +23,4 @@ jobs:
           python-version: '3.11'
       - run: python -m unittest discover -s tests -v
       - run: python -m pipeline.economic_native
+      - run: python -m pipeline.economic_bridge_audit

@@ -70,3 +70,6 @@ La cible intégrale validée est [ARCH-002](ARCH-002.md) et son [registre machin
 
 ## G3.1 v0.1 — Economic Core
 [Documentation](G3-ECONOMIC-CORE.md), [audit](../audits/economic_core_v01_verified.json), 224 tests et pont G1 Eurostat NACE vérifiés (12 400 cellules, 6 593 admises, 5 807 bloquées). Contrats versionnés, graphe de provenance, 110 entrées de couverture et chemins structurels; aucun calcul d'effet ni validation causale. E-G0 partiel. Suite : compléter jonctions et contrats minimaux puis G3.2 transformation opérationnelle, tranche verticale; G2 indépendant, données et déploiement restent ouverts.
+
+## G3.1 v0.2 — ponts et calculs conditionnels
+[Documentation](G3-ECONOMIC-BRIDGE.md) : implémentation pont archives/vault, profil O*NET/W001 candidat, cinq opérations conditionnelles et manifeste interne reproductible. Recette CI à confirmer; aucun gate promu. Suite : compléter PROSPECT-001 et lancer G3.2 sur W001.

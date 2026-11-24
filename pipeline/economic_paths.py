@@ -36,7 +36,7 @@ def trace(graph,scenario,path):
         e=graph.assertions[key]
         require(e.origin==current,"PATH_DISCONTINUITY")
         # Accounting or classification edges aren't causal transitions.
-        require(e.relation in {"SCENARIO","CAUSAL_HYPOTHESIS","DEPENDENCY"},"NON_TRANSMISSION_EDGE")
+        require(e.relation in {"SCENARIO","CAUSAL_HYPOTHESIS","DEPENDENCY"} and not e.condition.startswith("NON_TRANSMISSION:"),"NON_TRANSMISSION_EDGE")
         order+=1
         elapsed=None if elapsed is None or e.delay_steps is None else elapsed+e.delay_steps
         if e.target in visited:
