@@ -1,0 +1,32 @@
+name: OCTAVE LAB | S1 v0.3 live source contracts
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'pipeline/semantic_v3.py'
+      - 'tests/test_semantic_v3.py'
+      - '.github/workflows/semantic-v3.yml'
+permissions:
+  contents: read
+jobs:
+  live:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Full repository test suite
+        run: python -m unittest discover -s tests -v
+      - name: Internal live ingestion and coverage (metadata only)
+        run: |
+          python -m pipeline.semantic_v3 | tee semantic_v3_audit.json
+          python -c 'import json; d=json.load(open("semantic_v3_audit.json")); assert len(d["sources"])==5 and d["raw_or_derived_values_published"] is False and d["cross_source_join_permitted"] is False'
+        shell: bash
+      - uses: actions/upload-artifact@v4
+        with:
+          name: semantic-v3-metadata
+          path: semantic_v3_audit.json
+          if-no-files-found: error
