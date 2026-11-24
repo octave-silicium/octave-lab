@@ -1,0 +1,32 @@
+name: OCTAVE LAB | G1 engine benchmark
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'pipeline/explorer.py'
+      - 'tests/test_explorer.py'
+      - 'pipeline/benchmark_explorer.py'
+      - '.github/workflows/explorer-engine.yml'
+permissions:
+  contents: read
+jobs:
+  engine:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Entire Python test suite
+        run: python -m unittest discover -s tests -v
+      - name: Benchmark archive catalog (metadata only)
+        run: |
+          python -m pipeline.benchmark_explorer | tee explorer_engine_audit.json
+          python -c 'import json; d=json.load(open("explorer_engine_audit.json")); assert d["source_count"]==4 and d["values_emitted"] is False'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: explorer-engine-audit
+          path: explorer_engine_audit.json
+          if-no-files-found: error
