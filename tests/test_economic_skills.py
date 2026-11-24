@@ -6,7 +6,7 @@ from pipeline.economic_skills_pilot import fixture,audit
 from pipeline.economic_physical_pilot import make,TASK_PREFIX
 class Fake:
     manifest={"task_statements":{"url":"fixture","sha256":"a"*64}}
-    def profile(self,code):return {"tasks":[{"task":{"label":TASK_PREFIX,"source":"task_statements","source_row":2,"id":"fixture:physical"}]}
+    def profile(self,code):return {"tasks":[{"task":{"label":TASK_PREFIX,"source":"task_statements","source_row":2,"id":"fixture:physical"}}]}
 class SkillsTests(unittest.TestCase):
     def setUp(self):self.p,_=make(Fake());self.ref,self.phases,self.b,self.alts=fixture(self.p)
     def ev(self,x):return evaluate(self.p,self.ref,self.phases,*x)["result"]

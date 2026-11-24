@@ -1,0 +1,63 @@
+{
+  "id": "P0-JOLTS-20261103",
+  "release": "USDL-26-1630",
+  "release_date": "2026-11-03",
+  "retrieved": "2026-11-25",
+  "url": "https://www.bls.gov/news.release/archives/jolts_11032026.htm",
+  "status": "MANUAL_SOURCE_TRANSCRIPTION_PENDING_RAW_BYTE_PIN_AND_INGESTION",
+  "population": "US total nonfarm establishments, seasonally adjusted",
+  "units": "thousands of payroll events; openings are stock on last business day, other series are monthly flows",
+  "series": {
+    "openings": "JTSJOL",
+    "hires": "JTSHIL",
+    "separations": "JTSTSL",
+    "quits": "JTSQUL",
+    "layoffs_discharges": "JTSLDL",
+    "other": "JTSOSL"
+  },
+  "table_locators": "Table A, Tables 4, 5, 6, Total rows",
+  "rows": [
+    {
+      "period": "2025-09",
+      "openings": 7169,
+      "hires": 5244,
+      "separations": 5161,
+      "quits": 2990,
+      "layoffs_discharges": 1816,
+      "other": 356,
+      "preliminary": false,
+      "hires_minus_separations": 83,
+      "separations_component_residual": -1
+    },
+    {
+      "period": "2026-08",
+      "openings": 7190,
+      "hires": 5271,
+      "separations": 5175,
+      "quits": 3044,
+      "layoffs_discharges": 1768,
+      "other": 363,
+      "preliminary": false,
+      "hires_minus_separations": 96,
+      "separations_component_residual": 0
+    },
+    {
+      "period": "2026-09",
+      "openings": 7523,
+      "hires": 5402,
+      "separations": 5319,
+      "quits": 3365,
+      "layoffs_discharges": 1641,
+      "other": 313,
+      "preliminary": true,
+      "hires_minus_separations": 83,
+      "separations_component_residual": 0
+    }
+  ],
+  "limitations": "Source values rounded to thousands; residual of -1 in Sept 2025 compatible with rounding, not a forced correction. Revisions, sample error and CES alignment; flows are events, not distinct people or employment stock identity across surveys. No direct measure of frozen hiring or causal AI effect. Historical raw bytes not archived, no automated refresh or active catalog admission. Next obtain vintage-pinned full series and compare with payroll stocks, rates and sector breakdowns.",
+  "methods": [
+    "https://www.bls.gov/jlt/jltfaq.htm",
+    "https://www.bls.gov/jlt/methodologyimprovement.htm",
+    "https://alfred.stlouisfed.org/release?rid=192"
+  ]
+}
