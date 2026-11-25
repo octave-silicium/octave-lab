@@ -29,6 +29,11 @@ jobs:
           python-version: '3.12'
       - run: python -m pip install openpyxl==3.1.5
       - run: python -m pipeline.acquire_financial_2022
+      - name: Reconcile pinned financial accounts
+        run: |
+          python -c 'from pathlib import Path; from pipeline import acquire_tes_income as a; a.OUT=Path("financial-2022"); a.get("tee.xlsx","https://www.insee.fr/fr/statistiques/fichier/8988861/TEE_2022_fr.xlsx")'
+          python -m pipeline.audit_financial_2022 financial-2022 > financial-2022/audit.json
+          python -c 'import json; a=json.load(open("financial-2022/audit.json")); print(json.dumps({"status":a["status"],"observations":a["observations"],"accounts":a["accounts"],"household_equity":a["household_equity"],"identities":len(a["identities"]),"missing_identities":len(a["missing_identities"]),"unresolved":[r for r in a["identities"] if r["status"]=="UNRESOLVED_RESIDUAL"],"comparisons":len(a["comparisons"]),"missing_comparisons":len(a["missing_comparisons"]),"max_cross_difference":max(abs(float(r["difference"])) for r in a["comparisons"])},indent=2))'
       - uses: actions/upload-artifact@v4
         if: always()
         with:
