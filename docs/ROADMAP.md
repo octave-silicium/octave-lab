@@ -132,3 +132,6 @@ Décision utilisateur : [UX-001](UX-001.md) et [RESULT-001](RESULT-001.md) compl
 
 ## AUDIT-TRANSVERSAL-001 — Revue avant reprise G4 v0.7g (25/11/2026)
 [Audit candidat](AUDIT-TRANSVERSAL-001.md) : 27 exigences de couverture AC01–AC27, rattachements M/LIM, contre-exemples, recettes et sources candidates. Ne pas confondre les tests locaux avec validation de l'économie couplée. Reprise proposée après revue : état commun et diversité conjointe des profils financiers (dont dette nulle et substitution des financements), qualification des contreparties trimestrielles, puis raccord crédit-capital. Maintenir P0 empirique, G2 indépendant, validation produit et LIMITATIONS-001 v1.0.10. Aucune clôture ni gate promu, 6 moteurs conservés.
+
+## Décision utilisateur validée — AUDIT-TRANSVERSAL-001
+Le 25/11/2026, validation des 27 exigences et de l'ordre de reprise. [Registre canonique](../governance/transversal_enrichment_v1.json). Prochain jalon : contrat économique commun état/acteurs/temps/contreparties, profils financiers et règles de couverture adversariale, avant G4 v0.7g. P0 empirique/G2 indépendant/validation produit restent en parallèle. Pas de nouveau moteur, de clôture de limitation ni de promotion de gate.
