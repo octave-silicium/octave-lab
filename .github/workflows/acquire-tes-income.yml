@@ -4,6 +4,9 @@ on:
     paths:
       - 'pipeline/acquire_tes_income.py'
       - 'pipeline/audit_tes_income.py'
+      - 'pipeline/economic_sector_structural.py'
+      - 'pipeline/audit_tes_structural.py'
+      - 'tests/test_economic_sector_structural.py'
       - 'pipeline/economic_income_bridge.py'
       - 'tests/test_economic_income_bridge.py'
       - '.github/workflows/acquire-tes-income.yml'
@@ -28,6 +31,11 @@ jobs:
           python -m unittest discover -s tests -p test_economic_income_bridge.py -v
           python -m pipeline.audit_tes_income tes-income/standard.xlsx tes-income/symmetric/TES_symetrique_A38_2022DEF_fr.xlsx tes-income/eurostat.json > tes-income/audit.json
           cat tes-income/audit.json
+      - name: Verify structural requirements and conditional scenarios
+        run: |
+          python -m unittest discover -s tests -p test_economic_sector_structural.py -v
+          python -m pipeline.audit_tes_structural tes-income/standard.xlsx tes-income/symmetric/TES_symetrique_A38_2022DEF_fr.xlsx tes-income/eurostat.json > tes-income/structural-audit.json
+          cat tes-income/structural-audit.json
       - name: Preserve raw and profile
         uses: actions/upload-artifact@v4
         with:
