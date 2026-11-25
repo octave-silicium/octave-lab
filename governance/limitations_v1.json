@@ -1,6 +1,6 @@
 {
   "id": "LIMITATIONS-001",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "date": "2026-11-25",
   "baseline_commit": "5bd37a858e384fdf3a159564975623b8ac957663",
   "status": "INITIAL_CONSOLIDATION_REVIEW_PENDING",
@@ -848,9 +848,16 @@
           "path": "audits/insee_capital_2022_verified.json",
           "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45544005700",
           "scope": "FBCF/CCF et stocks nets/bruts documentés aux prix de référence statistique; aucune conversion en paramètres VAN ou dépréciation individuelle. Raccord entreprise et financement ouverts."
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7c",
+          "path": "audits/insee_capital_changes_2022_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45544771040",
+          "scope": "Variation de valeur patrimoniale décomposée; distinction CCF, réévaluation et autres changements. Pas de dépréciation individuelle, valeur terminale ou financement entreprise calibrés."
         }
       ],
-      "remaining": "FBCF/CCF et stocks nets/bruts documentés aux prix de référence statistique; aucune conversion en paramètres VAN ou dépréciation individuelle. Raccord entreprise et financement ouverts."
+      "remaining": "Variation de valeur patrimoniale décomposée; distinction CCF, réévaluation et autres changements. Pas de dépréciation individuelle, valeur terminale ou financement entreprise calibrés."
     },
     {
       "id": "LIM-F05",
@@ -1017,9 +1024,16 @@
           "path": "audits/insee_capital_2022_verified.json",
           "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45544005700",
           "scope": "Capital Insee 1959–2025, 2022 épinglé, 160100 observations, 450 rapprochements en coût de remplacement exacts; volumes chaînés non réconciliés (1/370 exact, écart maximum 416941 M€), source Eurostat détaillée HTTP 404 contournée par nama_10_a64_p5. Archive brute + audit durable, admission bloquée."
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7c",
+          "path": "audits/insee_capital_changes_2022_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45544771040",
+          "scope": "Reconstruction Eurostat 370 séries 2020–22, écart max 0,05 M€, et 740 comparaisons croissance. Réancrage Insee 367/370 améliorées, médiane 33,7→0,543 M€, max après 2337,18 M€, écart croissance max 0,70243 point. Origine précise des conventions non démontrée et divergences restantes non résolues; aucune admission."
         }
       ],
-      "remaining": "Capital Insee 1959–2025, 2022 épinglé, 160100 observations, 450 rapprochements en coût de remplacement exacts; volumes chaînés non réconciliés (1/370 exact, écart maximum 416941 M€), source Eurostat détaillée HTTP 404 contournée par nama_10_a64_p5. Archive brute + audit durable, admission bloquée."
+      "remaining": "Reconstruction Eurostat 370 séries 2020–22, écart max 0,05 M€, et 740 comparaisons croissance. Réancrage Insee 367/370 améliorées, médiane 33,7→0,543 M€, max après 2337,18 M€, écart croissance max 0,70243 point. Origine précise des conventions non démontrée et divergences restantes non résolues; aucune admission."
     },
     {
       "id": "LIM-S02",
@@ -1124,9 +1138,16 @@
           "path": "audits/insee_capital_2022_verified.json",
           "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45544005700",
           "scope": "Stocks de capital aux coûts de remplacement bruts/nets, FBCF/CCF observés; 2022 totaux TEE concordants, aucune assimilation historique/physique. Les séries volume et raccords prix spécifiques restent à qualifier."
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7c",
+          "path": "audits/insee_capital_changes_2022_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45544771040",
+          "scope": "73 comptes de variation patrimoine secteur/actif, flux, CCF, réévaluation et résidu séparés. 13 résidus >3 M€, autres changements non renseignés; national −117 M€, pas d'imputation. Raccord stocks et 81 comparaisons de flux, méthode des prix et écarts restants ouverts."
         }
       ],
-      "remaining": "Stocks de capital aux coûts de remplacement bruts/nets, FBCF/CCF observés; 2022 totaux TEE concordants, aucune assimilation historique/physique. Les séries volume et raccords prix spécifiques restent à qualifier."
+      "remaining": "73 comptes de variation patrimoine secteur/actif, flux, CCF, réévaluation et résidu séparés. 13 résidus >3 M€, autres changements non renseignés; national −117 M€, pas d'imputation. Raccord stocks et 81 comparaisons de flux, méthode des prix et écarts restants ouverts."
     },
     {
       "id": "LIM-S04",
@@ -1382,9 +1403,16 @@
           "path": "audits/insee_capital_2022_verified.json",
           "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45544005700",
           "scope": "37 branches et stocks par actif, FBCF/CCF, TIC/logiciels/R&D acquis; 656 contrôles brut/net, 5 agrégations exactes. Écarts de volume ouverts, CCF par actif, durées de vie, efficacité, capacités, vintages, investissement importé et financement restent à qualifier."
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7c",
+          "path": "audits/insee_capital_changes_2022_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45544771040",
+          "scope": "FBCF et CCF par actif acquises à l'échelle institutionnelle/nationale; 75 comparaisons par branche et 6 comparaisons FBCF nationale par actif dans CI. Pas de CCF branche×actif, durées de vie, services du capital, capacités, financement ni paramètres IA."
         }
       ],
-      "remaining": "37 branches et stocks par actif, FBCF/CCF, TIC/logiciels/R&D acquis; 656 contrôles brut/net, 5 agrégations exactes. Écarts de volume ouverts, CCF par actif, durées de vie, efficacité, capacités, vintages, investissement importé et financement restent à qualifier."
+      "remaining": "FBCF et CCF par actif acquises à l'échelle institutionnelle/nationale; 75 comparaisons par branche et 6 comparaisons FBCF nationale par actif dans CI. Pas de CCF branche×actif, durées de vie, services du capital, capacités, financement ni paramètres IA."
     },
     {
       "id": "LIM-S10",
@@ -1771,9 +1799,16 @@
           "path": "audits/insee_capital_2022_verified.json",
           "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45544005700",
           "scope": "Actifs fixes produits par branche et catégorie, logements compris; pas de répartition institutionnelle de la propriété, patrimoine et financement conjoints."
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7c",
+          "path": "audits/insee_capital_changes_2022_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45544771040",
+          "scope": "Comptes S1/S11/S12/S13/S14 de patrimoine et variation; S15 non acquis séparément, aucune répartition conjointe branches×institutions×actifs, patrimoine financier et financement non qualifiés dans cette tranche."
         }
       ],
-      "remaining": "Actifs fixes produits par branche et catégorie, logements compris; pas de répartition institutionnelle de la propriété, patrimoine et financement conjoints."
+      "remaining": "Comptes S1/S11/S12/S13/S14 de patrimoine et variation; S15 non acquis séparément, aucune répartition conjointe branches×institutions×actifs, patrimoine financier et financement non qualifiés dans cette tranche."
     },
     {
       "id": "LIM-T01",
@@ -2115,5 +2150,5 @@
     }
   ],
   "dependency_semantics": "Dependencies constrain closure, not parallel development; not a promise of dates. Publication restrictions apply to affected claims, not blanket suppression of safe synthetic demonstrations.",
-  "last_milestone": "G4 v0.7b"
+  "last_milestone": "G4 v0.7c"
 }
