@@ -1,0 +1,35 @@
+{
+  "status": "SYNTHETIC_COMMON_STATE_VERIFIED_NOT_EMPIRICAL",
+  "tested_commit": "5bc7b6c9694bda8ad99f5016a7844d8083022764",
+  "run": 45556107766,
+  "job": 139008424923,
+  "conclusion": "success",
+  "targeted_tests": 13,
+  "test_seconds": 0.028,
+  "artifact": {
+    "id": 14994873903,
+    "digest": "sha256:920fc2c4b17e2bcdbb5e7d26bd002cbdf3377ea20cbefbf71e9cb0dc62670f9d",
+    "expires_at": "2027-02-23T05:48:26Z"
+  },
+  "analytical_pilot_cases": {
+    "cash": [
+      "100"
+    ],
+    "credit_zero_substitution": [
+      "100"
+    ],
+    "competition": [
+      "100",
+      "20"
+    ],
+    "refused": [
+      "0"
+    ]
+  },
+  "general_regression": {
+    "run": 45556107828,
+    "status_at_record": "in_progress"
+  },
+  "qualification": "No empirical or scientific gate promoted",
+  "coverage": "27 AC checked structurally in run_funding; legacy investigations not migrated"
+}
