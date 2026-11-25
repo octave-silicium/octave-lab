@@ -10,7 +10,7 @@ def fixture():
     actors=(Actor("A","FIRM",sector="X"),Actor("S","FIRM",sector="Y"),Actor("K","BANK"),Actor("H","HOUSEHOLD"),Actor("E","EXTERNAL"),Actor("O","INVESTOR"))
     st=State(actors,(Position("DEPOSIT","H","K","100"),Position("DEPOSIT","A","K","100"),Position("DEPOSIT","O","K","100")),0,"quarter","fixture","fixture")
     s=Structure(("X","Y"),((0,0),(0,0)),((0,0),(0,0)),((1,0),(0,1)),(.5,.5),(0,0),(0,0),(.5,.5),(.0001,0),"SYNTHETIC")
-    p=Period(s,(None,None),(("X","Y"),),(1,),"fixture")
+    p=Period(s,(None,None),(("Y",),("X",)),(1,),"fixture")
     a=Asset("machine","X","Y",.0001,.0001,0,0,10,"fixture")
     pr=Project("p1","A","S","K",None,"100","0","0","100",("CASH",),False,3,"fixture")
     o=Investment("p1","machine",1,1,1,"fixture")
