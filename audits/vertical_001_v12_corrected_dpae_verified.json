@@ -1,0 +1,53 @@
+{
+  "study": "VERTICAL-001",
+  "phase": "V1.2",
+  "metadata": {
+    "dataset_id": "dpae-france-entiere-x-na38",
+    "modified": "2026-10-30T07:45:45+00:00",
+    "publisher": "Urssaf Caisse nationale",
+    "notice_sha256": "f9d328ff7adc327dcf08e56932b68ac5ddef0817c23a4bf2cade8217ef987d56",
+    "corrected_private_scope_notice": true
+  },
+  "csv_sha256": "42cd99124b1ef5f0a39afc481c42e70d5adc0fbfb535a7cb53f2653dfd41f549",
+  "scope": "private general scheme excluding temporary agency work, CVS-CJO; declarations not realized hires",
+  "source_notice": "https://www.data.gouv.fr/datasets/declarations-prealables-a-lembauche-france-entiere-x-secteur-na38",
+  "source_dashboard": "https://open.urssaf.fr/explore/dataset/dpae-france-entiere-x-na38/dataviz/",
+  "series_id": "urssaf_dpae_na38_private_corrected_20261030_pinned",
+  "admission": "INTERNAL_DESCRIPTIVE_SAME_VINTAGE_WITH_CAVEATS",
+  "legacy_gate": "UNCHANGED_BLOCK",
+  "publication": "BLOCK_PUBLICATION",
+  "causal_identification": "NOT_IDENTIFIED",
+  "periods": 31,
+  "comparisons": 27,
+  "previously_held_comparisons": 7,
+  "anchor_residual": {
+    "CDI": "0",
+    "CDD de plus d'un mois": "0"
+  },
+  "anchor_component_counts": {
+    "CDI": 37,
+    "CDD de plus d'un mois": 37
+  },
+  "internal_result_sha256": "bb7203f4a79df870f8e65141f3178b412af33e8f8c2e86cc3fb0cf84862f605b",
+  "limitations": [
+    "Publisher confirms statistical corrections and private scope for dataset; no independent microdata correction audit or old/new scope bridge.",
+    "National published dashboard itself compares one and three years. Same release only; no splicing with old data or unrestricted comparability claim.",
+    "Provisional values and revisions, residual biases and sector-specific correction uncertainty remain."
+  ],
+  "ci": {
+    "run": 45678459638,
+    "job": 139432258592,
+    "conclusion": "success",
+    "tested_commit": "f1dc983a990f29d698f7fb275482054d28085ef6",
+    "tests": 14,
+    "new_tests": 3,
+    "seconds": 0.005
+  },
+  "official_anchor": {
+    "period": "2026Q3",
+    "CDI": 1036794,
+    "CDD_over_one_month": 973672,
+    "total": 2010466,
+    "source": "https://open.urssaf.fr/explore/dataset/dpae-france-entiere-x-na38/dataviz/"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-24-v2",
+  "version": "2026-11-25-v3",
   "policy": "A documented change of definition is a comparability gate, not a statistical adjustment coefficient.",
   "events": [
     {
@@ -70,7 +70,20 @@
       "status": "PUBLISHER_WARNING_AND_REVISED_VINTAGE_AUDIT_PENDING",
       "description": "DPAE contract type and duration incorrectly declared since online form change in late March 2025. Official caution for Apr-Sep 2025; do not infer NA38 quarterly trends across affected period without revision review.",
       "action": "BLOCK_PUBLIC_COMPARISONS_ACROSS_AFFECTED_QUARTERS",
-      "source_url": "https://open.urssaf.fr/explore/dataset/dpae-france-entiere-x-na38/"
+      "source_url": "https://open.urssaf.fr/explore/dataset/dpae-france-entiere-x-na38/",
+      "corrected_vintage_exception": {
+        "series_id": "urssaf_dpae_na38_private_corrected_20261030_pinned",
+        "csv_sha256": "42cd99124b1ef5f0a39afc481c42e70d5adc0fbfb535a7cb53f2653dfd41f549",
+        "metadata_sha256": "f9d328ff7adc327dcf08e56932b68ac5ddef0817c23a4bf2cade8217ef987d56",
+        "modified": "2026-10-30T07:45:45+00:00",
+        "scope": "PRIVATE_GENERAL_SCHEME_EXCLUDING_TEMP_AGENCY",
+        "decision": "INTERNAL_DESCRIPTIVE_SAME_VINTAGE_WITH_CAVEATS",
+        "implementation": "pipeline/vertical_v12.py",
+        "proof": "audits/vertical_001_v12_corrected_dpae_verified.json",
+        "legacy_gate": "UNCHANGED_BLOCK",
+        "public_gate": "BLOCK_PUBLICATION",
+        "limitations": "No old/new bridge or independent correction validation; no cross-vintage comparison; new vintage requires review."
+      }
     },
     {
       "id": "DARES-MMO-2023-METHODOLOGY_REVISIONS",
