@@ -1,6 +1,6 @@
 {
   "id": "LIMITATIONS-001",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "date": "2026-11-25",
   "baseline_commit": "5bd37a858e384fdf3a159564975623b8ac957663",
   "status": "INITIAL_CONSOLIDATION_REVIEW_PENDING",
@@ -1086,9 +1086,16 @@
           "path": "audits/insee_tee_2022_verified.json",
           "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45542230203",
           "scope": "TEE 2022: ventilation observée du surplus brut/mixte et de la consommation de capital fixe; 65 identités et 40 comparaisons Eurostat. Écart D1 TES/TEE +0,600 M€ non résolu; raccord ménage prix de base/acquisition agrégé +144626,191 M€, non ventilé."
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.6e",
+          "path": "audits/insee_tee_valuation_2022_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45542924734",
+          "scope": "37 différences nettes ménage par produit observées; 74 identités ressources/emplois exactes; marges commerciales et transport réallouées à somme nulle tous usages. Ventilation ménage spécifique marges/taxes et origine à identifier; écart D1 0,600 M€ conservé."
         }
       ],
-      "remaining": "TEE 2022: ventilation observée du surplus brut/mixte et de la consommation de capital fixe; 65 identités et 40 comparaisons Eurostat. Écart D1 TES/TEE +0,600 M€ non résolu; raccord ménage prix de base/acquisition agrégé +144626,191 M€, non ventilé."
+      "remaining": "37 différences nettes ménage par produit observées; 74 identités ressources/emplois exactes; marges commerciales et transport réallouées à somme nulle tous usages. Ventilation ménage spécifique marges/taxes et origine à identifier; écart D1 0,600 M€ conservé."
     },
     {
       "id": "LIM-S04",
@@ -1417,9 +1424,16 @@
           "path": "audits/insee_tee_2022_verified.json",
           "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45542230203",
           "scope": "Dépense ménages observée 1374,103 Md€, épargne brute 278,669 Md€ et ajustement pension 6,669 Md€ identifiés; panier prix de base 1229,477109 Md€. Pas de raccord par produit, origine ou cohortes, pas d'épargne endogène calibrée."
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.6e",
+          "path": "audits/insee_tee_valuation_2022_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45542924734",
+          "scope": "Passerelle agrégée et par produit aux prix d'acquisition documentée, correction territoriale séparée. Pas d'opérateur de prix d'acquisition endogène par produit/origine ni élasticités estimées."
         }
       ],
-      "remaining": "Dépense ménages observée 1374,103 Md€, épargne brute 278,669 Md€ et ajustement pension 6,669 Md€ identifiés; panier prix de base 1229,477109 Md€. Pas de raccord par produit, origine ou cohortes, pas d'épargne endogène calibrée."
+      "remaining": "Passerelle agrégée et par produit aux prix d'acquisition documentée, correction territoriale séparée. Pas d'opérateur de prix d'acquisition endogène par produit/origine ni élasticités estimées."
     },
     {
       "id": "LIM-S12",
@@ -1480,9 +1494,16 @@
           "path": "audits/insee_tee_2022_verified.json",
           "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45542230203",
           "scope": "Référentiel institutionnel observé acquis et contrôlé; paramètres de la boucle v0.6c restent hypothétiques. Raccord branche→secteur, contraintes et financement non résolus."
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.6e",
+          "path": "audits/insee_tee_valuation_2022_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45542924734",
+          "scope": "Bornes marginales D1 branche→institution et flux institutionnels; absence de matrice identifiée, pas encore de rétroaction sur revenus institutionnels calibrée."
         }
       ],
-      "remaining": "Référentiel institutionnel observé acquis et contrôlé; paramètres de la boucle v0.6c restent hypothétiques. Raccord branche→secteur, contraintes et financement non résolus."
+      "remaining": "Bornes marginales D1 branche→institution et flux institutionnels; absence de matrice identifiée, pas encore de rétroaction sur revenus institutionnels calibrée."
     },
     {
       "id": "LIM-S13",
@@ -1654,9 +1675,16 @@
           "path": "audits/insee_tee_2022_verified.json",
           "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45542230203",
           "scope": "Comptes S11/S12/S13/S14/S15 et S1 acquis, identité capacité de financement et valeur nette contrôlées; reste du monde partiel. Pas de matrice bilatérale de propriété/transferts, ni simulation fiscale, ni décomposition des ménages. Écart comptes financiers/non financiers conservé."
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.6e",
+          "path": "audits/insee_tee_valuation_2022_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45542924734",
+          "scope": "Bornes D1/D4/D42/D5/D61/D62/D7 à partir des marges observées, résidus explicites; propriété bilatérale, patrimoine dynamique, fiscalité et financement non identifiés."
         }
       ],
-      "remaining": "Comptes S11/S12/S13/S14/S15 et S1 acquis, identité capacité de financement et valeur nette contrôlées; reste du monde partiel. Pas de matrice bilatérale de propriété/transferts, ni simulation fiscale, ni décomposition des ménages. Écart comptes financiers/non financiers conservé."
+      "remaining": "Bornes D1/D4/D42/D5/D61/D62/D7 à partir des marges observées, résidus explicites; propriété bilatérale, patrimoine dynamique, fiscalité et financement non identifiés."
     },
     {
       "id": "LIM-T01",
@@ -1998,5 +2026,5 @@
     }
   ],
   "dependency_semantics": "Dependencies constrain closure, not parallel development; not a promise of dates. Publication restrictions apply to affected claims, not blanket suppression of safe synthetic demonstrations.",
-  "last_milestone": "G4 v0.6d"
+  "last_milestone": "G4 v0.6e"
 }
