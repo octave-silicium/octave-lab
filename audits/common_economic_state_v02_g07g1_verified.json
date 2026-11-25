@@ -1,0 +1,384 @@
+{
+  "status": "SYNTHETIC_BRIDGE_VERIFIED_EMPIRICAL_STOCK_DIAGNOSTIC_ONLY",
+  "tested_commit": "dd1e35efcdc381143ac4aaa9abbec55e455b2748",
+  "ci": {
+    "run": 45556914565,
+    "bridge_job": 139011062480,
+    "counterpart_job": 139011062929,
+    "conclusion": "success",
+    "tests": 23,
+    "new_tests": 10
+  },
+  "prior_general": {
+    "run": 45556107828,
+    "conclusion": "success",
+    "tests": 634,
+    "seconds": 37.921
+  },
+  "current_general": {
+    "run": 45556807422,
+    "status": "in_progress",
+    "conclusion": null
+  },
+  "earlier_attempts": [
+    {
+      "run": 45556807485,
+      "bridge": "success",
+      "counterpart": "failure",
+      "reason": "S2 absent from reporting sector axis"
+    },
+    {
+      "run": 45556850978,
+      "bridge": "success",
+      "counterpart": "failure",
+      "reason": "F5 aggregate absent"
+    }
+  ],
+  "synthetic_cases": {
+    "unpaid_bank_claim": "40",
+    "recognition_0_total_delivered": "200",
+    "recognition_half_total_delivered": "100",
+    "recognition_all_with_substitution": "100",
+    "supply_rationed": "100",
+    "no_supply": "0",
+    "note": "Analytical expected values asserted by tests; no empirical parameter estimates."
+  },
+  "quarterly": {
+    "status": "BILATERAL_STOCK_DIAGNOSTIC_NOT_ADMITTED",
+    "sha256": "9c0193a112cf36b819da700210623ec95520bce86522c460e3f360974ad6104a",
+    "updated": "2026-10-28T11:00:00+0100",
+    "stock_code": "STK",
+    "axis": [
+      "S11",
+      "S12",
+      "S13",
+      "S14_S15",
+      "S2"
+    ],
+    "native_sector_codes": {
+      "sector": [
+        "S1",
+        "S11",
+        "S12",
+        "S121_S122_S123",
+        "S121",
+        "S125_S126_S127",
+        "S124",
+        "S125",
+        "S126",
+        "S127",
+        "S128",
+        "S128_S129",
+        "S129",
+        "S13",
+        "S14_S15"
+      ],
+      "sector2": [
+        "S1",
+        "S11",
+        "S12",
+        "S121_S122_S123",
+        "S121",
+        "S125_S126_S127",
+        "S124",
+        "S125",
+        "S126",
+        "S127",
+        "S128",
+        "S128_S129",
+        "S129",
+        "S13",
+        "S14_S15",
+        "S2"
+      ]
+    },
+    "axis_mapping": {
+      "sector": {
+        "S11": [
+          "S11"
+        ],
+        "S12": [
+          "S12"
+        ],
+        "S13": [
+          "S13"
+        ],
+        "S14_S15": [
+          "S14_S15"
+        ],
+        "S2": []
+      },
+      "sector2": {
+        "S11": [
+          "S11"
+        ],
+        "S12": [
+          "S12"
+        ],
+        "S13": [
+          "S13"
+        ],
+        "S14_S15": [
+          "S14_S15"
+        ],
+        "S2": [
+          "S2"
+        ]
+      }
+    },
+    "instrument_mapping": {
+      "F4": [
+        "F4"
+      ],
+      "F5": []
+    },
+    "limitations": [
+      "missing cells not zero; retain mirrors, flags, annual vs quarterly differences, no automatic reconciliation",
+      "F4/F5 stocks, not due debt; aggregate absent requires all disjoint subinstruments (F41/F42 or F51/F52); otherwise unknown; no firm-level topology",
+      "S14/S15 grouped to match quarterly; no overlap with total or subsectors; vintage and coverage discrepancies retained"
+    ],
+    "instruments": {
+      "F4": {
+        "asset_observed": 16,
+        "liability_observed": 0,
+        "mirror_pairs": 0,
+        "mirror_exact": 0,
+        "max_abs_mirror_difference": null,
+        "margin_pairs": 0,
+        "max_abs_margin_difference": null,
+        "margins": [
+          {
+            "sector": "S11",
+            "side": "asset",
+            "quarterly_sum": null,
+            "annual_margin": "2263682.0",
+            "difference": null,
+            "observed_cells": 4
+          },
+          {
+            "sector": "S11",
+            "side": "liability",
+            "quarterly_sum": null,
+            "annual_margin": "3586024.0",
+            "difference": null,
+            "observed_cells": 0
+          },
+          {
+            "sector": "S12",
+            "side": "asset",
+            "quarterly_sum": null,
+            "annual_margin": "4652474.0",
+            "difference": null,
+            "observed_cells": 4
+          },
+          {
+            "sector": "S12",
+            "side": "liability",
+            "quarterly_sum": null,
+            "annual_margin": "688916.0",
+            "difference": null,
+            "observed_cells": 0
+          },
+          {
+            "sector": "S13",
+            "side": "asset",
+            "quarterly_sum": null,
+            "annual_margin": "189429.0",
+            "difference": null,
+            "observed_cells": 4
+          },
+          {
+            "sector": "S13",
+            "side": "liability",
+            "quarterly_sum": null,
+            "annual_margin": "387186.0",
+            "difference": null,
+            "observed_cells": 0
+          },
+          {
+            "sector": "S14_S15",
+            "side": "asset",
+            "quarterly_sum": null,
+            "annual_margin": "10862.0",
+            "difference": null,
+            "observed_cells": 4
+          },
+          {
+            "sector": "S14_S15",
+            "side": "liability",
+            "quarterly_sum": null,
+            "annual_margin": "1747848.0",
+            "difference": null,
+            "observed_cells": 0
+          },
+          {
+            "sector": "S2",
+            "side": "asset",
+            "quarterly_sum": null,
+            "annual_margin": "692071.0",
+            "difference": null,
+            "observed_cells": 0
+          },
+          {
+            "sector": "S2",
+            "side": "liability",
+            "quarterly_sum": null,
+            "annual_margin": "1398544.0",
+            "difference": null,
+            "observed_cells": 0
+          }
+        ],
+        "anchor": {
+          "issuer": "S11",
+          "holder": "S12",
+          "asset": {
+            "value": "1368552.0",
+            "components": [
+              {
+                "sector": "S12",
+                "counterpart": "S11",
+                "instrument": "F4",
+                "value": "1368552.0",
+                "flag": null,
+                "locator": "1253"
+              }
+            ],
+            "axis_available": true
+          },
+          "liability": {
+            "value": null,
+            "components": [
+              {
+                "sector": "S11",
+                "counterpart": "S12",
+                "instrument": "F4",
+                "value": null,
+                "flag": null,
+                "locator": "2273"
+              }
+            ],
+            "axis_available": true
+          },
+          "mirror_difference": null,
+          "annual_bound_lower": "429980.0",
+          "annual_bound_upper": "3586024.0"
+        }
+      },
+      "F5": {
+        "asset_observed": 0,
+        "liability_observed": 0,
+        "mirror_pairs": 0,
+        "mirror_exact": 0,
+        "max_abs_mirror_difference": null,
+        "margin_pairs": 0,
+        "max_abs_margin_difference": null,
+        "margins": [
+          {
+            "sector": "S11",
+            "side": "asset",
+            "quarterly_sum": null,
+            "annual_margin": "8040262.0",
+            "difference": null,
+            "observed_cells": 0
+          },
+          {
+            "sector": "S11",
+            "side": "liability",
+            "quarterly_sum": null,
+            "annual_margin": "10376009.0",
+            "difference": null,
+            "observed_cells": 0
+          },
+          {
+            "sector": "S12",
+            "side": "asset",
+            "quarterly_sum": null,
+            "annual_margin": "3228026.0",
+            "difference": null,
+            "observed_cells": 0
+          },
+          {
+            "sector": "S12",
+            "side": "liability",
+            "quarterly_sum": null,
+            "annual_margin": "2859146.0",
+            "difference": null,
+            "observed_cells": 0
+          },
+          {
+            "sector": "S13",
+            "side": "asset",
+            "quarterly_sum": null,
+            "annual_margin": "603893.0",
+            "difference": null,
+            "observed_cells": 0
+          },
+          {
+            "sector": "S13",
+            "side": "liability",
+            "quarterly_sum": null,
+            "annual_margin": "31597.0",
+            "difference": null,
+            "observed_cells": 0
+          },
+          {
+            "sector": "S14_S15",
+            "side": "asset",
+            "quarterly_sum": null,
+            "annual_margin": "1900342.0",
+            "difference": null,
+            "observed_cells": 0
+          },
+          {
+            "sector": "S14_S15",
+            "side": "liability",
+            "quarterly_sum": null,
+            "annual_margin": "0.0",
+            "difference": null,
+            "observed_cells": 0
+          },
+          {
+            "sector": "S2",
+            "side": "asset",
+            "quarterly_sum": null,
+            "annual_margin": "2515704.0",
+            "difference": null,
+            "observed_cells": 0
+          },
+          {
+            "sector": "S2",
+            "side": "liability",
+            "quarterly_sum": null,
+            "annual_margin": "3021475.0",
+            "difference": null,
+            "observed_cells": 0
+          }
+        ],
+        "anchor": {
+          "issuer": "S11",
+          "holder": "S12",
+          "asset": {
+            "value": null,
+            "components": [],
+            "axis_available": false
+          },
+          "liability": {
+            "value": null,
+            "components": [],
+            "axis_available": false
+          },
+          "mirror_difference": null,
+          "annual_bound_lower": "0",
+          "annual_bound_upper": "3228026.0"
+        }
+      }
+    }
+  },
+  "artifact": {
+    "id": 14995449139,
+    "digest": "sha256:7c52bcae111a4fdfecb533fbfd1be0606a013acc98a44f8ffb599eb49fbadf97",
+    "expires_at": "2027-02-23T05:55:32Z"
+  },
+  "publication": "BLOCK_PUBLICATION",
+  "scientific_gates_promoted": 0
+}
