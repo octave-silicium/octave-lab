@@ -1,6 +1,6 @@
 {
   "id": "LIMITATIONS-001",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "date": "2026-11-25",
   "baseline_commit": "5bd37a858e384fdf3a159564975623b8ac957663",
   "status": "INITIAL_CONSOLIDATION_REVIEW_PENDING",
@@ -761,9 +761,16 @@
           "path": "audits/common_economic_state_v02_g07g1_verified.json",
           "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45556914565",
           "scope": "Stress sur positions échues, non réglé; aucune extinction, write-off ni bilan complet."
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7g2",
+          "path": "audits/common_economic_state_v03_g07g2_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45557986540",
+          "scope": "Règlement exact sur dépôts, impayé persistant, allowance et décharge explicite séparées; pas de BFR, insolvabilité, bilan complet, priorité, échéancier d'intérêts ou liquidation."
         }
       ],
-      "remaining": "Compensation exacte d'obligations exigibles, impayés et dépréciation conditionnelle séparés; pas de défaut juridique, liquidation, BFR ni bilan bancaire complet. Contrat de positions appariées et événements exacts, échéances connues/inconnues; aucune preuve de bilan complet, BFR, insolvabilité ou perte définitive. Stress sur positions échues, non réglé; aucune extinction, write-off ni bilan complet."
+      "remaining": "Compensation exacte d'obligations exigibles, impayés et dépréciation conditionnelle séparés; pas de défaut juridique, liquidation, BFR ni bilan bancaire complet. Contrat de positions appariées et événements exacts, échéances connues/inconnues; aucune preuve de bilan complet, BFR, insolvabilité ou perte définitive. Stress sur positions échues, non réglé; aucune extinction, write-off ni bilan complet. Règlement exact sur dépôts, impayé persistant, allowance et décharge explicite séparées; pas de BFR, insolvabilité, bilan complet, priorité, échéancier d'intérêts ou liquidation."
     },
     {
       "id": "LIM-F02",
@@ -936,9 +943,16 @@
           "path": "audits/common_economic_state_v02_g07g1_verified.json",
           "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45556914565",
           "scope": "Plafonds bancaires et individuels du réseau raccordés à la réservation multi-source et au débit conditionnel; pas de choix endogène ni autres instruments."
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7g2",
+          "path": "audits/common_economic_state_v03_g07g2_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45557986540",
+          "scope": "Trajectoire finance-only et plafonds de crédit proxy avec prêts bruts et dépréciations/reprises; pas de choix endogène, crédit fournisseur transactionnel, autres instruments ni capital livré."
         }
       ],
-      "remaining": "Rationnement du crédit sous plafond exogène et marge de fonds propres hypothétique après pertes reconnues; allocation proportionnelle entre demandeurs. Pas de choix VAN, risque calibré ou octroi effectif. Financement cash/apport/dette, plafonds concurrents, substitution et refus; sources alternatives et décision endogène non traitées. Plafonds bancaires et individuels du réseau raccordés à la réservation multi-source et au débit conditionnel; pas de choix endogène ni autres instruments."
+      "remaining": "Rationnement du crédit sous plafond exogène et marge de fonds propres hypothétique après pertes reconnues; allocation proportionnelle entre demandeurs. Pas de choix VAN, risque calibré ou octroi effectif. Financement cash/apport/dette, plafonds concurrents, substitution et refus; sources alternatives et décision endogène non traitées. Plafonds bancaires et individuels du réseau raccordés à la réservation multi-source et au débit conditionnel; pas de choix endogène ni autres instruments. Trajectoire finance-only et plafonds de crédit proxy avec prêts bruts et dépréciations/reprises; pas de choix endogène, crédit fournisseur transactionnel, autres instruments ni capital livré."
     },
     {
       "id": "LIM-F05",
@@ -1137,9 +1151,16 @@
           "path": "audits/common_economic_state_v02_g07g1_verified.json",
           "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45556914565",
           "scope": "Diagnostic bilatéral trimestriel épinglé : F4 16 cellules actifs, pas de marge ou miroir complet, F5 absent; qualification non admise."
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7g2",
+          "path": "audits/common_economic_state_v03_g07g2_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45557986540",
+          "scope": "Contreparties annuelles FR 2022 et bilans trimestriels Q4 acquis et rapprochés, 32 miroirs exacts, écarts <=1 M€ sur comparaisons calculables; pas de couverture intégrale ou admission."
         }
       ],
-      "remaining": "Sources annuelles F4/F5 épinglées et matrice trimestrielle brute archivée; audit de bornes réussi, qualification sémantique et rapprochement des vintages trimestriels ouverts. Diagnostic bilatéral trimestriel épinglé : F4 16 cellules actifs, pas de marge ou miroir complet, F5 absent; qualification non admise."
+      "remaining": "Sources annuelles F4/F5 épinglées et matrice trimestrielle brute archivée; audit de bornes réussi, qualification sémantique et rapprochement des vintages trimestriels ouverts. Diagnostic bilatéral trimestriel épinglé : F4 16 cellules actifs, pas de marge ou miroir complet, F5 absent; qualification non admise. Contreparties annuelles FR 2022 et bilans trimestriels Q4 acquis et rapprochés, 32 miroirs exacts, écarts <=1 M€ sur comparaisons calculables; pas de couverture intégrale ou admission."
     },
     {
       "id": "LIM-S02",
@@ -1555,9 +1576,16 @@
           "path": "audits/common_economic_state_v02_g07g1_verified.json",
           "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45556914565",
           "scope": "Raccord synthétique initial crédit-financement-livraison-capital testé; pas de boucle financière dynamique ni d'admission réelle."
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7g2",
+          "path": "audits/common_economic_state_v03_g07g2_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45557986540",
+          "scope": "Trajectoire financière multi-période vérifiée séparément; pont financement-livraison-capital v0.7g1 reste à intégrer sur plusieurs périodes."
         }
       ],
-      "remaining": "Plafond conditionnel de crédit calculé à partir de la contagion, réutilisable dans v0.7d après mapping explicite; couplage automatique aux acquisitions et financement multi-acteurs non réalisé. Sous-registre commun et acquisitions payées; raccord au capital productif, à la livraison et aux plafonds du réseau v0.7f non réalisé. Raccord synthétique initial crédit-financement-livraison-capital testé; pas de boucle financière dynamique ni d'admission réelle."
+      "remaining": "Plafond conditionnel de crédit calculé à partir de la contagion, réutilisable dans v0.7d après mapping explicite; couplage automatique aux acquisitions et financement multi-acteurs non réalisé. Sous-registre commun et acquisitions payées; raccord au capital productif, à la livraison et aux plafonds du réseau v0.7f non réalisé. Raccord synthétique initial crédit-financement-livraison-capital testé; pas de boucle financière dynamique ni d'admission réelle. Trajectoire financière multi-période vérifiée séparément; pont financement-livraison-capital v0.7g1 reste à intégrer sur plusieurs périodes."
     },
     {
       "id": "LIM-S10",
@@ -1781,9 +1809,16 @@
           "path": "audits/common_economic_state_v02_g07g1_verified.json",
           "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45556914565",
           "scope": "Transmission conditionnelle stress→investissement et mise en service; boucles prix/revenus/finance/emploi non réalisées."
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7g2",
+          "path": "audits/common_economic_state_v03_g07g2_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45557986540",
+          "scope": "Règlement et dépréciations/reprises rétroagissent sur capacité de financement, transferts de trésorerie exogènes; boucle productive, prix/revenus/emploi ouverte."
         }
       ],
-      "remaining": "Propagation des impayés et réduction conditionnelle du crédit démontrées sur réseaux synthétiques; boucles dynamiques prix/revenus/capacités/financement et réallocation endogène non réalisées. Transmission conditionnelle stress→investissement et mise en service; boucles prix/revenus/finance/emploi non réalisées."
+      "remaining": "Propagation des impayés et réduction conditionnelle du crédit démontrées sur réseaux synthétiques; boucles dynamiques prix/revenus/capacités/financement et réallocation endogène non réalisées. Transmission conditionnelle stress→investissement et mise en service; boucles prix/revenus/finance/emploi non réalisées. Règlement et dépréciations/reprises rétroagissent sur capacité de financement, transferts de trésorerie exogènes; boucle productive, prix/revenus/emploi ouverte."
     },
     {
       "id": "LIM-S13",
@@ -2015,9 +2050,16 @@
           "path": "audits/common_economic_state_v02_g07g1_verified.json",
           "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45556914565",
           "scope": "F4 partiel, absence F5 agrégé et miroir, aucune propriété individuelle ni bilan bancaire calibré."
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7g2",
+          "path": "audits/common_economic_state_v03_g07g2_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45557986540",
+          "scope": "F4/F5 annuels bilatéraux partiels rapprochés des marges; pas de bénéficiaires ultimes, échéances empiriques ni capital réglementaire calibré."
         }
       ],
-      "remaining": "Bornes financières annuelles F4/F5 calculées sur six secteurs non consolidés, marges exactes; Eurostat nasq_10_f_cp 2022-Q4 brut acquis (4309 observations), couverture bilatérale et rapprochement annuel non qualifiés. Pas de matrice complète, propriété individuelle, pertes ou capital prudentiel calibrés. F4 partiel, absence F5 agrégé et miroir, aucune propriété individuelle ni bilan bancaire calibré."
+      "remaining": "Bornes financières annuelles F4/F5 calculées sur six secteurs non consolidés, marges exactes; Eurostat nasq_10_f_cp 2022-Q4 brut acquis (4309 observations), couverture bilatérale et rapprochement annuel non qualifiés. Pas de matrice complète, propriété individuelle, pertes ou capital prudentiel calibrés. F4 partiel, absence F5 agrégé et miroir, aucune propriété individuelle ni bilan bancaire calibré. F4/F5 annuels bilatéraux partiels rapprochés des marges; pas de bénéficiaires ultimes, échéances empiriques ni capital réglementaire calibré."
     },
     {
       "id": "LIM-T01",
@@ -2359,5 +2401,5 @@
     }
   ],
   "dependency_semantics": "Dependencies constrain closure, not parallel development; not a promise of dates. Publication restrictions apply to affected claims, not blanket suppression of safe synthetic demonstrations.",
-  "last_milestone": "G4 v0.7g1"
+  "last_milestone": "G4 v0.7g2"
 }
