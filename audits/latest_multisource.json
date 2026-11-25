@@ -1,5 +1,5 @@
 {
-  "run_at_utc": "2026-11-25T06:07:59.992283+00:00",
+  "run_at_utc": "2026-11-25T06:56:29.568257+00:00",
   "purpose": "SOURCE_ACCESS_AND_SCHEMA_AUDIT_ONLY",
   "source_registry": "pipeline/audit_multisource_sources.json",
   "no_data_fusion": true,
