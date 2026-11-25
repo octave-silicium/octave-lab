@@ -150,3 +150,6 @@ Le 25/11/2026, validation des 27 exigences et de l'ordre de reprise. [Registre c
 
 ## G4 v0.7g3b (25/11/2026)
 [Contrat](COMMON-STATE-001.md), [preuve](../audits/common_economic_state_v05_g07g3b_verified.json). 10 nouveaux + 45 régression ciblée réussis. Flux interbranches, importations, taxes de production, préfinancement des achats et amortissement explicite. Suite g3c : liquidité par branche, BFR, crédit court terme et paiement fournisseur, fiscalité/revenus et sources alternatives, puis hétérogénéité; aucun gate promu.
+
+## G4 v0.7g3c1 (25/11/2026)
+[Contrat](COMMON-STATE-001.md), [preuve](../audits/common_economic_state_v06_g07g3c1_verified.json). 11 nouveaux tests + 71 régressions ciblées réussis; liquidité locale, crédit de trésorerie et fournisseur, BFR commercial partiel, partage du plafond de crédit. Suite g3c2 : affacturage, stocks, BFR complet, fiscalité/revenus et hétérogénéité. Pas de gate promu.
