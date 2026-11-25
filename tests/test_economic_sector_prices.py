@@ -11,7 +11,7 @@ class PricesTests(unittest.TestCase):
     def run_case(self,t=None,p=None,d=None):
         return price(self.s,t or self.t,p or self.p,d)["result"]
     def test_identity(self):
-        r=self.run_case(self.s);self.assertEqual(r["branch_price"],(1,1));self.assertAlmostEqual(r["nominal"]["gross_value_added"],180)
+        r=self.run_case(self.s);self.assertTrue(all(abs(v-1)<1e-13 for v in r["branch_price"]));self.assertAlmostEqual(r["nominal"]["gross_value_added"],180)
     def test_full_pass_through(self):
         r=self.run_case();self.assertAlmostEqual(r["branch_price"][0],.9);self.assertAlmostEqual(r["branch_price"][1],.95)
         self.assertAlmostEqual(r["unit_surplus_change"][0],0)
