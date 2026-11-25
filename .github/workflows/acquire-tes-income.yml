@@ -4,6 +4,8 @@ on:
     paths:
       - 'pipeline/acquire_tes_income.py'
       - 'pipeline/audit_tes_income.py'
+      - 'pipeline/economic_income_bridge.py'
+      - 'tests/test_economic_income_bridge.py'
       - '.github/workflows/acquire-tes-income.yml'
   workflow_dispatch:
 permissions:
@@ -19,6 +21,13 @@ jobs:
           python-version: '3.12'
       - run: python -m pip install openpyxl==3.1.5 numpy==2.2.6
       - run: python pipeline/acquire_tes_income.py
+      - name: Acquire pinned symmetric reference
+        run: python pipeline/acquire_tes_a38.py --output tes-income/symmetric
+      - name: Verify income bridge and run empirical audit
+        run: |
+          python -m unittest discover -s tests -p test_economic_income_bridge.py -v
+          python -m pipeline.audit_tes_income tes-income/standard.xlsx tes-income/symmetric/TES_symetrique_A38_2022DEF_fr.xlsx tes-income/eurostat.json > tes-income/audit.json
+          cat tes-income/audit.json
       - name: Preserve raw and profile
         uses: actions/upload-artifact@v4
         with:
