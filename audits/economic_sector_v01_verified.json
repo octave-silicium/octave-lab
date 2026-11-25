@@ -1,0 +1,654 @@
+{
+  "date": "2026-11-25",
+  "status": "TECHNICAL_ACCEPTANCE",
+  "tested_commit": "588ceceb23d23d00796ba6d747a98ebe997d416e",
+  "run_id": 45520499927,
+  "job_id": 138890828954,
+  "tests": 419,
+  "seconds": 32.815,
+  "conclusion": "success",
+  "independent_check": {
+    "method": "NumPy solve of I-A with independently transcribed ONS table 1; direct comparison with published tables 3/4",
+    "cheese": {
+      "gross_output": 202.7910422657934,
+      "gva": 95.12272972724823,
+      "imports": 4.6877039685211574,
+      "intermediate_product_taxes": 0.18956630423060938
+    },
+    "pastries": {
+      "gross_output": 189.6062860159478,
+      "gva": 97.0933126195871,
+      "imports": 2.7550377249699176,
+      "intermediate_product_taxes": 0.15164965544299813
+    }
+  },
+  "fixture": "ONS_IO_EXTERNAL_FICTIONAL_BENCHMARK",
+  "table": {
+    "id": "sector:ons-guide",
+    "revision": 1,
+    "geography": "UK fictional",
+    "year": 2022,
+    "classification": "ONS fictional products",
+    "currency_unit": "GBP million",
+    "price_basis": "BASIC_CURRENT",
+    "source": "https://www.ons.gov.uk/economy/nationalaccounts/supplyandusetables/articles/inputoutputanalyticaltables/guidanceforuse",
+    "evidence_status": "OFFICIAL_FICTIONAL_BENCHMARK",
+    "products": [
+      "cheese",
+      "pastries",
+      "milk",
+      "other"
+    ],
+    "domestic": [
+      [
+        700,
+        200,
+        1200,
+        8000
+      ],
+      [
+        10,
+        50,
+        20,
+        3000
+      ],
+      [
+        1000,
+        240,
+        900,
+        6500
+      ],
+      [
+        15000,
+        17000,
+        16500,
+        150000
+      ]
+    ],
+    "output": [
+      24765,
+      28830,
+      25595,
+      553250
+    ],
+    "imports": [
+      500,
+      110,
+      350,
+      15000
+    ],
+    "product_taxes": [
+      15,
+      10,
+      5,
+      750
+    ],
+    "value_added": [
+      7540,
+      11220,
+      6620,
+      370000
+    ],
+    "final_domestic": [
+      14665,
+      25750,
+      16955,
+      354750
+    ]
+  },
+  "cases": {
+    "null": {
+      "result": {
+        "table_ref": "sector:ons-guide@1",
+        "geography": "UK fictional",
+        "year": 2022,
+        "classification": "ONS fictional products",
+        "currency_unit": "GBP million",
+        "price_basis": "BASIC_CURRENT",
+        "source": "https://www.ons.gov.uk/economy/nationalaccounts/supplyandusetables/articles/inputoutputanalyticaltables/guidanceforuse",
+        "evidence_status": "OFFICIAL_FICTIONAL_BENCHMARK",
+        "coefficient_matrix": [
+          [
+            "140/4953",
+            "20/2883",
+            "240/5119",
+            "32/2213"
+          ],
+          [
+            "2/4953",
+            "5/2883",
+            "4/5119",
+            "12/2213"
+          ],
+          [
+            "200/4953",
+            "8/961",
+            "180/5119",
+            "26/2213"
+          ],
+          [
+            "1000/1651",
+            "1700/2883",
+            "3300/5119",
+            "600/2213"
+          ]
+        ],
+        "rows": [
+          {
+            "product": "cheese",
+            "baseline_output": "24765",
+            "baseline_final_domestic": "14665",
+            "final_demand_change": "0",
+            "required_output_change": "0",
+            "required_output": "24765",
+            "indirect_output_change": "0",
+            "imported_intermediate_change": "0",
+            "intermediate_product_tax_change": "0",
+            "gross_value_added_change": "0",
+            "capacity": null
+          },
+          {
+            "product": "pastries",
+            "baseline_output": "28830",
+            "baseline_final_domestic": "25750",
+            "final_demand_change": "0",
+            "required_output_change": "0",
+            "required_output": "28830",
+            "indirect_output_change": "0",
+            "imported_intermediate_change": "0",
+            "intermediate_product_tax_change": "0",
+            "gross_value_added_change": "0",
+            "capacity": null
+          },
+          {
+            "product": "milk",
+            "baseline_output": "25595",
+            "baseline_final_domestic": "16955",
+            "final_demand_change": "0",
+            "required_output_change": "0",
+            "required_output": "25595",
+            "indirect_output_change": "0",
+            "imported_intermediate_change": "0",
+            "intermediate_product_tax_change": "0",
+            "gross_value_added_change": "0",
+            "capacity": null
+          },
+          {
+            "product": "other",
+            "baseline_output": "553250",
+            "baseline_final_domestic": "354750",
+            "final_demand_change": "0",
+            "required_output_change": "0",
+            "required_output": "553250",
+            "indirect_output_change": "0",
+            "imported_intermediate_change": "0",
+            "intermediate_product_tax_change": "0",
+            "gross_value_added_change": "0",
+            "capacity": null
+          }
+        ],
+        "final_domestic_demand_change": "0",
+        "gross_output_requirement_change": "0",
+        "indirect_output_requirement_change": "0",
+        "imported_intermediate_requirement_change": "0",
+        "intermediate_product_tax_change": "0",
+        "gross_value_added_requirement_change": "0",
+        "capacity_status": "CAPACITY_UNKNOWN",
+        "capacity_exceeded": [],
+        "realized_output_change": null,
+        "employment_change": null,
+        "gdp_change": null,
+        "input_sha256": "783c7abf362574963b35d8c78d8822c33165395b09fdcc5b38696f58b22488fc",
+        "model_sha256": "c1635f786489ed7bfac61c066e56a763aba2fc5fa8252afdcdf253be26e31521",
+        "status": "CONDITIONAL_DEMAND_REQUIREMENTS_NOT_FORECAST",
+        "publication": "BLOCK_PUBLICATION"
+      },
+      "sha256": "18346ec1709a12ddfdf63102a11ce07f790d28b9655abfb36bbafb970d772cad"
+    },
+    "cheese": {
+      "result": {
+        "table_ref": "sector:ons-guide@1",
+        "geography": "UK fictional",
+        "year": 2022,
+        "classification": "ONS fictional products",
+        "currency_unit": "GBP million",
+        "price_basis": "BASIC_CURRENT",
+        "source": "https://www.ons.gov.uk/economy/nationalaccounts/supplyandusetables/articles/inputoutputanalyticaltables/guidanceforuse",
+        "evidence_status": "OFFICIAL_FICTIONAL_BENCHMARK",
+        "coefficient_matrix": [
+          [
+            "140/4953",
+            "20/2883",
+            "240/5119",
+            "32/2213"
+          ],
+          [
+            "2/4953",
+            "5/2883",
+            "4/5119",
+            "12/2213"
+          ],
+          [
+            "200/4953",
+            "8/961",
+            "180/5119",
+            "26/2213"
+          ],
+          [
+            "1000/1651",
+            "1700/2883",
+            "3300/5119",
+            "600/2213"
+          ]
+        ],
+        "rows": [
+          {
+            "product": "cheese",
+            "baseline_output": "24765",
+            "baseline_final_domestic": "14665",
+            "final_demand_change": "100",
+            "required_output_change": "5591670750989700/53483193428017",
+            "required_output": "1330102955995830705/53483193428017",
+            "indirect_output_change": "243351408188000/53483193428017",
+            "imported_intermediate_change": "112894624490000/53483193428017",
+            "intermediate_product_tax_change": "3386838734700/53483193428017",
+            "gross_value_added_change": "1702450937309200/53483193428017",
+            "capacity": null
+          },
+          {
+            "product": "pastries",
+            "baseline_output": "28830",
+            "baseline_final_domestic": "25750",
+            "final_demand_change": "0",
+            "required_output_change": "29275137218100/53483193428017",
+            "required_output": "1541949741666948210/53483193428017",
+            "indirect_output_change": "29275137218100/53483193428017",
+            "imported_intermediate_change": "111698407700/53483193428017",
+            "intermediate_product_tax_change": "10154400700/53483193428017",
+            "gross_value_added_change": "11393237585400/53483193428017",
+            "capacity": null
+          },
+          {
+            "product": "milk",
+            "baseline_output": "25595",
+            "baseline_final_domestic": "16955",
+            "final_demand_change": "0",
+            "required_output_change": "294310921912800/53483193428017",
+            "required_output": "1369196646712007915/53483193428017",
+            "indirect_output_change": "294310921912800/53483193428017",
+            "imported_intermediate_change": "4024568184000/53483193428017",
+            "intermediate_product_tax_change": "57493831200/53483193428017",
+            "gross_value_added_change": "76121832508800/53483193428017",
+            "capacity": null
+          },
+          {
+            "product": "other",
+            "baseline_output": "553250",
+            "baseline_final_domestic": "354750",
+            "final_demand_change": "0",
+            "required_output_change": "4930655728850000/53483193428017",
+            "required_output": "29594507419779255250/53483193428017",
+            "indirect_output_change": "4930655728850000/53483193428017",
+            "imported_intermediate_change": "133682487000000/53483193428017",
+            "intermediate_product_tax_change": "6684124350000/53483193428017",
+            "gross_value_added_change": "3297501346000000/53483193428017",
+            "capacity": null
+          }
+        ],
+        "final_domestic_demand_change": "100",
+        "gross_output_requirement_change": "10845912538970600/53483193428017",
+        "indirect_output_requirement_change": "5497593196168900/53483193428017",
+        "imported_intermediate_requirement_change": "250713378081700/53483193428017",
+        "intermediate_product_tax_change": "10138611316600/53483193428017",
+        "gross_value_added_requirement_change": "5087467353403400/53483193428017",
+        "capacity_status": "CAPACITY_UNKNOWN",
+        "capacity_exceeded": [],
+        "realized_output_change": null,
+        "employment_change": null,
+        "gdp_change": null,
+        "input_sha256": "6b8b31c710c14010e16caf21eee877f75d4658b1ae7d4bac24c3e023ae675e01",
+        "model_sha256": "c1635f786489ed7bfac61c066e56a763aba2fc5fa8252afdcdf253be26e31521",
+        "status": "CONDITIONAL_DEMAND_REQUIREMENTS_NOT_FORECAST",
+        "publication": "BLOCK_PUBLICATION"
+      },
+      "sha256": "b4588480a273a66862346471ff1366d32e9c673662092710358dfb1f195ef7d5"
+    },
+    "pastries": {
+      "result": {
+        "table_ref": "sector:ons-guide@1",
+        "geography": "UK fictional",
+        "year": 2022,
+        "classification": "ONS fictional products",
+        "currency_unit": "GBP million",
+        "price_basis": "BASIC_CURRENT",
+        "source": "https://www.ons.gov.uk/economy/nationalaccounts/supplyandusetables/articles/inputoutputanalyticaltables/guidanceforuse",
+        "evidence_status": "OFFICIAL_FICTIONAL_BENCHMARK",
+        "coefficient_matrix": [
+          [
+            "140/4953",
+            "20/2883",
+            "240/5119",
+            "32/2213"
+          ],
+          [
+            "2/4953",
+            "5/2883",
+            "4/5119",
+            "12/2213"
+          ],
+          [
+            "200/4953",
+            "8/961",
+            "180/5119",
+            "26/2213"
+          ],
+          [
+            "1000/1651",
+            "1700/2883",
+            "3300/5119",
+            "600/2213"
+          ]
+        ],
+        "rows": [
+          {
+            "product": "cheese",
+            "baseline_output": "24765",
+            "baseline_final_domestic": "14665",
+            "final_demand_change": "0",
+            "required_output_change": "111128237103000/53483193428017",
+            "required_output": "1324622413481944005/53483193428017",
+            "indirect_output_change": "111128237103000/53483193428017",
+            "imported_intermediate_change": "2243655100000/53483193428017",
+            "intermediate_product_tax_change": "67309653000/53483193428017",
+            "gross_value_added_change": "33834318908000/53483193428017",
+            "capacity": null
+          },
+          {
+            "product": "pastries",
+            "baseline_output": "28830",
+            "baseline_final_domestic": "25750",
+            "final_demand_change": "100",
+            "required_output_change": "5382404754517650/53483193428017",
+            "required_output": "1547302871284247760/53483193428017",
+            "indirect_output_change": "34085411715950/53483193428017",
+            "imported_intermediate_change": "20536403850050/53483193428017",
+            "intermediate_product_tax_change": "1866945804550/53483193428017",
+            "gross_value_added_change": "2094713192705100/53483193428017",
+            "capacity": null
+          },
+          {
+            "product": "milk",
+            "baseline_output": "25595",
+            "baseline_final_domestic": "16955",
+            "final_demand_change": "0",
+            "required_output_change": "106383942563200/53483193428017",
+            "required_output": "1369008719732658315/53483193428017",
+            "indirect_output_change": "106383942563200/53483193428017",
+            "imported_intermediate_change": "1454752096000/53483193428017",
+            "intermediate_product_tax_change": "20782172800/53483193428017",
+            "gross_value_added_change": "27515596787200/53483193428017",
+            "capacity": null
+          },
+          {
+            "product": "other",
+            "baseline_output": "553250",
+            "baseline_final_domestic": "354750",
+            "final_demand_change": "0",
+            "required_output_change": "4540832735975000/53483193428017",
+            "required_output": "29594117596786380250/53483193428017",
+            "indirect_output_change": "4540832735975000/53483193428017",
+            "imported_intermediate_change": "123113404500000/53483193428017",
+            "intermediate_product_tax_change": "6155670225000/53483193428017",
+            "gross_value_added_change": "3036797311000000/53483193428017",
+            "capacity": null
+          }
+        ],
+        "final_domestic_demand_change": "100",
+        "gross_output_requirement_change": "10140749670158850/53483193428017",
+        "indirect_output_requirement_change": "4792430327357150/53483193428017",
+        "imported_intermediate_requirement_change": "147348215546050/53483193428017",
+        "intermediate_product_tax_change": "8110707855350/53483193428017",
+        "gross_value_added_requirement_change": "5192860419400300/53483193428017",
+        "capacity_status": "CAPACITY_UNKNOWN",
+        "capacity_exceeded": [],
+        "realized_output_change": null,
+        "employment_change": null,
+        "gdp_change": null,
+        "input_sha256": "1306475ccd80a4abbc2ac6896b08e90b817566e8a222db13b040a5444113d1aa",
+        "model_sha256": "c1635f786489ed7bfac61c066e56a763aba2fc5fa8252afdcdf253be26e31521",
+        "status": "CONDITIONAL_DEMAND_REQUIREMENTS_NOT_FORECAST",
+        "publication": "BLOCK_PUBLICATION"
+      },
+      "sha256": "ff1902f89a2a39551a72ffa6790acdc12e176e8862365224acfaf8d3f55f5934"
+    },
+    "decline": {
+      "result": {
+        "table_ref": "sector:ons-guide@1",
+        "geography": "UK fictional",
+        "year": 2022,
+        "classification": "ONS fictional products",
+        "currency_unit": "GBP million",
+        "price_basis": "BASIC_CURRENT",
+        "source": "https://www.ons.gov.uk/economy/nationalaccounts/supplyandusetables/articles/inputoutputanalyticaltables/guidanceforuse",
+        "evidence_status": "OFFICIAL_FICTIONAL_BENCHMARK",
+        "coefficient_matrix": [
+          [
+            "140/4953",
+            "20/2883",
+            "240/5119",
+            "32/2213"
+          ],
+          [
+            "2/4953",
+            "5/2883",
+            "4/5119",
+            "12/2213"
+          ],
+          [
+            "200/4953",
+            "8/961",
+            "180/5119",
+            "26/2213"
+          ],
+          [
+            "1000/1651",
+            "1700/2883",
+            "3300/5119",
+            "600/2213"
+          ]
+        ],
+        "rows": [
+          {
+            "product": "cheese",
+            "baseline_output": "24765",
+            "baseline_final_domestic": "14665",
+            "final_demand_change": "-100",
+            "required_output_change": "-5591670750989700/53483193428017",
+            "required_output": "1318919614493851305/53483193428017",
+            "indirect_output_change": "-243351408188000/53483193428017",
+            "imported_intermediate_change": "-112894624490000/53483193428017",
+            "intermediate_product_tax_change": "-3386838734700/53483193428017",
+            "gross_value_added_change": "-1702450937309200/53483193428017",
+            "capacity": null
+          },
+          {
+            "product": "pastries",
+            "baseline_output": "28830",
+            "baseline_final_domestic": "25750",
+            "final_demand_change": "0",
+            "required_output_change": "-29275137218100/53483193428017",
+            "required_output": "1541891191392512010/53483193428017",
+            "indirect_output_change": "-29275137218100/53483193428017",
+            "imported_intermediate_change": "-111698407700/53483193428017",
+            "intermediate_product_tax_change": "-10154400700/53483193428017",
+            "gross_value_added_change": "-11393237585400/53483193428017",
+            "capacity": null
+          },
+          {
+            "product": "milk",
+            "baseline_output": "25595",
+            "baseline_final_domestic": "16955",
+            "final_demand_change": "0",
+            "required_output_change": "-294310921912800/53483193428017",
+            "required_output": "1368608024868182315/53483193428017",
+            "indirect_output_change": "-294310921912800/53483193428017",
+            "imported_intermediate_change": "-4024568184000/53483193428017",
+            "intermediate_product_tax_change": "-57493831200/53483193428017",
+            "gross_value_added_change": "-76121832508800/53483193428017",
+            "capacity": null
+          },
+          {
+            "product": "other",
+            "baseline_output": "553250",
+            "baseline_final_domestic": "354750",
+            "final_demand_change": "0",
+            "required_output_change": "-4930655728850000/53483193428017",
+            "required_output": "29584646108321555250/53483193428017",
+            "indirect_output_change": "-4930655728850000/53483193428017",
+            "imported_intermediate_change": "-133682487000000/53483193428017",
+            "intermediate_product_tax_change": "-6684124350000/53483193428017",
+            "gross_value_added_change": "-3297501346000000/53483193428017",
+            "capacity": null
+          }
+        ],
+        "final_domestic_demand_change": "-100",
+        "gross_output_requirement_change": "-10845912538970600/53483193428017",
+        "indirect_output_requirement_change": "-5497593196168900/53483193428017",
+        "imported_intermediate_requirement_change": "-250713378081700/53483193428017",
+        "intermediate_product_tax_change": "-10138611316600/53483193428017",
+        "gross_value_added_requirement_change": "-5087467353403400/53483193428017",
+        "capacity_status": "CAPACITY_UNKNOWN",
+        "capacity_exceeded": [],
+        "realized_output_change": null,
+        "employment_change": null,
+        "gdp_change": null,
+        "input_sha256": "71e889c0eab702ed2f14cc3e455f7fdff63be119ffc647fbcbe9336e8552bcc9",
+        "model_sha256": "c1635f786489ed7bfac61c066e56a763aba2fc5fa8252afdcdf253be26e31521",
+        "status": "CONDITIONAL_DEMAND_REQUIREMENTS_NOT_FORECAST",
+        "publication": "BLOCK_PUBLICATION"
+      },
+      "sha256": "3d80ebfe614fece7da72b92160228bffb0310907629952668b0f54b9f9cfb18c"
+    },
+    "capacity_stress": {
+      "result": {
+        "table_ref": "sector:ons-guide@1",
+        "geography": "UK fictional",
+        "year": 2022,
+        "classification": "ONS fictional products",
+        "currency_unit": "GBP million",
+        "price_basis": "BASIC_CURRENT",
+        "source": "https://www.ons.gov.uk/economy/nationalaccounts/supplyandusetables/articles/inputoutputanalyticaltables/guidanceforuse",
+        "evidence_status": "OFFICIAL_FICTIONAL_BENCHMARK",
+        "coefficient_matrix": [
+          [
+            "140/4953",
+            "20/2883",
+            "240/5119",
+            "32/2213"
+          ],
+          [
+            "2/4953",
+            "5/2883",
+            "4/5119",
+            "12/2213"
+          ],
+          [
+            "200/4953",
+            "8/961",
+            "180/5119",
+            "26/2213"
+          ],
+          [
+            "1000/1651",
+            "1700/2883",
+            "3300/5119",
+            "600/2213"
+          ]
+        ],
+        "rows": [
+          {
+            "product": "cheese",
+            "baseline_output": "24765",
+            "baseline_final_domestic": "14665",
+            "final_demand_change": "100",
+            "required_output_change": "5591670750989700/53483193428017",
+            "required_output": "1330102955995830705/53483193428017",
+            "indirect_output_change": "243351408188000/53483193428017",
+            "imported_intermediate_change": "112894624490000/53483193428017",
+            "intermediate_product_tax_change": "3386838734700/53483193428017",
+            "gross_value_added_change": "1702450937309200/53483193428017",
+            "capacity": "24765"
+          },
+          {
+            "product": "pastries",
+            "baseline_output": "28830",
+            "baseline_final_domestic": "25750",
+            "final_demand_change": "0",
+            "required_output_change": "29275137218100/53483193428017",
+            "required_output": "1541949741666948210/53483193428017",
+            "indirect_output_change": "29275137218100/53483193428017",
+            "imported_intermediate_change": "111698407700/53483193428017",
+            "intermediate_product_tax_change": "10154400700/53483193428017",
+            "gross_value_added_change": "11393237585400/53483193428017",
+            "capacity": "28830"
+          },
+          {
+            "product": "milk",
+            "baseline_output": "25595",
+            "baseline_final_domestic": "16955",
+            "final_demand_change": "0",
+            "required_output_change": "294310921912800/53483193428017",
+            "required_output": "1369196646712007915/53483193428017",
+            "indirect_output_change": "294310921912800/53483193428017",
+            "imported_intermediate_change": "4024568184000/53483193428017",
+            "intermediate_product_tax_change": "57493831200/53483193428017",
+            "gross_value_added_change": "76121832508800/53483193428017",
+            "capacity": "25595"
+          },
+          {
+            "product": "other",
+            "baseline_output": "553250",
+            "baseline_final_domestic": "354750",
+            "final_demand_change": "0",
+            "required_output_change": "4930655728850000/53483193428017",
+            "required_output": "29594507419779255250/53483193428017",
+            "indirect_output_change": "4930655728850000/53483193428017",
+            "imported_intermediate_change": "133682487000000/53483193428017",
+            "intermediate_product_tax_change": "6684124350000/53483193428017",
+            "gross_value_added_change": "3297501346000000/53483193428017",
+            "capacity": "553250"
+          }
+        ],
+        "final_domestic_demand_change": "100",
+        "gross_output_requirement_change": "10845912538970600/53483193428017",
+        "indirect_output_requirement_change": "5497593196168900/53483193428017",
+        "imported_intermediate_requirement_change": "250713378081700/53483193428017",
+        "intermediate_product_tax_change": "10138611316600/53483193428017",
+        "gross_value_added_requirement_change": "5087467353403400/53483193428017",
+        "capacity_status": "REQUIREMENTS_EXCEED_CAPACITY",
+        "capacity_exceeded": [
+          "cheese",
+          "pastries",
+          "milk",
+          "other"
+        ],
+        "realized_output_change": null,
+        "employment_change": null,
+        "gdp_change": null,
+        "input_sha256": "897e5c465ace2e9d90b7e49634e0d707773c55a2f88c220cb5c5040a66e30eb5",
+        "model_sha256": "c1635f786489ed7bfac61c066e56a763aba2fc5fa8252afdcdf253be26e31521",
+        "status": "CONDITIONAL_DEMAND_REQUIREMENTS_NOT_FORECAST",
+        "publication": "BLOCK_PUBLICATION"
+      },
+      "sha256": "281756a4e2422f352a345a036a5205d2b3f294548f0d401390cc9564f753c196"
+    }
+  },
+  "ons_published_rounded": {
+    "output": 202.8,
+    "gva": 95.1,
+    "imports": 4.7,
+    "intermediate_taxes": 0.2
+  },
+  "scientific_gate_promoted": false,
+  "publication": "BLOCK_PUBLICATION"
+}
