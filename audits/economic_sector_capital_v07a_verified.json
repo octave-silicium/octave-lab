@@ -1,0 +1,451 @@
+{
+  "status": "SYNTHETIC_CAPITAL_VINTAGE_AUDIT",
+  "publication": "BLOCK_PUBLICATION",
+  "cases": {
+    "reference": {
+      "sha256": "366d4be38efe6ed0109b241166e0f116959cf680f446f42fc70dc4500c58b1ea",
+      "capacity_A": [
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "other_final_served": [
+        180,
+        180,
+        180,
+        180,
+        180
+      ],
+      "investment_acquired": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "active_value": [
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "wip_value": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "depreciation": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "writeoff": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_capacity": [
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "expected_other": [
+        180,
+        180,
+        180,
+        180,
+        180
+      ],
+      "expected_investment": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "delayed_expansion": {
+      "sha256": "03276f0bf64d47beab1dcc2afa42b9a8507512a4c0e5ab8318b3469b145041d4",
+      "capacity_A": [
+        100,
+        100,
+        150,
+        150,
+        150
+      ],
+      "other_final_served": [
+        180,
+        180,
+        220,
+        220,
+        220
+      ],
+      "investment_acquired": [
+        10,
+        0,
+        0,
+        0,
+        0
+      ],
+      "active_value": [
+        20,
+        20,
+        30,
+        30,
+        30
+      ],
+      "wip_value": [
+        10,
+        10,
+        0,
+        0,
+        0
+      ],
+      "depreciation": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "writeoff": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_capacity": [
+        100,
+        100,
+        150,
+        150,
+        150
+      ],
+      "expected_other": [
+        180,
+        180,
+        220,
+        220,
+        220
+      ],
+      "expected_investment": [
+        10,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "rationed_investment": {
+      "sha256": "edd253f766700be8815d0def8701a31672ae3e0f921e44849a6cb0a50110f7c3",
+      "capacity_A": [
+        100,
+        100,
+        125,
+        125,
+        125
+      ],
+      "other_final_served": [
+        90,
+        101.25,
+        101.25,
+        101.25,
+        101.25
+      ],
+      "investment_acquired": [
+        5,
+        0,
+        0,
+        0,
+        0
+      ],
+      "active_value": [
+        20,
+        20,
+        25,
+        25,
+        25
+      ],
+      "wip_value": [
+        5,
+        5,
+        0,
+        0,
+        0
+      ],
+      "depreciation": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "writeoff": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_capacity": [
+        100,
+        100,
+        125,
+        125,
+        125
+      ],
+      "expected_other": [
+        90,
+        101.25,
+        101.25,
+        101.25,
+        101.25
+      ],
+      "expected_investment": [
+        5,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "efficiency_decay": {
+      "sha256": "e1147feeafd637b5ab27203aa2121200eab25c6649c573dfb57134d5dc6cc8c2",
+      "capacity_A": [
+        100,
+        90,
+        81,
+        72.9,
+        65.61
+      ],
+      "other_final_served": [
+        180,
+        162,
+        145.8,
+        131.22000000000003,
+        118.098
+      ],
+      "investment_acquired": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "active_value": [
+        16,
+        12.8,
+        10.24,
+        8.192,
+        6.5536
+      ],
+      "wip_value": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "depreciation": [
+        4,
+        3.2,
+        2.5600000000000005,
+        2.048,
+        1.6384
+      ],
+      "writeoff": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_capacity": [
+        100,
+        90,
+        81,
+        72.9,
+        65.61
+      ],
+      "expected_other": [
+        180,
+        162,
+        145.8,
+        131.22,
+        118.098
+      ],
+      "expected_investment": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "retirement": {
+      "sha256": "b10403945550e96cfc4d12561c76850e88319d01c752992fd38e9c2d3e47fdfa",
+      "capacity_A": [
+        100,
+        100,
+        0,
+        0,
+        0
+      ],
+      "other_final_served": [
+        180,
+        180,
+        0,
+        0,
+        0
+      ],
+      "investment_acquired": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "active_value": [
+        18,
+        0,
+        0,
+        0,
+        0
+      ],
+      "wip_value": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "depreciation": [
+        2,
+        1.8,
+        0,
+        0,
+        0
+      ],
+      "writeoff": [
+        0,
+        16.2,
+        0,
+        0,
+        0
+      ],
+      "expected_capacity": [
+        100,
+        100,
+        0,
+        0,
+        0
+      ],
+      "expected_other": [
+        180,
+        180,
+        0,
+        0,
+        0
+      ],
+      "expected_investment": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "bootstrap_failure": {
+      "sha256": "27878325c90a52e3cf7a2559406af00ba8cc7e1e9ca6be223e5088f07076bf2a",
+      "capacity_A": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "other_final_served": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "investment_acquired": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "active_value": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "wip_value": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "depreciation": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "writeoff": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_capacity": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_other": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expected_investment": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "verification": "Six paths, independently hand-derived capacity, final-use and acquisition outcomes; historical-cost decay and retirement checked",
+  "verification_receipt": {
+    "run": 45543405603,
+    "job": 138967121875,
+    "tested_commit": "a6f3e0bcaca665e68c4e440156b1a1080503a669",
+    "conclusion": "test_and_pilot_steps_success"
+  }
+}
