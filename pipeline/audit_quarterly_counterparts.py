@@ -12,14 +12,24 @@ def qualify(raw,annual):
     j=json.loads(raw,parse_float=D);assert j["id"]==["freq","unit","sector2","sector","stk_flow","finpos","na_item","geo","time"]
     dims={k:j["dimension"][k]["category"] for k in j["id"]}
     stock=[k for k,v in dims["stk_flow"]["label"].items() if v.lower()=="stock"];assert len(stock)==1
-    assert all(s in dims[k]["index"] for k in ("sector","sector2") for s in AX)
+    def components(axis,code):
+        idx=dims[axis]["index"]
+        if code in idx:return (code,)
+        if code=="S14_S15" and all(x in idx for x in ("S14","S15")):return ("S14","S15")
+        return ()
+    mapping={k:{a:components(k,a) for a in AX} for k in ("sector","sector2")}
     def cell(holder,issuer,side,inst):
         sector,cp=(holder,issuer) if side=="ASS" else (issuer,holder)
-        ix=0
-        for k,n,v in zip(j["id"],j["size"],("Q","MIO_EUR",cp,sector,stock[0],side,inst,"FR","2022-Q4")):
-            ix=ix*n+dims[k]["index"][v]
-        v=j["value"].get(str(ix))
-        return {"value":str(v) if v is not None else None,"flag":j.get("status",{}).get(str(ix)),"locator":str(ix)}
+        parts=[]
+        for sc in mapping["sector"][sector]:
+            for cc in mapping["sector2"][cp]:
+                ix=0
+                for k,n,v in zip(j["id"],j["size"],("Q","MIO_EUR",cc,sc,stock[0],side,inst,"FR","2022-Q4")):
+                    ix=ix*n+dims[k]["index"][v]
+                v=j["value"].get(str(ix))
+                parts.append({"sector":sc,"counterpart":cc,"value":str(v) if v is not None else None,"flag":j.get("status",{}).get(str(ix)),"locator":str(ix)})
+        total=sum((D(x["value"]) for x in parts),D(0)) if parts and all(x["value"] is not None for x in parts) else None
+        return {"value":str(total) if total is not None else None,"components":parts,"axis_available":bool(parts)}
     result={}
     for inst in ("F4","F5"):
         m=[];a=annual["margins"][inst]
@@ -48,7 +58,7 @@ def qualify(raw,annual):
                       "mirror_exact":sum(x==0 for x in pairs),"max_abs_mirror_difference":str(max(map(abs,pairs))) if pairs else None,
                       "margin_pairs":sum(x["difference"] is not None for x in sums),
                       "max_abs_margin_difference":str(max(abs(D(x["difference"])) for x in sums if x["difference"] is not None)) if any(x["difference"] is not None for x in sums) else None}
-    return {"status":"BILATERAL_STOCK_DIAGNOSTIC_NOT_ADMITTED","sha256":sha,"updated":j.get("updated"),"stock_code":stock[0],"axis":AX,"instruments":result,
+    return {"status":"BILATERAL_STOCK_DIAGNOSTIC_NOT_ADMITTED","sha256":sha,"updated":j.get("updated"),"stock_code":stock[0],"axis":AX,"native_sector_codes":{k:list(dims[k]["index"]) for k in ("sector","sector2")},"axis_mapping":mapping,"instruments":result,
             "limitations":["missing cells not zero; retain mirrors, flags, annual vs quarterly differences, no automatic reconciliation","F4/F5 stocks, not due debt; F5 equity and fund shares; no firm-level topology","S14/S15 grouped to match quarterly; no overlap with total or subsectors; vintage and coverage discrepancies retained"]}
 def main():
     out=Path("counterpart-qualification");out.mkdir(exist_ok=True)
