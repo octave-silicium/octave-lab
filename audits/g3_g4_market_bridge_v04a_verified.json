@@ -1,0 +1,261 @@
+{
+  "fixture": "W002_SYNTHETIC_TWO_BRANCH",
+  "internalization_block": "INTERNALIZATION_REQUIRES_FULL_MAKE_BUY_BRIDGE",
+  "cases": {
+    "first_mover:FINAL_DOMESTIC": {
+      "market": {
+        "before_sales": 36,
+        "after_sales": 39,
+        "nominal_delta_eur_per_cohort": "-387/25",
+        "price_component_eur_per_cohort": "-1287/25",
+        "volume_component_eur_per_cohort": "36",
+        "before_unsold": 33,
+        "after_unsold": 30
+      },
+      "flows": [
+        {
+          "kind": "FINAL_DOMESTIC",
+          "buyer": null,
+          "before_reference_mEUR": 4.32,
+          "after_reference_mEUR": 4.68,
+          "delta_reference_mEUR": 0.35999999999999943
+        }
+      ],
+      "totals": {
+        "q": 0.5142857142855632,
+        "g": 0.5142857142855632,
+        "imports": 0.05142857142855384,
+        "wage": 0.20571428571421535,
+        "other_tax": 0.02571428571427692,
+        "bridge": 0.010285714285711567,
+        "surplus": 0.06685714285712407,
+        "va": 0.2982857142856119
+      },
+      "sha256": "6e5f5a163f6e7d9e43c342fa98bd9cfec2e3c4c0e490434095e1e61e53f3d98c"
+    },
+    "first_mover:INTERMEDIATE_DOMESTIC": {
+      "market": {
+        "before_sales": 36,
+        "after_sales": 39,
+        "nominal_delta_eur_per_cohort": "-387/25",
+        "price_component_eur_per_cohort": "-1287/25",
+        "volume_component_eur_per_cohort": "36",
+        "before_unsold": 33,
+        "after_unsold": 30
+      },
+      "flows": [
+        {
+          "kind": "INTERMEDIATE_DOMESTIC",
+          "buyer": "BUYER",
+          "before_reference_mEUR": 4.32,
+          "after_reference_mEUR": 4.68,
+          "delta_reference_mEUR": 0.35999999999999943
+        }
+      ],
+      "totals": {
+        "q": 0.514491510881669,
+        "g": 0.514491510881669,
+        "imports": 0.05144915108816406,
+        "wage": 0.20579660435265623,
+        "other_tax": 0.02572457554408203,
+        "bridge": 0.010289830217633522,
+        "surplus": -0.2932601612084227,
+        "va": -0.06173898131169153
+      },
+      "sha256": "ce93814832eb36f715af3f7ea5d1b7b7224e5310e507c450b7e794a74101dee2"
+    },
+    "diffusion:FINAL_DOMESTIC": {
+      "market": {
+        "before_sales": 36,
+        "after_sales": 45,
+        "nominal_delta_eur_per_cohort": "-866/25",
+        "price_component_eur_per_cohort": "-3566/25",
+        "volume_component_eur_per_cohort": "108",
+        "before_unsold": 33,
+        "after_unsold": 37
+      },
+      "flows": [
+        {
+          "kind": "FINAL_DOMESTIC",
+          "buyer": null,
+          "before_reference_mEUR": 4.32,
+          "after_reference_mEUR": 5.4,
+          "delta_reference_mEUR": 1.08
+        }
+      ],
+      "totals": {
+        "q": 1.5428571428568034,
+        "g": 1.5428571428568034,
+        "imports": 0.15428571428567928,
+        "wage": 0.6171428571427171,
+        "other_tax": 0.07714285714283964,
+        "bridge": 0.030857142857136477,
+        "surplus": 0.20057142857138643,
+        "va": 0.8948571428569494
+      },
+      "sha256": "0734004465aede4dad576c15ce78bb2665f3ec8f31c2247f443f52be511f5140"
+    },
+    "diffusion:INTERMEDIATE_DOMESTIC": {
+      "market": {
+        "before_sales": 36,
+        "after_sales": 45,
+        "nominal_delta_eur_per_cohort": "-866/25",
+        "price_component_eur_per_cohort": "-3566/25",
+        "volume_component_eur_per_cohort": "108",
+        "before_unsold": 33,
+        "after_unsold": 37
+      },
+      "flows": [
+        {
+          "kind": "INTERMEDIATE_DOMESTIC",
+          "buyer": "BUYER",
+          "before_reference_mEUR": 4.32,
+          "after_reference_mEUR": 5.4,
+          "delta_reference_mEUR": 1.08
+        }
+      ],
+      "totals": {
+        "q": 1.54471079578434,
+        "g": 1.54471079578434,
+        "imports": 0.15447107957843365,
+        "wage": 0.6178843183137346,
+        "other_tax": 0.07723553978921682,
+        "bridge": 0.030894215915687084,
+        "surplus": -0.8804851536164193,
+        "va": -0.18536529551346348
+      },
+      "sha256": "d2357596b3e1e33c0abc060dd651db05b3aa286c5ffb8e394cc9f5e6838e223f"
+    },
+    "constant_demand:FINAL_DOMESTIC": {
+      "market": {
+        "before_sales": 36,
+        "after_sales": 36,
+        "nominal_delta_eur_per_cohort": "-2861/25",
+        "price_component_eur_per_cohort": "-2861/25",
+        "volume_component_eur_per_cohort": "0",
+        "before_unsold": 33,
+        "after_unsold": 46
+      },
+      "flows": [
+        {
+          "kind": "FINAL_DOMESTIC",
+          "buyer": null,
+          "before_reference_mEUR": 4.32,
+          "after_reference_mEUR": 4.32,
+          "delta_reference_mEUR": 0
+        }
+      ],
+      "totals": {
+        "q": 0,
+        "g": 0,
+        "imports": 0,
+        "wage": 0,
+        "other_tax": 0,
+        "bridge": 0,
+        "surplus": 0,
+        "va": 0
+      },
+      "sha256": "ddc0cc0cfc690e8c3817d237e9c57b87d15410a857d288e8055f9ccfbb04a400"
+    },
+    "constant_demand:INTERMEDIATE_DOMESTIC": {
+      "market": {
+        "before_sales": 36,
+        "after_sales": 36,
+        "nominal_delta_eur_per_cohort": "-2861/25",
+        "price_component_eur_per_cohort": "-2861/25",
+        "volume_component_eur_per_cohort": "0",
+        "before_unsold": 33,
+        "after_unsold": 46
+      },
+      "flows": [
+        {
+          "kind": "INTERMEDIATE_DOMESTIC",
+          "buyer": "BUYER",
+          "before_reference_mEUR": 4.32,
+          "after_reference_mEUR": 4.32,
+          "delta_reference_mEUR": 0
+        }
+      ],
+      "totals": {
+        "q": 0,
+        "g": 0,
+        "imports": 0,
+        "wage": 0,
+        "other_tax": 0,
+        "bridge": 0,
+        "surplus": 0,
+        "va": 0
+      },
+      "sha256": "59608279ec6a634150df51635525a01742691908ef5ce58373440ba09deae94e"
+    },
+    "retain_gain:FINAL_DOMESTIC": {
+      "market": {
+        "before_sales": 36,
+        "after_sales": 36,
+        "nominal_delta_eur_per_cohort": "0",
+        "price_component_eur_per_cohort": "0",
+        "volume_component_eur_per_cohort": "0",
+        "before_unsold": 33,
+        "after_unsold": 33
+      },
+      "flows": [
+        {
+          "kind": "FINAL_DOMESTIC",
+          "buyer": null,
+          "before_reference_mEUR": 4.32,
+          "after_reference_mEUR": 4.32,
+          "delta_reference_mEUR": 0
+        }
+      ],
+      "totals": {
+        "q": 0,
+        "g": 0,
+        "imports": 0,
+        "wage": 0,
+        "other_tax": 0,
+        "bridge": 0,
+        "surplus": 0,
+        "va": 0
+      },
+      "sha256": "585c681eb73cb9515e63f83231b65793220fd4b370ae5dc911da6a58f345b11f"
+    },
+    "retain_gain:INTERMEDIATE_DOMESTIC": {
+      "market": {
+        "before_sales": 36,
+        "after_sales": 36,
+        "nominal_delta_eur_per_cohort": "0",
+        "price_component_eur_per_cohort": "0",
+        "volume_component_eur_per_cohort": "0",
+        "before_unsold": 33,
+        "after_unsold": 33
+      },
+      "flows": [
+        {
+          "kind": "INTERMEDIATE_DOMESTIC",
+          "buyer": "BUYER",
+          "before_reference_mEUR": 4.32,
+          "after_reference_mEUR": 4.32,
+          "delta_reference_mEUR": 0
+        }
+      ],
+      "totals": {
+        "q": 0,
+        "g": 0,
+        "imports": 0,
+        "wage": 0,
+        "other_tax": 0,
+        "bridge": 0,
+        "surplus": 0,
+        "va": 0
+      },
+      "sha256": "d69a63cc4d671fca2919dbb70be62835c5f3b3748bc8e77416c1c5aab57a173f"
+    }
+  },
+  "verification": {
+    "run": 45524872875,
+    "job": 138905605091,
+    "tested_commit": "96644876e5abb042003c742ced6cb23837ff0a1e",
+    "conclusion": "success",
+    "full_artifact": "https://github.com/octave-silicium/octave-lab/actions/runs/45524872875"
+  }
+}
