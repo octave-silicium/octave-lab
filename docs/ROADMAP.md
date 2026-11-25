@@ -135,3 +135,6 @@ Décision utilisateur : [UX-001](UX-001.md) et [RESULT-001](RESULT-001.md) compl
 
 ## Décision utilisateur validée — AUDIT-TRANSVERSAL-001
 Le 25/11/2026, validation des 27 exigences et de l'ordre de reprise. [Registre canonique](../governance/transversal_enrichment_v1.json). Prochain jalon : contrat économique commun état/acteurs/temps/contreparties, profils financiers et règles de couverture adversariale, avant G4 v0.7g. P0 empirique/G2 indépendant/validation produit restent en parallèle. Pas de nouveau moteur, de clôture de limitation ni de promotion de gate.
+
+## COMMON-STATE-001 v0.1 — contrat partagé (25/11/2026)
+[Contrat et recette](COMMON-STATE-001.md), [preuve](../audits/common_economic_state_v01_verified.json) : 13 tests ciblés et 4 cas analytiques, financement cash/apport/dette, événements et positions appariés, échéances inconnues explicites, AC01–AC27 contrôlés dans run_funding. Pas de migration des anciens moteurs, aucun gate promu. Suite : raccord v0.7f et données trimestrielles, financement-capital v0.7d, puis boucles communes. Recette générale en cours au relevé.
