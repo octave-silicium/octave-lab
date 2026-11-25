@@ -138,3 +138,6 @@ Le 25/11/2026, validation des 27 exigences et de l'ordre de reprise. [Registre c
 
 ## COMMON-STATE-001 v0.1 — contrat partagé (25/11/2026)
 [Contrat et recette](COMMON-STATE-001.md), [preuve](../audits/common_economic_state_v01_verified.json) : 13 tests ciblés et 4 cas analytiques, financement cash/apport/dette, événements et positions appariés, échéances inconnues explicites, AC01–AC27 contrôlés dans run_funding. Pas de migration des anciens moteurs, aucun gate promu. Suite : raccord v0.7f et données trimestrielles, financement-capital v0.7d, puis boucles communes. Recette générale en cours au relevé.
+
+## COMMON-STATE v0.2 / G4 v0.7g1 (25/11/2026)
+[Contrat et recette](COMMON-STATE-001.md), [preuve](../audits/common_economic_state_v02_g07g1_verified.json) : 23 tests ciblés réussis, rapprochement synthétique échéances→stress→plafonds→réservation→livraison→paiement→capital. Diagnostic Eurostat F4 partiel et F5 total indisponible, pas admission. Suite G4 v0.7g2 : sources annuelles bilatérales et bilans trimestriels, puis règlement, échéanciers, financement-capital pluripériode et sources alternatives. P0/G2/produit en parallèle, aucun gate promu.
