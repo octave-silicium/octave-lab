@@ -1,0 +1,287 @@
+{
+  "fixture": "W002_MAKE_BUY_SYNTHETIC",
+  "cases": {
+    "make_manual": {
+      "quantities": {
+        "total": 45,
+        "external_before": 45,
+        "external_after": 33,
+        "internal_before": 0,
+        "internal_after": 12
+      },
+      "direct_chain": {
+        "before": {
+          "external_transfer_eur": "9934/25",
+          "buyer_cash_eur": "9934/25",
+          "seller_cash_cost_eur": "8885/36",
+          "consolidated_cash_cost_eur": "8885/36",
+          "consolidated_payroll_eur": "0",
+          "paid_hours": "0",
+          "active_hours": "0",
+          "external_unsold": 37,
+          "internal_unused": 0
+        },
+        "after": {
+          "external_transfer_eur": "7274/25",
+          "buyer_cash_eur": "32572/75",
+          "seller_cash_cost_eur": "8885/36",
+          "consolidated_cash_cost_eur": "14045/36",
+          "consolidated_payroll_eur": "80",
+          "paid_hours": "2",
+          "active_hours": "191/120",
+          "external_unsold": 49,
+          "internal_unused": 11
+        }
+      },
+      "recurring_buyer_reference_mEUR": {
+        "external_delta": "-18/25",
+        "domestic_inputs_delta": "-53/120",
+        "imported_inputs_delta": "23/600",
+        "payroll_delta": "2/5",
+        "gross_surplus_residual_at_base_output": "1/300"
+      },
+      "capital_separate_mEUR": {
+        "investment_delta": "0",
+        "transition_delta": "0"
+      },
+      "totals": {
+        "q": -0.6802880097401385,
+        "g": -0.6802880097401385,
+        "imports": -0.02965028872537978,
+        "wage": 0.16237062875058683,
+        "other_tax": -0.0340144004870071,
+        "bridge": -0.013605760194802308,
+        "surplus": -0.08510017933155822,
+        "va": 0.043256048932036606
+      },
+      "sha256": "a4cddfc5ab9f214472789c72ff19df4b2639ba3eab42d90f379861050449c569"
+    },
+    "make_automated": {
+      "quantities": {
+        "total": 45,
+        "external_before": 45,
+        "external_after": 33,
+        "internal_before": 0,
+        "internal_after": 12
+      },
+      "direct_chain": {
+        "before": {
+          "external_transfer_eur": "9934/25",
+          "buyer_cash_eur": "9934/25",
+          "seller_cash_cost_eur": "8885/36",
+          "consolidated_cash_cost_eur": "8885/36",
+          "consolidated_payroll_eur": "0",
+          "paid_hours": "0",
+          "active_hours": "0",
+          "external_unsold": 37,
+          "internal_unused": 0
+        },
+        "after": {
+          "external_transfer_eur": "7274/25",
+          "buyer_cash_eur": "331609/900",
+          "seller_cash_cost_eur": "8885/36",
+          "consolidated_cash_cost_eur": "3243/10",
+          "consolidated_payroll_eur": "0",
+          "paid_hours": "0",
+          "active_hours": "0",
+          "external_unsold": 49,
+          "internal_unused": 11
+        }
+      },
+      "recurring_buyer_reference_mEUR": {
+        "external_delta": "-18/25",
+        "domestic_inputs_delta": "-31051/72000",
+        "imported_inputs_delta": "7109/72000",
+        "payroll_delta": "0",
+        "gross_surplus_residual_at_base_output": "11971/36000"
+      },
+      "capital_separate_mEUR": {
+        "investment_delta": "2/5",
+        "transition_delta": "1/50"
+      },
+      "totals": {
+        "q": -0.6642721564606404,
+        "g": -0.6642721564606404,
+        "imports": 0.03242634766149166,
+        "wage": -0.23249525476121846,
+        "other_tax": -0.03321360782303273,
+        "bridge": -0.013285443129212648,
+        "surplus": 0.24656795806347276,
+        "va": -0.019140904520753566
+      },
+      "sha256": "337e59d47c888ab79f0823c5e9c0658c79550d4d7259d6fd62138c145975a573"
+    },
+    "buy_from_manual": {
+      "quantities": {
+        "total": 45,
+        "external_before": 33,
+        "external_after": 45,
+        "internal_before": 12,
+        "internal_after": 0
+      },
+      "direct_chain": {
+        "before": {
+          "external_transfer_eur": "7274/25",
+          "buyer_cash_eur": "32572/75",
+          "seller_cash_cost_eur": "8885/36",
+          "consolidated_cash_cost_eur": "14045/36",
+          "consolidated_payroll_eur": "80",
+          "paid_hours": "2",
+          "active_hours": "191/120",
+          "external_unsold": 49,
+          "internal_unused": 11
+        },
+        "after": {
+          "external_transfer_eur": "9934/25",
+          "buyer_cash_eur": "9934/25",
+          "seller_cash_cost_eur": "8885/36",
+          "consolidated_cash_cost_eur": "8885/36",
+          "consolidated_payroll_eur": "0",
+          "paid_hours": "0",
+          "active_hours": "0",
+          "external_unsold": 37,
+          "internal_unused": 0
+        }
+      },
+      "recurring_buyer_reference_mEUR": {
+        "external_delta": "18/25",
+        "domestic_inputs_delta": "53/120",
+        "imported_inputs_delta": "-23/600",
+        "payroll_delta": "-2/5",
+        "gross_surplus_residual_at_base_output": "-1/300"
+      },
+      "capital_separate_mEUR": {
+        "investment_delta": "0",
+        "transition_delta": "0"
+      },
+      "totals": {
+        "q": 0.6786882324432497,
+        "g": 0.6786882324432497,
+        "imports": 0.029580562582756542,
+        "wage": -0.16198879511341602,
+        "other_tax": 0.033934411622162486,
+        "bridge": 0.013573764648865616,
+        "surplus": 0.08490005624705077,
+        "va": -0.043154327244195656
+      },
+      "sha256": "cdfae2f080cd9f037483a18f2a18814efaec9fdcf62522604d1fa8c1cfac673a"
+    },
+    "buy_from_automated": {
+      "quantities": {
+        "total": 45,
+        "external_before": 33,
+        "external_after": 45,
+        "internal_before": 12,
+        "internal_after": 0
+      },
+      "direct_chain": {
+        "before": {
+          "external_transfer_eur": "7274/25",
+          "buyer_cash_eur": "331609/900",
+          "seller_cash_cost_eur": "8885/36",
+          "consolidated_cash_cost_eur": "3243/10",
+          "consolidated_payroll_eur": "0",
+          "paid_hours": "0",
+          "active_hours": "0",
+          "external_unsold": 49,
+          "internal_unused": 11
+        },
+        "after": {
+          "external_transfer_eur": "9934/25",
+          "buyer_cash_eur": "9934/25",
+          "seller_cash_cost_eur": "8885/36",
+          "consolidated_cash_cost_eur": "8885/36",
+          "consolidated_payroll_eur": "0",
+          "paid_hours": "0",
+          "active_hours": "0",
+          "external_unsold": 37,
+          "internal_unused": 0
+        }
+      },
+      "recurring_buyer_reference_mEUR": {
+        "external_delta": "18/25",
+        "domestic_inputs_delta": "31051/72000",
+        "imported_inputs_delta": "-7109/72000",
+        "payroll_delta": "0",
+        "gross_surplus_residual_at_base_output": "-11971/36000"
+      },
+      "capital_separate_mEUR": {
+        "investment_delta": "-2/5",
+        "transition_delta": "-1/50"
+      },
+      "totals": {
+        "q": 0.6626955287282499,
+        "g": 0.6626955287282499,
+        "imports": -0.0323493848107006,
+        "wage": 0.23194343505489456,
+        "other_tax": 0.033134776436411606,
+        "bridge": 0.013253910574565264,
+        "surplus": -0.24598273726742903,
+        "va": 0.019095474223888687
+      },
+      "sha256": "a1fb349dffabd2121274a9c10ad5bbf59fadffa080924ae13de03d7684d32cdc"
+    },
+    "manual_to_automated": {
+      "quantities": {
+        "total": 45,
+        "external_before": 33,
+        "external_after": 33,
+        "internal_before": 12,
+        "internal_after": 12
+      },
+      "direct_chain": {
+        "before": {
+          "external_transfer_eur": "7274/25",
+          "buyer_cash_eur": "32572/75",
+          "seller_cash_cost_eur": "8885/36",
+          "consolidated_cash_cost_eur": "14045/36",
+          "consolidated_payroll_eur": "80",
+          "paid_hours": "2",
+          "active_hours": "191/120",
+          "external_unsold": 49,
+          "internal_unused": 11
+        },
+        "after": {
+          "external_transfer_eur": "7274/25",
+          "buyer_cash_eur": "331609/900",
+          "seller_cash_cost_eur": "8885/36",
+          "consolidated_cash_cost_eur": "3243/10",
+          "consolidated_payroll_eur": "0",
+          "paid_hours": "0",
+          "active_hours": "0",
+          "external_unsold": 49,
+          "internal_unused": 11
+        }
+      },
+      "recurring_buyer_reference_mEUR": {
+        "external_delta": "0",
+        "domestic_inputs_delta": "749/72000",
+        "imported_inputs_delta": "4349/72000",
+        "payroll_delta": "-2/5",
+        "gross_surplus_residual_at_base_output": "11851/36000"
+      },
+      "capital_separate_mEUR": {
+        "investment_delta": "2/5",
+        "transition_delta": "1/50"
+      },
+      "totals": {
+        "q": 0.016004448757257705,
+        "g": 0.016004448757257705,
+        "imports": 0.062003884088825956,
+        "wage": -0.39440282309987396,
+        "other_tax": 0.0008002224378627076,
+        "bridge": 0.0003200889751453495,
+        "surplus": 0.3312786275977828,
+        "va": -0.06232397306422399
+      },
+      "sha256": "8486dd2889fe3689852435e8291ce498da731b9156f164e72d0dac06601ed743"
+    }
+  },
+  "verification": {
+    "run": 45525294215,
+    "job": 138907007186,
+    "tested_commit": "b19691dafada0e4bd666b1e105b2a940fe390d97",
+    "conclusion": "test_and_pilot_steps_success",
+    "artifact": "https://github.com/octave-silicium/octave-lab/actions/runs/45525294215"
+  }
+}
