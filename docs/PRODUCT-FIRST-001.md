@@ -32,3 +32,6 @@ V0 : inspecter le pilote NACE J et les contrats existants, rejouer les données 
 
 ## Point d'arrêt demandé le 25/11/2026
 Interprétation opérationnelle : E-G5 (investigation reproductible, UX et droits) doit être atteint avant E-G6 (validation commerciale et exploitation durable). La condition « si c'était tout ce qui restait » n'est pas satisfaite : E-G0 à E-G5 et G-M restent partiels/non franchis. Ne pas les déclarer achevés à partir des recettes synthétiques. Poursuivre les lots V0–V4 nécessaires, conserver les critères de gate et le backlog intégral. Aucune publication ni sollicitation commerciale automatique. V0 ajoute un replay des sources indépendamment, sans nouvelles valeurs dans les logs ou artefacts publics.
+
+### V0 — Rejeu vérifié, qualification incomplète
+[Preuve](../audits/vertical_001_v0_replay_verified.json), [CI](https://github.com/octave-silicium/octave-lab/actions/runs/45570629671) réussie. Trois sources récupérées et parsées, octets SHA256 et résultats sélectionnés identiques aux archives du 24/11. Deux lignées distinctes, comparaisons adoption bloquées, DPAE 2025 exclues. Empreintes des six registres conservées. Pas de nouveaux chiffres publiés ni d'archive brute durable créée. Droits et revue indépendante encore ouverts; V0 partiellement vérifié, pas de promotion de gate. Suite : V1 descriptive sous contrôle des droits, puis V2–V4.
