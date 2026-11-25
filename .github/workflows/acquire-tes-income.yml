@@ -1,0 +1,27 @@
+name: G4 TES income qualification
+on:
+  push:
+    paths:
+      - 'pipeline/acquire_tes_income.py'
+      - 'pipeline/audit_tes_income.py'
+      - '.github/workflows/acquire-tes-income.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  income:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install openpyxl==3.1.5 numpy==2.2.6
+      - run: python pipeline/acquire_tes_income.py
+      - name: Preserve raw and profile
+        uses: actions/upload-artifact@v4
+        with:
+          name: insee-eurostat-income-2022
+          path: tes-income/
+          retention-days: 30
