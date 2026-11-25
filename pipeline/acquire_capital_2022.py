@@ -24,12 +24,14 @@ def main():
         elif name.endswith(".zip"):
             with zipfile.ZipFile(io.BytesIO(raw)) as z:
                 if sum(i.file_size for i in z.infolist())>100_000_000 or z.testzip():raise ValueError("ZIP")
-                seen=set()
+                seen=set();profile['stock_archive_members']=[]
                 for member in z.infolist():
                     if member.is_dir():continue
                     p=PurePosixPath(member.filename)
-                    if p.is_absolute() or ".." in p.parts or not p.name.endswith(".xlsx") or p.name in seen:raise ValueError("ZIP_MEMBER")
-                    seen.add(p.name);wb(p.name,z.read(member))
+                    if p.is_absolute() or ".." in p.parts or p.name in seen:raise ValueError("ZIP_MEMBER")
+                    seen.add(p.name);profile["stock_archive_members"].append({"name":member.filename,"bytes":member.file_size,"parsed":p.name.lower().endswith(".xlsx")})
+                    if p.name.lower().endswith(".xlsx"):wb(p.name,z.read(member))
+                if not any(x["parsed"] for x in profile["stock_archive_members"]):raise ValueError("NO_WORKBOOKS")
         else:
             e=json.loads(raw);p=acq.euro(raw)
             if math.prod(e["size"])<len(e["value"]):raise ValueError("DIMENSIONS")
