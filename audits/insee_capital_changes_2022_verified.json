@@ -1,0 +1,440 @@
+{
+  "summary": {
+    "rebase_count": 370,
+    "improved": 367,
+    "median_before": "33.7",
+    "median_after": "0.543224455416741131713775",
+    "max_after": "2337.179453384817606477897",
+    "growth_count": 740,
+    "max_growth_difference_pp": "0.702429459434174904661225600",
+    "chain_count": 370,
+    "max_chain_error": "0.05",
+    "wealth_rows": 73,
+    "wealth_residuals_over_3_MEUR": 13,
+    "flow_count": 75,
+    "asset_flow_count": 6
+  },
+  "national_rebase": [
+    {
+      "branch": "_T",
+      "asset": "N11N",
+      "insee_2022": "8285000.2",
+      "eurostat_2022": "8571772.7",
+      "insee_2020_current": "8293897.3",
+      "insee_2020_volume": "8017141.7",
+      "rebased": "8571002.404669916212158255853",
+      "raw_error": "-286772.5",
+      "rebased_error": "-770.295330083787841744147"
+    },
+    {
+      "branch": "_T",
+      "asset": "N11G",
+      "insee_2022": "12577440.8",
+      "eurostat_2022": "12994381.8",
+      "insee_2020_current": "12574203",
+      "insee_2020_volume": "12170961.5",
+      "rebased": "12994149.54518444578105024817",
+      "raw_error": "-416941.0",
+      "rebased_error": "-232.25481555421894975183"
+    },
+    {
+      "branch": "_T",
+      "asset": "N1132N",
+      "insee_2022": "35279.3",
+      "eurostat_2022": "36680.6",
+      "insee_2020_current": "33211.6",
+      "insee_2020_volume": "31916",
+      "rebased": "36711.43",
+      "raw_error": "-1401.3",
+      "rebased_error": "30.83"
+    },
+    {
+      "branch": "_T",
+      "asset": "N1132G",
+      "insee_2022": "66222.3",
+      "eurostat_2022": "68877.2",
+      "insee_2020_current": "62687",
+      "insee_2020_volume": "60241.5",
+      "rebased": "68910.59020940713627648713926",
+      "raw_error": "-2654.9",
+      "rebased_error": "33.39020940713627648713926"
+    },
+    {
+      "branch": "_T",
+      "asset": "N1173N",
+      "insee_2022": "173071.9",
+      "eurostat_2022": "173625.6",
+      "insee_2020_current": "149153.4",
+      "insee_2020_volume": "148612.8",
+      "rebased": "173701.4734226123187235554407",
+      "raw_error": "-553.7",
+      "rebased_error": "75.8734226123187235554407"
+    },
+    {
+      "branch": "_T",
+      "asset": "N1173G",
+      "insee_2022": "326992.2",
+      "eurostat_2022": "328088.0",
+      "insee_2020_current": "282270",
+      "insee_2020_volume": "281235.4",
+      "rebased": "328195.1286857913335234469060",
+      "raw_error": "-1095.8",
+      "rebased_error": "107.1286857913335234469060"
+    },
+    {
+      "branch": "_T",
+      "asset": "N1171N",
+      "insee_2022": "222213.8",
+      "eurostat_2022": "226530.8",
+      "insee_2020_current": "224414.5",
+      "insee_2020_volume": "220186.2",
+      "rebased": "226481.0365958447895463021752",
+      "raw_error": "-4317.0",
+      "rebased_error": "-49.7634041552104536978248"
+    },
+    {
+      "branch": "_T",
+      "asset": "N1171G",
+      "insee_2022": "439888.3",
+      "eurostat_2022": "448371.1",
+      "insee_2020_current": "442995",
+      "insee_2020_volume": "434703.8",
+      "rebased": "448278.3850946322530421864267",
+      "raw_error": "-8482.8",
+      "rebased_error": "-92.7149053677469578135733"
+    },
+    {
+      "branch": "_T",
+      "asset": "N111N",
+      "insee_2022": "4882414.6",
+      "eurostat_2022": "5084848.8",
+      "insee_2020_current": "4885868.6",
+      "insee_2020_volume": "4693314.2",
+      "rebased": "5082727.294567570183134127266",
+      "raw_error": "-202434.2",
+      "rebased_error": "-2121.505432429816865872734"
+    },
+    {
+      "branch": "_T",
+      "asset": "N111G",
+      "insee_2022": "6199768.4",
+      "eurostat_2022": "6457235.1",
+      "insee_2020_current": "6205837",
+      "insee_2020_volume": "5960551.6",
+      "rebased": "6454897.920546615182393522103",
+      "raw_error": "-257466.7",
+      "rebased_error": "-2337.179453384817606477897"
+    },
+    {
+      "branch": "_T",
+      "asset": "N117N",
+      "insee_2022": "401096.8",
+      "eurostat_2022": "405898.4",
+      "insee_2020_current": "378904.8",
+      "insee_2020_volume": "374152.8",
+      "rebased": "406191.0074831459232698512479",
+      "raw_error": "-4801.6",
+      "rebased_error": "292.6074831459232698512479"
+    },
+    {
+      "branch": "_T",
+      "asset": "N117G",
+      "insee_2022": "778331.6",
+      "eurostat_2022": "787784.0",
+      "insee_2020_current": "736120",
+      "insee_2020_volume": "726826.9",
+      "rebased": "788283.2313883814701959985245",
+      "raw_error": "-9452.4",
+      "rebased_error": "499.2313883814701959985245"
+    }
+  ],
+  "national_wealth": [
+    {
+      "opening": "8966184.000",
+      "investment": "623312.000",
+      "ccf_signed": "-497833.000",
+      "revaluation": "536073.000",
+      "other_changes": null,
+      "closing": "9627619.000",
+      "sector": "S1",
+      "asset": "N11",
+      "residual_after_reported_components": "-117.000",
+      "missing_components": [
+        "other_changes"
+      ],
+      "status": "UNRESOLVED_OR_UNREPORTED"
+    },
+    {
+      "opening": "7791142.000",
+      "investment": "352520.00",
+      "ccf_signed": "-250036.000",
+      "revaluation": "489845.000",
+      "other_changes": null,
+      "closing": "8383474.000",
+      "sector": "S1",
+      "asset": "N11K",
+      "residual_after_reported_components": "3.000",
+      "missing_components": [
+        "other_changes"
+      ],
+      "status": "WITHIN_ROUNDING_OR_UNREPORTED"
+    },
+    {
+      "opening": "5306876.000",
+      "investment": "187329.000",
+      "ccf_signed": "-101441.000",
+      "revaluation": "324565.000",
+      "other_changes": null,
+      "closing": "5717329.000",
+      "sector": "S1",
+      "asset": "N111",
+      "residual_after_reported_components": "0.000",
+      "missing_components": [
+        "other_changes"
+      ],
+      "status": "WITHIN_ROUNDING_OR_UNREPORTED"
+    },
+    {
+      "opening": "2484266.000",
+      "investment": "165192.000",
+      "ccf_signed": "-148595.000",
+      "revaluation": "165280.00",
+      "other_changes": null,
+      "closing": "2666146.000",
+      "sector": "S1",
+      "asset": "N112",
+      "residual_after_reported_components": "3.000",
+      "missing_components": [
+        "other_changes"
+      ],
+      "status": "WITHIN_ROUNDING_OR_UNREPORTED"
+    },
+    {
+      "opening": "846855.000",
+      "investment": "104102.000",
+      "ccf_signed": "-93772.000",
+      "revaluation": "52138.000",
+      "other_changes": null,
+      "closing": "909325.000",
+      "sector": "S1",
+      "asset": "N1121",
+      "residual_after_reported_components": "2.000",
+      "missing_components": [
+        "other_changes"
+      ],
+      "status": "WITHIN_ROUNDING_OR_UNREPORTED"
+    },
+    {
+      "opening": "1637411.000",
+      "investment": "61090.00",
+      "ccf_signed": "-54823.000",
+      "revaluation": "113142.000",
+      "other_changes": null,
+      "closing": "1756821.000",
+      "sector": "S1",
+      "asset": "N1122",
+      "residual_after_reported_components": "1.000",
+      "missing_components": [
+        "other_changes"
+      ],
+      "status": "WITHIN_ROUNDING_OR_UNREPORTED"
+    },
+    {
+      "opening": "712730.00",
+      "investment": "132373.000",
+      "ccf_signed": "-125396.000",
+      "revaluation": "31895.000",
+      "other_changes": null,
+      "closing": "751628.000",
+      "sector": "S1",
+      "asset": "N113",
+      "residual_after_reported_components": "26.000",
+      "missing_components": [
+        "other_changes"
+      ],
+      "status": "UNRESOLVED_OR_UNREPORTED"
+    },
+    {
+      "opening": "187200.0",
+      "investment": "42616.000",
+      "ccf_signed": "-44103.000",
+      "revaluation": "9052.000",
+      "other_changes": null,
+      "closing": "194768.000",
+      "sector": "S1",
+      "asset": "N1131",
+      "residual_after_reported_components": "3.000",
+      "missing_components": [
+        "other_changes"
+      ],
+      "status": "WITHIN_ROUNDING_OR_UNREPORTED"
+    },
+    {
+      "opening": "35804.000",
+      "investment": "12030.00",
+      "ccf_signed": "-10260.00",
+      "revaluation": "-206.000",
+      "other_changes": null,
+      "closing": "37392.000",
+      "sector": "S1",
+      "asset": "N1132",
+      "residual_after_reported_components": "24.000",
+      "missing_components": [
+        "other_changes"
+      ],
+      "status": "UNRESOLVED_OR_UNREPORTED"
+    },
+    {
+      "opening": "489726.000",
+      "investment": "77727.000",
+      "ccf_signed": "-71033.000",
+      "revaluation": "23049.000",
+      "other_changes": null,
+      "closing": "519469.000",
+      "sector": "S1",
+      "asset": "N1139",
+      "residual_after_reported_components": "0.000",
+      "missing_components": [
+        "other_changes"
+      ],
+      "status": "WITHIN_ROUNDING_OR_UNREPORTED"
+    },
+    {
+      "opening": "41092.000",
+      "investment": "4863.000",
+      "ccf_signed": "-4147.000",
+      "revaluation": "1383.000",
+      "other_changes": null,
+      "closing": "43191.000",
+      "sector": "S1",
+      "asset": "N114",
+      "residual_after_reported_components": "0.000",
+      "missing_components": [
+        "other_changes"
+      ],
+      "status": "WITHIN_ROUNDING_OR_UNREPORTED"
+    },
+    {
+      "opening": "21931.000",
+      "investment": "1161.000",
+      "ccf_signed": "-725.000",
+      "revaluation": "2071.000",
+      "other_changes": null,
+      "closing": "24438.000",
+      "sector": "S1",
+      "asset": "N115",
+      "residual_after_reported_components": "0.000",
+      "missing_components": [
+        "other_changes"
+      ],
+      "status": "WITHIN_ROUNDING_OR_UNREPORTED"
+    },
+    {
+      "opening": "399289.000",
+      "investment": "132395.000",
+      "ccf_signed": "-117528.000",
+      "revaluation": "10878.000",
+      "other_changes": null,
+      "closing": "424887.000",
+      "sector": "S1",
+      "asset": "N117",
+      "residual_after_reported_components": "-147.000",
+      "missing_components": [
+        "other_changes"
+      ],
+      "status": "UNRESOLVED_OR_UNREPORTED"
+    },
+    {
+      "opening": "230588.000",
+      "investment": "47730.00",
+      "ccf_signed": "-46809.000",
+      "revaluation": "6817.000",
+      "other_changes": null,
+      "closing": "238325.000",
+      "sector": "S1",
+      "asset": "N1171",
+      "residual_after_reported_components": "-1.000",
+      "missing_components": [
+        "other_changes"
+      ],
+      "status": "WITHIN_ROUNDING_OR_UNREPORTED"
+    },
+    {
+      "opening": "163050.00",
+      "investment": "80626.000",
+      "ccf_signed": "-66893.000",
+      "revaluation": "4067.000",
+      "other_changes": null,
+      "closing": "180704.000",
+      "sector": "S1",
+      "asset": "N1173",
+      "residual_after_reported_components": "-146.000",
+      "missing_components": [
+        "other_changes"
+      ],
+      "status": "UNRESOLVED_OR_UNREPORTED"
+    },
+    {
+      "opening": "5651.000",
+      "investment": "4039.000",
+      "ccf_signed": "-3826.000",
+      "revaluation": "-6.000",
+      "other_changes": null,
+      "closing": "5859.000",
+      "sector": "S1",
+      "asset": "N1174",
+      "residual_after_reported_components": "1.000",
+      "missing_components": [
+        "other_changes"
+      ],
+      "status": "WITHIN_ROUNDING_OR_UNREPORTED"
+    }
+  ],
+  "asset_flows": [
+    {
+      "asset": "N11G",
+      "insee": "623312.000",
+      "eurostat": "623311.7",
+      "difference": "0.300"
+    },
+    {
+      "asset": "N111G",
+      "insee": "187329.000",
+      "eurostat": "187328.9",
+      "difference": "0.100"
+    },
+    {
+      "asset": "N1132G",
+      "insee": "12030.00",
+      "eurostat": "12029.5",
+      "difference": "0.50"
+    },
+    {
+      "asset": "N117G",
+      "insee": "132395.000",
+      "eurostat": "132394.7",
+      "difference": "0.300"
+    },
+    {
+      "asset": "N1171G",
+      "insee": "47730.00",
+      "eurostat": "47729.8",
+      "difference": "0.20"
+    },
+    {
+      "asset": "N1173G",
+      "insee": "80626.000",
+      "eurostat": "80625.8",
+      "difference": "0.200"
+    }
+  ],
+  "verification_receipt": {
+    "run": 45544771040,
+    "job": 138971615498,
+    "commit": "e2ca4df061541caa29a4bc851cda420460d4528c",
+    "conclusion": "audit_step_success",
+    "acquisition_run": 45544475881,
+    "raw_archive": "1v4uwIyu1lbHG7KKK2TbRTtqpY-L40H92",
+    "raw_archive_sha256": "0f1212ab8f4aad00435bcfe6510cba0c8253035adf22c9727b414d30b0fbcac1"
+  }
+}
