@@ -1,6 +1,6 @@
 {
   "id": "LIMITATIONS-001",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "date": "2026-11-25",
   "baseline_commit": "5bd37a858e384fdf3a159564975623b8ac957663",
   "status": "INITIAL_CONSOLIDATION_REVIEW_PENDING",
@@ -833,7 +833,17 @@
         "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
       ],
       "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
-      "resolution_status": "PARTIAL"
+      "resolution_status": "PARTIAL",
+      "progress_evidence": [
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7a",
+          "path": "audits/economic_sector_capital_v07a_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45543405603",
+          "scope": "Dépréciation de la valeur résiduelle et durée de vie intégrées au capital sectoriel synthétique. Raccord VAN, liquidité, financement et valeur terminale réelle à construire."
+        }
+      ],
+      "remaining": "Dépréciation de la valeur résiduelle et durée de vie intégrées au capital sectoriel synthétique. Raccord VAN, liquidité, financement et valeur terminale réelle à construire."
     },
     {
       "id": "LIM-F05",
@@ -1171,7 +1181,17 @@
         "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
       ],
       "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
-      "resolution_status": "PARTIAL"
+      "resolution_status": "PARTIAL",
+      "progress_evidence": [
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7a",
+          "path": "audits/economic_sector_capital_v07a_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45543405603",
+          "scope": "Investissement domestique servi distingué des autres emplois finals, intégré une seule fois à la demande. Pont avec coûts fournisseurs G3, consolidation make/buy et valorisation complète des actifs restent ouverts."
+        }
+      ],
+      "remaining": "Investissement domestique servi distingué des autres emplois finals, intégré une seule fois à la demande. Pont avec coûts fournisseurs G3, consolidation make/buy et valorisation complète des actifs restent ouverts."
     },
     {
       "id": "LIM-S06",
@@ -1241,7 +1261,17 @@
         "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
       ],
       "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
-      "resolution_status": "PARTIAL"
+      "resolution_status": "PARTIAL",
+      "progress_evidence": [
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7a",
+          "path": "audits/economic_sector_capital_v07a_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45543405603",
+          "scope": "Stock d'actifs et capital acquis non opérationnel conservés par période; non assimilés aux stocks de produits. Stocks domestiques/finals, coûts de stockage et commandes non servies reportées restent ouverts."
+        }
+      ],
+      "remaining": "Stock d'actifs et capital acquis non opérationnel conservés par période; non assimilés aux stocks de produits. Stocks domestiques/finals, coûts de stockage et commandes non servies reportées restent ouverts."
     },
     {
       "id": "LIM-S08",
@@ -1316,7 +1346,17 @@
         "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
       ],
       "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
-      "resolution_status": "PARTIAL"
+      "resolution_status": "PARTIAL",
+      "progress_evidence": [
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7a",
+          "path": "audits/economic_sector_capital_v07a_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45543405603",
+          "scope": "Capital par générations, quantité, capacité, valeur résiduelle, dépréciation, retrait en fin de vie, acquisition effective rationnée et délai de mise en service intégrés à G4. Financement, retrait anticipé, capital importé, complémentarités et paramètres observés restent à construire."
+        }
+      ],
+      "remaining": "Capital par générations, quantité, capacité, valeur résiduelle, dépréciation, retrait en fin de vie, acquisition effective rationnée et délai de mise en service intégrés à G4. Financement, retrait anticipé, capital importé, complémentarités et paramètres observés restent à construire."
     },
     {
       "id": "LIM-S10",
@@ -1501,9 +1541,16 @@
           "path": "audits/insee_tee_valuation_2022_verified.json",
           "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45542924734",
           "scope": "Bornes marginales D1 branche→institution et flux institutionnels; absence de matrice identifiée, pas encore de rétroaction sur revenus institutionnels calibrée."
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7a",
+          "path": "audits/economic_sector_capital_v07a_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45543405603",
+          "scope": "Retour de l'acquisition effective sur la capacité future démontré. Boucles conjointes revenu-prix-capacité-stock-financement et calibration restent ouvertes."
         }
       ],
-      "remaining": "Bornes marginales D1 branche→institution et flux institutionnels; absence de matrice identifiée, pas encore de rétroaction sur revenus institutionnels calibrée."
+      "remaining": "Retour de l'acquisition effective sur la capacité future démontré. Boucles conjointes revenu-prix-capacité-stock-financement et calibration restent ouvertes."
     },
     {
       "id": "LIM-S13",
@@ -1682,9 +1729,16 @@
           "path": "audits/insee_tee_valuation_2022_verified.json",
           "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45542924734",
           "scope": "Bornes D1/D4/D42/D5/D61/D62/D7 à partir des marges observées, résidus explicites; propriété bilatérale, patrimoine dynamique, fiscalité et financement non identifiés."
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7a",
+          "path": "audits/economic_sector_capital_v07a_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45543405603",
+          "scope": "Valeur résiduelle des actifs synthétiques distincte des flux et de la capacité; pas de patrimoine institutionnel, propriété effective, financement ni CCF SEC 2010."
         }
       ],
-      "remaining": "Bornes D1/D4/D42/D5/D61/D62/D7 à partir des marges observées, résidus explicites; propriété bilatérale, patrimoine dynamique, fiscalité et financement non identifiés."
+      "remaining": "Valeur résiduelle des actifs synthétiques distincte des flux et de la capacité; pas de patrimoine institutionnel, propriété effective, financement ni CCF SEC 2010."
     },
     {
       "id": "LIM-T01",
@@ -2026,5 +2080,5 @@
     }
   ],
   "dependency_semantics": "Dependencies constrain closure, not parallel development; not a promise of dates. Publication restrictions apply to affected claims, not blanket suppression of safe synthetic demonstrations.",
-  "last_milestone": "G4 v0.6e"
+  "last_milestone": "G4 v0.7a"
 }
