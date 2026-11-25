@@ -19,6 +19,10 @@ jobs:
           python-version: '3.12'
       - run: python -m pip install openpyxl==3.1.5
       - run: python -m pipeline.acquire_capital_2022
+      - name: Audit pinned capital accounts
+        run: |
+          python -m pipeline.audit_capital_2022 capital-2022 > capital-2022/audit.json
+          python -c 'import json; a=json.load(open("capital-2022/audit.json")); print(json.dumps({k:v for k,v in a.items() if k not in ("stock_comparisons","missing_comparisons","branch_rows")},indent=2)); print(json.dumps({k:{x:y for x,y in v.items() if x!="rows"} for k,v in a["stock_comparisons"].items()},indent=2)); print(json.dumps([r for r in a["branch_rows"] if r["code"] in ("CI","JC","MA","MB","LZ")],indent=2))'
       - uses: actions/upload-artifact@v4
         if: always()
         with:
