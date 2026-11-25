@@ -1,0 +1,588 @@
+{
+  "status": "EMPIRICAL_BASKET_HYPOTHETICAL_BUDGET_SCENARIOS",
+  "publication": "BLOCK_PUBLICATION",
+  "source_hashes": {
+    "standard": "1a9d587e3a70590a42210f10bca15a63dd85d18dc9946ca654d77e50970a29ed",
+    "symmetric": "db4189aa708c10122dadf09c17f8bb49e1dd45561f93bf5527abe8473a29aa73",
+    "eurostat": "5c822d35fed4fa677d215a958be4730679168700a71d523d8479fb0c24608772"
+  },
+  "basket": {
+    "domestic": 1060936.689,
+    "direct_import": 168540.41999999998,
+    "total": 1229477.109,
+    "domestic_cells": "CH11:CH47",
+    "import_cells": "AY11:AY47",
+    "valuation": "basic prices; margins reallocated to trade and transport products; net product taxes excluded"
+  },
+  "cases": {
+    "identity": {
+      "sha256": "cd6f1adcbced7bd8cd96d7ce154a8fac1f2f2711bc183111d5f2ba8a6932d310",
+      "budget": {
+        "resources": 1229477.109,
+        "spendable": 1229477.109,
+        "domestic": 1060936.689,
+        "direct_import": 168540.42,
+        "unspent": 0,
+        "minimum_reserve": 0,
+        "additional_unspent": 0
+      },
+      "fixed_basket_price_effect": 0,
+      "household_volume_change": 2.3283064365386963e-10,
+      "domestic_household_volume_change": 9.788481136752125e-11,
+      "imported_household_volume_change": 1.9326762412674725e-12,
+      "top_domestic_changes": [
+        [
+          "GZ",
+          2.9103830456733704e-11
+        ],
+        [
+          "IZ",
+          2.9103830456733704e-11
+        ],
+        [
+          "DZ",
+          2.1827872842550278e-11
+        ],
+        [
+          "CA",
+          1.4551915228366852e-11
+        ],
+        [
+          "QA",
+          -7.275957614183426e-12
+        ],
+        [
+          "AZ",
+          5.4569682106375694e-12
+        ]
+      ],
+      "nominal": {
+        "gross_output": 5111526.799998456,
+        "domestic_final": 3109599.9760000003,
+        "intermediate_imports": 664345.5789996635,
+        "compensation": 1378355.3999997664,
+        "other_net_production_taxes": 81920.99999998101,
+        "valuation_bridge": 76644.99700000558,
+        "gross_surplus_mixed": 908332.9999998705,
+        "gross_value_added": 2368609.3999996176
+      },
+      "reference_price_volume": {
+        "gross_output": 5111526.799998456,
+        "domestic_final": 3109599.9760000003
+      },
+      "extended_nominal_scope": {
+        "domestic_final_plus_household_direct_imports": 3278140.396,
+        "intermediate_plus_household_direct_imports": 832885.9989996635,
+        "gross_value_added": 2368609.3999996176,
+        "valuation_bridge": 76644.99700000558
+      }
+    },
+    "retained_gain": {
+      "sha256": "8528533b5fc824727f558416c9dda69430477e392dfdf8c19486a95384bfadb9",
+      "budget": {
+        "resources": 1229477.109,
+        "spendable": 1229477.109,
+        "domestic": 1060936.689,
+        "direct_import": 168540.42,
+        "unspent": 0,
+        "minimum_reserve": 0,
+        "additional_unspent": 0
+      },
+      "fixed_basket_price_effect": 0,
+      "household_volume_change": 0,
+      "domestic_household_volume_change": 5.4228621593210846e-11,
+      "imported_household_volume_change": 1.9326762412674725e-12,
+      "top_domestic_changes": [
+        [
+          "GZ",
+          2.9103830456733704e-11
+        ],
+        [
+          "CA",
+          1.4551915228366852e-11
+        ],
+        [
+          "IZ",
+          1.4551915228366852e-11
+        ],
+        [
+          "KZ",
+          -7.275957614183426e-12
+        ],
+        [
+          "NZ",
+          3.637978807091713e-12
+        ],
+        [
+          "AZ",
+          1.8189894035458565e-12
+        ]
+      ],
+      "nominal": {
+        "gross_output": 5111526.799998456,
+        "domestic_final": 3109599.976,
+        "intermediate_imports": 664345.5789996634,
+        "compensation": 1375354.8269997672,
+        "other_net_production_taxes": 81920.999999981,
+        "valuation_bridge": 76644.99700000558,
+        "gross_surplus_mixed": 911333.5729998695,
+        "gross_value_added": 2368609.3999996176
+      },
+      "reference_price_volume": {
+        "gross_output": 5111526.799998456,
+        "domestic_final": 3109599.9760000003
+      },
+      "extended_nominal_scope": {
+        "domestic_final_plus_household_direct_imports": 3278140.3959999997,
+        "intermediate_plus_household_direct_imports": 832885.9989996634,
+        "gross_value_added": 2368609.3999996176,
+        "valuation_bridge": 76644.99700000558
+      }
+    },
+    "fixed_proportions": {
+      "sha256": "3be60ca2cf6ae4c863a310993c647c515a445908581a6b67b90b7339b71abc44",
+      "budget": {
+        "resources": 1229477.109,
+        "spendable": 1229477.109,
+        "domestic": 1060833.48651194,
+        "direct_import": 168643.62248805992,
+        "unspent": 0,
+        "minimum_reserve": 0,
+        "additional_unspent": 0
+      },
+      "fixed_basket_price_effect": -752.3859769466799,
+      "household_volume_change": 752.8466860442422,
+      "domestic_household_volume_change": 649.6441979843127,
+      "imported_household_volume_change": 103.20248805991349,
+      "top_domestic_changes": [
+        [
+          "LZ",
+          171.23856550379423
+        ],
+        [
+          "GZ",
+          102.83059691658127
+        ],
+        [
+          "IZ",
+          63.5598359053256
+        ],
+        [
+          "CA",
+          51.168389233454945
+        ],
+        [
+          "KZ",
+          39.93339232335711
+        ],
+        [
+          "DZ",
+          25.32752606379654
+        ]
+      ],
+      "nominal": {
+        "gross_output": 5105409.539308661,
+        "domestic_final": 3107248.586488899,
+        "intermediate_imports": 664470.4688772106,
+        "compensation": 1375593.791359026,
+        "other_net_production_taxes": 81946.46010197344,
+        "valuation_bridge": 76657.91343150265,
+        "gross_surplus_mixed": 908579.9527184746,
+        "gross_value_added": 2366120.204179474
+      },
+      "reference_price_volume": {
+        "gross_output": 5112613.059160784,
+        "domestic_final": 3110249.6201979844
+      },
+      "extended_nominal_scope": {
+        "domestic_final_plus_household_direct_imports": 3275892.208976959,
+        "intermediate_plus_household_direct_imports": 833114.0913652705,
+        "gross_value_added": 2366120.204179474,
+        "valuation_bridge": 76657.91343150265
+      }
+    },
+    "constant_expenditure_shares": {
+      "sha256": "8543a622224663c39ab8bb1ceda5cdab6eb91abcf6944cd55c11dffe48d56436",
+      "budget": {
+        "resources": 1229477.109,
+        "spendable": 1229477.109,
+        "domestic": 1060936.689,
+        "direct_import": 168540.42,
+        "unspent": 0,
+        "minimum_reserve": 0,
+        "additional_unspent": 0
+      },
+      "fixed_basket_price_effect": -752.3859769466799,
+      "household_volume_change": 753.8990637529641,
+      "domestic_household_volume_change": 753.8990637530122,
+      "imported_household_volume_change": 1.9326762412674725e-12,
+      "top_domestic_changes": [
+        [
+          "GZ",
+          178.73153840505984
+        ],
+        [
+          "LZ",
+          94.74914525571512
+        ],
+        [
+          "MA",
+          77.14378410418612
+        ],
+        [
+          "IZ",
+          72.76469044263649
+        ],
+        [
+          "CA",
+          58.07352145022014
+        ],
+        [
+          "KZ",
+          54.537346924269514
+        ]
+      ],
+      "nominal": {
+        "gross_output": 5105645.7713253265,
+        "domestic_final": 3107351.788976959,
+        "intermediate_imports": 664498.5561717328,
+        "compensation": 1375675.701032511,
+        "other_net_production_taxes": 81945.84503936511,
+        "valuation_bridge": 76659.87522915132,
+        "gross_surplus_mixed": 908571.8115034866,
+        "gross_value_added": 2366193.3575753625
+      },
+      "reference_price_volume": {
+        "gross_output": 5112850.860110223,
+        "domestic_final": 3110353.875063753
+      },
+      "extended_nominal_scope": {
+        "domestic_final_plus_household_direct_imports": 3275892.208976959,
+        "intermediate_plus_household_direct_imports": 833038.9761717329,
+        "gross_value_added": 2366193.3575753625,
+        "valuation_bridge": 76659.87522915132
+      }
+    },
+    "substitution": {
+      "sha256": "96c39a5f1b972cff8ba1d5841e27d35184c6fa8aded53b9b0b809b4bf4e6f8f1",
+      "budget": {
+        "resources": 1229477.109,
+        "spendable": 1229477.109,
+        "domestic": 1061039.972419138,
+        "direct_import": 168437.1365808619,
+        "unspent": 0,
+        "minimum_reserve": 0,
+        "additional_unspent": 0
+      },
+      "fixed_basket_price_effect": -752.3859769466799,
+      "household_volume_change": 754.9628290620167,
+      "domestic_household_volume_change": 858.2462482000104,
+      "imported_household_volume_change": -103.28341913809894,
+      "top_domestic_changes": [
+        [
+          "GZ",
+          254.5228909404541
+        ],
+        [
+          "MA",
+          151.61397193605808
+        ],
+        [
+          "IZ",
+          81.88149704110401
+        ],
+        [
+          "KZ",
+          69.08872343367693
+        ],
+        [
+          "CA",
+          64.9076856818865
+        ],
+        [
+          "JB",
+          33.681670475692954
+        ]
+      ],
+      "nominal": {
+        "gross_output": 5105882.24293348,
+        "domestic_final": 3107455.0723960972,
+        "intermediate_imports": 664526.6143183719,
+        "compensation": 1375757.840756794,
+        "other_net_production_taxes": 81945.22340255152,
+        "valuation_bridge": 76661.8359190261,
+        "gross_surplus_mixed": 908563.5579986416,
+        "gross_value_added": 2366266.622157987
+      },
+      "reference_price_volume": {
+        "gross_output": 5113088.915161317,
+        "domestic_final": 3110458.2222482
+      },
+      "extended_nominal_scope": {
+        "domestic_final_plus_household_direct_imports": 3275892.2089769593,
+        "intermediate_plus_household_direct_imports": 832963.7508992337,
+        "gross_value_added": 2366266.622157987,
+        "valuation_bridge": 76661.8359190261
+      }
+    },
+    "tech_purchase_substitution": {
+      "sha256": "dc81abf56ba109e4a1257c70de5b485e026ae29f77732ef98045767310d33abe",
+      "budget": {
+        "resources": 1229477.109,
+        "spendable": 1229477.109,
+        "domestic": 1060967.6554242435,
+        "direct_import": 168509.45357575643,
+        "unspent": 0,
+        "minimum_reserve": 0,
+        "additional_unspent": 0
+      },
+      "fixed_basket_price_effect": -225.8015059500467,
+      "household_volume_change": 226.03119200398214,
+      "domestic_household_volume_change": 256.9976162474462,
+      "imported_household_volume_change": -30.966424243559956,
+      "top_domestic_changes": [
+        [
+          "GZ",
+          76.34236564396997
+        ],
+        [
+          "MA",
+          44.885329876062315
+        ],
+        [
+          "IZ",
+          24.579096013039816
+        ],
+        [
+          "KZ",
+          20.7315625411793
+        ],
+        [
+          "CA",
+          19.484295952148386
+        ],
+        [
+          "JB",
+          10.10373885467925
+        ]
+      ],
+      "nominal": {
+        "gross_output": 5111807.875277999,
+        "domestic_final": 3108956.230200706,
+        "intermediate_imports": 665479.0928378663,
+        "compensation": 1376234.824801461,
+        "other_net_production_taxes": 81963.004605532,
+        "valuation_bridge": 76663.91030573982,
+        "gross_surplus_mixed": 908615.3976493898,
+        "gross_value_added": 2366813.2270563827
+      },
+      "reference_price_volume": {
+        "gross_output": 5113970.716894999,
+        "domestic_final": 3109856.9736162475
+      },
+      "extended_nominal_scope": {
+        "domestic_final_plus_household_direct_imports": 3277465.6837764625,
+        "intermediate_plus_household_direct_imports": 833988.5464136227,
+        "gross_value_added": 2366813.2270563827,
+        "valuation_bridge": 76663.91030573982
+      }
+    },
+    "reserve_5pct": {
+      "sha256": "ad97674448c367c3480d656d28efea6412e3f27f25310b321cad2fbcd6fdbdf4",
+      "budget": {
+        "resources": 1229477.109,
+        "spendable": 1168003.2535499998,
+        "domestic": 1007987.973798181,
+        "direct_import": 160015.2797518188,
+        "unspent": 61473.85545000015,
+        "minimum_reserve": 61473.85545,
+        "additional_unspent": 1.4551915228366852e-10
+      },
+      "fixed_basket_price_effect": -752.3859769466799,
+      "household_volume_change": -60756.64076239127,
+      "domestic_household_volume_change": -52231.5005142101,
+      "imported_household_volume_change": -8525.140248181213,
+      "top_domestic_changes": [
+        [
+          "LZ",
+          -13965.381973645475
+        ],
+        [
+          "GZ",
+          -8154.857403606584
+        ],
+        [
+          "IZ",
+          -5112.204427810953
+        ],
+        [
+          "CA",
+          -4116.503348602215
+        ],
+        [
+          "KZ",
+          -3195.1353127380135
+        ],
+        [
+          "DZ",
+          -2053.4397709277036
+        ]
+      ],
+      "nominal": {
+        "gross_output": 5017212.414108968,
+        "domestic_final": 3054403.07377514,
+        "intermediate_imports": 654319.6531748415,
+        "compensation": 1356225.0047492622,
+        "other_net_production_taxes": 79865.06221691614,
+        "valuation_bridge": 75606.3000260887,
+        "gross_surplus_mixed": 888387.0536073339,
+        "gross_value_added": 2324477.1205735123
+      },
+      "reference_price_volume": {
+        "gross_output": 5024312.087652722,
+        "domestic_final": 3057368.47548579
+      },
+      "extended_nominal_scope": {
+        "domestic_final_plus_household_direct_imports": 3214418.3535269587,
+        "intermediate_plus_household_direct_imports": 814334.9329266604,
+        "gross_value_added": 2324477.1205735123,
+        "valuation_bridge": 75606.3000260887
+      }
+    },
+    "saturated_basket": {
+      "sha256": "bb5572b21e088244d90870f6932c815bb21391bcfcfc9befa56ce5e4bf90eda0",
+      "budget": {
+        "resources": 1229477.109,
+        "spendable": 1229477.109,
+        "domestic": 1060184.303023053,
+        "direct_import": 168540.42,
+        "unspent": 752.3859769466799,
+        "minimum_reserve": 0,
+        "additional_unspent": 752.3859769466799
+      },
+      "fixed_basket_price_effect": -752.3859769466799,
+      "household_volume_change": 0,
+      "domestic_household_volume_change": 0,
+      "imported_household_volume_change": 0,
+      "top_domestic_changes": [
+        [
+          "AZ",
+          0
+        ],
+        [
+          "BZ",
+          0
+        ],
+        [
+          "CA",
+          0
+        ],
+        [
+          "CB",
+          0
+        ],
+        [
+          "CC",
+          0
+        ],
+        [
+          "CD",
+          0
+        ]
+      ],
+      "nominal": {
+        "gross_output": 5104324.587787095,
+        "domestic_final": 3106599.403000012,
+        "intermediate_imports": 664345.5789996634,
+        "compensation": 1375354.8269997672,
+        "other_net_production_taxes": 81920.999999981,
+        "valuation_bridge": 76644.99700000558,
+        "gross_surplus_mixed": 908332.9999998829,
+        "gross_value_added": 2365608.826999631
+      },
+      "reference_price_volume": {
+        "gross_output": 5111526.799998456,
+        "domestic_final": 3109599.976
+      },
+      "extended_nominal_scope": {
+        "domestic_final_plus_household_direct_imports": 3275139.823000012,
+        "intermediate_plus_household_direct_imports": 832885.9989996634,
+        "gross_value_added": 2365608.826999631,
+        "valuation_bridge": 76644.99700000558
+      }
+    },
+    "final_import_price_shock": {
+      "sha256": "18c596547e26ea5d2f6322a13f7a0671286cc648c2be45dc96c06377ddc8d176",
+      "budget": {
+        "resources": 1229477.109,
+        "spendable": 1229477.109,
+        "domestic": 1062299.1041105608,
+        "direct_import": 167178.00488943898,
+        "unspent": 0,
+        "minimum_reserve": 0,
+        "additional_unspent": 0
+      },
+      "fixed_basket_price_effect": 1892.188199999975,
+      "household_volume_change": -1315.706998005975,
+      "domestic_household_volume_change": 1362.4151105610479,
+      "imported_household_volume_change": -2678.1221085671345,
+      "top_domestic_changes": [
+        [
+          "LZ",
+          359.11659009201685
+        ],
+        [
+          "GZ",
+          215.65336764621316
+        ],
+        [
+          "IZ",
+          133.29585814957682
+        ],
+        [
+          "CA",
+          107.30887290461396
+        ],
+        [
+          "KZ",
+          83.7471608091073
+        ],
+        [
+          "DZ",
+          53.116158551922126
+        ]
+      ],
+      "nominal": {
+        "gross_output": 5113804.871443305,
+        "domestic_final": 3110962.391110561,
+        "intermediate_imports": 664607.4944556227,
+        "compensation": 1378857.5153607395,
+        "other_net_production_taxes": 81974.39419295391,
+        "valuation_bridge": 76672.08496831299,
+        "gross_surplus_mixed": 908850.9021322179,
+        "gross_value_added": 2369682.8116859114
+      },
+      "reference_price_volume": {
+        "gross_output": 5113804.871443306,
+        "domestic_final": 3110962.391110561
+      },
+      "extended_nominal_scope": {
+        "domestic_final_plus_household_direct_imports": 3278140.3959999997,
+        "intermediate_plus_household_direct_imports": 831785.4993450617,
+        "gross_value_added": 2369682.8116859114,
+        "valuation_bridge": 76672.08496831299
+      }
+    }
+  },
+  "verification": "independent dense price/output solve and scalar bisection of capped expenditures",
+  "limitations": [
+    "not household disposable income or observed saving",
+    "all policy parameters hypothetical; fixed aggregate basket, no new products, no purchaser price or full final imports"
+  ],
+  "verification_receipt": {
+    "run": 45541331763,
+    "job": 138960300896,
+    "tested_commit": "f8cd49024e9af0ea0514c26849c226000c547e74",
+    "conclusion": "test_and_pilot_steps_success"
+  }
+}
