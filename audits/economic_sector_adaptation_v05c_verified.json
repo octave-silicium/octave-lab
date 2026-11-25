@@ -1,0 +1,719 @@
+{
+  "status": "SYNTHETIC_ADAPTIVE_RULE_AUDIT",
+  "publication": "BLOCK_PUBLICATION",
+  "cases": {
+    "persistent_capacity_gap": {
+      "sha256": "2993ae9210df15a92dca1fdb2a7338400443e1ea9316b7735b0e922c98bc720e",
+      "served": [
+        160,
+        160,
+        200,
+        200,
+        200
+      ],
+      "expected": [
+        160,
+        160,
+        200,
+        200,
+        200
+      ],
+      "requested": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "capacity_A": [
+        120,
+        120,
+        150,
+        150,
+        150
+      ],
+      "idle_A": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "closing_import_stock_B": [
+        4,
+        8,
+        8,
+        8,
+        8
+      ],
+      "decisions": [
+        {
+          "period": 1,
+          "kind": "CAPACITY",
+          "branch": "A",
+          "reason": "EXPAND",
+          "delta": 30,
+          "effective": 3,
+          "need": 150,
+          "capacity": 120,
+          "utilization": 1,
+          "binding": true
+        },
+        {
+          "period": 2,
+          "kind": "CAPACITY",
+          "branch": "A",
+          "reason": "PENDING",
+          "delta": 0,
+          "effective": null,
+          "need": 150,
+          "capacity": 120,
+          "utilization": 1,
+          "binding": true
+        },
+        {
+          "period": 3,
+          "kind": "CAPACITY",
+          "branch": "A",
+          "reason": "NO_TRIGGER",
+          "delta": 0,
+          "effective": null,
+          "need": 150,
+          "capacity": 150,
+          "utilization": 1,
+          "binding": false
+        },
+        {
+          "period": 4,
+          "kind": "CAPACITY",
+          "branch": "A",
+          "reason": "NO_TRIGGER",
+          "delta": 0,
+          "effective": null,
+          "need": 150,
+          "capacity": 150,
+          "utilization": 1,
+          "binding": false
+        },
+        {
+          "period": 5,
+          "kind": "CAPACITY",
+          "branch": "A",
+          "reason": "NO_TRIGGER",
+          "delta": 0,
+          "effective": null,
+          "need": 150,
+          "capacity": 150,
+          "utilization": 1,
+          "binding": false
+        }
+      ],
+      "substitution_orders": [],
+      "cumulative_unserved": 80
+    },
+    "temporary_demand_then_overshoot": {
+      "sha256": "b881ce444cf5fc622d823b9f26dad3a1e619d717ea476ddb2c6c061f697568c1",
+      "served": [
+        160,
+        160,
+        60,
+        60,
+        60,
+        160
+      ],
+      "expected": [
+        160,
+        160,
+        60,
+        60,
+        60,
+        160
+      ],
+      "requested": [
+        200,
+        200,
+        60,
+        60,
+        60,
+        200
+      ],
+      "capacity_A": [
+        120,
+        120,
+        150,
+        150,
+        120,
+        120
+      ],
+      "idle_A": [
+        0,
+        0,
+        105,
+        105,
+        75,
+        0
+      ],
+      "closing_import_stock_B": [
+        4,
+        8,
+        22,
+        36,
+        50,
+        54
+      ],
+      "decisions": [
+        {
+          "period": 1,
+          "kind": "CAPACITY",
+          "branch": "A",
+          "reason": "EXPAND",
+          "delta": 30,
+          "effective": 3,
+          "need": 150,
+          "capacity": 120,
+          "utilization": 1,
+          "binding": true
+        },
+        {
+          "period": 2,
+          "kind": "CAPACITY",
+          "branch": "A",
+          "reason": "PENDING",
+          "delta": 0,
+          "effective": null,
+          "need": 150,
+          "capacity": 120,
+          "utilization": 1,
+          "binding": true
+        },
+        {
+          "period": 3,
+          "kind": "CAPACITY",
+          "branch": "A",
+          "reason": "RETIRE",
+          "delta": -30,
+          "effective": 5,
+          "need": 45,
+          "capacity": 150,
+          "utilization": 0.3,
+          "binding": false
+        },
+        {
+          "period": 4,
+          "kind": "CAPACITY",
+          "branch": "A",
+          "reason": "PENDING",
+          "delta": 0,
+          "effective": null,
+          "need": 45,
+          "capacity": 150,
+          "utilization": 0.3,
+          "binding": false
+        },
+        {
+          "period": 5,
+          "kind": "CAPACITY",
+          "branch": "A",
+          "reason": "RETIRE",
+          "delta": -30,
+          "effective": 7,
+          "need": 45,
+          "capacity": 120,
+          "utilization": 0.375,
+          "binding": false
+        },
+        {
+          "period": 6,
+          "kind": "CAPACITY",
+          "branch": "A",
+          "reason": "PENDING",
+          "delta": 0,
+          "effective": null,
+          "need": 150,
+          "capacity": 120,
+          "utilization": 1,
+          "binding": true
+        }
+      ],
+      "substitution_orders": [],
+      "cumulative_unserved": 120
+    },
+    "import_shortage_confirmed": {
+      "sha256": "d6c12902c27ca9233a3c5b6bb6c08c6059f0fe8168793354facddb469de6dc81",
+      "served": [
+        100,
+        100,
+        200,
+        200,
+        200
+      ],
+      "expected": [
+        100,
+        100,
+        200,
+        200,
+        200
+      ],
+      "requested": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "capacity_A": [
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "idle_A": [
+        75,
+        75,
+        0,
+        0,
+        0
+      ],
+      "closing_import_stock_B": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "decisions": [
+        {
+          "period": 1,
+          "kind": "CAPACITY",
+          "branch": "A",
+          "reason": "NO_TRIGGER",
+          "delta": 0,
+          "effective": null,
+          "need": 150,
+          "capacity": 150,
+          "utilization": 0.5,
+          "binding": false
+        },
+        {
+          "period": 2,
+          "kind": "CAPACITY",
+          "branch": "A",
+          "reason": "NO_TRIGGER",
+          "delta": 0,
+          "effective": null,
+          "need": 150,
+          "capacity": 150,
+          "utilization": 0.5,
+          "binding": false
+        },
+        {
+          "period": 3,
+          "kind": "CAPACITY",
+          "branch": "A",
+          "reason": "NO_TRIGGER",
+          "delta": 0,
+          "effective": null,
+          "need": 150,
+          "capacity": 150,
+          "utilization": 1,
+          "binding": false
+        },
+        {
+          "period": 4,
+          "kind": "CAPACITY",
+          "branch": "A",
+          "reason": "NO_TRIGGER",
+          "delta": 0,
+          "effective": null,
+          "need": 150,
+          "capacity": 150,
+          "utilization": 1,
+          "binding": false
+        },
+        {
+          "period": 5,
+          "kind": "CAPACITY",
+          "branch": "A",
+          "reason": "NO_TRIGGER",
+          "delta": 0,
+          "effective": null,
+          "need": 150,
+          "capacity": 150,
+          "utilization": 1,
+          "binding": false
+        }
+      ],
+      "substitution_orders": [],
+      "cumulative_unserved": 200
+    },
+    "import_shortage_naive": {
+      "sha256": "f30b8d743d2348f9126ac07e0a380d3240f437dadea175bf5f7823d51d884e01",
+      "served": [
+        100,
+        100,
+        160,
+        160,
+        200
+      ],
+      "expected": [
+        100,
+        100,
+        160,
+        160,
+        200
+      ],
+      "requested": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "capacity_A": [
+        150,
+        150,
+        120,
+        120,
+        150
+      ],
+      "idle_A": [
+        75,
+        75,
+        0,
+        0,
+        0
+      ],
+      "closing_import_stock_B": [
+        0,
+        0,
+        4,
+        8,
+        8
+      ],
+      "decisions": [
+        {
+          "period": 1,
+          "kind": "CAPACITY",
+          "branch": "A",
+          "reason": "RETIRE",
+          "delta": -30,
+          "effective": 3,
+          "need": 150,
+          "capacity": 150,
+          "utilization": 0.5,
+          "binding": false
+        },
+        {
+          "period": 2,
+          "kind": "CAPACITY",
+          "branch": "A",
+          "reason": "PENDING",
+          "delta": 0,
+          "effective": null,
+          "need": 150,
+          "capacity": 150,
+          "utilization": 0.5,
+          "binding": false
+        },
+        {
+          "period": 3,
+          "kind": "CAPACITY",
+          "branch": "A",
+          "reason": "EXPAND",
+          "delta": 30,
+          "effective": 5,
+          "need": 150,
+          "capacity": 120,
+          "utilization": 1,
+          "binding": true
+        },
+        {
+          "period": 4,
+          "kind": "CAPACITY",
+          "branch": "A",
+          "reason": "PENDING",
+          "delta": 0,
+          "effective": null,
+          "need": 150,
+          "capacity": 120,
+          "utilization": 1,
+          "binding": true
+        },
+        {
+          "period": 5,
+          "kind": "CAPACITY",
+          "branch": "A",
+          "reason": "NO_TRIGGER",
+          "delta": 0,
+          "effective": null,
+          "need": 150,
+          "capacity": 150,
+          "utilization": 1,
+          "binding": false
+        }
+      ],
+      "substitution_orders": [],
+      "cumulative_unserved": 280
+    },
+    "substitution_without_expansion": {
+      "sha256": "eac107cd0d0451099b9520744f6916812b5e2075903f046480312223ed4b46d5",
+      "served": [
+        100,
+        187.5,
+        187.5,
+        187.5,
+        187.5
+      ],
+      "expected": [
+        100,
+        187.5,
+        187.5,
+        187.5,
+        187.5
+      ],
+      "requested": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "capacity_A": [
+        150,
+        150,
+        150,
+        150,
+        150
+      ],
+      "idle_A": [
+        75,
+        0,
+        0,
+        0,
+        0
+      ],
+      "closing_import_stock_B": [
+        0,
+        0.625,
+        1.25,
+        1.875,
+        2.5
+      ],
+      "decisions": [
+        {
+          "period": 1,
+          "kind": "SUBSTITUTION",
+          "rule": 0,
+          "reason": "SUBSTITUTE",
+          "shift": 0.1,
+          "effective": 2
+        },
+        {
+          "period": 2,
+          "kind": "SUBSTITUTION",
+          "rule": 0,
+          "reason": "NO_TRIGGER",
+          "shift": 0,
+          "effective": null
+        },
+        {
+          "period": 3,
+          "kind": "SUBSTITUTION",
+          "rule": 0,
+          "reason": "NO_TRIGGER",
+          "shift": 0,
+          "effective": null
+        },
+        {
+          "period": 4,
+          "kind": "SUBSTITUTION",
+          "rule": 0,
+          "reason": "NO_TRIGGER",
+          "shift": 0,
+          "effective": null
+        },
+        {
+          "period": 5,
+          "kind": "SUBSTITUTION",
+          "rule": 0,
+          "reason": "NO_TRIGGER",
+          "shift": 0,
+          "effective": null
+        }
+      ],
+      "substitution_orders": [
+        {
+          "rule": 0,
+          "placed": 1,
+          "effective": 2,
+          "shift": 0.1
+        }
+      ],
+      "cumulative_unserved": 150
+    },
+    "substitution_with_expansion": {
+      "sha256": "8c3c3091d0b041cf15ff0cf7cc749d87c665d66e9e61286071ea3ecf70967919",
+      "served": [
+        100,
+        187.5,
+        187.5,
+        200,
+        200
+      ],
+      "expected": [
+        100,
+        187.5,
+        187.5,
+        200,
+        200
+      ],
+      "requested": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "capacity_A": [
+        150,
+        150,
+        150,
+        180,
+        180
+      ],
+      "idle_A": [
+        75,
+        0,
+        0,
+        20,
+        20
+      ],
+      "closing_import_stock_B": [
+        0,
+        0.625,
+        1.25,
+        1.25,
+        1.25
+      ],
+      "decisions": [
+        {
+          "period": 1,
+          "kind": "CAPACITY",
+          "branch": "A",
+          "reason": "NO_TRIGGER",
+          "delta": 0,
+          "effective": null,
+          "need": 150,
+          "capacity": 150,
+          "utilization": 0.5,
+          "binding": false
+        },
+        {
+          "period": 1,
+          "kind": "SUBSTITUTION",
+          "rule": 0,
+          "reason": "SUBSTITUTE",
+          "shift": 0.1,
+          "effective": 2
+        },
+        {
+          "period": 2,
+          "kind": "CAPACITY",
+          "branch": "A",
+          "reason": "EXPAND",
+          "delta": 30,
+          "effective": 4,
+          "need": 160,
+          "capacity": 150,
+          "utilization": 1,
+          "binding": true
+        },
+        {
+          "period": 2,
+          "kind": "SUBSTITUTION",
+          "rule": 0,
+          "reason": "NO_TRIGGER",
+          "shift": 0,
+          "effective": null
+        },
+        {
+          "period": 3,
+          "kind": "CAPACITY",
+          "branch": "A",
+          "reason": "PENDING",
+          "delta": 0,
+          "effective": null,
+          "need": 160,
+          "capacity": 150,
+          "utilization": 1,
+          "binding": true
+        },
+        {
+          "period": 3,
+          "kind": "SUBSTITUTION",
+          "rule": 0,
+          "reason": "NO_TRIGGER",
+          "shift": 0,
+          "effective": null
+        },
+        {
+          "period": 4,
+          "kind": "CAPACITY",
+          "branch": "A",
+          "reason": "NO_TRIGGER",
+          "delta": 0,
+          "effective": null,
+          "need": 160,
+          "capacity": 180,
+          "utilization": 0.8888888888888888,
+          "binding": false
+        },
+        {
+          "period": 4,
+          "kind": "SUBSTITUTION",
+          "rule": 0,
+          "reason": "NO_TRIGGER",
+          "shift": 0,
+          "effective": null
+        },
+        {
+          "period": 5,
+          "kind": "CAPACITY",
+          "branch": "A",
+          "reason": "NO_TRIGGER",
+          "delta": 0,
+          "effective": null,
+          "need": 160,
+          "capacity": 180,
+          "utilization": 0.8888888888888888,
+          "binding": false
+        },
+        {
+          "period": 5,
+          "kind": "SUBSTITUTION",
+          "rule": 0,
+          "reason": "NO_TRIGGER",
+          "shift": 0,
+          "effective": null
+        }
+      ],
+      "substitution_orders": [
+        {
+          "rule": 0,
+          "placed": 1,
+          "effective": 2,
+          "shift": 0.1
+        }
+      ],
+      "cumulative_unserved": 125
+    }
+  },
+  "verification": "Analytical expected trajectories compared to G4 replay; not empirical calibration",
+  "verification_receipt": {
+    "run": 45539512538,
+    "job": 138954285731,
+    "tested_commit": "d003cd75ee3219cfff09f79c7ce6a09e4a876313",
+    "conclusion": "success"
+  }
+}
