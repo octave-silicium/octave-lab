@@ -10,6 +10,9 @@ on:
       - 'pipeline/audit_tes_capacity.py'
       - 'pipeline/economic_sector_capacity_dynamics.py'
       - 'pipeline/audit_tes_capacity_dynamics.py'
+      - 'pipeline/economic_sector_prices.py'
+      - 'pipeline/audit_tes_prices.py'
+      - 'tests/test_economic_sector_prices.py'
       - 'tests/test_economic_sector_capacity_dynamics.py'
       - 'tests/test_economic_sector_capacity.py'
       - 'tests/test_economic_sector_structural.py'
@@ -52,6 +55,11 @@ jobs:
           python -m unittest discover -s tests -p test_economic_sector_capacity_dynamics.py -v
           python -m pipeline.audit_tes_capacity_dynamics tes-income/standard.xlsx tes-income/symmetric/TES_symetrique_A38_2022DEF_fr.xlsx tes-income/eurostat.json > tes-income/capacity-dynamics-audit.json
           cat tes-income/capacity-dynamics-audit.json
+      - name: Verify network prices and conditional demand
+        run: |
+          python -m unittest discover -s tests -p test_economic_sector_prices.py -v
+          python -m pipeline.audit_tes_prices tes-income/standard.xlsx tes-income/symmetric/TES_symetrique_A38_2022DEF_fr.xlsx tes-income/eurostat.json > tes-income/prices-audit.json
+          cat tes-income/prices-audit.json
       - name: Preserve raw and profile
         uses: actions/upload-artifact@v4
         with:
