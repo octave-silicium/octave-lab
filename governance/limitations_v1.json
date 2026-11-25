@@ -1,6 +1,6 @@
 {
   "id": "LIMITATIONS-001",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "date": "2026-11-25",
   "baseline_commit": "5bd37a858e384fdf3a159564975623b8ac957663",
   "status": "INITIAL_CONSOLIDATION_REVIEW_PENDING",
@@ -985,7 +985,17 @@
         "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
       ],
       "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
-      "resolution_status": "PARTIAL"
+      "resolution_status": "PARTIAL",
+      "progress_evidence": [
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.6d",
+          "path": "audits/insee_tee_2022_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45542230203",
+          "scope": "TEE/TES et Eurostat institutionnel épinglés, bruts archivés. Admission empirique bloquée; récupération CI live encore dépendante du vintage, contrôle de droits et révisions à compléter."
+        }
+      ],
+      "remaining": "TEE/TES et Eurostat institutionnel épinglés, bruts archivés. Admission empirique bloquée; récupération CI live encore dépendante du vintage, contrôle de droits et révisions à compléter."
     },
     {
       "id": "LIM-S02",
@@ -1069,9 +1079,16 @@
           "path": "audits/insee_tes_income_feedback_2022_verified.json",
           "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45541710722",
           "scope": "Affectation conditionnelle D1, surplus brut mixte et impôts; raccord de valorisation non affecté et consommation de capital supposée, comptes institutionnels et prix d'acquisition restent à qualifier."
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.6d",
+          "path": "audits/insee_tee_2022_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45542230203",
+          "scope": "TEE 2022: ventilation observée du surplus brut/mixte et de la consommation de capital fixe; 65 identités et 40 comparaisons Eurostat. Écart D1 TES/TEE +0,600 M€ non résolu; raccord ménage prix de base/acquisition agrégé +144626,191 M€, non ventilé."
         }
       ],
-      "remaining": "Affectation conditionnelle D1, surplus brut mixte et impôts; raccord de valorisation non affecté et consommation de capital supposée, comptes institutionnels et prix d'acquisition restent à qualifier."
+      "remaining": "TEE 2022: ventilation observée du surplus brut/mixte et de la consommation de capital fixe; 65 identités et 40 comparaisons Eurostat. Écart D1 TES/TEE +0,600 M€ non résolu; raccord ménage prix de base/acquisition agrégé +144626,191 M€, non ventilé."
     },
     {
       "id": "LIM-S04",
@@ -1393,9 +1410,16 @@
           "path": "audits/insee_tes_income_feedback_2022_verified.json",
           "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45541710722",
           "scope": "Enveloppe nominale alimentée avec délai par ressources ménages proxy; épargne patrimoniale, panier hétérogène, prix acquisition et imports finals complets restent ouverts."
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.6d",
+          "path": "audits/insee_tee_2022_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45542230203",
+          "scope": "Dépense ménages observée 1374,103 Md€, épargne brute 278,669 Md€ et ajustement pension 6,669 Md€ identifiés; panier prix de base 1229,477109 Md€. Pas de raccord par produit, origine ou cohortes, pas d'épargne endogène calibrée."
         }
       ],
-      "remaining": "Enveloppe nominale alimentée avec délai par ressources ménages proxy; épargne patrimoniale, panier hétérogène, prix acquisition et imports finals complets restent ouverts."
+      "remaining": "Dépense ménages observée 1374,103 Md€, épargne brute 278,669 Md€ et ajustement pension 6,669 Md€ identifiés; panier prix de base 1229,477109 Md€. Pas de raccord par produit, origine ou cohortes, pas d'épargne endogène calibrée."
     },
     {
       "id": "LIM-S12",
@@ -1449,9 +1473,16 @@
           "path": "audits/insee_tes_income_feedback_2022_verified.json",
           "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45541710722",
           "scope": "Boucle discrète production→allocation des revenus→enveloppe suivante→demande testée, sans anticipation; pas de capacité/prix endogènes, équilibre, patrimoine, crédit ou données institutionnelles qualifiées."
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.6d",
+          "path": "audits/insee_tee_2022_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45542230203",
+          "scope": "Référentiel institutionnel observé acquis et contrôlé; paramètres de la boucle v0.6c restent hypothétiques. Raccord branche→secteur, contraintes et financement non résolus."
         }
       ],
-      "remaining": "Boucle discrète production→allocation des revenus→enveloppe suivante→demande testée, sans anticipation; pas de capacité/prix endogènes, équilibre, patrimoine, crédit ou données institutionnelles qualifiées."
+      "remaining": "Référentiel institutionnel observé acquis et contrôlé; paramètres de la boucle v0.6c restent hypothétiques. Raccord branche→secteur, contraintes et financement non résolus."
     },
     {
       "id": "LIM-S13",
@@ -1616,9 +1647,16 @@
           "path": "audits/insee_tes_income_feedback_2022_verified.json",
           "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45541710722",
           "scope": "Répartition conditionnelle du D1 et surplus entre résidents, entreprises, étranger, réserve capital, prélèvements et transferts avec contreparties. Propriété effective, fiscalité, comptes institutionnels, dette et financement public non modélisés."
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.6d",
+          "path": "audits/insee_tee_2022_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45542230203",
+          "scope": "Comptes S11/S12/S13/S14/S15 et S1 acquis, identité capacité de financement et valeur nette contrôlées; reste du monde partiel. Pas de matrice bilatérale de propriété/transferts, ni simulation fiscale, ni décomposition des ménages. Écart comptes financiers/non financiers conservé."
         }
       ],
-      "remaining": "Répartition conditionnelle du D1 et surplus entre résidents, entreprises, étranger, réserve capital, prélèvements et transferts avec contreparties. Propriété effective, fiscalité, comptes institutionnels, dette et financement public non modélisés."
+      "remaining": "Comptes S11/S12/S13/S14/S15 et S1 acquis, identité capacité de financement et valeur nette contrôlées; reste du monde partiel. Pas de matrice bilatérale de propriété/transferts, ni simulation fiscale, ni décomposition des ménages. Écart comptes financiers/non financiers conservé."
     },
     {
       "id": "LIM-T01",
@@ -1960,5 +1998,5 @@
     }
   ],
   "dependency_semantics": "Dependencies constrain closure, not parallel development; not a promise of dates. Publication restrictions apply to affected claims, not blanket suppression of safe synthetic demonstrations.",
-  "last_milestone": "G4 v0.6c"
+  "last_milestone": "G4 v0.6d"
 }
