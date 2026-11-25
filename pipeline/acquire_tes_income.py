@@ -2,7 +2,8 @@
 import hashlib, json, urllib.request, io, zipfile
 from pathlib import Path
 from datetime import datetime, timezone
-import openpyxl
+import openpyxl, re
+from xml.etree import ElementTree as ET
 
 OUT=Path("tes-income"); OUT.mkdir(exist_ok=True)
 URLS={
@@ -21,7 +22,20 @@ def get(name,url):
 def workbook(raw):
     with zipfile.ZipFile(io.BytesIO(raw)) as z:
         if sum(i.file_size for i in z.infolist())>100_000_000 or z.testzip(): raise ValueError("ZIP")
-    w=openpyxl.load_workbook(io.BytesIO(raw),data_only=True)
+    # Only an in-memory presentation-layer copy is normalized; raw file is untouched.
+    repaired=io.BytesIO(); invalid_colors=[]
+    with zipfile.ZipFile(io.BytesIO(raw)) as src, zipfile.ZipFile(repaired,"w") as dst:
+        for item in src.infolist():
+            data=src.read(item.filename)
+            if item.filename=="xl/styles.xml":
+                root=ET.fromstring(data)
+                for el in root.iter():
+                    rgb=el.get("rgb")
+                    if rgb is not None and not re.fullmatch("[0-9A-Fa-f]{6}|[0-9A-Fa-f]{8}",rgb):
+                        invalid_colors.append(rgb);el.set("rgb","FF000000")
+                data=ET.tostring(root,encoding="utf-8")
+            dst.writestr(item,data)
+    w=openpyxl.load_workbook(io.BytesIO(repaired.getvalue()),data_only=True)
     result=[]
     for s in w:
         rows=[]
@@ -30,7 +44,7 @@ def workbook(raw):
             vals=[c for c in row if type(c.value) in (int,float)]
             if labels or vals: rows.append({"row":row[0].row,"labels":labels[:12],"numeric_count":len(vals),"first_numeric":[[c.coordinate,c.value] for c in vals[:3]],"last_numeric":[[c.coordinate,c.value] for c in vals[-2:]]})
         result.append({"sheet":s.title,"dimension":s.calculate_dimension(),"rows":rows})
-    return result
+    return {"sheets":result,"presentation_only_invalid_colors":invalid_colors}
 def euro(raw):
     e=json.loads(raw); assert e["class"]=="dataset"
     return {"id":e["id"],"size":e["size"],"updated":e.get("updated"),"dimensions":{k:{"index":v["category"]["index"],"label":v["category"]["label"]} for k,v in e["dimension"].items()},"observed_values":len(e["value"]),"flags":e.get("status",{})}
