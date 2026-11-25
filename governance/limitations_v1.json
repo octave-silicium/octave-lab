@@ -1,6 +1,6 @@
 {
   "id": "LIMITATIONS-001",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "date": "2026-11-25",
   "baseline_commit": "5bd37a858e384fdf3a159564975623b8ac957663",
   "status": "INITIAL_CONSOLIDATION_REVIEW_PENDING",
@@ -738,9 +738,18 @@
           "scope": "Registre financier à contreparties explicites, dépôts, crédits, principal, intérêts et dettes opérationnelles; 13 tests synthétiques réussis. Pas de bilan intégral, BFR, défaut, write-offs, garanties ou insolvabilité.",
           "empirical_audit_path": "pipeline/audit_financial_2022.py",
           "empirical_ci": "https://github.com/octave-silicium/octave-lab/actions/runs/45546243404"
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7f",
+          "path": "audits/economic_financial_network_v07f_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45546646455",
+          "scope": "Compensation exacte d'obligations exigibles, impayés et dépréciation conditionnelle séparés; pas de défaut juridique, liquidation, BFR ni bilan bancaire complet.",
+          "empirical_audit_path": "audits/eurostat_financial_network_2022_verified.json",
+          "empirical_ci": "https://github.com/octave-silicium/octave-lab/actions/runs/45546707738"
         }
       ],
-      "remaining": "Registre financier à contreparties explicites, dépôts, crédits, principal, intérêts et dettes opérationnelles; 13 tests synthétiques réussis. Pas de bilan intégral, BFR, défaut, write-offs, garanties ou insolvabilité."
+      "remaining": "Compensation exacte d'obligations exigibles, impayés et dépréciation conditionnelle séparés; pas de défaut juridique, liquidation, BFR ni bilan bancaire complet."
     },
     {
       "id": "LIM-F02",
@@ -890,9 +899,18 @@
           "scope": "Les acquisitions et fonds propres sont raccordés aux dépôts et engagements financiers correspondants. Pas de choix VAN ni risque de crédit endogène, pas de calibration des entreprises.",
           "empirical_audit_path": "pipeline/audit_financial_2022.py",
           "empirical_ci": "https://github.com/octave-silicium/octave-lab/actions/runs/45546243404"
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7f",
+          "path": "audits/economic_financial_network_v07f_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45546646455",
+          "scope": "Rationnement du crédit sous plafond exogène et marge de fonds propres hypothétique après pertes reconnues; allocation proportionnelle entre demandeurs. Pas de choix VAN, risque calibré ou octroi effectif.",
+          "empirical_audit_path": "audits/eurostat_financial_network_2022_verified.json",
+          "empirical_ci": "https://github.com/octave-silicium/octave-lab/actions/runs/45546707738"
         }
       ],
-      "remaining": "Les acquisitions et fonds propres sont raccordés aux dépôts et engagements financiers correspondants. Pas de choix VAN ni risque de crédit endogène, pas de calibration des entreprises."
+      "remaining": "Rationnement du crédit sous plafond exogène et marge de fonds propres hypothétique après pertes reconnues; allocation proportionnelle entre demandeurs. Pas de choix VAN, risque calibré ou octroi effectif."
     },
     {
       "id": "LIM-F05",
@@ -1075,9 +1093,18 @@
           "scope": "Sources financières Eurostat bs/tr/gl/oc brutes et empreintes épinglées, contrôle local et audit CI codé. Aucun statut empirique promu, collecte live encore susceptible de dérive.",
           "empirical_audit_path": "pipeline/audit_financial_2022.py",
           "empirical_ci": "https://github.com/octave-silicium/octave-lab/actions/runs/45546243404"
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7f",
+          "path": "audits/economic_financial_network_v07f_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45546646455",
+          "scope": "Sources annuelles F4/F5 épinglées et matrice trimestrielle brute archivée; audit de bornes réussi, qualification sémantique et rapprochement des vintages trimestriels ouverts.",
+          "empirical_audit_path": "audits/eurostat_financial_network_2022_verified.json",
+          "empirical_ci": "https://github.com/octave-silicium/octave-lab/actions/runs/45546707738"
         }
       ],
-      "remaining": "Sources financières Eurostat bs/tr/gl/oc brutes et empreintes épinglées, contrôle local et audit CI codé. Aucun statut empirique promu, collecte live encore susceptible de dérive."
+      "remaining": "Sources annuelles F4/F5 épinglées et matrice trimestrielle brute archivée; audit de bornes réussi, qualification sémantique et rapprochement des vintages trimestriels ouverts."
     },
     {
       "id": "LIM-S02",
@@ -1470,9 +1497,18 @@
           "scope": "Contreparties du financement des acquisitions identifiées dans le scénario synthétique, fonds disponibles du propriétaire et de la sphère opérations contrôlés. Pas de financement empirique de capital ni de réallocation du crédit endogène.",
           "empirical_audit_path": "pipeline/audit_financial_2022.py",
           "empirical_ci": "https://github.com/octave-silicium/octave-lab/actions/runs/45546243404"
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7f",
+          "path": "audits/economic_financial_network_v07f_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45546646455",
+          "scope": "Plafond conditionnel de crédit calculé à partir de la contagion, réutilisable dans v0.7d après mapping explicite; couplage automatique aux acquisitions et financement multi-acteurs non réalisé.",
+          "empirical_audit_path": "audits/eurostat_financial_network_2022_verified.json",
+          "empirical_ci": "https://github.com/octave-silicium/octave-lab/actions/runs/45546707738"
         }
       ],
-      "remaining": "Contreparties du financement des acquisitions identifiées dans le scénario synthétique, fonds disponibles du propriétaire et de la sphère opérations contrôlés. Pas de financement empirique de capital ni de réallocation du crédit endogène."
+      "remaining": "Plafond conditionnel de crédit calculé à partir de la contagion, réutilisable dans v0.7d après mapping explicite; couplage automatique aux acquisitions et financement multi-acteurs non réalisé."
     },
     {
       "id": "LIM-S10",
@@ -1680,9 +1716,18 @@
           "scope": "Rejeu des trajectoires G4 v0.7d en registre financier à contreparties; insuffisance de dépôts d'une contrepartie provoque rejet, non résolution endogène. Couplage conjoint demande/prix/capacité/finance non réalisé.",
           "empirical_audit_path": "pipeline/audit_financial_2022.py",
           "empirical_ci": "https://github.com/octave-silicium/octave-lab/actions/runs/45546243404"
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7f",
+          "path": "audits/economic_financial_network_v07f_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45546646455",
+          "scope": "Propagation des impayés et réduction conditionnelle du crédit démontrées sur réseaux synthétiques; boucles dynamiques prix/revenus/capacités/financement et réallocation endogène non réalisées.",
+          "empirical_audit_path": "audits/eurostat_financial_network_2022_verified.json",
+          "empirical_ci": "https://github.com/octave-silicium/octave-lab/actions/runs/45546707738"
         }
       ],
-      "remaining": "Rejeu des trajectoires G4 v0.7d en registre financier à contreparties; insuffisance de dépôts d'une contrepartie provoque rejet, non résolution endogène. Couplage conjoint demande/prix/capacité/finance non réalisé."
+      "remaining": "Propagation des impayés et réduction conditionnelle du crédit démontrées sur réseaux synthétiques; boucles dynamiques prix/revenus/capacités/financement et réallocation endogène non réalisées."
     },
     {
       "id": "LIM-S13",
@@ -1898,9 +1943,18 @@
           "scope": "Quatre sources Eurostat financières 2021–2022 archivées, 27 556 observations; comptes non consolidés, 419 rapprochements TEE locaux à 1 M€ près, 118 identités calculables, 5 résidus >2,5 M€ conservés et 8 identités incomplètes. Pas de matrice bilatérale observée, d'hétérogénéité patrimoniale ni de contraintes bancaires.",
           "empirical_audit_path": "pipeline/audit_financial_2022.py",
           "empirical_ci": "https://github.com/octave-silicium/octave-lab/actions/runs/45546243404"
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7f",
+          "path": "audits/economic_financial_network_v07f_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45546646455",
+          "scope": "Bornes financières annuelles F4/F5 calculées sur six secteurs non consolidés, marges exactes; Eurostat nasq_10_f_cp 2022-Q4 brut acquis (4309 observations), couverture bilatérale et rapprochement annuel non qualifiés. Pas de matrice complète, propriété individuelle, pertes ou capital prudentiel calibrés.",
+          "empirical_audit_path": "audits/eurostat_financial_network_2022_verified.json",
+          "empirical_ci": "https://github.com/octave-silicium/octave-lab/actions/runs/45546707738"
         }
       ],
-      "remaining": "Quatre sources Eurostat financières 2021–2022 archivées, 27 556 observations; comptes non consolidés, 419 rapprochements TEE locaux à 1 M€ près, 118 identités calculables, 5 résidus >2,5 M€ conservés et 8 identités incomplètes. Pas de matrice bilatérale observée, d'hétérogénéité patrimoniale ni de contraintes bancaires."
+      "remaining": "Bornes financières annuelles F4/F5 calculées sur six secteurs non consolidés, marges exactes; Eurostat nasq_10_f_cp 2022-Q4 brut acquis (4309 observations), couverture bilatérale et rapprochement annuel non qualifiés. Pas de matrice complète, propriété individuelle, pertes ou capital prudentiel calibrés."
     },
     {
       "id": "LIM-T01",
@@ -2242,5 +2296,5 @@
     }
   ],
   "dependency_semantics": "Dependencies constrain closure, not parallel development; not a promise of dates. Publication restrictions apply to affected claims, not blanket suppression of safe synthetic demonstrations.",
-  "last_milestone": "G4 v0.7e"
+  "last_milestone": "G4 v0.7f"
 }
