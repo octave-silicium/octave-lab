@@ -12,9 +12,9 @@ def fixture():
     s=Structure(("SERVICE","BUYER"),((.2,.1),(.1,.2)),((.1,0),(0,.1)),((1,0),(0,1)),(.4,.4),(.05,.05),(.02,.02),(.13,.13),(100,100),"SYNTHETIC")
     return s,markets
 
-def mapping(a,b,kind="FINAL_DOMESTIC",weight="10"):
+def mapping(a,b,kind="FINAL_DOMESTIC",weight="100"):
     x,z=run(a)["result"],run(b)["result"]
-    return Mapping("SERVICE","Fictional domestic economy",2022,"EUR_MILLION_REFERENCE_BASIC_PRICE","100",100,weight,(BuyerUse(kind,None if kind=="FINAL_DOMESTIC" else "BUYER",x["sales"],z["sales"]),),"Fictional homogeneous service mapped to SERVICE","10 disjoint hypothetical cohorts unless varied; no representativeness claim","Hypothetical fixed basic price EUR 100 per report")
+    return Mapping("SERVICE","Fictional domestic economy",2022,"EUR_MILLION_REFERENCE_BASIC_PRICE","12",100,weight,(BuyerUse(kind,None if kind=="FINAL_DOMESTIC" else "BUYER",x["sales"],z["sales"]),),"Fictional homogeneous service mapped to SERVICE","100 disjoint hypothetical cohorts unless varied; no representativeness claim","Hypothetical fixed basic price EUR 12 per report, equal to the common G3 baseline price")
 
 def audit():
     s,m=fixture()
