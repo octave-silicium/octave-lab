@@ -4,7 +4,7 @@ from pathlib import Path,PurePosixPath
 from pipeline import acquire_tes_income as acq
 BASE="https://www.insee.fr/fr/statistiques/fichier/8988825/"
 EU="https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/"
-URLS={"fbcf.xlsx":BASE+"T_6301_6303_fr.xlsx","stocks.zip":BASE+"T_6401_6460.zip","ccf.xlsx":BASE+"T_6461_6462_fr.xlsx","eu_stocks.json":EU+"nama_10_nfa_st?lang=EN&freq=A&geo=FR&time=2022","eu_flows.json":EU+"nama_10_nfa_fl?lang=EN&freq=A&geo=FR&time=2022","eu_income.json":EU+"nama_10_a64?lang=EN&freq=A&unit=CP_MEUR&geo=FR&time=2022"}
+URLS={"fbcf.xlsx":BASE+"T_6301_6303_fr.xlsx","stocks.zip":BASE+"T_6401_6460.zip","ccf.xlsx":BASE+"T_6461_6462_fr.xlsx","eu_stocks.json":EU+"nama_10_nfa_st?lang=EN&freq=A&geo=FR&time=2022","eu_flows.json":EU+"nama_10_nfa_fl?lang=EN&freq=A&geo=FR&time=2022","eu_branch_flows.json":EU+"nama_10_a64_p5?lang=EN&freq=A&geo=FR&time=2022","eu_income.json":EU+"nama_10_a64?lang=EN&freq=A&unit=CP_MEUR&geo=FR&time=2022"}
 def main():
     root=Path("capital-2022");root.mkdir(exist_ok=True);acq.OUT=root
     profile={"status":"RAW_PROFILE_ONLY","publication":"BLOCK_PUBLICATION","sources":{},"workbooks":{},"eurostat":{}}
@@ -19,7 +19,11 @@ def main():
             sheets.append({"sheet":s["sheet"],"dimension":s["dimension"],"rows":len(s["rows"]),"head":s["rows"][:4],"year_2022_cells":years[:20]})
         profile["workbooks"][name]={"sha256":hashlib.sha256(raw).hexdigest(),"sheets":sheets}
     for name,url in URLS.items():
-        raw,meta=acq.get(name,url);profile["sources"][name]=meta
+        try:raw,meta=acq.get(name,url)
+        except Exception as exc:
+            profile["sources"][name]={"url":url,"status":"ACQUISITION_FAILED","error":str(exc)}
+            print("ACQUISITION_FAILED",name,str(exc));continue
+        profile["sources"][name]=meta
         if name.endswith(".xlsx"):wb(name,raw)
         elif name.endswith(".zip"):
             with zipfile.ZipFile(io.BytesIO(raw)) as z:
@@ -32,7 +36,7 @@ def main():
                     seen.add(p.name);profile["stock_archive_members"].append({"name":member.filename,"bytes":member.file_size,"parsed":p.name.lower().endswith(".xlsx")})
                     if p.name.lower().endswith(".xlsx"):wb(p.name,z.read(member))
                 print("STOCK_ARCHIVE_MEMBERS",json.dumps(profile["stock_archive_members"],ensure_ascii=False))
-                if not any(x["parsed"] for x in profile["stock_archive_members"]):profile["stock_archive_status"]="RAW_ONLY_FORMAT_NOT_MAPPED"
+                if not any(x["parsed"] for x in profile["stock_archive_members"]):profile["stock_archive_status"]="CSV_RAW_REQUIRES_SEMANTIC_AUDIT"
         else:
             e=json.loads(raw);p=acq.euro(raw)
             if math.prod(e["size"])<len(e["value"]):raise ValueError("DIMENSIONS")
