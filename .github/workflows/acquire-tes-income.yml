@@ -8,6 +8,9 @@ on:
       - 'pipeline/audit_tes_structural.py'
       - 'pipeline/economic_sector_capacity.py'
       - 'pipeline/audit_tes_capacity.py'
+      - 'pipeline/economic_sector_capacity_dynamics.py'
+      - 'pipeline/audit_tes_capacity_dynamics.py'
+      - 'tests/test_economic_sector_capacity_dynamics.py'
       - 'tests/test_economic_sector_capacity.py'
       - 'tests/test_economic_sector_structural.py'
       - 'pipeline/economic_income_bridge.py'
@@ -44,6 +47,11 @@ jobs:
           python -m unittest discover -s tests -p test_economic_sector_capacity.py -v
           python -m pipeline.audit_tes_capacity tes-income/standard.xlsx tes-income/symmetric/TES_symetrique_A38_2022DEF_fr.xlsx tes-income/eurostat.json > tes-income/capacity-audit.json
           cat tes-income/capacity-audit.json
+      - name: Verify dynamic capacity and stock paths
+        run: |
+          python -m unittest discover -s tests -p test_economic_sector_capacity_dynamics.py -v
+          python -m pipeline.audit_tes_capacity_dynamics tes-income/standard.xlsx tes-income/symmetric/TES_symetrique_A38_2022DEF_fr.xlsx tes-income/eurostat.json > tes-income/capacity-dynamics-audit.json
+          cat tes-income/capacity-dynamics-audit.json
       - name: Preserve raw and profile
         uses: actions/upload-artifact@v4
         with:
