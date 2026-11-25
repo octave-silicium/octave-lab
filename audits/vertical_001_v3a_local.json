@@ -1,0 +1,19 @@
+{
+  "study": "VERTICAL-001",
+  "phase": "V3a",
+  "package_sha256": "427315315b4d727c83b8a849efed25b1f4a7097fd16c52cde88986a0f68e7d8f",
+  "server_sha256": "3315a5331cdf1c7f090fbc6bc688fba7860700a46585113d88c658cf8c3ca0c1",
+  "mmo_receipt_sha256": "29f2034d24b92e67cf51dee640e24f38b0219ddfedfb7ddb1422ee35b1a45abb",
+  "local_tests": 5,
+  "render_widths": [
+    1440,
+    1280,
+    768,
+    390
+  ],
+  "page_horizontal_overflow": false,
+  "browser_http_e2e": "BLOCKED_ENVIRONMENT",
+  "complete_real_dossier": "NOT_AVAILABLE_LOCALLY",
+  "publication": "BLOCK_PUBLICATION",
+  "ux_gate_promoted": false
+}
