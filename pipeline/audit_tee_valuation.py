@@ -38,11 +38,11 @@ def main(folder,sym):
         a=i+5;j=i+11
         require(all(g["B"+str(a)]["value"]==code for g in (f,r,u)) and d.cell(j,85).value==m.cell(j,50).value==code,"PRODUCT_AXIS")
         basic_d=sx(d,j,86);basic_m=sx(m,j,51)
-        purchaser=val(f,"C"+str(a));basic=basic_d+basic_m
+        purchaser=val(f,"C"+str(a),code=="MB");basic=basic_d+basic_m
         # All-use resource valuation vectors are not household-specific.
         mc,mt,tx,sub=[val(r,k+str(a),True) for k in "IJKM"]
         resources=val(r,"H"+str(a));purchase_resources=val(r,"N"+str(a))
-        ci=val(u,"AN"+str(a));final=val(f,"S"+str(a))
+        ci=val(u,"AN"+str(a),code in ("OZ","QB","TZ"));final=val(f,"S"+str(a))
         require(purchase_resources==resources+mc+mt+tx+sub,"RESOURCE_VALUATION:"+code)
         require(purchase_resources==ci+final,"RESOURCE_USE:"+code)
         checks.extend([{"code":code,"check":"resource_valuation","residual":"0"},{"code":code,"check":"resource_use","residual":"0"}])
