@@ -1,0 +1,20 @@
+name: G4 finance capital work scenarios
+on:
+  push:
+    paths:
+      - 'pipeline/economic_finance_work_scenarios.py'
+      - 'tests/test_economic_finance_work_scenarios.py'
+      - '.github/workflows/g4-finance-work.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  scenarios:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest discover -s tests -p 'test_economic_finance_work_scenarios.py' -v
+      - run: python -m unittest discover -s tests -p 'test_economic_working_capital.py' -v
