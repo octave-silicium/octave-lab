@@ -126,3 +126,6 @@ Décision utilisateur : [UX-001](UX-001.md) et [RESULT-001](RESULT-001.md) compl
 
 ## G4 v0.1 — Interdépendances sectorielles
 [G4-SECTOR](G4-SECTOR.md) : contrat comptable domestique et exigences de demande à coefficients fixes, benchmark ONS fictif externe, garde capacité, extrait VA Insee réel séparé. Recette intégrale réussie : 419 tests, [audit](../audits/economic_sector_v01_verified.json). TES symétrique réel non téléchargé, admission/bridge et propagation offre ouverts ; G4 v0.2 prioritaire.
+
+## LIMITATIONS-001 — Contrôle transversal des limites (25/11/2026)
+[Registre et gouvernance](LIMITATIONS-001.md), [JSON canonique](../governance/limitations_v1.json), [preuve](../audits/limitations_v1_verified.json). 51 familles, 131 obligations, 162 fichiers et 611 passages candidats inventoriés ; revue sémantique ouverte, 9 tests de gouvernance réussis, aucune qualification scientifique promue. Préserver OPEN-01…09 et les identifiants existants. Prochaine tranche G4 v0.6b budget et réallocation, avec suivi explicite LIM-S11/S10/S03 ; P0 et autres obligations restent ouverts.
