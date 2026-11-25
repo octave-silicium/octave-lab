@@ -180,6 +180,8 @@ def trajectory(d):
         old={k for k,v in state.items() if v["adopted"]};inactive={k for k,v in state.items() if v["exited"]}
         new=set();spends={};draws={}
         prevrows={r["seller"]:r for r in previous["result"]["sellers"]}
+        matched=receipt(old,inactive) if inactive!=set(previous["result"]["unavailable_sellers"]) else previous
+        matchedrows={r["seller"]:r for r in matched["result"]["sellers"]}
         # All decisions use the same lagged state. No within-quarter look-ahead.
         for k,s in sorted(strategies.items()):
             st=state[k]
@@ -188,12 +190,12 @@ def trajectory(d):
             record={"quarter":q,"seller":k,"previous_share_loss_bp":str(share_loss*10000),"adoption":"WAIT","reason":"NOT_ELIGIBLE"}
             if s.earliest_adoption and q>=s.earliest_adoption and (s.share_loss_trigger_bp==0 or share_loss*10000>=s.share_loss_trigger_bp):
                 trial=receipt(old|{k},inactive);t=next(r for r in trial["result"]["sellers"] if r["seller"]==k)
-                expected=(F(t["cash_surplus_eur"])-F(p["cash_surplus_eur"]))*100*d.repeats
+                expected=(F(t["cash_surplus_eur"])-F(matchedrows[k]["cash_surplus_eur"]))*100*d.repeats
                 cfg=sellers[k].alternative[3];cost=cfg.investment_cents+cfg.transition_cents
                 # Capital requirement is an explicit upfront cost from G3.3.
                 # Draw only the amount needed for the investment plus reserve.
                 need=max(F(0),cost+s.reserve_cents-st["cash"])
-                record.update({"expected_incremental_cash_eur_per_quarter":str(expected/100),"upfront_cost_eur":str(F(cost,100)),"requested_credit_eur":str(need/100),"trial_sha256":trial["sha256"]})
+                record.update({"expected_incremental_cash_eur_per_quarter":str(expected/100),"upfront_cost_eur":str(F(cost,100)),"requested_credit_eur":str(need/100),"trial_sha256":trial["sha256"],"matched_no_adoption_sha256":matched["sha256"]})
                 if expected<=0 or expected*s.payback_quarters<cost:record["reason"]="PAYBACK_RULE"
                 elif need>s.credit_limit_cents-st["credit_used"]:record["reason"]="CREDIT_CONSTRAINT"
                 else:
