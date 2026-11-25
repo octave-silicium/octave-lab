@@ -18,16 +18,23 @@ def qualify(raw,annual):
         if code=="S14_S15" and all(x in idx for x in ("S14","S15")):return ("S14","S15")
         return ()
     mapping={k:{a:components(k,a) for a in AX} for k in ("sector","sector2")}
+    def instruments(inst):
+        idx=dims["na_item"]["index"]
+        if inst in idx:return (inst,)
+        parts={"F4":("F41","F42"),"F5":("F51","F52")}.get(inst,())
+        return parts if parts and all(x in idx for x in parts) else ()
+    print("NATIVE_AXES",json.dumps({k:dims[k]["label"] for k in ("sector","sector2","na_item","stk_flow")}))
     def cell(holder,issuer,side,inst):
         sector,cp=(holder,issuer) if side=="ASS" else (issuer,holder)
         parts=[]
         for sc in mapping["sector"][sector]:
             for cc in mapping["sector2"][cp]:
-                ix=0
-                for k,n,v in zip(j["id"],j["size"],("Q","MIO_EUR",cc,sc,stock[0],side,inst,"FR","2022-Q4")):
-                    ix=ix*n+dims[k]["index"][v]
-                v=j["value"].get(str(ix))
-                parts.append({"sector":sc,"counterpart":cc,"value":str(v) if v is not None else None,"flag":j.get("status",{}).get(str(ix)),"locator":str(ix)})
+                for ni in instruments(inst):
+                    ix=0
+                    for k,n,v in zip(j["id"],j["size"],("Q","MIO_EUR",cc,sc,stock[0],side,ni,"FR","2022-Q4")):
+                        ix=ix*n+dims[k]["index"][v]
+                    v=j["value"].get(str(ix))
+                    parts.append({"sector":sc,"counterpart":cc,"instrument":ni,"value":str(v) if v is not None else None,"flag":j.get("status",{}).get(str(ix)),"locator":str(ix)})
         total=sum((D(x["value"]) for x in parts),D(0)) if parts and all(x["value"] is not None for x in parts) else None
         return {"value":str(total) if total is not None else None,"components":parts,"axis_available":bool(parts)}
     result={}
@@ -58,8 +65,8 @@ def qualify(raw,annual):
                       "mirror_exact":sum(x==0 for x in pairs),"max_abs_mirror_difference":str(max(map(abs,pairs))) if pairs else None,
                       "margin_pairs":sum(x["difference"] is not None for x in sums),
                       "max_abs_margin_difference":str(max(abs(D(x["difference"])) for x in sums if x["difference"] is not None)) if any(x["difference"] is not None for x in sums) else None}
-    return {"status":"BILATERAL_STOCK_DIAGNOSTIC_NOT_ADMITTED","sha256":sha,"updated":j.get("updated"),"stock_code":stock[0],"axis":AX,"native_sector_codes":{k:list(dims[k]["index"]) for k in ("sector","sector2")},"axis_mapping":mapping,"instruments":result,
-            "limitations":["missing cells not zero; retain mirrors, flags, annual vs quarterly differences, no automatic reconciliation","F4/F5 stocks, not due debt; F5 equity and fund shares; no firm-level topology","S14/S15 grouped to match quarterly; no overlap with total or subsectors; vintage and coverage discrepancies retained"]}
+    return {"status":"BILATERAL_STOCK_DIAGNOSTIC_NOT_ADMITTED","sha256":sha,"updated":j.get("updated"),"stock_code":stock[0],"axis":AX,"native_sector_codes":{k:list(dims[k]["index"]) for k in ("sector","sector2")},"axis_mapping":mapping,"instrument_mapping":{i:instruments(i) for i in ("F4","F5")},"instruments":result,
+            "limitations":["missing cells not zero; retain mirrors, flags, annual vs quarterly differences, no automatic reconciliation","F4/F5 stocks, not due debt; aggregate absent requires all disjoint subinstruments (F41/F42 or F51/F52); otherwise unknown; no firm-level topology","S14/S15 grouped to match quarterly; no overlap with total or subsectors; vintage and coverage discrepancies retained"]}
 def main():
     out=Path("counterpart-qualification");out.mkdir(exist_ok=True)
     with urllib.request.urlopen(urllib.request.Request(URL,headers={"User-Agent":"OctaveLab economic research"}),timeout=60) as r:
