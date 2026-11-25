@@ -1,0 +1,261 @@
+{
+  "source": "https://www.insee.fr/fr/statistiques/8988861",
+  "sha256": "db4189aa708c10122dadf09c17f8bb49e1dd45561f93bf5527abe8473a29aa73",
+  "year": 2022,
+  "base": 2020,
+  "unit": "EUR million current basic prices",
+  "codes": [
+    "AZ",
+    "BZ",
+    "CA",
+    "CB",
+    "CC",
+    "CD",
+    "CE",
+    "CF",
+    "CG",
+    "CH",
+    "CI",
+    "CJ",
+    "CK",
+    "CL",
+    "CM",
+    "DZ",
+    "EZ",
+    "FZ",
+    "GZ",
+    "HZ",
+    "IZ",
+    "JA",
+    "JB",
+    "JC",
+    "KZ",
+    "LZ",
+    "MA",
+    "MB",
+    "MC",
+    "NZ",
+    "OZ",
+    "PZ",
+    "QA",
+    "QB",
+    "RZ",
+    "SZ",
+    "TZ"
+  ],
+  "cell_ranges": {
+    "V": "domestic!D11:AN47",
+    "U": "domestic!AS11:CC47",
+    "M": "imports!J11:AT47",
+    "y": "domestic!CQ11:CQ47",
+    "ym": "imports!BH11:BH47"
+  },
+  "checks": {
+    "production_rows": {
+      "max_abs_error": 0,
+      "max_allowed": 2.8357868586681435e-8
+    },
+    "production_columns": {
+      "max_abs_error": 0,
+      "max_allowed": 2.8357868586681435e-8
+    },
+    "domestic_uses": {
+      "max_abs_error": 5.820766091346741e-11,
+      "max_allowed": 2.8357868586681435e-8
+    },
+    "domestic_intermediate_rows": {
+      "max_abs_error": 5.820766091346741e-11,
+      "max_allowed": 1.2610022110948191e-8
+    },
+    "domestic_intermediate_columns": {
+      "max_abs_error": 0,
+      "max_allowed": 1.206839021961059e-8
+    },
+    "import_uses": {
+      "max_abs_error": 1.4551915228366852e-11,
+      "max_allowed": 6.359300641634036e-9
+    },
+    "import_intermediate_rows": {
+      "max_abs_error": 1.4551915228366852e-11,
+      "max_allowed": 4.6569094820370096e-9
+    },
+    "import_intermediate_columns": {
+      "max_abs_error": 0,
+      "max_allowed": 4.012899125882541e-9
+    },
+    "import_origin": {
+      "max_abs_error": 0,
+      "max_allowed": 6.359300641634036e-9
+    },
+    "total_output": {
+      "max_abs_error": 1.862645149230957e-9,
+      "max_allowed": 2.9055665891064563e-7
+    },
+    "total_domestic_intermediate": {
+      "max_abs_error": 2.3283064365386963e-10,
+      "max_allowed": 1.1379636498531906e-7
+    },
+    "total_import_intermediate": {
+      "max_abs_error": 0,
+      "max_allowed": 3.776367401542302e-8
+    },
+    "total_import": {
+      "max_abs_error": 0,
+      "max_allowed": 5.7387727110835836e-8
+    },
+    "total_domestic_final": {
+      "max_abs_error": 0,
+      "max_allowed": 1.7676029392532654e-7
+    },
+    "total_import_final": {
+      "max_abs_error": 1.1641532182693481e-10,
+      "max_allowed": 1.9624053095412823e-8
+    },
+    "market_share": {
+      "max_abs_error": 2.220446049250313e-16,
+      "max_allowed": 5.684341886080802e-14
+    }
+  },
+  "totals": {
+    "gross_output": 5111526.800000001,
+    "domestic_intermediate": 2001926.8239999998,
+    "imported_intermediate": 664345.579,
+    "domestic_final": 3109599.976,
+    "imports": 1009575.5719999999,
+    "import_final": 345229.993,
+    "intermediate_product_taxes_aggregate": 76644.997,
+    "gva_implied_aggregate": 2368609.4000000004,
+    "off_diagonal_production": 62743.20000000205
+  },
+  "model": {
+    "assumption": "industry technology fixed market shares, conditional diagnostic",
+    "spectral_radius": 0.5381949355385137,
+    "max_column_sum": 0.6476994385174105,
+    "baseline_max_error": 1.1641532182693481e-10,
+    "alternative_negative_coefficients": 18,
+    "alternative_min_coefficient": -0.0007419939978208142,
+    "alternative_condition_number": 159.84008843036116
+  },
+  "cases": {
+    "JC": {
+      "gross_output_requirement": 164.5440421844708,
+      "indirect_requirement": 64.54404218447081,
+      "imported_intermediate_requirement": 14.864741927071991,
+      "combined_gva_and_intermediate_product_taxes": 85.135258072928,
+      "alternative_product_technology_output": 164.99563471251446,
+      "top_products": [
+        [
+          "JC",
+          117.43057054407011
+        ],
+        [
+          "MA",
+          9.664781048163222
+        ],
+        [
+          "NZ",
+          8.289735752618796
+        ],
+        [
+          "LZ",
+          3.5988378688172578
+        ],
+        [
+          "JA",
+          3.3957631770689902
+        ],
+        [
+          "KZ",
+          2.9527321554134867
+        ]
+      ],
+      "gdp": null,
+      "employment": null,
+      "realized_output": null
+    },
+    "MA": {
+      "gross_output_requirement": 178.68982250334173,
+      "indirect_requirement": 78.68982250334173,
+      "imported_intermediate_requirement": 14.542122351107935,
+      "combined_gva_and_intermediate_product_taxes": 85.45787764889207,
+      "alternative_product_technology_output": 179.96915704899246,
+      "top_products": [
+        [
+          "MA",
+          132.24689044145578
+        ],
+        [
+          "NZ",
+          9.230411639834161
+        ],
+        [
+          "KZ",
+          6.345845742573019
+        ],
+        [
+          "LZ",
+          5.118830481507918
+        ],
+        [
+          "JC",
+          4.417180225322753
+        ],
+        [
+          "GZ",
+          2.684220398771931
+        ]
+      ],
+      "gdp": null,
+      "employment": null,
+      "realized_output": null
+    },
+    "NZ": {
+      "gross_output_requirement": 165.70062176497134,
+      "indirect_requirement": 65.70062176497134,
+      "imported_intermediate_requirement": 15.673604560826263,
+      "combined_gva_and_intermediate_product_taxes": 84.32639543917371,
+      "alternative_product_technology_output": 166.92451746297849,
+      "top_products": [
+        [
+          "NZ",
+          118.33687821955564
+        ],
+        [
+          "MA",
+          10.181389481560421
+        ],
+        [
+          "KZ",
+          5.352443679114219
+        ],
+        [
+          "LZ",
+          4.342044730666962
+        ],
+        [
+          "GZ",
+          3.970451651060495
+        ],
+        [
+          "DZ",
+          2.8357589314458402
+        ]
+      ],
+      "gdp": null,
+      "employment": null,
+      "realized_output": null
+    }
+  },
+  "status": "EMPIRICAL_DIAGNOSTIC_NOT_ENGINE_ADMISSION",
+  "publication": "BLOCK_PUBLICATION",
+  "verification": {
+    "run": 45523286704,
+    "job": 138900262933,
+    "tested_commit": "3950926f239c2600f4cb22474274e5fc5182245e",
+    "conclusion": "success",
+    "raw_artifact": 14980238072,
+    "original_archive_sha256": "3e4c3d982aedcc495b7e4744c0280bde9b623664f0e899e86fadb1636131886c",
+    "raw_drive_archive": "https://drive.google.com/file/d/1jc2bMOmnU_k7pW3AFt4V5QxebScDF4IC/view",
+    "diagnostic_artifact": 14981401289
+  }
+}
