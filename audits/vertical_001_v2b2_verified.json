@@ -1,0 +1,66 @@
+{
+  "study": "VERTICAL-001",
+  "phase": "V2b2",
+  "publication": "BLOCK_PUBLICATION",
+  "causal_identification": "NOT_IDENTIFIED",
+  "section_count": 18,
+  "claim_count": 7,
+  "coverage_count": 140,
+  "economic_sources": {
+    "national_accounts_output": "966cce9f012cf9622d2a46f2136eb970546431a60c4d5f98316b489b9ab9eb1a",
+    "national_accounts_work": "56da2eb5c6e79756c6944b4a80376a02a37e7c3aced7189ee7c6ce3c82b6a186",
+    "sts_production": "697af64b8ed5ce9d06231db04d47aeaa48e6d8fdebc087afee91ee90de953c08",
+    "sts_turnover": "e27c945fc3e619c38d552f8c4f0ab54ca95062a8b037357453ab20f71ec326c2",
+    "sts_prices": "f5538c1e700b56d3e1f1adb8bac1adc4c525f0524d0c497df4e22d05e6310dd0"
+  },
+  "base_sources": {
+    "urssaf_headcount": "9ec16fb077e554518f5a1ade579684a8c91d56f293c7b9897f07b40226833222",
+    "urssaf_dpae": "42cd99124b1ef5f0a39afc481c42e70d5adc0fbfb535a7cb53f2653dfd41f549",
+    "eurostat_ai": "0c701942ea3d15bd1350e6938b27a5713f9d39f366b620723995b98077a469a8"
+  },
+  "valid_yoy_signatures": 26,
+  "valid_fixed_windows": 3,
+  "economic_receipt_sha256": "ea15374bed0d59c17bfb6f3a23232e6b481633d76cd07eeb31baa6ad7639d4b3",
+  "scenario_sha256": "fda1e3e7754e63893d8564409af954dc1d8d12a8a5d61dabc744cfc8401e7b55",
+  "result_sha256": "494e22fefe8c1e2a0fc051404c569a452626551e766a6173db3ce7e01c1f28c9",
+  "national_context_status": {
+    "N01": "PUBLISHED_RELEASE_CONTEXT_ONLY",
+    "N02": "BLOCKED_WORKBOOK_ACCESS"
+  },
+  "registry_sha256": {
+    "economic_mechanisms_v2.json": "7f7fd86bf1a9a9f017689627dcc36dcf77cef8aaa9a6cdf017088e75f1e44694",
+    "transversal_enrichment_v1.json": "14ecd88e76a6f08da49087dab0128ff7b80f7fbdbefff4a3581509ec5f4a99d2",
+    "shapiro_enrichment_v1.json": "0e79a721f25ac9bfb748d96da1b2a6d61a85c30274e723238aa0b123223034d8",
+    "investigation_result_v1.json": "a18023fb3ea2847425ae3190f79e55bd9d7cf1a2725135b6d0b4fd38a16653ee",
+    "multi_order_prospective_v1.json": "abd8dfeebcfa63d2bb225ce7720228c5f3fc7d63efec95b370e14b00d9c32cbc",
+    "limitations_v1.json": "cf2b87da03260c5fa50c5c0dbb959622c8f7f96530d490e8a70fe5cff6e253b6",
+    "source_rights.json": "bbc7b4d34b64a9580dcc3ecb0384f99c9397d2a8c11453ba06ba6909172a53b6",
+    "series_events.json": "2a8c15d2c065643623f71998d536dbaeaa868279725e2292d4730f355145477b"
+  },
+  "code_sha256": {
+    "vertical_v2.py": "d4c1b0cec934ca5d68c91eb6e68988f0afe49502802f80aff70e21779a9079c5",
+    "vertical_scenarios.py": "c736f01f20bafa2d78ccc415abe6321318dee2562657f974a342d9d34ed90bbb",
+    "vertical_v1.py": "df98b8e7ebfad7f427946528972eef3f9119bb6861761e8f71e083b66c56bd35",
+    "vertical_v11.py": "2ed40b76078c1afed8d462a9b2534653f462222e8fcaa5d5783372765c885e47",
+    "vertical_v12.py": "6bdaf9198d96da49cf43ab935b46362726f06d80ccb37ed7edcd4218746b3558",
+    "economic_market.py": "fc2e26b3fb6126b68dae41186f7514ee9004a628e29a7b4b9b2feec6f92f5812",
+    "vertical_v2b.py": "0c16eaa46df56e7ae6e47e5557537283215bca254aabafb1d8ea36f0d388eb5e",
+    "vertical_v2b2.py": "3cc6f0ffedd7861109a9a38fb31ab8e5d76dcb82c9e06596a981709a34723d89"
+  },
+  "ci": {
+    "run": 45682419207,
+    "job": 139446127638,
+    "conclusion": "success",
+    "tested_commit": "3124d2387e962c4cbde1cce42e564a87d447f5f5",
+    "tests": 30,
+    "new_tests": 5,
+    "seconds": 0.035
+  },
+  "scope_limits": [
+    "No detailed Insee series acquired; official September release context only.",
+    "Dares workbook not acquired: human verification on official page.",
+    "No private durable snapshot of full dossier or raw bytes; public repository CI logs contain coverage and hashes only.",
+    "No actual direction or magnitude of signatures in public log; regenerate internal dossier to inspect.",
+    "No causal identification or public release."
+  ]
+}
