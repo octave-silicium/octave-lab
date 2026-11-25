@@ -20,31 +20,41 @@ def get(name,url):
     (OUT/name).write_bytes(raw)
     return raw,meta
 def workbook(raw):
+    ns={"s":"http://schemas.openxmlformats.org/spreadsheetml/2006/main"}
+    rid="{http://schemas.openxmlformats.org/officeDocument/2006/relationships}id"
+    import posixpath
+    result=[]; exact={}
     with zipfile.ZipFile(io.BytesIO(raw)) as z:
         if sum(i.file_size for i in z.infolist())>100_000_000 or z.testzip(): raise ValueError("ZIP")
-    # Only an in-memory presentation-layer copy is normalized; raw file is untouched.
-    repaired=io.BytesIO(); invalid_colors=[]
-    with zipfile.ZipFile(io.BytesIO(raw)) as src, zipfile.ZipFile(repaired,"w") as dst:
-        for item in src.infolist():
-            data=src.read(item.filename)
-            if item.filename=="xl/styles.xml":
-                root=ET.fromstring(data)
-                for el in root.iter():
-                    rgb=el.get("rgb")
-                    if rgb is not None and not re.fullmatch("[0-9A-Fa-f]{6}|[0-9A-Fa-f]{8}",rgb):
-                        invalid_colors.append(rgb);el.set("rgb","FF000000")
-                data=ET.tostring(root,encoding="utf-8")
-            dst.writestr(item,data)
-    w=openpyxl.load_workbook(io.BytesIO(repaired.getvalue()),data_only=True)
-    result=[]
-    for s in w:
-        rows=[]
-        for row in s.iter_rows():
-            labels=[[c.coordinate,c.value] for c in row if isinstance(c.value,str) and c.value.strip()]
-            vals=[c for c in row if type(c.value) in (int,float)]
-            if labels or vals: rows.append({"row":row[0].row,"labels":labels[:12],"numeric_count":len(vals),"first_numeric":[[c.coordinate,c.value] for c in vals[:3]],"last_numeric":[[c.coordinate,c.value] for c in vals[-2:]]})
-        result.append({"sheet":s.title,"dimension":s.calculate_dimension(),"rows":rows})
-    return {"sheets":result,"presentation_only_invalid_colors":invalid_colors}
+        wb=ET.fromstring(z.read("xl/workbook.xml"))
+        rel=ET.fromstring(z.read("xl/_rels/workbook.xml.rels"))
+        targets={x.attrib["Id"]:x.attrib["Target"] for x in rel}
+        strings=[]
+        if "xl/sharedStrings.xml" in z.namelist():
+            for si in ET.fromstring(z.read("xl/sharedStrings.xml")).findall("s:si",ns):
+                strings.append("".join(x.text or "" for x in si.findall(".//s:t",ns)))
+        for s in wb.findall("s:sheets/s:sheet",ns):
+            target=targets[s.attrib[rid]]
+            member=target.lstrip("/") if target.startswith("/") else posixpath.normpath("xl/"+target)
+            if not re.fullmatch(r"xl/worksheets/sheet[0-9]+\.xml",member): raise ValueError("SHEET_PATH")
+            root=ET.fromstring(z.read(member)); rows=[]; cells={}
+            for row in root.findall(".//s:sheetData/s:row",ns):
+                labels=[]; vals=[]
+                for c in row.findall("s:c",ns):
+                    ref=c.attrib["r"]; typ=c.get("t","n"); v=c.find("s:v",ns); f=c.find("s:f",ns)
+                    value=v.text if v is not None else None
+                    if typ=="s" and value is not None: value=strings[int(value)]
+                    if typ=="inlineStr": value="".join(x.text or "" for x in c.findall(".//s:t",ns))
+                    if value is None and f is None: continue
+                    cells[ref]={"type":typ,"value":value,"formula":f.text if f is not None else None}
+                    if typ in ("s","inlineStr","str") and value: labels.append([ref,value])
+                    if typ=="n" and value is not None and f is None: vals.append([ref,value])
+                if labels or vals: rows.append({"row":int(row.attrib["r"]),"labels":labels[:45],"numeric_count":len(vals),"first_numeric":vals[:3],"last_numeric":vals[-2:]})
+            dim=root.find("s:dimension",ns)
+            result.append({"sheet":s.attrib["name"],"dimension":dim.get("ref") if dim is not None else None,"rows":rows})
+            exact[s.attrib["name"]]=cells
+    (OUT/"exact_cells.json").write_text(json.dumps(exact,ensure_ascii=False,indent=2))
+    return {"sheets":result,"reader":"OOXML cell XML only; styles/drawings not interpreted"}
 def euro(raw):
     e=json.loads(raw); assert e["class"]=="dataset"
     return {"id":e["id"],"size":e["size"],"updated":e.get("updated"),"dimensions":{k:{"index":v["category"]["index"],"label":v["category"]["label"]} for k,v in e["dimension"].items()},"observed_values":len(e["value"]),"flags":e.get("status",{})}
