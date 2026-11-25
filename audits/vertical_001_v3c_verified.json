@@ -1,0 +1,68 @@
+{
+  "study": "VERTICAL-001",
+  "phase": "V3c",
+  "date": "2026-11-25",
+  "status": "REAL_DOSSIER_CONSOLIDATED_INTERNAL",
+  "source_commit": "dbced8ace0c942fe966dc99f6ea6e884744112dd",
+  "sealed_transfer": {
+    "run": 45687242271,
+    "job": 139462968814,
+    "conclusion": "success",
+    "artifact": 15056108951,
+    "zip_sha256": "d0141e18ca68da6deeaf83e8ff4544929820af2ff5a1f235d6430a50bdaddc71",
+    "ciphertext_sha256": "0964bb4e96db66c82a0fba4865fad3ce5ed9b584b8c2cef26209676fe94e3721",
+    "cipher": "OpenSSL CMS AES-256-GCM with RSA-3072 recipient",
+    "source_files": 9,
+    "local_decryption": "PASS",
+    "local_source_hash_verification": "9/9",
+    "archive_drive_id": "1nSOLPt_hfZYL4Q5RAO1oSiDwllAWVEBA",
+    "drive_size_bytes": 490385,
+    "drive_shared": false,
+    "recovery_key_location": "Separate private user library recovery kit, never on public repository or in app package"
+  },
+  "source_snapshot": {
+    "run": 45687402692,
+    "job": 139463526251,
+    "artifact": 15057321489,
+    "sha256": "9c0a3ebf92e2aa4fc14f04579b4281f15ca113f2d30352e1b656a6acae53898b"
+  },
+  "offline_replay": {
+    "v2b2_sha256": "494e22fefe8c1e2a0fc051404c569a452626551e766a6173db3ce7e01c1f28c9",
+    "mmo_sha256": "29f2034d24b92e67cf51dee640e24f38b0219ddfedfb7ddb1422ee35b1a45abb",
+    "v2b3_sha256": "152ea5dff43621becc6c228187026a71e2273ac342e51799817fd06fb3e7e7f7",
+    "exact_replay": true,
+    "source_workbooks": 2,
+    "vertical_tests": 34
+  },
+  "ui": {
+    "package_sha256": "5181c4051c85a2db554a24ea6a5e084b971360c3bc8614cf2e56dd2a890c0f95",
+    "bytes": 89487,
+    "local_tests": 21,
+    "passed": 21,
+    "real_views": 7,
+    "offline_chromium_renders": 28,
+    "widths": [
+      1440,
+      1280,
+      768,
+      390
+    ],
+    "page_overflows": 0,
+    "http": "PASS_LOCAL",
+    "browser_http_e2e": "NOT_COMPLETED",
+    "archive_location": "Private ChatGPT library /Octave Lab; Drive upload of app rejected by connector"
+  },
+  "sections": 18,
+  "claims": 8,
+  "coverage_entries": 140,
+  "publication": "BLOCK_PUBLICATION",
+  "causal_identification": "NOT_IDENTIFIED",
+  "ux_gate_promoted": false,
+  "limitations": [
+    "Rights, independent scientific review, V3 UX/accessibility/performance/security audit and external task tests not completed.",
+    "Insee national detailed September series not acquired; Eurostat August series retained.",
+    "Private data not in public code or logs; encrypted archive in public CI artifact only for seven days. Runner processes plaintext transiently; no hardened confidential-computing claim.",
+    "Interface code remains in private application archive; public source-only extraction/review pending. App Drive transfer rejected; library storage succeeded. Recovery key is private and must be safeguarded.",
+    "Full dataset and scenarios linked to interface but sector parameters not calibrated; no causal attribution, no complete qualification of all architecture entries."
+  ]
+}
