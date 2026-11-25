@@ -1,6 +1,6 @@
 {
   "id": "LIMITATIONS-001",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "date": "2026-11-25",
   "baseline_commit": "5bd37a858e384fdf3a159564975623b8ac957663",
   "status": "INITIAL_CONSOLIDATION_REVIEW_PENDING",
@@ -729,9 +729,18 @@
           "path": "audits/economic_sector_financing_v07d_verified.json",
           "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45545566719",
           "scope": "Trésorerie et dette d'un emprunteur synthétique, intérêts, principal, arriérés séparés, réserve et apports explicites. BFR, bilan complet, contreparties, impayés clients, fiscalité, défaut/liquidation restent ouverts."
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7e",
+          "path": "pipeline/economic_financial_counterparts.py",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45546108324",
+          "scope": "Registre financier à contreparties explicites, dépôts, crédits, principal, intérêts et dettes opérationnelles; 13 tests synthétiques réussis. Pas de bilan intégral, BFR, défaut, write-offs, garanties ou insolvabilité.",
+          "empirical_audit_path": "pipeline/audit_financial_2022.py",
+          "empirical_ci": "https://github.com/octave-silicium/octave-lab/actions/runs/45546243404"
         }
       ],
-      "remaining": "Trésorerie et dette d'un emprunteur synthétique, intérêts, principal, arriérés séparés, réserve et apports explicites. BFR, bilan complet, contreparties, impayés clients, fiscalité, défaut/liquidation restent ouverts."
+      "remaining": "Registre financier à contreparties explicites, dépôts, crédits, principal, intérêts et dettes opérationnelles; 13 tests synthétiques réussis. Pas de bilan intégral, BFR, défaut, write-offs, garanties ou insolvabilité."
     },
     {
       "id": "LIM-F02",
@@ -872,9 +881,18 @@
           "path": "audits/economic_sector_financing_v07d_verified.json",
           "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45545566719",
           "scope": "Financement et service de la dette raccordés aux acquisitions effectives, conservation de trésorerie et dette vérifiée. Pas de choix optimal VAN, coût d'opportunité, échéancier complet, risque de crédit ni calibration entreprise."
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7e",
+          "path": "pipeline/economic_financial_counterparts.py",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45546108324",
+          "scope": "Les acquisitions et fonds propres sont raccordés aux dépôts et engagements financiers correspondants. Pas de choix VAN ni risque de crédit endogène, pas de calibration des entreprises.",
+          "empirical_audit_path": "pipeline/audit_financial_2022.py",
+          "empirical_ci": "https://github.com/octave-silicium/octave-lab/actions/runs/45546243404"
         }
       ],
-      "remaining": "Financement et service de la dette raccordés aux acquisitions effectives, conservation de trésorerie et dette vérifiée. Pas de choix optimal VAN, coût d'opportunité, échéancier complet, risque de crédit ni calibration entreprise."
+      "remaining": "Les acquisitions et fonds propres sont raccordés aux dépôts et engagements financiers correspondants. Pas de choix VAN ni risque de crédit endogène, pas de calibration des entreprises."
     },
     {
       "id": "LIM-F05",
@@ -1048,9 +1066,18 @@
           "path": "audits/insee_capital_changes_2022_verified.json",
           "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45544771040",
           "scope": "Reconstruction Eurostat 370 séries 2020–22, écart max 0,05 M€, et 740 comparaisons croissance. Réancrage Insee 367/370 améliorées, médiane 33,7→0,543 M€, max après 2337,18 M€, écart croissance max 0,70243 point. Origine précise des conventions non démontrée et divergences restantes non résolues; aucune admission."
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7e",
+          "path": "pipeline/economic_financial_counterparts.py",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45546108324",
+          "scope": "Sources financières Eurostat bs/tr/gl/oc brutes et empreintes épinglées, contrôle local et audit CI codé. Aucun statut empirique promu, collecte live encore susceptible de dérive.",
+          "empirical_audit_path": "pipeline/audit_financial_2022.py",
+          "empirical_ci": "https://github.com/octave-silicium/octave-lab/actions/runs/45546243404"
         }
       ],
-      "remaining": "Reconstruction Eurostat 370 séries 2020–22, écart max 0,05 M€, et 740 comparaisons croissance. Réancrage Insee 367/370 améliorées, médiane 33,7→0,543 M€, max après 2337,18 M€, écart croissance max 0,70243 point. Origine précise des conventions non démontrée et divergences restantes non résolues; aucune admission."
+      "remaining": "Sources financières Eurostat bs/tr/gl/oc brutes et empreintes épinglées, contrôle local et audit CI codé. Aucun statut empirique promu, collecte live encore susceptible de dérive."
     },
     {
       "id": "LIM-S02",
@@ -1434,9 +1461,18 @@
           "path": "audits/economic_sector_financing_v07d_verified.json",
           "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45545566719",
           "scope": "Investissement limité par liquidité/crédit puis offre; dette tirée sur livraison, capital mis en service avec délai. Pas de financement multi-acteurs, capital importé, paramètres empiriques de capacité/efficacité/durée de vie, CCF branche×actif."
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7e",
+          "path": "pipeline/economic_financial_counterparts.py",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45546108324",
+          "scope": "Contreparties du financement des acquisitions identifiées dans le scénario synthétique, fonds disponibles du propriétaire et de la sphère opérations contrôlés. Pas de financement empirique de capital ni de réallocation du crédit endogène.",
+          "empirical_audit_path": "pipeline/audit_financial_2022.py",
+          "empirical_ci": "https://github.com/octave-silicium/octave-lab/actions/runs/45546243404"
         }
       ],
-      "remaining": "Investissement limité par liquidité/crédit puis offre; dette tirée sur livraison, capital mis en service avec délai. Pas de financement multi-acteurs, capital importé, paramètres empiriques de capacité/efficacité/durée de vie, CCF branche×actif."
+      "remaining": "Contreparties du financement des acquisitions identifiées dans le scénario synthétique, fonds disponibles du propriétaire et de la sphère opérations contrôlés. Pas de financement empirique de capital ni de réallocation du crédit endogène."
     },
     {
       "id": "LIM-S10",
@@ -1635,9 +1671,18 @@
           "path": "audits/economic_sector_financing_v07d_verified.json",
           "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45545566719",
           "scope": "Boucle capacité→surplus proxy→trésorerie→financement→acquisition→capacité avec décalage. Pas de boucle conjointe prix/revenus/stocks, ni comptes financiers consolidés; surplus converti en cash par hypothèse explicite."
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7e",
+          "path": "pipeline/economic_financial_counterparts.py",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45546108324",
+          "scope": "Rejeu des trajectoires G4 v0.7d en registre financier à contreparties; insuffisance de dépôts d'une contrepartie provoque rejet, non résolution endogène. Couplage conjoint demande/prix/capacité/finance non réalisé.",
+          "empirical_audit_path": "pipeline/audit_financial_2022.py",
+          "empirical_ci": "https://github.com/octave-silicium/octave-lab/actions/runs/45546243404"
         }
       ],
-      "remaining": "Boucle capacité→surplus proxy→trésorerie→financement→acquisition→capacité avec décalage. Pas de boucle conjointe prix/revenus/stocks, ni comptes financiers consolidés; surplus converti en cash par hypothèse explicite."
+      "remaining": "Rejeu des trajectoires G4 v0.7d en registre financier à contreparties; insuffisance de dépôts d'une contrepartie provoque rejet, non résolution endogène. Couplage conjoint demande/prix/capacité/finance non réalisé."
     },
     {
       "id": "LIM-S13",
@@ -1844,9 +1889,18 @@
           "path": "audits/economic_sector_financing_v07d_verified.json",
           "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45545566719",
           "scope": "Apports et dette exogènes, service et arriérés d'un seul emprunteur distingués. Pas de bilan du prêteur, de propriété des fonds propres, de patrimoine institutionnel dynamique ou d'équilibre financier."
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7e",
+          "path": "pipeline/economic_financial_counterparts.py",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45546108324",
+          "scope": "Quatre sources Eurostat financières 2021–2022 archivées, 27 556 observations; comptes non consolidés, 419 rapprochements TEE locaux à 1 M€ près, 118 identités calculables, 5 résidus >2,5 M€ conservés et 8 identités incomplètes. Pas de matrice bilatérale observée, d'hétérogénéité patrimoniale ni de contraintes bancaires.",
+          "empirical_audit_path": "pipeline/audit_financial_2022.py",
+          "empirical_ci": "https://github.com/octave-silicium/octave-lab/actions/runs/45546243404"
         }
       ],
-      "remaining": "Apports et dette exogènes, service et arriérés d'un seul emprunteur distingués. Pas de bilan du prêteur, de propriété des fonds propres, de patrimoine institutionnel dynamique ou d'équilibre financier."
+      "remaining": "Quatre sources Eurostat financières 2021–2022 archivées, 27 556 observations; comptes non consolidés, 419 rapprochements TEE locaux à 1 M€ près, 118 identités calculables, 5 résidus >2,5 M€ conservés et 8 identités incomplètes. Pas de matrice bilatérale observée, d'hétérogénéité patrimoniale ni de contraintes bancaires."
     },
     {
       "id": "LIM-T01",
@@ -2188,5 +2242,5 @@
     }
   ],
   "dependency_semantics": "Dependencies constrain closure, not parallel development; not a promise of dates. Publication restrictions apply to affected claims, not blanket suppression of safe synthetic demonstrations.",
-  "last_milestone": "G4 v0.7d"
+  "last_milestone": "G4 v0.7e"
 }
