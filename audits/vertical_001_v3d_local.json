@@ -1,0 +1,57 @@
+{
+  "study": "VERTICAL-001",
+  "phase": "V3d",
+  "status": "EDITORIAL_PROJECTION_INTERNAL",
+  "package_sha256": "80e13edac3a37a846a2bcf5ef1d4ed8ac50b5dc40d2c0e050b601ccbda2e0cad",
+  "package_bytes": 121772,
+  "dossier_sha256": "152ea5dff43621becc6c228187026a71e2273ac342e51799817fd06fb3e7e7f7",
+  "data_and_scenario_files_byte_identical_to_v3c": true,
+  "coverage": {
+    "sections": 18,
+    "claims": 8,
+    "registry_labels": 140,
+    "glossary": 13,
+    "source_catalog": 10
+  },
+  "code_sha256": {
+    "restitution.py": "1baa8f7b0de341bec8c1f62dbb1c9968c48baaae030d3628df215cbfe2b141cd",
+    "registry_labels.json": "40d071859e53337c49ef76c1013069554954c6c4a5903dd9f8d8a159c6f71dc0",
+    "serve.py": "02e347d6a86bdb0fd806776877de95dd04a19199aca036f19556ee56c16ccfea",
+    "views.py": "62ea3788118f1d6703bfa6d0e0b42c29fb5b64731380d3b4cbeb10535b834521",
+    "test_v3d.py": "f476c8e8fb28faa1cef972d64b762b015c1d90f4043a6c9759f035d775512996",
+    "browser_check.py": "27b5ffd409679a981604cb371e08c298f247f143653f7c881ff8a75b39773c69"
+  },
+  "tests": {
+    "local": 29,
+    "passed": 29,
+    "new": 8,
+    "offline_renders": 28,
+    "widths": [
+      1440,
+      1280,
+      768,
+      390
+    ],
+    "page_overflows": 0,
+    "unlabeled_controls_detected": 0,
+    "first_focus_skip_link": true,
+    "skip_target_focus": false,
+    "browser_http": "BLOCKED_BY_ADMINISTRATOR",
+    "server_render_timing": {
+      "samples_per_view_width": 10,
+      "total_samples": 280,
+      "max_median_ms": 5.305,
+      "max_observed_ms": 119.468,
+      "not_web_vitals": true
+    }
+  },
+  "publication": "BLOCK_PUBLICATION",
+  "causal_identification": "NOT_IDENTIFIED",
+  "ux_gate_promoted": false,
+  "limits": [
+    "Conditional pathway visualization only; no empirically estimated causal graph or full macro feedback.",
+    "French editorial projection preserves original historical receipts; some native technical terms and status codes remain; no full terminology audit.",
+    "Access, HTTP tests and offline browser rendering separate; E2E blocked; skip target focus not verified; WCAG and web performance budgets not qualified.",
+    "Source code and app stay in private library; no publication of real values or app. Independent review, rights, national Insee detailed September series remain pending."
+  ]
+}
