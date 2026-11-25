@@ -1,0 +1,444 @@
+{
+  "status": "EMPIRICAL_STRUCTURE_HYPOTHETICAL_INCOME_FEEDBACK",
+  "publication": "BLOCK_PUBLICATION",
+  "source_hashes": {
+    "standard": "1a9d587e3a70590a42210f10bca15a63dd85d18dc9946ca654d77e50970a29ed",
+    "symmetric": "db4189aa708c10122dadf09c17f8bb49e1dd45561f93bf5527abe8473a29aa73",
+    "eurostat": "5c822d35fed4fa677d215a958be4730679168700a71d523d8479fb0c24608772"
+  },
+  "reference_envelope": 1229477.109,
+  "reference_income_rule": {
+    "social_share": 0.25,
+    "foreign_wage_share": 0,
+    "capital_consumption_share": 0.5,
+    "domestic_distribution_share": 0.6,
+    "foreign_distribution_share": 0,
+    "direct_tax_rate": 0.1,
+    "public_transfer": 100000,
+    "envelope_share": 0.9638121232820778,
+    "evidence": "Illustrative income shares and transfer; not estimated"
+  },
+  "cases": {
+    "reference": {
+      "sha256": "238c59d4e8c33265a4564139a9bc356e85434b0b778be36e5da6bceb952bbea3",
+      "periods": [
+        {
+          "period": 1,
+          "input_envelope": 1229477.109,
+          "next_envelope": 1229477.109,
+          "household_volume_change": 2.3283064365386963e-10,
+          "compensation": 1378355.4000000001,
+          "gross_surplus_mixed": 908332.9999999998,
+          "household_capital_mixed_allocation": 272499.8999999999,
+          "public_allocation_residual": 457136.49499990116,
+          "gross_output_volume": 5111526.799998456
+        },
+        {
+          "period": 2,
+          "input_envelope": 1229477.109,
+          "next_envelope": 1229477.109,
+          "household_volume_change": 2.3283064365386963e-10,
+          "compensation": 1378355.4000000588,
+          "gross_surplus_mixed": 908333.0000000607,
+          "household_capital_mixed_allocation": 272499.9000000182,
+          "public_allocation_residual": 457136.49499990116,
+          "gross_output_volume": 5111526.799998456
+        },
+        {
+          "period": 3,
+          "input_envelope": 1229477.109,
+          "next_envelope": 1229477.109,
+          "household_volume_change": 2.3283064365386963e-10,
+          "compensation": 1378355.4000000765,
+          "gross_surplus_mixed": 908333.0000000786,
+          "household_capital_mixed_allocation": 272499.90000002354,
+          "public_allocation_residual": 457136.49499990116,
+          "gross_output_volume": 5111526.799998456
+        },
+        {
+          "period": 4,
+          "input_envelope": 1229477.109,
+          "next_envelope": 1229477.109,
+          "household_volume_change": 2.3283064365386963e-10,
+          "compensation": 1378355.4000000812,
+          "gross_surplus_mixed": 908333.0000000837,
+          "household_capital_mixed_allocation": 272499.9000000251,
+          "public_allocation_residual": 457136.49499990116,
+          "gross_output_volume": 5111526.799998456
+        },
+        {
+          "period": 5,
+          "input_envelope": 1229477.109,
+          "next_envelope": 1229477.109,
+          "household_volume_change": 2.3283064365386963e-10,
+          "compensation": 1378355.4000000828,
+          "gross_surplus_mixed": 908333.0000000851,
+          "household_capital_mixed_allocation": 272499.9000000255,
+          "public_allocation_residual": 457136.49499990116,
+          "gross_output_volume": 5111526.799998456
+        },
+        {
+          "period": 6,
+          "input_envelope": 1229477.109,
+          "next_envelope": 1229477.109,
+          "household_volume_change": 2.3283064365386963e-10,
+          "compensation": 1378355.4000000833,
+          "gross_surplus_mixed": 908333.0000000856,
+          "household_capital_mixed_allocation": 272499.90000002563,
+          "public_allocation_residual": 457136.49499990116,
+          "gross_output_volume": 5111526.799998456
+        }
+      ],
+      "income_rule": {
+        "social_share": 0.25,
+        "foreign_wage_share": 0,
+        "capital_consumption_share": 0.5,
+        "domestic_distribution_share": 0.6,
+        "foreign_distribution_share": 0,
+        "direct_tax_rate": 0.1,
+        "public_transfer": 100000,
+        "envelope_share": 0.9638121232820778,
+        "evidence": "Illustrative income shares and transfer; not estimated"
+      }
+    },
+    "retention": {
+      "sha256": "a253203552c02c10f0c88e9caa5f1e4002a9b868f0790066df5188b4f3a88adb",
+      "periods": [
+        {
+          "period": 1,
+          "input_envelope": 1229477.109,
+          "next_envelope": 1228305.8536031523,
+          "household_volume_change": 0,
+          "compensation": 1375354.827,
+          "gross_surplus_mixed": 911333.5730000001,
+          "household_capital_mixed_allocation": 273400.07190000004,
+          "public_allocation_residual": 456251.3259649015,
+          "gross_output_volume": 5111526.799998456
+        },
+        {
+          "period": 2,
+          "input_envelope": 1228305.8536031523,
+          "next_envelope": 1227963.8209089611,
+          "household_volume_change": -1171.2553968473803,
+          "compensation": 1374983.0537019572,
+          "gross_surplus_mixed": 910948.6549047763,
+          "household_capital_mixed_allocation": 273284.5964714329,
+          "public_allocation_residual": 456079.34206744574,
+          "gross_output_volume": 5109836.831868375
+        },
+        {
+          "period": 3,
+          "input_envelope": 1227963.8209089611,
+          "next_envelope": 1227863.9397351278,
+          "household_volume_change": -1513.2880910388194,
+          "compensation": 1374874.4876086013,
+          "gross_surplus_mixed": 910836.2502375221,
+          "household_capital_mixed_allocation": 273250.8750712566,
+          "public_allocation_residual": 456029.1189342481,
+          "gross_output_volume": 5109343.323489088
+        },
+        {
+          "period": 4,
+          "input_envelope": 1227863.9397351278,
+          "next_envelope": 1227834.7722050764,
+          "household_volume_change": -1613.1692648720928,
+          "compensation": 1374842.7838883807,
+          "gross_surplus_mixed": 910803.4255681253,
+          "household_capital_mixed_allocation": 273241.0276704376,
+          "public_allocation_residual": 456014.45265940786,
+          "gross_output_volume": 5109199.208037388
+        },
+        {
+          "period": 5,
+          "input_envelope": 1227834.7722050764,
+          "next_envelope": 1227826.254635883,
+          "household_volume_change": -1642.3367949235253,
+          "compensation": 1374833.5256951014,
+          "gross_surplus_mixed": 910793.8400326906,
+          "household_capital_mixed_allocation": 273238.1520098072,
+          "public_allocation_residual": 456010.16978010524,
+          "gross_output_volume": 5109157.1231118
+        },
+        {
+          "period": 6,
+          "input_envelope": 1227826.254635883,
+          "next_envelope": 1227823.7673157414,
+          "household_volume_change": -1650.854364116909,
+          "compensation": 1374830.8220962118,
+          "gross_surplus_mixed": 910791.0408425914,
+          "household_capital_mixed_allocation": 273237.3122527774,
+          "public_allocation_residual": 456008.9190838431,
+          "gross_output_volume": 5109144.83337506
+        }
+      ],
+      "income_rule": {
+        "social_share": 0.25,
+        "foreign_wage_share": 0,
+        "capital_consumption_share": 0.5,
+        "domestic_distribution_share": 0.6,
+        "foreign_distribution_share": 0,
+        "direct_tax_rate": 0.1,
+        "public_transfer": 100000,
+        "envelope_share": 0.9638121232820778,
+        "evidence": "Illustrative income shares and transfer; not estimated"
+      }
+    },
+    "transmission": {
+      "sha256": "b1fde5b4ed4d7a156457339344b65f0c283a0d55b7e8a0aa71bebe13d343701e",
+      "periods": [
+        {
+          "period": 1,
+          "input_envelope": 1229477.109,
+          "next_envelope": 1227795.9144568518,
+          "household_volume_change": 753.8990637529641,
+          "compensation": 1375675.7010327454,
+          "gross_surplus_mixed": 908571.8115036045,
+          "household_capital_mixed_allocation": 272571.5434510813,
+          "public_allocation_residual": 456297.60222003574,
+          "gross_output_volume": 5112850.860110223
+        },
+        {
+          "period": 2,
+          "input_envelope": 1227795.9144568518,
+          "next_envelope": 1227304.8654616552,
+          "household_volume_change": -928.3263656010386,
+          "compensation": 1375141.6269548896,
+          "gross_surplus_mixed": 908020.0106995419,
+          "household_capital_mixed_allocation": 272406.00320986257,
+          "public_allocation_residual": 456050.58476717025,
+          "gross_output_volume": 5110423.306054431
+        },
+        {
+          "period": 3,
+          "input_envelope": 1227304.8654616552,
+          "next_envelope": 1227161.4382082978,
+          "household_volume_change": -1419.6764655313455,
+          "compensation": 1374985.6327896928,
+          "gross_surplus_mixed": 907858.8388521265,
+          "household_capital_mixed_allocation": 272357.65165563795,
+          "public_allocation_residual": 455978.4350730614,
+          "gross_output_volume": 5109714.257845382
+        },
+        {
+          "period": 4,
+          "input_envelope": 1227161.4382082978,
+          "next_envelope": 1227119.5454904488,
+          "household_volume_change": -1563.1916665791068,
+          "compensation": 1374940.0694856788,
+          "gross_surplus_mixed": 907811.7632331569,
+          "household_capital_mixed_allocation": 272343.5289699471,
+          "public_allocation_residual": 455957.3613460853,
+          "gross_output_volume": 5109507.156643432
+        },
+        {
+          "period": 5,
+          "input_envelope": 1227119.5454904488,
+          "next_envelope": 1227107.3093235581,
+          "household_volume_change": -1605.1100724872667,
+          "compensation": 1374926.7612015519,
+          "gross_surplus_mixed": 907798.0132269558,
+          "household_capital_mixed_allocation": 272339.4039680867,
+          "public_allocation_residual": 455951.2060605483,
+          "gross_output_volume": 5109446.665823058
+        },
+        {
+          "period": 6,
+          "input_envelope": 1227107.3093235581,
+          "next_envelope": 1227103.735342497,
+          "household_volume_change": -1617.3537424332462,
+          "compensation": 1374922.8740728574,
+          "gross_surplus_mixed": 907793.997078583,
+          "household_capital_mixed_allocation": 272338.1991235749,
+          "public_allocation_residual": 455949.40820390475,
+          "gross_output_volume": 5109428.997459403
+        }
+      ],
+      "income_rule": {
+        "social_share": 0.25,
+        "foreign_wage_share": 0,
+        "capital_consumption_share": 0.5,
+        "domestic_distribution_share": 0.6,
+        "foreign_distribution_share": 0,
+        "direct_tax_rate": 0.1,
+        "public_transfer": 100000,
+        "envelope_share": 0.9638121232820778,
+        "evidence": "Illustrative income shares and transfer; not estimated"
+      }
+    },
+    "retention_more_distribution": {
+      "sha256": "8b44914fa2358d5ed97159513c76451e3d0ad0f7d1bed18bcb68d8e6761d3c08",
+      "periods": [
+        {
+          "period": 1,
+          "input_envelope": 1229477.109,
+          "next_envelope": 1307357.7447441644,
+          "household_volume_change": 0,
+          "compensation": 1375354.827,
+          "gross_surplus_mixed": 911333.5730000001,
+          "household_capital_mixed_allocation": 364533.4292000001,
+          "public_allocation_residual": 465364.66169490013,
+          "gross_output_volume": 5111526.799998456
+        },
+        {
+          "period": 2,
+          "input_envelope": 1307357.7447441644,
+          "next_envelope": 1332320.7708763496,
+          "household_volume_change": 77880.63574416446,
+          "compensation": 1400075.2602094114,
+          "gross_surplus_mixed": 936928.0471437012,
+          "household_capital_mixed_allocation": 374771.2188574805,
+          "public_allocation_residual": 477056.38321709516,
+          "gross_output_volume": 5223898.356801796
+        },
+        {
+          "period": 3,
+          "input_envelope": 1332320.7708763496,
+          "next_envelope": 1340322.1523201677,
+          "household_volume_change": 102843.66187634971,
+          "compensation": 1407998.8835120348,
+          "gross_surplus_mixed": 945131.8261804788,
+          "household_capital_mixed_allocation": 378052.7304721915,
+          "public_allocation_residual": 480803.92260349065,
+          "gross_output_volume": 5259916.733927156
+        },
+        {
+          "period": 4,
+          "input_envelope": 1340322.1523201677,
+          "next_envelope": 1342886.8295620403,
+          "household_volume_change": 110845.04332016781,
+          "compensation": 1410538.6369908685,
+          "gross_surplus_mixed": 947761.3777823751,
+          "household_capital_mixed_allocation": 379104.5511129501,
+          "public_allocation_residual": 482005.11880252126,
+          "gross_output_volume": 5271461.679353292
+        },
+        {
+          "period": 5,
+          "input_envelope": 1342886.8295620403,
+          "next_envelope": 1343708.8837786978,
+          "household_volume_change": 113409.72056204034,
+          "compensation": 1411352.7024110549,
+          "gross_surplus_mixed": 948604.2261326342,
+          "household_capital_mixed_allocation": 379441.6904530537,
+          "public_allocation_residual": 482390.137386663,
+          "gross_output_volume": 5275162.172699468
+        },
+        {
+          "period": 6,
+          "input_envelope": 1343708.8837786978,
+          "next_envelope": 1343972.376246324,
+          "household_volume_change": 114231.77477869787,
+          "compensation": 1411613.6342352908,
+          "gross_surplus_mixed": 948874.3837294739,
+          "household_capital_mixed_allocation": 379549.75349178957,
+          "public_allocation_residual": 482513.5471262662,
+          "gross_output_volume": 5276348.289263874
+        }
+      ],
+      "income_rule": {
+        "social_share": 0.25,
+        "foreign_wage_share": 0,
+        "capital_consumption_share": 0.5,
+        "domestic_distribution_share": 0.8,
+        "foreign_distribution_share": 0,
+        "direct_tax_rate": 0.1,
+        "public_transfer": 100000,
+        "envelope_share": 0.9638121232820778,
+        "evidence": "Illustrative income shares and transfer; not estimated"
+      }
+    },
+    "transmission_transfer": {
+      "sha256": "a463acfff52a0313031ac2a3c1f3681c29d34c8f40ad46fc2c6aea78190db71a",
+      "periods": [
+        {
+          "period": 1,
+          "input_envelope": 1229477.109,
+          "next_envelope": 1230687.9030910446,
+          "household_volume_change": 753.8990637529641,
+          "compensation": 1375675.7010327454,
+          "gross_surplus_mixed": 908571.8115036045,
+          "household_capital_mixed_allocation": 272571.5434510813,
+          "public_allocation_residual": 453297.02922003577,
+          "gross_output_volume": 5112850.860110223
+        },
+        {
+          "period": 2,
+          "input_envelope": 1230687.9030910446,
+          "next_envelope": 1231041.5559292731,
+          "household_volume_change": 1965.4355976826046,
+          "compensation": 1376060.3404788175,
+          "gross_surplus_mixed": 908969.2177144978,
+          "household_capital_mixed_allocation": 272690.7653143493,
+          "public_allocation_residual": 453474.93086356285,
+          "gross_output_volume": 5114599.181337189
+        },
+        {
+          "period": 3,
+          "input_envelope": 1231041.5559292731,
+          "next_envelope": 1231144.852047838,
+          "household_volume_change": 2319.305291143013,
+          "compensation": 1376172.6872707324,
+          "gross_surplus_mixed": 909085.2934663133,
+          "household_capital_mixed_allocation": 272725.58803989395,
+          "public_allocation_residual": 453526.89297803293,
+          "gross_output_volume": 5115109.836921507
+        },
+        {
+          "period": 4,
+          "input_envelope": 1231144.852047838,
+          "next_envelope": 1231175.0231279407,
+          "household_volume_change": 2422.6647495182697,
+          "compensation": 1376205.5019021546,
+          "gross_surplus_mixed": 909119.1972649716,
+          "household_capital_mixed_allocation": 272735.75917949143,
+          "public_allocation_residual": 453542.07024838694,
+          "gross_output_volume": 5115258.9909338085
+        },
+        {
+          "period": 5,
+          "input_envelope": 1231175.0231279407,
+          "next_envelope": 1231183.8355991857,
+          "household_volume_change": 2452.8543301273603,
+          "compensation": 1376215.0865108212,
+          "gross_surplus_mixed": 909129.1000012918,
+          "household_capital_mixed_allocation": 272738.7300003875,
+          "public_allocation_residual": 453546.5032769068,
+          "gross_output_volume": 5115302.556342803
+        },
+        {
+          "period": 6,
+          "input_envelope": 1231183.8355991857,
+          "next_envelope": 1231186.4095756283,
+          "household_volume_change": 2461.672205062816,
+          "compensation": 1376217.8860157765,
+          "gross_surplus_mixed": 909131.99242605,
+          "household_capital_mixed_allocation": 272739.597727815,
+          "public_allocation_residual": 453547.7980908883,
+          "gross_output_volume": 5115315.281074987
+        }
+      ],
+      "income_rule": {
+        "social_share": 0.25,
+        "foreign_wage_share": 0,
+        "capital_consumption_share": 0.5,
+        "domestic_distribution_share": 0.6,
+        "foreign_distribution_share": 0,
+        "direct_tax_rate": 0.1,
+        "public_transfer": 103000.573,
+        "envelope_share": 0.9638121232820778,
+        "evidence": "Illustrative income shares and transfer; not estimated"
+      }
+    }
+  },
+  "verification": "Independent dense NumPy solve, fixed expenditure shares with inactive caps, independently replayed annual income and consumption recursion",
+  "limits": [
+    "Only production accounts and basket observed; distribution rules illustrative, scalar envelope_share anchored to reference basket only",
+    "not actual institutional accounts, measured disposable income, savings, fiscal balance, employment or prediction"
+  ],
+  "verification_receipt": {
+    "run": 45541710722,
+    "job": 138961551890,
+    "tested_commit": "4c556622f39a447780e9505a9765a2653ca58871",
+    "conclusion": "test_and_pilot_steps_success"
+  }
+}
