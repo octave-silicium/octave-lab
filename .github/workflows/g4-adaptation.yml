@@ -1,0 +1,29 @@
+name: G4 adaptive capacity qualification
+on:
+  push:
+    paths:
+      - 'pipeline/economic_sector_adaptation*.py'
+      - 'pipeline/economic_sector_capacity*.py'
+      - 'tests/test_economic_sector_adaptation.py'
+      - '.github/workflows/g4-adaptation.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  adaptation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest discover -s tests -p test_economic_sector_adaptation.py -v
+      - run: |
+          python -m pipeline.economic_sector_adaptation_pilot > adaptation-audit.json
+          cat adaptation-audit.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: g4-adaptation-audit
+          path: adaptation-audit.json
+          retention-days: 30
