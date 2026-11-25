@@ -26,9 +26,16 @@ SERIES={
  "employee_hours":("national_accounts_work",{"unit":"THS_HW","s_adj":"SCA","na_item":"SAL_DC"}),
  "total_persons":("national_accounts_work",{"unit":"THS_PER","s_adj":"SCA","na_item":"EMP_DC"}),
  "employee_persons":("national_accounts_work",{"unit":"THS_PER","s_adj":"SCA","na_item":"SAL_DC"}),
+ "gva_nominal_nsa":("national_accounts_output",{"unit":"CP_MEUR","s_adj":"NSA","na_item":"B1G"}),
+ "compensation_nsa":("national_accounts_output",{"unit":"CP_MEUR","s_adj":"NSA","na_item":"D1"}),
+ "employee_hours_nsa":("national_accounts_work",{"unit":"THS_HW","s_adj":"NSA","na_item":"SAL_DC"}),
+ "total_hours_nsa":("national_accounts_work",{"unit":"THS_HW","s_adj":"NSA","na_item":"EMP_DC"}),
+ "total_persons_nsa":("national_accounts_work",{"unit":"THS_PER","s_adj":"NSA","na_item":"EMP_DC"}),
+ "employee_persons_nsa":("national_accounts_work",{"unit":"THS_PER","s_adj":"NSA","na_item":"SAL_DC"}),
  "production_index":("sts_production",{"unit":"I21","s_adj":"SCA","indic_bt":"PRD"}),
- "turnover_index":("sts_turnover",{"unit":"I21","s_adj":"SCA","indic_bt":"TOVT"}),
- "producer_price_index":("sts_prices",{"unit":"I21","s_adj":"NSA","indic_bt":"PRC"})}
+ "turnover_index":("sts_turnover",{"unit":"I21","s_adj":"SCA","indic_bt":"NETTUR"}),
+ "producer_price_b2b_index":("sts_prices",{"unit":"I21","s_adj":"NSA","indic_bt":"PRC_PRR_B2B"}),
+ "producer_price_index":("sts_prices",{"unit":"I21","s_adj":"NSA","indic_bt":"PRC_PRR"})}
 def fetch_sources(fetcher=retrieve):
     out={}
     for k,(dataset,params) in SPECS.items():
@@ -63,7 +70,10 @@ def ratios(series):
     defs={"real_gva_per_total_hour":("gva_real","total_hours",1000,"EUR at 2020 chain-linked volume per hour"),
           "compensation_per_employee_hour":("compensation","employee_hours",1000,"nominal EUR per employee hour"),
           "employee_compensation_share":("compensation","gva_nominal",100,"percent nominal GVA; excludes self-employed mixed income"),
-          "hours_per_person":("total_hours","total_persons",1,"hours per employed person per quarter")}
+          "hours_per_person":("total_hours","total_persons",1,"hours per employed person per quarter"),
+          "compensation_per_employee_hour_nsa":("compensation_nsa","employee_hours_nsa",1000,"nominal EUR per employee hour, unadjusted"),
+          "employee_compensation_share_nsa":("compensation_nsa","gva_nominal_nsa",100,"percent nominal GVA, unadjusted"),
+          "hours_per_person_nsa":("total_hours_nsa","total_persons_nsa",1,"hours per employed person per quarter, unadjusted")}
     out={}
     for k,(n,d,scale,unit) in defs.items():
         levels={}
@@ -82,7 +92,7 @@ def build(fetcher=retrieve):
         s=sources[src];r={"source":src,"status":"BLOCKED","selectors":params}
         if s["status"]=="RETRIEVED":
             try:
-                r.update(select(s["data"],params,MONTHS if SPECS[src][1]["freq"]=="M" else QUARTERS));r["status"]="CANDIDATE_INTERNAL"
+                r.update(select(s["data"],params,MONTHS if SPECS[src][1]["freq"]=="M" else QUARTERS));r["status"]="CANDIDATE_INTERNAL" if any(v["value"] is not None for v in r["levels"].values()) else "BLOCKED_NO_OBSERVATIONS"
             except ValueError as e:r["reason"]=str(e)
         series[k]=r
     source_records={k:{x:v for x,v in r.items() if x!="data"} for k,r in sources.items()}
@@ -91,7 +101,7 @@ def build(fetcher=retrieve):
             "rights":"Eurostat source-specific review pending; internal diagnostics only",
             "dares":{"status":"CANDIDATE_NOT_ACQUIRED","source":"https://dares.travail-emploi.gouv.fr/donnees/les-mouvements-de-main-doeuvre","scope":"Metropolitan private sector excluding agriculture, temporary agency work and private households; realized contracts and separations, not DPAE","reason":"Workbook and exact sector dimensions not yet acquired; do not assume detailed quarterly series from headline publication."},
             "limits":["No STS-to-national-accounts numeric bridge or private-sector Urssaf denominator used.",
-                      "Same native national-account scope and frequency only, compatibility review pending; chain-linked values not additive across branches.",
+                      "Same native national-account scope, adjustment and frequency only, compatibility review pending; chain-linked values not additive across branches.",
                       "No inferred adoption effect, no sector calibration, no claim of independent source families from Eurostat dissemination.",
                       "Snapshot of current vintage, not point-in-time backtest; source-specific publication and revision review pending."]}
     return {"result":result,"sha256":digest(canonical(result))}
