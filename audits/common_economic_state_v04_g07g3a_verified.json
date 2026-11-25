@@ -1,0 +1,71 @@
+{
+  "status": "SYNTHETIC_INTEGRATED_PATH_VERIFIED_NOT_EMPIRICAL",
+  "tested_commit": "67e4f3ce82a5c50f14fb1e4ed4e64c23f30ff3d3",
+  "ci": {
+    "run": 45564024933,
+    "job": 139034315998,
+    "conclusion": "success",
+    "new_tests": 10,
+    "new_test_seconds": 0.129,
+    "shared_regression_tests": 35,
+    "shared_seconds": 0.115
+  },
+  "prior_general": {
+    "run": 45557986508,
+    "job": 139014595990,
+    "conclusion": "success",
+    "tests": 656,
+    "seconds": 74.756
+  },
+  "current_general": {
+    "run": 45564025071,
+    "job": 139034316616,
+    "status": "in_progress",
+    "conclusion": null
+  },
+  "failed_attempts": [
+    {
+      "run": 45563979888,
+      "reason": "analytical fixture used one proportional allocation tier for equipment and consumption; zero consumption capacity blocked equipment; incorrect consumption expectation"
+    },
+    {
+      "run": 45563995634,
+      "reason": "priority tier issue remained after correcting cash trajectory"
+    }
+  ],
+  "fixture": {
+    "currency": "EUR synthetic",
+    "period_unit": "quarter",
+    "initial_household_deposits": 100,
+    "initial_firm_deposits": 100,
+    "equipment_cost": 100,
+    "lag": 1,
+    "wage_share": "1/2",
+    "desired_household_consumption": 100,
+    "household_consumption": [
+      0,
+      100,
+      100,
+      50,
+      25
+    ],
+    "household_closing_deposits": [
+      150,
+      100,
+      50,
+      25,
+      12.5
+    ],
+    "reinvestment_case_third_period": 50,
+    "interest_case": {
+      "opening_loan": 100,
+      "rate": "1/10",
+      "interest_accrued": 10,
+      "bank_receipts": 100,
+      "capital_proxy": 60
+    },
+    "note": "Analytical expectations asserted by tests; no empirical calibration."
+  },
+  "publication": "BLOCK_PUBLICATION",
+  "scientific_gates_promoted": 0
+}
