@@ -1,0 +1,74 @@
+{
+  "status": "SYNTHETIC_OPERATING_PATH_VERIFIED_NOT_EMPIRICAL",
+  "tested_commit": "587caf70c5edcfa645adbf937f85d918bd0a7cb2",
+  "ci": {
+    "run": 45566463250,
+    "job": 139042363351,
+    "conclusion": "success",
+    "new_tests": 10,
+    "new_test_seconds": 0.092,
+    "integrated_regression_tests": 10,
+    "shared_regression_tests": 35
+  },
+  "prior_general": {
+    "run": 45564025071,
+    "job": 139034316616,
+    "conclusion": "success",
+    "tests": 666,
+    "seconds": 58.295
+  },
+  "current_general": {
+    "run": 45566463153,
+    "job": 139042363145,
+    "status": "in_progress",
+    "conclusion": null
+  },
+  "failed_attempts": [
+    {
+      "run": 45566403228,
+      "reason": "self-use fixture expected seven decimal places despite existing float solver tolerance; absolute difference 1.024e-7 EUR; test tolerance adjusted to six places, kernel unchanged"
+    }
+  ],
+  "fixture": {
+    "currency": "EUR synthetic",
+    "sales": 100,
+    "domestic_inputs": 20,
+    "imports": 10,
+    "wages": 40,
+    "production_tax": 10,
+    "gross_operating_cash_proxy": 20,
+    "supplier_sales": 20,
+    "household_closing_deposits": 50,
+    "liquidity_case": {
+      "available": 15,
+      "approximate_consumption": 50
+    },
+    "amortization_case": {
+      "principal": 100,
+      "instalments": [
+        50,
+        50
+      ],
+      "interest_rate": "1/10",
+      "interest": [
+        10,
+        5
+      ]
+    },
+    "partial_delivery_case": {
+      "requested": 100,
+      "delivered": 50,
+      "instalments": [
+        12.5,
+        37.5
+      ]
+    },
+    "public_recycling_case": {
+      "tax_transfer": 10,
+      "next_household_budget": 60
+    },
+    "note": "Analytical expectations asserted by tests; no empirical calibration."
+  },
+  "publication": "BLOCK_PUBLICATION",
+  "scientific_gates_promoted": 0
+}
