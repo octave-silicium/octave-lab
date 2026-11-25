@@ -62,7 +62,8 @@ def bridge(base,before,after,mapping,unavailable_before=(),unavailable_after=())
     require(x["scope"]==z["scope"] and x["output_contract"]==z["output_contract"],"OUTPUT_CONTRACT")
     require(x["internalized_units"]==z["internalized_units"]==0,"INTERNALIZATION_REQUIRES_FULL_MAKE_BUY_BRIDGE")
     require(x["unserved"]==z["unserved"]==0,"UNSERVED_REQUIRES_SUPPLY_MODEL")
-    require(x["unsold_correct_outputs"]==0 and z["unsold_correct_outputs"]==0 or mapping.status=="SYNTHETIC_CONDITIONAL","INVENTORY_SCOPE")
+    # Only sold transactions are mapped; unsold output remains explicitly out of scope.
+    require(all(F(row["baseline_price_eur"])==p for row in x["sellers"]+z["sellers"]),"HOMOGENEOUS_REFERENCE_PRICE")
     require(mapping.uses and len({(u.kind,u.buyer) for u in mapping.uses})==len(mapping.uses),"USE_DUPLICATE")
     for u in mapping.uses:
         require(type(u.before) is int and type(u.after) is int and u.before>=0 and u.after>=0,"USE_QUANTITY")
