@@ -35,11 +35,10 @@ def allocate(s,limits):
     # and choose the largest common fraction consistent with all remaining capacities.
     for tier in limits.tiers:
         y=tuple(s.final[i] if k in tier else 0. for i,k in enumerate(s.codes))
-        q,tail,it=solve(A,y,c)
+        q,tail,it=solve(A,y,c,relative_tol=1e-15)
         g=mv(s.shares,q);im=mv(s.imported,g)
         # conservative upper bounds on requirements from the certified L1 Neumann tail.
         # D column sums 1; each row of M D <= max(M column-row coefficient).
-        g_upper=[x+tail*max(s.shares[i]) if x>0 else x for i,x in enumerate(g)]
         # use nonzero tail bound for reachable rows even if truncated at zero
         # zero can be proven by graph reachability in the finite nonnegative system.
         reachable={i for i,x in enumerate(y) if x>0}
