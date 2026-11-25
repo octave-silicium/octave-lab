@@ -1,0 +1,5260 @@
+{
+  "status": "EMPIRICAL_BASE_HYPOTHETICAL_DYNAMIC_PATHS",
+  "publication": "BLOCK_PUBLICATION",
+  "unit": "M EUR reference prices 2022 per hypothetical quarter",
+  "source_hashes": {
+    "standard": "1a9d587e3a70590a42210f10bca15a63dd85d18dc9946ca654d77e50970a29ed",
+    "symmetric": "db4189aa708c10122dadf09c17f8bb49e1dd45561f93bf5527abe8473a29aa73",
+    "eurostat": "5c822d35fed4fa677d215a958be4730679168700a71d523d8479fb0c24608772"
+  },
+  "assumptions": {
+    "quarter": "annual 2022 flows divided by four, not observed quarters",
+    "delivery_shock": "CI factors 0.8,0.8,0.8,1.2,1.2,1.0",
+    "buffer": "0.4 of normal quarterly CI use",
+    "capacity": "JC 95% initially with recovery after two quarters, or retirement of 5% after two quarters",
+    "allocation": "single tier proportional; all other capacity and delivery at reference levels"
+  },
+  "cases": {
+    "baseline": {
+      "periods": [
+        {
+          "period": 1,
+          "fraction": 0.9999999999991435,
+          "unserved": 6.658759161837224e-7,
+          "ci_delivery": 7780.404,
+          "ci_use": 7780.403999991527,
+          "ci_stock": 8.473762136418372e-9,
+          "jc_capacity": 37216.025,
+          "jc_idle": 4.0854502003639936e-8,
+          "va": 592152.3499993972,
+          "binding": [
+            {
+              "kind": "BRANCH",
+              "code": "AZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "BZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CD"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CE"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CF"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CG"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CH"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CI"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CJ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CK"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CL"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CM"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "DZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "EZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "FZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "GZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "HZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "IZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "KZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "LZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "NZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "OZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "PZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "RZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "SZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "TZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "AZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "BZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CB"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CC"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CD"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CE"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CF"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CG"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CH"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CI"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CJ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CK"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CL"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CM"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "DZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "EZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "FZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "GZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "HZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "JA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "JB"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "JC"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "KZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "MA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "MB"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "MC"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "NZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "QA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "RZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "SZ"
+            }
+          ],
+          "flow_stock_residual": 1.7846468836069107e-7
+        },
+        {
+          "period": 2,
+          "fraction": 0.9999999999991435,
+          "unserved": 6.658759161837224e-7,
+          "ci_delivery": 7780.404,
+          "ci_use": 7780.403999991527,
+          "ci_stock": 1.6947524272836745e-8,
+          "jc_capacity": 37216.025,
+          "jc_idle": 4.0854502003639936e-8,
+          "va": 592152.3499993972,
+          "binding": [
+            {
+              "kind": "BRANCH",
+              "code": "AZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "BZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CD"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CE"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CF"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CG"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CH"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CI"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CJ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CK"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CL"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CM"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "DZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "EZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "FZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "GZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "HZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "IZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "KZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "LZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "NZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "OZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "PZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "RZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "SZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "TZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "AZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "BZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CB"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CC"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CD"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CE"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CF"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CG"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CH"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CI"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CJ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CK"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CL"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CM"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "DZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "EZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "FZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "GZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "HZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "JA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "JB"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "JC"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "KZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "MA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "MB"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "MC"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "NZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "QA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "RZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "SZ"
+            }
+          ],
+          "flow_stock_residual": 1.7846468836069107e-7
+        },
+        {
+          "period": 3,
+          "fraction": 0.9999999999991435,
+          "unserved": 6.658759161837224e-7,
+          "ci_delivery": 7780.404,
+          "ci_use": 7780.403999991527,
+          "ci_stock": 2.5421286409255117e-8,
+          "jc_capacity": 37216.025,
+          "jc_idle": 4.0854502003639936e-8,
+          "va": 592152.3499993972,
+          "binding": [
+            {
+              "kind": "BRANCH",
+              "code": "AZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "BZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CD"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CE"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CF"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CG"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CH"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CI"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CJ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CK"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CL"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CM"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "DZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "EZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "FZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "GZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "HZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "IZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "KZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "LZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "NZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "OZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "PZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "RZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "SZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "TZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "AZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "BZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CB"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CC"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CD"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CE"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CF"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CG"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CH"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CI"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CJ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CK"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CL"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CM"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "DZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "EZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "FZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "GZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "HZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "JA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "JB"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "JC"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "KZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "MA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "MB"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "MC"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "NZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "QA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "RZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "SZ"
+            }
+          ],
+          "flow_stock_residual": 1.7846468836069107e-7
+        },
+        {
+          "period": 4,
+          "fraction": 0.9999999999991435,
+          "unserved": 6.658759161837224e-7,
+          "ci_delivery": 7780.404,
+          "ci_use": 7780.403999991527,
+          "ci_stock": 3.389504854567349e-8,
+          "jc_capacity": 37216.025,
+          "jc_idle": 4.0854502003639936e-8,
+          "va": 592152.3499993972,
+          "binding": [
+            {
+              "kind": "BRANCH",
+              "code": "AZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "BZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CD"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CE"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CF"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CG"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CH"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CI"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CJ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CK"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CL"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CM"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "DZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "EZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "FZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "GZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "HZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "IZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "KZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "LZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "NZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "OZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "PZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "RZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "SZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "TZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "AZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "BZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CB"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CC"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CD"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CE"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CF"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CG"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CH"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CI"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CJ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CK"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CL"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CM"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "DZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "EZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "FZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "GZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "HZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "JA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "JB"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "JC"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "KZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "MA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "MB"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "MC"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "NZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "QA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "RZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "SZ"
+            }
+          ],
+          "flow_stock_residual": 1.7846468836069107e-7
+        },
+        {
+          "period": 5,
+          "fraction": 0.9999999999991435,
+          "unserved": 6.658759161837224e-7,
+          "ci_delivery": 7780.404,
+          "ci_use": 7780.403999991527,
+          "ci_stock": 4.236881068209186e-8,
+          "jc_capacity": 37216.025,
+          "jc_idle": 4.0854502003639936e-8,
+          "va": 592152.3499993972,
+          "binding": [
+            {
+              "kind": "BRANCH",
+              "code": "AZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "BZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CD"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CE"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CF"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CG"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CH"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CI"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CJ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CK"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CL"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CM"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "DZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "EZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "FZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "GZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "HZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "IZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "KZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "LZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "NZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "OZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "PZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "RZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "SZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "TZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "AZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "BZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CB"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CC"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CD"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CE"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CF"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CG"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CH"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CI"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CJ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CK"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CL"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CM"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "DZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "EZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "FZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "GZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "HZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "JA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "JB"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "JC"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "KZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "MA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "MB"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "MC"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "NZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "QA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "RZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "SZ"
+            }
+          ],
+          "flow_stock_residual": 1.7846468836069107e-7
+        },
+        {
+          "period": 6,
+          "fraction": 0.9999999999991435,
+          "unserved": 6.658759161837224e-7,
+          "ci_delivery": 7780.404,
+          "ci_use": 7780.403999991527,
+          "ci_stock": 5.0842572818510234e-8,
+          "jc_capacity": 37216.025,
+          "jc_idle": 4.0854502003639936e-8,
+          "va": 592152.3499993972,
+          "binding": [
+            {
+              "kind": "BRANCH",
+              "code": "AZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "BZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CD"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CE"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CF"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CG"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CH"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CI"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CJ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CK"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CL"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CM"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "DZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "EZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "FZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "GZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "HZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "IZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "KZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "LZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "NZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "OZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "PZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "RZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "SZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "TZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "AZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "BZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CB"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CC"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CD"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CE"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CF"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CG"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CH"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CI"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CJ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CK"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CL"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CM"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "DZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "EZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "FZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "GZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "HZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "JA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "JB"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "JC"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "KZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "MA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "MB"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "MC"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "NZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "QA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "RZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "SZ"
+            }
+          ],
+          "flow_stock_residual": 1.7846468836069107e-7
+        }
+      ],
+      "cumulative_unserved": 0.000003995255497102335,
+      "pending": []
+    },
+    "delivery_shock_no_buffer": {
+      "periods": [
+        {
+          "period": 1,
+          "fraction": 0.7999999999999876,
+          "unserved": 155479.99880000963,
+          "ci_delivery": 6224.323200000001,
+          "ci_use": 6224.323199998457,
+          "ci_stock": 1.5434125089086592e-9,
+          "jc_capacity": 37216.025,
+          "jc_idle": 7443.205000007609,
+          "va": 473721.8799999162,
+          "binding": [
+            {
+              "kind": "IMPORT",
+              "code": "CI"
+            }
+          ],
+          "flow_stock_residual": 1.4260876923799515e-7
+        },
+        {
+          "period": 2,
+          "fraction": 0.800000000000186,
+          "unserved": 155479.99879985538,
+          "ci_delivery": 6224.323200000001,
+          "ci_use": 6224.323200000002,
+          "ci_stock": 1.5425030142068863e-9,
+          "jc_capacity": 37216.025,
+          "jc_idle": 7443.205000000224,
+          "va": 473721.8800000337,
+          "binding": [
+            {
+              "kind": "IMPORT",
+              "code": "CI"
+            }
+          ],
+          "flow_stock_residual": 1.4260876923799515e-7
+        },
+        {
+          "period": 3,
+          "fraction": 0.8000000000001859,
+          "unserved": 155479.99879985547,
+          "ci_delivery": 6224.323200000001,
+          "ci_use": 6224.323200000001,
+          "ci_stock": 1.5425030142068863e-9,
+          "jc_capacity": 37216.025,
+          "jc_idle": 7443.205000000227,
+          "va": 473721.88000003365,
+          "binding": [
+            {
+              "kind": "IMPORT",
+              "code": "CI"
+            }
+          ],
+          "flow_stock_residual": 1.424923539161682e-7
+        },
+        {
+          "period": 4,
+          "fraction": 0.9999999999991435,
+          "unserved": 6.658759161837224e-7,
+          "ci_delivery": 9336.4848,
+          "ci_use": 7780.403999991527,
+          "ci_stock": 1556.080800010016,
+          "jc_capacity": 37216.025,
+          "jc_idle": 4.0854502003639936e-8,
+          "va": 592152.3499993972,
+          "binding": [
+            {
+              "kind": "BRANCH",
+              "code": "AZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "BZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CD"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CE"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CF"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CG"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CH"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CI"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CJ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CK"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CL"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CM"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "DZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "EZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "FZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "GZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "HZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "IZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "KZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "LZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "NZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "OZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "PZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "RZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "SZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "TZ"
+            }
+          ],
+          "flow_stock_residual": 1.7846468836069107e-7
+        },
+        {
+          "period": 5,
+          "fraction": 0.9999999999991435,
+          "unserved": 6.658759161837224e-7,
+          "ci_delivery": 9336.4848,
+          "ci_use": 7780.403999991527,
+          "ci_stock": 3112.1616000184904,
+          "jc_capacity": 37216.025,
+          "jc_idle": 4.0854502003639936e-8,
+          "va": 592152.3499993972,
+          "binding": [
+            {
+              "kind": "BRANCH",
+              "code": "AZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "BZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CD"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CE"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CF"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CG"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CH"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CI"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CJ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CK"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CL"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CM"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "DZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "EZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "FZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "GZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "HZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "IZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "KZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "LZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "NZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "OZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "PZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "RZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "SZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "TZ"
+            }
+          ],
+          "flow_stock_residual": 1.7846468836069107e-7
+        },
+        {
+          "period": 6,
+          "fraction": 0.9999999999991435,
+          "unserved": 6.658759161837224e-7,
+          "ci_delivery": 7780.404,
+          "ci_use": 7780.403999991527,
+          "ci_stock": 3112.1616000269632,
+          "jc_capacity": 37216.025,
+          "jc_idle": 4.0854502003639936e-8,
+          "va": 592152.3499993972,
+          "binding": [
+            {
+              "kind": "BRANCH",
+              "code": "AZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "BZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CD"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CE"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CF"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CG"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CH"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CI"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CJ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CK"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CL"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CM"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "DZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "EZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "FZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "GZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "HZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "IZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "KZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "LZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "NZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "OZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "PZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "RZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "SZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "TZ"
+            }
+          ],
+          "flow_stock_residual": 1.7846468836069107e-7
+        }
+      ],
+      "cumulative_unserved": 466439.9964017181,
+      "pending": []
+    },
+    "delivery_shock_buffer": {
+      "periods": [
+        {
+          "period": 1,
+          "fraction": 0.9999999999991435,
+          "unserved": 6.658759161837224e-7,
+          "ci_delivery": 6224.323200000001,
+          "ci_use": 7780.403999991527,
+          "ci_stock": 1556.0808000084753,
+          "jc_capacity": 37216.025,
+          "jc_idle": 4.0854502003639936e-8,
+          "va": 592152.3499993972,
+          "binding": [
+            {
+              "kind": "BRANCH",
+              "code": "AZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "BZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CD"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CE"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CF"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CG"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CH"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CI"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CJ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CK"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CL"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CM"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "DZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "EZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "FZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "GZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "HZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "IZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "KZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "LZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "NZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "OZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "PZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "RZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "SZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "TZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "AZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "BZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CB"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CC"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CD"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CE"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CF"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CG"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CH"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CJ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CK"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CL"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CM"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "DZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "EZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "FZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "GZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "HZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "JA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "JB"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "JC"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "KZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "MA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "MB"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "MC"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "NZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "QA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "RZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "SZ"
+            }
+          ],
+          "flow_stock_residual": 1.7846468836069107e-7
+        },
+        {
+          "period": 2,
+          "fraction": 0.9999999999991435,
+          "unserved": 6.658759161837224e-7,
+          "ci_delivery": 6224.323200000001,
+          "ci_use": 7780.403999991527,
+          "ci_stock": 1.694934326224029e-8,
+          "jc_capacity": 37216.025,
+          "jc_idle": 4.0854502003639936e-8,
+          "va": 592152.3499993972,
+          "binding": [
+            {
+              "kind": "BRANCH",
+              "code": "AZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "BZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CD"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CE"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CF"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CG"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CH"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CI"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CJ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CK"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CL"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CM"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "DZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "EZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "FZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "GZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "HZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "IZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "KZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "LZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "NZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "OZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "PZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "RZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "SZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "TZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "AZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "BZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CB"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CC"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CD"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CE"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CF"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CG"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CH"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CI"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CJ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CK"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CL"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CM"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "DZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "EZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "FZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "GZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "HZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "JA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "JB"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "JC"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "KZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "MA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "MB"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "MC"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "NZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "QA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "RZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "SZ"
+            }
+          ],
+          "flow_stock_residual": 1.7846468836069107e-7
+        },
+        {
+          "period": 3,
+          "fraction": 0.8000000000021661,
+          "unserved": 155479.99879831608,
+          "ci_delivery": 6224.323200000001,
+          "ci_use": 6224.323200015407,
+          "ci_stock": 1.5434125089086592e-9,
+          "jc_capacity": 37216.025,
+          "jc_idle": 7443.204999926533,
+          "va": 473721.8800012062,
+          "binding": [
+            {
+              "kind": "IMPORT",
+              "code": "CI"
+            }
+          ],
+          "flow_stock_residual": 1.4260876923799515e-7
+        },
+        {
+          "period": 4,
+          "fraction": 0.9999999999991435,
+          "unserved": 6.658759161837224e-7,
+          "ci_delivery": 9336.4848,
+          "ci_use": 7780.403999991527,
+          "ci_stock": 1556.0808000100178,
+          "jc_capacity": 37216.025,
+          "jc_idle": 4.0854502003639936e-8,
+          "va": 592152.3499993972,
+          "binding": [
+            {
+              "kind": "BRANCH",
+              "code": "AZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "BZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CD"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CE"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CF"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CG"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CH"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CI"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CJ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CK"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CL"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CM"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "DZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "EZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "FZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "GZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "HZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "IZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "KZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "LZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "NZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "OZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "PZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "RZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "SZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "TZ"
+            }
+          ],
+          "flow_stock_residual": 1.7846468836069107e-7
+        },
+        {
+          "period": 5,
+          "fraction": 0.9999999999991435,
+          "unserved": 6.658759161837224e-7,
+          "ci_delivery": 9336.4848,
+          "ci_use": 7780.403999991527,
+          "ci_stock": 3112.1616000184904,
+          "jc_capacity": 37216.025,
+          "jc_idle": 4.0854502003639936e-8,
+          "va": 592152.3499993972,
+          "binding": [
+            {
+              "kind": "BRANCH",
+              "code": "AZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "BZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CD"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CE"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CF"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CG"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CH"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CI"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CJ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CK"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CL"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CM"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "DZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "EZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "FZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "GZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "HZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "IZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "KZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "LZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "NZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "OZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "PZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "RZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "SZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "TZ"
+            }
+          ],
+          "flow_stock_residual": 1.7846468836069107e-7
+        },
+        {
+          "period": 6,
+          "fraction": 0.9999999999991435,
+          "unserved": 6.658759161837224e-7,
+          "ci_delivery": 7780.404,
+          "ci_use": 7780.403999991527,
+          "ci_stock": 3112.1616000269632,
+          "jc_capacity": 37216.025,
+          "jc_idle": 4.0854502003639936e-8,
+          "va": 592152.3499993972,
+          "binding": [
+            {
+              "kind": "BRANCH",
+              "code": "AZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "BZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CD"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CE"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CF"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CG"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CH"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CI"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CJ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CK"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CL"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CM"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "DZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "EZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "FZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "GZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "HZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "IZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "KZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "LZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "NZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "OZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "PZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "RZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "SZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "TZ"
+            }
+          ],
+          "flow_stock_residual": 1.7846468836069107e-7
+        }
+      ],
+      "cumulative_unserved": 155479.99880164547,
+      "pending": []
+    },
+    "delayed_capacity_recovery": {
+      "periods": [
+        {
+          "period": 1,
+          "fraction": 0.9499999999999834,
+          "unserved": 38869.99970001291,
+          "ci_delivery": 7780.404,
+          "ci_use": 7391.383799998152,
+          "ci_stock": 389.020200001848,
+          "jc_capacity": 35355.22375,
+          "jc_idle": 9.124050848186016e-9,
+          "va": 562544.7324998993,
+          "binding": [
+            {
+              "kind": "BRANCH",
+              "code": "JC"
+            }
+          ],
+          "flow_stock_residual": 1.695007085800171e-7
+        },
+        {
+          "period": 2,
+          "fraction": 0.9499999999999834,
+          "unserved": 38869.99970001291,
+          "ci_delivery": 7780.404,
+          "ci_use": 7391.383799998152,
+          "ci_stock": 778.040400003696,
+          "jc_capacity": 35355.22375,
+          "jc_idle": 9.124050848186016e-9,
+          "va": 562544.7324998993,
+          "binding": [
+            {
+              "kind": "BRANCH",
+              "code": "JC"
+            }
+          ],
+          "flow_stock_residual": 1.695007085800171e-7
+        },
+        {
+          "period": 3,
+          "fraction": 0.9999999999991435,
+          "unserved": 6.658759161837224e-7,
+          "ci_delivery": 7780.404,
+          "ci_use": 7780.403999991527,
+          "ci_stock": 778.0404000121698,
+          "jc_capacity": 37216.025,
+          "jc_idle": 4.0854502003639936e-8,
+          "va": 592152.3499993972,
+          "binding": [
+            {
+              "kind": "BRANCH",
+              "code": "AZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "BZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CD"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CE"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CF"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CG"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CH"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CI"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CJ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CK"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CL"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CM"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "DZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "EZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "FZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "GZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "HZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "IZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "KZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "LZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "NZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "OZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "PZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "RZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "SZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "TZ"
+            }
+          ],
+          "flow_stock_residual": 1.7846468836069107e-7
+        },
+        {
+          "period": 4,
+          "fraction": 0.9999999999991435,
+          "unserved": 6.658759161837224e-7,
+          "ci_delivery": 7780.404,
+          "ci_use": 7780.403999991527,
+          "ci_stock": 778.0404000206427,
+          "jc_capacity": 37216.025,
+          "jc_idle": 4.0854502003639936e-8,
+          "va": 592152.3499993972,
+          "binding": [
+            {
+              "kind": "BRANCH",
+              "code": "AZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "BZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CD"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CE"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CF"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CG"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CH"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CI"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CJ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CK"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CL"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CM"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "DZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "EZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "FZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "GZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "HZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "IZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "KZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "LZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "NZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "OZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "PZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "RZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "SZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "TZ"
+            }
+          ],
+          "flow_stock_residual": 1.7846468836069107e-7
+        },
+        {
+          "period": 5,
+          "fraction": 0.9999999999991435,
+          "unserved": 6.658759161837224e-7,
+          "ci_delivery": 7780.404,
+          "ci_use": 7780.403999991527,
+          "ci_stock": 778.0404000291155,
+          "jc_capacity": 37216.025,
+          "jc_idle": 4.0854502003639936e-8,
+          "va": 592152.3499993972,
+          "binding": [
+            {
+              "kind": "BRANCH",
+              "code": "AZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "BZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CD"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CE"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CF"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CG"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CH"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CI"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CJ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CK"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CL"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CM"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "DZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "EZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "FZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "GZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "HZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "IZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "KZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "LZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "NZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "OZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "PZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "RZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "SZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "TZ"
+            }
+          ],
+          "flow_stock_residual": 1.7846468836069107e-7
+        },
+        {
+          "period": 6,
+          "fraction": 0.9999999999991435,
+          "unserved": 6.658759161837224e-7,
+          "ci_delivery": 7780.404,
+          "ci_use": 7780.403999991527,
+          "ci_stock": 778.0404000375884,
+          "jc_capacity": 37216.025,
+          "jc_idle": 4.0854502003639936e-8,
+          "va": 592152.3499993972,
+          "binding": [
+            {
+              "kind": "BRANCH",
+              "code": "AZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "BZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CD"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CE"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CF"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CG"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CH"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CI"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CJ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CK"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CL"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CM"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "DZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "EZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "FZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "GZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "HZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "IZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "KZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "LZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "NZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "OZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "PZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "RZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "SZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "TZ"
+            }
+          ],
+          "flow_stock_residual": 1.7846468836069107e-7
+        }
+      ],
+      "cumulative_unserved": 77739.99940268933,
+      "pending": []
+    },
+    "delayed_capacity_withdrawal": {
+      "periods": [
+        {
+          "period": 1,
+          "fraction": 0.9999999999991435,
+          "unserved": 6.658759161837224e-7,
+          "ci_delivery": 7780.404,
+          "ci_use": 7780.403999991527,
+          "ci_stock": 8.473762136418372e-9,
+          "jc_capacity": 37216.025,
+          "jc_idle": 4.0854502003639936e-8,
+          "va": 592152.3499993972,
+          "binding": [
+            {
+              "kind": "BRANCH",
+              "code": "AZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "BZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CD"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CE"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CF"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CG"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CH"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CI"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CJ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CK"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CL"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CM"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "DZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "EZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "FZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "GZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "HZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "IZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "KZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "LZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "NZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "OZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "PZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "RZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "SZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "TZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "AZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "BZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CB"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CC"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CD"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CE"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CF"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CG"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CH"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CI"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CJ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CK"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CL"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CM"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "DZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "EZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "FZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "GZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "HZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "JA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "JB"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "JC"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "KZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "MA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "MB"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "MC"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "NZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "QA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "RZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "SZ"
+            }
+          ],
+          "flow_stock_residual": 1.7846468836069107e-7
+        },
+        {
+          "period": 2,
+          "fraction": 0.9999999999991435,
+          "unserved": 6.658759161837224e-7,
+          "ci_delivery": 7780.404,
+          "ci_use": 7780.403999991527,
+          "ci_stock": 1.6947524272836745e-8,
+          "jc_capacity": 37216.025,
+          "jc_idle": 4.0854502003639936e-8,
+          "va": 592152.3499993972,
+          "binding": [
+            {
+              "kind": "BRANCH",
+              "code": "AZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "BZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CD"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CE"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CF"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CG"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CH"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CI"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CJ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CK"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CL"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CM"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "DZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "EZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "FZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "GZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "HZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "IZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "KZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "LZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "NZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "OZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "PZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "RZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "SZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "TZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "AZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "BZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CB"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CC"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CD"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CE"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CF"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CG"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CH"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CI"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CJ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CK"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CL"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "CM"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "DZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "EZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "FZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "GZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "HZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "JA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "JB"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "JC"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "KZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "MA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "MB"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "MC"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "NZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "QA"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "RZ"
+            },
+            {
+              "kind": "IMPORT",
+              "code": "SZ"
+            }
+          ],
+          "flow_stock_residual": 1.7846468836069107e-7
+        },
+        {
+          "period": 3,
+          "fraction": 0.9499999999999835,
+          "unserved": 38869.9997000128,
+          "ci_delivery": 7780.404,
+          "ci_use": 7391.383799998153,
+          "ci_stock": 389.02020001879464,
+          "jc_capacity": 35355.223750000005,
+          "jc_idle": 9.124050848186016e-9,
+          "va": 562544.7324998995,
+          "binding": [
+            {
+              "kind": "BRANCH",
+              "code": "JC"
+            }
+          ],
+          "flow_stock_residual": 1.695007085800171e-7
+        },
+        {
+          "period": 4,
+          "fraction": 0.9499999999999835,
+          "unserved": 38869.9997000128,
+          "ci_delivery": 7780.404,
+          "ci_use": 7391.383799998153,
+          "ci_stock": 778.0404000206418,
+          "jc_capacity": 35355.223750000005,
+          "jc_idle": 9.124050848186016e-9,
+          "va": 562544.7324998995,
+          "binding": [
+            {
+              "kind": "BRANCH",
+              "code": "JC"
+            }
+          ],
+          "flow_stock_residual": 1.695007085800171e-7
+        },
+        {
+          "period": 5,
+          "fraction": 0.9499999999999835,
+          "unserved": 38869.9997000128,
+          "ci_delivery": 7780.404,
+          "ci_use": 7391.383799998153,
+          "ci_stock": 1167.0606000224889,
+          "jc_capacity": 35355.223750000005,
+          "jc_idle": 9.124050848186016e-9,
+          "va": 562544.7324998995,
+          "binding": [
+            {
+              "kind": "BRANCH",
+              "code": "JC"
+            }
+          ],
+          "flow_stock_residual": 1.695007085800171e-7
+        },
+        {
+          "period": 6,
+          "fraction": 0.9499999999999835,
+          "unserved": 38869.9997000128,
+          "ci_delivery": 7780.404,
+          "ci_use": 7391.383799998153,
+          "ci_stock": 1556.080800024336,
+          "jc_capacity": 35355.223750000005,
+          "jc_idle": 9.124050848186016e-9,
+          "va": 562544.7324998995,
+          "binding": [
+            {
+              "kind": "BRANCH",
+              "code": "JC"
+            }
+          ],
+          "flow_stock_residual": 1.695007085800171e-7
+        }
+      ],
+      "cumulative_unserved": 155479.99880138296,
+      "pending": []
+    },
+    "joint_shock": {
+      "periods": [
+        {
+          "period": 1,
+          "fraction": 0.9499999999999834,
+          "unserved": 38869.99970001291,
+          "ci_delivery": 6224.323200000001,
+          "ci_use": 7391.383799998152,
+          "ci_stock": 1945.1010000018496,
+          "jc_capacity": 35355.22375,
+          "jc_idle": 9.124050848186016e-9,
+          "va": 562544.7324998993,
+          "binding": [
+            {
+              "kind": "BRANCH",
+              "code": "JC"
+            }
+          ],
+          "flow_stock_residual": 1.695007085800171e-7
+        },
+        {
+          "period": 2,
+          "fraction": 0.9499999999999834,
+          "unserved": 38869.99970001291,
+          "ci_delivery": 6224.323200000001,
+          "ci_use": 7391.383799998152,
+          "ci_stock": 778.0404000036979,
+          "jc_capacity": 35355.22375,
+          "jc_idle": 9.124050848186016e-9,
+          "va": 562544.7324998993,
+          "binding": [
+            {
+              "kind": "BRANCH",
+              "code": "JC"
+            }
+          ],
+          "flow_stock_residual": 1.695007085800171e-7
+        },
+        {
+          "period": 3,
+          "fraction": 0.9000000000004613,
+          "unserved": 77739.99939964137,
+          "ci_delivery": 6224.323200000001,
+          "ci_use": 7002.363600001961,
+          "ci_stock": 1.7380443750880659e-9,
+          "jc_capacity": 37216.025,
+          "jc_idle": 3721.6024999908914,
+          "va": 532937.1150001871,
+          "binding": [
+            {
+              "kind": "IMPORT",
+              "code": "CI"
+            }
+          ],
+          "flow_stock_residual": 1.6065314412117004e-7
+        },
+        {
+          "period": 4,
+          "fraction": 0.9999999999991435,
+          "unserved": 6.658759161837224e-7,
+          "ci_delivery": 9336.4848,
+          "ci_use": 7780.403999991527,
+          "ci_stock": 1556.0808000102106,
+          "jc_capacity": 37216.025,
+          "jc_idle": 4.0854502003639936e-8,
+          "va": 592152.3499993972,
+          "binding": [
+            {
+              "kind": "BRANCH",
+              "code": "AZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "BZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CD"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CE"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CF"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CG"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CH"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CI"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CJ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CK"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CL"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CM"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "DZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "EZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "FZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "GZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "HZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "IZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "KZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "LZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "NZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "OZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "PZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "RZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "SZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "TZ"
+            }
+          ],
+          "flow_stock_residual": 1.7846468836069107e-7
+        },
+        {
+          "period": 5,
+          "fraction": 0.9999999999991435,
+          "unserved": 6.658759161837224e-7,
+          "ci_delivery": 9336.4848,
+          "ci_use": 7780.403999991527,
+          "ci_stock": 3112.161600018683,
+          "jc_capacity": 37216.025,
+          "jc_idle": 4.0854502003639936e-8,
+          "va": 592152.3499993972,
+          "binding": [
+            {
+              "kind": "BRANCH",
+              "code": "AZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "BZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CD"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CE"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CF"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CG"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CH"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CI"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CJ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CK"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CL"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CM"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "DZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "EZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "FZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "GZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "HZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "IZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "KZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "LZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "NZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "OZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "PZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "RZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "SZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "TZ"
+            }
+          ],
+          "flow_stock_residual": 1.7846468836069107e-7
+        },
+        {
+          "period": 6,
+          "fraction": 0.9999999999991435,
+          "unserved": 6.658759161837224e-7,
+          "ci_delivery": 7780.404,
+          "ci_use": 7780.403999991527,
+          "ci_stock": 3112.161600027156,
+          "jc_capacity": 37216.025,
+          "jc_idle": 4.0854502003639936e-8,
+          "va": 592152.3499993972,
+          "binding": [
+            {
+              "kind": "BRANCH",
+              "code": "AZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "BZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CD"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CE"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CF"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CG"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CH"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CI"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CJ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CK"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CL"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "CM"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "DZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "EZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "FZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "GZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "HZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "IZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "JC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "KZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "LZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "MC"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "NZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "OZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "PZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QA"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "QB"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "RZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "SZ"
+            },
+            {
+              "kind": "BRANCH",
+              "code": "TZ"
+            }
+          ],
+          "flow_stock_residual": 1.7846468836069107e-7
+        }
+      ],
+      "cumulative_unserved": 155479.9988016648,
+      "pending": []
+    }
+  },
+  "verification": "independent dense linear solve, stock and capacity path checks",
+  "verification_receipt": {
+    "run": 45527976929,
+    "job": 138915941720,
+    "tested_commit": "18def50c20bbe17924163de74deaefcc74889514",
+    "conclusion": "test_and_pilot_steps_success",
+    "previous_failed_run": 45527873273,
+    "fix": "Neumann relative tail tolerance 1e-15 for allocation; default 1e-12 retained for state; unchanged independent tolerance"
+  }
+}
