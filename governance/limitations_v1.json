@@ -1778,6 +1778,114 @@
       "blocked_claims": [],
       "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
       "resolution_status": "PERMANENT"
+    },
+    {
+      "id": "LIM-W08",
+      "type": "EMPIRICAL",
+      "origin": "ARCH-002 L01",
+      "title": "Coût, disponibilité et progrès des technologies",
+      "impact": "Frontière technologique fixe, coût et apprentissage non calibrés",
+      "target": "P0/G2/G5",
+      "remedy": "Séries de coûts, disponibilité, capacité et courbes d'apprentissage par contexte",
+      "acceptance": "Vintages, benchmarks indépendants, dispersion et régimes de validité",
+      "sources": [
+        "docs/ARCH-002.md",
+        "docs/G2-MODEL-COMPARISON.md"
+      ],
+      "mechanisms": [
+        "M003",
+        "M005"
+      ],
+      "engines": [
+        "E01",
+        "E03",
+        "E04"
+      ],
+      "dependencies": [
+        "LIM-W03"
+      ],
+      "status": "OPEN",
+      "resolution_status": "OPEN",
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "notes": "Cible proposée, pas une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-W09",
+      "type": "METHOD",
+      "origin": "ARCH-002 L02/L03",
+      "title": "Intensification, qualité du travail et arbitrages qualité-prix-délai",
+      "impact": "Heures libérées confondues avec amélioration des conditions ou qualité",
+      "target": "G3/G5",
+      "remedy": "Mesurer charge, qualité, délais, erreurs et préférence client; arbitrages explicites",
+      "acceptance": "Mesures de charge et qualité, scénarios comparables, tests négatifs",
+      "sources": [
+        "docs/ARCH-002.md",
+        "docs/G3-OPERATIONS.md",
+        "docs/G3-TRANSFORM.md"
+      ],
+      "mechanisms": [
+        "M013",
+        "M019"
+      ],
+      "engines": [
+        "E02",
+        "E04"
+      ],
+      "dependencies": [
+        "LIM-W04",
+        "LIM-W07"
+      ],
+      "status": "OPEN",
+      "resolution_status": "OPEN",
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "notes": "Cible proposée, pas une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-F08",
+      "type": "METHOD",
+      "origin": "ARCH-002 L05/L06",
+      "title": "Économies d'échelle et de gamme, innovation et nouveaux produits",
+      "impact": "Coût moyen constant et demande existante uniquement",
+      "target": "G3/G4 PRIX",
+      "remedy": "Coûts fixes/marginaux, gamme, entrée de nouveaux produits et demande nouvelle séparée",
+      "acceptance": "Contrats de qualité et coûts, scénarios création/saturation et seuils de rentabilité",
+      "sources": [
+        "docs/ARCH-002.md",
+        "docs/G3-MARKET.md",
+        "docs/G3-FIRM.md"
+      ],
+      "mechanisms": [
+        "M031",
+        "M041"
+      ],
+      "engines": [
+        "E02",
+        "E04",
+        "E05"
+      ],
+      "dependencies": [
+        "LIM-F04",
+        "LIM-F05"
+      ],
+      "status": "OPEN",
+      "resolution_status": "OPEN",
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "notes": "Cible proposée, pas une échéance ferme. Aucun gate promu."
     }
   ],
   "dependency_semantics": "Dependencies constrain closure, not parallel development; not a promise of dates. Publication restrictions apply to affected claims, not blanket suppression of safe synthetic demonstrations."
