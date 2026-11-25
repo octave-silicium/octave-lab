@@ -1,0 +1,111 @@
+{
+  "status": "EMPIRICAL_CAPITAL_DIAGNOSTIC_PARTIAL",
+  "publication": "BLOCK_PUBLICATION",
+  "source_hashes": {
+    "stocks.zip": "676d19710b1f31828f0a88644e9ec9f46ac705fb855742fe04bffa772a4cd622",
+    "fbcf.xlsx": "6f4a513a90a7e37f701cfcb7dcaebcd34f7d37c1ddc17260720d8c8eb30fa164",
+    "ccf.xlsx": "16e345a7fccb120c68d2332a4920d612e999dbf5033cd0a893bd99d07cb816df",
+    "eu_stocks.json": "b2a299aea8429b26b869cdcb594472f55f2bfb5c8524c8a8b849d88a7e92163c"
+  },
+  "years": [
+    1959,
+    2025
+  ],
+  "source_observations": 160100,
+  "observations_2022": 2448,
+  "gross_net_pairs_checked": 656,
+  "stock_aggregations": [
+    {
+      "asset": "N11N",
+      "residual_MEUR": "0.0"
+    },
+    {
+      "asset": "N11G",
+      "residual_MEUR": "0.0"
+    },
+    {
+      "asset": "N1132N",
+      "residual_MEUR": "0.0"
+    },
+    {
+      "asset": "N1173N",
+      "residual_MEUR": "0.0"
+    },
+    {
+      "asset": "N1171N",
+      "residual_MEUR": "0.0"
+    }
+  ],
+  "eurostat_updated": "2026-11-18T23:00:00+0100",
+  "national": {
+    "net_stock": "9627618.6",
+    "gross_stock": "14582799.7",
+    "dwellings_net": "5717328.7",
+    "ict_net": "37391.6",
+    "software_net": "180704.1",
+    "rd_net": "238324.6",
+    "ip_net": "424887.2",
+    "fbcf": "623312.000",
+    "ccf": "497833.000",
+    "net_formation": "125479.000"
+  },
+  "limitations": [
+    "replacement costs not physical productive capacity or historical cost",
+    "stocks and flows valuation differ; ratios descriptive not depreciation rates",
+    "chain-linked volumes not additive, cross-source differences unresolved",
+    "asset-specific FBCF/CCF missing from this qualified scope; no automated AI-capital classification",
+    "TZ CCF missing, no imputation; no implied bilateral asset purchases, survival curves or causal estimates",
+    "no empirical admission"
+  ],
+  "stock_comparison_summary": {
+    "CRC_MEUR": {
+      "count": 450,
+      "exact": 450,
+      "max_absolute_difference": "0.0"
+    },
+    "CLV20_MEUR": {
+      "count": 370,
+      "exact": 1,
+      "max_absolute_difference": "416941.0"
+    }
+  },
+  "verification_receipt": {
+    "run": 45544005700,
+    "job": 138969091268,
+    "tested_commit": "9b34accdfef0f66311c33727254a612a88cb50a8",
+    "conclusion": "success",
+    "artifact": 14990252697,
+    "archive_sha256": "b694e2e4498c30b0641c4cdc1fd14d25caf381fe2dfa6ab0e38c5ac545ad98fd",
+    "drive": "1xtjyD7bAh7bCJpdy7B4358fXCc63KGk3"
+  },
+  "supplemental_local_diagnostic": {
+    "status": "LOCAL_COMPARISONS_NOT_YET_IN_CI_AUDIT",
+    "archive": 14990556603,
+    "flow_source_sha256": "c4fb044e4de5a6dc5f91b98fa23b9f927275d1cfc8e9c85e87b29df22d40cd44",
+    "income_source_sha256": "5c822d35fed4fa677d215a958be4730679168700a71d523d8479fb0c24608772",
+    "fbcf": {
+      "count": 38,
+      "max_difference_MEUR": "0.5"
+    },
+    "ccf": {
+      "count": 37,
+      "max_difference_MEUR": "0.5",
+      "missing_insee": "TZ; Eurostat 0; no imputation"
+    },
+    "fbcf_asset_totals_MEUR": {
+      "N11G": "623311.7",
+      "N111G": "187328.9",
+      "N1132G": "12029.5",
+      "N1173G": "80625.8",
+      "N1171G": "47729.8",
+      "N117G": "132394.7"
+    },
+    "asset_observations_37_plus_total": {
+      "N11G": 38,
+      "N1132G": 38,
+      "N1173G": 38,
+      "N1171G": 38
+    },
+    "method": "P51G CP_MEUR N11G matched 37 branches + TOTAL to Insee 6.301, P51C CP_MEUR matched 6.461; decimal differences. Asset flows from Eurostat alone not independent reconciliation."
+  }
+}
