@@ -1,5 +1,4 @@
 import unittest
-import numpy as np
 from pipeline.economic_income_bridge import reconcile,effects
 
 class IncomeBridgeTests(unittest.TestCase):
@@ -9,8 +8,8 @@ class IncomeBridgeTests(unittest.TestCase):
         return reconcile(*(args or self.args),aggregate_product_tax=kw.get("aggregate_product_tax",8),atol=1e-9)
     def test_identities(self):
         r=self.run_bridge()
-        np.testing.assert_allclose(r["intermediate_valuation_bridge"],[5,3])
-        np.testing.assert_allclose(r["gva_intensity"],[.55,.635])
+        self.assertEqual(r["intermediate_valuation_bridge"],(5,3))
+        for x,y in zip(r["gva_intensity"],(.55,.635)): self.assertAlmostEqual(x,y)
     def test_shock(self):
         r=effects([10,20],self.run_bridge())
         self.assertAlmostEqual(r["gva"],18.2)
