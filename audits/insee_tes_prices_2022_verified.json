@@ -1,0 +1,447 @@
+{
+  "status": "EMPIRICAL_BASE_HYPOTHETICAL_PRICE_SCENARIOS",
+  "publication": "BLOCK_PUBLICATION",
+  "source_hashes": {
+    "standard": "1a9d587e3a70590a42210f10bca15a63dd85d18dc9946ca654d77e50970a29ed",
+    "symmetric": "db4189aa708c10122dadf09c17f8bb49e1dd45561f93bf5527abe8473a29aa73",
+    "eurostat": "5c822d35fed4fa677d215a958be4730679168700a71d523d8479fb0c24608772"
+  },
+  "unit": "M EUR reference 2022 or conditional nominal EUR as explicitly labeled",
+  "assumptions": {
+    "retention": "MA D1 intensity -0.01, gross surplus +0.01 at reference prices",
+    "purchase": "MA D1 intensity -0.01, domestic JC input +0.004, imported JC input +0.003",
+    "import": "CI intermediate import price +20%",
+    "rebound": "half of MA domestic final demand responsive, elasticity 2, saturation 1.1"
+  },
+  "cases": {
+    "identity": {
+      "sha256": "6b1ea910dede684e941c4579291caaa0d0d5c10440d89c4e995a012cb305fd3f",
+      "branch_price_MA": 1,
+      "product_price_MA": 1,
+      "unit_surplus_MA": 0.09914706291098396,
+      "top_product_price_changes": [
+        [
+          "DZ",
+          -5.551115123125783e-16
+        ],
+        [
+          "AZ",
+          -4.440892098500626e-16
+        ],
+        [
+          "CH",
+          -2.220446049250313e-16
+        ],
+        [
+          "CJ",
+          2.220446049250313e-16
+        ],
+        [
+          "FZ",
+          2.220446049250313e-16
+        ],
+        [
+          "IZ",
+          -2.220446049250313e-16
+        ]
+      ],
+      "nominal": {
+        "gross_output": 5111526.799998455,
+        "domestic_final": 3109599.976,
+        "intermediate_imports": 664345.5789996634,
+        "compensation": 1378355.3999997664,
+        "other_net_production_taxes": 81920.999999981,
+        "valuation_bridge": 76644.99700000558,
+        "gross_surplus_mixed": 908332.9999998705,
+        "gross_value_added": 2368609.3999996176
+      },
+      "reference_price_volume": {
+        "gross_output": 5111526.799998456,
+        "domestic_final": 3109599.9760000003
+      },
+      "base_reference": {
+        "gross_output": 5111526.799998456,
+        "domestic_final": 3109599.9760000003,
+        "compensation": 1378355.3999997664,
+        "gross_surplus_mixed": 908332.9999998703,
+        "gross_value_added": 2368609.3999996176
+      },
+      "final_value_decomposition": {
+        "volume": 0,
+        "price_at_scenario_volume": -9.598587702441823e-12,
+        "nominal_change": -4.656612873077393e-10
+      },
+      "price_induced_MA": 0,
+      "tail_bound": 3.5690017500670345e-16
+    },
+    "retained_gain": {
+      "sha256": "57065f6e63672cbd5417715d1ad376bdc0b8187122ef46789965ec803de107eb",
+      "branch_price_MA": 1,
+      "product_price_MA": 1,
+      "unit_surplus_MA": 0.10914706291098397,
+      "top_product_price_changes": [
+        [
+          "MC",
+          2.220446049250313e-16
+        ],
+        [
+          "AZ",
+          -1.1102230246251565e-16
+        ],
+        [
+          "CA",
+          -1.1102230246251565e-16
+        ],
+        [
+          "IZ",
+          -1.1102230246251565e-16
+        ],
+        [
+          "NZ",
+          -1.1102230246251565e-16
+        ],
+        [
+          "BZ",
+          0
+        ]
+      ],
+      "nominal": {
+        "gross_output": 5111526.799998455,
+        "domestic_final": 3109599.976,
+        "intermediate_imports": 664345.5789996634,
+        "compensation": 1375354.8269997672,
+        "other_net_production_taxes": 81920.999999981,
+        "valuation_bridge": 76644.99700000558,
+        "gross_surplus_mixed": 911333.5729998695,
+        "gross_value_added": 2368609.3999996176
+      },
+      "reference_price_volume": {
+        "gross_output": 5111526.799998456,
+        "domestic_final": 3109599.9760000003
+      },
+      "base_reference": {
+        "gross_output": 5111526.799998456,
+        "domestic_final": 3109599.9760000003,
+        "compensation": 1378355.3999997664,
+        "gross_surplus_mixed": 908332.9999998703,
+        "gross_value_added": 2368609.3999996176
+      },
+      "final_value_decomposition": {
+        "volume": 0,
+        "price_at_scenario_volume": -3.384050206722833e-11,
+        "nominal_change": -4.656612873077393e-10
+      },
+      "price_induced_MA": 0,
+      "tail_bound": 0
+    },
+    "full_pass_through": {
+      "sha256": "b3bbca2ff8e34010548e85b878262b1945834af4a0cd16e8c67c0ae8a90c3284",
+      "branch_price_MA": 0.9867824167743214,
+      "product_price_MA": 0.987014679911302,
+      "unit_surplus_MA": 0.0991470629109854,
+      "top_product_price_changes": [
+        [
+          "MA",
+          -0.012985320088698016
+        ],
+        [
+          "MC",
+          -0.0011344683572754866
+        ],
+        [
+          "GZ",
+          -0.0010631705980677086
+        ],
+        [
+          "NZ",
+          -0.0009997104727687
+        ],
+        [
+          "JB",
+          -0.0009954219250355445
+        ],
+        [
+          "JC",
+          -0.0009489846988335326
+        ]
+      ],
+      "nominal": {
+        "gross_output": 5104324.587787095,
+        "domestic_final": 3106599.403000012,
+        "intermediate_imports": 664345.5789996634,
+        "compensation": 1375354.8269997672,
+        "other_net_production_taxes": 81920.999999981,
+        "valuation_bridge": 76644.99700000558,
+        "gross_surplus_mixed": 908332.9999998829,
+        "gross_value_added": 2365608.826999631
+      },
+      "reference_price_volume": {
+        "gross_output": 5111526.799998456,
+        "domestic_final": 3109599.9760000003
+      },
+      "base_reference": {
+        "gross_output": 5111526.799998456,
+        "domestic_final": 3109599.9760000003,
+        "compensation": 1378355.3999997664,
+        "gross_surplus_mixed": 908332.9999998703,
+        "gross_value_added": 2368609.3999996176
+      },
+      "final_value_decomposition": {
+        "volume": 0,
+        "price_at_scenario_volume": -3000.5729999877417,
+        "nominal_change": -3000.572999988217
+      },
+      "price_induced_MA": 0,
+      "tail_bound": 7.269986518765182e-14
+    },
+    "half_pass_through": {
+      "sha256": "fba79302f0b98de48b94ed908e836f0d6315235ed61c0461be1a833dcbc40d7f",
+      "branch_price_MA": 0.9943333445946958,
+      "product_price_MA": 0.9944347755652599,
+      "unit_surplus_MA": 0.10481371831629305,
+      "top_product_price_changes": [
+        [
+          "MA",
+          -0.005565224434740057
+        ],
+        [
+          "MC",
+          -0.00020218117976777972
+        ],
+        [
+          "GZ",
+          -0.00019081360771699973
+        ],
+        [
+          "NZ",
+          -0.00017857974171286983
+        ],
+        [
+          "JB",
+          -0.00016703852397537133
+        ],
+        [
+          "JC",
+          -0.00016687749655464046
+        ]
+      ],
+      "nominal": {
+        "gross_output": 5109303.547315001,
+        "domestic_final": 3108822.6556834974,
+        "intermediate_imports": 664345.5789996634,
+        "compensation": 1375354.8269997672,
+        "other_net_production_taxes": 81920.999999981,
+        "valuation_bridge": 76644.99700000558,
+        "gross_surplus_mixed": 910556.2526833671,
+        "gross_value_added": 2367832.0796831152
+      },
+      "reference_price_volume": {
+        "gross_output": 5111526.799998456,
+        "domestic_final": 3109599.9760000003
+      },
+      "base_reference": {
+        "gross_output": 5111526.799998456,
+        "domestic_final": 3109599.9760000003,
+        "compensation": 1378355.3999997664,
+        "gross_surplus_mixed": 908332.9999998703,
+        "gross_value_added": 2368609.3999996176
+      },
+      "final_value_decomposition": {
+        "volume": 0,
+        "price_at_scenario_volume": -777.3203165028058,
+        "nominal_change": -777.3203165028244
+      },
+      "price_induced_MA": 0,
+      "tail_bound": 5.677247722880559e-14
+    },
+    "ai_purchase_full": {
+      "sha256": "d27f91f694a634d1cc6a345ca3acf5fd0f7ac98a1a84eb2181ccd06309876dd2",
+      "branch_price_MA": 0.9960332192666105,
+      "product_price_MA": 0.9961029246674482,
+      "unit_surplus_MA": 0.09914706291098518,
+      "top_product_price_changes": [
+        [
+          "MA",
+          -0.0038970753325517915
+        ],
+        [
+          "MC",
+          -0.0003404697474127527
+        ],
+        [
+          "GZ",
+          -0.0003190722973090976
+        ],
+        [
+          "NZ",
+          -0.0003000270302530028
+        ],
+        [
+          "JB",
+          -0.00029873997737484004
+        ],
+        [
+          "JC",
+          -0.0002848035193208087
+        ]
+      ],
+      "nominal": {
+        "gross_output": 5111340.012664392,
+        "domestic_final": 3108699.4622705127,
+        "intermediate_imports": 665424.5714517058,
+        "compensation": 1376114.0378179706,
+        "other_net_production_taxes": 81955.73964216077,
+        "valuation_bridge": 76658.86268307804,
+        "gross_surplus_mixed": 908546.2506748806,
+        "gross_value_added": 2366616.028135012
+      },
+      "reference_price_volume": {
+        "gross_output": 5113502.455586375,
+        "domestic_final": 3109599.9760000003
+      },
+      "base_reference": {
+        "gross_output": 5111526.799998456,
+        "domestic_final": 3109599.9760000003,
+        "compensation": 1378355.3999997664,
+        "gross_surplus_mixed": 908332.9999998703,
+        "gross_value_added": 2368609.3999996176
+      },
+      "final_value_decomposition": {
+        "volume": 0,
+        "price_at_scenario_volume": -900.5137294874038,
+        "nominal_change": -900.5137294875458
+      },
+      "price_induced_MA": 0,
+      "tail_bound": 7.564699921206985e-14
+    },
+    "import_price_shock": {
+      "sha256": "08704daa7d65ea09376ba37fa0b89c1ffc492f89717518120c51b5860054152d",
+      "branch_price_MA": 1.0014393165542206,
+      "product_price_MA": 1.001433057829857,
+      "unit_surplus_MA": 0.09914706291098307,
+      "top_product_price_changes": [
+        [
+          "CI",
+          0.038847054435853234
+        ],
+        [
+          "CJ",
+          0.021126723028460637
+        ],
+        [
+          "JB",
+          0.007160849814675796
+        ],
+        [
+          "CL",
+          0.006031508827278209
+        ],
+        [
+          "CK",
+          0.004648089975072711
+        ],
+        [
+          "CM",
+          0.004143954661206317
+        ]
+      ],
+      "nominal": {
+        "gross_output": 5121339.898849878,
+        "domestic_final": 3115824.2991999905,
+        "intermediate_imports": 670569.9021996619,
+        "compensation": 1378355.3999997664,
+        "other_net_production_taxes": 81920.999999981,
+        "valuation_bridge": 76644.99700000558,
+        "gross_surplus_mixed": 908332.9999998611,
+        "gross_value_added": 2368609.3999996083
+      },
+      "reference_price_volume": {
+        "gross_output": 5111526.799998456,
+        "domestic_final": 3109599.9760000003
+      },
+      "base_reference": {
+        "gross_output": 5111526.799998456,
+        "domestic_final": 3109599.9760000003,
+        "compensation": 1378355.3999997664,
+        "gross_surplus_mixed": 908332.9999998703,
+        "gross_value_added": 2368609.3999996176
+      },
+      "final_value_decomposition": {
+        "volume": 0,
+        "price_at_scenario_volume": 6224.3231999905165,
+        "nominal_change": 6224.3231999902055
+      },
+      "price_induced_MA": 0,
+      "tail_bound": 5.449580544643748e-14
+    },
+    "ai_purchase_rebound": {
+      "sha256": "c09b1f5ca258bfbf1b7c8de40a36bba8a0c1c30484a7485d5268b39573da77a3",
+      "branch_price_MA": 0.9960332192666105,
+      "product_price_MA": 0.9961029246674482,
+      "unit_surplus_MA": 0.09914706291098518,
+      "top_product_price_changes": [
+        [
+          "MA",
+          -0.0038970753325517915
+        ],
+        [
+          "MC",
+          -0.0003404697474127527
+        ],
+        [
+          "GZ",
+          -0.0003190722973090976
+        ],
+        [
+          "NZ",
+          -0.0003000270302530028
+        ],
+        [
+          "JB",
+          -0.00029873997737484004
+        ],
+        [
+          "JC",
+          -0.0002848035193208087
+        ]
+      ],
+      "nominal": {
+        "gross_output": 5111927.729830576,
+        "domestic_final": 3109026.483300078,
+        "intermediate_imports": 665473.84629005,
+        "compensation": 1376304.717544541,
+        "other_net_production_taxes": 81964.99654911291,
+        "valuation_bridge": 76664.35249659268,
+        "gross_surplus_mixed": 908618.5704190652,
+        "gross_value_added": 2366888.284512719
+      },
+      "reference_price_volume": {
+        "gross_output": 5114091.901989193,
+        "domestic_final": 3109928.2764411164
+      },
+      "base_reference": {
+        "gross_output": 5111526.799998456,
+        "domestic_final": 3109599.9760000003,
+        "compensation": 1378355.3999997664,
+        "gross_surplus_mixed": 908332.9999998703,
+        "gross_value_added": 2368609.3999996176
+      },
+      "final_value_decomposition": {
+        "volume": 328.3004411160946,
+        "price_at_scenario_volume": -901.793141038145,
+        "nominal_change": -573.4926999220625
+      },
+      "price_induced_MA": 328.3004411165457,
+      "tail_bound": 7.564699921206985e-14
+    }
+  },
+  "verification": "independent dense NumPy solve, nominal accounts and demand checks",
+  "verification_receipt": {
+    "run": 45539987618,
+    "job": 138955880002,
+    "tested_commit": "7738ed6198216636ac2e980ab663d851910d2e4b",
+    "conclusion": "test_and_pilot_steps_success",
+    "previous_failed_run": 45539935794,
+    "fix": "Identity assertion uses abs error <1e-13; model unchanged"
+  }
+}
