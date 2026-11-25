@@ -31,7 +31,8 @@ def main():
                     if p.is_absolute() or ".." in p.parts or p.name in seen:raise ValueError("ZIP_MEMBER")
                     seen.add(p.name);profile["stock_archive_members"].append({"name":member.filename,"bytes":member.file_size,"parsed":p.name.lower().endswith(".xlsx")})
                     if p.name.lower().endswith(".xlsx"):wb(p.name,z.read(member))
-                if not any(x["parsed"] for x in profile["stock_archive_members"]):raise ValueError("NO_WORKBOOKS")
+                print("STOCK_ARCHIVE_MEMBERS",json.dumps(profile["stock_archive_members"],ensure_ascii=False))
+                if not any(x["parsed"] for x in profile["stock_archive_members"]):profile["stock_archive_status"]="RAW_ONLY_FORMAT_NOT_MAPPED"
         else:
             e=json.loads(raw);p=acq.euro(raw)
             if math.prod(e["size"])<len(e["value"]):raise ValueError("DIMENSIONS")
