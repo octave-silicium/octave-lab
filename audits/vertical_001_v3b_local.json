@@ -1,0 +1,48 @@
+{
+  "study": "VERTICAL-001",
+  "phase": "V3b",
+  "package_sha256": "5a51a74534bdfea14bc0333b5626abc797b60444edf2579c8bd56083cde8f3bb",
+  "package_bytes": 38338,
+  "library_file_id": "libfile_aeb32cd549c88191a6011c10f7242263",
+  "mmo_receipt_sha256": "29f2034d24b92e67cf51dee640e24f38b0219ddfedfb7ddb1422ee35b1a45abb",
+  "scenario_receipt_sha256": "fda1e3e7754e63893d8564409af954dc1d8d12a8a5d61dabc744cfc8401e7b55",
+  "code_sha256": {
+    "serve.py": "5889073cb2bc89e03cbec68b50a47328f0cb3a719c564738fcde5b3d128ecce4",
+    "views.py": "7a2938edd56ac7c15c15b004556769567e7b3eea84e9a0c3bdcf4d57e9bd76d1",
+    "scenarios.py": "e0982b40812e2a6cc0b7224f53fbef8b0a60b7d1b23bc8f71fb56e128bcc3f6f",
+    "prepare.py": "05ee0b7cf7a69341daeed72b2cd63dc25b88071dad0f6b4c72310dca2a3b29a1",
+    "test_ui.py": "82ff532a8f31921be7a4ab8a0250136bec0ed1fc00adaab5ff618d84823e0e04",
+    "render_check.py": "fac23811f04b885b1fe02e0d0ed0571ab4db8bd85edc8aeebb8b95a988609816"
+  },
+  "tests": {
+    "local": 15,
+    "passed": 15,
+    "http_server": "PASS_LOCAL",
+    "browser_http_e2e": "BLOCKED_BY_ENVIRONMENT",
+    "offline_render_widths": [
+      1440,
+      1280,
+      768,
+      390
+    ],
+    "views": 7,
+    "render_checks": 28,
+    "horizontal_page_overflows": 0
+  },
+  "status": {
+    "dares": "REAL_LOCAL",
+    "scenarios": "EXACT_REFERENCE_REPRODUCTION_CONDITIONAL",
+    "native_observation_reader": "IMPLEMENTED_FIXTURE_TESTS_ONLY",
+    "economic_reader": "IMPLEMENTED_FIXTURE_TESTS_ONLY",
+    "dossier_reader": "IMPLEMENTED_FIXTURE_TESTS_ONLY",
+    "complete_real_dossier": "BLOCKED_LOCAL_DNS_AND_MISSING_V2B2_RECEIPT",
+    "prepare_script": "IMPLEMENTED_NOT_EXECUTED_REAL"
+  },
+  "publication": "BLOCK_PUBLICATION",
+  "ux_gate_promoted": false,
+  "limitations": [
+    "No real V2b3 full dossier reconstructed locally. Source vintage change will fail closed.",
+    "No browser HTTP end-to-end, accessibility, performance or comprehensive security audit.",
+    "Archive includes restricted real Dares receipt; do not publish. Code remains in private archive; GitHub proof only at this stage."
+  ]
+}
