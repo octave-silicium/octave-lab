@@ -14,6 +14,9 @@ on:
       - 'pipeline/audit_tes_prices.py'
       - 'pipeline/economic_sector_budget.py'
       - 'pipeline/audit_tes_budget.py'
+      - 'pipeline/economic_sector_income_feedback.py'
+      - 'pipeline/audit_tes_income_feedback.py'
+      - 'tests/test_economic_sector_income_feedback.py'
       - 'tests/test_economic_sector_budget.py'
       - 'tests/test_economic_sector_prices.py'
       - 'tests/test_economic_sector_capacity_dynamics.py'
@@ -68,6 +71,11 @@ jobs:
           python -m unittest discover -s tests -p test_economic_sector_budget.py -v
           python -m pipeline.audit_tes_budget tes-income/standard.xlsx tes-income/symmetric/TES_symetrique_A38_2022DEF_fr.xlsx tes-income/eurostat.json > tes-income/budget-audit.json
           cat tes-income/budget-audit.json
+      - name: Verify income feedback and independent reference
+        run: |
+          python -m unittest discover -s tests -p test_economic_sector_income_feedback.py -v
+          python -m pipeline.audit_tes_income_feedback tes-income/standard.xlsx tes-income/symmetric/TES_symetrique_A38_2022DEF_fr.xlsx tes-income/eurostat.json > tes-income/income-feedback-audit.json
+          cat tes-income/income-feedback-audit.json
       - name: Preserve raw and profile
         uses: actions/upload-artifact@v4
         with:
