@@ -86,6 +86,22 @@ def validate(plan,phases):
         require(all(k=="reference" for k,n in allocation(q)) if plan.production_quarter is None or i<plan.production_quarter else True,"PRE_DEPLOYMENT")
     if plan.investment_quarter is not None:require(plan.quarters[plan.investment_quarter-1].capex_cents>0,"INVESTMENT_MILESTONE")
 
+def cash_step(cash,ar,ap,debt,revenue,supplier,payroll,collection_bp,supplier_bp,interest_bp,draw,repayment,start_cost):
+    """Shared exact cash and trade-credit bridge; all monetary inputs in cents."""
+    require(all(x>=0 for x in (ar,ap,debt,revenue,supplier,payroll,draw,repayment,start_cost)),"CASH_INPUT")
+    require(all(integer(x,0,10000) for x in (collection_bp,supplier_bp,interest_bp)),"RATES")
+    new_ar=revenue*F(collection_bp,10000);new_ap=supplier*F(supplier_bp,10000)
+    collected=ar+revenue-new_ar;paid_supplier=ap+supplier-new_ap
+    require(ar+revenue==collected+new_ar and ap+supplier==paid_supplier+new_ap,"WORKING_CAPITAL_CONSERVATION")
+    new_debt=debt+draw
+    require(repayment<=new_debt,"DEBT_OVERPAYMENT")
+    interest=new_debt*F(interest_bp,10000)
+    cash_start=cash+draw-start_cost
+    operating=collected-paid_supplier-payroll
+    closing=cash_start+operating-interest-repayment
+    require(operating==revenue-supplier-payroll-(new_ar-ar)+(new_ap-ap),"CASH_ACCRUAL_BRIDGE")
+    return {"cash":closing,"ar":new_ar,"ap":new_ap,"debt":new_debt-repayment,"cash_start":cash_start,"interest":interest,"operating":operating,"collected":collected,"paid_supplier":paid_supplier}
+
 def simulate(base,reference,phases,plan):
     # Each phase is a process, event schedule, design, financial configuration.
     # Quality-gated replay; no supplied aggregate productivity or revenue accepted.
@@ -128,22 +144,9 @@ def simulate(base,reference,phases,plan):
         revenue=total("revenue_eur")*100
         supplier=(total("cash_cost_eur")-total("payroll_eur"))*100
         require(supplier>=0,"NONPAYROLL")
-        # All scoped non-payroll recurrent costs are assumed eligible for payment lag.
-        new_ar=revenue*F(plan.collection_next_quarter_bp,10000)
-        new_ap=supplier*F(plan.supplier_next_quarter_bp,10000)
-        collected=ar+revenue-new_ar;paid_supplier=ap+supplier-new_ap
-        require(ar+revenue==collected+new_ar and ap+supplier==paid_supplier+new_ap,"WORKING_CAPITAL_CONSERVATION")
-        oc,od,oa,opay=cash,debt,ar,ap
-        debt+=q.debt_draw_cents
-        require(q.principal_repaid_cents<=debt,"DEBT_OVERPAYMENT")
-        interest=debt*F(plan.quarterly_interest_bp,10000)
-        cash_start=cash+q.debt_draw_cents-q.capex_cents-q.transition_cents-q.exit_cents-q.training_cents
-        operating=collected-paid_supplier-payroll
-        cash=cash_start+operating-interest-q.principal_repaid_cents
-        debt-=q.principal_repaid_cents;ar=new_ar;ap=new_ap
-        require(debt==od+q.debt_draw_cents-q.principal_repaid_cents,"DEBT_CONSERVATION")
-        require(cash==oc+q.debt_draw_cents-q.capex_cents-q.transition_cents-q.exit_cents-q.training_cents+collected-paid_supplier-payroll-interest-q.principal_repaid_cents,"CASH_CONSERVATION")
-        require(operating==revenue-supplier-payroll-(ar-oa)+(ap-opay),"CASH_ACCRUAL_BRIDGE")
+        step=cash_step(cash,ar,ap,debt,revenue,supplier,payroll,plan.collection_next_quarter_bp,plan.supplier_next_quarter_bp,plan.quarterly_interest_bp,q.debt_draw_cents,q.principal_repaid_cents,q.capex_cents+q.transition_cents+q.exit_cents+q.training_cents)
+        cash,ar,ap,debt=(step[k] for k in ("cash","ar","ap","debt"))
+        cash_start,operating,interest,collected,paid_supplier=(step[k] for k in ("cash_start","operating","interest","collected","paid_supplier"))
         min_cash=min(min_cash,cash_start,cash)
         rows.append({"quarter":q.index,"phase":q.phase,"opening_headcount":oj+os,"headcount":j+s,"junior":j,"senior":s,"hires":q.hire_j+q.hire_s,"quits":q.quit_j+q.quit_s,"layoffs":q.layoff_j+q.layoff_s,"other_exits":q.other_j+q.other_s,"promotions":q.promote,"budgeted_hires":q.budgeted_hires,"frozen_hires":q.frozen_hires,"unfilled_nonfrozen_budget":q.budgeted_hires-q.frozen_hires-q.hire_j-q.hire_s,"paid_seconds":paid,"active_production_seconds":active,"allocated_production_seconds":production_required,"training_seconds":q.training_seconds,"redeployed_seconds":q.redeployed_seconds,"unallocated_paid_seconds":paid-production_required-q.training_seconds-q.redeployed_seconds,"sales":sales,"unfinished":unfinished,"phase_mix":phase_rows,"reference_cohort_fraction":str(F(sum(n for k,n in mix if k=="reference"),q.repeats)),"revenue_eur":eur(revenue),"payroll_eur":eur(payroll),"nonpayroll_cost_eur":eur(supplier),"accrual_surplus_before_depreciation_eur":eur(revenue-supplier-payroll),"collections_eur":eur(collected),"supplier_payments_eur":eur(paid_supplier),"receivables_eur":eur(ar),"payables_eur":eur(ap),"net_trade_working_capital_eur":eur(ar-ap),"capex_eur":eur(q.capex_cents),"transition_eur":eur(q.transition_cents),"training_cost_eur":eur(q.training_cents),"exit_cost_eur":eur(q.exit_cents),"debt_draw_eur":eur(q.debt_draw_cents),"principal_repayment_eur":eur(q.principal_repaid_cents),"interest_eur":eur(interest),"closing_debt_eur":eur(debt),"cash_after_start_transactions_eur":eur(cash_start),"closing_cash_eur":eur(cash),"operating_cash_flow_eur":eur(operating)})
     r={"plan_ref":plan.key,"quarters":rows,"ending_headcount":j+s,"cumulative_hires":sum(x["hires"] for x in rows),"cumulative_layoffs":sum(x["layoffs"] for x in rows),"cumulative_frozen_hires":sum(x["frozen_hires"] for x in rows),"closing_cash_eur":eur(cash),"closing_debt_eur":eur(debt),"funding_gap_at_sampled_dates_eur":eur(max(F(0),-min_cash)),"funding_status":"UNFUNDED_SHORTFALL" if min_cash<0 else "NO_SHORTFALL_AT_SAMPLED_DATES","phase_pins":pins,"input_sha256":digest(canonical({"plan":asdict(plan),"phase_economics":{k:asdict(phases[k][3]) for k in pins}})),"model_versions":{n:digest((Path(__file__).parent/n).read_bytes()) for n in ("economic_transition.py","economic_firm.py","economic_transform.py","economic_events.py","economic_operations.py","economic_core.py")},"assumptions":plan.assumptions,"status":"CONDITIONAL_NOT_EMPIRICAL","publication":"BLOCK_PUBLICATION"}

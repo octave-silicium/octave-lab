@@ -29,7 +29,12 @@ class FirmTransition:
     rate:int=200
     terminal_assets:tuple=(0,0)
 
-def assemble(inv,graph,coverage,calculations=(),scenario_paths=(),prospective=None,firm_transitions=()):
+@dataclass(frozen=True)
+class MarketTrajectory:
+    scenario_ref:str
+    dynamics:object
+
+def assemble(inv,graph,coverage,calculations=(),scenario_paths=(),prospective=None,firm_transitions=(),market_trajectories=()):
     inv.key
     require(all(words(x) for x in (inv.question,inv.decision,inv.loss_function,inv.exclusions)) and texts(inv.alternatives) and len(inv.alternatives)>=2,"MANDATE")
     from .economic_core import sha
@@ -65,10 +70,25 @@ def assemble(inv,graph,coverage,calculations=(),scenario_paths=(),prospective=No
             require(all(q.phase=="reference" and not q.phase_mix for q in item.baseline.quarters),"FIRM_NO_SHOCK_PHASE")
             receipt=assess(item.base,item.reference,item.phases,item.baseline,item.alternative,item.rate,item.terminal_assets)
             firm_rows.append({"scenario_ref":sc,"baseline_ref":t.baseline_ref,"sections":["D06","D07","D13","D15"],"receipt":receipt,"status":"CONDITIONAL_NOT_PROPAGATED","limitations":"Explicit synthetic operational and financial assumptions outside graph parameters; no causal or macro propagation."})
+    market_rows=[]
+    if market_trajectories:
+        require(prospective is not None,"MARKET_PROSPECTIVE_REQUIRED")
+        from .economic_market import trajectory
+        from .economic_core import unique
+        scenarios=unique(prospective[0],lambda s:s.key)
+        for sc,item in unique(market_trajectories,lambda f:f.scenario_ref).items():
+            require(isinstance(item,MarketTrajectory) and sc in scenarios,"MARKET_SCENARIO_REF")
+            t=scenarios[sc];require(t.mode=="CONDITIONAL" and t.baseline_ref in scenarios and scenarios[t.baseline_ref].mode=="NO_SHOCK","MARKET_BASELINE")
+            scope=item.dynamics.market.sellers[0].reference[1].scope
+            require(all(getattr(t.scope,k)==getattr(scope,k) for k in ("population","geography","classification","price_basis")) and t.scope.period_start<=scope.period_start<=scope.period_end<=t.scope.period_end and t.step_unit=="quarter" and str(item.dynamics.quarters)+" quarters" in t.horizons,"MARKET_SCOPE_HORIZON")
+            # Explicit no-adoption counterfactual, replayed with same opening finance and demand.
+            from dataclasses import replace
+            no_adopt=replace(item.dynamics,id=item.dynamics.id+":no-adoption",strategies=tuple(replace(s,earliest_adoption=0) for s in item.dynamics.strategies))
+            market_rows.append({"scenario_ref":sc,"baseline_ref":t.baseline_ref,"sections":["D07","D08","D11","D13","D15"],"baseline":trajectory(no_adopt),"alternative":trajectory(item.dynamics),"status":"CONDITIONAL_NOT_PROPAGATED","limitations":"Rule-based market dynamics, not causal inference, not liquidation or macro closure."})
     sections=[asdict(c) for c in coverage if c.kind=="section"]
-    result={"mandate":asdict(inv),"requirements":dict(graph.requirements.pins),"coverage":sorted((asdict(c) for c in coverage),key=lambda x:(x["kind"],x["id"])),"sections":sorted(sections,key=lambda x:x["id"]),"coverage_audit":audit,"calculations":receipts,"paths":paths,"prospective":prospective_result,"firm_transitions":firm_rows,"scientific_validation":False,"publication":"BLOCK_PUBLICATION"}
+    result={"mandate":asdict(inv),"requirements":dict(graph.requirements.pins),"coverage":sorted((asdict(c) for c in coverage),key=lambda x:(x["kind"],x["id"])),"sections":sorted(sections,key=lambda x:x["id"]),"coverage_audit":audit,"calculations":receipts,"paths":paths,"prospective":prospective_result,"firm_transitions":firm_rows,"market_trajectories":market_rows,"scientific_validation":False,"publication":"BLOCK_PUBLICATION"}
     return {"manifest":result,"manifest_sha256":digest(canonical(result))}
 
-def verify_replay(expected,inv,graph,coverage,calculations=(),scenario_paths=(),prospective=None,firm_transitions=()):
-    require(expected==assemble(inv,graph,coverage,calculations,scenario_paths,prospective,firm_transitions),"REPLAY_MISMATCH")
+def verify_replay(expected,inv,graph,coverage,calculations=(),scenario_paths=(),prospective=None,firm_transitions=(),market_trajectories=()):
+    require(expected==assemble(inv,graph,coverage,calculations,scenario_paths,prospective,firm_transitions,market_trajectories),"REPLAY_MISMATCH")
     return True
