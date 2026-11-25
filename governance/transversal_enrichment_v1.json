@@ -1,0 +1,715 @@
+{
+  "id": "AUDIT-TRANSVERSAL-001",
+  "version": "1.0",
+  "date": "2026-11-25",
+  "status": "USER_APPROVED_REQUIREMENTS_METHOD_PENDING",
+  "decision": "Validation explicite de l'utilisateur : Je valide !",
+  "architecture_invariants": {
+    "layers": 9,
+    "engines": 6,
+    "original_mechanisms": 64,
+    "shapiro_requirements": 21,
+    "existing_limitations": 51,
+    "gate_promotion": false
+  },
+  "baseline": {
+    "mechanisms_version": "2.0",
+    "limitations_version": "1.0.10",
+    "source_commit": "7994decd08a3f38c3cfc6c2bf23182f086bb6519"
+  },
+  "coverage_policy": "Évaluer AC01–AC27 en complément de M001–M064 et SH01–SH21; justification de non-applicabilité, blocage, preuve ou hypothèse par exigence, sans double comptage. Aucun statut M/LIM/SH ni gate n'est modifié par cette approbation.",
+  "pre_milestone_controls": [
+    "Couverture mécanismes/interfaces",
+    "Hétérogénéité conjointe des acteurs",
+    "Alternatives et contre-exemples",
+    "Interactions et boucles",
+    "Temporalité et régimes",
+    "Comptabilité et contreparties",
+    "Réfutation",
+    "Validation technique distincte de validation empirique",
+    "Traçabilité",
+    "Valeur décisionnelle"
+  ],
+  "next_milestone": "Contrat économique commun état/acteur/temps/contreparties et financement multi-source avant G4 v0.7g; P0 empirique, G2 indépendant et produit en parallèle.",
+  "entries": [
+    {
+      "id": "AC01",
+      "concept": "Structures de financement et choix de sources",
+      "priority": "P0",
+      "diagnosis": "Sous-spécifié",
+      "mechanisms": [
+        "M028",
+        "M029",
+        "M034",
+        "M055"
+      ],
+      "limitations": [
+        "LIM-F04",
+        "LIM-S09"
+      ],
+      "additional_contracts": [],
+      "requirement": "Autofinancement (flux, non stock de cash), trésorerie, apports, dette bancaire et obligataire, leasing, crédit fournisseur, affacturage, subventions conditionnelles, financement intragroupe; substitution, coûts, disponibilité, dilution, maturités et fiscalité; pecking order comme hypothèse concurrente.",
+      "acceptance": "Même entreprise/projet: dette nulle, apport seul, cash seul, mix, refus, substitution, absence de financement; somme sources=emplois; aucune dette fictive; même VAN projet hors financement.",
+      "stage_and_candidate_sources": "G3.3/G3.4/G4 v0.7g; SAFE, FARE/FIBEN, comptes financiers, droits à qualifier",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "implementation_status": "NOT_IMPLEMENTED_BY_THIS_DECISION",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "source_ref": "docs/AUDIT-TRANSVERSAL-001.md"
+    },
+    {
+      "id": "AC02",
+      "concept": "Bilan et trésorerie complets",
+      "priority": "P0",
+      "diagnosis": "Partiel",
+      "mechanisms": [
+        "M034",
+        "M055"
+      ],
+      "limitations": [
+        "LIM-F01",
+        "LIM-S09",
+        "LIM-S12"
+      ],
+      "additional_contracts": [],
+      "requirement": "Actifs, passifs, capitaux propres, flux d'exploitation/investissement/financement, BFR, délais clients/fournisseurs, TVA, saisonnalité, engagements, provisions, restructuration, liquidité vs solvabilité vs défaut juridique, valeur de liquidation.",
+      "acceptance": "Entreprise rentable en défaut de cash; déficitaire financée; dette zéro et factures dues; reprise d'actif et pertes appariées; bilan et cash sans doubles comptes.",
+      "stage_and_candidate_sources": "G3.3/G4; FARE, comptes publiés, délais paiement",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "implementation_status": "NOT_IMPLEMENTED_BY_THIS_DECISION",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "source_ref": "docs/AUDIT-TRANSVERSAL-001.md"
+    },
+    {
+      "id": "AC03",
+      "concept": "Prix du risque et sélection du crédit",
+      "priority": "P0",
+      "diagnosis": "Sous-spécifié",
+      "mechanisms": [
+        "M034",
+        "M039",
+        "M055"
+      ],
+      "limitations": [
+        "LIM-F04",
+        "LIM-S09"
+      ],
+      "additional_contracts": [],
+      "requirement": "PD/LGD/EAD, collatéral, covenants, maturités, garanties, intérêts fixes/variables, refinancement, asymétrie informationnelle, rationnement par risque, fuite vers qualité, crowding out, debt overhang, arbitrage VAN/risque; pas de ratio universel.",
+      "acceptance": "Comparer rationnement proportionnel, sélection, plafonds et absence de demande; même demande, décisions différentes; pertes attendues vs réalisées; stress taux/maturité.",
+      "stage_and_candidate_sources": "G4 v0.7g+; SAFE/BLS, AnaCredit accès restreint, BCE/ACPR",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "implementation_status": "NOT_IMPLEMENTED_BY_THIS_DECISION",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "source_ref": "docs/AUDIT-TRANSVERSAL-001.md"
+    },
+    {
+      "id": "AC04",
+      "concept": "Intermédiation monétaire et financière",
+      "priority": "P0",
+      "diagnosis": "Partiel",
+      "mechanisms": [
+        "M034",
+        "M055"
+      ],
+      "limitations": [
+        "LIM-F01",
+        "LIM-S12",
+        "LIM-S16"
+      ],
+      "additional_contracts": [],
+      "requirement": "Banques multiples, dépôts, réserves/règlement, interbancaire, fonds propres, liquidité, passifs, banque centrale, non-banques, garanties, recapitalisation et résolution; actifs pondérés évolutifs; contagion directe et expositions communes, ventes forcées et haircuts.",
+      "acceptance": "Règlement interbancaire, conservation des contreparties, stress liquidité sans insolvabilité, choc de capital sans fuite de dépôts, fire sale distincte du défaut; aucun stock utilisé comme exigibilité sans échéancier.",
+      "stage_and_candidate_sources": "G4; Eurostat cp, BCE BSI/MIR, EBA/ACPR agrégats",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "implementation_status": "NOT_IMPLEMENTED_BY_THIS_DECISION",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "source_ref": "docs/AUDIT-TRANSVERSAL-001.md"
+    },
+    {
+      "id": "AC05",
+      "concept": "Population d'entreprises et distribution conjointe",
+      "priority": "P0",
+      "diagnosis": "Sous-spécifié",
+      "mechanisms": [
+        "M029",
+        "M031",
+        "M034",
+        "M039",
+        "M054"
+      ],
+      "limitations": [
+        "LIM-F06",
+        "LIM-S04",
+        "LIM-S09"
+      ],
+      "additional_contracts": [],
+      "requirement": "Taille, âge, activité, groupe/indépendant, productivité, capital, liquidité/dette, propriétaire, maturité IA, emploi et marchés; corrélations, poids et entrées/sorties; éviter entreprise moyenne et marges indépendantes.",
+      "acceptance": "Deux populations aux mêmes moyennes mais dettes/productivité corrélées différemment; concentration, survie, emploi et adoption peuvent diverger; poids cohérents aux agrégats; cellules absentes inconnues.",
+      "stage_and_candidate_sources": "G3/G4; FARE/ESANE, SIDE, FIBEN, enquêtes TIC",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "implementation_status": "NOT_IMPLEMENTED_BY_THIS_DECISION",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "source_ref": "docs/AUDIT-TRANSVERSAL-001.md"
+    },
+    {
+      "id": "AC06",
+      "concept": "Propriété économique et contrôle",
+      "priority": "P0",
+      "diagnosis": "Sous-spécifié",
+      "mechanisms": [
+        "M039",
+        "M042",
+        "M051",
+        "M055"
+      ],
+      "limitations": [
+        "LIM-S16",
+        "LIM-F06"
+      ],
+      "additional_contracts": [],
+      "requirement": "Matrice détenteur-émetteur, droits de vote vs cash flows, dilution, fonds/pensions et détention indirecte, capital coté/non coté, distributions, rachats et bénéfices réinvestis, contrôle ultime, investisseurs étrangers; pas de double comptage via fonds.",
+      "acceptance": "Apport dilutif vs dette, même HHI ventes et propriété différente, chaîne de détention avec cycles, flux dividendes net des intermédiaires; parts top x et HHI sur base définie.",
+      "stage_and_candidate_sources": "G3/G4; comptes financiers, HFCS/DWA, LIFI accès à qualifier",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "implementation_status": "NOT_IMPLEMENTED_BY_THIS_DECISION",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "source_ref": "docs/AUDIT-TRANSVERSAL-001.md"
+    },
+    {
+      "id": "AC07",
+      "concept": "Ménages hétérogènes et budgets",
+      "priority": "P0",
+      "diagnosis": "Partiel",
+      "mechanisms": [
+        "M042",
+        "M051",
+        "M053",
+        "M057",
+        "M058"
+      ],
+      "limitations": [
+        "LIM-S10",
+        "LIM-S11",
+        "LIM-S12",
+        "LIM-S16"
+      ],
+      "additional_contracts": [],
+      "requirement": "Revenus, patrimoine liquide/illiquide, dettes, logement, âge, statut emploi, taille ménage, transferts, impôts et propensions marginales à consommer/épargner distinctes; consommation essentielle et contrainte de crédit.",
+      "acceptance": "Même revenu agrégé, distribution différente et consommation différente; baisse prix avec revenu diminué; propriétaires vs locataires; fermeture épargne/dette/patrimoine.",
+      "stage_and_candidate_sources": "G4; ERFS, Budget de famille, HFCS/DWA, comptes distribués",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "implementation_status": "NOT_IMPLEMENTED_BY_THIS_DECISION",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "source_ref": "docs/AUDIT-TRANSVERSAL-001.md"
+    },
+    {
+      "id": "AC08",
+      "concept": "Marché du travail en stocks et flux",
+      "priority": "P0",
+      "diagnosis": "Déjà prévu",
+      "mechanisms": [
+        "M049",
+        "M050",
+        "M052",
+        "M056"
+      ],
+      "limitations": [
+        "LIM-S15"
+      ],
+      "additional_contracts": [],
+      "requirement": "Personnes/emplois/heures/ETP, multi-emploi, emploi salarié et indépendant, activité/inactivité, chômage durée, sous-emploi, retraite, migrations, pénuries, postes vacants, matching, négociation, contrats, rigidités et transitions.",
+      "acceptance": "Choc heures sans licenciement, attrition, non-remplacement, départ retraite, pénurie évitée, création de postes et chômage simultanés; aucune personne comptée deux fois.",
+      "stage_and_candidate_sources": "G3/G4; enquête Emploi, DSN/Dares, France Travail, JOLTS benchmark",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "implementation_status": "NOT_IMPLEMENTED_BY_THIS_DECISION",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "source_ref": "docs/AUDIT-TRANSVERSAL-001.md"
+    },
+    {
+      "id": "AC09",
+      "concept": "Reproduction de l'expertise et qualité de l'emploi",
+      "priority": "P0",
+      "diagnosis": "Partiel",
+      "mechanisms": [
+        "M012",
+        "M024",
+        "M033",
+        "M050"
+      ],
+      "limitations": [
+        "LIM-F03",
+        "LIM-W02"
+      ],
+      "additional_contracts": [],
+      "requirement": "Apprentissage par pratique, mentorat, filières junior/senior, compétences tacites, mobilité, effets de cohorte, obsolescence, formation, scarring, déqualification et qualité de travail.",
+      "acceptance": "Suppression des juniors puis pénurie retardée de seniors; formation alternative qui compense; apprentissage IA complémentaire; distinguer hypothèse et résultat longitudinal.",
+      "stage_and_candidate_sources": "G2/G3/G4; cohortes et études terrain",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "implementation_status": "NOT_IMPLEMENTED_BY_THIS_DECISION",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "source_ref": "docs/AUDIT-TRANSVERSAL-001.md"
+    },
+    {
+      "id": "AC10",
+      "concept": "Frontière technologique et offre d'IA",
+      "priority": "P1",
+      "diagnosis": "Sous-spécifié",
+      "mechanisms": [
+        "M003",
+        "M004",
+        "M005",
+        "M006",
+        "M048"
+      ],
+      "limitations": [
+        "LIM-W08",
+        "LIM-S14"
+      ],
+      "additional_contracts": [],
+      "requirement": "Coûts fixes/variables, tokens, utilisation, infrastructures, énergie, eau, semi-conducteurs, réseaux, robots, maintenance, accès, quotas, dépendance fournisseur, prix stratégiques, qualité, apprentissage et effets de rupture; agents et tâches physiques séparés.",
+      "acceptance": "IA bon marché mais compute rare; fournisseur indisponible; capex/opex alternatifs, plateau et accélération, qualité qui s'améliore sans adoption.",
+      "stage_and_candidate_sources": "G2/G3/G4; benchmarks, factures, IEA, données fournisseurs",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "implementation_status": "NOT_IMPLEMENTED_BY_THIS_DECISION",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "source_ref": "docs/AUDIT-TRANSVERSAL-001.md"
+    },
+    {
+      "id": "AC11",
+      "concept": "Mesure du travail réel et sélection",
+      "priority": "P0",
+      "diagnosis": "Déjà prévu",
+      "mechanisms": [
+        "M007",
+        "M008",
+        "M009",
+        "M010",
+        "M011",
+        "M013"
+      ],
+      "limitations": [
+        "LIM-W01",
+        "LIM-W02",
+        "LIM-W03",
+        "LIM-W04",
+        "LIM-W09"
+      ],
+      "additional_contracts": [],
+      "requirement": "Temps actif/mural, tâches non observées, tacite, correction, coordination, erreurs corrélées, autonomie, supervision, diversité des contextes, travail invisible, charge et qualité; sélection des tâches et utilisateurs.",
+      "acceptance": "Bras humain, automatisation classique, IA, hybride; corpus indépendant, échec et abstention, coût de queue, cas hors distribution; pas de poids depuis O*NET seul.",
+      "stage_and_candidate_sources": "G2 priorité parallèle, praticiens et logs autorisés",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "implementation_status": "NOT_IMPLEMENTED_BY_THIS_DECISION",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "source_ref": "docs/AUDIT-TRANSVERSAL-001.md"
+    },
+    {
+      "id": "AC12",
+      "concept": "Transformation structurelle et résilience",
+      "priority": "P1",
+      "diagnosis": "Partiel",
+      "mechanisms": [
+        "M014",
+        "M015",
+        "M016",
+        "M017",
+        "M018",
+        "M020"
+      ],
+      "limitations": [
+        "LIM-W04",
+        "LIM-W05"
+      ],
+      "additional_contracts": [],
+      "requirement": "Files non stationnaires, ressources jointes, pics, goulets mobiles, dépendances communes, redondance, continuité, reprise, dette technique, suppression du besoin et non seulement de l'étape.",
+      "acceptance": "Gain local sans débit; défaillance corrélée; humain retiré mais contrôle ailleurs; refonte qui élimine la demande interne; choc et retour à service.",
+      "stage_and_candidate_sources": "G3 opérations; journaux anonymisés et stress tests",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "implementation_status": "NOT_IMPLEMENTED_BY_THIS_DECISION",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "source_ref": "docs/AUDIT-TRANSVERSAL-001.md"
+    },
+    {
+      "id": "AC13",
+      "concept": "Incitations, inertie et comportement",
+      "priority": "P1",
+      "diagnosis": "Sous-spécifié",
+      "mechanisms": [
+        "M021",
+        "M023",
+        "M024",
+        "M025",
+        "M026"
+      ],
+      "limitations": [
+        "LIM-W06"
+      ],
+      "additional_contracts": [],
+      "requirement": "Effet de cliquet, budgets, protection du pouvoir, principal-agent, objectifs Goodhart, coûts politiques, responsabilité juridique, assurance, conflits et négociation; délais, refus ou abandon; distinguer preuve comportementale.",
+      "acceptance": "Même technologie et VAN, adoption divergente par gouvernance; reporting augmente malgré gain; contrôle adapté et délégation totale sous conditions; contre-exemples à chaque règle.",
+      "stage_and_candidate_sources": "G3/TRANSFORM; études organisationnelles et terrain",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "implementation_status": "NOT_IMPLEMENTED_BY_THIS_DECISION",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "source_ref": "docs/AUDIT-TRANSVERSAL-001.md"
+    },
+    {
+      "id": "AC14",
+      "concept": "Capital et décision d'investissement",
+      "priority": "P0",
+      "diagnosis": "Partiel",
+      "mechanisms": [
+        "M027",
+        "M028",
+        "M030",
+        "M031",
+        "M032"
+      ],
+      "limitations": [
+        "LIM-F02",
+        "LIM-F04",
+        "LIM-F08",
+        "LIM-S09"
+      ],
+      "additional_contracts": [],
+      "requirement": "Capital physique, logiciel, data, R&D, organisation, actifs complémentaires et irrécupérables, options réelles attendre/abandonner/phaser, dépréciation économique/obsolescence, maintenance, coûts d'opportunité, rendement et utilisation; OPEX abonnement vs CAPEX.",
+      "acceptance": "VAN positive mais non financée, VAN négative malgré cash, report optimal sous incertitude, équipement livré non opérationnel, coût sunk non récupéré, redéploiement sans revenu inventé.",
+      "stage_and_candidate_sources": "G3.3/G4; comptes capital, investissements, coûts terrain",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "implementation_status": "NOT_IMPLEMENTED_BY_THIS_DECISION",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "source_ref": "docs/AUDIT-TRANSVERSAL-001.md"
+    },
+    {
+      "id": "AC15",
+      "concept": "Marchés et stratégies",
+      "priority": "P1",
+      "diagnosis": "Sous-spécifié",
+      "mechanisms": [
+        "M035",
+        "M037",
+        "M038",
+        "M040",
+        "M041"
+      ],
+      "limitations": [
+        "LIM-F05",
+        "LIM-F07",
+        "LIM-F08"
+      ],
+      "additional_contracts": [],
+      "requirement": "Coût marginal vs moyen, prix à l'usage/abonnement/free, qualité et variété, discrimination, switching, réseau et multi-homing, oligopole, plateformes, monopsones, prix dynamiques, concurrence hors prix, rentes temporaires, innovation défensive.",
+      "acceptance": "Même coût et pass-through variable; qualité accrue sans prix réduit; guerre des prix, prix stable et marge, entrée qui érode rente, marché bi-face; HHI non proxy de markup.",
+      "stage_and_candidate_sources": "G3.4; IPSE, prix et quantités, études marché",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "implementation_status": "NOT_IMPLEMENTED_BY_THIS_DECISION",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "source_ref": "docs/AUDIT-TRANSVERSAL-001.md"
+    },
+    {
+      "id": "AC16",
+      "concept": "Demande, création/destruction de marché",
+      "priority": "P1",
+      "diagnosis": "Partiel",
+      "mechanisms": [
+        "M036",
+        "M038",
+        "M041",
+        "M053"
+      ],
+      "limitations": [
+        "LIM-F07",
+        "LIM-F08",
+        "LIM-S10",
+        "LIM-S11"
+      ],
+      "additional_contracts": [],
+      "requirement": "Rebond prix et revenus, élasticités croisées, budgets contraints, saturation, préférences humaines, temps disponible, biens nouveaux, non-marchand/gratuit, demande latente vs solvable, cannibalisation et internalisation.",
+      "acceptance": "Baisse prix volume constant, rebond partiel, total, surcompensation; consommation décalée vers autres secteurs; produit gratuit non égal à zéro valeur; nouveau marché sans double compte.",
+      "stage_and_candidate_sources": "G3.4/G4; dépenses, quantités, enquêtes",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "implementation_status": "NOT_IMPLEMENTED_BY_THIS_DECISION",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "source_ref": "docs/AUDIT-TRANSVERSAL-001.md"
+    },
+    {
+      "id": "AC17",
+      "concept": "Démographie économique et réallocation",
+      "priority": "P1",
+      "diagnosis": "Partiel",
+      "mechanisms": [
+        "M039",
+        "M040",
+        "M054"
+      ],
+      "limitations": [
+        "LIM-F06",
+        "LIM-S04"
+      ],
+      "additional_contracts": [],
+      "requirement": "Entrée financée ou non, croissance, pivot, cessation, liquidation, reprise, acquisition, changement de contrôle et réallocation intra/intersectorielle; dispersion et mauvaise allocation du capital; firmes zombies comme hypothèse.",
+      "acceptance": "Sortie d'offre vs décès juridique, transfert d'actifs et salariés, acquisitions sans création de production, hausse productivité moyenne par composition vs progrès interne.",
+      "stage_and_candidate_sources": "G3.4/G4; SIDE, business demography, données groupes",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "implementation_status": "NOT_IMPLEMENTED_BY_THIS_DECISION",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "source_ref": "docs/AUDIT-TRANSVERSAL-001.md"
+    },
+    {
+      "id": "AC18",
+      "concept": "Réseaux réels et chaînes mondiales",
+      "priority": "P0",
+      "diagnosis": "Partiel",
+      "mechanisms": [
+        "M043",
+        "M044",
+        "M045",
+        "M046"
+      ],
+      "limitations": [
+        "LIM-S01",
+        "LIM-S02",
+        "LIM-S05",
+        "LIM-S06",
+        "LIM-S07",
+        "LIM-S08",
+        "LIM-S14"
+      ],
+      "additional_contracts": [],
+      "requirement": "Matrice produit/branche, établissements, fournisseurs spécifiques et dépendances communes, stocks domestiques/finals, commandes différées, délais, substitutions imparfaites, prix et taux change, importations directes/indirectes, rerouting et commerce; topologie non identifiée par marges.",
+      "acceptance": "Même marges, réseaux différents; choc offre vs demande; substitution non disponible, prix/stock/quantité conservés; production brute vs VA et contenu importé.",
+      "stage_and_candidate_sources": "G4; TES/FIGARO/ICIO, douanes, données fournisseurs",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "implementation_status": "NOT_IMPLEMENTED_BY_THIS_DECISION",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "source_ref": "docs/AUDIT-TRANSVERSAL-001.md"
+    },
+    {
+      "id": "AC19",
+      "concept": "Territoires, mobilité, ressources",
+      "priority": "P1",
+      "diagnosis": "Déjà prévu",
+      "mechanisms": [
+        "M047",
+        "M048",
+        "M050",
+        "M056"
+      ],
+      "limitations": [
+        "LIM-S14",
+        "LIM-S15"
+      ],
+      "additional_contracts": [],
+      "requirement": "Télétravail, bassins d'emploi, logement, déplacements, mobilité résidentielle, spécialisation, infrastructures, externalités énergie/climat; chaînes géographiques et inégalités locales.",
+      "acceptance": "Même choc national, bassins opposés; logement bloque mobilité; compute contraint régionalement; distinguer résidence/travail/siège, unités physiques et euros.",
+      "stage_and_candidate_sources": "G4; INSEE recensement, zones emploi, énergie",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "implementation_status": "NOT_IMPLEMENTED_BY_THIS_DECISION",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "source_ref": "docs/AUDIT-TRANSVERSAL-001.md"
+    },
+    {
+      "id": "AC20",
+      "concept": "État, banque centrale et extérieur",
+      "priority": "P0",
+      "diagnosis": "Sous-spécifié",
+      "mechanisms": [
+        "M051",
+        "M053",
+        "M055",
+        "M057",
+        "M058"
+      ],
+      "limitations": [
+        "LIM-S03",
+        "LIM-S11",
+        "LIM-S12",
+        "LIM-S16"
+      ],
+      "additional_contracts": [],
+      "requirement": "Budgets publics, impôts sur bases distinctes, cotisations, dépenses/transferts, dette/intérêts, règles et stabilisateurs, taux et inflation, change, balance courante et financière; capacité publique, non-marchand et investissement; politiques conditionnelles.",
+      "acceptance": "Budget public ferme, transferts financés vs déficit, dette et taux distincts, revenu disponible vs PIB, exportations et importations, aucune création de fonds sans contrepartie.",
+      "stage_and_candidate_sources": "G4; TEE, comptes publics, BCE et balance paiements",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "implementation_status": "NOT_IMPLEMENTED_BY_THIS_DECISION",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "source_ref": "docs/AUDIT-TRANSVERSAL-001.md"
+    },
+    {
+      "id": "AC21",
+      "concept": "Économie post-travail et régimes institutionnels",
+      "priority": "P1",
+      "diagnosis": "Sous-spécifié",
+      "mechanisms": [
+        "M042",
+        "M051",
+        "M053",
+        "M057",
+        "M058"
+      ],
+      "limitations": [
+        "LIM-S16"
+      ],
+      "additional_contracts": [],
+      "requirement": "Revenu universel, impôt négatif, dividendes citoyens/fonds souverains, participation capital, réduction temps de travail, fiscalité travail/capital/rentes, services publics, transition et financement; incidence et réponses comportementales, croissance et prix; maintenir scénarios de travail persistant.",
+      "acceptance": "Comparer mêmes ressources initiales et politiques avec bouclage budget/production; transferts sans création de VA; scénario abondance avec biens rares et scénario non-post-travail.",
+      "stage_and_candidate_sources": "G4/PROSPECT, DD-SHAPIRO-001; comptes distribués et évaluations de politiques",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "implementation_status": "NOT_IMPLEMENTED_BY_THIS_DECISION",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "source_ref": "docs/AUDIT-TRANSVERSAL-001.md"
+    },
+    {
+      "id": "AC22",
+      "concept": "Valeur non marchande et bien-être",
+      "priority": "P1",
+      "diagnosis": "Sous-spécifié",
+      "mechanisms": [
+        "M013",
+        "M041",
+        "M048",
+        "M051",
+        "M054",
+        "M056",
+        "M058"
+      ],
+      "limitations": [
+        "LIM-W09",
+        "LIM-S16"
+      ],
+      "additional_contracts": [],
+      "requirement": "Temps libéré, production domestique et bénévolat, qualité, accès, santé/loisirs, prix hédoniques, nouveaux produits, biens gratuits et externalités; surplus consommateur et bien-être distincts PIB/revenus.",
+      "acceptance": "Heures payées baissent mais production non marchande augmente; prix zéro sans valeur zéro; amélioration qualité sans hausse PIB mesuré; ne pas monétiser arbitrairement.",
+      "stage_and_candidate_sources": "G4/RESULT; emploi du temps, comptes satellites",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "implementation_status": "NOT_IMPLEMENTED_BY_THIS_DECISION",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "source_ref": "docs/AUDIT-TRANSVERSAL-001.md"
+    },
+    {
+      "id": "AC23",
+      "concept": "Couplage état commun et fermeture",
+      "priority": "P0",
+      "diagnosis": "Sous-spécifié",
+      "mechanisms": [
+        "M054",
+        "M055",
+        "M062",
+        "M063"
+      ],
+      "limitations": [
+        "LIM-S09",
+        "LIM-S12",
+        "LIM-T01"
+      ],
+      "additional_contracts": [],
+      "requirement": "État partagé acteurs/produits/temps, stocks/flux/engagements, calendrier et ordre d'événements, prix/quantités/revenus/emplois/finance, décisions retardées, boucles et convergence, propagation des incertitudes et conservation; pas d'addition de trajectoires indépendantes.",
+      "acceptance": "Replay choc nul, limites de chaque module, scénarios à financement zéro, rétroaction multi-période, ordre d'événement, non-convergence, permutation des acteurs, contreparties et balances consolidées.",
+      "stage_and_candidate_sources": "G3/G4 architecture E02/E05; priorité avant nouveaux modules",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "implementation_status": "NOT_IMPLEMENTED_BY_THIS_DECISION",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "source_ref": "docs/AUDIT-TRANSVERSAL-001.md"
+    },
+    {
+      "id": "AC24",
+      "concept": "Identification et validation externe",
+      "priority": "P0",
+      "diagnosis": "Déjà prévu à renforcer",
+      "mechanisms": [
+        "M059",
+        "M060",
+        "M061",
+        "M062",
+        "M063"
+      ],
+      "limitations": [
+        "LIM-T02",
+        "LIM-T03"
+      ],
+      "additional_contracts": [],
+      "requirement": "Confusions conjoncturelles, tendances, anticipations, spillovers, sélection, causalité inverse, ruptures, biais survivant, composition, erreurs mesure, invariance des règles et transportabilité; modèles rivaux IO/SFC/ABM/partiel selon question.",
+      "acceptance": "Holdout temporel et sectoriel, placebos et pré-tendances, contrefactuel sans IA, stress structurel, benchmark naïf, intervalles et sensibilité globale, NON_IDENTIFIABLE sans preuve.",
+      "stage_and_candidate_sources": "G1/G2/G3/G4/G5, travaux empiriques parallèles",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "implementation_status": "NOT_IMPLEMENTED_BY_THIS_DECISION",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "source_ref": "docs/AUDIT-TRANSVERSAL-001.md"
+    },
+    {
+      "id": "AC25",
+      "concept": "Observatoire point-in-time et exploitation",
+      "priority": "P0",
+      "diagnosis": "Partiel",
+      "mechanisms": [
+        "M059",
+        "M063",
+        "M064"
+      ],
+      "limitations": [
+        "LIM-S01",
+        "LIM-T04"
+      ],
+      "additional_contracts": [],
+      "requirement": "Admission des sources, droits, coffre immutable, données de révision, manque non aléatoire, nomenclatures, dénominateurs, dérive, refresh, licences, agrégation, sécurité et coût; README/ROADMAP désynchronisés de G4.",
+      "acceptance": "Reconstruction à date passée, source modifiée/indisponible, droits refusés, valeurs manquantes non zéro, cohérence version des docs; tests bout en bout UI/calcul/preuve.",
+      "stage_and_candidate_sources": "G1/P0/G5 en parallèle; sources et registre droits",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "implementation_status": "NOT_IMPLEMENTED_BY_THIS_DECISION",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "source_ref": "docs/AUDIT-TRANSVERSAL-001.md"
+    },
+    {
+      "id": "AC26",
+      "concept": "Produit décisionnel et validation commerciale",
+      "priority": "P0",
+      "diagnosis": "Déjà prévu à renforcer",
+      "mechanisms": [
+        "M064"
+      ],
+      "limitations": [
+        "LIM-T01",
+        "LIM-T04"
+      ],
+      "additional_contracts": [
+        "RESULT-001",
+        "PROSPECT-001"
+      ],
+      "requirement": "Mandat décisionnel, matérialité, alternatives, coût erreur, preuve inspectable et scénarios opposés, pas d'inflation de métriques; usage réel et paiement, temps/qualité vs référence, revues externes, limites expliquées.",
+      "acceptance": "Un dossier vertical réel avec décision modifiée ou non, baseline analyste, traçabilité intégrale, refus d'assertions non prouvées, entretien/client payant indépendant; pas de gate commercial par CI.",
+      "stage_and_candidate_sources": "G1/G5 parallèle, pilote sectoriel",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "implementation_status": "NOT_IMPLEMENTED_BY_THIS_DECISION",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "source_ref": "docs/AUDIT-TRANSVERSAL-001.md"
+    },
+    {
+      "id": "AC27",
+      "concept": "Régimes alternatifs et anti-biais de thèse",
+      "priority": "P0",
+      "diagnosis": "Sous-spécifié",
+      "mechanisms": [
+        "M028",
+        "M033",
+        "M039",
+        "M049",
+        "M055",
+        "M057",
+        "M062"
+      ],
+      "limitations": [
+        "LIM-T01",
+        "LIM-T03",
+        "LIM-S12"
+      ],
+      "additional_contracts": [],
+      "requirement": "Automatisation rapide/lente/nulle, pénurie travail, réallocation, stagnation, abondance partielle, rupture, retour humain, coûts croissants, politiques alternatives; effets directionnels non imposés; horizons court/long et changements de régime.",
+      "acceptance": "Au moins une branche réfutant chaque hypothèse centrale, pas de probabilité arbitraire; signes inversés sous paramètres admissibles, test de robustesse et critère de révision.",
+      "stage_and_candidate_sources": "PROSPECT transversal; aucune conclusion prédéterminée",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "implementation_status": "NOT_IMPLEMENTED_BY_THIS_DECISION",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "source_ref": "docs/AUDIT-TRANSVERSAL-001.md"
+    }
+  ]
+}
