@@ -23,8 +23,8 @@ def run(st,steps,assets,kw):
 class IntegratedTests(unittest.TestCase):
     def test_cash_investment_lag_and_income(self):
         s,a,r=run(*fixture());rows=r["result"]["periods"]
-        self.assertEqual([x["household_consumption_eur"] for x in rows],["0","100","75"])
-        self.assertEqual([x["household_closing_deposits_eur"] for x in rows],["150","100","125/2"])
+        self.assertEqual([x["household_consumption_eur"] for x in rows],["0","100","100"])
+        self.assertEqual([x["household_closing_deposits_eur"] for x in rows],["150","100","50"])
         self.assertEqual([x["capital"]["capacity"][0] for x in rows],[0,.0001,.0001])
         self.assertEqual(rows[0]["projects"][0]["delivered_eur"],"100")
         self.assertFalse(any(p.instrument=="LOAN" for p in s.positions))
@@ -69,3 +69,11 @@ class IntegratedTests(unittest.TestCase):
     def test_no_coverage_no_run(self):
         st,steps,a,kw=fixture()
         with self.assertRaisesRegex(ValueError,"AC_COVERAGE"):run(st,steps,a,dict(kw,coverage=kw["coverage"][:-1]))
+
+    def test_demand_contracts_when_household_cash_runs_down(self):
+        st,steps,a,kw=fixture()
+        steps=steps+(steps[-1],steps[-1])
+        _,_,r=run(st,steps,a,kw)
+        rows=r["result"]["periods"]
+        self.assertEqual([x["household_consumption_eur"] for x in rows],["0","100","100","50","25"])
+        self.assertEqual([x["household_closing_deposits_eur"] for x in rows],["150","100","50","25","25/2"])
