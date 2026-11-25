@@ -1,0 +1,548 @@
+{
+  "status": "SYNTHETIC_NETWORK_AUDIT",
+  "chain": {
+    "result": {
+      "status": "SYNTHETIC_CLEARING_NOT_FORECAST",
+      "publication": "BLOCK_PUBLICATION",
+      "codes": [
+        "A",
+        "B",
+        "C"
+      ],
+      "evidence": "Synthetic",
+      "liabilities": [
+        [
+          "0",
+          "80",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "60"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "external_due": [
+        "20",
+        "20",
+        "50"
+      ],
+      "initial_liquidity": [
+        "50",
+        "0",
+        "0"
+      ],
+      "payments": [
+        "50",
+        "40",
+        "30"
+      ],
+      "paid_matrix": [
+        [
+          "0",
+          "40",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "30"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "external_paid": [
+        "10",
+        "10",
+        "30"
+      ],
+      "unpaid_matrix": [
+        [
+          "0",
+          "40",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "30"
+        ],
+        [
+          "0",
+          "0",
+          "0"
+        ]
+      ],
+      "unpaid_total_by_debtor": [
+        "50",
+        "40",
+        "20"
+      ],
+      "unpaid_claims_by_creditor": [
+        "0",
+        "40",
+        "30"
+      ],
+      "remaining_liquidity": [
+        "0",
+        "0",
+        "0"
+      ],
+      "default_rounds": [
+        [
+          "A"
+        ],
+        [
+          "B"
+        ],
+        [
+          "C"
+        ]
+      ],
+      "actual_default": null,
+      "actual_loss": null,
+      "limitations": [
+        "all modeled obligations due simultaneously, equal priority, divisible payments, no bankruptcy cost or fire sales",
+        "positive outside obligations for every debtor, ensuring strict contraction and unique solution",
+        "unpaid claim is not automatically a permanent credit loss; no legal insolvency conclusion",
+        "external settlement liquidity exogenous, no intraday timeline, bank runs or collateral"
+      ]
+    },
+    "sha256": "a60ff30aa19760515ffc78e903a52109693043dac75457774ecb4d50fd7a07ca"
+  },
+  "credit": {
+    "0": {
+      "result": {
+        "status": "CONDITIONAL_CREDIT_HEADROOM",
+        "publication": "BLOCK_PUBLICATION",
+        "source_receipt": "a60ff30aa19760515ffc78e903a52109693043dac75457774ecb4d50fd7a07ca",
+        "bank": "B",
+        "capital_before": "50",
+        "unpaid_claims": "40",
+        "loss_recognition": "0",
+        "assumed_impairment": "0",
+        "capital_after": "50",
+        "existing_rwa_held_constant": "200",
+        "minimum_ratio": "1/10",
+        "new_risk_weight": "1",
+        "capital_shortfall": "0",
+        "capital_based_headroom": "300",
+        "exogenous_credit_limit": "300",
+        "requested": {
+          "A": "100",
+          "C": "200"
+        },
+        "approved": {
+          "A": "100",
+          "C": "200"
+        },
+        "approved_total": "300",
+        "actual_regulatory_capital": null,
+        "actual_credit_granted": null,
+        "evidence": "Synthetic",
+        "limitations": [
+          "explicit assumed impairment fraction, not measured loss given default or write-off",
+          "existing RWA fixed, no capital buffers, liquidity, leverage, deposit insurance, collateral or central bank",
+          "pro-rata rationing, no optimization or new loan booking; usable as scenario ceiling in v0.7d only after explicit mapping"
+        ]
+      },
+      "sha256": "04fe7dcf98f054b5857ba0b24e6965e1a3b8219c66055ea11d1f176d39528643"
+    },
+    "1": {
+      "result": {
+        "status": "CONDITIONAL_CREDIT_HEADROOM",
+        "publication": "BLOCK_PUBLICATION",
+        "source_receipt": "a60ff30aa19760515ffc78e903a52109693043dac75457774ecb4d50fd7a07ca",
+        "bank": "B",
+        "capital_before": "50",
+        "unpaid_claims": "40",
+        "loss_recognition": "1",
+        "assumed_impairment": "40",
+        "capital_after": "10",
+        "existing_rwa_held_constant": "200",
+        "minimum_ratio": "1/10",
+        "new_risk_weight": "1",
+        "capital_shortfall": "10",
+        "capital_based_headroom": "0",
+        "exogenous_credit_limit": "300",
+        "requested": {
+          "A": "100",
+          "C": "200"
+        },
+        "approved": {
+          "A": "0",
+          "C": "0"
+        },
+        "approved_total": "0",
+        "actual_regulatory_capital": null,
+        "actual_credit_granted": null,
+        "evidence": "Synthetic",
+        "limitations": [
+          "explicit assumed impairment fraction, not measured loss given default or write-off",
+          "existing RWA fixed, no capital buffers, liquidity, leverage, deposit insurance, collateral or central bank",
+          "pro-rata rationing, no optimization or new loan booking; usable as scenario ceiling in v0.7d only after explicit mapping"
+        ]
+      },
+      "sha256": "5b3f0392325d725a088e7693df0009711ddefb6a09f1653778311023e5c6507c"
+    },
+    "1/2": {
+      "result": {
+        "status": "CONDITIONAL_CREDIT_HEADROOM",
+        "publication": "BLOCK_PUBLICATION",
+        "source_receipt": "a60ff30aa19760515ffc78e903a52109693043dac75457774ecb4d50fd7a07ca",
+        "bank": "B",
+        "capital_before": "50",
+        "unpaid_claims": "40",
+        "loss_recognition": "1/2",
+        "assumed_impairment": "20",
+        "capital_after": "30",
+        "existing_rwa_held_constant": "200",
+        "minimum_ratio": "1/10",
+        "new_risk_weight": "1",
+        "capital_shortfall": "0",
+        "capital_based_headroom": "100",
+        "exogenous_credit_limit": "300",
+        "requested": {
+          "A": "100",
+          "C": "200"
+        },
+        "approved": {
+          "A": "100/3",
+          "C": "200/3"
+        },
+        "approved_total": "100",
+        "actual_regulatory_capital": null,
+        "actual_credit_granted": null,
+        "evidence": "Synthetic",
+        "limitations": [
+          "explicit assumed impairment fraction, not measured loss given default or write-off",
+          "existing RWA fixed, no capital buffers, liquidity, leverage, deposit insurance, collateral or central bank",
+          "pro-rata rationing, no optimization or new loan booking; usable as scenario ceiling in v0.7d only after explicit mapping"
+        ]
+      },
+      "sha256": "eac4b0eef8d5a6c7b573015e41b9e33d56c701a625dd55bc3d0541e9ada4822a"
+    }
+  },
+  "topologies": {
+    "pairs": {
+      "result": {
+        "status": "SYNTHETIC_CLEARING_NOT_FORECAST",
+        "publication": "BLOCK_PUBLICATION",
+        "codes": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "evidence": "Synthetic",
+        "liabilities": [
+          [
+            "0",
+            "80",
+            "0",
+            "0"
+          ],
+          [
+            "80",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "80"
+          ],
+          [
+            "0",
+            "0",
+            "80",
+            "0"
+          ]
+        ],
+        "external_due": [
+          "20",
+          "20",
+          "20",
+          "20"
+        ],
+        "initial_liquidity": [
+          "0",
+          "20",
+          "20",
+          "20"
+        ],
+        "payments": [
+          "400/9",
+          "500/9",
+          "100",
+          "100"
+        ],
+        "paid_matrix": [
+          [
+            "0",
+            "320/9",
+            "0",
+            "0"
+          ],
+          [
+            "400/9",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "80"
+          ],
+          [
+            "0",
+            "0",
+            "80",
+            "0"
+          ]
+        ],
+        "external_paid": [
+          "80/9",
+          "100/9",
+          "20",
+          "20"
+        ],
+        "unpaid_matrix": [
+          [
+            "0",
+            "400/9",
+            "0",
+            "0"
+          ],
+          [
+            "320/9",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "unpaid_total_by_debtor": [
+          "500/9",
+          "400/9",
+          "0",
+          "0"
+        ],
+        "unpaid_claims_by_creditor": [
+          "320/9",
+          "400/9",
+          "0",
+          "0"
+        ],
+        "remaining_liquidity": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "default_rounds": [
+          [
+            "A"
+          ],
+          [
+            "B"
+          ]
+        ],
+        "actual_default": null,
+        "actual_loss": null,
+        "limitations": [
+          "all modeled obligations due simultaneously, equal priority, divisible payments, no bankruptcy cost or fire sales",
+          "positive outside obligations for every debtor, ensuring strict contraction and unique solution",
+          "unpaid claim is not automatically a permanent credit loss; no legal insolvency conclusion",
+          "external settlement liquidity exogenous, no intraday timeline, bank runs or collateral"
+        ]
+      },
+      "sha256": "a0966ba6d892ab8cb9e0d39e82b1e223597321432a037a04685d17887669aa09"
+    },
+    "cycle": {
+      "result": {
+        "status": "SYNTHETIC_CLEARING_NOT_FORECAST",
+        "publication": "BLOCK_PUBLICATION",
+        "codes": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "evidence": "Synthetic",
+        "liabilities": [
+          [
+            "0",
+            "80",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "80",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "80"
+          ],
+          [
+            "80",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "external_due": [
+          "20",
+          "20",
+          "20",
+          "20"
+        ],
+        "initial_liquidity": [
+          "0",
+          "20",
+          "20",
+          "20"
+        ],
+        "payments": [
+          "24400/369",
+          "26900/369",
+          "28900/369",
+          "30500/369"
+        ],
+        "paid_matrix": [
+          [
+            "0",
+            "19520/369",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "21520/369",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "23120/369"
+          ],
+          [
+            "24400/369",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "external_paid": [
+          "4880/369",
+          "5380/369",
+          "5780/369",
+          "6100/369"
+        ],
+        "unpaid_matrix": [
+          [
+            "0",
+            "10000/369",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "8000/369",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "0",
+            "6400/369"
+          ],
+          [
+            "5120/369",
+            "0",
+            "0",
+            "0"
+          ]
+        ],
+        "unpaid_total_by_debtor": [
+          "12500/369",
+          "10000/369",
+          "8000/369",
+          "6400/369"
+        ],
+        "unpaid_claims_by_creditor": [
+          "5120/369",
+          "10000/369",
+          "8000/369",
+          "6400/369"
+        ],
+        "remaining_liquidity": [
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        "default_rounds": [
+          [
+            "A"
+          ],
+          [
+            "B"
+          ],
+          [
+            "C"
+          ],
+          [
+            "D"
+          ]
+        ],
+        "actual_default": null,
+        "actual_loss": null,
+        "limitations": [
+          "all modeled obligations due simultaneously, equal priority, divisible payments, no bankruptcy cost or fire sales",
+          "positive outside obligations for every debtor, ensuring strict contraction and unique solution",
+          "unpaid claim is not automatically a permanent credit loss; no legal insolvency conclusion",
+          "external settlement liquidity exogenous, no intraday timeline, bank runs or collateral"
+        ]
+      },
+      "sha256": "d27883b7b77127a62d258191bef9340f0e6e29651ce55c8e099290fba4030d16"
+    }
+  },
+  "verification_receipt": {
+    "run": 45546646455,
+    "job": 138977760000,
+    "tested_commit": "c3bb622e4addd9bc7e191865abb35feb62026010",
+    "conclusion": "success"
+  }
+}
