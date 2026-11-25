@@ -1,0 +1,256 @@
+{
+  "status": "EMPIRICAL_FINANCIAL_DIAGNOSTIC_NOT_ADMISSION",
+  "observations": {
+    "bs": 6918,
+    "tr": 6890,
+    "gl": 6874,
+    "oc": 6874
+  },
+  "accounts": {
+    "S1": {
+      "ASS": {
+        "bs": "41565986.0",
+        "tr": "1334974.0",
+        "gl": "-2003026.0",
+        "oc": "72391.0",
+        "opening": "42161651.0"
+      },
+      "LIAB": {
+        "bs": "41997808.0",
+        "tr": "1347837.0",
+        "gl": "-2141177.0",
+        "oc": "109666.0",
+        "opening": "42681486.0"
+      },
+      "net": {
+        "bs": "-431822.0",
+        "tr": "-12863.0",
+        "gl": "138151.0",
+        "oc": "-37275.0",
+        "opening": "-519835.0"
+      }
+    },
+    "S11": {
+      "ASS": {
+        "bs": "13327112.0",
+        "tr": "567440.0",
+        "gl": "-636264.0",
+        "oc": "-91831.0",
+        "opening": "13487767.0"
+      },
+      "LIAB": {
+        "bs": "15944204.0",
+        "tr": "562164.0",
+        "gl": "-901337.0",
+        "oc": "1359.0",
+        "opening": "16282018.0"
+      },
+      "net": {
+        "bs": "-2617092.0",
+        "tr": "5276.0",
+        "gl": "265073.0",
+        "oc": "-93190.0",
+        "opening": "-2794251.0"
+      }
+    },
+    "S12": {
+      "ASS": {
+        "bs": "20145319.0",
+        "tr": "622217.0",
+        "gl": "-655659.0",
+        "oc": "114685.0",
+        "opening": "20064074.0"
+      },
+      "LIAB": {
+        "bs": "20495494.0",
+        "tr": "619228.0",
+        "gl": "-769864.0",
+        "oc": "72101.0",
+        "opening": "20574030.0"
+      },
+      "net": {
+        "bs": "-350175.0",
+        "tr": "2989.0",
+        "gl": "114205.0",
+        "oc": "42584.0",
+        "opening": "-509956.0"
+      }
+    },
+    "S13": {
+      "ASS": {
+        "bs": "1587005.0",
+        "tr": "-44824.0",
+        "gl": "-169674.0",
+        "oc": "32224.0",
+        "opening": "1769282.0"
+      },
+      "LIAB": {
+        "bs": "3479145.0",
+        "tr": "79184.0",
+        "gl": "-470939.0",
+        "oc": "34387.0",
+        "opening": "3836513.0"
+      },
+      "net": {
+        "bs": "-1892140.0",
+        "tr": "-124008.0",
+        "gl": "301265.0",
+        "oc": "-2163.0",
+        "opening": "-2067231.0"
+      }
+    },
+    "S14": {
+      "ASS": {
+        "bs": "6393790.0",
+        "tr": "188043.0",
+        "gl": "-540292.0",
+        "oc": "17330.0",
+        "opening": "6728711.0"
+      },
+      "LIAB": {
+        "bs": "2058677.0",
+        "tr": "87618.0",
+        "gl": "918.0",
+        "oc": "1819.0",
+        "opening": "1968324.0"
+      },
+      "net": {
+        "bs": "4335113.0",
+        "tr": "100425.0",
+        "gl": "-541210.0",
+        "oc": "15511.0",
+        "opening": "4760387.0"
+      }
+    },
+    "S15": {
+      "ASS": {
+        "bs": "112760.0",
+        "tr": "2098.0",
+        "gl": "-1137.0",
+        "oc": "-17.0",
+        "opening": "111817.0"
+      },
+      "LIAB": {
+        "bs": "20288.0",
+        "tr": "-358.0",
+        "gl": "45.0",
+        "oc": "0.0",
+        "opening": "20601.0"
+      },
+      "net": {
+        "bs": "92472.0",
+        "tr": "2456.0",
+        "gl": "-1182.0",
+        "oc": "-17.0",
+        "opening": "91216.0"
+      }
+    },
+    "S2": {
+      "ASS": {
+        "bs": "10845478.0",
+        "tr": "680217.0",
+        "gl": "-492646.0",
+        "oc": "9456.0",
+        "opening": "10648451.0"
+      },
+      "LIAB": {
+        "bs": "10413656.0",
+        "tr": "667354.0",
+        "gl": "-354495.0",
+        "oc": "-27819.0",
+        "opening": "10128616.0"
+      },
+      "net": {
+        "bs": "431822.0",
+        "tr": "12863.0",
+        "gl": "-138151.0",
+        "oc": "37275.0",
+        "opening": "519835.0"
+      }
+    }
+  },
+  "household_equity": {
+    "opening": "2036190.0",
+    "closing": "1886689.0",
+    "transactions": "43891.0",
+    "revaluation": "-209813.0",
+    "other_changes": "16422.0"
+  },
+  "identities": 118,
+  "missing_identities": 8,
+  "unresolved": [
+    {
+      "opening": "42161651.0",
+      "transactions": "1334974.0",
+      "revaluation": "-2003026.0",
+      "other_changes": "72391.0",
+      "closing": "41565986.0",
+      "sector": "S1",
+      "position": "ASS",
+      "instrument": "F",
+      "residual": "-4.0",
+      "status": "UNRESOLVED_RESIDUAL"
+    },
+    {
+      "opening": "42681486.0",
+      "transactions": "1347837.0",
+      "revaluation": "-2141177.0",
+      "other_changes": "109666.0",
+      "closing": "41997808.0",
+      "sector": "S1",
+      "position": "LIAB",
+      "instrument": "F",
+      "residual": "-4.0",
+      "status": "UNRESOLVED_RESIDUAL"
+    },
+    {
+      "opening": "5948557.0",
+      "transactions": "464851.0",
+      "revaluation": "9262.0",
+      "other_changes": "-12693.0",
+      "closing": "6409974.0",
+      "sector": "S1",
+      "position": "LIAB",
+      "instrument": "F4",
+      "residual": "-3.0",
+      "status": "UNRESOLVED_RESIDUAL"
+    },
+    {
+      "opening": "1769282.0",
+      "transactions": "-44824.0",
+      "revaluation": "-169674.0",
+      "other_changes": "32224.0",
+      "closing": "1587005.0",
+      "sector": "S13",
+      "position": "ASS",
+      "instrument": "F",
+      "residual": "-3.0",
+      "status": "UNRESOLVED_RESIDUAL"
+    },
+    {
+      "opening": "171405.0",
+      "transactions": "17878.0",
+      "revaluation": "-3.0",
+      "other_changes": "152.0",
+      "closing": "189429.0",
+      "sector": "S13",
+      "position": "ASS",
+      "instrument": "F4",
+      "residual": "-3.0",
+      "status": "UNRESOLVED_RESIDUAL"
+    }
+  ],
+  "comparisons": 419,
+  "missing_comparisons": 85,
+  "max_cross_difference": 1,
+  "verification_receipt": {
+    "run": 45546243404,
+    "job": 138976455424,
+    "tested_commit": "7298d46ebc1d0d0d4aa0d17c9372f6de6df6d2fe",
+    "conclusion": "success",
+    "synthetic_tests": 13,
+    "raw_archive": "11KoRu6rVjW58Kv9xbVGh9DSbujoK5mx1",
+    "artifact": 14992005120,
+    "archive_digest": "sha256:efbef477bd8e9eed3d02366e52b1a4e5e0e0d7ca3997d9116d77a5b54bfaaf3d"
+  }
+}
