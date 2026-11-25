@@ -1,0 +1,313 @@
+{
+  "status": "EMPIRICAL_BASE_HYPOTHETICAL_STRUCTURAL_SCENARIOS",
+  "publication": "BLOCK_PUBLICATION",
+  "source_hashes": {
+    "standard": "1a9d587e3a70590a42210f10bca15a63dd85d18dc9946ca654d77e50970a29ed",
+    "symmetric": "db4189aa708c10122dadf09c17f8bb49e1dd45561f93bf5527abe8473a29aa73",
+    "eurostat": "5c822d35fed4fa677d215a958be4730679168700a71d523d8479fb0c24608772"
+  },
+  "unit": "M EUR at 2022 reference prices",
+  "assumptions": {
+    "pure_distribution": "MA D1 intensity -0.01; gross surplus/mixed +0.01",
+    "labor_to_ai_services": "MA D1 intensity -0.01; JC domestic input +0.004; JC imported input +0.003; MA gross surplus/mixed +0.003",
+    "supplier_switch": "10% of existing MA purchases of domestic NZ services redirected to domestic JC, at same reference-price value",
+    "combined_demand": "labor_to_ai_services plus hypothetical +100 M EUR MA domestic final demand",
+    "hypothetical_investment_demand": "pure_distribution plus exogenous +100 M EUR domestic JC final demand, assumed investment; no financing link"
+  },
+  "cases": {
+    "pure_distribution": {
+      "totals": {
+        "q": 0,
+        "g": 0,
+        "imports": 0,
+        "wage": -3000.5729999989708,
+        "other_tax": 0,
+        "bridge": 0,
+        "surplus": 3000.57299999896,
+        "va": 0
+      },
+      "demand_shapley_total": 0,
+      "structure_shapley_total": 0,
+      "orders": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "wage_intensity_effect": -3000.5729999989635,
+      "wage_output_effect": 0,
+      "top_output_changes": [
+        [
+          "AZ",
+          0
+        ],
+        [
+          "BZ",
+          0
+        ],
+        [
+          "CA",
+          0
+        ],
+        [
+          "CB",
+          0
+        ],
+        [
+          "CC",
+          0
+        ],
+        [
+          "CD",
+          0
+        ]
+      ],
+      "tail_bounds": {
+        "base": 0.000002436619401137527,
+        "scenario": 0.000002436619401137527
+      },
+      "employment": null,
+      "gdp": null,
+      "price_effect": null,
+      "realized_output": null
+    },
+    "labor_to_ai_services": {
+      "totals": {
+        "q": 1975.6555879193356,
+        "g": 1975.6555879193247,
+        "imports": 1078.9924520424267,
+        "wage": -2241.362181795631,
+        "other_tax": 34.73964217976982,
+        "bridge": 13.865683072462176,
+        "surplus": 1113.7644044972108,
+        "va": -1092.858135118616
+      },
+      "demand_shapley_total": 0,
+      "structure_shapley_total": 1975.6555879261857,
+      "orders": [
+        1200.229199999585,
+        458.51351938116414,
+        181.07939888013013,
+        135.8334696584564
+      ],
+      "wage_intensity_effect": -3001.142715832552,
+      "wage_output_effect": 759.7805340369339,
+      "top_output_changes": [
+        [
+          "JC",
+          1409.9712138384348
+        ],
+        [
+          "MA",
+          116.0435736856889
+        ],
+        [
+          "NZ",
+          99.53361145488452
+        ],
+        [
+          "LZ",
+          43.210705481353216
+        ],
+        [
+          "JA",
+          40.772418174296035
+        ],
+        [
+          "KZ",
+          35.453011272649746
+        ]
+      ],
+      "tail_bounds": {
+        "base": 0.000002436619401137527,
+        "scenario": 0.0000024497105598376494
+      },
+      "employment": null,
+      "gdp": null,
+      "price_effect": null,
+      "realized_output": null
+    },
+    "supplier_switch": {
+      "totals": {
+        "q": -16.960974033299863,
+        "g": -16.960974033189814,
+        "imports": -11.861784834645803,
+        "wage": 135.69215044012628,
+        "other_tax": 4.4616484954312625,
+        "bridge": 0.05333807374246646,
+        "surplus": -128.3453521742715,
+        "va": 11.808446761256391
+      },
+      "demand_shapley_total": 0,
+      "structure_shapley_total": -16.96097403264823,
+      "orders": [
+        -9.094947017729282e-13,
+        -3.786634363493061,
+        -4.753562897428472,
+        -8.420776772377424
+      ],
+      "wage_intensity_effect": 0,
+      "wage_output_effect": 135.69215044017795,
+      "top_output_changes": [
+        [
+          "JC",
+          1687.288597295992
+        ],
+        [
+          "NZ",
+          -1613.81608096126
+        ],
+        [
+          "KZ",
+          -35.191218597698025
+        ],
+        [
+          "JA",
+          24.438738047509105
+        ],
+        [
+          "GZ",
+          -16.226351400720887
+        ],
+        [
+          "LZ",
+          -10.898958012578078
+        ]
+      ],
+      "tail_bounds": {
+        "base": 0.000002436619401137527,
+        "scenario": 0.0000024356019475425093
+      },
+      "employment": null,
+      "gdp": null,
+      "price_effect": null,
+      "realized_output": null
+    },
+    "combined_demand": {
+      "totals": {
+        "q": 2155.200397793338,
+        "g": 2155.2003977933828,
+        "imports": 1094.0015206189819,
+        "wage": -2183.2813196677043,
+        "other_tax": 37.559287173433184,
+        "bridge": 15.537875012244982,
+        "surplus": 1136.182636859254,
+        "va": -1009.5393956350267
+      },
+      "demand_shapley_total": 179.11731618858414,
+      "structure_shapley_total": 1976.083081611463,
+      "orders": [
+        1300.229199999585,
+        504.10361613000373,
+        200.32263144592036,
+        150.5449502178291
+      ],
+      "wage_intensity_effect": -3001.792228387978,
+      "wage_output_effect": 818.5109087203222,
+      "top_output_changes": [
+        [
+          "JC",
+          1414.998575103411
+        ],
+        [
+          "MA",
+          248.34068330039736
+        ],
+        [
+          "NZ",
+          108.80709739442682
+        ],
+        [
+          "LZ",
+          48.34823588572908
+        ],
+        [
+          "JA",
+          42.99937938198855
+        ],
+        [
+          "KZ",
+          41.814199708169326
+        ]
+      ],
+      "tail_bounds": {
+        "base": 0.000002436619401137527,
+        "scenario": 0.000002449765891726634
+      },
+      "employment": null,
+      "gdp": null,
+      "price_effect": null,
+      "realized_output": null
+    },
+    "hypothetical_investment_demand": {
+      "totals": {
+        "q": 164.54404218422223,
+        "g": 164.5440421842186,
+        "imports": 14.864741927054695,
+        "wage": -2937.3415250086314,
+        "other_tax": 2.8933186448231325,
+        "bridge": 1.1548144091020305,
+        "surplus": 3018.4286500275325,
+        "va": 83.98044366371096
+      },
+      "demand_shapley_total": 164.5440421844119,
+      "structure_shapley_total": 0,
+      "orders": [
+        100,
+        38.202163335246524,
+        15.066972237308129,
+        11.27490661166759
+      ],
+      "wage_intensity_effect": -3000.620449233905,
+      "wage_output_effect": 63.27892422528524,
+      "top_output_changes": [
+        [
+          "JC",
+          117.43057054406381
+        ],
+        [
+          "MA",
+          9.664781048137229
+        ],
+        [
+          "NZ",
+          8.289735752681736
+        ],
+        [
+          "LZ",
+          3.5988378687761724
+        ],
+        [
+          "JA",
+          3.3957631770608714
+        ],
+        [
+          "KZ",
+          2.952732155274134
+        ]
+      ],
+      "tail_bounds": {
+        "base": 0.000002436619401137527,
+        "scenario": 0.000002436669464283376
+      },
+      "employment": null,
+      "gdp": null,
+      "price_effect": null,
+      "realized_output": null
+    }
+  },
+  "limitations": [
+    "no causal shock calibration",
+    "fixed reference prices, market shares unchanged in pilots",
+    "no supply equilibrium, capacity or employment conversion",
+    "surplus closure is assumption not profit forecast",
+    "AI purchases proxied by broad JC category, no observed AI-specific share"
+  ],
+  "verification": {
+    "run": 45524437877,
+    "job": 138904124737,
+    "tested_commit": "7546689beba6177d1dd1fe2dfddbdacc88f456c1",
+    "conclusion": "success",
+    "method": "standard library Neumann series, independent NumPy linear solve; exact accounting identities; pinned three sources"
+  }
+}
