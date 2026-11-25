@@ -17,8 +17,12 @@
   },
   "current_general": {
     "run": 45556807422,
-    "status": "in_progress",
-    "conclusion": null
+    "job": 139010712867,
+    "conclusion": "success",
+    "tests": 644,
+    "seconds": 44.364,
+    "tested_commit": "aac324799d142afa1b9a0f7021b8090dfe73be37",
+    "scope": "Bridge code unchanged in later empirical audit corrections"
   },
   "earlier_attempts": [
     {
