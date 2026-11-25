@@ -1,6 +1,6 @@
 {
   "id": "LIMITATIONS-001",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "date": "2026-11-25",
   "baseline_commit": "5bd37a858e384fdf3a159564975623b8ac957663",
   "status": "INITIAL_CONSOLIDATION_REVIEW_PENDING",
@@ -1054,7 +1054,17 @@
         "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
       ],
       "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
-      "resolution_status": "PARTIAL"
+      "resolution_status": "PARTIAL",
+      "progress_evidence": [
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.6b",
+          "path": "audits/insee_tes_budget_2022_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45541331763",
+          "scope": "Panier ménages TES prix de base séparé et marges réaffectées documentées; raccord prix acquisition et compte institutionnel restent à construire."
+        }
+      ],
+      "remaining": "Panier ménages TES prix de base séparé et marges réaffectées documentées; raccord prix acquisition et compte institutionnel restent à construire."
     },
     {
       "id": "LIM-S04",
@@ -1314,7 +1324,17 @@
         "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
       ],
       "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
-      "resolution_status": "PARTIAL"
+      "resolution_status": "PARTIAL",
+      "progress_evidence": [
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.6b",
+          "path": "audits/insee_tes_budget_2022_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45541331763",
+          "scope": "Substitution CES agrégée, saturation et budget contraint testés; concurrence, estimation, hétérogénéité et validation hors échantillon ouvertes."
+        }
+      ],
+      "remaining": "Substitution CES agrégée, saturation et budget contraint testés; concurrence, estimation, hétérogénéité et validation hors échantillon ouvertes."
     },
     {
       "id": "LIM-S11",
@@ -1339,7 +1359,7 @@
         "E04",
         "E05"
       ],
-      "status": "OPEN",
+      "status": "PARTIAL",
       "dependencies": [
         "LIM-S10",
         "LIM-S03"
@@ -1351,7 +1371,17 @@
         "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
       ],
       "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
-      "resolution_status": "OPEN"
+      "resolution_status": "PARTIAL",
+      "progress_evidence": [
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.6b",
+          "path": "audits/insee_tes_budget_2022_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45541331763",
+          "scope": "Enveloppe nominale fermée, demande ménages domestique/importée, réallocation et réserve non dépensée testées sur TES 2022. Épargne et revenu disponibles réels, prix acquisition, autres imports finals et hétérogénéité ouverts."
+        }
+      ],
+      "remaining": "Enveloppe nominale fermée, demande ménages domestique/importée, réallocation et réserve non dépensée testées sur TES 2022. Épargne et revenu disponibles réels, prix acquisition, autres imports finals et hétérogénéité ouverts."
     },
     {
       "id": "LIM-S12",
@@ -1390,7 +1420,17 @@
         "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
       ],
       "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
-      "resolution_status": "OPEN"
+      "resolution_status": "OPEN",
+      "progress_evidence": [
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.6b",
+          "path": "audits/insee_tes_budget_2022_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45541331763",
+          "scope": "Les ressources nominales demeurent exogènes. Boucles revenus/prix/capacités non fermées."
+        }
+      ],
+      "remaining": "Les ressources nominales demeurent exogènes. Boucles revenus/prix/capacités non fermées."
     },
     {
       "id": "LIM-S13",
@@ -1888,5 +1928,6 @@
       "notes": "Cible proposée, pas une échéance ferme. Aucun gate promu."
     }
   ],
-  "dependency_semantics": "Dependencies constrain closure, not parallel development; not a promise of dates. Publication restrictions apply to affected claims, not blanket suppression of safe synthetic demonstrations."
+  "dependency_semantics": "Dependencies constrain closure, not parallel development; not a promise of dates. Publication restrictions apply to affected claims, not blanket suppression of safe synthetic demonstrations.",
+  "last_milestone": "G4 v0.6b"
 }
