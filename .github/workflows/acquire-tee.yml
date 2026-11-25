@@ -20,6 +20,8 @@ jobs:
           python-version: '3.12'
       - run: python -m pip install openpyxl==3.1.5
       - run: python -m pipeline.acquire_tee_2022
+      - name: Reconcile pinned institutional accounts
+        run: python -m pipeline.audit_tee_2022 tee-2022 > tee-2022/audit.json && cat tee-2022/audit.json
       - uses: actions/upload-artifact@v4
         with:
           name: tee-2022
