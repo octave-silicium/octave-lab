@@ -1,0 +1,1419 @@
+{
+  "id": "LIMITATIONS-001",
+  "version": "1.0.0",
+  "date": "2026-11-25",
+  "baseline_commit": "5bd37a858e384fdf3a159564975623b8ac957663",
+  "status": "INITIAL_CONSOLIDATION_REVIEW_PENDING",
+  "scope": "All nine layers, six engines, historical G0–G4 and future G5, original mechanisms, Shapiro enrichments and interfaces. Curated families plus source evidence inventory; semantic triage incomplete.",
+  "entries": [
+    {
+      "id": "LIM-D01",
+      "type": "DATA",
+      "origin": "OPEN-01",
+      "title": "DPAE et rupture déclarative 2025",
+      "impact": "Comparaisons temporelles invalides sur périmètres touchés",
+      "target": "G1/P0",
+      "remedy": "Reconstituer vintages et corrections, vérifier rupture par population",
+      "acceptance": "Comparaison as-of documentée et périodes incompatibles bloquées",
+      "sources": [
+        "docs/ROADMAP.md",
+        "docs/GOVERNANCE_URSSAF_RUPTURES.md"
+      ],
+      "mechanisms": [
+        "M059",
+        "M063"
+      ],
+      "engines": [
+        "E03",
+        "E06"
+      ],
+      "status": "BLOCKED",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-D02",
+      "type": "DATA",
+      "origin": "OPEN-02",
+      "title": "MMO Dares, accès et droits",
+      "impact": "Couverture flux et transitions incomplète",
+      "target": "G1/P0",
+      "remedy": "Qualifier acquisition officielle, licence, schéma et millésime",
+      "acceptance": "Rejeu fichier brut et validation des champs et usages",
+      "sources": [
+        "docs/ROADMAP.md",
+        "docs/G2-LOCAL-INTAKE.md"
+      ],
+      "mechanisms": [
+        "M049",
+        "M050"
+      ],
+      "engines": [
+        "E01",
+        "E03"
+      ],
+      "status": "BLOCKED",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-D03",
+      "type": "EMPIRICAL",
+      "origin": "OPEN-03",
+      "title": "Triangulation réellement indépendante",
+      "impact": "Confusion entre publications dérivées et preuves indépendantes",
+      "target": "G1/P0",
+      "remedy": "Identifier lignées, populations et définitions compatibles",
+      "acceptance": "Au moins une lignée supplémentaire qualifiée ou impossibilité motivée",
+      "sources": [
+        "docs/ROADMAP.md",
+        "docs/AUDIT_LOT2_EMPLOI_EMBAUCHES.md"
+      ],
+      "mechanisms": [
+        "M059",
+        "M061",
+        "M063"
+      ],
+      "engines": [
+        "E03",
+        "E06"
+      ],
+      "status": "OPEN",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-D04",
+      "type": "DATA",
+      "origin": "OPEN-04",
+      "title": "79 sources candidates et couverture",
+      "impact": "Catalogue candidat confondu avec données disponibles",
+      "target": "G1/P0",
+      "remedy": "Qualifier droits, couverture, fréquence, provenance et qualité",
+      "acceptance": "Inventaire individuel, preuve d'accès et statut par source",
+      "sources": [
+        "docs/ROADMAP.md",
+        "docs/DATA-OBSERVATORY.md"
+      ],
+      "mechanisms": [
+        "M059",
+        "M063"
+      ],
+      "engines": [
+        "E01",
+        "E03"
+      ],
+      "status": "OPEN",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-D05",
+      "type": "METHOD",
+      "origin": "OPEN-05",
+      "title": "Benchmarks scientifiques et UX",
+      "impact": "Choix de méthode non confrontés",
+      "target": "TRANSVERSE",
+      "remedy": "Comparer méthodes concurrentes et cas réalistes avant gate",
+      "acceptance": "BENCH-001 avec décisions et tests indépendants par module",
+      "sources": [
+        "docs/BENCH-001.md",
+        "docs/ROADMAP.md"
+      ],
+      "mechanisms": [
+        "M060",
+        "M061",
+        "M062",
+        "M064"
+      ],
+      "engines": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05",
+        "E06"
+      ],
+      "status": "OPEN",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-D06",
+      "type": "RIGHTS",
+      "origin": "OPEN-06",
+      "title": "ODbL, droits et publication",
+      "impact": "Risque juridique et de diffusion non autorisée",
+      "target": "G1/G5",
+      "remedy": "Qualifier par usage, séparation privé/public, attribution et obligations",
+      "acceptance": "Matrice des droits validée et refus d'export non autorisé",
+      "sources": [
+        "docs/ROADMAP.md",
+        "docs/DATA-VAULT.md"
+      ],
+      "mechanisms": [
+        "M063",
+        "M064"
+      ],
+      "engines": [
+        "E01",
+        "E06"
+      ],
+      "status": "BLOCKED",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-D07",
+      "type": "EMPIRICAL",
+      "origin": "OPEN-07",
+      "title": "Pilote NACE J, JA/JB/JC",
+      "impact": "Agrégat trop large pour relier emploi et IA",
+      "target": "G1/P0",
+      "remedy": "Désagréger et confronter emploi, adoption et prix comparables",
+      "acceptance": "Séries compatibles et tests de robustesse par sous-branche",
+      "sources": [
+        "docs/ROADMAP.md",
+        "docs/G4-SECTOR.md"
+      ],
+      "mechanisms": [
+        "M029",
+        "M049",
+        "M059"
+      ],
+      "engines": [
+        "E03",
+        "E04"
+      ],
+      "status": "OPEN",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-D08",
+      "type": "PRODUCT",
+      "origin": "OPEN-08",
+      "title": "Validation commerciale B2B",
+      "impact": "Valeur supposée, audience X non probante",
+      "target": "G5/E-G6",
+      "remedy": "Tester décisions réelles, temps économisé, récurrence et disposition à payer",
+      "acceptance": "Entretiens et pilotes documentés avec critères ex ante",
+      "sources": [
+        "docs/ROADMAP.md",
+        "docs/ARCH-002.md"
+      ],
+      "mechanisms": [
+        "M064"
+      ],
+      "engines": [
+        "E06"
+      ],
+      "status": "OPEN",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": false,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-D09",
+      "type": "DATA",
+      "origin": "OPEN-09",
+      "title": "Nomenclatures, DSN, apprentis, NAF 2025",
+      "impact": "Ruptures et fausses équivalences",
+      "target": "G1/P0",
+      "remedy": "Tables de passage versionnées, couverture et rupture explicites",
+      "acceptance": "Tests de comparabilité et blocage des liens non qualifiés",
+      "sources": [
+        "docs/ROADMAP.md",
+        "docs/AUDIT_LOT3_SEMANTICS.md"
+      ],
+      "mechanisms": [
+        "M049",
+        "M059",
+        "M063"
+      ],
+      "engines": [
+        "E01",
+        "E03"
+      ],
+      "status": "OPEN",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-D10",
+      "type": "IMPLEMENTATION",
+      "origin": "G1",
+      "title": "Coffre, stockage durable et activation planifiée",
+      "impact": "Perte de provenance, collecte non reproductible",
+      "target": "G1/PRODUCTION",
+      "remedy": "Snapshots immuables, sauvegarde/restauration et orchestration durable",
+      "acceptance": "Rejeu depuis snapshot sans téléchargement mutable, restauration testée",
+      "sources": [
+        "docs/DATA-VAULT.md",
+        "docs/DATA-MAINTENANCE.md",
+        "docs/RUNBOOK-001.md",
+        "docs/DATA-REFRESH-001.md"
+      ],
+      "mechanisms": [
+        "M063"
+      ],
+      "engines": [
+        "E01",
+        "E03",
+        "E06"
+      ],
+      "status": "PARTIAL",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-D11",
+      "type": "DATA",
+      "origin": "G1",
+      "title": "Sémantique, géographie et comparabilité",
+      "impact": "Séries incompatibles, dénominateurs faux",
+      "target": "G1/G-M0",
+      "remedy": "Contrats et référentiels versionnés, tests négatifs",
+      "acceptance": "Chaque comparaison porte unité, population, période et droits validés",
+      "sources": [
+        "docs/SEMANTIC.md",
+        "docs/SEMANTIC-V2.md",
+        "docs/SEMANTIC-V3.md",
+        "docs/SEMANTIC-V4.md"
+      ],
+      "mechanisms": [
+        "M047",
+        "M059",
+        "M063"
+      ],
+      "engines": [
+        "E01",
+        "E03"
+      ],
+      "status": "PARTIAL",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-D12",
+      "type": "PRODUCT",
+      "origin": "G1",
+      "title": "Explorateur, export et UX de preuve",
+      "impact": "Impossible de reproduire ou inspecter une décision",
+      "target": "G5/UX",
+      "remedy": "Audit navigateur, parcours, accessibilité, exports et provenance",
+      "acceptance": "Recette UX-G0…UX-G4 avec preuve de navigation et erreurs",
+      "sources": [
+        "docs/G1-EXPLORER.md",
+        "docs/UX-001.md"
+      ],
+      "mechanisms": [
+        "M064"
+      ],
+      "engines": [
+        "E01",
+        "E06"
+      ],
+      "status": "PARTIAL",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": false,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-W01",
+      "type": "DATA",
+      "origin": "G2",
+      "title": "Liens ROME/ESCO/FAP/O*NET, API privée et équivalence internationale",
+      "impact": "Attribution fausse de tâches et métiers",
+      "target": "G2/G-M0",
+      "remedy": "Qualifier mappings, non-résolus, probabilités et droits, connecter API",
+      "acceptance": "Tests de couverture, liens natifs et refus des équivalences non prouvées",
+      "sources": [
+        "docs/G2-WORK-GRAPH.md",
+        "docs/G2-EUROPE.md",
+        "docs/G2-LOCAL-INTAKE.md",
+        "docs/G2-WORK-EXPLORER.md"
+      ],
+      "mechanisms": [
+        "M007",
+        "M010",
+        "M050"
+      ],
+      "engines": [
+        "E01"
+      ],
+      "status": "PARTIAL",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-W02",
+      "type": "EMPIRICAL",
+      "origin": "G2 W001/W002",
+      "title": "Revue praticiens et processus réels",
+      "impact": "Processus candidats non représentatifs",
+      "target": "G2/G-M1",
+      "remedy": "Revue indépendante, contexte réel, contrat qualité et criticité",
+      "acceptance": "Mesures terrain et validation des routes par praticiens",
+      "sources": [
+        "docs/G2-PILOT-W001.md",
+        "docs/G2-EXPERIMENT.md",
+        "docs/G3-PHYSICAL.md",
+        "docs/CONTRIB-001.md"
+      ],
+      "mechanisms": [
+        "M010",
+        "M011",
+        "M025"
+      ],
+      "engines": [
+        "E01",
+        "E04"
+      ],
+      "status": "OPEN",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-W03",
+      "type": "EMPIRICAL",
+      "origin": "G2",
+      "title": "Corpus fermé indépendant, comparaisons humain/IA",
+      "impact": "Biais de jeu connu, résultats non généralisables",
+      "target": "G2/G-M2",
+      "remedy": "Essais aveugles, répétitions, échecs, difficulté et accès identiques",
+      "acceptance": "Benchmark indépendant préenregistré, incertitude et résultats négatifs",
+      "sources": [
+        "docs/G2-DOCUMENTS.md",
+        "docs/G2-MODEL-COMPARISON.md",
+        "docs/G2-EXPERIMENT.md",
+        "docs/W001-EXP-001.md",
+        "docs/W001-EXP-002.md"
+      ],
+      "mechanisms": [
+        "M001",
+        "M002",
+        "M006",
+        "M007",
+        "M008"
+      ],
+      "engines": [
+        "E04"
+      ],
+      "status": "OPEN",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-W04",
+      "type": "METHOD",
+      "origin": "G2/G3.2",
+      "title": "Qualité critique, faux positifs, corrélation des erreurs, contrôle/repli",
+      "impact": "Autonomie nominale confondue avec autonomie fiable",
+      "target": "G3.2/G-M2",
+      "remedy": "Veto symétrique criticité, audit/repli consommant ressources, stress et dérive",
+      "acceptance": "Cas critiques, erreurs corrélées et repli évalués sur corpus indépendant",
+      "sources": [
+        "docs/G3-TRANSFORM.md",
+        "docs/G3-PARALLEL.md",
+        "docs/G3-PHYSICAL.md",
+        "docs/TRANSFORM-001.md"
+      ],
+      "mechanisms": [
+        "M006",
+        "M017",
+        "M020",
+        "M025"
+      ],
+      "engines": [
+        "E02",
+        "E04"
+      ],
+      "status": "PARTIAL",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-W05",
+      "type": "IMPLEMENTATION",
+      "origin": "G3.2",
+      "title": "Files, variabilité, occupation continue, affinité, synchronisation arbitraire",
+      "impact": "Goulots et délais sous-estimés",
+      "target": "G3.2/CONSOLIDATION",
+      "remedy": "Compléter DES et distribution des temps, ressources conjointes et calendrier",
+      "acceptance": "Tests de saturation, événements, files, censure et sensibilité",
+      "sources": [
+        "docs/G3-OPERATIONS.md",
+        "docs/G3-PARALLEL.md",
+        "docs/G3-PHYSICAL.md"
+      ],
+      "mechanisms": [
+        "M014",
+        "M015",
+        "M016",
+        "M017"
+      ],
+      "engines": [
+        "E02",
+        "E04"
+      ],
+      "status": "PARTIAL",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-W06",
+      "type": "METHOD",
+      "origin": "G3.2",
+      "title": "Refonte organisationnelle, responsabilités, incitations et capital immatériel",
+      "impact": "Topologie et autorité trop simplifiées",
+      "target": "G3/G5",
+      "remedy": "Variantes de suppression, coordination et conformité contextualisées",
+      "acceptance": "Comparaisons qualité égale, rôles et preuves d'autorisation, coûts complets",
+      "sources": [
+        "docs/G3-TRANSFORM.md",
+        "docs/TRANSFORM-001.md",
+        "docs/ARCH-002.md"
+      ],
+      "mechanisms": [
+        "M018",
+        "M021",
+        "M023",
+        "M024",
+        "M025",
+        "M026"
+      ],
+      "engines": [
+        "E01",
+        "E02",
+        "E04"
+      ],
+      "status": "PARTIAL",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-W07",
+      "type": "EMPIRICAL",
+      "origin": "G3.2",
+      "title": "Paramètres opérations, représentativité et transfert sectoriel",
+      "impact": "Durées et coûts fictifs non extrapolables",
+      "target": "G3/P0",
+      "remedy": "Registre paramètre et domaine de validité, données réelles multi-processus",
+      "acceptance": "Distribution et provenance, validation externe et stress multi-cas",
+      "sources": [
+        "docs/G3-OPERATIONS.md",
+        "docs/G3-PHYSICAL.md",
+        "docs/G3-ECONOMIC-CORE.md"
+      ],
+      "mechanisms": [
+        "M001",
+        "M004",
+        "M010",
+        "M032",
+        "M062"
+      ],
+      "engines": [
+        "E02",
+        "E04"
+      ],
+      "status": "OPEN",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-F01",
+      "type": "IMPLEMENTATION",
+      "origin": "G3.3",
+      "title": "BFR complet, stocks, impayés, fiscalité, liquidation",
+      "impact": "Cash et viabilité partiels",
+      "target": "G3/G4 CAPITAL",
+      "remedy": "Ledger complet, scénarios insolvabilité et fiscalité",
+      "acceptance": "Identités de bilan, flux et terminal, tests d'impayés et défaut",
+      "sources": [
+        "docs/G3-FIRM.md",
+        "docs/G3-TRANSITION.md"
+      ],
+      "mechanisms": [
+        "M027",
+        "M028",
+        "M034",
+        "M055"
+      ],
+      "engines": [
+        "E04",
+        "E05"
+      ],
+      "status": "PARTIAL",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-F02",
+      "type": "METHOD",
+      "origin": "G3.3",
+      "title": "Valeur du redéploiement et activité distincte",
+      "impact": "Double comptage du temps et revenus hypothétiques",
+      "target": "G3/G4",
+      "remedy": "Contrat activité, demande et qualité, allocation temps et coûts incrémentaux",
+      "acceptance": "Rejeu du temps et des recettes indépendantes sans double comptage",
+      "sources": [
+        "docs/G3-RAMP.md",
+        "docs/G3-SKILLS.md"
+      ],
+      "mechanisms": [
+        "M009",
+        "M033",
+        "M054"
+      ],
+      "engines": [
+        "E02",
+        "E05"
+      ],
+      "status": "OPEN",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-F03",
+      "type": "EMPIRICAL",
+      "origin": "G3.3",
+      "title": "Compétences, mentorat, juniors, délais et expertises",
+      "impact": "Durées synthétiques et manque de preuve sur renouvellement",
+      "target": "G3/P0/G5",
+      "remedy": "Données cohortes, apprentissage, départs et besoins expertise",
+      "acceptance": "Validation terrain, scénarios alternatifs et tests de sensibilité",
+      "sources": [
+        "docs/G3-SKILLS.md",
+        "docs/G3-TRANSITION.md"
+      ],
+      "mechanisms": [
+        "M012",
+        "M033",
+        "M050"
+      ],
+      "engines": [
+        "E02",
+        "E04"
+      ],
+      "status": "PARTIAL",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-F04",
+      "type": "METHOD",
+      "origin": "G3.3",
+      "title": "VAN, adoption, coûts d'opportunité et capital résiduel",
+      "impact": "Rentabilité artificielle ou risque financier omis",
+      "target": "G3/G4 CAPITAL",
+      "remedy": "Raccord capex, ramp-up, financement, coût opportunité et incertitude",
+      "acceptance": "Stress VAN, liquidité, repli, valeur terminale explicite",
+      "sources": [
+        "docs/G3-RAMP.md",
+        "docs/G3-FIRM.md",
+        "docs/G3-TRANSITION.md"
+      ],
+      "mechanisms": [
+        "M028",
+        "M029",
+        "M030",
+        "M034",
+        "M055"
+      ],
+      "engines": [
+        "E04",
+        "E05"
+      ],
+      "status": "PARTIAL",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-F05",
+      "type": "METHOD",
+      "origin": "G3.4",
+      "title": "Formation prix, coût marginal, concurrence et markups",
+      "impact": "Prix comportementaux sans pouvoir de marché identifié",
+      "target": "G3/G4 PRIX",
+      "remedy": "Modèles concurrents, demande hétérogène, coût marginal, pouvoir de marché",
+      "acceptance": "Benchmarks et tests contre cas de rétention, diffusion, entrée et sortie",
+      "sources": [
+        "docs/G3-MARKET.md",
+        "docs/G3-MARKET-DYNAMICS.md",
+        "docs/G3-MARKET-BOUNDARY.md",
+        "docs/G4-SECTOR.md"
+      ],
+      "mechanisms": [
+        "M035",
+        "M036",
+        "M037",
+        "M038",
+        "M042"
+      ],
+      "engines": [
+        "E02",
+        "E04",
+        "E05"
+      ],
+      "status": "PARTIAL",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-F06",
+      "type": "IMPLEMENTATION",
+      "origin": "G3.4",
+      "title": "Entrée/sortie dynamique, contrôle commun et consolidation",
+      "impact": "Capacités des firmes et structure de marché mal ajustées",
+      "target": "G3/G4",
+      "remedy": "Cohortes, entrées, sorties, liquidations, parts et propriété",
+      "acceptance": "Trajectoires de marchés réconciliées et contrôles HHI/ownership",
+      "sources": [
+        "docs/G3-MARKET-BOUNDARY.md",
+        "docs/G3-MARKET-DYNAMICS.md"
+      ],
+      "mechanisms": [
+        "M039",
+        "M040",
+        "M034"
+      ],
+      "engines": [
+        "E02",
+        "E05"
+      ],
+      "status": "PARTIAL",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-F07",
+      "type": "EMPIRICAL",
+      "origin": "G3.4",
+      "title": "Adoption, préférence humaine, prix et demande réelle",
+      "impact": "Marché fictif et sélection des cohortes",
+      "target": "P0/G5",
+      "remedy": "Séries IPSE, démographie, enquêtes adoption et données par métier",
+      "acceptance": "Contrats comparables, estimation incertitude et validation hors échantillon",
+      "sources": [
+        "docs/G3-MARKET.md",
+        "docs/G3-MARKET-DYNAMICS.md",
+        "docs/G3-MARKET-BOUNDARY.md"
+      ],
+      "mechanisms": [
+        "M029",
+        "M035",
+        "M036",
+        "M037",
+        "M039"
+      ],
+      "engines": [
+        "E03",
+        "E04"
+      ],
+      "status": "OPEN",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-S01",
+      "type": "DATA",
+      "origin": "G4 v0.2–0.3",
+      "title": "TES réel, vintage, source immuable et admission",
+      "impact": "Diagnostic empirique non admissible en production",
+      "target": "G4/E-G3",
+      "remedy": "Qualifier données, droits, unités et snapshots, exactitude indépendance",
+      "acceptance": "Reproduction sur snapshots, identité comptable et dossier admission signé",
+      "sources": [
+        "docs/G4-SECTOR.md"
+      ],
+      "mechanisms": [
+        "M043",
+        "M054",
+        "M063"
+      ],
+      "engines": [
+        "E01",
+        "E02"
+      ],
+      "status": "PARTIAL",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-S02",
+      "type": "METHOD",
+      "origin": "G4 v0.2–0.3",
+      "title": "Technologie produit/branche, mix et coefficients",
+      "impact": "Dépendance au choix technologique et agrégation",
+      "target": "G4/E-G3",
+      "remedy": "Sensibilité technologies alternatives, coefficients variables, parts et négatifs",
+      "acceptance": "Comparaison documentée des régimes et tests sans correction arbitraire",
+      "sources": [
+        "docs/G4-SECTOR.md"
+      ],
+      "mechanisms": [
+        "M043",
+        "M044",
+        "M062"
+      ],
+      "engines": [
+        "E02",
+        "E04"
+      ],
+      "status": "PARTIAL",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-S03",
+      "type": "METHOD",
+      "origin": "G4 v0.3",
+      "title": "Raccord prix acquisition/base, VA, D1, surplus mixte",
+      "impact": "Assimilation du surplus brut au profit ou du raccord à une taxe pure",
+      "target": "G4 CAPITAL/MACRO",
+      "remedy": "Ventilation, amortissement, revenu mixte, impôts et contributions",
+      "acceptance": "Réconciliation national/branche et ventilation traçable ou limites motivées",
+      "sources": [
+        "docs/G4-SECTOR.md"
+      ],
+      "mechanisms": [
+        "M027",
+        "M042",
+        "M052",
+        "M057"
+      ],
+      "engines": [
+        "E02",
+        "E05"
+      ],
+      "status": "PARTIAL",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-S04",
+      "type": "IMPLEMENTATION",
+      "origin": "G4 v0.4",
+      "title": "Pont micro-marché-sectoriel, échelle et usages",
+      "impact": "Transactions prises pour demande finale, double comptage",
+      "target": "G4/E-G3",
+      "remedy": "Usage final/intermédiaire, poids, origine, périodes, multi-marchés, stocks",
+      "acceptance": "Rejeu G3→G4, couverture et chevauchement contrôlés, validation empirique",
+      "sources": [
+        "docs/G4-SECTOR.md",
+        "docs/G3-ECONOMIC-BRIDGE.md"
+      ],
+      "mechanisms": [
+        "M022",
+        "M043",
+        "M044"
+      ],
+      "engines": [
+        "E01",
+        "E02",
+        "E05"
+      ],
+      "status": "PARTIAL",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-S05",
+      "type": "IMPLEMENTATION",
+      "origin": "G4 v0.4b",
+      "title": "Coûts fournisseurs, stocks et consolidation make/buy",
+      "impact": "Coût G3 consolidé et valeur G4 non raccordés intégralement",
+      "target": "G4 CAPITAL/OFFRE",
+      "remedy": "Réconcilier production vendue/invendue, coûts et stocks, internalisation auxiliaire",
+      "acceptance": "Pas de double comptage, capacités ajustées, dépenses initiales isolées",
+      "sources": [
+        "docs/G4-SECTOR.md"
+      ],
+      "mechanisms": [
+        "M022",
+        "M027",
+        "M032",
+        "M043"
+      ],
+      "engines": [
+        "E02",
+        "E05"
+      ],
+      "status": "PARTIAL",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-S06",
+      "type": "METHOD",
+      "origin": "G4 v0.5a",
+      "title": "Rationnement proportionnel et allocation alternative",
+      "impact": "Propagation mécanique, pas optimum ni allocation observée",
+      "target": "G4 OFFRE/E-G3",
+      "remedy": "Comparer priorités, règles locales et optimisation conditionnelle",
+      "acceptance": "Tests de faisabilité, cas extrêmes, sensibilité et benchmark concurrent",
+      "sources": [
+        "docs/G4-SECTOR.md"
+      ],
+      "mechanisms": [
+        "M014",
+        "M043",
+        "M045",
+        "M062"
+      ],
+      "engines": [
+        "E02",
+        "E04"
+      ],
+      "status": "PARTIAL",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-S07",
+      "type": "IMPLEMENTATION",
+      "origin": "G4 v0.5b",
+      "title": "Stocks domestiques/finals, pertes, obsolescence, commandes reportées",
+      "impact": "Absence d'amortissement et réapprovisionnement complets",
+      "target": "G4 OFFRE/CAPITAL",
+      "remedy": "Stocks séparés par origine/usage, délais, coûts, backlog et financement",
+      "acceptance": "Conservation matière/valeur, non-négativité, réconciliation des flux",
+      "sources": [
+        "docs/G4-SECTOR.md"
+      ],
+      "mechanisms": [
+        "M043",
+        "M045",
+        "M055"
+      ],
+      "engines": [
+        "E02",
+        "E05"
+      ],
+      "status": "PARTIAL",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-S08",
+      "type": "METHOD",
+      "origin": "G4 v0.5c",
+      "title": "Substitution imparfaite, réversibilité et adaptation endogène",
+      "impact": "Équivalence technique supposée, ordres et prix non articulés",
+      "target": "G4 OFFRE/PRIX",
+      "remedy": "Contraintes techniques, coûts de conversion, délais, règles concurrentes",
+      "acceptance": "Tests de nouveaux goulets, coût/qualité, reversibilité et absence de lookahead",
+      "sources": [
+        "docs/G4-SECTOR.md"
+      ],
+      "mechanisms": [
+        "M044",
+        "M045",
+        "M026",
+        "M032"
+      ],
+      "engines": [
+        "E02",
+        "E04"
+      ],
+      "status": "PARTIAL",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-S09",
+      "type": "IMPLEMENTATION",
+      "origin": "G4 v0.5c",
+      "title": "Capacités, investissements, financement et adaptation combinés",
+      "impact": "Pas de capital physique ni décision financière endogène",
+      "target": "G4 CAPITAL",
+      "remedy": "Capital vintages, dépréciation, délais, coût, crédit et ordre exogène/adaptatif",
+      "acceptance": "Bilan capital, flux financement et limites de capacité, stress surinvestissement",
+      "sources": [
+        "docs/G4-SECTOR.md",
+        "docs/G3-TRANSITION.md"
+      ],
+      "mechanisms": [
+        "M028",
+        "M032",
+        "M034",
+        "M055"
+      ],
+      "engines": [
+        "E02",
+        "E05"
+      ],
+      "status": "PARTIAL",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-S10",
+      "type": "METHOD",
+      "origin": "G4 v0.6a",
+      "title": "Prix, concurrence, mix, élasticités et saturation",
+      "impact": "Taux imposés, demande partielle, absence de prix d'équilibre",
+      "target": "G4 v0.6b+",
+      "remedy": "Modèles de prix et demande, budgets, effets croisés, sensibilité et estimation",
+      "acceptance": "Comptes nominaux/réels, budget fermé, cas limites, validation hors échantillon",
+      "sources": [
+        "docs/G4-SECTOR.md"
+      ],
+      "mechanisms": [
+        "M035",
+        "M036",
+        "M037",
+        "M038",
+        "M058"
+      ],
+      "engines": [
+        "E02",
+        "E04",
+        "E05"
+      ],
+      "status": "PARTIAL",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-S11",
+      "type": "IMPLEMENTATION",
+      "origin": "G4 v0.6a",
+      "title": "Réallocation demande, budgets, épargne et importations finales",
+      "impact": "Rebond non financé, absence de substitution entre dépenses",
+      "target": "G4 v0.6b",
+      "remedy": "Périmètre ménages distinct des autres usages, budget et épargne, demande importée",
+      "acceptance": "Conservation du budget, cohérence élasticités, cas prix et revenu nuls",
+      "sources": [
+        "docs/G4-SECTOR.md",
+        "docs/ARCH-002.md"
+      ],
+      "mechanisms": [
+        "M036",
+        "M053",
+        "M058"
+      ],
+      "engines": [
+        "E02",
+        "E04",
+        "E05"
+      ],
+      "status": "OPEN",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-S12",
+      "type": "IMPLEMENTATION",
+      "origin": "G4 v0.6a",
+      "title": "Boucles revenus, demande, capacités et prix",
+      "impact": "Pas de boucles fermées ni revenu disponible",
+      "target": "G4 MACRO",
+      "remedy": "Raccord rémunérations/capital/transferts à demande et offre",
+      "acceptance": "Équilibres conditionnels ou trajectoires, convergence et stress",
+      "sources": [
+        "docs/G4-SECTOR.md",
+        "docs/ARCH-002.md"
+      ],
+      "mechanisms": [
+        "M042",
+        "M052",
+        "M053",
+        "M055",
+        "M058"
+      ],
+      "engines": [
+        "E02",
+        "E04",
+        "E05"
+      ],
+      "status": "OPEN",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-S13",
+      "type": "EMPIRICAL",
+      "origin": "G4",
+      "title": "Plafonds, importations, stocks, adoption et prix réels",
+      "impact": "Hypothèses de choc non mesurées et annualisation fictive",
+      "target": "P0/G4/G5",
+      "remedy": "Données capacité, stocks, prix et comptes par vintage; calibrage et backtests",
+      "acceptance": "Comparaison sur épisodes observés, fourchettes et limites par branche",
+      "sources": [
+        "docs/G4-SECTOR.md"
+      ],
+      "mechanisms": [
+        "M029",
+        "M032",
+        "M035",
+        "M045",
+        "M063"
+      ],
+      "engines": [
+        "E03",
+        "E04"
+      ],
+      "status": "OPEN",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-S14",
+      "type": "IMPLEMENTATION",
+      "origin": "ARCH-002 L07",
+      "title": "Commerce, inter-pays, territoire, mobilité et énergie",
+      "impact": "Agrégation nationale masque dépendances et ressources",
+      "target": "G4 RESEAUX",
+      "remedy": "FIGARO/ICIO et données énergie, géographie et commerce, mappings",
+      "acceptance": "Identités inter-pays, origine import et contraintes, tests géographiques",
+      "sources": [
+        "docs/ARCH-002.md",
+        "docs/G4-SECTOR.md"
+      ],
+      "mechanisms": [
+        "M046",
+        "M047",
+        "M048"
+      ],
+      "engines": [
+        "E01",
+        "E02"
+      ],
+      "status": "OPEN",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-S15",
+      "type": "METHOD",
+      "origin": "ARCH-002 L08",
+      "title": "Emploi, heures/ETP, métiers, salaires et réallocation",
+      "impact": "Production ou exposition confondue avec emplois détruits",
+      "target": "G4 MACRO/G5",
+      "remedy": "Pont par tâches, temps, effectifs, mobilités, cohortes et salaires",
+      "acceptance": "Conservation des stocks/flux, validation par données et scénarios concurrents",
+      "sources": [
+        "docs/ARCH-002.md",
+        "docs/G3-TRANSITION.md",
+        "docs/G4-SECTOR.md"
+      ],
+      "mechanisms": [
+        "M049",
+        "M050",
+        "M051",
+        "M052",
+        "M054",
+        "M056"
+      ],
+      "engines": [
+        "E02",
+        "E04",
+        "E05"
+      ],
+      "status": "OPEN",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-S16",
+      "type": "IMPLEMENTATION",
+      "origin": "ARCH-002 L08",
+      "title": "Propriété, capital, fiscalité, redistribution et protection sociale",
+      "impact": "Surplus agrégé confondu avec revenu des ménages",
+      "target": "G4 MACRO",
+      "remedy": "Comptes institutionnels, cohortes, transferts, impôts et propriété",
+      "acceptance": "Réconciliation revenus disponibles, épargne, patrimoine, budget public",
+      "sources": [
+        "docs/ARCH-002.md",
+        "docs/DD-SHAPIRO-001-INTEGRATION.md"
+      ],
+      "mechanisms": [
+        "M042",
+        "M051",
+        "M053",
+        "M055",
+        "M056",
+        "M057"
+      ],
+      "engines": [
+        "E02",
+        "E05"
+      ],
+      "status": "OPEN",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-T01",
+      "type": "IMPLEMENTATION",
+      "origin": "RESULT/PROSPECT",
+      "title": "Investigation complète, interfaces, graphe et chemins multi-ordres",
+      "impact": "Modules isolés sans chaîne de preuves intégrée",
+      "target": "G5/E-G5",
+      "remedy": "18 sections, 13 interfaces, scénarios O1–O4+, seuils, arrêt, preuves",
+      "acceptance": "Rejeu bout-en-bout, couverture par identifiant et limites motivées",
+      "sources": [
+        "docs/RESULT-001.md",
+        "docs/PROSPECT-001.md",
+        "docs/G3-PROSPECTIVE-ENGINE.md",
+        "docs/ARCH-002.md"
+      ],
+      "mechanisms": [
+        "M060",
+        "M061",
+        "M062",
+        "M064"
+      ],
+      "engines": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05",
+        "E06"
+      ],
+      "status": "PARTIAL",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-T02",
+      "type": "EMPIRICAL",
+      "origin": "P0",
+      "title": "Identification causale, contrefactuels et données US",
+      "impact": "Thèse et causalité confondues, données descriptives seules",
+      "target": "P0/G5/E-G4",
+      "remedy": "BLS/BEA/FRED/ALFRED, vintages, designs concurrents, placebos et réfutation",
+      "acceptance": "Rejeu as-of, tests pré-tendances et hypothèses identifiantes, résultats négatifs",
+      "sources": [
+        "docs/DD-SHAPIRO-001-INTEGRATION.md",
+        "docs/ARCH-002.md",
+        "docs/BENCH-001.md"
+      ],
+      "mechanisms": [
+        "M049",
+        "M054",
+        "M059",
+        "M060",
+        "M061",
+        "M063"
+      ],
+      "engines": [
+        "E03",
+        "E04",
+        "E06"
+      ],
+      "status": "OPEN",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-T03",
+      "type": "METHOD",
+      "origin": "G0–G5",
+      "title": "Incertitude, sensibilité et validité externe",
+      "impact": "Précision artificielle, résultats dépendants des hypothèses",
+      "target": "TRANSVERSE/G5",
+      "remedy": "Stress, méthodes alternatives, propagation incertitude, revue indépendante",
+      "acceptance": "Intervalles conditionnels, tests négatifs, domaine de validité, preuve de revue",
+      "sources": [
+        "docs/BENCH-001.md",
+        "docs/PROSPECT-001.md",
+        "docs/ARCH-002.md"
+      ],
+      "mechanisms": [
+        "M061",
+        "M062",
+        "M063"
+      ],
+      "engines": [
+        "E02",
+        "E03",
+        "E04",
+        "E06"
+      ],
+      "status": "OPEN",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-T04",
+      "type": "PRODUCT",
+      "origin": "G5",
+      "title": "Déploiement, sécurité, droits, UX et exploitation",
+      "impact": "Prototype non publiable et non maintenable",
+      "target": "G5/E-G5/E-G6",
+      "remedy": "Hébergement, contrôle accès, sauvegarde, monitoring, revue sécurité",
+      "acceptance": "Recette réelle end-to-end et procédures de restauration/publication",
+      "sources": [
+        "docs/RUNBOOK-001.md",
+        "docs/UX-001.md",
+        "docs/ROADMAP.md"
+      ],
+      "mechanisms": [
+        "M063",
+        "M064"
+      ],
+      "engines": [
+        "E01",
+        "E06"
+      ],
+      "status": "OPEN",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": true,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-T05",
+      "type": "INTRINSIC",
+      "origin": "ARCH-002",
+      "title": "Incertitude future et identification non garantie",
+      "impact": "Prévisions certaines impossibles",
+      "target": "PERMANENT",
+      "remedy": "Domaine de validité, scénarios opposés, limites affichées et veille",
+      "acceptance": "Chaque résultat sépare fait, hypothèse, scénario, causalité et inconnu",
+      "sources": [
+        "docs/ARCH-002.md",
+        "docs/RESULT-001.md",
+        "docs/PROSPECT-001.md"
+      ],
+      "mechanisms": [
+        "M060",
+        "M061",
+        "M062",
+        "M063"
+      ],
+      "engines": [
+        "E03",
+        "E04",
+        "E06"
+      ],
+      "status": "PERMANENT",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": false,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    },
+    {
+      "id": "LIM-T06",
+      "type": "INTRINSIC",
+      "origin": "ARCH-002",
+      "title": "Exhaustivité scientifique et couverture universelle impossibles",
+      "impact": "Omissions et angles morts non éliminables absolument",
+      "target": "PERMANENT",
+      "remedy": "Audit périodique, couverture explicite et ajout de mécanismes",
+      "acceptance": "Aucune omission silencieuse, motif pour hors périmètre ou inconnu",
+      "sources": [
+        "docs/ARCH-002.md",
+        "docs/BENCH-001.md",
+        "docs/RESULT-001.md"
+      ],
+      "mechanisms": [
+        "M061",
+        "M062",
+        "M064"
+      ],
+      "engines": [
+        "E01",
+        "E04",
+        "E06"
+      ],
+      "status": "PERMANENT",
+      "dependencies": [],
+      "closure_evidence": [],
+      "publication_blocking": false,
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+    }
+  ]
+}
