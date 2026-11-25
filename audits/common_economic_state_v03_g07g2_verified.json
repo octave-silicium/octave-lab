@@ -19,7 +19,8 @@
   "artifact": {
     "id": 14996840969,
     "digest": "sha256:c093ed445e78db4903bf45085f624848d7c61228c5e6e4fb63fc97819f7634a9",
-    "expires_at": "2027-02-23T06:05:01Z"
+    "expires_at": "2027-02-23T06:05:01Z",
+    "drive_archive": "https://drive.google.com/file/d/1l7W2bFQBr9d_KLVRiHI-3uhHDfG-zTzu/view"
   },
   "synthetic_cases": {
     "opening_due_loan": 80,
