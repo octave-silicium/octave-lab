@@ -1,0 +1,95 @@
+{
+  "status": "SYNTHETIC_WORKING_CAPITAL_PATH_VERIFIED_NOT_EMPIRICAL",
+  "tested_commit": "c70325aecf287a0908731ec8652c27c850f77675",
+  "ci": {
+    "run": 45568868958,
+    "job": 139050303689,
+    "conclusion": "success",
+    "new_tests": 11,
+    "seconds": 0.092,
+    "regression_tests": 71,
+    "groups": {
+      "operating": 10,
+      "integrated": 10,
+      "shared": 35,
+      "capital": 16
+    }
+  },
+  "initial_ci": {
+    "run": 45568815037,
+    "conclusion": "success",
+    "new_tests": 8
+  },
+  "other_ci": [
+    {
+      "run": 45568815098,
+      "conclusion": "success",
+      "scope": "G4 financing qualification"
+    },
+    {
+      "run": 45568815045,
+      "conclusion": "success",
+      "scope": "G4 capital vintage qualification"
+    },
+    {
+      "run": 45568815034,
+      "conclusion": "success",
+      "scope": "G4 operating cash closure"
+    },
+    {
+      "run": 45568815029,
+      "conclusion": "success",
+      "scope": "LIMITATIONS-001 audit"
+    }
+  ],
+  "prior_general": {
+    "run": 45566463153,
+    "job": 139042363145,
+    "conclusion": "success",
+    "tests": 676,
+    "seconds": 45.324
+  },
+  "current_general": {
+    "run": 45568869019,
+    "job": 139050303560,
+    "status": "in_progress",
+    "conclusion": null
+  },
+  "fixtures": {
+    "local_vs_uniform": {
+      "desired": [
+        50,
+        50
+      ],
+      "uniform_served": 0,
+      "local_served": 50
+    },
+    "working_credit": {
+      "opening_cash": 15,
+      "facility": 40,
+      "draw": 15,
+      "consumption": 100
+    },
+    "supplier_credit": {
+      "opening_buyer_cash": 10,
+      "opening_supplier_cash": 20,
+      "invoice_approx": 20,
+      "consumption_approx": 100,
+      "paid_next_period": true,
+      "cash_created": 0
+    },
+    "shared_envelope": {
+      "bank_cap": 60,
+      "working_reserved": 40,
+      "investment_reserved": 20,
+      "total_draw_at_most": 60
+    },
+    "no_supply_draw": 0,
+    "overdue_bank_credit_veto": true,
+    "existing_trade_cap": 20,
+    "existing_trade_balance": 15,
+    "supplier_payroll_prefunding": true
+  },
+  "publication": "BLOCK_PUBLICATION",
+  "scientific_gates_promoted": 0
+}
