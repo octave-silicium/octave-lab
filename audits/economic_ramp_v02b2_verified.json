@@ -1,0 +1,667 @@
+{
+  "date": "2026-11-25",
+  "status": "TECHNICAL_ACCEPTANCE",
+  "tested_commit": "c422efc59eacdf1bc7f53b9e2bd1d25ad5658112",
+  "run_id": 45515730597,
+  "job_id": 138874535520,
+  "tests": 369,
+  "seconds": 13.439,
+  "conclusion": "success",
+  "fixture": "W002_RAMP_INTEGRATED",
+  "cases": {
+    "ramp:immediate": {
+      "npv_delta_eur": "-41741007823626003125/823823002267218",
+      "funding_gap_eur": "0",
+      "quarters": [
+        {
+          "quarter": 1,
+          "sales": 2875,
+          "headcount": 2,
+          "phase_mix": [
+            {
+              "phase": "reference",
+              "cohorts": 125,
+              "sales": 2875,
+              "paid_production_seconds": 900000,
+              "operation_sha256": "2d70bdb4e9d50bd316a18d1ff726141560744932742b98c5651d621ddc0923e9"
+            }
+          ],
+          "active_production_seconds": 716250,
+          "allocated_production_seconds": 900000,
+          "payroll_eur": "17500",
+          "closing_cash_eur": "37625/2"
+        },
+        {
+          "quarter": 2,
+          "sales": 2875,
+          "headcount": 2,
+          "phase_mix": [
+            {
+              "phase": "reference",
+              "cohorts": 125,
+              "sales": 2875,
+              "paid_production_seconds": 900000,
+              "operation_sha256": "2d70bdb4e9d50bd316a18d1ff726141560744932742b98c5651d621ddc0923e9"
+            }
+          ],
+          "active_production_seconds": 716250,
+          "allocated_production_seconds": 900000,
+          "payroll_eur": "17500",
+          "closing_cash_eur": "121175/6"
+        },
+        {
+          "quarter": 3,
+          "sales": 2875,
+          "headcount": 2,
+          "phase_mix": [
+            {
+              "phase": "robot",
+              "cohorts": 125,
+              "sales": 2875,
+              "paid_production_seconds": 0,
+              "operation_sha256": "8bf9290ff0f160f78f48650df75857514af1a9d69ccd008c8eb24a164a99fba5"
+            }
+          ],
+          "active_production_seconds": 0,
+          "allocated_production_seconds": 0,
+          "payroll_eur": "17500",
+          "closing_cash_eur": "436025/16"
+        },
+        {
+          "quarter": 4,
+          "sales": 2875,
+          "headcount": 2,
+          "phase_mix": [
+            {
+              "phase": "robot",
+              "cohorts": 125,
+              "sales": 2875,
+              "paid_production_seconds": 0,
+              "operation_sha256": "8bf9290ff0f160f78f48650df75857514af1a9d69ccd008c8eb24a164a99fba5"
+            }
+          ],
+          "active_production_seconds": 0,
+          "allocated_production_seconds": 0,
+          "payroll_eur": "17500",
+          "closing_cash_eur": "4876525/144"
+        },
+        {
+          "quarter": 5,
+          "sales": 2875,
+          "headcount": 2,
+          "phase_mix": [
+            {
+              "phase": "robot",
+              "cohorts": 125,
+              "sales": 2875,
+              "paid_production_seconds": 0,
+              "operation_sha256": "8bf9290ff0f160f78f48650df75857514af1a9d69ccd008c8eb24a164a99fba5"
+            }
+          ],
+          "active_production_seconds": 0,
+          "allocated_production_seconds": 0,
+          "payroll_eur": "17500",
+          "closing_cash_eur": "5108825/144"
+        },
+        {
+          "quarter": 6,
+          "sales": 2875,
+          "headcount": 2,
+          "phase_mix": [
+            {
+              "phase": "robot",
+              "cohorts": 125,
+              "sales": 2875,
+              "paid_production_seconds": 0,
+              "operation_sha256": "8bf9290ff0f160f78f48650df75857514af1a9d69ccd008c8eb24a164a99fba5"
+            }
+          ],
+          "active_production_seconds": 0,
+          "allocated_production_seconds": 0,
+          "payroll_eur": "17500",
+          "closing_cash_eur": "1785175/48"
+        },
+        {
+          "quarter": 7,
+          "sales": 2875,
+          "headcount": 2,
+          "phase_mix": [
+            {
+              "phase": "robot",
+              "cohorts": 125,
+              "sales": 2875,
+              "paid_production_seconds": 0,
+              "operation_sha256": "8bf9290ff0f160f78f48650df75857514af1a9d69ccd008c8eb24a164a99fba5"
+            }
+          ],
+          "active_production_seconds": 0,
+          "allocated_production_seconds": 0,
+          "payroll_eur": "17500",
+          "closing_cash_eur": "5616625/144"
+        },
+        {
+          "quarter": 8,
+          "sales": 2875,
+          "headcount": 2,
+          "phase_mix": [
+            {
+              "phase": "robot",
+              "cohorts": 125,
+              "sales": 2875,
+              "paid_production_seconds": 0,
+              "operation_sha256": "8bf9290ff0f160f78f48650df75857514af1a9d69ccd008c8eb24a164a99fba5"
+            }
+          ],
+          "active_production_seconds": 0,
+          "allocated_production_seconds": 0,
+          "payroll_eur": "17500",
+          "closing_cash_eur": "5892125/144"
+        }
+      ],
+      "sha256": "52d3d21ce63fda7dfae11b12e69ab7371d981a8b1d2f58ee105c265e05878c3e"
+    },
+    "ramp:gradual": {
+      "npv_delta_eur": "-40110811101197253125/823823002267218",
+      "funding_gap_eur": "0",
+      "quarters": [
+        {
+          "quarter": 1,
+          "sales": 2875,
+          "headcount": 2,
+          "phase_mix": [
+            {
+              "phase": "reference",
+              "cohorts": 125,
+              "sales": 2875,
+              "paid_production_seconds": 900000,
+              "operation_sha256": "2d70bdb4e9d50bd316a18d1ff726141560744932742b98c5651d621ddc0923e9"
+            }
+          ],
+          "active_production_seconds": 716250,
+          "allocated_production_seconds": 900000,
+          "payroll_eur": "17500",
+          "closing_cash_eur": "37625/2"
+        },
+        {
+          "quarter": 2,
+          "sales": 2875,
+          "headcount": 2,
+          "phase_mix": [
+            {
+              "phase": "reference",
+              "cohorts": 125,
+              "sales": 2875,
+              "paid_production_seconds": 900000,
+              "operation_sha256": "2d70bdb4e9d50bd316a18d1ff726141560744932742b98c5651d621ddc0923e9"
+            }
+          ],
+          "active_production_seconds": 716250,
+          "allocated_production_seconds": 900000,
+          "payroll_eur": "17500",
+          "closing_cash_eur": "121175/6"
+        },
+        {
+          "quarter": 3,
+          "sales": 2875,
+          "headcount": 2,
+          "phase_mix": [
+            {
+              "phase": "reference",
+              "cohorts": 100,
+              "sales": 2300,
+              "paid_production_seconds": 720000,
+              "operation_sha256": "2d70bdb4e9d50bd316a18d1ff726141560744932742b98c5651d621ddc0923e9"
+            },
+            {
+              "phase": "robot",
+              "cohorts": 25,
+              "sales": 575,
+              "paid_production_seconds": 0,
+              "operation_sha256": "8bf9290ff0f160f78f48650df75857514af1a9d69ccd008c8eb24a164a99fba5"
+            }
+          ],
+          "active_production_seconds": 573000,
+          "allocated_production_seconds": 720000,
+          "payroll_eur": "17500",
+          "closing_cash_eur": "1359055/48"
+        },
+        {
+          "quarter": 4,
+          "sales": 2875,
+          "headcount": 2,
+          "phase_mix": [
+            {
+              "phase": "reference",
+              "cohorts": 50,
+              "sales": 1150,
+              "paid_production_seconds": 360000,
+              "operation_sha256": "2d70bdb4e9d50bd316a18d1ff726141560744932742b98c5651d621ddc0923e9"
+            },
+            {
+              "phase": "robot",
+              "cohorts": 75,
+              "sales": 1725,
+              "paid_production_seconds": 0,
+              "operation_sha256": "8bf9290ff0f160f78f48650df75857514af1a9d69ccd008c8eb24a164a99fba5"
+            }
+          ],
+          "active_production_seconds": 286500,
+          "allocated_production_seconds": 360000,
+          "payroll_eur": "17500",
+          "closing_cash_eur": "5156915/144"
+        },
+        {
+          "quarter": 5,
+          "sales": 2875,
+          "headcount": 2,
+          "phase_mix": [
+            {
+              "phase": "robot",
+              "cohorts": 125,
+              "sales": 2875,
+              "paid_production_seconds": 0,
+              "operation_sha256": "8bf9290ff0f160f78f48650df75857514af1a9d69ccd008c8eb24a164a99fba5"
+            }
+          ],
+          "active_production_seconds": 0,
+          "allocated_production_seconds": 0,
+          "payroll_eur": "17500",
+          "closing_cash_eur": "5414705/144"
+        },
+        {
+          "quarter": 6,
+          "sales": 2875,
+          "headcount": 2,
+          "phase_mix": [
+            {
+              "phase": "robot",
+              "cohorts": 125,
+              "sales": 2875,
+              "paid_production_seconds": 0,
+              "operation_sha256": "8bf9290ff0f160f78f48650df75857514af1a9d69ccd008c8eb24a164a99fba5"
+            }
+          ],
+          "active_production_seconds": 0,
+          "allocated_production_seconds": 0,
+          "payroll_eur": "17500",
+          "closing_cash_eur": "629045/16"
+        },
+        {
+          "quarter": 7,
+          "sales": 2875,
+          "headcount": 2,
+          "phase_mix": [
+            {
+              "phase": "robot",
+              "cohorts": 125,
+              "sales": 2875,
+              "paid_production_seconds": 0,
+              "operation_sha256": "8bf9290ff0f160f78f48650df75857514af1a9d69ccd008c8eb24a164a99fba5"
+            }
+          ],
+          "active_production_seconds": 0,
+          "allocated_production_seconds": 0,
+          "payroll_eur": "17500",
+          "closing_cash_eur": "5922505/144"
+        },
+        {
+          "quarter": 8,
+          "sales": 2875,
+          "headcount": 2,
+          "phase_mix": [
+            {
+              "phase": "robot",
+              "cohorts": 125,
+              "sales": 2875,
+              "paid_production_seconds": 0,
+              "operation_sha256": "8bf9290ff0f160f78f48650df75857514af1a9d69ccd008c8eb24a164a99fba5"
+            }
+          ],
+          "active_production_seconds": 0,
+          "allocated_production_seconds": 0,
+          "payroll_eur": "17500",
+          "closing_cash_eur": "6198005/144"
+        }
+      ],
+      "sha256": "f0b8d1f05f5f73191cf9ac7a50743aaad0d4facef6f7f174bd6c61df879aca17"
+    },
+    "ramp:capex-stress": {
+      "npv_delta_eur": "-48187507201856253125/823823002267218",
+      "funding_gap_eur": "0",
+      "quarters": [
+        {
+          "quarter": 1,
+          "sales": 2875,
+          "headcount": 2,
+          "phase_mix": [
+            {
+              "phase": "reference",
+              "cohorts": 125,
+              "sales": 2875,
+              "paid_production_seconds": 900000,
+              "operation_sha256": "2d70bdb4e9d50bd316a18d1ff726141560744932742b98c5651d621ddc0923e9"
+            }
+          ],
+          "active_production_seconds": 716250,
+          "allocated_production_seconds": 900000,
+          "payroll_eur": "17500",
+          "closing_cash_eur": "37625/2"
+        },
+        {
+          "quarter": 2,
+          "sales": 2875,
+          "headcount": 2,
+          "phase_mix": [
+            {
+              "phase": "reference",
+              "cohorts": 125,
+              "sales": 2875,
+              "paid_production_seconds": 900000,
+              "operation_sha256": "2d70bdb4e9d50bd316a18d1ff726141560744932742b98c5651d621ddc0923e9"
+            }
+          ],
+          "active_production_seconds": 716250,
+          "allocated_production_seconds": 900000,
+          "payroll_eur": "17500",
+          "closing_cash_eur": "61175/6"
+        },
+        {
+          "quarter": 3,
+          "sales": 2875,
+          "headcount": 2,
+          "phase_mix": [
+            {
+              "phase": "reference",
+              "cohorts": 100,
+              "sales": 2300,
+              "paid_production_seconds": 720000,
+              "operation_sha256": "2d70bdb4e9d50bd316a18d1ff726141560744932742b98c5651d621ddc0923e9"
+            },
+            {
+              "phase": "robot",
+              "cohorts": 25,
+              "sales": 575,
+              "paid_production_seconds": 0,
+              "operation_sha256": "8bf9290ff0f160f78f48650df75857514af1a9d69ccd008c8eb24a164a99fba5"
+            }
+          ],
+          "active_production_seconds": 573000,
+          "allocated_production_seconds": 720000,
+          "payroll_eur": "17500",
+          "closing_cash_eur": "879055/48"
+        },
+        {
+          "quarter": 4,
+          "sales": 2875,
+          "headcount": 2,
+          "phase_mix": [
+            {
+              "phase": "reference",
+              "cohorts": 50,
+              "sales": 1150,
+              "paid_production_seconds": 360000,
+              "operation_sha256": "2d70bdb4e9d50bd316a18d1ff726141560744932742b98c5651d621ddc0923e9"
+            },
+            {
+              "phase": "robot",
+              "cohorts": 75,
+              "sales": 1725,
+              "paid_production_seconds": 0,
+              "operation_sha256": "8bf9290ff0f160f78f48650df75857514af1a9d69ccd008c8eb24a164a99fba5"
+            }
+          ],
+          "active_production_seconds": 286500,
+          "allocated_production_seconds": 360000,
+          "payroll_eur": "17500",
+          "closing_cash_eur": "3716915/144"
+        },
+        {
+          "quarter": 5,
+          "sales": 2875,
+          "headcount": 2,
+          "phase_mix": [
+            {
+              "phase": "robot",
+              "cohorts": 125,
+              "sales": 2875,
+              "paid_production_seconds": 0,
+              "operation_sha256": "8bf9290ff0f160f78f48650df75857514af1a9d69ccd008c8eb24a164a99fba5"
+            }
+          ],
+          "active_production_seconds": 0,
+          "allocated_production_seconds": 0,
+          "payroll_eur": "17500",
+          "closing_cash_eur": "3974705/144"
+        },
+        {
+          "quarter": 6,
+          "sales": 2875,
+          "headcount": 2,
+          "phase_mix": [
+            {
+              "phase": "robot",
+              "cohorts": 125,
+              "sales": 2875,
+              "paid_production_seconds": 0,
+              "operation_sha256": "8bf9290ff0f160f78f48650df75857514af1a9d69ccd008c8eb24a164a99fba5"
+            }
+          ],
+          "active_production_seconds": 0,
+          "allocated_production_seconds": 0,
+          "payroll_eur": "17500",
+          "closing_cash_eur": "469045/16"
+        },
+        {
+          "quarter": 7,
+          "sales": 2875,
+          "headcount": 2,
+          "phase_mix": [
+            {
+              "phase": "robot",
+              "cohorts": 125,
+              "sales": 2875,
+              "paid_production_seconds": 0,
+              "operation_sha256": "8bf9290ff0f160f78f48650df75857514af1a9d69ccd008c8eb24a164a99fba5"
+            }
+          ],
+          "active_production_seconds": 0,
+          "allocated_production_seconds": 0,
+          "payroll_eur": "17500",
+          "closing_cash_eur": "4482505/144"
+        },
+        {
+          "quarter": 8,
+          "sales": 2875,
+          "headcount": 2,
+          "phase_mix": [
+            {
+              "phase": "robot",
+              "cohorts": 125,
+              "sales": 2875,
+              "paid_production_seconds": 0,
+              "operation_sha256": "8bf9290ff0f160f78f48650df75857514af1a9d69ccd008c8eb24a164a99fba5"
+            }
+          ],
+          "active_production_seconds": 0,
+          "allocated_production_seconds": 0,
+          "payroll_eur": "17500",
+          "closing_cash_eur": "4758005/144"
+        }
+      ],
+      "sha256": "899cb44f925bff41693976e184a1c41774557566ab9cc3bd85699d40961d82c5"
+    },
+    "ramp:unfunded": {
+      "npv_delta_eur": "-40110811101197253125/823823002267218",
+      "funding_gap_eur": "46375/2",
+      "quarters": [
+        {
+          "quarter": 1,
+          "sales": 2875,
+          "headcount": 2,
+          "phase_mix": [
+            {
+              "phase": "reference",
+              "cohorts": 125,
+              "sales": 2875,
+              "paid_production_seconds": 900000,
+              "operation_sha256": "2d70bdb4e9d50bd316a18d1ff726141560744932742b98c5651d621ddc0923e9"
+            }
+          ],
+          "active_production_seconds": 716250,
+          "allocated_production_seconds": 900000,
+          "payroll_eur": "17500",
+          "closing_cash_eur": "37625/2"
+        },
+        {
+          "quarter": 2,
+          "sales": 2875,
+          "headcount": 2,
+          "phase_mix": [
+            {
+              "phase": "reference",
+              "cohorts": 125,
+              "sales": 2875,
+              "paid_production_seconds": 900000,
+              "operation_sha256": "2d70bdb4e9d50bd316a18d1ff726141560744932742b98c5651d621ddc0923e9"
+            }
+          ],
+          "active_production_seconds": 716250,
+          "allocated_production_seconds": 900000,
+          "payroll_eur": "17500",
+          "closing_cash_eur": "-84625/6"
+        },
+        {
+          "quarter": 3,
+          "sales": 2875,
+          "headcount": 2,
+          "phase_mix": [
+            {
+              "phase": "reference",
+              "cohorts": 100,
+              "sales": 2300,
+              "paid_production_seconds": 720000,
+              "operation_sha256": "2d70bdb4e9d50bd316a18d1ff726141560744932742b98c5651d621ddc0923e9"
+            },
+            {
+              "phase": "robot",
+              "cohorts": 25,
+              "sales": 575,
+              "paid_production_seconds": 0,
+              "operation_sha256": "8bf9290ff0f160f78f48650df75857514af1a9d69ccd008c8eb24a164a99fba5"
+            }
+          ],
+          "active_production_seconds": 573000,
+          "allocated_production_seconds": 720000,
+          "payroll_eur": "17500",
+          "closing_cash_eur": "-253745/48"
+        },
+        {
+          "quarter": 4,
+          "sales": 2875,
+          "headcount": 2,
+          "phase_mix": [
+            {
+              "phase": "reference",
+              "cohorts": 50,
+              "sales": 1150,
+              "paid_production_seconds": 360000,
+              "operation_sha256": "2d70bdb4e9d50bd316a18d1ff726141560744932742b98c5651d621ddc0923e9"
+            },
+            {
+              "phase": "robot",
+              "cohorts": 75,
+              "sales": 1725,
+              "paid_production_seconds": 0,
+              "operation_sha256": "8bf9290ff0f160f78f48650df75857514af1a9d69ccd008c8eb24a164a99fba5"
+            }
+          ],
+          "active_production_seconds": 286500,
+          "allocated_production_seconds": 360000,
+          "payroll_eur": "17500",
+          "closing_cash_eur": "419315/144"
+        },
+        {
+          "quarter": 5,
+          "sales": 2875,
+          "headcount": 2,
+          "phase_mix": [
+            {
+              "phase": "robot",
+              "cohorts": 125,
+              "sales": 2875,
+              "paid_production_seconds": 0,
+              "operation_sha256": "8bf9290ff0f160f78f48650df75857514af1a9d69ccd008c8eb24a164a99fba5"
+            }
+          ],
+          "active_production_seconds": 0,
+          "allocated_production_seconds": 0,
+          "payroll_eur": "17500",
+          "closing_cash_eur": "1497905/144"
+        },
+        {
+          "quarter": 6,
+          "sales": 2875,
+          "headcount": 2,
+          "phase_mix": [
+            {
+              "phase": "robot",
+              "cohorts": 125,
+              "sales": 2875,
+              "paid_production_seconds": 0,
+              "operation_sha256": "8bf9290ff0f160f78f48650df75857514af1a9d69ccd008c8eb24a164a99fba5"
+            }
+          ],
+          "active_production_seconds": 0,
+          "allocated_production_seconds": 0,
+          "payroll_eur": "17500",
+          "closing_cash_eur": "283445/16"
+        },
+        {
+          "quarter": 7,
+          "sales": 2875,
+          "headcount": 2,
+          "phase_mix": [
+            {
+              "phase": "robot",
+              "cohorts": 125,
+              "sales": 2875,
+              "paid_production_seconds": 0,
+              "operation_sha256": "8bf9290ff0f160f78f48650df75857514af1a9d69ccd008c8eb24a164a99fba5"
+            }
+          ],
+          "active_production_seconds": 0,
+          "allocated_production_seconds": 0,
+          "payroll_eur": "17500",
+          "closing_cash_eur": "3604105/144"
+        },
+        {
+          "quarter": 8,
+          "sales": 2875,
+          "headcount": 2,
+          "phase_mix": [
+            {
+              "phase": "robot",
+              "cohorts": 125,
+              "sales": 2875,
+              "paid_production_seconds": 0,
+              "operation_sha256": "8bf9290ff0f160f78f48650df75857514af1a9d69ccd008c8eb24a164a99fba5"
+            }
+          ],
+          "active_production_seconds": 0,
+          "allocated_production_seconds": 0,
+          "payroll_eur": "17500",
+          "closing_cash_eur": "4657205/144"
+        }
+      ],
+      "sha256": "a982686d1858757703bc716c867da8f508782262d089d1aa004f8817fcaad55e"
+    },
+    "matched_lower_demand": {
+      "npv_delta_eur": "-40110811101197253125/823823002267218",
+      "funding_gap_eur": "1901995/144",
+      "sales_per_quarter": 2250,
+      "sha256": "5069ad814947aadcea0bb388d39cbf90829a437e27b3d8673b3ed07ac5ecd9c7"
+    }
+  },
+  "scientific_gate_promoted": false,
+  "publication": "BLOCK_PUBLICATION"
+}
