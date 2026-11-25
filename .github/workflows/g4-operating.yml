@@ -1,0 +1,21 @@
+name: G4 v0.7g3b operating cash closure
+on:
+  push:
+    paths:
+      - 'pipeline/economic_operating_path.py'
+      - 'tests/test_economic_operating_path.py'
+      - '.github/workflows/g4-operating.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  operating:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest discover -s tests -p 'test_economic_operating_path.py' -v
+      - run: python -m unittest discover -s tests -p 'test_economic_integrated_path.py' -v
+      - run: python -m unittest discover -s tests -p 'test_economic_shared*.py' -v
