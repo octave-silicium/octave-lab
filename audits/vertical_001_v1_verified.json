@@ -1,0 +1,66 @@
+{
+  "study": "VERTICAL-001",
+  "phase": "V1",
+  "publication": "BLOCK_PUBLICATION",
+  "causal_identification": "NOT_IDENTIFIED",
+  "sources": {
+    "urssaf_headcount": {
+      "status": "PARSED_INTERNAL",
+      "sha256": "9ec16fb077e554518f5a1ade579684a8c91d56f293c7b9897f07b40226833222",
+      "same_vintage_bytes": true,
+      "complete_periods": 14,
+      "descriptive_comparisons": 10,
+      "blocked_periods": 0,
+      "level_only_count": 0,
+      "blocked_change_count": 0
+    },
+    "urssaf_dpae": {
+      "status": "PARSED_INTERNAL",
+      "sha256": "42cd99124b1ef5f0a39afc481c42e70d5adc0fbfb535a7cb53f2653dfd41f549",
+      "same_vintage_bytes": true,
+      "complete_periods": 12,
+      "descriptive_comparisons": 8,
+      "blocked_periods": 0,
+      "level_only_count": 0,
+      "blocked_change_count": 0
+    },
+    "eurostat_ai": {
+      "status": "PARSED_INTERNAL",
+      "sha256": "0c701942ea3d15bd1350e6938b27a5713f9d39f366b620723995b98077a469a8",
+      "same_vintage_bytes": true,
+      "complete_periods": 0,
+      "descriptive_comparisons": 0,
+      "blocked_periods": 0,
+      "level_only_count": 3,
+      "blocked_change_count": 2
+    }
+  },
+  "result_sha256": "a8345a8aace527d480bd0ba9a148804468b9205ab683a8b4273da439ae7486a1",
+  "registry_sha256": {
+    "economic_mechanisms_v2.json": "7f7fd86bf1a9a9f017689627dcc36dcf77cef8aaa9a6cdf017088e75f1e44694",
+    "transversal_enrichment_v1.json": "14ecd88e76a6f08da49087dab0128ff7b80f7fbdbefff4a3581509ec5f4a99d2",
+    "shapiro_enrichment_v1.json": "0e79a721f25ac9bfb748d96da1b2a6d61a85c30274e723238aa0b123223034d8",
+    "investigation_result_v1.json": "a18023fb3ea2847425ae3190f79e55bd9d7cf1a2725135b6d0b4fd38a16653ee",
+    "multi_order_prospective_v1.json": "abd8dfeebcfa63d2bb225ce7720228c5f3fc7d63efec95b370e14b00d9c32cbc",
+    "limitations_v1.json": "cf2b87da03260c5fa50c5c0dbb959622c8f7f96530d490e8a70fe5cff6e253b6",
+    "source_rights.json": "bbc7b4d34b64a9580dcc3ecb0384f99c9397d2a8c11453ba06ba6909172a53b6",
+    "series_events.json": "06aca0784cb2e399eb0ccb4ec4062cf355efa0986e795200f2814263558a5a24"
+  },
+  "oem_comparator_status": "BLOCKED_MISSING_DATA",
+  "ci": {
+    "run": 45675496217,
+    "job": 139421798810,
+    "conclusion": "success",
+    "tested_commit": "b0cbd3089d18cbeb8fd90ca10f41426eee17dd22",
+    "new_tests": 8,
+    "seconds": 0.002
+  },
+  "prior_general": {
+    "run": 45570905196,
+    "job": 139057010617,
+    "conclusion": "success",
+    "tests": 694,
+    "seconds": 45.055
+  },
+  "scope": "Internal execution only, no new observations logged or archived publicly; exact source bytes agree with PILOT-001. Internal full result can be regenerated on a trusted machine using --internal-output outside repository; CI did not persist it."
+}
