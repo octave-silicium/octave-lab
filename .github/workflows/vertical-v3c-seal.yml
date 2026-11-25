@@ -1,0 +1,25 @@
+name: VERTICAL-001 V3c encrypted evidence transfer
+on:
+  push:
+    paths:
+      - '.github/workflows/vertical-v3c-seal.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  seal:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pipeline.vertical_v3c_seal "${RUNNER_TEMP}/octave-v2b2.cms"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: octave-v3c-encrypted
+          path: ${{ runner.temp }}/octave-v2b2.cms
+          if-no-files-found: error
+          retention-days: 7
