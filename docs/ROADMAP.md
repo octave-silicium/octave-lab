@@ -120,3 +120,6 @@ Décision utilisateur : [UX-001](UX-001.md) et [RESULT-001](RESULT-001.md) compl
 
 ## G3.4 v0.2a — Diffusion et financement
 [G3-MARKET-DYNAMICS](G3-MARKET-DYNAMICS.md) : décisions retardées, seuil retour simple, crédit plafonné, adoption hétérogène, cessation de l'offre en cas de manque de liquidité, bridge trésorerie partagé, rattachement investigation/PROSPECT. Recette G3 réussie : 397 tests, [audit](../audits/economic_market_dynamics_v02a_verified.json). Entrée/consolidation, internalisation, coût marginal, calibration et P0 restent ouverts.
+
+## G3.4 v0.2b — Frontières du marché et chaîne de valeur
+[G3-MARKET-BOUNDARY](G3-MARKET-BOUNDARY.md) : cessation effective prolongée, entrée conditionnelle statique, contrôle commun et HHI, internalisation rejouée avec coûts et heures directs, séparation marge/markup/rente. Recette à confirmer. Passage G4 via TES et comptabilité de VA à qualifier, P0 ouvert ; pas de nouveau moteur.

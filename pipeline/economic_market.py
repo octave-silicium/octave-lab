@@ -16,6 +16,7 @@ class Seller:
     reference:tuple # process, schedule, design, economics
     alternative:tuple
     baseline_sales:int
+    entry_weight:int=0 # positive only for a potential entrant, zero historical sales
 
 @dataclass(frozen=True)
 class Policy:
@@ -25,6 +26,12 @@ class Policy:
     price_adjustment_cents:int
     human_provenance:bool
     preference_discount_bp:int # buyers' hypothetical effective price discount, not actual price
+
+@dataclass(frozen=True)
+class InternalProduction:
+    reference_seller:str
+    process:tuple # process, schedule, design, economics, same output contract
+    assumptions:str
 
 @dataclass(frozen=True)
 class Market:
@@ -38,6 +45,8 @@ class Market:
     internalized_units:int # explicit conditional quantity, not causal prediction
     policies:tuple
     assumptions:str
+    internal_production:InternalProduction|None=None
+    ownership:tuple=() # (seller, ultimate control group), complete if supplied
     @property
     def key(self):return identity(self.id,self.revision)
 
@@ -71,9 +80,11 @@ def run(m,unavailable=()):
     require(isinstance(unavailable,tuple) and len(set(unavailable))==len(unavailable) and set(unavailable)<=set(sellers),"UNAVAILABLE_SELLER")
     baseline=sum(s.baseline_sales for s in sellers.values())
     require(0<baseline<=m.saturation_units,"BASELINE_DEMAND")
+    groups=unique(m.ownership,lambda x:x[0]) if m.ownership else {k:(k,k) for k in sellers}
+    require(set(groups)==set(sellers) and all(words(v[1]) for v in groups.values()),"OWNERSHIP_COVERAGE")
     prepared={};scope=None;contract=None;horizon=None;weights={};caps={};posted={}
     for k,s in sorted(sellers.items()):
-        p=policies[k];require(words(k) and integer(s.baseline_sales,1,10**6) and type(p.adopted) is bool and type(p.human_provenance) is bool and integer(p.pass_through_bp,0,20000) and integer(p.price_adjustment_cents,-10**7,10**7) and integer(p.preference_discount_bp,0,9000),"POLICY")
+        p=policies[k];require(words(k) and integer(s.baseline_sales,0,10**6) and integer(s.entry_weight,0,10**6) and ((s.baseline_sales>0 and s.entry_weight==0) or (s.baseline_sales==0 and s.entry_weight>0)) and type(p.adopted) is bool and type(p.human_provenance) is bool and integer(p.pass_through_bp,0,20000) and integer(p.price_adjustment_cents,-10**7,10**7) and integer(p.preference_discount_bp,0,9000),"POLICY")
         require(p.human_provenance or p.preference_discount_bp==0,"PREFERENCE_PROVENANCE")
         bp,bs,bd,bc=s.reference;ap,ats,ad,ac=s.alternative
         # Compare even a non-adopted variant only when selected; no unsupported quality transfer.
@@ -91,7 +102,7 @@ def run(m,unavailable=()):
         raw=bc.price_cents_per_sale+F(p.pass_through_bp,10000)*(c1-c0)+p.price_adjustment_cents
         require(raw>=1,"NONPOSITIVE_PRICE")
         price=int(raw+F(1,2));effective=price*F(10000-p.preference_discount_bp,10000)
-        weights[k]=F(s.baseline_sales)*(F(bc.price_cents_per_sale)/effective)**m.substitution_power
+        weights[k]=F(s.baseline_sales or s.entry_weight)*(F(bc.price_cents_per_sale)/effective)**m.substitution_power
         caps[k]=al["correct_outputs"] if k not in unavailable else 0;posted[k]=price
         prepared[k]=(s,p,op,bc,tc,c0,c1)
     # Fixed base-basket index of actual posted prices. Preference affects allocation only.
@@ -99,7 +110,7 @@ def run(m,unavailable=()):
     active_keys=[k for k in sellers if k not in unavailable]
     matched_spend=sum(sellers[k].baseline_sales*sellers[k].reference[3].price_cents_per_sale for k in active_keys)
     basket=sum(sellers[k].baseline_sales*posted[k] for k in active_keys)
-    ratio=F(basket,matched_spend) if active_keys else F(1)
+    ratio=F(basket,matched_spend) if matched_spend else F(1)
     raw=baseline*(1-F(m.demand_elasticity_bp,10000)*(ratio-1))
     # With no external seller, retain reference potential (no observed price).
     potential=min(m.saturation_units,max(0,int(raw+F(1,2))))
@@ -110,6 +121,7 @@ def run(m,unavailable=()):
     rows=[]
     for k,(s,p,op,bc,tc,c0,c1) in prepared.items():
         bl=ledger(op["result"]["baseline"],replace(bc,max_sales=s.baseline_sales))
+        if s.baseline_sales==0:bl={**bl,"revenue_eur":"0","cash_operating_surplus_eur":"0","paid_human_seconds":0,"active_human_seconds":0}
         al=ledger(op["result"]["alternative"],replace(tc,max_sales=sold[k],price_cents_per_sale=posted[k]))
         available=k not in unavailable
         if not available:al={**al,"revenue_eur":"0","cash_operating_surplus_eur":"0","paid_human_seconds":0,"active_human_seconds":0,"unsold_correct_outputs":0,"payroll_eur":"0","cash_cost_eur":"0"}
@@ -123,13 +135,28 @@ def run(m,unavailable=()):
         volume_revenue=F((sold[k]-s.baseline_sales)*bc.price_cents_per_sale,100)
         price_revenue=F(sold[k]*(posted[k]-bc.price_cents_per_sale),100)
         require(rev-base_rev==volume_revenue+price_revenue,"REVENUE_BRIDGE")
-        rows.append({"seller":k,"available":available,"adopted":p.adopted,"baseline_sales":s.baseline_sales,"sales":sold[k],"capacity":caps[k],"baseline_price_eur":str(F(bc.price_cents_per_sale,100)),"price_eur":str(F(posted[k],100)) if available else None,"average_cost_before_eur":str(c0/100),"average_cost_after_eur":str(c1/100),"volume_change":sold[k]-s.baseline_sales,"market_volume_component":str(market_volume_component),"share_reallocation_component":str(share_component),"volume_share":str(share) if total else None,"price_revenue_component_eur":str(price_revenue),"volume_revenue_component_eur":str(volume_revenue),"baseline_revenue_eur":bl["revenue_eur"],"revenue_eur":al["revenue_eur"],"baseline_cash_surplus_eur":bl["cash_operating_surplus_eur"],"cash_surplus_eur":al["cash_operating_surplus_eur"],"payroll_eur":al["payroll_eur"],"nonpayroll_eur":str(F(al["cash_cost_eur"])-F(al["payroll_eur"])),"baseline_paid_seconds":bl["paid_human_seconds"],"paid_seconds":al["paid_human_seconds"],"baseline_active_seconds":bl["active_human_seconds"],"active_seconds":al["active_human_seconds"],"operation_sha256":op["sha256"],"unsold_correct_outputs":al["unsold_correct_outputs"]})
+        rows.append({"seller":k,"control_group":groups[k][1],"potential_entrant":s.baseline_sales==0,"available":available,"adopted":p.adopted,"baseline_sales":s.baseline_sales,"sales":sold[k],"capacity":caps[k],"baseline_price_eur":str(F(bc.price_cents_per_sale,100)),"price_eur":str(F(posted[k],100)) if available else None,"average_cost_before_eur":str(c0/100),"average_cost_after_eur":str(c1/100),"volume_change":sold[k]-s.baseline_sales,"market_volume_component":str(market_volume_component),"share_reallocation_component":str(share_component),"volume_share":str(share) if total else None,"price_revenue_component_eur":str(price_revenue),"volume_revenue_component_eur":str(volume_revenue),"baseline_revenue_eur":bl["revenue_eur"],"revenue_eur":al["revenue_eur"],"baseline_cash_surplus_eur":bl["cash_operating_surplus_eur"],"cash_surplus_eur":al["cash_operating_surplus_eur"],"cash_margin_fraction":str(F(al["cash_operating_surplus_eur"])/F(al["revenue_eur"])) if F(al["revenue_eur"]) else None,"marginal_cost_markup":None,"economic_rent":None,"payroll_eur":al["payroll_eur"],"nonpayroll_eur":str(F(al["cash_cost_eur"])-F(al["payroll_eur"])),"baseline_paid_seconds":bl["paid_human_seconds"],"paid_seconds":al["paid_human_seconds"],"baseline_active_seconds":bl["active_human_seconds"],"active_seconds":al["active_human_seconds"],"operation_sha256":op["sha256"],"unsold_correct_outputs":al["unsold_correct_outputs"]})
     require(sum(F(r["share_reallocation_component"]) for r in rows)==0,"SHARE_CONSERVATION")
     require(total+unserved+m.internalized_units==potential,"MARKET_VOLUME_CONSERVATION")
     sumf=lambda k:sum(F(r[k]) for r in rows)
     revenue=sumf("revenue_eur");base_revenue=sumf("baseline_revenue_eur")
     require(revenue-base_revenue==sumf("price_revenue_component_eur")+sumf("volume_revenue_component_eur"),"MARKET_REVENUE")
-    result={"market_ref":m.key,"definition":m.definition,"scope":asdict(scope),"output_contract":contract,"baseline_sales":baseline,"potential_demand":potential,"price_induced_demand_change":potential-baseline,"internalized_units":m.internalized_units,"external_demand":external,"sales":total,"unserved":unserved,"unsold_correct_outputs":sum(r["unsold_correct_outputs"] for r in rows),"fixed_basket_price_index":str(ratio) if not unavailable else None,"matched_available_basket_index":str(ratio) if active_keys else None,"matched_basket_sellers":sorted(active_keys),"fixed_basket_customer_saving_eur":str(F(spend0-basket,100)) if not unavailable else None,"unavailable_sellers":sorted(unavailable),"market_revenue_eur":str(revenue),"baseline_revenue_eur":str(base_revenue),"cash_surplus_delta_eur":str(sumf("cash_surplus_eur")-sumf("baseline_cash_surplus_eur")),"paid_hours_delta":str((sumf("paid_seconds")-sumf("baseline_paid_seconds"))/3600),"active_hours_delta":str((sumf("active_seconds")-sumf("baseline_active_seconds"))/3600),"baseline_volume_hhi":str(sum(F(s.baseline_sales,baseline)**2 for s in sellers.values())*10000),"volume_hhi":str(sum(F(r["sales"],total)**2 for r in rows)*10000) if total else None,"sellers":rows,"input_sha256":digest(canonical({"id":m.key,"definition":m.definition,"unavailable":sorted(unavailable),"demand":[m.demand_elasticity_bp,m.saturation_units,m.substitution_power,m.internalized_units],"policies":[asdict(p) for p in m.policies],"seller_inputs":[{"id":s.id,"sales":s.baseline_sales,"baseline":asdict(s.reference[3]),"alternative":asdict(s.alternative[3]) if policies[s.id].adopted else None} for s in m.sellers],"assumptions":m.assumptions})),"model_versions":{n:digest((Path(__file__).parent/n).read_bytes()) for n in ("economic_market.py","economic_firm.py","economic_transform.py","economic_events.py","economic_operations.py","economic_core.py")},"assumptions":m.assumptions,"status":"CONDITIONAL_NOT_EMPIRICAL","employment_effect":None,"consumer_surplus":None,"value_added":None,"publication":"BLOCK_PUBLICATION"}
+    internal=None
+    if m.internal_production is not None:
+        i=m.internal_production
+        require(m.internalized_units>0 and i.reference_seller in sellers and words(i.assumptions),"INTERNAL_CONTRACT")
+        bp,bs,bd,bc=sellers[i.reference_seller].reference
+        ip,ins,ind,inc=i.process
+        op=compare_design(bp,bs,bd,ip,ins,ind)
+        require(op["result"]["quality_comparable"] and ins.scope==scope and ins.output_contract==contract and ins.horizon==horizon,"INTERNAL_QUALITY_SCOPE")
+        il=ledger(op["result"]["alternative"],replace(inc,max_sales=m.internalized_units,price_cents_per_sale=0))
+        require(il["sales"]==m.internalized_units,"INTERNAL_CAPACITY")
+        internal={"fulfilled_units":il["sales"],"paid_seconds":il["paid_human_seconds"],"active_seconds":il["active_human_seconds"],"cash_cost_eur":il["cash_cost_eur"],"payroll_eur":il["payroll_eur"],"nonpayroll_eur":str(F(il["cash_cost_eur"])-F(il["payroll_eur"])),"upfront_cost_eur":str(F(inc.investment_cents+inc.transition_cents,100)),"unsold_correct_outputs":il["unsold_correct_outputs"],"operation_sha256":op["sha256"],"economics":asdict(inc),"assumptions":i.assumptions}
+    fully_scoped=m.internalized_units==0 or internal is not None
+    control={}
+    for r in rows:control[r["control_group"]]=control.get(r["control_group"],0)+r["sales"]
+    supply_cost=sumf("payroll_eur")+sumf("nonpayroll_eur")
+    result={"market_ref":m.key,"definition":m.definition,"scope":asdict(scope),"output_contract":contract,"baseline_sales":baseline,"potential_demand":potential,"price_induced_demand_change":potential-baseline,"internalized_units":m.internalized_units,"internal_production":internal,"internalization_status":"NONE" if not m.internalized_units else "CONDITIONAL_REPLAY" if internal else "UNQUALIFIED_ASSUMED_VOLUME","direct_chain_paid_hours":str((sumf("paid_seconds")+(internal["paid_seconds"] if internal else 0))/3600) if fully_scoped else None,"direct_chain_active_hours":str((sumf("active_seconds")+(internal["active_seconds"] if internal else 0))/3600) if fully_scoped else None,"direct_chain_cash_cost_eur":str(supply_cost+(F(internal["cash_cost_eur"]) if internal else 0)) if fully_scoped else None,"external_purchase_spend_eur":str(revenue),"buyer_direct_cash_outlay_eur":str(revenue+(F(internal["cash_cost_eur"]) if internal else 0)) if fully_scoped else None,"external_demand":external,"sales":total,"unserved":unserved,"unsold_correct_outputs":sum(r["unsold_correct_outputs"] for r in rows),"fixed_basket_price_index":str(ratio) if not unavailable else None,"matched_available_basket_index":str(ratio) if matched_spend else None,"matched_basket_sellers":sorted(k for k in active_keys if sellers[k].baseline_sales>0),"fixed_basket_customer_saving_eur":str(F(spend0-basket,100)) if not unavailable else None,"unavailable_sellers":sorted(unavailable),"market_revenue_eur":str(revenue),"baseline_revenue_eur":str(base_revenue),"cash_surplus_delta_eur":str(sumf("cash_surplus_eur")-sumf("baseline_cash_surplus_eur")),"paid_hours_delta":str((sumf("paid_seconds")-sumf("baseline_paid_seconds"))/3600),"active_hours_delta":str((sumf("active_seconds")-sumf("baseline_active_seconds"))/3600),"baseline_volume_hhi":str(sum(F(s.baseline_sales,baseline)**2 for s in sellers.values())*10000),"volume_hhi":str(sum(F(r["sales"],total)**2 for r in rows)*10000) if total else None,"control_group_volume_hhi":str(sum(F(v,total)**2 for v in control.values())*10000) if total else None,"active_supplier_count":len(active_keys),"active_control_group_count":len({groups[k][1] for k in active_keys}),"sellers":rows,"input_sha256":digest(canonical({"id":m.key,"definition":m.definition,"unavailable":sorted(unavailable),"ownership":m.ownership,"internal_production":internal,"demand":[m.demand_elasticity_bp,m.saturation_units,m.substitution_power,m.internalized_units],"policies":[asdict(p) for p in m.policies],"seller_inputs":[{"id":s.id,"sales":s.baseline_sales,"entry_weight":s.entry_weight,"baseline":asdict(s.reference[3]),"alternative":asdict(s.alternative[3]) if policies[s.id].adopted else None} for s in m.sellers],"assumptions":m.assumptions})),"model_versions":{n:digest((Path(__file__).parent/n).read_bytes()) for n in ("economic_market.py","economic_firm.py","economic_transform.py","economic_events.py","economic_operations.py","economic_core.py")},"assumptions":m.assumptions,"status":"CONDITIONAL_NOT_EMPIRICAL","employment_effect":None,"consumer_surplus":None,"value_added":None,"publication":"BLOCK_PUBLICATION"}
     return {"result":result,"sha256":digest(canonical(result))}
 
 @dataclass(frozen=True)
@@ -167,7 +194,7 @@ def trajectory(d):
     d.key
     require(words(d.assumptions) and integer(d.quarters,1,120) and integer(d.repeats,1,10000) and all(integer(x,0,10000) for x in (d.collection_bp,d.supplier_bp,d.interest_bp)),"DYNAMIC_RANGE")
     m=d.market;strategies=unique(d.strategies,lambda x:x.seller);sellers=unique(m.sellers,lambda x:x.id)
-    require(set(strategies)==set(sellers) and all(not p.adopted for p in m.policies),"DYNAMIC_BASELINE")
+    require(set(strategies)==set(sellers) and all(not p.adopted for p in m.policies) and all(s.baseline_sales>0 for s in m.sellers),"DYNAMIC_BASELINE")
     for k,s in strategies.items():
         require(all(money(x) for x in (s.opening_cash_cents,s.credit_limit_cents,s.reserve_cents,s.principal_per_quarter_cents)) and integer(s.earliest_adoption,0,120) and integer(s.share_loss_trigger_bp,0,10000) and integer(s.payback_quarters,1,120),"STRATEGY")
         require(d.repeats*sellers[k].reference[1].horizon<=90*86400 and d.repeats*sellers[k].alternative[1].horizon<=90*86400,"QUARTER_TIME")
