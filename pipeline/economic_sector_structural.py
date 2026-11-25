@@ -47,9 +47,10 @@ def validate(s):
     require(c<1,"PRODUCTIVITY_BOUND")
     return A,c
 
-def solve(A,y,c):
+def solve(A,y,c,*,relative_tol=1e-12):
     # Neumann iteration with L1 certified remainder bound.
-    term=tuple(y);q=term;tol=1e-12*max(1,norm(y))
+    require(type(relative_tol) in (int,float) and 0<relative_tol<=1e-12,"SOLVE_TOLERANCE")
+    term=tuple(y);q=term;tol=relative_tol*max(1,norm(y))
     for i in range(10000):
         term=mv(A,term);q=add(q,term)
         bound=norm(term)*c/(1-c)
