@@ -1,0 +1,32 @@
+name: G4 market bridge qualification
+on:
+  push:
+    paths:
+      - 'pipeline/economic_sector_market_bridge*.py'
+      - 'tests/test_economic_sector_market_bridge.py'
+      - '.github/workflows/g4-market-bridge.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  bridge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest discover -s tests -p test_economic_sector_market_bridge.py -v
+      - run: |
+          python -m pipeline.economic_sector_market_bridge_pilot > bridge-audit.json
+          python - <<'PY'
+          import json
+          a=json.load(open("bridge-audit.json"))
+          print(json.dumps({"fixture":a["fixture"],"internalization_block":a["internalization_block"],"cases":{k:{"market":v["result"]["market"],"flows":v["result"]["flows"],"totals":v["result"]["sector"]["totals"],"sha256":v["sha256"]} for k,v in a["cases"].items()}},indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: g4-market-bridge-audit
+          path: bridge-audit.json
+          retention-days: 30
