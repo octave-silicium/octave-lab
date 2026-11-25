@@ -65,26 +65,26 @@ def component_series(raw,periods,expected,series_id,groups=None):
                 c["groups"][g]={"change":textval(y-x),"relative_change_pct":pct(y-x,x),"contribution_to_total_growth_pp":pct(y-x,base)}
         comparisons.append(c)
     return {"periods":records,"same_quarter_year_on_year":comparisons,"series_id":series_id,"method":"exact decimal sum, full native components only; contribution = component change / opening aggregate; no causal attribution"}
-def employment(data):
+def employment(data,periods=HEAD_PERIODS):
     rows=read_csv(data,{"secteur_na88i","annee","trimestre","effectifs_salaries_cvs"})
     raw=[]
     for n,r in enumerate(rows,1):
         m=re.match(r"^(5[89]|6[0-3])(?:\s|$)",r["secteur_na88i"].strip())
         if not m:continue
         p=pkey(r)
-        if p in HEAD_PERIODS:raw.append((p,m[1],number(r["effectifs_salaries_cvs"]),n))
-    return component_series(raw,HEAD_PERIODS,DIVISIONS,"urssaf_na88_effectifs_salaries_cvs",GROUPS)
-def dpae(data):
+        if p in periods:raw.append((p,m[1],number(r["effectifs_salaries_cvs"]),n))
+    return component_series(raw,periods,DIVISIONS,"urssaf_na88_effectifs_salaries_cvs",GROUPS)
+def dpae(data,periods=DPAE_PERIODS):
     rows=read_csv(data,{"secteur_na38","annee","trimestre","duree_de_contrat","nature_de_contrat","dpae_cvs"})
     raw=[]
     for n,r in enumerate(rows,1):
         sec=r["secteur_na38"].strip().split(" ")[0];contract=r["nature_de_contrat"].strip()
         if sec not in GROUPS or contract not in CONTRACTS or r["duree_de_contrat"].strip()!="Contrat de plus d'un mois":continue
         p=pkey(r)
-        if p in DPAE_PERIODS:raw.append((p,sec+"|"+contract,number(r["dpae_cvs"]),n))
+        if p in periods:raw.append((p,sec+"|"+contract,number(r["dpae_cvs"]),n))
     groups={g:tuple(g+"|"+c for c in CONTRACTS) for g in GROUPS}
     expected=tuple(k for ks in groups.values() for k in ks)
-    return component_series(raw,DPAE_PERIODS,expected,"urssaf_dpae_na38_quarterly",groups)
+    return component_series(raw,periods,expected,"urssaf_dpae_na38_quarterly",groups)
 def adoption(data):
     s=eurostat_ict(data)
     return {"unit":s["unit"],"population":s["population"],"native_selectors":s["selected_codes"],
