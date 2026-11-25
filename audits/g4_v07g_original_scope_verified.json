@@ -1,0 +1,66 @@
+{
+  "status": "G4_V07G_ORIGINAL_SCOPE_SYNTHETIC_CHAIN_VERIFIED_EMPIRICAL_PARTIAL",
+  "tested_commit": "5634625c3c08df93c42a8633a2dc2cb188bbe386",
+  "ci": {
+    "run": 45570905204,
+    "job": 139057010574,
+    "conclusion": "success",
+    "new_tests": 6,
+    "working_regression_tests": 11
+  },
+  "prior_general": {
+    "run": 45568869019,
+    "conclusion": "success",
+    "tests": 687
+  },
+  "current_general": {
+    "run": 45570905196,
+    "status": "not_yet_verified"
+  },
+  "scope": {
+    "quarterly_counterparts": "PARTIAL",
+    "annual_quarter_reconciliation": "VERIFIED_DIAGNOSTIC_PARTIAL",
+    "stock_vs_due": "SYNTHETIC_VERIFIED_EMPIRICAL_MATURITIES_UNKNOWN",
+    "credit_capital": "SYNTHETIC_VERIFIED",
+    "balance_scenarios": "SYNTHETIC_MODELED_PERIMETER_VERIFIED",
+    "work_transmission": "CONDITIONAL_WAGE_BILL_HOUR_EQUIVALENTS_VERIFIED"
+  },
+  "fixtures": {
+    "credit_limits": [
+      100,
+      50,
+      0
+    ],
+    "investment_delivered": [
+      100,
+      50,
+      0
+    ],
+    "period2_branch_X_hours": [
+      5,
+      2.5,
+      0
+    ],
+    "assumed_hourly_compensation": 10,
+    "reference_hours": 5,
+    "initial_bank_capital_proxy": 50,
+    "capital_stress": {
+      "capital_proxy": 5,
+      "investment_delivered": 50
+    },
+    "maturity_stress": {
+      "gross_due": 60,
+      "bank_allowance": 60,
+      "bank_capital_proxy": -10,
+      "investment_delivered": 0
+    }
+  },
+  "empirical_proof": "audits/common_economic_state_v03_g07g2_verified.json",
+  "candidate_source": {
+    "url": "https://data.ecb.europa.eu/data/datasets/QSA",
+    "status": "DISCOVERED_NOT_QUALIFIED",
+    "reason": "No native series acquisition or independent lineage demonstrated in this tranche"
+  },
+  "publication": "BLOCK_PUBLICATION",
+  "scientific_gates_promoted": 0
+}
