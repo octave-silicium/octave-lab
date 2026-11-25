@@ -25,12 +25,12 @@ class Case:
 BASE=Case("reference","1","0","0","0","0",1000,"0","0","No change; no assumed adoption")
 CASES=(BASE,
  Case("substitution","1/2","0","5","1","1",2000,"0","10000","Half the direct time, paid hours adjust, cost reduction passed to buyers"),
- Case("complementarity","3/4","100","5","1","4",2000,"0","10000","New human work plus strong price response"),
+ Case("complementarity","3/4","150","5","1","4",2000,"0","10000","New human work plus strong price response"),
  Case("redesign","1/4","50","8","1","1",2500,"0","20000","Removed steps; residual coordination work, quality assumption unchanged"),
  Case("no_rebound","1/2","0","5","1","0",2000,"0","10000","Same substitution, no price-induced demand"),
  Case("retained_payroll","1/2","0","5","1","1",2000,"1000","10000","Same technology, paid hours initially retained"),
  Case("retain_margin","1/2","0","5","0","1",2000,"0","10000","Savings not passed to buyers"),
- Case("capacity_stress","3/4","100","5","1","4",1000,"0","10000","Complementarity constrained by capacity"))
+ Case("capacity_stress","3/4","150","5","1","4",1000,"0","10000","Complementarity constrained by capacity"))
 
 def run(c):
     h,x,ai,rho,e,floor,upfront=map(F,(c.hours_per_unit,c.extra_hours,c.ai_cost_per_unit,c.pass_through,c.elasticity,c.paid_floor,c.upfront_eur))
