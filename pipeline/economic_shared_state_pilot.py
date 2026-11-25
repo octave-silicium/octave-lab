@@ -10,12 +10,14 @@ def main():
            "credit_zero_substitution":((p("b","B",("DEBT","CASH","EQUITY"),80,100),),{"K":0},["100"]),
            "competition":((p("a","A",("DEBT",),0,100,True),p("b","B",("DEBT",),0,100,True)),{"K":120},["100","20"]),
            "refused":((p("b","B",("CASH",)),),{},["0"])}
+    reg=json.loads((Path(__file__).resolve().parents[1]/"governance"/"transversal_enrichment_v1.json").read_text())
+    rows=tuple({"id":e["id"],"disposition":"PENDING_QUALIFICATION","reason":"No scientific qualification of "+e["concept"]+" in this financial sub-ledger."} for e in reg["entries"])
     out={}
     for k,(projects,caps,expected) in cases.items():
-        close,r=fund_projects(s,projects,caps)
+        close,governed=run_funding(s,projects,caps,rows)
+        r=governed["result"]["funding"]
         assert [x["paid_acquisition"] for x in r["result"]["projects"]]==expected
         assert sum(close.net_financial_positions().values())==0
         out[k]=r
-    rows=tuple({"id":f"AC{i:02}","disposition":"PENDING_QUALIFICATION","reason":"not scientifically qualified; local contract only"} for i in range(1,28))
     print(json.dumps({"status":"SYNTHETIC_COMMON_STATE_PILOT","cases":out,"coverage":validate_transversal_coverage(rows)},indent=2))
 if __name__=="__main__":main()

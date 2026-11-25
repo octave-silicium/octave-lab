@@ -82,3 +82,13 @@ class SharedStateTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,"AC_COVERAGE"):validate_transversal_coverage(rows[:-1])
         with self.assertRaisesRegex(ValueError,"AC_DISPOSITION"):validate_transversal_coverage((dict(rows[0],disposition="APPLIED_QUALIFIED"),)+rows[1:])
         with self.assertRaisesRegex(ValueError,"AC_EVIDENCE"):validate_transversal_coverage((dict(rows[0],disposition="HYPOTHESIS_ONLY"),)+rows[1:])
+
+    def test_duplicate_across_batches_and_governed_entrypoint(self):
+        s=fixture();e=Event("x",0,"DEPOSIT_TRANSFER","B","A","K","1","fixture")
+        u,_=apply(s,(e,))
+        with self.assertRaisesRegex(ValueError,"REPLAYED_EVENT"):apply(u,(e,))
+        with self.assertRaisesRegex(ValueError,"REPLAYED_EVENT"):apply(advance(u),(replace(e,period=1),))
+        rows=tuple({"id":f"AC{i:02}","disposition":"PENDING_QUALIFICATION","reason":"fixture"} for i in range(1,28))
+        _,r=run_funding(s,(project(),),{},rows)
+        self.assertEqual(r["result"]["coverage"]["entries"],27)
+        with self.assertRaisesRegex(ValueError,"AC_COVERAGE"):run_funding(s,(project(),),{},rows[:-1])

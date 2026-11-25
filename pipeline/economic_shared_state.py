@@ -58,6 +58,7 @@ class State:
     evidence:str
     currency:str="EUR"
     basis:str="NOMINAL_SYNTHETIC"
+    processed_event_ids:tuple=()
     def __post_init__(self):
         require(type(self.actors) is tuple and self.actors and all(isinstance(a,Actor) for a in self.actors),"ACTORS")
         ids={a.id:a for a in self.actors}
@@ -66,6 +67,8 @@ class State:
         require(len({p.key for p in self.positions})==len(self.positions),"DUPLICATE_POSITION")
         require(type(self.period) is int and self.period>=0 and self.step_unit in STEPS and words(self.scope) and words(self.evidence),"SCOPE_TIME")
         require(self.currency=="EUR" and self.basis=="NOMINAL_SYNTHETIC","SYNTHETIC_EUR_ONLY")
+        require(type(self.processed_event_ids) is tuple and all(words(x) for x in self.processed_event_ids) and len(set(self.processed_event_ids))==len(self.processed_event_ids),"EVENT_HISTORY")
+        object.__setattr__(self,"processed_event_ids",tuple(sorted(self.processed_event_ids)))
         for p in self.positions:
             require(p.holder in ids and p.issuer in ids,"UNKNOWN_COUNTERPARTY")
             require(p.instrument!="DEPOSIT" or ids[p.issuer].kind=="BANK","DEPOSIT_ISSUER")
@@ -106,6 +109,7 @@ def apply(state,events):
     """Replay a single period; reject whole batch on a negative position."""
     require(isinstance(state,State) and type(events) is tuple and all(isinstance(e,Event) for e in events),"EVENTS")
     require(len({e.id for e in events})==len(events),"DUPLICATE_EVENT")
+    require(not set(state.processed_event_ids)&{e.id for e in events},"REPLAYED_EVENT")
     ids={a.id:a for a in state.actors}; opening=state.stocks(); pos=opening.copy(); ledger=[]
     for e in events:
         require(e.period==state.period,"EVENT_PERIOD")
@@ -128,7 +132,7 @@ def apply(state,events):
             pos[k]=pos.get(k,F(0))+d
             require(pos[k]>=0,"INSUFFICIENT_POSITION")
         ledger.append({"event":asdict(e),"legs":[{"key":list(k),"delta":str(d)} for k,d in legs]})
-    closing=replace(state,positions=tuple(Position(k[0],k[1],k[2],str(v),k[3]) for k,v in pos.items() if v))
+    closing=replace(state,positions=tuple(Position(k[0],k[1],k[2],str(v),k[3]) for k,v in pos.items() if v),processed_event_ids=state.processed_event_ids+tuple(e.id for e in events))
     totals={}
     for row in ledger:
         for leg in row["legs"]:
@@ -227,3 +231,11 @@ def validate_transversal_coverage(rows,root=None):
         require(r["disposition"]!="HYPOTHESIS_ONLY" or words(r.get("evidence_ref")),"AC_EVIDENCE")
     return {"registry_sha256":digest(raw),"entries":len(rows),"scientific_coverage_validated":False,"publication":"BLOCK_PUBLICATION",
             "rows":sorted(rows,key=lambda r:r["id"])}
+
+
+def run_funding(state,projects,bank_limits,coverage):
+    """Governed entry point; raw ledger functions remain low-level primitives."""
+    audit=validate_transversal_coverage(coverage)
+    close,receipt=fund_projects(state,projects,bank_limits)
+    result={"status":"CONDITIONAL_GOVERNED_FUNDING","publication":"BLOCK_PUBLICATION","funding":receipt,"coverage":audit}
+    return close,{"result":result,"sha256":digest(canonical(result))}
