@@ -4,6 +4,8 @@ on:
     paths:
       - 'pipeline/acquire_tee_2022.py'
       - 'pipeline/audit_tee_2022.py'
+      - 'pipeline/audit_tee_valuation.py'
+      - 'pipeline/economic_institutional_bridge.py'
       - 'tests/test_economic_institutional_accounts.py'
       - '.github/workflows/acquire-tee.yml'
   workflow_dispatch:
@@ -22,6 +24,12 @@ jobs:
       - run: python -m pipeline.acquire_tee_2022
       - name: Reconcile pinned institutional accounts
         run: python -m pipeline.audit_tee_2022 tee-2022 > tee-2022/audit.json && cat tee-2022/audit.json
+      - name: Verify valuation and institutional bounds
+        run: |
+          python -m unittest discover -s tests -p test_economic_institutional_accounts.py -v
+          python pipeline/acquire_tes_a38.py --output tee-2022/symmetric
+          python -m pipeline.audit_tee_valuation tee-2022 tee-2022/symmetric/TES_symetrique_A38_2022DEF_fr.xlsx > tee-2022/valuation-audit.json
+          python -c 'import json; a=json.load(open("tee-2022/valuation-audit.json")); print(json.dumps({"status":a["status"],"checks":len(a["checks"]),"household":a["household"],"top":sorted(a["rows"],key=lambda x:abs(float(x["net_household_valuation_difference"])),reverse=True)[:6],"MA":a["MA_D1_proportional_shock_bounds"],"D42_households":[x for x in a["institutional_flow_bounds"]["D42"]["cells"] if x["column"]=="S14"],"flow_residuals":{k:v["original_row_minus_column"] for k,v in a["institutional_flow_bounds"].items()}},indent=2))'
       - uses: actions/upload-artifact@v4
         with:
           name: tee-2022
