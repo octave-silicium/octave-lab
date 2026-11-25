@@ -1,0 +1,268 @@
+{
+  "id": "P0-INSEE-IPSE-B2B-20260827",
+  "status": "MANUAL_SOURCE_TRANSCRIPTION_PENDING_RAW_BYTE_PIN_AND_INGESTION",
+  "source_url": "https://www.insee.fr/fr/statistiques/9039150",
+  "release_date": "2026-08-27",
+  "retrieved": "2026-11-25",
+  "release": "Informations rapides n°211, IPSE T2 2026",
+  "locator": "Tableau indices de prix de production des services vendus aux entreprises françaises (BtoB), par section",
+  "population": "Services vendus aux entreprises françaises, France, prix de transaction hors taxes",
+  "classification": "NAF rév. 2, sections",
+  "unit": "INDEX, 2021=100",
+  "frequency": "quarterly, non-seasonally-adjusted",
+  "columns": [
+    "H transports et entreposage",
+    "I hébergement et restauration",
+    "J information et communication",
+    "L services immobiliers",
+    "M services professionnels, scientifiques et techniques",
+    "N services administratifs et de soutien"
+  ],
+  "rows": [
+    {
+      "period": "2026-Q2",
+      "indices": [
+        "118.4",
+        "124.3",
+        "106.7",
+        "114.1",
+        "110.9",
+        "115.0"
+      ]
+    },
+    {
+      "period": "2026-Q1",
+      "indices": [
+        "114.9",
+        "118.7",
+        "105.3",
+        "114.3",
+        "109.9",
+        "114.3"
+      ]
+    },
+    {
+      "period": "2025-Q4",
+      "indices": [
+        "113.6",
+        "120.1",
+        "106.6",
+        "114.2",
+        "109.4",
+        "113.4"
+      ]
+    },
+    {
+      "period": "2025-Q3",
+      "indices": [
+        "114.1",
+        "119.5",
+        "105.3",
+        "114.6",
+        "108.9",
+        "113.6"
+      ]
+    },
+    {
+      "period": "2025-Q2",
+      "indices": [
+        "113.9",
+        "120.6",
+        "105.7",
+        "114.5",
+        "108.8",
+        "113.4"
+      ]
+    },
+    {
+      "period": "2025-Q1",
+      "indices": [
+        "113.3",
+        "115.4",
+        "105.0",
+        "113.9",
+        "108.6",
+        "112.9"
+      ]
+    },
+    {
+      "period": "2024-Q4",
+      "indices": [
+        "112.3",
+        "117.6",
+        "105.6",
+        "112.7",
+        "108.4",
+        "112.4"
+      ]
+    },
+    {
+      "period": "2024-Q3",
+      "indices": [
+        "113.6",
+        "121.9",
+        "104.6",
+        "112.1",
+        "107.8",
+        "111.8"
+      ]
+    },
+    {
+      "period": "2024-Q2",
+      "indices": [
+        "112.8",
+        "117.9",
+        "105.2",
+        "111.5",
+        "107.9",
+        "112.0"
+      ]
+    },
+    {
+      "period": "2024-Q1",
+      "indices": [
+        "111.3",
+        "114.2",
+        "103.4",
+        "109.9",
+        "107.0",
+        "111.0"
+      ]
+    },
+    {
+      "period": "2023-Q4",
+      "indices": [
+        "109.9",
+        "116.9",
+        "103.9",
+        "107.9",
+        "106.3",
+        "109.9"
+      ]
+    },
+    {
+      "period": "2023-Q3",
+      "indices": [
+        "110.9",
+        "115.8",
+        "102.1",
+        "107.1",
+        "105.8",
+        "109.6"
+      ]
+    },
+    {
+      "period": "2023-Q2",
+      "indices": [
+        "110.0",
+        "116.1",
+        "102.7",
+        "107.1",
+        "105.6",
+        "109.2"
+      ]
+    },
+    {
+      "period": "2023-Q1",
+      "indices": [
+        "109.5",
+        "111.7",
+        "101.5",
+        "105.7",
+        "104.7",
+        "107.5"
+      ]
+    },
+    {
+      "period": "2022-Q4",
+      "indices": [
+        "108.6",
+        "110.5",
+        "102.1",
+        "104.9",
+        "103.8",
+        "105.7"
+      ]
+    },
+    {
+      "period": "2022-Q3",
+      "indices": [
+        "109.0",
+        "108.5",
+        "101.2",
+        "104.4",
+        "102.8",
+        "104.7"
+      ]
+    },
+    {
+      "period": "2022-Q2",
+      "indices": [
+        "107.6",
+        "106.0",
+        "101.3",
+        "103.4",
+        "102.4",
+        "103.5"
+      ]
+    },
+    {
+      "period": "2022-Q1",
+      "indices": [
+        "104.0",
+        "101.3",
+        "100.5",
+        "102.4",
+        "101.3",
+        "101.7"
+      ]
+    },
+    {
+      "period": "2021-Q4",
+      "indices": [
+        "102.2",
+        "101.5",
+        "100.6",
+        "100.5",
+        "100.8",
+        "100.7"
+      ]
+    },
+    {
+      "period": "2021-Q3",
+      "indices": [
+        "101.3",
+        "101.6",
+        "99.3",
+        "99.9",
+        "99.7",
+        "100.2"
+      ]
+    },
+    {
+      "period": "2021-Q2",
+      "indices": [
+        "98.5",
+        "99.1",
+        "100.3",
+        "100.0",
+        "99.9",
+        "99.7"
+      ]
+    },
+    {
+      "period": "2021-Q1",
+      "indices": [
+        "97.9",
+        "97.9",
+        "99.9",
+        "99.5",
+        "99.6",
+        "99.5"
+      ]
+    }
+  ],
+  "methodology": "https://www.insee.fr/fr/metadonnees/source/indicateur/p1640/documentation-methodologique",
+  "stopped_detail_series": "https://www.insee.fr/fr/statistiques/serie/010546023",
+  "limitations": "22 periods × 6 series = 132 values manually transcribed from the dated publication, not source bytes or live catalog admission. Section M is not the W002 service market. Price indices not price levels, not quality-adjusted AI capability, do not identify AI contribution. B2B vs other markets separate; changing weights, revisions and successor series require qualification. CPF 71.20 stopped series not spliced."
+}
