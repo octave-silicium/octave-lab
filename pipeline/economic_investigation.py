@@ -18,11 +18,23 @@ class Investigation:
     @property
     def key(self):return identity(self.id,self.revision)
 
-def assemble(inv,graph,coverage,calculations=(),scenario_paths=(),prospective=None):
+@dataclass(frozen=True)
+class FirmTransition:
+    scenario_ref:str
+    base:object
+    reference:tuple
+    phases:dict
+    baseline:object
+    alternative:object
+    rate:int=200
+    terminal_assets:tuple=(0,0)
+
+def assemble(inv,graph,coverage,calculations=(),scenario_paths=(),prospective=None,firm_transitions=()):
     inv.key
     require(all(words(x) for x in (inv.question,inv.decision,inv.loss_function,inv.exclusions)) and texts(inv.alternatives) and len(inv.alternatives)>=2,"MANDATE")
     from .economic_core import sha
     require(sha(inv.model_sha256) and inv.graph_sha256==graph.fingerprint,"INVESTIGATION_PIN")
+    coverage=tuple(coverage)
     audit=validate_coverage(graph,coverage)
     receipts=[calculate(graph,c) for c in calculations]
     outputs=[r["output_claim_ref"] for r in receipts]
@@ -39,10 +51,24 @@ def assemble(inv,graph,coverage,calculations=(),scenario_paths=(),prospective=No
         require(not scenario_paths,"MIXED_PATH_CONTRACT")
         require(inv.model_sha256==digest(canonical(model_pins())),"MODEL_PIN_MISMATCH")
         prospective_result=build(graph,*prospective)
+    firm_rows=[]
+    if firm_transitions:
+        require(prospective is not None,"FIRM_PROSPECTIVE_REQUIRED")
+        from .economic_transition import assess
+        from .economic_core import unique
+        scenarios=unique(prospective[0],lambda s:s.key)
+        for sc,item in unique(firm_transitions,lambda f:f.scenario_ref).items():
+            require(isinstance(item,FirmTransition) and sc in scenarios,"FIRM_SCENARIO_REF")
+            t=scenarios[sc];require(t.mode=="CONDITIONAL" and t.baseline_ref in scenarios and scenarios[t.baseline_ref].mode=="NO_SHOCK","FIRM_BASELINE")
+            scope=item.reference[1].scope
+            require(all(getattr(t.scope,k)==getattr(scope,k) for k in ("population","geography","classification","price_basis")) and t.scope.period_start<=scope.period_start<=scope.period_end<=t.scope.period_end and t.step_unit=="quarter" and str(len(item.alternative.quarters))+" quarters" in t.horizons,"FIRM_SCOPE_HORIZON")
+            require(all(q.phase=="reference" and not q.phase_mix for q in item.baseline.quarters),"FIRM_NO_SHOCK_PHASE")
+            receipt=assess(item.base,item.reference,item.phases,item.baseline,item.alternative,item.rate,item.terminal_assets)
+            firm_rows.append({"scenario_ref":sc,"baseline_ref":t.baseline_ref,"sections":["D06","D07","D13","D15"],"receipt":receipt,"status":"CONDITIONAL_NOT_PROPAGATED","limitations":"Explicit synthetic operational and financial assumptions outside graph parameters; no causal or macro propagation."})
     sections=[asdict(c) for c in coverage if c.kind=="section"]
-    result={"mandate":asdict(inv),"requirements":dict(graph.requirements.pins),"coverage":sorted((asdict(c) for c in coverage),key=lambda x:(x["kind"],x["id"])),"sections":sorted(sections,key=lambda x:x["id"]),"coverage_audit":audit,"calculations":receipts,"paths":paths,"prospective":prospective_result,"scientific_validation":False,"publication":"BLOCK_PUBLICATION"}
+    result={"mandate":asdict(inv),"requirements":dict(graph.requirements.pins),"coverage":sorted((asdict(c) for c in coverage),key=lambda x:(x["kind"],x["id"])),"sections":sorted(sections,key=lambda x:x["id"]),"coverage_audit":audit,"calculations":receipts,"paths":paths,"prospective":prospective_result,"firm_transitions":firm_rows,"scientific_validation":False,"publication":"BLOCK_PUBLICATION"}
     return {"manifest":result,"manifest_sha256":digest(canonical(result))}
 
-def verify_replay(expected,inv,graph,coverage,calculations=(),scenario_paths=(),prospective=None):
-    require(expected==assemble(inv,graph,coverage,calculations,scenario_paths,prospective),"REPLAY_MISMATCH")
+def verify_replay(expected,inv,graph,coverage,calculations=(),scenario_paths=(),prospective=None,firm_transitions=()):
+    require(expected==assemble(inv,graph,coverage,calculations,scenario_paths,prospective,firm_transitions),"REPLAY_MISMATCH")
     return True

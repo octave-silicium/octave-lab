@@ -111,3 +111,6 @@ Décision utilisateur : [UX-001](UX-001.md) et [RESULT-001](RESULT-001.md) compl
 
 ## G3.3 v0.2b1 — Renouvellement de l'expertise et VAN dynamique
 [G3-SKILLS](G3-SKILLS.md) : slots fictifs, délais et seuils de formation/pratique, mentorat, capacité individuelle, pénurie d'expertise distincte, VAN trimestrielle hors dette, seuil de valeur de l'expertise et sensibilité taux. SH04 partiel. Recette G3 réussie : 361 tests, [audit](../audits/economic_skills_v02b1_verified.json). P0 : [extrait JOLTS daté](../audits/us_jolts_snapshot_20261103.json), admission et série intégrale ouvertes. Suite v0.2b2 montée en cadence et raccordement, puis G3.4 ; P0 empirique ouvert.
+
+## G3.3 v0.2b2 — Montée en cadence et investigation intégrée
+[G3-RAMP](G3-RAMP.md) : extension transition existante, VAN mutualisée, coexistence séquentielle, sensibilité CAPEX/demande/financement, liaison conditionnelle RESULT/PROSPECT avec rejeu. Recette à confirmer. Valeur du redéploiement sous contrat distinct, P0 empirique et paramètres graphes ouverts. G3.4 prochaine tranche principale, sans nouveau moteur.

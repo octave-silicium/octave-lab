@@ -105,20 +105,11 @@ def evaluate(base,reference,phases,template,skills):
     return {"result":r,"sha256":digest(canonical(r))}
 
 def valuation(result,quarterly_discount_bp,terminal_asset_cents=0,settle_trade=True):
-    require(integer(quarterly_discount_bp,0,10000) and money(terminal_asset_cents) and type(settle_trade) is bool,"VALUATION_PARAMETERS")
-    rows=result["transition"]["result"]["quarters"];rate=1+F(quarterly_discount_bp,10000)
-    flows=[];value=F(0);hours=F(0)
-    for q,k in zip(rows,result["skill_rows"]):
-        i=q["quarter"]
-        start=-sum(F(q[x]) for x in ("capex_eur","transition_eur","training_cost_eur","exit_cost_eur"))
-        end=F(q["operating_cash_flow_eur"])
-        value+=start/rate**(i-1)+end/rate**i
-        hours+=F(k["expert_served_seconds"],3600)/rate**i
-        flows.append({"quarter":i,"start_eur":str(start),"end_eur":str(end)})
-    terminal=F(terminal_asset_cents,100)
-    if settle_trade:terminal+=F(rows[-1]["receivables_eur"])-F(rows[-1]["payables_eur"])
-    value+=terminal/rate**len(rows)
-    return {"npv_eur":str(value),"discounted_expert_hours":str(hours),"flows":flows,"terminal_eur":str(terminal),"quarterly_discount_bp":quarterly_discount_bp,"settle_trade":settle_trade,"terminal_asset_cents":terminal_asset_cents,"scope":"Unlevered before tax, no ongoing enterprise value, excludes debt draw, repayment and interest; expert work not monetized."}
+    from .economic_transition import valuation as value_transition
+    v=value_transition(result["transition"],quarterly_discount_bp,terminal_asset_cents,settle_trade)
+    rate=1+F(quarterly_discount_bp,10000)
+    hours=sum(F(k["expert_served_seconds"],3600)/rate**k["quarter"] for k in result["skill_rows"])
+    return {**v,"discounted_expert_hours":str(hours)}
 
 def compare_skills(base,reference,phases,a,sa,b,sb,rate=200,terminal_assets=(0,0)):
     require(a.workforce==b.workforce and sa.initial==sb.initial and (a.opening_cash_cents,a.opening_receivable_cents,a.opening_payable_cents,a.opening_debt_cents,a.collection_next_quarter_bp,a.supplier_next_quarter_bp,a.quarterly_interest_bp)==(b.opening_cash_cents,b.opening_receivable_cents,b.opening_payable_cents,b.opening_debt_cents,b.collection_next_quarter_bp,b.supplier_next_quarter_bp,b.quarterly_interest_bp) and [(q.index,q.repeats) for q in a.quarters]==[(q.index,q.repeats) for q in b.quarters] and [q.expert_demand_seconds for q in sa.quarters]==[q.expert_demand_seconds for q in sb.quarters],"SKILL_COMPARABILITY")

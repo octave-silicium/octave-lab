@@ -41,6 +41,7 @@ class Quarter:
     transition_cents:int
     debt_draw_cents:int
     principal_repaid_cents:int
+    phase_mix:tuple=() # (phase, number of complete sequential cohorts); empty = legacy single phase
 
 @dataclass(frozen=True)
 class Plan:
@@ -63,6 +64,13 @@ class Plan:
     @property
     def key(self):return identity(self.id,self.revision)
 
+def allocation(q):
+    if not q.phase_mix:return ((q.phase,q.repeats),)
+    require(q.phase=="mixed" and isinstance(q.phase_mix,tuple) and len(q.phase_mix)>=2,"MIX_CONTRACT")
+    require(all(isinstance(x,tuple) and len(x)==2 and words(x[0]) and integer(x[1],1,10000) for x in q.phase_mix),"MIX_ROWS")
+    require(len({x[0] for x in q.phase_mix})==len(q.phase_mix) and sum(x[1] for x in q.phase_mix)==q.repeats,"MIX_CONSERVATION")
+    return q.phase_mix
+
 def validate(plan,phases):
     plan.key;w=plan.workforce
     require(words(plan.assumptions) and all(integer(x,0,100000) for x in (w.junior,w.senior)) and integer(w.seconds_per_person,1,92*86400) and all(money(x) for x in (w.junior_cents_per_hour,w.senior_cents_per_hour,plan.opening_cash_cents,plan.opening_receivable_cents,plan.opening_payable_cents,plan.opening_debt_cents)),"PLAN")
@@ -71,11 +79,11 @@ def validate(plan,phases):
     dates=(plan.anticipation_quarter,plan.decision_quarter,plan.investment_quarter,plan.production_quarter)
     require(all(x is None for x in dates) or (all(integer(x,1,len(plan.quarters)) for x in dates) and list(dates)==sorted(dates)),"MILESTONES")
     for i,q in enumerate(plan.quarters,1):
-        require(q.index==i and q.phase in phases and integer(q.repeats,1,10000),"QUARTER")
+        require(q.index==i and integer(q.repeats,1,10000) and all(k in phases for k,n in allocation(q)),"QUARTER")
         require(all(integer(getattr(q,k),0,100000) for k in ("budgeted_hires","frozen_hires","hire_j","hire_s","quit_j","quit_s","layoff_j","layoff_s","other_j","other_s","promote")),"WORKFORCE_FLOW")
         require(q.hire_j+q.hire_s+q.frozen_hires<=q.budgeted_hires,"HIRING_BUDGET")
         require(all(integer(x,0,10**12) for x in (q.training_seconds,q.redeployed_seconds)) and all(money(getattr(q,k)) for k in ("training_cents","exit_cents","capex_cents","transition_cents","debt_draw_cents","principal_repaid_cents")),"QUARTER_COST")
-        require((q.phase=="reference") if plan.production_quarter is None or i<plan.production_quarter else True,"PRE_DEPLOYMENT")
+        require(all(k=="reference" for k,n in allocation(q)) if plan.production_quarter is None or i<plan.production_quarter else True,"PRE_DEPLOYMENT")
     if plan.investment_quarter is not None:require(plan.quarters[plan.investment_quarter-1].capex_cents>0,"INVESTMENT_MILESTONE")
 
 def simulate(base,reference,phases,plan):
@@ -86,11 +94,12 @@ def simulate(base,reference,phases,plan):
     rp,rs,rd,rc=reference
     require(rp==base,"REFERENCE_PROCESS")
     cache={};pins={}
-    for key in sorted({q.phase for q in plan.quarters}):
+    for key in sorted({k for q in plan.quarters for k,n in allocation(q)}):
         p,s,d,c=phases[key]
         op=compare_design(base,rs,rd,p,s,d)
         require(op["result"]["quality_comparable"],"BLOCK_OPERATIONAL_QUALITY")
         require(c.max_sales==rc.max_sales and c.price_cents_per_sale==rc.price_cents_per_sale,"PRICE_DEMAND_SCOPE")
+        require({k for k,v in c.fixed_cash_costs}=={k for k,v in rc.fixed_cash_costs},"FIXED_CATEGORY_COMPARABILITY")
         l=ledger(op["result"]["alternative"],c)
         e=op["result"]["alternative"]["result"]["event_receipt"]["result"]
         cache[key]=(l,e);pins[key]=op["sha256"]
@@ -99,21 +108,25 @@ def simulate(base,reference,phases,plan):
     min_cash=cash;rows=[]
     eur=lambda x:str(F(x)/100)
     for q in plan.quarters:
-        l,e=cache[q.phase];n=q.repeats
-        require(n*e["horizon_seconds"]<=90*86400,"QUARTER_TIME")
+        mix=allocation(q)
+        require(sum(cache[k][1]["horizon_seconds"]*n for k,n in mix)<=90*86400,"QUARTER_TIME")
+        def total(field):return sum(F(cache[k][0][field])*n for k,n in mix)
+        sales=int(total("sales"));unfinished=int(total("unfinished_cases"))
+        # One cohort assigned exactly once; no simultaneous execution across cohorts.
+        phase_rows=[{"phase":k,"cohorts":n,"sales":cache[k][0]["sales"]*n,"paid_production_seconds":cache[k][0]["paid_human_seconds"]*n,"operation_sha256":pins[k]} for k,n in mix]
         oj,os=j,s;outj=q.quit_j+q.layoff_j+q.other_j;outs=q.quit_s+q.layoff_s+q.other_s
         require(outj+q.promote<=j and outs<=s,"STOCK_FLOW")
         # Start-of-quarter flows: no fractional people or promotion of new hires.
         j=j-outj-q.promote+q.hire_j;s=s-outs+q.promote+q.hire_s
         require(j+s==oj+os+q.hire_j+q.hire_s-outj-outs,"HEADCOUNT_CONSERVATION")
         paid=(j+s)*w.seconds_per_person
-        production_required=l["paid_human_seconds"]*n
-        active=l["active_human_seconds"]*n
+        production_required=int(total("paid_human_seconds"))
+        active=int(total("active_human_seconds"))
         require(active<=production_required and production_required+q.training_seconds+q.redeployed_seconds<=paid,"PAID_CAPACITY")
         require(q.promote==0 or q.training_seconds>0,"PROMOTION_TRAINING")
         payroll=F((j*w.junior_cents_per_hour+s*w.senior_cents_per_hour)*w.seconds_per_person,3600)
-        revenue=F(l["revenue_eur"])*100*n
-        supplier=(F(l["cash_cost_eur"])-F(l["payroll_eur"]))*100*n
+        revenue=total("revenue_eur")*100
+        supplier=(total("cash_cost_eur")-total("payroll_eur"))*100
         require(supplier>=0,"NONPAYROLL")
         # All scoped non-payroll recurrent costs are assumed eligible for payment lag.
         new_ar=revenue*F(plan.collection_next_quarter_bp,10000)
@@ -132,7 +145,7 @@ def simulate(base,reference,phases,plan):
         require(cash==oc+q.debt_draw_cents-q.capex_cents-q.transition_cents-q.exit_cents-q.training_cents+collected-paid_supplier-payroll-interest-q.principal_repaid_cents,"CASH_CONSERVATION")
         require(operating==revenue-supplier-payroll-(ar-oa)+(ap-opay),"CASH_ACCRUAL_BRIDGE")
         min_cash=min(min_cash,cash_start,cash)
-        rows.append({"quarter":q.index,"phase":q.phase,"opening_headcount":oj+os,"headcount":j+s,"junior":j,"senior":s,"hires":q.hire_j+q.hire_s,"quits":q.quit_j+q.quit_s,"layoffs":q.layoff_j+q.layoff_s,"other_exits":q.other_j+q.other_s,"promotions":q.promote,"budgeted_hires":q.budgeted_hires,"frozen_hires":q.frozen_hires,"unfilled_nonfrozen_budget":q.budgeted_hires-q.frozen_hires-q.hire_j-q.hire_s,"paid_seconds":paid,"active_production_seconds":active,"allocated_production_seconds":production_required,"training_seconds":q.training_seconds,"redeployed_seconds":q.redeployed_seconds,"unallocated_paid_seconds":paid-production_required-q.training_seconds-q.redeployed_seconds,"sales":l["sales"]*n,"unfinished":l["unfinished_cases"]*n,"revenue_eur":eur(revenue),"payroll_eur":eur(payroll),"nonpayroll_cost_eur":eur(supplier),"accrual_surplus_before_depreciation_eur":eur(revenue-supplier-payroll),"collections_eur":eur(collected),"supplier_payments_eur":eur(paid_supplier),"receivables_eur":eur(ar),"payables_eur":eur(ap),"net_trade_working_capital_eur":eur(ar-ap),"capex_eur":eur(q.capex_cents),"transition_eur":eur(q.transition_cents),"training_cost_eur":eur(q.training_cents),"exit_cost_eur":eur(q.exit_cents),"debt_draw_eur":eur(q.debt_draw_cents),"principal_repayment_eur":eur(q.principal_repaid_cents),"interest_eur":eur(interest),"closing_debt_eur":eur(debt),"cash_after_start_transactions_eur":eur(cash_start),"closing_cash_eur":eur(cash),"operating_cash_flow_eur":eur(operating)})
+        rows.append({"quarter":q.index,"phase":q.phase,"opening_headcount":oj+os,"headcount":j+s,"junior":j,"senior":s,"hires":q.hire_j+q.hire_s,"quits":q.quit_j+q.quit_s,"layoffs":q.layoff_j+q.layoff_s,"other_exits":q.other_j+q.other_s,"promotions":q.promote,"budgeted_hires":q.budgeted_hires,"frozen_hires":q.frozen_hires,"unfilled_nonfrozen_budget":q.budgeted_hires-q.frozen_hires-q.hire_j-q.hire_s,"paid_seconds":paid,"active_production_seconds":active,"allocated_production_seconds":production_required,"training_seconds":q.training_seconds,"redeployed_seconds":q.redeployed_seconds,"unallocated_paid_seconds":paid-production_required-q.training_seconds-q.redeployed_seconds,"sales":sales,"unfinished":unfinished,"phase_mix":phase_rows,"reference_cohort_fraction":str(F(sum(n for k,n in mix if k=="reference"),q.repeats)),"revenue_eur":eur(revenue),"payroll_eur":eur(payroll),"nonpayroll_cost_eur":eur(supplier),"accrual_surplus_before_depreciation_eur":eur(revenue-supplier-payroll),"collections_eur":eur(collected),"supplier_payments_eur":eur(paid_supplier),"receivables_eur":eur(ar),"payables_eur":eur(ap),"net_trade_working_capital_eur":eur(ar-ap),"capex_eur":eur(q.capex_cents),"transition_eur":eur(q.transition_cents),"training_cost_eur":eur(q.training_cents),"exit_cost_eur":eur(q.exit_cents),"debt_draw_eur":eur(q.debt_draw_cents),"principal_repayment_eur":eur(q.principal_repaid_cents),"interest_eur":eur(interest),"closing_debt_eur":eur(debt),"cash_after_start_transactions_eur":eur(cash_start),"closing_cash_eur":eur(cash),"operating_cash_flow_eur":eur(operating)})
     r={"plan_ref":plan.key,"quarters":rows,"ending_headcount":j+s,"cumulative_hires":sum(x["hires"] for x in rows),"cumulative_layoffs":sum(x["layoffs"] for x in rows),"cumulative_frozen_hires":sum(x["frozen_hires"] for x in rows),"closing_cash_eur":eur(cash),"closing_debt_eur":eur(debt),"funding_gap_at_sampled_dates_eur":eur(max(F(0),-min_cash)),"funding_status":"UNFUNDED_SHORTFALL" if min_cash<0 else "NO_SHORTFALL_AT_SAMPLED_DATES","phase_pins":pins,"input_sha256":digest(canonical({"plan":asdict(plan),"phase_economics":{k:asdict(phases[k][3]) for k in pins}})),"model_versions":{n:digest((Path(__file__).parent/n).read_bytes()) for n in ("economic_transition.py","economic_firm.py","economic_transform.py","economic_events.py","economic_operations.py","economic_core.py")},"assumptions":plan.assumptions,"status":"CONDITIONAL_NOT_EMPIRICAL","publication":"BLOCK_PUBLICATION"}
     return {"result":r,"sha256":digest(canonical(r))}
 
@@ -141,4 +154,26 @@ def compare(base,reference,phases,a,b):
     x=simulate(base,reference,phases,a);y=simulate(base,reference,phases,b)
     u=x["result"];v=y["result"]
     r={"baseline":x,"alternative":y,"headcount_gap":v["ending_headcount"]-u["ending_headcount"],"hires_gap":v["cumulative_hires"]-u["cumulative_hires"],"layoffs_gap":v["cumulative_layoffs"]-u["cumulative_layoffs"],"quarterly_gaps":[{"quarter":i["quarter"],"headcount_gap":k["headcount"]-i["headcount"],"hires_gap":k["hires"]-i["hires"],"payroll_saving_eur":str(F(i["payroll_eur"])-F(k["payroll_eur"]))} for i,k in zip(u["quarters"],v["quarters"])],"interpretation":"Conditional differences of declared trajectories, not causal estimates or individual job losses.","publication":"BLOCK_PUBLICATION"}
+    return {"result":r,"sha256":digest(canonical(r))}
+
+def valuation(receipt,quarterly_discount_bp,terminal_asset_cents=0,settle_trade=True):
+    """Unlevered finite-horizon value, reused by skill and investigation adapters."""
+    require(integer(quarterly_discount_bp,0,10000) and money(terminal_asset_cents) and type(settle_trade) is bool,"VALUATION_PARAMETERS")
+    rows=receipt["result"]["quarters"];rate=1+F(quarterly_discount_bp,10000)
+    flows=[];value=F(0)
+    for q in rows:
+        i=q["quarter"]
+        start=-sum(F(q[x]) for x in ("capex_eur","transition_eur","training_cost_eur","exit_cost_eur"))
+        end=F(q["operating_cash_flow_eur"])
+        value+=start/rate**(i-1)+end/rate**i
+        flows.append({"quarter":i,"start_eur":str(start),"end_eur":str(end)})
+    terminal=F(terminal_asset_cents,100)
+    if settle_trade:terminal+=F(rows[-1]["receivables_eur"])-F(rows[-1]["payables_eur"])
+    value+=terminal/rate**len(rows)
+    return {"npv_eur":str(value),"flows":flows,"terminal_eur":str(terminal),"quarterly_discount_bp":quarterly_discount_bp,"settle_trade":settle_trade,"terminal_asset_cents":terminal_asset_cents,"scope":"Unlevered before tax, no ongoing enterprise value, excludes debt draw, repayment and interest; expert work not monetized."}
+
+def assess(base,reference,phases,a,b,rate=200,terminal_assets=(0,0)):
+    receipt=compare(base,reference,phases,a,b);x=receipt["result"]
+    u=valuation(x["baseline"],rate,terminal_assets[0]);v=valuation(x["alternative"],rate,terminal_assets[1])
+    r={"transition_comparison":receipt,"baseline_valuation":u,"alternative_valuation":v,"incremental_unlevered_npv_eur":str(F(v["npv_eur"])-F(u["npv_eur"])),"funding_status_both":[x[k]["result"]["funding_status"] for k in ("baseline","alternative")],"valuation_status":"CONDITIONAL_NOT_EMPIRICAL","publication":"BLOCK_PUBLICATION"}
     return {"result":r,"sha256":digest(canonical(r))}
