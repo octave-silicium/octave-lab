@@ -1,0 +1,30 @@
+name: G4 capital vintage qualification
+on:
+  push:
+    paths:
+      - 'pipeline/economic_sector_capital*.py'
+      - 'pipeline/economic_sector_capacity.py'
+      - 'pipeline/economic_sector_structural.py'
+      - 'tests/test_economic_sector_capital.py'
+      - '.github/workflows/g4-capital.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  capital:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest discover -s tests -p test_economic_sector_capital.py -v
+      - run: |
+          python -m pipeline.economic_sector_capital_pilot > capital-audit.json
+          cat capital-audit.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: g4-capital-audit
+          path: capital-audit.json
+          retention-days: 30
