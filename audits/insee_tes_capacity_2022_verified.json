@@ -1,0 +1,538 @@
+{
+  "status": "EMPIRICAL_BASE_HYPOTHETICAL_CAPACITY_ALLOCATION",
+  "publication": "BLOCK_PUBLICATION",
+  "unit": "M EUR reference prices 2022",
+  "source_hashes": {
+    "standard": "1a9d587e3a70590a42210f10bca15a63dd85d18dc9946ca654d77e50970a29ed",
+    "symmetric": "db4189aa708c10122dadf09c17f8bb49e1dd45561f93bf5527abe8473a29aa73",
+    "eurostat": "5c822d35fed4fa677d215a958be4730679168700a71d523d8479fb0c24608772"
+  },
+  "priority": "OZ/PZ/QA/QB product codes first; hypothetical, not policy recommendation",
+  "cases": {
+    "unconstrained": {
+      "sha256": "8fd25a799f54e7d3b1bdfcf4b8c9a4f0deaac98db3570628c03882d6c038bca9",
+      "served_final": 3109599.9760000003,
+      "unserved_final": 0,
+      "tiers": [
+        {
+          "products": [
+            "AZ",
+            "BZ",
+            "CA",
+            "CB",
+            "CC",
+            "CD",
+            "CE",
+            "CF",
+            "CG",
+            "CH",
+            "CI",
+            "CJ",
+            "CK",
+            "CL",
+            "CM",
+            "DZ",
+            "EZ",
+            "FZ",
+            "GZ",
+            "HZ",
+            "IZ",
+            "JA",
+            "JB",
+            "JC",
+            "KZ",
+            "LZ",
+            "MA",
+            "MB",
+            "MC",
+            "NZ",
+            "OZ",
+            "PZ",
+            "QA",
+            "QB",
+            "RZ",
+            "SZ",
+            "TZ"
+          ],
+          "fraction": 1,
+          "requested": 3109599.9760000003,
+          "served": 3109599.9760000003,
+          "binding": [],
+          "tail_bound": 0.000002436619401137527
+        }
+      ],
+      "delta_totals": {
+        "q": 0,
+        "g": 0,
+        "imports": 0,
+        "wage": 0,
+        "other_tax": 0,
+        "bridge": 0,
+        "surplus": 0,
+        "va": 0
+      },
+      "top_unserved": [
+        [
+          "AZ",
+          0
+        ],
+        [
+          "BZ",
+          0
+        ],
+        [
+          "CA",
+          0
+        ],
+        [
+          "CB",
+          0
+        ],
+        [
+          "CC",
+          0
+        ],
+        [
+          "CD",
+          0
+        ]
+      ],
+      "limits": {
+        "branch": {},
+        "imports": {}
+      },
+      "actual_output": null
+    },
+    "jc_branch_cap_uniform": {
+      "sha256": "edc553d6ea6fd5f519ba563a56c8d71d582e520c17fcea81e7c5967739845fc5",
+      "served_final": 2954119.9771525012,
+      "unserved_final": 155479.99884749862,
+      "tiers": [
+        {
+          "products": [
+            "AZ",
+            "BZ",
+            "CA",
+            "CB",
+            "CC",
+            "CD",
+            "CE",
+            "CF",
+            "CG",
+            "CH",
+            "CI",
+            "CJ",
+            "CK",
+            "CL",
+            "CM",
+            "DZ",
+            "EZ",
+            "FZ",
+            "GZ",
+            "HZ",
+            "IZ",
+            "JA",
+            "JB",
+            "JC",
+            "KZ",
+            "LZ",
+            "MA",
+            "MB",
+            "MC",
+            "NZ",
+            "OZ",
+            "PZ",
+            "QA",
+            "QB",
+            "RZ",
+            "SZ",
+            "TZ"
+          ],
+          "fraction": 0.9499999999847252,
+          "requested": 3109599.9760000003,
+          "served": 2954119.9771525017,
+          "binding": [
+            {
+              "kind": "BRANCH",
+              "code": "JC"
+            }
+          ],
+          "tail_bound": 0.000002436619401137527
+        }
+      ],
+      "delta_totals": {
+        "q": -255576.3400780009,
+        "g": -255576.34007799998,
+        "imports": -33217.278960130876,
+        "wage": -68917.77002104255,
+        "other_tax": -4096.050001250376,
+        "bridge": -3832.2498511710146,
+        "surplus": -45416.650013868115,
+        "va": -118430.47003616113
+      },
+      "top_unserved": [
+        [
+          "GZ",
+          16305.51500498131
+        ],
+        [
+          "LZ",
+          15129.706304622057
+        ],
+        [
+          "FZ",
+          13944.369254259975
+        ],
+        [
+          "OZ",
+          11244.060003435035
+        ],
+        [
+          "QA",
+          9536.437202913337
+        ],
+        [
+          "HZ",
+          7834.863652393513
+        ]
+      ],
+      "limits": {
+        "branch": {
+          "JC": 141420.895
+        },
+        "imports": {}
+      },
+      "actual_output": null
+    },
+    "jc_branch_cap_priority": {
+      "sha256": "ce87e6a0773c754efe350e6eaf8528d8caae273390d73d99e924f906ae01be16",
+      "served_final": 2981820.8419281524,
+      "unserved_final": 127779.13407184767,
+      "tiers": [
+        {
+          "products": [
+            "OZ",
+            "PZ",
+            "QA",
+            "QB"
+          ],
+          "fraction": 1,
+          "requested": 646252.344,
+          "served": 646252.344,
+          "binding": [],
+          "tail_bound": 4.2464869463892273e-7
+        },
+        {
+          "products": [
+            "AZ",
+            "BZ",
+            "CA",
+            "CB",
+            "CC",
+            "CD",
+            "CE",
+            "CF",
+            "CG",
+            "CH",
+            "CI",
+            "CJ",
+            "CK",
+            "CL",
+            "CM",
+            "DZ",
+            "EZ",
+            "FZ",
+            "GZ",
+            "HZ",
+            "IZ",
+            "JA",
+            "JB",
+            "JC",
+            "KZ",
+            "LZ",
+            "MA",
+            "MB",
+            "MC",
+            "NZ",
+            "RZ",
+            "SZ",
+            "TZ"
+          ],
+          "fraction": 0.9481278515415612,
+          "requested": 2463347.632,
+          "served": 2335568.4979281523,
+          "binding": [
+            {
+              "kind": "BRANCH",
+              "code": "JC"
+            }
+          ],
+          "tail_bound": 0.0000022080794458317236
+        }
+      ],
+      "delta_totals": {
+        "q": -220793.5664168885,
+        "g": -220793.56641688757,
+        "imports": -31585.59970560344,
+        "wage": -50502.11717296881,
+        "other_tax": -3595.8912894660752,
+        "bridge": -2411.3374938909983,
+        "surplus": -39684.18840988458,
+        "va": -93782.19687231956
+      },
+      "top_unserved": [
+        [
+          "GZ",
+          16916.041895425995
+        ],
+        [
+          "LZ",
+          15696.207426523557
+        ],
+        [
+          "FZ",
+          14466.487837905763
+        ],
+        [
+          "HZ",
+          8128.224208088504
+        ],
+        [
+          "CL",
+          7357.396923639637
+        ],
+        [
+          "CA",
+          6792.838718814237
+        ]
+      ],
+      "limits": {
+        "branch": {
+          "JC": 141420.895
+        },
+        "imports": {}
+      },
+      "actual_output": null
+    },
+    "ci_import_cap_uniform": {
+      "sha256": "1f8e7d58778fda796789a409ac41aef8e41a6b276831e7fb7979bbbc89ae2050",
+      "served_final": 2798639.9783596816,
+      "unserved_final": 310959.9976403186,
+      "tiers": [
+        {
+          "products": [
+            "AZ",
+            "BZ",
+            "CA",
+            "CB",
+            "CC",
+            "CD",
+            "CE",
+            "CF",
+            "CG",
+            "CH",
+            "CI",
+            "CJ",
+            "CK",
+            "CL",
+            "CM",
+            "DZ",
+            "EZ",
+            "FZ",
+            "GZ",
+            "HZ",
+            "IZ",
+            "JA",
+            "JB",
+            "JC",
+            "KZ",
+            "LZ",
+            "MA",
+            "MB",
+            "MC",
+            "NZ",
+            "OZ",
+            "PZ",
+            "QA",
+            "QB",
+            "RZ",
+            "SZ",
+            "TZ"
+          ],
+          "fraction": 0.8999999999870342,
+          "requested": 3109599.9760000003,
+          "served": 2798639.9783596816,
+          "binding": [
+            {
+              "kind": "IMPORT",
+              "code": "CI"
+            }
+          ],
+          "tail_bound": 0.000002436619401137527
+        }
+      ],
+      "delta_totals": {
+        "q": -511152.6800661208,
+        "g": -511152.6800661199,
+        "imports": -66434.55790858006,
+        "wage": -137835.54001784837,
+        "other_tax": -8192.100001060273,
+        "bridge": -7664.499700994333,
+        "surplus": -90833.3000117644,
+        "va": -236860.94003067305
+      },
+      "top_unserved": [
+        [
+          "GZ",
+          32611.03000422829
+        ],
+        [
+          "LZ",
+          30259.41260392341
+        ],
+        [
+          "FZ",
+          27888.738503616012
+        ],
+        [
+          "OZ",
+          22488.120002915763
+        ],
+        [
+          "QA",
+          19072.874402472953
+        ],
+        [
+          "HZ",
+          15669.727302031708
+        ]
+      ],
+      "limits": {
+        "branch": {},
+        "imports": {
+          "CI": 28009.454400000002
+        }
+      },
+      "actual_output": null
+    },
+    "joint_caps_priority": {
+      "sha256": "8f78a56ad84fbda02aa1c08fd4ad931b447850f16c85835ad1757265940eea8b",
+      "served_final": 2841635.2144583953,
+      "unserved_final": 267964.76154160494,
+      "tiers": [
+        {
+          "products": [
+            "OZ",
+            "PZ",
+            "QA",
+            "QB"
+          ],
+          "fraction": 1,
+          "requested": 646252.344,
+          "served": 646252.344,
+          "binding": [],
+          "tail_bound": 4.2464869463892273e-7
+        },
+        {
+          "products": [
+            "AZ",
+            "BZ",
+            "CA",
+            "CB",
+            "CC",
+            "CD",
+            "CE",
+            "CF",
+            "CG",
+            "CH",
+            "CI",
+            "CJ",
+            "CK",
+            "CL",
+            "CM",
+            "DZ",
+            "EZ",
+            "FZ",
+            "GZ",
+            "HZ",
+            "IZ",
+            "JA",
+            "JB",
+            "JC",
+            "KZ",
+            "LZ",
+            "MA",
+            "MB",
+            "MC",
+            "NZ",
+            "RZ",
+            "SZ",
+            "TZ"
+          ],
+          "fraction": 0.8912192667974989,
+          "requested": 2463347.632,
+          "served": 2195382.870458395,
+          "binding": [
+            {
+              "kind": "IMPORT",
+              "code": "CI"
+            }
+          ],
+          "tail_bound": 0.0000022080794458317236
+        }
+      ],
+      "delta_totals": {
+        "q": -463024.7012126008,
+        "g": -463024.7012125999,
+        "imports": -66237.94843140512,
+        "wage": -105907.64982013102,
+        "other_tax": -7540.919406837667,
+        "bridge": -5056.799619439538,
+        "surplus": -83221.44426372123,
+        "va": -196670.01349068992
+      },
+      "top_unserved": [
+        [
+          "GZ",
+          35474.51753888762
+        ],
+        [
+          "LZ",
+          32916.41088904999
+        ],
+        [
+          "FZ",
+          30337.57422122822
+        ],
+        [
+          "HZ",
+          17045.644247772492
+        ],
+        [
+          "CL",
+          15429.147540642138
+        ],
+        [
+          "CA",
+          14245.216331284202
+        ]
+      ],
+      "limits": {
+        "branch": {
+          "JC": 141420.895
+        },
+        "imports": {
+          "CI": 28009.454400000002
+        }
+      },
+      "actual_output": null
+    }
+  },
+  "verification": "independent dense NumPy inverse and tier bounds; fixed coefficients, no stocks or market equilibrium",
+  "verification_receipt": {
+    "run": 45527533130,
+    "job": 138914473164,
+    "tested_commit": "cadc77cae0d38361756ccf5f786d5d9ae5223177",
+    "conclusion": "test_and_pilot_steps_success"
+  }
+}
