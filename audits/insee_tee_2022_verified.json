@@ -1,0 +1,1384 @@
+{
+  "status": "EMPIRICAL_INSTITUTIONAL_DIAGNOSTIC_NOT_ENGINE_ADMISSION",
+  "publication": "BLOCK_PUBLICATION",
+  "source_hashes": {
+    "tee.xlsx": "9dbee70eb54090d62efdc930f30583761e1f4e81d14fed4cc9a53e93b4eae0b9",
+    "standard.xlsx": "1a9d587e3a70590a42210f10bca15a63dd85d18dc9946ca654d77e50970a29ed",
+    "sector_eurostat.json": "1ba61468e382c07becabfefb441ada9801180268768bae8de4c0718322b65a49"
+  },
+  "units": "TEE billion EUR; TES and Eurostat million EUR",
+  "accounts": {
+    "S1": {
+      "output": "5111.527",
+      "intermediate": "2742.917",
+      "gva": "2368.609",
+      "gdp_if_S1": "2653.997",
+      "compensation_paid": "1378.356",
+      "compensation_received": "1407.801",
+      "gross_operating_surplus": "776.356",
+      "gross_mixed_income": "131.977",
+      "fixed_capital_consumption": "497.833",
+      "property_income_received": "785.082",
+      "property_income_paid": "732.672",
+      "primary_income": "2736.443",
+      "direct_tax_paid": "354.227",
+      "social_contributions_paid": "518.788",
+      "cash_benefits_received": "566.815",
+      "disposable_income": "2684.902",
+      "consumption": "2088.896",
+      "pension_adjustment_net": "0.000",
+      "gross_saving": "596.006",
+      "net_saving": "98.173",
+      "gross_fixed_investment": "623.312",
+      "net_lending": "-31.509",
+      "financial_net_lending": "-12.863",
+      "statistical_adjustment": "18.646",
+      "net_worth": "19965.854"
+    },
+    "S11": {
+      "output": "3664.03",
+      "intermediate": "2299.044",
+      "gva": "1364.986",
+      "gdp_if_S1": "0",
+      "compensation_paid": "909.733",
+      "compensation_received": "0",
+      "gross_operating_surplus": "420.161",
+      "gross_mixed_income": "0",
+      "fixed_capital_consumption": "260.751",
+      "property_income_received": "330.37",
+      "property_income_paid": "385.433",
+      "primary_income": "365.098",
+      "direct_tax_paid": "68.644",
+      "social_contributions_paid": "0",
+      "cash_benefits_received": "0",
+      "disposable_income": "278.097",
+      "consumption": "0",
+      "pension_adjustment_net": "0",
+      "gross_saving": "278.097",
+      "net_saving": "17.346",
+      "gross_fixed_investment": "311.698",
+      "net_lending": "-5.11",
+      "financial_net_lending": "5.276",
+      "statistical_adjustment": "10.386",
+      "net_worth": "3682.393"
+    },
+    "S12": {
+      "output": "287.378",
+      "intermediate": "185.074",
+      "gva": "102.305",
+      "gdp_if_S1": "0",
+      "compensation_paid": "64.814",
+      "compensation_received": "0",
+      "gross_operating_surplus": "23.186",
+      "gross_mixed_income": "0",
+      "fixed_capital_consumption": "21.544",
+      "property_income_received": "301.232",
+      "property_income_paid": "275.881",
+      "primary_income": "48.537",
+      "direct_tax_paid": "18",
+      "social_contributions_paid": "0",
+      "cash_benefits_received": "0",
+      "disposable_income": "36.608",
+      "consumption": "0",
+      "pension_adjustment_net": "-6.669",
+      "gross_saving": "29.939",
+      "net_saving": "8.395",
+      "gross_fixed_investment": "25.185",
+      "net_lending": "4.918",
+      "financial_net_lending": "2.989",
+      "statistical_adjustment": "-1.929",
+      "net_worth": "83.031"
+    },
+    "S13": {
+      "output": "591.642",
+      "intermediate": "145.879",
+      "gva": "445.763",
+      "gdp_if_S1": "0",
+      "compensation_paid": "331.171",
+      "compensation_received": "0",
+      "gross_operating_surplus": "103.213",
+      "gross_mixed_income": "0",
+      "fixed_capital_consumption": "103.76",
+      "property_income_received": "18.427",
+      "property_income_paid": "53.463",
+      "primary_income": "436.074",
+      "direct_tax_paid": "0.088",
+      "social_contributions_paid": "0",
+      "cash_benefits_received": "0",
+      "disposable_income": "657.686",
+      "consumption": "653.544",
+      "pension_adjustment_net": "0",
+      "gross_saving": "4.142",
+      "net_saving": "-99.617",
+      "gross_fixed_investment": "110.216",
+      "net_lending": "-125.896",
+      "financial_net_lending": "-124.008",
+      "statistical_adjustment": "1.887",
+      "net_worth": "1069.9"
+    },
+    "S14": {
+      "output": "500.203",
+      "intermediate": "91.55",
+      "gva": "408.652",
+      "gdp_if_S1": "0",
+      "compensation_paid": "32.107",
+      "compensation_received": "1407.801",
+      "gross_operating_surplus": "224.444",
+      "gross_mixed_income": "131.977",
+      "fixed_capital_consumption": "106.424",
+      "property_income_received": "134.014",
+      "property_income_paid": "17.701",
+      "primary_income": "1880.535",
+      "direct_tax_paid": "267.495",
+      "social_contributions_paid": "518.788",
+      "cash_benefits_received": "566.815",
+      "disposable_income": "1646.103",
+      "consumption": "1374.103",
+      "pension_adjustment_net": "6.669",
+      "gross_saving": "278.669",
+      "net_saving": "172.245",
+      "gross_fixed_investment": "170.437",
+      "net_lending": "92.113",
+      "financial_net_lending": "100.425",
+      "statistical_adjustment": "8.312",
+      "net_worth": "14931.468"
+    },
+    "S15": {
+      "output": "68.274",
+      "intermediate": "21.371",
+      "gva": "46.903",
+      "gdp_if_S1": "0",
+      "compensation_paid": "40.531",
+      "compensation_received": "0",
+      "gross_operating_surplus": "5.354",
+      "gross_mixed_income": "0",
+      "fixed_capital_consumption": "5.354",
+      "property_income_received": "1.039",
+      "property_income_paid": "0.193",
+      "primary_income": "6.199",
+      "direct_tax_paid": "0",
+      "social_contributions_paid": "0",
+      "cash_benefits_received": "0",
+      "disposable_income": "66.407",
+      "consumption": "61.249",
+      "pension_adjustment_net": "0",
+      "gross_saving": "5.158",
+      "net_saving": "-0.196",
+      "gross_fixed_investment": "5.776",
+      "net_lending": "2.466",
+      "financial_net_lending": "2.456",
+      "statistical_adjustment": "-0.01",
+      "net_worth": "199.063"
+    }
+  },
+  "checks": [
+    {
+      "name": "S1:production",
+      "reported": "2653.997",
+      "calculated": "2653.998",
+      "residual": "-0.001",
+      "rounding_bound": "0.002"
+    },
+    {
+      "name": "S1:generation_income",
+      "reported": "2653.997",
+      "calculated": "2653.998",
+      "residual": "-0.001",
+      "rounding_bound": "0.003"
+    },
+    {
+      "name": "S1:primary_income",
+      "reported": "2736.443",
+      "calculated": "2736.442",
+      "residual": "0.001",
+      "rounding_bound": "0.004"
+    },
+    {
+      "name": "S1:disposable_income",
+      "reported": "2684.902",
+      "calculated": "2684.902",
+      "residual": "0.000",
+      "rounding_bound": "0.006"
+    },
+    {
+      "name": "S1:gross_saving",
+      "reported": "596.006",
+      "calculated": "596.006",
+      "residual": "0.000",
+      "rounding_bound": "0.0025"
+    },
+    {
+      "name": "S1:net_saving",
+      "reported": "98.173",
+      "calculated": "98.173",
+      "residual": "0.000",
+      "rounding_bound": "0.0015"
+    },
+    {
+      "name": "S1:net_lending",
+      "reported": "-31.509",
+      "calculated": "-31.510",
+      "residual": "0.001",
+      "rounding_bound": "0.004"
+    },
+    {
+      "name": "S1:financial_flow",
+      "reported": "-12.863",
+      "calculated": "-12.863",
+      "residual": "0.000",
+      "rounding_bound": "0.0015"
+    },
+    {
+      "name": "S1:net_worth",
+      "reported": "19965.854",
+      "calculated": "19965.854",
+      "residual": "0.000",
+      "rounding_bound": "0.002"
+    },
+    {
+      "name": "S11:production",
+      "reported": "1364.986",
+      "calculated": "1364.986",
+      "residual": "0.000",
+      "rounding_bound": "0.002"
+    },
+    {
+      "name": "S11:generation_income",
+      "reported": "1364.986",
+      "calculated": "1364.986",
+      "residual": "0.000",
+      "rounding_bound": "0.003"
+    },
+    {
+      "name": "S11:primary_income",
+      "reported": "365.098",
+      "calculated": "365.098",
+      "residual": "0.000",
+      "rounding_bound": "0.004"
+    },
+    {
+      "name": "S11:disposable_income",
+      "reported": "278.097",
+      "calculated": "278.098",
+      "residual": "-0.001",
+      "rounding_bound": "0.006"
+    },
+    {
+      "name": "S11:gross_saving",
+      "reported": "278.097",
+      "calculated": "278.097",
+      "residual": "0.000",
+      "rounding_bound": "0.0025"
+    },
+    {
+      "name": "S11:net_saving",
+      "reported": "17.346",
+      "calculated": "17.346",
+      "residual": "0.000",
+      "rounding_bound": "0.0015"
+    },
+    {
+      "name": "S11:net_lending",
+      "reported": "-5.11",
+      "calculated": "-5.109",
+      "residual": "-0.001",
+      "rounding_bound": "0.004"
+    },
+    {
+      "name": "S11:financial_flow",
+      "reported": "5.276",
+      "calculated": "5.276",
+      "residual": "0.000",
+      "rounding_bound": "0.0015"
+    },
+    {
+      "name": "S11:net_worth",
+      "reported": "3682.393",
+      "calculated": "3682.392",
+      "residual": "0.001",
+      "rounding_bound": "0.002"
+    },
+    {
+      "name": "S12:production",
+      "reported": "102.305",
+      "calculated": "102.304",
+      "residual": "0.001",
+      "rounding_bound": "0.002"
+    },
+    {
+      "name": "S12:generation_income",
+      "reported": "102.305",
+      "calculated": "102.305",
+      "residual": "0.000",
+      "rounding_bound": "0.003"
+    },
+    {
+      "name": "S12:primary_income",
+      "reported": "48.537",
+      "calculated": "48.537",
+      "residual": "0.000",
+      "rounding_bound": "0.004"
+    },
+    {
+      "name": "S12:disposable_income",
+      "reported": "36.608",
+      "calculated": "36.609",
+      "residual": "-0.001",
+      "rounding_bound": "0.006"
+    },
+    {
+      "name": "S12:gross_saving",
+      "reported": "29.939",
+      "calculated": "29.939",
+      "residual": "0.000",
+      "rounding_bound": "0.0025"
+    },
+    {
+      "name": "S12:net_saving",
+      "reported": "8.395",
+      "calculated": "8.395",
+      "residual": "0.000",
+      "rounding_bound": "0.0015"
+    },
+    {
+      "name": "S12:net_lending",
+      "reported": "4.918",
+      "calculated": "4.918",
+      "residual": "0.000",
+      "rounding_bound": "0.004"
+    },
+    {
+      "name": "S12:financial_flow",
+      "reported": "2.989",
+      "calculated": "2.989",
+      "residual": "0.000",
+      "rounding_bound": "0.0015"
+    },
+    {
+      "name": "S12:net_worth",
+      "reported": "83.031",
+      "calculated": "83.031",
+      "residual": "0.000",
+      "rounding_bound": "0.002"
+    },
+    {
+      "name": "S13:production",
+      "reported": "445.763",
+      "calculated": "445.763",
+      "residual": "0.000",
+      "rounding_bound": "0.002"
+    },
+    {
+      "name": "S13:generation_income",
+      "reported": "445.763",
+      "calculated": "445.763",
+      "residual": "0.000",
+      "rounding_bound": "0.003"
+    },
+    {
+      "name": "S13:primary_income",
+      "reported": "436.074",
+      "calculated": "436.075",
+      "residual": "-0.001",
+      "rounding_bound": "0.004"
+    },
+    {
+      "name": "S13:disposable_income",
+      "reported": "657.686",
+      "calculated": "657.686",
+      "residual": "0.000",
+      "rounding_bound": "0.006"
+    },
+    {
+      "name": "S13:gross_saving",
+      "reported": "4.142",
+      "calculated": "4.142",
+      "residual": "0.000",
+      "rounding_bound": "0.0025"
+    },
+    {
+      "name": "S13:net_saving",
+      "reported": "-99.617",
+      "calculated": "-99.618",
+      "residual": "0.001",
+      "rounding_bound": "0.0015"
+    },
+    {
+      "name": "S13:net_lending",
+      "reported": "-125.896",
+      "calculated": "-125.897",
+      "residual": "0.001",
+      "rounding_bound": "0.004"
+    },
+    {
+      "name": "S13:financial_flow",
+      "reported": "-124.008",
+      "calculated": "-124.008",
+      "residual": "0.000",
+      "rounding_bound": "0.0015"
+    },
+    {
+      "name": "S13:net_worth",
+      "reported": "1069.9",
+      "calculated": "1069.901",
+      "residual": "-0.001",
+      "rounding_bound": "0.002"
+    },
+    {
+      "name": "S14:production",
+      "reported": "408.652",
+      "calculated": "408.653",
+      "residual": "-0.001",
+      "rounding_bound": "0.002"
+    },
+    {
+      "name": "S14:generation_income",
+      "reported": "408.652",
+      "calculated": "408.654",
+      "residual": "-0.002",
+      "rounding_bound": "0.003"
+    },
+    {
+      "name": "S14:primary_income",
+      "reported": "1880.535",
+      "calculated": "1880.535",
+      "residual": "0.000",
+      "rounding_bound": "0.004"
+    },
+    {
+      "name": "S14:disposable_income",
+      "reported": "1646.103",
+      "calculated": "1646.102",
+      "residual": "0.001",
+      "rounding_bound": "0.006"
+    },
+    {
+      "name": "S14:gross_saving",
+      "reported": "278.669",
+      "calculated": "278.669",
+      "residual": "0.000",
+      "rounding_bound": "0.0025"
+    },
+    {
+      "name": "S14:net_saving",
+      "reported": "172.245",
+      "calculated": "172.245",
+      "residual": "0.000",
+      "rounding_bound": "0.0015"
+    },
+    {
+      "name": "S14:net_lending",
+      "reported": "92.113",
+      "calculated": "92.113",
+      "residual": "0.000",
+      "rounding_bound": "0.004"
+    },
+    {
+      "name": "S14:financial_flow",
+      "reported": "100.425",
+      "calculated": "100.425",
+      "residual": "0.000",
+      "rounding_bound": "0.0015"
+    },
+    {
+      "name": "S14:net_worth",
+      "reported": "14931.468",
+      "calculated": "14931.467",
+      "residual": "0.001",
+      "rounding_bound": "0.002"
+    },
+    {
+      "name": "S15:production",
+      "reported": "46.903",
+      "calculated": "46.903",
+      "residual": "0.000",
+      "rounding_bound": "0.002"
+    },
+    {
+      "name": "S15:generation_income",
+      "reported": "46.903",
+      "calculated": "46.904",
+      "residual": "-0.001",
+      "rounding_bound": "0.003"
+    },
+    {
+      "name": "S15:primary_income",
+      "reported": "6.199",
+      "calculated": "6.200",
+      "residual": "-0.001",
+      "rounding_bound": "0.004"
+    },
+    {
+      "name": "S15:disposable_income",
+      "reported": "66.407",
+      "calculated": "66.407",
+      "residual": "0.000",
+      "rounding_bound": "0.006"
+    },
+    {
+      "name": "S15:gross_saving",
+      "reported": "5.158",
+      "calculated": "5.158",
+      "residual": "0.000",
+      "rounding_bound": "0.0025"
+    },
+    {
+      "name": "S15:net_saving",
+      "reported": "-0.196",
+      "calculated": "-0.196",
+      "residual": "0.000",
+      "rounding_bound": "0.0015"
+    },
+    {
+      "name": "S15:net_lending",
+      "reported": "2.466",
+      "calculated": "2.466",
+      "residual": "0.000",
+      "rounding_bound": "0.004"
+    },
+    {
+      "name": "S15:financial_flow",
+      "reported": "2.456",
+      "calculated": "2.456",
+      "residual": "0.000",
+      "rounding_bound": "0.0015"
+    },
+    {
+      "name": "S15:net_worth",
+      "reported": "199.063",
+      "calculated": "199.063",
+      "residual": "0.000",
+      "rounding_bound": "0.002"
+    },
+    {
+      "name": "national_net_lending_vs_rest_of_world",
+      "reported": "-31.509",
+      "calculated": "-31.509",
+      "residual": "0.000",
+      "rounding_bound": "0.001"
+    },
+    {
+      "name": "national_wage_cross_border",
+      "reported": "1407.801",
+      "calculated": "1407.802",
+      "residual": "-0.001",
+      "rounding_bound": "0.002"
+    },
+    {
+      "name": "resident_aggregation:gva",
+      "reported": "2368.609",
+      "calculated": "2368.609",
+      "residual": "0.000",
+      "rounding_bound": "0.006"
+    },
+    {
+      "name": "resident_aggregation:compensation_paid",
+      "reported": "1378.356",
+      "calculated": "1378.356",
+      "residual": "0.000",
+      "rounding_bound": "0.006"
+    },
+    {
+      "name": "resident_aggregation:gross_operating_surplus",
+      "reported": "776.356",
+      "calculated": "776.358",
+      "residual": "-0.002",
+      "rounding_bound": "0.006"
+    },
+    {
+      "name": "resident_aggregation:gross_mixed_income",
+      "reported": "131.977",
+      "calculated": "131.977",
+      "residual": "0.000",
+      "rounding_bound": "0.006"
+    },
+    {
+      "name": "resident_aggregation:fixed_capital_consumption",
+      "reported": "497.833",
+      "calculated": "497.833",
+      "residual": "0.000",
+      "rounding_bound": "0.006"
+    },
+    {
+      "name": "resident_aggregation:disposable_income",
+      "reported": "2684.902",
+      "calculated": "2684.901",
+      "residual": "0.001",
+      "rounding_bound": "0.006"
+    },
+    {
+      "name": "resident_aggregation:consumption",
+      "reported": "2088.896",
+      "calculated": "2088.896",
+      "residual": "0.000",
+      "rounding_bound": "0.006"
+    },
+    {
+      "name": "resident_aggregation:gross_saving",
+      "reported": "596.006",
+      "calculated": "596.005",
+      "residual": "0.001",
+      "rounding_bound": "0.006"
+    },
+    {
+      "name": "resident_aggregation:net_lending",
+      "reported": "-31.509",
+      "calculated": "-31.509",
+      "residual": "0.000",
+      "rounding_bound": "0.006"
+    }
+  ],
+  "blank_flow_assumptions": [
+    {
+      "sector": "S11",
+      "cell": "D30",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S11",
+      "cell": "D30",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S11",
+      "cell": "V19",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S11",
+      "cell": "V22",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S11",
+      "cell": "V25",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S11",
+      "cell": "V44",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S11",
+      "cell": "D45",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S11",
+      "cell": "V51",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S11",
+      "cell": "D63",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S11",
+      "cell": "V75",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S11",
+      "cell": "V19",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S11",
+      "cell": "D30",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S11",
+      "cell": "D45",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S11",
+      "cell": "V51",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S11",
+      "cell": "D63",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S11",
+      "cell": "V75",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S12",
+      "cell": "E25",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S12",
+      "cell": "E30",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S12",
+      "cell": "E30",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S12",
+      "cell": "U19",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S12",
+      "cell": "U22",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S12",
+      "cell": "U25",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S12",
+      "cell": "U44",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S12",
+      "cell": "E45",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S12",
+      "cell": "U51",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S12",
+      "cell": "E63",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S12",
+      "cell": "U75",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S12",
+      "cell": "U19",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S12",
+      "cell": "E30",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S12",
+      "cell": "E45",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S12",
+      "cell": "U51",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S12",
+      "cell": "E63",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S12",
+      "cell": "U75",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S13",
+      "cell": "F30",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S13",
+      "cell": "F30",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S13",
+      "cell": "T19",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S13",
+      "cell": "F45",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S13",
+      "cell": "T51",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S13",
+      "cell": "T75",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S13",
+      "cell": "T19",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S13",
+      "cell": "F30",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S13",
+      "cell": "F45",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S13",
+      "cell": "T51",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S13",
+      "cell": "T75",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S14",
+      "cell": "S22",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S14",
+      "cell": "S25",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S14",
+      "cell": "S44",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S15",
+      "cell": "H30",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S15",
+      "cell": "H30",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S15",
+      "cell": "R19",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S15",
+      "cell": "R22",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S15",
+      "cell": "R25",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S15",
+      "cell": "R44",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S15",
+      "cell": "H45",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S15",
+      "cell": "R51",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S15",
+      "cell": "R75",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S15",
+      "cell": "R19",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S15",
+      "cell": "H30",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S15",
+      "cell": "H45",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S15",
+      "cell": "R51",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    },
+    {
+      "sector": "S15",
+      "cell": "R75",
+      "interpretation": "unrecorded flow in selected TEE layout; zero for identity only"
+    }
+  ],
+  "TES_bridge": [
+    {
+      "item": "output",
+      "TEE_MEUR": "5111527.000",
+      "TES_MEUR": "5111526.8",
+      "TES_cell": "AN6",
+      "residual_MEUR": "0.200",
+      "rounding_bound_MEUR": "0.55",
+      "status": "WITHIN_ROUNDING"
+    },
+    {
+      "item": "intermediate",
+      "TEE_MEUR": "2742917.000",
+      "TES_MEUR": "2742917.4",
+      "TES_cell": "AN4",
+      "residual_MEUR": "-0.400",
+      "rounding_bound_MEUR": "0.55",
+      "status": "WITHIN_ROUNDING"
+    },
+    {
+      "item": "gva",
+      "TEE_MEUR": "2368609.000",
+      "TES_MEUR": "2368609.4",
+      "TES_cell": "AN5",
+      "residual_MEUR": "-0.400",
+      "rounding_bound_MEUR": "0.55",
+      "status": "WITHIN_ROUNDING"
+    },
+    {
+      "item": "compensation_paid",
+      "TEE_MEUR": "1378356.000",
+      "TES_MEUR": "1378355.4",
+      "TES_cell": "AN21",
+      "residual_MEUR": "0.600",
+      "rounding_bound_MEUR": "0.55",
+      "status": "UNRESOLVED_CROSS_TABLE_RESIDUAL"
+    },
+    {
+      "item": "household_consumption",
+      "TEE_MEUR": "1374103.000",
+      "TES_MEUR": "1374103.3",
+      "TES_cell": "C44",
+      "residual_MEUR": "-0.300",
+      "rounding_bound_MEUR": "0.55",
+      "status": "WITHIN_ROUNDING"
+    }
+  ],
+  "Eurostat_comparisons": [
+    {
+      "sector": "S1",
+      "item": "B6G",
+      "direction": "RECV",
+      "TEE_MEUR": "2684902.000",
+      "Eurostat_MEUR": "2684902",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S1",
+      "item": "B8G",
+      "direction": "RECV",
+      "TEE_MEUR": "596006.000",
+      "Eurostat_MEUR": "596006",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S1",
+      "item": "B9",
+      "direction": "RECV",
+      "TEE_MEUR": "-31509.000",
+      "Eurostat_MEUR": "-31509",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S1",
+      "item": "D1",
+      "direction": "PAID",
+      "TEE_MEUR": "1378356.000",
+      "Eurostat_MEUR": "1378355",
+      "difference_MEUR": "1.000",
+      "flag": null
+    },
+    {
+      "sector": "S1",
+      "item": "P3",
+      "direction": "PAID",
+      "TEE_MEUR": "2088896.000",
+      "Eurostat_MEUR": "2088896",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S1",
+      "item": "P51C",
+      "direction": "PAID",
+      "TEE_MEUR": "497833.000",
+      "Eurostat_MEUR": "497833",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S1",
+      "item": "B5GQ",
+      "direction": "RECV",
+      "TEE_MEUR": "2736443.000",
+      "Eurostat_MEUR": "2736443",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S11",
+      "item": "B6G",
+      "direction": "RECV",
+      "TEE_MEUR": "278097.000",
+      "Eurostat_MEUR": "278097",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S11",
+      "item": "B8G",
+      "direction": "RECV",
+      "TEE_MEUR": "278097.000",
+      "Eurostat_MEUR": "278097",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S11",
+      "item": "B9",
+      "direction": "RECV",
+      "TEE_MEUR": "-5110.00",
+      "Eurostat_MEUR": "-5110",
+      "difference_MEUR": "0.00",
+      "flag": null
+    },
+    {
+      "sector": "S11",
+      "item": "D1",
+      "direction": "PAID",
+      "TEE_MEUR": "909733.000",
+      "Eurostat_MEUR": "909733",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S11",
+      "item": "P51C",
+      "direction": "PAID",
+      "TEE_MEUR": "260751.000",
+      "Eurostat_MEUR": "260751",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S11",
+      "item": "B5G",
+      "direction": "RECV",
+      "TEE_MEUR": "365098.000",
+      "Eurostat_MEUR": "365098",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S12",
+      "item": "B6G",
+      "direction": "RECV",
+      "TEE_MEUR": "36608.000",
+      "Eurostat_MEUR": "36608",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S12",
+      "item": "B8G",
+      "direction": "RECV",
+      "TEE_MEUR": "29939.000",
+      "Eurostat_MEUR": "29939",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S12",
+      "item": "B9",
+      "direction": "RECV",
+      "TEE_MEUR": "4918.000",
+      "Eurostat_MEUR": "4918",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S12",
+      "item": "D1",
+      "direction": "PAID",
+      "TEE_MEUR": "64814.000",
+      "Eurostat_MEUR": "64814",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S12",
+      "item": "P51C",
+      "direction": "PAID",
+      "TEE_MEUR": "21544.000",
+      "Eurostat_MEUR": "21544",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S12",
+      "item": "B5G",
+      "direction": "RECV",
+      "TEE_MEUR": "48537.000",
+      "Eurostat_MEUR": "48537",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S13",
+      "item": "B6G",
+      "direction": "RECV",
+      "TEE_MEUR": "657686.000",
+      "Eurostat_MEUR": "657686",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S13",
+      "item": "B8G",
+      "direction": "RECV",
+      "TEE_MEUR": "4142.000",
+      "Eurostat_MEUR": "4142",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S13",
+      "item": "B9",
+      "direction": "RECV",
+      "TEE_MEUR": "-125896.000",
+      "Eurostat_MEUR": "-125896",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S13",
+      "item": "D1",
+      "direction": "PAID",
+      "TEE_MEUR": "331171.000",
+      "Eurostat_MEUR": "331171",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S13",
+      "item": "P3",
+      "direction": "PAID",
+      "TEE_MEUR": "653544.000",
+      "Eurostat_MEUR": "653544",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S13",
+      "item": "P51C",
+      "direction": "PAID",
+      "TEE_MEUR": "103760.00",
+      "Eurostat_MEUR": "103760",
+      "difference_MEUR": "0.00",
+      "flag": null
+    },
+    {
+      "sector": "S13",
+      "item": "B5G",
+      "direction": "RECV",
+      "TEE_MEUR": "436074.000",
+      "Eurostat_MEUR": "436075",
+      "difference_MEUR": "-1.000",
+      "flag": null
+    },
+    {
+      "sector": "S14",
+      "item": "B6G",
+      "direction": "RECV",
+      "TEE_MEUR": "1646103.000",
+      "Eurostat_MEUR": "1646103",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S14",
+      "item": "B8G",
+      "direction": "RECV",
+      "TEE_MEUR": "278669.000",
+      "Eurostat_MEUR": "278669",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S14",
+      "item": "B9",
+      "direction": "RECV",
+      "TEE_MEUR": "92113.000",
+      "Eurostat_MEUR": "92113",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S14",
+      "item": "D1",
+      "direction": "PAID",
+      "TEE_MEUR": "32107.000",
+      "Eurostat_MEUR": "32107",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S14",
+      "item": "P3",
+      "direction": "PAID",
+      "TEE_MEUR": "1374103.000",
+      "Eurostat_MEUR": "1374103",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S14",
+      "item": "P51C",
+      "direction": "PAID",
+      "TEE_MEUR": "106424.000",
+      "Eurostat_MEUR": "106424",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S14",
+      "item": "B5G",
+      "direction": "RECV",
+      "TEE_MEUR": "1880535.000",
+      "Eurostat_MEUR": "1880535",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S15",
+      "item": "B6G",
+      "direction": "RECV",
+      "TEE_MEUR": "66407.000",
+      "Eurostat_MEUR": "66407",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S15",
+      "item": "B8G",
+      "direction": "RECV",
+      "TEE_MEUR": "5158.000",
+      "Eurostat_MEUR": "5158",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S15",
+      "item": "B9",
+      "direction": "RECV",
+      "TEE_MEUR": "2466.000",
+      "Eurostat_MEUR": "2466",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S15",
+      "item": "D1",
+      "direction": "PAID",
+      "TEE_MEUR": "40531.000",
+      "Eurostat_MEUR": "40531",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S15",
+      "item": "P3",
+      "direction": "PAID",
+      "TEE_MEUR": "61249.000",
+      "Eurostat_MEUR": "61249",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S15",
+      "item": "P51C",
+      "direction": "PAID",
+      "TEE_MEUR": "5354.000",
+      "Eurostat_MEUR": "5354",
+      "difference_MEUR": "0.000",
+      "flag": null
+    },
+    {
+      "sector": "S15",
+      "item": "B5G",
+      "direction": "RECV",
+      "TEE_MEUR": "6199.000",
+      "Eurostat_MEUR": "6199",
+      "difference_MEUR": "0.000",
+      "flag": null
+    }
+  ],
+  "Eurostat_missing": [
+    {
+      "sector": "S11",
+      "item": "P3",
+      "direction": "PAID"
+    },
+    {
+      "sector": "S12",
+      "item": "P3",
+      "direction": "PAID"
+    }
+  ],
+  "Eurostat_updated": "2026-11-16T23:00:00+0100",
+  "household_valuation": {
+    "basic_price_basket_MEUR": "1229477.109",
+    "purchaser_price_consumption_MEUR": "1374103.3",
+    "aggregate_difference_MEUR": "144626.191",
+    "territorial_correction_MEUR": "-12458",
+    "difference_before_territorial_correction_MEUR": "157084.191",
+    "warning": "aggregate bridge only; no tax/margin allocation by product and origin"
+  },
+  "household_gross_saving_rate": "0.1686070431977308424876510493",
+  "national_financial_vs_nonfinancial_gap_MdEUR": "18.646",
+  "limitations": [
+    "blank flow interpretation conditional on pinned layout; not imputation of missing Eurostat data",
+    "rounded publication, preserve residuals; same underlying national accounts not independent measurement",
+    "no branch-to-institution allocation, bilateral flow matrix, price bridge by product or behavioral calibration"
+  ],
+  "verification_receipt": {
+    "run": 45542230203,
+    "job": 138963250970,
+    "tested_commit": "cf54956025e107260f55d502c7dd4f5100717861",
+    "conclusion": "audit_step_success",
+    "previous_failed_run": 45542168852,
+    "raw_archive_drive": "1vMxRVlmnC9eXs4StBaUz4YqY7yjxcYPU",
+    "raw_archive_sha256": "9006da164cd05e59c6b9ba626328b36695b47fba3fe3259953406d3ad52e6f7d"
+  }
+}
