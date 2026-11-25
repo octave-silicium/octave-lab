@@ -1,0 +1,127 @@
+{
+  "study": "VERTICAL-001",
+  "phase": "V2a",
+  "publication": "BLOCK_PUBLICATION",
+  "causal_identification": "NOT_IDENTIFIED",
+  "section_count": 18,
+  "claim_count": 5,
+  "coverage_count": 140,
+  "coverage_dispositions": {
+    "BLOCKED_MISSING_DATA": 45,
+    "HYPOTHESIS_ONLY": 19,
+    "PENDING_QUALIFICATION": 76
+  },
+  "sources": {
+    "urssaf_headcount": "9ec16fb077e554518f5a1ade579684a8c91d56f293c7b9897f07b40226833222",
+    "urssaf_dpae": "42cd99124b1ef5f0a39afc481c42e70d5adc0fbfb535a7cb53f2653dfd41f549",
+    "eurostat_ai": "0c701942ea3d15bd1350e6938b27a5713f9d39f366b620723995b98077a469a8"
+  },
+  "synthetic_only_scenarios": [
+    {
+      "id": "reference",
+      "quantity": 1000,
+      "price_eur": "100",
+      "paid_hours_delta": "0",
+      "cash_surplus_delta_eur": "0",
+      "incremental_npv_eur": "0",
+      "simple_direct_time_comparator_delta_hours": "0"
+    },
+    {
+      "id": "substitution",
+      "quantity": 1150,
+      "price_eur": "85",
+      "paid_hours_delta": "-425",
+      "cash_surplus_delta_eur": "6000",
+      "incremental_npv_eur": "5516774122976736841430000/103209781458540471867",
+      "simple_direct_time_comparator_delta_hours": "-500"
+    },
+    {
+      "id": "complementarity",
+      "quantity": 1200,
+      "price_eur": "95",
+      "paid_hours_delta": "50",
+      "cash_surplus_delta_eur": "2000",
+      "incremental_npv_eur": "3452578493805927404090000/309629344375621415601",
+      "simple_direct_time_comparator_delta_hours": "-250"
+    },
+    {
+      "id": "redesign",
+      "quantity": 1220,
+      "price_eur": "78",
+      "paid_hours_delta": "-645",
+      "cash_surplus_delta_eur": "6800",
+      "incremental_npv_eur": "945504570599932528960000/18213490845624789153",
+      "simple_direct_time_comparator_delta_hours": "-750"
+    },
+    {
+      "id": "no_rebound",
+      "quantity": 1000,
+      "price_eur": "85",
+      "paid_hours_delta": "-500",
+      "cash_surplus_delta_eur": "0",
+      "incremental_npv_eur": "-10000",
+      "simple_direct_time_comparator_delta_hours": "-500"
+    },
+    {
+      "id": "retained_payroll",
+      "quantity": 1150,
+      "price_eur": "85",
+      "paid_hours_delta": "0",
+      "cash_surplus_delta_eur": "-11000",
+      "incremental_npv_eur": "-39115089100347992736560000/309629344375621415601",
+      "simple_direct_time_comparator_delta_hours": "-500"
+    },
+    {
+      "id": "retain_margin",
+      "quantity": 1000,
+      "price_eur": "100",
+      "paid_hours_delta": "-500",
+      "cash_surplus_delta_eur": "15000",
+      "incremental_npv_eur": "15340082029319949181580000/103209781458540471867",
+      "simple_direct_time_comparator_delta_hours": "-500"
+    },
+    {
+      "id": "capacity_stress",
+      "quantity": 1000,
+      "price_eur": "95",
+      "paid_hours_delta": "-100",
+      "cash_surplus_delta_eur": "-6000",
+      "incremental_npv_eur": "-7580969752147546278770000/103209781458540471867",
+      "simple_direct_time_comparator_delta_hours": "-250"
+    }
+  ],
+  "sensitivity_count": 21,
+  "result_sha256": "9fad30ef2ae71ad517ea8328d477698c01b4283f16e3589e0385dd3b05b8a479",
+  "scenario_sha256": "fda1e3e7754e63893d8564409af954dc1d8d12a8a5d61dabc744cfc8401e7b55",
+  "registry_sha256": {
+    "economic_mechanisms_v2.json": "7f7fd86bf1a9a9f017689627dcc36dcf77cef8aaa9a6cdf017088e75f1e44694",
+    "transversal_enrichment_v1.json": "14ecd88e76a6f08da49087dab0128ff7b80f7fbdbefff4a3581509ec5f4a99d2",
+    "shapiro_enrichment_v1.json": "0e79a721f25ac9bfb748d96da1b2a6d61a85c30274e723238aa0b123223034d8",
+    "investigation_result_v1.json": "a18023fb3ea2847425ae3190f79e55bd9d7cf1a2725135b6d0b4fd38a16653ee",
+    "multi_order_prospective_v1.json": "abd8dfeebcfa63d2bb225ce7720228c5f3fc7d63efec95b370e14b00d9c32cbc",
+    "limitations_v1.json": "cf2b87da03260c5fa50c5c0dbb959622c8f7f96530d490e8a70fe5cff6e253b6",
+    "source_rights.json": "bbc7b4d34b64a9580dcc3ecb0384f99c9397d2a8c11453ba06ba6909172a53b6",
+    "series_events.json": "2a8c15d2c065643623f71998d536dbaeaa868279725e2292d4730f355145477b"
+  },
+  "code_sha256": {
+    "vertical_v2.py": "d4c1b0cec934ca5d68c91eb6e68988f0afe49502802f80aff70e21779a9079c5",
+    "vertical_scenarios.py": "c736f01f20bafa2d78ccc415abe6321318dee2562657f974a342d9d34ed90bbb",
+    "vertical_v1.py": "df98b8e7ebfad7f427946528972eef3f9119bb6861761e8f71e083b66c56bd35",
+    "vertical_v11.py": "2ed40b76078c1afed8d462a9b2534653f462222e8fcaa5d5783372765c885e47",
+    "vertical_v12.py": "6bdaf9198d96da49cf43ab935b46362726f06d80ccb37ed7edcd4218746b3558",
+    "economic_market.py": "fc2e26b3fb6126b68dae41186f7514ee9004a628e29a7b4b9b2feec6f92f5812"
+  },
+  "ci": {
+    "run": 45679014488,
+    "job": 139434219997,
+    "conclusion": "success",
+    "tested_commit": "59b7c6d4e2dee13eeaeb5f0974a3325a8fc208fc",
+    "tests": 22,
+    "seconds": 0.047
+  },
+  "previous_attempt": {
+    "run": 45678982781,
+    "conclusion": "failure",
+    "reason": "Complementarity fixture was exactly at zero hours delta (100 extra hours); adjusted hypothetical new tasks to 150 to demonstrate positive counterexample; equations unchanged."
+  }
+}
