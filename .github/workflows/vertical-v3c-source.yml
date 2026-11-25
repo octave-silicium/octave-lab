@@ -1,0 +1,23 @@
+name: VERTICAL-001 V3c offline source snapshot
+on:
+  push:
+    paths:
+      - '.github/workflows/vertical-v3c-source.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          ref: dbced8ace0c942fe966dc99f6ea6e884744112dd
+      - run: git archive --format=zip -o "${RUNNER_TEMP}/octave-source.zip" HEAD pipeline governance audits research tests
+      - uses: actions/upload-artifact@v4
+        with:
+          name: octave-v3c-public-source
+          path: ${{ runner.temp }}/octave-source.zip
+          if-no-files-found: error
+          retention-days: 7
