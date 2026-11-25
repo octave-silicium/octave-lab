@@ -8,6 +8,7 @@ from .economic_sector_capital import path,finite
 
 from .economic_integrated_path import accrue
 from .economic_sector_structural import state as unconstrained
+from .economic_working_capital import WorkingPolicy,prepare,local_limits,deferred,invoice,trade_bfr
 
 @dataclass(frozen=True)
 class OperatingStep:
@@ -20,6 +21,7 @@ class OperatingStep:
     discharges:tuple=()
     evidence:str="scenario"
     amortization:tuple=() # (project id, ((absolute due, share), ...))
+    working:WorkingPolicy|None=None
 
 def operating_path(state,bank,outside,household,government,branch_firms,steps,assets,initial_vintages,*,noncapital_capacity,capital_before,other_rwa,loan_weight,minimum_ratio,credit_limit,coverage,allowances=(),evidence):
     require(isinstance(state,State) and state.period==0 and words(evidence),"INITIAL_PERIOD")
@@ -74,7 +76,8 @@ def operating_path(state,bank,outside,household,government,branch_firms,steps,as
         # Explicit conservative policy: no fresh borrowing by a firm with any overdue liability.
         overdue={p.issuer for p in cur.positions if p.instrument in {"LOAN","TRADE_PAYABLE","INTEREST_PAYABLE"} and p.due is not None and p.due<=cur.period}
         limited=tuple(replace(p,debt_cap="0") if p.firm in overdue else p for p in step.projects)
-        _,reservation=run_funding(cur,limited,{bank:cap},coverage)
+        facilities,alloc,edges,wc_envelope=prepare(cur,bank,firms,step.working,cap,overdue) if step.working is not None else ({},{},{},F(0))
+        _,reservation=run_funding(cur,limited,{bank:cap-wc_envelope},coverage)
         funding={p["id"]:p for p in reservation["result"]["funding"]["result"]["projects"]}
         # Other final demand is household consumption, funded only from pre-sale deposits.
         desired=[F(str(x))*1000000 for x in s.final];require(all(x>=0 for x in desired),"DEMAND")
@@ -101,9 +104,12 @@ def operating_path(state,bank,outside,household,government,branch_firms,steps,as
             funds=max(F(0),cur.stocks().get(dep(a),F(0))-reserved_cash[a])
             needs[a]={"unconstrained_external_inputs_eur":str(need),"available_prefunding_eur":str(funds)}
             if need:scales.append(funds/need)
-        alpha=min(scales)
+        alpha=min(scales) if step.working is None else F(1)
+        branch_limits=();sellers=set()
+        if step.working is not None:
+            branch_limits,needs,sellers=local_limits(s,codes,branch_firms,cur,bank,reserved_cash,alloc,edges,req["g"])
         demand=[x*alpha for x in demand]
-        periods.append(replace(step.production,structure=replace(s,final=tuple(float(x/1000000) for x in demand))))
+        periods.append(replace(step.production,structure=replace(s,final=tuple(float(x/1000000) for x in demand)),liquidity_limits=branch_limits))
         for p in limited:
             i=od[p.id];a=by[i.asset];reserved=amount(funding[p.id]["paid_acquisition"])
             if reserved and alpha:approved.append(replace(i,units=float(reserved*alpha/(F(str(a.acquisition_price))*1000000))))
@@ -136,6 +142,7 @@ def operating_path(state,bank,outside,household,government,branch_firms,steps,as
         # Execute intermediate purchases before final sales, with independent gross cash limits.
         # Self-use is an internal resource flow, never a fictitious payment.
         finale=tuple(events);events=[];inputs={a:F(0) for a in firms};internal={a:F(0) for a in firms};inputrows=[]
+        invoices=[];deferred_cost={a:F(0) for a in firms};deferred_sales={a:F(0) for a in firms}
         for j,k in enumerate(codes):
             buyer=branch_firms[k];out=F(str(row["allocation"]["feasible_branch_output"][j]))*1000000
             for i,h in enumerate(codes):
@@ -143,34 +150,47 @@ def operating_path(state,bank,outside,household,government,branch_firms,steps,as
                 if x:
                     if i==j:internal[buyer]+=x
                     else:
-                        emit("input:"+str(t)+":"+k+":"+h,"DEPOSIT_TRANSFER",buyer,supplier,x);inputs[buyer]+=x;sales[supplier]+=x
+                        d,due=deferred(edges,buyer,supplier,x)
+                        emit("input:"+str(t)+":"+k+":"+h,"DEPOSIT_TRANSFER",buyer,supplier,x-d);inputs[buyer]+=x-d;sales[supplier]+=x-d
+                        if d:
+                            invoices.append((str(t)+":"+k+":"+h,buyer,supplier,str(d),due));deferred_cost[buyer]+=d;deferred_sales[supplier]+=d
                     inputrows.append({"buyer":buyer,"supplier":supplier,"product":h,"kind":"SELF_USE" if i==j else "DOMESTIC","value_eur":str(x)})
                 im=out*F(str(s.imported[i][j]))
                 if im:
                     emit("import:"+str(t)+":"+k+":"+h,"DEPOSIT_TRANSFER",buyer,outside,im);inputs[buyer]+=im
                     inputrows.append({"buyer":buyer,"supplier":outside,"product":h,"kind":"IMPORT","value_eur":str(im)})
-        for a in firms:require(inputs[a]<=max(F(0),cur.stocks().get(dep(a),F(0))-reserved_cash[a]),"GROSS_INPUT_LIQUIDITY")
-        cur,inputreceipt=apply(cur,tuple(events));cur,salesreceipt=apply(cur,finale);events=[];firm_rows=[]
+        input_events=tuple(events);events=[];wc_draw=F(0);draws={}
+        for j,k in enumerate(codes):
+            a=branch_firms[k];own=max(F(0),cur.stocks().get(dep(a),F(0))-reserved_cash[a]);required=inputs[a]
+            if a in sellers:required+=F(str(row["allocation"]["feasible_branch_output"][j]))*1000000*(F(str(s.wage[j]))+F(str(s.other_tax[j])))
+            x=max(F(0),required-own);require(x<=alloc.get(a,F(0)),"GROSS_INPUT_LIQUIDITY")
+            if x:emit("working:"+str(t)+":"+a,"LOAN_ORIGINATION",a,bank,x,facilities[a].due)
+            wc_draw+=x;draws[a]=str(x)
+        cur,wcreceipt=apply(cur,tuple(events));cur,inputreceipt=apply(cur,input_events)
+        cur,invreceipt=invoice(cur,tuple(invoices),evidence=step.evidence);cur,salesreceipt=apply(cur,finale);events=[];firm_rows=[]
         for i,k in enumerate(codes):
             a=branch_firms[k];rev=sales[a];model=F(str(row["allocation"]["feasible_branch_output"][i]))*1000000
-            require(abs(rev+internal[a]-model)<=tol(model),"OUTPUT_SALES_RECONCILIATION")
+            require(abs(rev+deferred_sales[a]+internal[a]-model)<=tol(model),"OUTPUT_SALES_RECONCILIATION")
             # Output-based wage and production-tax accrual, settle from cash; fail closed on numerical shortfall.
             wage=model*F(str(s.wage[i]));tax=model*F(str(s.other_tax[i]))
             emit("wage:"+str(t)+":"+k,"DEPOSIT_TRANSFER",a,household,wage)
             emit("tax:"+str(t)+":"+k,"DEPOSIT_TRANSFER",a,government,tax)
             gross_cash=rev-inputs[a]-wage-tax
-            require(abs(gross_cash-model*F(str(s.surplus[i])))<=tol(model),"OPERATING_SURPLUS_RECONCILIATION")
-            firm_rows.append({"firm":a,"branch":k,"sales_eur":str(rev),"self_use_eur":str(internal[a]),"intermediate_cash_cost_eur":str(inputs[a]),"wages_eur":str(wage),"production_tax_eur":str(tax),"gross_operating_cash_proxy_eur":str(gross_cash),"output_model_eur":str(model),"output_sales_residual_eur":str(model-rev-internal[a])})
+            accrual_proxy=gross_cash+deferred_sales[a]-deferred_cost[a]
+            require(abs(accrual_proxy-model*F(str(s.surplus[i])))<=tol(model),"OPERATING_SURPLUS_RECONCILIATION")
+            firm_rows.append({"firm":a,"branch":k,"sales_eur":str(rev),"self_use_eur":str(internal[a]),"intermediate_cash_cost_eur":str(inputs[a]),"wages_eur":str(wage),"production_tax_eur":str(tax),"gross_operating_cash_proxy_eur":str(gross_cash),"output_model_eur":str(model),"output_sales_residual_eur":str(model-rev-internal[a]-deferred_sales[a])})
+            if step.working is not None:firm_rows[-1].update({"deferred_sales_eur":str(deferred_sales[a]),"deferred_input_cost_eur":str(deferred_cost[a]),"operating_accrual_surplus_proxy_eur":str(accrual_proxy)})
         cur,wagereceipt=apply(cur,tuple(events))
-        endrisk=base+w*gross(cur);draw=sum((F(p["sources"]["DEBT"]) for p in projects),F(0));require(draw<=cap and endrisk==risk+w*draw,"RWA_RECONCILIATION")
+        endrisk=base+w*gross(cur);draw=sum((F(p["sources"]["DEBT"]) for p in projects),F(0));require(draw<=cap-wc_envelope and wc_draw<=wc_envelope and endrisk==risk+w*(draw+wc_draw),"RWA_RECONCILIATION")
         modeltotal=F(str(row["investment_acquired"]))*1000000
         delivered=sum((F(p["delivered_eur"]) for p in projects),F(0))
         require(abs(modeltotal-delivered)<=tol(modeltotal),"CAPITAL_RECONCILIATION")
         # Total deposits change only through loan creation and bank debt/interest receipts.
         deposits=lambda st:sum((amount(p.stock) for p in st.positions if p.instrument=="DEPOSIT"),F(0))
-        require(deposits(cur)==deposits(opening)+draw-F(settled["result"]["bank_receipts"]),"DEPOSIT_PERIOD_IDENTITY")
+        require(deposits(cur)==deposits(opening)+draw+wc_draw-F(settled["result"]["bank_receipts"]),"DEPOSIT_PERIOD_IDENTITY")
         cur.net_financial_positions()
         rows.append({"period":t,"opening_sha256":opening.fingerprint,"closing_sha256":cur.fingerprint,"opening_capital_proxy":str(before),"closing_capital_proxy":str(K),"rwa_proxy":str(endrisk),"credit_ceiling":str(cap),"overdue_credit_veto":sorted(overdue),"interest":interest,"settlement":settled,"exogenous_transfers":trans,"reservation":reservation,"projects":projects,"capital":row,"input_prefunding_scale":str(alpha),"input_prefunding":needs,"input_flows":inputrows,"input_receipt":inputreceipt,"sales":salesreceipt,"wages_and_taxes":wagereceipt,"firms":firm_rows,"household_budget_eur":str(budget),"household_desired_eur":str(want),"household_consumption_eur":str(household_paid),"government_deposits_eur":str(cur.stocks().get(dep(government),F(0))),"household_closing_deposits_eur":str(cur.stocks().get(dep(household),F(0))),"deposits_closing_eur":str(deposits(cur)),"investment_residual_eur":str(modeltotal-delivered),"cash_by_actor":{a:str(cur.stocks().get(dep(a),F(0))) for a in sorted(ids) if a!=bank}})
+        if step.working is not None:rows[-1].update({"working_credit_envelope":str(wc_envelope),"working_credit_drawn":str(wc_draw),"working_credit_draw_by_firm":draws,"working_credit_receipt":wcreceipt,"trade_invoice_receipt":invreceipt,"trade_bfr":trade_bfr(cur,firms),"local_liquidity_limits":branch_limits,"input_prefunding_policy":"LOCAL_GROSS_PREFUNDING"})
         cur=advance(cur)
     result={"status":"SYNTHETIC_OPERATING_FINANCE_CAPITAL_PATH","publication":"BLOCK_PUBLICATION","opening_sha256":state.fingerprint,"closing_sha256":cur.fingerprint,"coverage":cov,"periods":rows,"capital_receipt":cp,"actual_gdp":None,"actual_profit":None,"actual_employment":None,
             "limitations":["one bank, one firm per branch, household buyer/wage pool; external imports and nonnegative production tax, no valuation bridge",
@@ -178,4 +198,7 @@ def operating_path(state,bank,outside,household,government,branch_firms,steps,as
                            "simple interest on opening gross principal, explicit instalment shares or bullet maturities, no compounding; accrual income proxy, impairment memo; no full bank balance sheet or regulatory capital",
                            "household wages recycled next period, no savings decision, no external export demand; gross operating cash proxy not profit or GDP",
                            "capital prefix replay, partial delivery, no inventories or backorder; common liquidity scaling of all final uses is conservative, not optimized; input purchases paid upfront out of own cash, no working capital credit; no tax on profits or household income"]}
+    if any(x.working is not None for x in steps):
+        result["status"]="SYNTHETIC_WORKING_CAPITAL_PATH"
+        result["limitations"][-1]="local branch ceilings, gross prefunding with reserved working credit and capped supplier deferral; seller payroll/tax prefunded, no intraperiod netting, inventories, factoring, or full BFR; reservation working-first, unused envelopes not recycled; credit veto on overdue debts; no optimization"
     return cur,aa,{"result":result,"sha256":digest(canonical(result))}

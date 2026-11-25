@@ -43,6 +43,7 @@ class Period:
     tiers:tuple
     efficiency_factor:tuple # explicit asset type efficiency multipliers in asset order
     evidence:str
+    liquidity_limits:tuple=() # optional independent branch output ceilings
 
 def finite(x):return type(x) in (int,float) and math.isfinite(x)
 def words(x):return isinstance(x,str) and bool(x.strip())
@@ -86,7 +87,11 @@ def path(periods,assets,initial_vintages,investments=(),*,noncapital_capacity,pe
         total=tuple(y+k for y,k in zip(s.final,request))
         # Same product shares rationing proportionally between other final uses and investment.
         # No investment assumed acquired before the existing feasible allocation serves it.
-        out=allocate(replace(s,final=total),Limits(tuple(capacity),p.imported_limits,p.tiers,p.evidence))["result"]
+        effective=tuple(capacity)
+        if p.liquidity_limits:
+            require(len(p.liquidity_limits)==n and all(x is None or (finite(x) and x>=0) for x in p.liquidity_limits),"LIQUIDITY_LIMITS")
+            effective=tuple(min(x,y) if y is not None else x for x,y in zip(capacity,p.liquidity_limits))
+        out=allocate(replace(s,final=total),Limits(effective,p.imported_limits,p.tiers,p.evidence))["result"]
         served=out["served_final"];fractions=tuple(x/y if y else 0. for x,y in zip(served,total))
         other=tuple(y*f for y,f in zip(s.final,fractions));acquired=[];added_units={a.id:0. for a in assets}
         for i in orders:
@@ -110,5 +115,6 @@ def path(periods,assets,initial_vintages,investments=(),*,noncapital_capacity,pe
         ending_units=units(active+[v for _,_,v in pending]);removed=units(retired)
         for k in by:balance(ending_units[k],opening_units[k]+added_units[k]-removed[k],"PHYSICAL_UNITS_BALANCE")
         rows.append({"period":t,"capacity":capacity,"other_final_requested":s.final,"other_final_served":other,"investment_requested":request,"investment_acquired":investment,"investment_orders":acquired,"commissioned":[{"id":k,**asdict(v)} for _,k,v in arriving],"opening_active_value":opening_active,"opening_wip_value":opening_pending,"commissioned_value":commissioned,"depreciation_proxy":dep,"retirement_writeoff":writeoff,"closing_active_value":end_active,"closing_wip_value":end_pending,"closing_units_by_asset_including_wip":ending_units,"retired_units_by_asset":removed,"active_vintages":[asdict(v) for v in active],"allocation":out,"capital_net_surplus":None})
+        if p.liquidity_limits:rows[-1]["liquidity_limits"]=p.liquidity_limits;rows[-1]["effective_capacity"]=effective
     result={"status":"CONDITIONAL_CAPITAL_VINTAGE_PATH","publication":"BLOCK_PUBLICATION","period_unit":period_unit,"codes":codes,"assets":[asdict(a) for a in assets],"periods":rows,"pending":[{"due":due,"id":k,**asdict(v)} for due,k,v in pending],"evidence":evidence,"gdp":None,"employment":None,"actual_capital_stock":None,"actual_ccf":None,"financing":None,"limitations":["synthetic domestic investment only; other final demand must exclude orders, unfilled orders not automatically carried over","homogeneous divisible assets, additive within branch; noncapital capacity exogenous; no labor or energy complementarity","historical-cost proxy depreciation is not ESA consumption of fixed capital; no price revaluation, salvage or financial balance","investment paid/delivered in one period, no work-in-progress production before delivery; no credit or endogenous decisions","obsolescence via age efficiency decay and exogenous efficiency factors; no automatic technology diffusion","intermediate import limits only, no joint inventory or income loop in this tranche; gross surplus not debited again for depreciation"]}
     return {"result":result,"sha256":digest(canonical(result))}
