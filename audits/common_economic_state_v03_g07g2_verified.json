@@ -1,0 +1,1806 @@
+{
+  "status": "SYNTHETIC_SETTLEMENT_VERIFIED_EMPIRICAL_RECONCILIATION_DIAGNOSTIC_ONLY",
+  "tested_commit": "5d828f647dd327d137a119e5acc78dcba62424d3",
+  "ci": {
+    "run": 45557986540,
+    "settlement_job": 139014595165,
+    "data_job": 139014595548,
+    "conclusion": "success",
+    "targeted_tests": 35,
+    "new_tests": 12,
+    "seconds": 0.114
+  },
+  "regression": {
+    "run": 45557986508,
+    "job": 139014595990,
+    "status": "in_progress",
+    "conclusion": null
+  },
+  "artifact": {
+    "id": 14996840969,
+    "digest": "sha256:c093ed445e78db4903bf45085f624848d7c61228c5e6e4fb63fc97819f7634a9",
+    "expires_at": "2027-02-23T06:05:01Z"
+  },
+  "synthetic_cases": {
+    "opening_due_loan": 80,
+    "opening_trade_payable": 20,
+    "opening_cash": 50,
+    "loan_paid": 40,
+    "trade_paid": 10,
+    "remaining_loan": 40,
+    "recognition_fraction": "1/2",
+    "initial_allowance": 20,
+    "expense_next_period_no_payment": 0,
+    "reversal_after_recovery": -20,
+    "fully_provisioned_discharge_additional_expense": 0,
+    "unprovisioned_discharge_expense": 40,
+    "finance_path_capital_proxy": [
+      30,
+      50
+    ],
+    "finance_path_rwa_proxy": [
+      260,
+      220
+    ]
+  },
+  "empirical": {
+    "status": "DIAGNOSTIC_NOT_ADMITTED",
+    "sources": {
+      "annual_cp": {
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_f_cp?lang=EN&freq=A&unit=MIO_EUR&geo=FR&time=2022",
+        "resolved_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasa_10_f_cp?lang=EN&freq=A&unit=MIO_EUR&geo=FR&time=2022",
+        "http": 200,
+        "sha256": "e2c09582b4428d9699eddd651939d6fe009b8b9e9605db20d25eaaef7cf0d62a",
+        "bytes": 57542,
+        "collected_utc": "2026-11-25T06:05:07.879415+00:00",
+        "updated": "2026-10-21T23:00:00+0200",
+        "size": [
+          1,
+          2,
+          6,
+          5,
+          39,
+          2,
+          1,
+          1,
+          1
+        ],
+        "observed": 3948
+      },
+      "quarter_bs": {
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasq_10_f_bs?lang=EN&freq=Q&unit=MIO_EUR&geo=FR&time=2022-Q4",
+        "resolved_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasq_10_f_bs?lang=EN&freq=Q&unit=MIO_EUR&geo=FR&time=2022-Q4",
+        "http": 200,
+        "sha256": "a8d2b091a81e421f8bb60297d25cf10764e7090191864b2a41d360a92a22f95f",
+        "bytes": 22916,
+        "collected_utc": "2026-11-25T06:05:09.499456+00:00",
+        "updated": "2026-10-28T11:00:00+0100",
+        "size": [
+          1,
+          1,
+          17,
+          2,
+          46,
+          1,
+          1
+        ],
+        "observed": 1226
+      },
+      "quarter_cp": {
+        "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasq_10_f_cp?lang=EN&freq=Q&unit=MIO_EUR&geo=FR&time=2022-Q4",
+        "resolved_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasq_10_f_cp?lang=EN&freq=Q&unit=MIO_EUR&geo=FR&time=2022-Q4",
+        "http": 200,
+        "sha256": "9c0193a112cf36b819da700210623ec95520bce86522c460e3f360974ad6104a",
+        "bytes": 61211,
+        "collected_utc": "2026-11-25T06:05:10.340706+00:00",
+        "updated": "2026-10-28T11:00:00+0100",
+        "size": [
+          1,
+          1,
+          16,
+          15,
+          3,
+          2,
+          12,
+          1,
+          1
+        ],
+        "observed": 4309
+      }
+    },
+    "summary": {
+      "annual_quarter_margins": {
+        "pairs": 20,
+        "exact": 18,
+        "max_abs": "1.0"
+      },
+      "annual_mirrors": {
+        "pairs": 32,
+        "exact": 32,
+        "max_abs": "0.0"
+      },
+      "quarter_mirrors": {
+        "pairs": 0,
+        "exact": 0,
+        "max_abs": null
+      },
+      "annual_quarter_assets": {
+        "pairs": 16,
+        "exact": 10,
+        "max_abs": "1.0"
+      },
+      "annual_quarter_liabilities": {
+        "pairs": 0,
+        "exact": 0,
+        "max_abs": null
+      },
+      "annual_cp_to_margin": {
+        "pairs": 16,
+        "exact": 12,
+        "max_abs": "1.0"
+      },
+      "quarter_cp_to_margin": {
+        "pairs": 0,
+        "exact": 0,
+        "max_abs": null
+      }
+    },
+    "native_coverage": [
+      {
+        "source": "annual_cp",
+        "instrument": "B9F",
+        "side": "ASS",
+        "observed": 0
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "B9F",
+        "side": "LIAB",
+        "observed": 0
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "BF90",
+        "side": "ASS",
+        "observed": 0
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "BF90",
+        "side": "LIAB",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F",
+        "side": "ASS",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F",
+        "side": "LIAB",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F_TR",
+        "side": "ASS",
+        "observed": 0
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F_TR",
+        "side": "LIAB",
+        "observed": 0
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F1",
+        "side": "ASS",
+        "observed": 10
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F1",
+        "side": "LIAB",
+        "observed": 10
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F11",
+        "side": "ASS",
+        "observed": 10
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F11",
+        "side": "LIAB",
+        "observed": 0
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F12",
+        "side": "ASS",
+        "observed": 10
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F12",
+        "side": "LIAB",
+        "observed": 10
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F2",
+        "side": "ASS",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F2",
+        "side": "LIAB",
+        "observed": 15
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F21",
+        "side": "ASS",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F21",
+        "side": "LIAB",
+        "observed": 10
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F22",
+        "side": "ASS",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F22",
+        "side": "LIAB",
+        "observed": 15
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F29",
+        "side": "ASS",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F29",
+        "side": "LIAB",
+        "observed": 15
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F3",
+        "side": "ASS",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F3",
+        "side": "LIAB",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F31",
+        "side": "ASS",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F31",
+        "side": "LIAB",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F32",
+        "side": "ASS",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F32",
+        "side": "LIAB",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F4",
+        "side": "ASS",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F4",
+        "side": "LIAB",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F41",
+        "side": "ASS",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F41",
+        "side": "LIAB",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F42",
+        "side": "ASS",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F42",
+        "side": "LIAB",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F5",
+        "side": "ASS",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F5",
+        "side": "LIAB",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F51",
+        "side": "ASS",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F51",
+        "side": "LIAB",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F511",
+        "side": "ASS",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F511",
+        "side": "LIAB",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F512",
+        "side": "ASS",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F512",
+        "side": "LIAB",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F519",
+        "side": "ASS",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F519",
+        "side": "LIAB",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F52",
+        "side": "ASS",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F52",
+        "side": "LIAB",
+        "observed": 10
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F521",
+        "side": "ASS",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F521",
+        "side": "LIAB",
+        "observed": 10
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F522",
+        "side": "ASS",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F522",
+        "side": "LIAB",
+        "observed": 10
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F6",
+        "side": "ASS",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F6",
+        "side": "LIAB",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F61",
+        "side": "ASS",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F61",
+        "side": "LIAB",
+        "observed": 15
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F62",
+        "side": "ASS",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F62",
+        "side": "LIAB",
+        "observed": 10
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F63",
+        "side": "ASS",
+        "observed": 10
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F63",
+        "side": "LIAB",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F63_F64_F65",
+        "side": "ASS",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F63_F64_F65",
+        "side": "LIAB",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F64",
+        "side": "ASS",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F64",
+        "side": "LIAB",
+        "observed": 15
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F65",
+        "side": "ASS",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F65",
+        "side": "LIAB",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F66",
+        "side": "ASS",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F66",
+        "side": "LIAB",
+        "observed": 15
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F7",
+        "side": "ASS",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F7",
+        "side": "LIAB",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F71",
+        "side": "ASS",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F71",
+        "side": "LIAB",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F72",
+        "side": "ASS",
+        "observed": 5
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F72",
+        "side": "LIAB",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F8",
+        "side": "ASS",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F8",
+        "side": "LIAB",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F81",
+        "side": "ASS",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F81",
+        "side": "LIAB",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F89",
+        "side": "ASS",
+        "observed": 20
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F89",
+        "side": "LIAB",
+        "observed": 20
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F22_F29",
+        "side": "ASS",
+        "observed": 0
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F22_F29",
+        "side": "LIAB",
+        "observed": 8
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F3",
+        "side": "ASS",
+        "observed": 16
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F3",
+        "side": "LIAB",
+        "observed": 4
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F3_FDI",
+        "side": "ASS",
+        "observed": 0
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F3_FDI",
+        "side": "LIAB",
+        "observed": 0
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F31",
+        "side": "ASS",
+        "observed": 16
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F31",
+        "side": "LIAB",
+        "observed": 4
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F32",
+        "side": "ASS",
+        "observed": 16
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F32",
+        "side": "LIAB",
+        "observed": 4
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F4",
+        "side": "ASS",
+        "observed": 16
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F4",
+        "side": "LIAB",
+        "observed": 0
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F4_FDI",
+        "side": "ASS",
+        "observed": 0
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F4_FDI",
+        "side": "LIAB",
+        "observed": 0
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F41",
+        "side": "ASS",
+        "observed": 16
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F41",
+        "side": "LIAB",
+        "observed": 0
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F42",
+        "side": "ASS",
+        "observed": 16
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F42",
+        "side": "LIAB",
+        "observed": 0
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F511",
+        "side": "ASS",
+        "observed": 12
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F511",
+        "side": "LIAB",
+        "observed": 3
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F511_FDI",
+        "side": "ASS",
+        "observed": 0
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F511_FDI",
+        "side": "LIAB",
+        "observed": 0
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F52",
+        "side": "ASS",
+        "observed": 4
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F52",
+        "side": "LIAB",
+        "observed": 1
+      }
+    ],
+    "anchor": {
+      "instrument": "F4",
+      "issuer": "S11",
+      "holder": "S12",
+      "annual_cp_asset": {
+        "value": "1368551.0",
+        "parts": [
+          {
+            "locator": "2914",
+            "codes": {
+              "freq": "A",
+              "stk_flow": "STK",
+              "sector2": "S11",
+              "sector": "S12",
+              "na_item": "F4",
+              "finpos": "ASS",
+              "unit": "MIO_EUR",
+              "geo": "FR",
+              "time": "2022"
+            },
+            "value": "1368551.0",
+            "flag": null
+          }
+        ],
+        "reason": null
+      },
+      "annual_cp_liability": {
+        "value": "1368551.0",
+        "parts": [
+          {
+            "locator": "3227",
+            "codes": {
+              "freq": "A",
+              "stk_flow": "STK",
+              "sector2": "S12",
+              "sector": "S11",
+              "na_item": "F4",
+              "finpos": "LIAB",
+              "unit": "MIO_EUR",
+              "geo": "FR",
+              "time": "2022"
+            },
+            "value": "1368551.0",
+            "flag": null
+          }
+        ],
+        "reason": null
+      },
+      "annual_cp_mirror": "0.0",
+      "quarter_cp_asset": {
+        "value": "1368552.0",
+        "parts": [
+          {
+            "locator": "1253",
+            "codes": {
+              "freq": "Q",
+              "unit": "MIO_EUR",
+              "sector2": "S11",
+              "sector": "S12",
+              "stk_flow": "STK",
+              "finpos": "ASS",
+              "na_item": "F4",
+              "geo": "FR",
+              "time": "2022-Q4"
+            },
+            "value": "1368552.0",
+            "flag": null
+          }
+        ],
+        "reason": null
+      },
+      "quarter_cp_liability": {
+        "value": null,
+        "parts": [
+          {
+            "locator": "2273",
+            "codes": {
+              "freq": "Q",
+              "unit": "MIO_EUR",
+              "sector2": "S12",
+              "sector": "S11",
+              "stk_flow": "STK",
+              "finpos": "LIAB",
+              "na_item": "F4",
+              "geo": "FR",
+              "time": "2022-Q4"
+            },
+            "value": null,
+            "flag": null
+          }
+        ],
+        "reason": "MISSING_VALUE"
+      },
+      "quarter_cp_mirror": null,
+      "asset_period_difference": "1.0",
+      "liability_period_difference": null
+    },
+    "margins": [
+      {
+        "instrument": "F4",
+        "sector": "S11",
+        "side": "ASS",
+        "annual_pinned": "2263682.0",
+        "quarter": {
+          "value": "2263682.0",
+          "parts": [
+            {
+              "locator": "107",
+              "codes": {
+                "freq": "Q",
+                "unit": "MIO_EUR",
+                "sector": "S11",
+                "finpos": "ASS",
+                "na_item": "F4",
+                "geo": "FR",
+                "time": "2022-Q4"
+              },
+              "value": "2263682.0",
+              "flag": null
+            }
+          ],
+          "reason": null
+        },
+        "difference": "0.0"
+      },
+      {
+        "instrument": "F4",
+        "sector": "S11",
+        "side": "LIAB",
+        "annual_pinned": "3586024.0",
+        "quarter": {
+          "value": "3586024.0",
+          "parts": [
+            {
+              "locator": "153",
+              "codes": {
+                "freq": "Q",
+                "unit": "MIO_EUR",
+                "sector": "S11",
+                "finpos": "LIAB",
+                "na_item": "F4",
+                "geo": "FR",
+                "time": "2022-Q4"
+              },
+              "value": "3586024.0",
+              "flag": null
+            }
+          ],
+          "reason": null
+        },
+        "difference": "0.0"
+      },
+      {
+        "instrument": "F4",
+        "sector": "S12",
+        "side": "ASS",
+        "annual_pinned": "4652474.0",
+        "quarter": {
+          "value": "4652475.0",
+          "parts": [
+            {
+              "locator": "199",
+              "codes": {
+                "freq": "Q",
+                "unit": "MIO_EUR",
+                "sector": "S12",
+                "finpos": "ASS",
+                "na_item": "F4",
+                "geo": "FR",
+                "time": "2022-Q4"
+              },
+              "value": "4652475.0",
+              "flag": null
+            }
+          ],
+          "reason": null
+        },
+        "difference": "1.0"
+      },
+      {
+        "instrument": "F4",
+        "sector": "S12",
+        "side": "LIAB",
+        "annual_pinned": "688916.0",
+        "quarter": {
+          "value": "688916.0",
+          "parts": [
+            {
+              "locator": "245",
+              "codes": {
+                "freq": "Q",
+                "unit": "MIO_EUR",
+                "sector": "S12",
+                "finpos": "LIAB",
+                "na_item": "F4",
+                "geo": "FR",
+                "time": "2022-Q4"
+              },
+              "value": "688916.0",
+              "flag": null
+            }
+          ],
+          "reason": null
+        },
+        "difference": "0.0"
+      },
+      {
+        "instrument": "F4",
+        "sector": "S13",
+        "side": "ASS",
+        "annual_pinned": "189429.0",
+        "quarter": {
+          "value": "189429.0",
+          "parts": [
+            {
+              "locator": "1119",
+              "codes": {
+                "freq": "Q",
+                "unit": "MIO_EUR",
+                "sector": "S13",
+                "finpos": "ASS",
+                "na_item": "F4",
+                "geo": "FR",
+                "time": "2022-Q4"
+              },
+              "value": "189429.0",
+              "flag": null
+            }
+          ],
+          "reason": null
+        },
+        "difference": "0.0"
+      },
+      {
+        "instrument": "F4",
+        "sector": "S13",
+        "side": "LIAB",
+        "annual_pinned": "387186.0",
+        "quarter": {
+          "value": "387186.0",
+          "parts": [
+            {
+              "locator": "1165",
+              "codes": {
+                "freq": "Q",
+                "unit": "MIO_EUR",
+                "sector": "S13",
+                "finpos": "LIAB",
+                "na_item": "F4",
+                "geo": "FR",
+                "time": "2022-Q4"
+              },
+              "value": "387186.0",
+              "flag": null
+            }
+          ],
+          "reason": null
+        },
+        "difference": "0.0"
+      },
+      {
+        "instrument": "F4",
+        "sector": "S14_S15",
+        "side": "ASS",
+        "annual_pinned": "10862.0",
+        "quarter": {
+          "value": "10862.0",
+          "parts": [
+            {
+              "locator": "1211",
+              "codes": {
+                "freq": "Q",
+                "unit": "MIO_EUR",
+                "sector": "S14_S15",
+                "finpos": "ASS",
+                "na_item": "F4",
+                "geo": "FR",
+                "time": "2022-Q4"
+              },
+              "value": "10862.0",
+              "flag": null
+            }
+          ],
+          "reason": null
+        },
+        "difference": "0.0"
+      },
+      {
+        "instrument": "F4",
+        "sector": "S14_S15",
+        "side": "LIAB",
+        "annual_pinned": "1747848.0",
+        "quarter": {
+          "value": "1747848.0",
+          "parts": [
+            {
+              "locator": "1257",
+              "codes": {
+                "freq": "Q",
+                "unit": "MIO_EUR",
+                "sector": "S14_S15",
+                "finpos": "LIAB",
+                "na_item": "F4",
+                "geo": "FR",
+                "time": "2022-Q4"
+              },
+              "value": "1747848.0",
+              "flag": null
+            }
+          ],
+          "reason": null
+        },
+        "difference": "0.0"
+      },
+      {
+        "instrument": "F4",
+        "sector": "S2",
+        "side": "ASS",
+        "annual_pinned": "692071.0",
+        "quarter": {
+          "value": "692071.0",
+          "parts": [
+            {
+              "locator": "1487",
+              "codes": {
+                "freq": "Q",
+                "unit": "MIO_EUR",
+                "sector": "S2",
+                "finpos": "ASS",
+                "na_item": "F4",
+                "geo": "FR",
+                "time": "2022-Q4"
+              },
+              "value": "692071.0",
+              "flag": null
+            }
+          ],
+          "reason": null
+        },
+        "difference": "0.0"
+      },
+      {
+        "instrument": "F4",
+        "sector": "S2",
+        "side": "LIAB",
+        "annual_pinned": "1398544.0",
+        "quarter": {
+          "value": "1398544.0",
+          "parts": [
+            {
+              "locator": "1533",
+              "codes": {
+                "freq": "Q",
+                "unit": "MIO_EUR",
+                "sector": "S2",
+                "finpos": "LIAB",
+                "na_item": "F4",
+                "geo": "FR",
+                "time": "2022-Q4"
+              },
+              "value": "1398544.0",
+              "flag": null
+            }
+          ],
+          "reason": null
+        },
+        "difference": "0.0"
+      },
+      {
+        "instrument": "F5",
+        "sector": "S11",
+        "side": "ASS",
+        "annual_pinned": "8040262.0",
+        "quarter": {
+          "value": "8040262.0",
+          "parts": [
+            {
+              "locator": "111",
+              "codes": {
+                "freq": "Q",
+                "unit": "MIO_EUR",
+                "sector": "S11",
+                "finpos": "ASS",
+                "na_item": "F5",
+                "geo": "FR",
+                "time": "2022-Q4"
+              },
+              "value": "8040262.0",
+              "flag": null
+            }
+          ],
+          "reason": null
+        },
+        "difference": "0.0"
+      },
+      {
+        "instrument": "F5",
+        "sector": "S11",
+        "side": "LIAB",
+        "annual_pinned": "10376009.0",
+        "quarter": {
+          "value": "10376009.0",
+          "parts": [
+            {
+              "locator": "157",
+              "codes": {
+                "freq": "Q",
+                "unit": "MIO_EUR",
+                "sector": "S11",
+                "finpos": "LIAB",
+                "na_item": "F5",
+                "geo": "FR",
+                "time": "2022-Q4"
+              },
+              "value": "10376009.0",
+              "flag": null
+            }
+          ],
+          "reason": null
+        },
+        "difference": "0.0"
+      },
+      {
+        "instrument": "F5",
+        "sector": "S12",
+        "side": "ASS",
+        "annual_pinned": "3228026.0",
+        "quarter": {
+          "value": "3228026.0",
+          "parts": [
+            {
+              "locator": "203",
+              "codes": {
+                "freq": "Q",
+                "unit": "MIO_EUR",
+                "sector": "S12",
+                "finpos": "ASS",
+                "na_item": "F5",
+                "geo": "FR",
+                "time": "2022-Q4"
+              },
+              "value": "3228026.0",
+              "flag": null
+            }
+          ],
+          "reason": null
+        },
+        "difference": "0.0"
+      },
+      {
+        "instrument": "F5",
+        "sector": "S12",
+        "side": "LIAB",
+        "annual_pinned": "2859146.0",
+        "quarter": {
+          "value": "2859146.0",
+          "parts": [
+            {
+              "locator": "249",
+              "codes": {
+                "freq": "Q",
+                "unit": "MIO_EUR",
+                "sector": "S12",
+                "finpos": "LIAB",
+                "na_item": "F5",
+                "geo": "FR",
+                "time": "2022-Q4"
+              },
+              "value": "2859146.0",
+              "flag": null
+            }
+          ],
+          "reason": null
+        },
+        "difference": "0.0"
+      },
+      {
+        "instrument": "F5",
+        "sector": "S13",
+        "side": "ASS",
+        "annual_pinned": "603893.0",
+        "quarter": {
+          "value": "603893.0",
+          "parts": [
+            {
+              "locator": "1123",
+              "codes": {
+                "freq": "Q",
+                "unit": "MIO_EUR",
+                "sector": "S13",
+                "finpos": "ASS",
+                "na_item": "F5",
+                "geo": "FR",
+                "time": "2022-Q4"
+              },
+              "value": "603893.0",
+              "flag": null
+            }
+          ],
+          "reason": null
+        },
+        "difference": "0.0"
+      },
+      {
+        "instrument": "F5",
+        "sector": "S13",
+        "side": "LIAB",
+        "annual_pinned": "31597.0",
+        "quarter": {
+          "value": "31597.0",
+          "parts": [
+            {
+              "locator": "1169",
+              "codes": {
+                "freq": "Q",
+                "unit": "MIO_EUR",
+                "sector": "S13",
+                "finpos": "LIAB",
+                "na_item": "F5",
+                "geo": "FR",
+                "time": "2022-Q4"
+              },
+              "value": "31597.0",
+              "flag": null
+            }
+          ],
+          "reason": null
+        },
+        "difference": "0.0"
+      },
+      {
+        "instrument": "F5",
+        "sector": "S14_S15",
+        "side": "ASS",
+        "annual_pinned": "1900342.0",
+        "quarter": {
+          "value": "1900341.0",
+          "parts": [
+            {
+              "locator": "1215",
+              "codes": {
+                "freq": "Q",
+                "unit": "MIO_EUR",
+                "sector": "S14_S15",
+                "finpos": "ASS",
+                "na_item": "F5",
+                "geo": "FR",
+                "time": "2022-Q4"
+              },
+              "value": "1900341.0",
+              "flag": null
+            }
+          ],
+          "reason": null
+        },
+        "difference": "-1.0"
+      },
+      {
+        "instrument": "F5",
+        "sector": "S14_S15",
+        "side": "LIAB",
+        "annual_pinned": "0.0",
+        "quarter": {
+          "value": "0.0",
+          "parts": [
+            {
+              "locator": "1261",
+              "codes": {
+                "freq": "Q",
+                "unit": "MIO_EUR",
+                "sector": "S14_S15",
+                "finpos": "LIAB",
+                "na_item": "F5",
+                "geo": "FR",
+                "time": "2022-Q4"
+              },
+              "value": "0.0",
+              "flag": null
+            }
+          ],
+          "reason": null
+        },
+        "difference": "0.0"
+      },
+      {
+        "instrument": "F5",
+        "sector": "S2",
+        "side": "ASS",
+        "annual_pinned": "2515704.0",
+        "quarter": {
+          "value": "2515704.0",
+          "parts": [
+            {
+              "locator": "1491",
+              "codes": {
+                "freq": "Q",
+                "unit": "MIO_EUR",
+                "sector": "S2",
+                "finpos": "ASS",
+                "na_item": "F5",
+                "geo": "FR",
+                "time": "2022-Q4"
+              },
+              "value": "2515704.0",
+              "flag": null
+            }
+          ],
+          "reason": null
+        },
+        "difference": "0.0"
+      },
+      {
+        "instrument": "F5",
+        "sector": "S2",
+        "side": "LIAB",
+        "annual_pinned": "3021475.0",
+        "quarter": {
+          "value": "3021475.0",
+          "parts": [
+            {
+              "locator": "1537",
+              "codes": {
+                "freq": "Q",
+                "unit": "MIO_EUR",
+                "sector": "S2",
+                "finpos": "LIAB",
+                "na_item": "F5",
+                "geo": "FR",
+                "time": "2022-Q4"
+              },
+              "value": "3021475.0",
+              "flag": null
+            }
+          ],
+          "reason": null
+        },
+        "difference": "0.0"
+      }
+    ],
+    "totals": [
+      {
+        "source": "annual_cp",
+        "instrument": "F4",
+        "sector": "S11",
+        "side": "ASS",
+        "observed": 5,
+        "total": "2263682.0",
+        "margin": "2263682.0",
+        "difference": "0.0"
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F4",
+        "sector": "S11",
+        "side": "LIAB",
+        "observed": 5,
+        "total": "3586024.0",
+        "margin": "3586024.0",
+        "difference": "0.0"
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F4",
+        "sector": "S12",
+        "side": "ASS",
+        "observed": 5,
+        "total": "4652474.0",
+        "margin": "4652474.0",
+        "difference": "0.0"
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F4",
+        "sector": "S12",
+        "side": "LIAB",
+        "observed": 5,
+        "total": "688916.0",
+        "margin": "688916.0",
+        "difference": "0.0"
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F4",
+        "sector": "S13",
+        "side": "ASS",
+        "observed": 5,
+        "total": "189429.0",
+        "margin": "189429.0",
+        "difference": "0.0"
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F4",
+        "sector": "S13",
+        "side": "LIAB",
+        "observed": 5,
+        "total": "387186.0",
+        "margin": "387186.0",
+        "difference": "0.0"
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F4",
+        "sector": "S14_S15",
+        "side": "ASS",
+        "observed": 5,
+        "total": "10861.0",
+        "margin": "10862.0",
+        "difference": "-1.0"
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F4",
+        "sector": "S14_S15",
+        "side": "LIAB",
+        "observed": 5,
+        "total": "1747847.0",
+        "margin": "1747848.0",
+        "difference": "-1.0"
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F4",
+        "sector": "S2",
+        "side": "ASS",
+        "observed": 0,
+        "total": null,
+        "margin": "692071.0",
+        "difference": null
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F4",
+        "sector": "S2",
+        "side": "LIAB",
+        "observed": 0,
+        "total": null,
+        "margin": "1398544.0",
+        "difference": null
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F5",
+        "sector": "S11",
+        "side": "ASS",
+        "observed": 5,
+        "total": "8040262.0",
+        "margin": "8040262.0",
+        "difference": "0.0"
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F5",
+        "sector": "S11",
+        "side": "LIAB",
+        "observed": 5,
+        "total": "10376008.0",
+        "margin": "10376009.0",
+        "difference": "-1.0"
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F5",
+        "sector": "S12",
+        "side": "ASS",
+        "observed": 5,
+        "total": "3228026.0",
+        "margin": "3228026.0",
+        "difference": "0.0"
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F5",
+        "sector": "S12",
+        "side": "LIAB",
+        "observed": 5,
+        "total": "2859146.0",
+        "margin": "2859146.0",
+        "difference": "0.0"
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F5",
+        "sector": "S13",
+        "side": "ASS",
+        "observed": 5,
+        "total": "603892.0",
+        "margin": "603893.0",
+        "difference": "-1.0"
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F5",
+        "sector": "S13",
+        "side": "LIAB",
+        "observed": 5,
+        "total": "31597.0",
+        "margin": "31597.0",
+        "difference": "0.0"
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F5",
+        "sector": "S14_S15",
+        "side": "ASS",
+        "observed": 5,
+        "total": "1900342.0",
+        "margin": "1900342.0",
+        "difference": "0.0"
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F5",
+        "sector": "S14_S15",
+        "side": "LIAB",
+        "observed": 5,
+        "total": "0.0",
+        "margin": "0.0",
+        "difference": "0.0"
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F5",
+        "sector": "S2",
+        "side": "ASS",
+        "observed": 0,
+        "total": null,
+        "margin": "2515704.0",
+        "difference": null
+      },
+      {
+        "source": "annual_cp",
+        "instrument": "F5",
+        "sector": "S2",
+        "side": "LIAB",
+        "observed": 0,
+        "total": null,
+        "margin": "3021475.0",
+        "difference": null
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F4",
+        "sector": "S11",
+        "side": "ASS",
+        "observed": 4,
+        "total": null,
+        "margin": "2263682.0",
+        "difference": null
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F4",
+        "sector": "S11",
+        "side": "LIAB",
+        "observed": 0,
+        "total": null,
+        "margin": "3586024.0",
+        "difference": null
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F4",
+        "sector": "S12",
+        "side": "ASS",
+        "observed": 4,
+        "total": null,
+        "margin": "4652475.0",
+        "difference": null
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F4",
+        "sector": "S12",
+        "side": "LIAB",
+        "observed": 0,
+        "total": null,
+        "margin": "688916.0",
+        "difference": null
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F4",
+        "sector": "S13",
+        "side": "ASS",
+        "observed": 4,
+        "total": null,
+        "margin": "189429.0",
+        "difference": null
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F4",
+        "sector": "S13",
+        "side": "LIAB",
+        "observed": 0,
+        "total": null,
+        "margin": "387186.0",
+        "difference": null
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F4",
+        "sector": "S14_S15",
+        "side": "ASS",
+        "observed": 4,
+        "total": null,
+        "margin": "10862.0",
+        "difference": null
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F4",
+        "sector": "S14_S15",
+        "side": "LIAB",
+        "observed": 0,
+        "total": null,
+        "margin": "1747848.0",
+        "difference": null
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F4",
+        "sector": "S2",
+        "side": "ASS",
+        "observed": 0,
+        "total": null,
+        "margin": "692071.0",
+        "difference": null
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F4",
+        "sector": "S2",
+        "side": "LIAB",
+        "observed": 0,
+        "total": null,
+        "margin": "1398544.0",
+        "difference": null
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F5",
+        "sector": "S11",
+        "side": "ASS",
+        "observed": 0,
+        "total": null,
+        "margin": "8040262.0",
+        "difference": null
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F5",
+        "sector": "S11",
+        "side": "LIAB",
+        "observed": 0,
+        "total": null,
+        "margin": "10376009.0",
+        "difference": null
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F5",
+        "sector": "S12",
+        "side": "ASS",
+        "observed": 0,
+        "total": null,
+        "margin": "3228026.0",
+        "difference": null
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F5",
+        "sector": "S12",
+        "side": "LIAB",
+        "observed": 0,
+        "total": null,
+        "margin": "2859146.0",
+        "difference": null
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F5",
+        "sector": "S13",
+        "side": "ASS",
+        "observed": 0,
+        "total": null,
+        "margin": "603893.0",
+        "difference": null
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F5",
+        "sector": "S13",
+        "side": "LIAB",
+        "observed": 0,
+        "total": null,
+        "margin": "31597.0",
+        "difference": null
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F5",
+        "sector": "S14_S15",
+        "side": "ASS",
+        "observed": 0,
+        "total": null,
+        "margin": "1900341.0",
+        "difference": null
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F5",
+        "sector": "S14_S15",
+        "side": "LIAB",
+        "observed": 0,
+        "total": null,
+        "margin": "0.0",
+        "difference": null
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F5",
+        "sector": "S2",
+        "side": "ASS",
+        "observed": 0,
+        "total": null,
+        "margin": "2515704.0",
+        "difference": null
+      },
+      {
+        "source": "quarter_cp",
+        "instrument": "F5",
+        "sector": "S2",
+        "side": "LIAB",
+        "observed": 0,
+        "total": null,
+        "margin": "3021475.0",
+        "difference": null
+      }
+    ]
+  },
+  "publication": "BLOCK_PUBLICATION",
+  "scientific_gates_promoted": 0
+}
