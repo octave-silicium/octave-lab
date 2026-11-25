@@ -114,3 +114,6 @@ Décision utilisateur : [UX-001](UX-001.md) et [RESULT-001](RESULT-001.md) compl
 
 ## G3.3 v0.2b2 — Montée en cadence et investigation intégrée
 [G3-RAMP](G3-RAMP.md) : extension transition existante, VAN mutualisée, coexistence séquentielle, sensibilité CAPEX/demande/financement, liaison conditionnelle RESULT/PROSPECT avec rejeu. Recette G3 réussie : 369 tests, [audit](../audits/economic_ramp_v02b2_verified.json). Valeur du redéploiement sous contrat distinct, P0 empirique et paramètres graphes ouverts. G3.4 prochaine tranche principale, sans nouveau moteur.
+
+## G3.4 v0.1 — Prix, demande et réallocation concurrentielle
+[G3-MARKET](G3-MARKET.md) : contrat conditionnel de marché, prix selon coût moyen explicite, demande bornée, allocation et capacité, internalisation, préférence humaine, HHI, heures et CA réconciliés. Recette à confirmer. Dynamique temporelle, coûts internalisation, stratégie, entrée/sortie et jonction investigation restent ouverts. P0 empirique ouvert.

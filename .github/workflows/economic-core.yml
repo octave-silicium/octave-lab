@@ -34,3 +34,4 @@ jobs:
       - run: python -m pipeline.economic_transition_pilot
       - run: python -m pipeline.economic_skills_pilot
       - run: python -m pipeline.economic_ramp_pilot
+      - run: python -m pipeline.economic_market_pilot

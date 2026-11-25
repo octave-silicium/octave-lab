@@ -1,5 +1,5 @@
 {
-  "version": "0.4",
+  "version": "0.5",
   "language": "fr",
   "status": "INITIAL_INTERNAL_NOT_UI_VALIDATED",
   "entries": {
@@ -314,6 +314,70 @@
       "caution": "Seuil conditionnel, pas prix de marché ni revenu prédit.",
       "technical_name": "expert_hour_break_even_eur",
       "method_ref": "docs/G3-SKILLS.md"
+    },
+    "potential_demand": {
+      "label": "Demande potentielle",
+      "definition": "Nombre d'unités souhaitées après réponse hypothétique aux prix, avant internalisation et contraintes de capacité.",
+      "unit": "unités",
+      "caution": "Demande simulée, pas commande observée.",
+      "technical_name": "potential_demand",
+      "method_ref": "docs/G3-MARKET.md"
+    },
+    "external_demand": {
+      "label": "Demande adressée aux fournisseurs",
+      "definition": "Demande potentielle moins unités internalisées par les clients.",
+      "unit": "unités",
+      "caution": "L'internalisation est une hypothèse, non une mesure.",
+      "technical_name": "external_demand",
+      "method_ref": "docs/G3-MARKET.md"
+    },
+    "internalized_units": {
+      "label": "Prestations reprises en interne",
+      "definition": "Unités supposées réalisées par les clients eux-mêmes.",
+      "unit": "unités",
+      "caution": "Leurs coûts et heures ne sont pas calculés.",
+      "technical_name": "internalized_units",
+      "method_ref": "docs/G3-MARKET.md"
+    },
+    "price_induced_demand_change": {
+      "label": "Variation de demande potentielle liée aux prix",
+      "definition": "Écart de demande potentielle par rapport au scénario de référence.",
+      "unit": "unités",
+      "caution": "Réponse conditionnelle, plafonnée par saturation.",
+      "technical_name": "price_induced_demand_change",
+      "method_ref": "docs/G3-MARKET.md"
+    },
+    "fixed_basket_price_index": {
+      "label": "Indice des prix à panier inchangé",
+      "definition": "Rapport du prix du panier de référence aux nouveaux prix à celui aux prix initiaux.",
+      "unit": "ratio",
+      "caution": "Pas un indice de prix officiel ni surplus consommateur.",
+      "technical_name": "fixed_basket_price_index",
+      "method_ref": "docs/G3-MARKET.md"
+    },
+    "volume_hhi": {
+      "label": "Concentration des ventes en volume",
+      "definition": "Somme des carrés des parts de marché exprimées en pourcentage.",
+      "unit": "points sur 10000",
+      "caution": "Marché fictif, pas diagnostic de pouvoir de marché.",
+      "technical_name": "volume_hhi",
+      "method_ref": "docs/G3-MARKET.md"
+    },
+    "cash_surplus_delta_eur": {
+      "label": "Variation du surplus de trésorerie d'exploitation",
+      "definition": "Variation des recettes moins coûts récurrents imputés, avant investissements, fiscalité et financement.",
+      "unit": "EUR",
+      "caution": "Pas bénéfice net ni valeur ajoutée.",
+      "technical_name": "cash_surplus_delta_eur",
+      "method_ref": "docs/G3-MARKET.md"
+    },
+    "paid_hours_delta": {
+      "label": "Variation des heures de travail payées imputées",
+      "definition": "Écart des heures payées imputées aux cohortes produites.",
+      "unit": "heures-personnes",
+      "caution": "Pas variation d'effectifs; travail externalisé non couvert.",
+      "technical_name": "paid_hours_delta",
+      "method_ref": "docs/G3-MARKET.md"
     }
   }
 }
