@@ -1,0 +1,460 @@
+{
+  "study": "VERTICAL-001",
+  "phase": "V2b",
+  "publication": "BLOCK_PUBLICATION",
+  "causal_identification": "NOT_IDENTIFIED",
+  "sources": {
+    "national_accounts_output": {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/namq_10_a10?lang=EN&geo=FR&nace_r2=J&freq=Q&sinceTimePeriod=2019",
+      "dataset": "namq_10_a10",
+      "publication": "BLOCK_PUBLICATION",
+      "status": "RETRIEVED",
+      "sha256": "966cce9f012cf9622d2a46f2136eb970546431a60c4d5f98316b489b9ab9eb1a",
+      "updated": "2026-11-24T23:00:00+0100",
+      "bytes": 53576,
+      "dimensions": {
+        "freq": [
+          "Q"
+        ],
+        "unit": [
+          "CLV_I20",
+          "CLV_I15",
+          "CLV_I10",
+          "CLV_I05",
+          "PC_GDP",
+          "PC_TOT",
+          "CP_MEUR",
+          "CP_MNAC",
+          "CLV20_MEUR",
+          "CLV15_MEUR",
+          "CLV10_MEUR",
+          "CLV05_MEUR",
+          "CLV20_MNAC",
+          "CLV15_MNAC",
+          "CLV10_MNAC",
+          "CLV05_MNAC",
+          "CLV_PCH_PRE",
+          "CLV_PCH_SM",
+          "PYP_MEUR",
+          "PYP_MNAC",
+          "CON_PPCH_PRE",
+          "CON_PPCH_SM",
+          "PD20_EUR",
+          "PD15_EUR",
+          "PD10_EUR",
+          "PD05_EUR",
+          "PD20_NAC",
+          "PD15_NAC",
+          "PD10_NAC",
+          "PD05_NAC",
+          "PD_PCH_PRE_EUR",
+          "PD_PCH_PRE_NAC",
+          "PD_PCH_SM_EUR",
+          "PD_PCH_SM_NAC"
+        ],
+        "s_adj": [
+          "NSA",
+          "SA",
+          "CA",
+          "SCA"
+        ],
+        "nace_r2": [
+          "J"
+        ],
+        "na_item": [
+          "B1G",
+          "D1",
+          "D11",
+          "D12"
+        ],
+        "geo": [
+          "FR"
+        ]
+      }
+    },
+    "national_accounts_work": {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/namq_10_a10_e?lang=EN&geo=FR&nace_r2=J&freq=Q&sinceTimePeriod=2019",
+      "dataset": "namq_10_a10_e",
+      "publication": "BLOCK_PUBLICATION",
+      "status": "RETRIEVED",
+      "sha256": "56da2eb5c6e79756c6944b4a80376a02a37e7c3aced7189ee7c6ce3c82b6a186",
+      "updated": "2026-11-20T23:00:00+0100",
+      "bytes": 24801,
+      "dimensions": {
+        "freq": [
+          "Q"
+        ],
+        "unit": [
+          "THS_HW",
+          "I15_PER",
+          "I15_HW",
+          "I15_JOB",
+          "THS_PER",
+          "THS_JOB",
+          "PC_TOT_PER",
+          "PC_TOT_HW",
+          "PC_TOT_JOB",
+          "PCH_PRE_PER",
+          "PCH_PRE_HW",
+          "PCH_SM_PER",
+          "PCH_SM_HW",
+          "PCH_SM_JOB",
+          "PCH_PRE_JOB"
+        ],
+        "nace_r2": [
+          "J"
+        ],
+        "s_adj": [
+          "NSA",
+          "SA",
+          "CA",
+          "SCA"
+        ],
+        "na_item": [
+          "EMP_DC",
+          "SAL_DC",
+          "SELF_DC"
+        ],
+        "geo": [
+          "FR"
+        ]
+      }
+    },
+    "sts_production": {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/sts_sepr_m?lang=EN&geo=FR&nace_r2=J&freq=M&sinceTimePeriod=2019",
+      "dataset": "sts_sepr_m",
+      "publication": "BLOCK_PUBLICATION",
+      "status": "RETRIEVED",
+      "sha256": "697af64b8ed5ce9d06231db04d47aeaa48e6d8fdebc087afee91ee90de953c08",
+      "updated": "2026-11-25T11:00:00+0100",
+      "bytes": 16390,
+      "dimensions": {
+        "freq": [
+          "M"
+        ],
+        "indic_bt": [
+          "PRD"
+        ],
+        "nace_r2": [
+          "J"
+        ],
+        "s_adj": [
+          "NSA",
+          "CA",
+          "SCA"
+        ],
+        "unit": [
+          "I21",
+          "I15",
+          "PCH_PRE",
+          "PCH_SM"
+        ],
+        "geo": [
+          "FR"
+        ]
+      }
+    },
+    "sts_turnover": {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/sts_setu_m?lang=EN&geo=FR&nace_r2=J&freq=M&sinceTimePeriod=2019",
+      "dataset": "sts_setu_m",
+      "publication": "BLOCK_PUBLICATION",
+      "status": "RETRIEVED",
+      "sha256": "e27c945fc3e619c38d552f8c4f0ab54ca95062a8b037357453ab20f71ec326c2",
+      "updated": "2026-11-25T11:00:00+0100",
+      "bytes": 17357,
+      "dimensions": {
+        "freq": [
+          "M"
+        ],
+        "indic_bt": [
+          "VOL_SLS",
+          "NETTUR"
+        ],
+        "nace_r2": [
+          "J"
+        ],
+        "s_adj": [
+          "NSA",
+          "CA",
+          "SCA"
+        ],
+        "unit": [
+          "I21",
+          "I15",
+          "I10",
+          "PCH_PRE",
+          "PCH_SM"
+        ],
+        "geo": [
+          "FR"
+        ]
+      }
+    },
+    "sts_prices": {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/sts_sepp_q?lang=EN&geo=FR&nace_r2=J&freq=Q&sinceTimePeriod=2019",
+      "dataset": "sts_sepp_q",
+      "publication": "BLOCK_PUBLICATION",
+      "status": "RETRIEVED",
+      "sha256": "f5538c1e700b56d3e1f1adb8bac1adc4c525f0524d0c497df4e22d05e6310dd0",
+      "updated": "2026-11-20T11:00:00+0100",
+      "bytes": 5994,
+      "dimensions": {
+        "freq": [
+          "Q"
+        ],
+        "indic_bt": [
+          "PRC_PRR",
+          "PRC_PRR_B2B"
+        ],
+        "nace_r2": [
+          "J"
+        ],
+        "s_adj": [
+          "NSA"
+        ],
+        "unit": [
+          "I21",
+          "I15",
+          "I10",
+          "PCH_PRE",
+          "PCH_SM"
+        ],
+        "geo": [
+          "FR"
+        ]
+      }
+    }
+  },
+  "series": {
+    "gva_real": {
+      "status": "CANDIDATE_INTERNAL",
+      "reason": null,
+      "count": 31,
+      "first": "2019-Q1",
+      "last": "2026-Q3",
+      "flags": [
+        ""
+      ]
+    },
+    "gva_nominal": {
+      "status": "CANDIDATE_INTERNAL",
+      "reason": null,
+      "count": 31,
+      "first": "2019-Q1",
+      "last": "2026-Q3",
+      "flags": [
+        ""
+      ]
+    },
+    "compensation": {
+      "status": "BLOCKED_NO_OBSERVATIONS",
+      "reason": null,
+      "count": 0,
+      "first": null,
+      "last": null,
+      "flags": [
+        ""
+      ]
+    },
+    "total_hours": {
+      "status": "CANDIDATE_INTERNAL",
+      "reason": null,
+      "count": 30,
+      "first": "2019-Q1",
+      "last": "2026-Q2",
+      "flags": [
+        ""
+      ]
+    },
+    "employee_hours": {
+      "status": "CANDIDATE_INTERNAL",
+      "reason": null,
+      "count": 30,
+      "first": "2019-Q1",
+      "last": "2026-Q2",
+      "flags": [
+        ""
+      ]
+    },
+    "total_persons": {
+      "status": "BLOCKED_NO_OBSERVATIONS",
+      "reason": null,
+      "count": 0,
+      "first": null,
+      "last": null,
+      "flags": [
+        ""
+      ]
+    },
+    "employee_persons": {
+      "status": "BLOCKED_NO_OBSERVATIONS",
+      "reason": null,
+      "count": 0,
+      "first": null,
+      "last": null,
+      "flags": [
+        ""
+      ]
+    },
+    "gva_nominal_nsa": {
+      "status": "CANDIDATE_INTERNAL",
+      "reason": null,
+      "count": 31,
+      "first": "2019-Q1",
+      "last": "2026-Q3",
+      "flags": [
+        ""
+      ]
+    },
+    "compensation_nsa": {
+      "status": "CANDIDATE_INTERNAL",
+      "reason": null,
+      "count": 30,
+      "first": "2019-Q1",
+      "last": "2026-Q2",
+      "flags": [
+        ""
+      ]
+    },
+    "employee_hours_nsa": {
+      "status": "CANDIDATE_INTERNAL",
+      "reason": null,
+      "count": 30,
+      "first": "2019-Q1",
+      "last": "2026-Q2",
+      "flags": [
+        ""
+      ]
+    },
+    "total_hours_nsa": {
+      "status": "CANDIDATE_INTERNAL",
+      "reason": null,
+      "count": 30,
+      "first": "2019-Q1",
+      "last": "2026-Q2",
+      "flags": [
+        ""
+      ]
+    },
+    "total_persons_nsa": {
+      "status": "CANDIDATE_INTERNAL",
+      "reason": null,
+      "count": 30,
+      "first": "2019-Q1",
+      "last": "2026-Q2",
+      "flags": [
+        ""
+      ]
+    },
+    "employee_persons_nsa": {
+      "status": "CANDIDATE_INTERNAL",
+      "reason": null,
+      "count": 30,
+      "first": "2019-Q1",
+      "last": "2026-Q2",
+      "flags": [
+        ""
+      ]
+    },
+    "production_index": {
+      "status": "CANDIDATE_INTERNAL",
+      "reason": null,
+      "count": 92,
+      "first": "2019-01",
+      "last": "2026-08",
+      "flags": [
+        "",
+        "p"
+      ]
+    },
+    "turnover_index": {
+      "status": "CANDIDATE_INTERNAL",
+      "reason": null,
+      "count": 92,
+      "first": "2019-01",
+      "last": "2026-08",
+      "flags": [
+        "",
+        "p"
+      ]
+    },
+    "producer_price_b2b_index": {
+      "status": "BLOCKED_NO_OBSERVATIONS",
+      "reason": null,
+      "count": 0,
+      "first": null,
+      "last": null,
+      "flags": [
+        ""
+      ]
+    },
+    "producer_price_index": {
+      "status": "CANDIDATE_INTERNAL",
+      "reason": null,
+      "count": 22,
+      "first": "2021-Q1",
+      "last": "2026-Q2",
+      "flags": [
+        "",
+        "p"
+      ]
+    }
+  },
+  "ratios": {
+    "real_gva_per_total_hour": {
+      "count": 30,
+      "last": "2026-Q2"
+    },
+    "compensation_per_employee_hour": {
+      "count": 0,
+      "last": null
+    },
+    "employee_compensation_share": {
+      "count": 0,
+      "last": null
+    },
+    "hours_per_person": {
+      "count": 0,
+      "last": null
+    },
+    "compensation_per_employee_hour_nsa": {
+      "count": 30,
+      "last": "2026-Q2"
+    },
+    "employee_compensation_share_nsa": {
+      "count": 30,
+      "last": "2026-Q2"
+    },
+    "hours_per_person_nsa": {
+      "count": 30,
+      "last": "2026-Q2"
+    }
+  },
+  "dares": {
+    "status": "CANDIDATE_NOT_ACQUIRED",
+    "source": "https://dares.travail-emploi.gouv.fr/donnees/les-mouvements-de-main-doeuvre",
+    "scope": "Metropolitan private sector excluding agriculture, temporary agency work and private households; realized contracts and separations, not DPAE",
+    "reason": "Workbook and exact sector dimensions not yet acquired; do not assume detailed quarterly series from headline publication."
+  },
+  "result_sha256": "ea15374bed0d59c17bfb6f3a23232e6b481633d76cd07eeb31baa6ad7639d4b3",
+  "ci": {
+    "run": 45680863458,
+    "job": 139440713447,
+    "conclusion": "success",
+    "tested_commit": "46d9632e8619c756f052c3c4dc2fa6851099f8ac",
+    "tests": 25,
+    "new_tests": 3,
+    "seconds": 0.042
+  },
+  "previous_attempt": {
+    "run": 45680743889,
+    "conclusion": "success",
+    "limitations": "Native indicator selectors for turnover and producer prices incorrect; SCA compensation and person series empty. Corrected codes to NETTUR and PRC_PRR, added separately named NSA series, empty selections now blocked."
+  },
+  "references": {
+    "insee_production": "https://www.insee.fr/fr/statistiques/9148679",
+    "eurostat_sts": "https://ec.europa.eu/eurostat/cache/metadata/en/sts_esms.htm",
+    "national_accounts": "https://ec.europa.eu/eurostat/cache/metadata/fr/namq_10_esms.htm",
+    "dares_mmo": "https://dares.travail-emploi.gouv.fr/donnees/les-mouvements-de-main-doeuvre"
+  }
+}
