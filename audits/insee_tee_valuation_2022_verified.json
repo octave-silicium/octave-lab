@@ -1,0 +1,191 @@
+{
+  "status": "EMPIRICAL_VALUATION_AND_MARGINAL_BOUNDS_DIAGNOSTIC",
+  "checks": 74,
+  "household": {
+    "totals": {
+      "basic_domestic": "1060936.689",
+      "basic_imported": "168540.420",
+      "basic_total": "1229477.109",
+      "purchaser_household": "1386561.3",
+      "net_household_valuation_difference": "157084.191",
+      "all_use_trade_margin": "0.0",
+      "all_use_transport_margin": "0.0",
+      "all_use_product_tax": "322052.0",
+      "all_use_product_subsidy": "-36664.2",
+      "all_use_basic_resources": "6111582.0",
+      "all_use_purchaser_resources": "6396969.8"
+    },
+    "territorial_correction": "-12458",
+    "caf_fab_correction": "0",
+    "purchaser_total": "1374103.3",
+    "net_difference_after_corrections": "144626.191"
+  },
+  "top": [
+    {
+      "code": "GZ",
+      "basic_domestic": "167933.083",
+      "basic_imported": "0",
+      "basic_total": "167933.083",
+      "purchaser_household": "5916.6",
+      "net_household_valuation_difference": "-162016.483",
+      "all_use_trade_margin": "-454389",
+      "all_use_transport_margin": "0",
+      "all_use_product_tax": "1248.6",
+      "all_use_product_subsidy": "0",
+      "all_use_basic_resources": "506746.9",
+      "all_use_purchaser_resources": "53606.5"
+    },
+    {
+      "code": "CA",
+      "basic_domestic": "83563.313",
+      "basic_imported": "27001.55",
+      "basic_total": "110564.863",
+      "purchaser_household": "193656.1",
+      "net_household_valuation_difference": "83091.237",
+      "all_use_trade_margin": "85425.9",
+      "all_use_transport_margin": "6478.5",
+      "all_use_product_tax": "36404.2",
+      "all_use_product_subsidy": "-95.8",
+      "all_use_basic_resources": "262794",
+      "all_use_purchaser_resources": "391006.8"
+    },
+    {
+      "code": "CM",
+      "basic_domestic": "3842.032",
+      "basic_imported": "11825.729",
+      "basic_total": "15667.761",
+      "purchaser_household": "47927.3",
+      "net_household_valuation_difference": "32259.539",
+      "all_use_trade_margin": "38346.9",
+      "all_use_transport_margin": "805.8",
+      "all_use_product_tax": "10458.2",
+      "all_use_product_subsidy": "0",
+      "all_use_basic_resources": "136479.8",
+      "all_use_purchaser_resources": "186090.7"
+    },
+    {
+      "code": "CB",
+      "basic_domestic": "5037.374",
+      "basic_imported": "17831.791",
+      "basic_total": "22869.165",
+      "purchaser_household": "51270.1",
+      "net_household_valuation_difference": "28400.935",
+      "all_use_trade_margin": "44038.4",
+      "all_use_transport_margin": "1152.6",
+      "all_use_product_tax": "10086.1",
+      "all_use_product_subsidy": "0",
+      "all_use_basic_resources": "70036.6",
+      "all_use_purchaser_resources": "125313.7"
+    },
+    {
+      "code": "CL",
+      "basic_domestic": "12374.637",
+      "basic_imported": "27643.787",
+      "basic_total": "40018.424",
+      "purchaser_household": "66710.3",
+      "net_household_valuation_difference": "26691.876",
+      "all_use_trade_margin": "42034.7",
+      "all_use_transport_margin": "1258.3",
+      "all_use_product_tax": "17244.1",
+      "all_use_product_subsidy": "-1438",
+      "all_use_basic_resources": "287686.3",
+      "all_use_purchaser_resources": "346785.4"
+    },
+    {
+      "code": "CD",
+      "basic_domestic": "17486.19",
+      "basic_imported": "21600.361",
+      "basic_total": "39086.551",
+      "purchaser_household": "62198.7",
+      "net_household_valuation_difference": "23112.149",
+      "all_use_trade_margin": "11904.4",
+      "all_use_transport_margin": "2121.1",
+      "all_use_product_tax": "43576.2",
+      "all_use_product_subsidy": "-7596",
+      "all_use_basic_resources": "107029.3",
+      "all_use_purchaser_resources": "157035"
+    }
+  ],
+  "MA": [
+    {
+      "column": "S11",
+      "lower": "-3000.573",
+      "upper": "-0.00"
+    },
+    {
+      "column": "S12",
+      "lower": "-1845.244152671668810984982181",
+      "upper": "-0.00"
+    },
+    {
+      "column": "S13",
+      "lower": "-3000.573",
+      "upper": "-0.00"
+    },
+    {
+      "column": "S14",
+      "lower": "-914.0811246000751460223844061",
+      "upper": "-0.00"
+    },
+    {
+      "column": "S15",
+      "lower": "-1153.911049340195151942980109",
+      "upper": "-0.00"
+    }
+  ],
+  "D42_households": [
+    {
+      "row": "S11",
+      "column": "S14",
+      "lower": "0",
+      "upper": "63746.000"
+    },
+    {
+      "row": "S12",
+      "column": "S14",
+      "lower": "0",
+      "upper": "56509.000"
+    },
+    {
+      "row": "S13",
+      "column": "S14",
+      "lower": "0",
+      "upper": "0"
+    },
+    {
+      "row": "S14",
+      "column": "S14",
+      "lower": "0",
+      "upper": "0"
+    },
+    {
+      "row": "S15",
+      "column": "S14",
+      "lower": "0",
+      "upper": "0"
+    },
+    {
+      "row": "S2",
+      "column": "S14",
+      "lower": "0",
+      "upper": "63746.000"
+    }
+  ],
+  "flow_residuals": {
+    "D1": "1.000",
+    "D4": "0.000",
+    "D42": "0.000",
+    "D5": "0.000",
+    "D61": "0.000",
+    "D62": "-1.000",
+    "D7": "1.000"
+  },
+  "verification_receipt": {
+    "run": 45542924734,
+    "job": 138965523112,
+    "tested_commit": "657fc89ad68e48f9427945e26a4776c81b8c0c5f",
+    "conclusion": "test_and_audit_steps_success",
+    "previous_failed_run": 45542889547,
+    "fix": "Pinned numpy dependency"
+  }
+}
