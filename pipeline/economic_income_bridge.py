@@ -1,31 +1,38 @@
-"""G4 income bridge: no observed admission without qualified same-vintage accounts."""
-import numpy as np
+"""G4 income bridge: standard-library accounting, no observed admission without qualified accounts."""
+import math
 
 def require(ok, reason):
     if not ok: raise ValueError(reason)
 
+def vector(x):
+    try:
+        vals=tuple(float(v) for v in x)
+    except (TypeError,ValueError,OverflowError):
+        raise ValueError("AXIS") from None
+    require(len(vals)>0 and all(math.isfinite(v) for v in vals),"AXIS")
+    return vals
+
 def reconcile(g, domestic, imported, standard_output, standard_ci, va, compensation, other_tax, subsidy, surplus, *, aggregate_product_tax, atol):
-    """Inputs in same currency, vintage, branch axis; surplus includes mixed income.
-    other_tax and subsidy are D29 and D39 gross positive amounts.
-    atol must be justified externally from source precision; no balancing adjustment.
-    """
-    require(type(atol) in (int,float) and np.isfinite(atol) and 0<=atol<=1,"TOLERANCE")
-    v=[np.asarray(x,dtype=float) for x in (g,domestic,imported,standard_output,standard_ci,va,compensation,other_tax,subsidy,surplus)]
-    require(all(x.ndim==1 and x.shape==v[0].shape and np.all(np.isfinite(x)) for x in v),"AXIS")
+    """Same vintage and branch axis; surplus includes mixed income, D39 positive."""
+    require(type(atol) in (int,float) and math.isfinite(atol) and 0<=atol<=1,"TOLERANCE")
+    v=[vector(x) for x in (g,domestic,imported,standard_output,standard_ci,va,compensation,other_tax,subsidy,surplus)]
+    require(all(len(x)==len(v[0]) for x in v),"AXIS")
     g,u,m,p,ci,b,w,t,s,eb=v
-    require(np.all(g>0) and all(np.all(x>=0) for x in (u,m,ci,w,t,s)),"SIGN")
+    require(all(x>0 for x in g) and all(x>=0 for a in (u,m,ci,w,t,s) for x in a),"SIGN")
     def check(a,b,name):
-        require(np.max(np.abs(a-b))<=atol,name)
+        require(max(abs(x-y) for x,y in zip(a,b))<=atol,name)
     check(g,p,"OUTPUT")
-    check(p-ci,b,"PRODUCTION_ACCOUNT")
-    check(w+t-s+eb,b,"OPERATING_ACCOUNT")
-    bridge=ci-u-m
-    check(float(bridge.sum()),float(aggregate_product_tax),"INTERMEDIATE_VALUATION_BRIDGE")
-    return {"value_added":b,"compensation":w,"other_net_production_tax":t-s,"surplus_mixed":eb,"intermediate_valuation_bridge":bridge,"gva_intensity":b/g,"compensation_intensity":w/g,"tax_intensity":(t-s)/g,"surplus_mixed_intensity":eb/g,"intermediate_bridge_intensity":bridge/g}
+    check(tuple(x-y for x,y in zip(p,ci)),b,"PRODUCTION_ACCOUNT")
+    check(tuple(a+c-d+z for a,c,d,z in zip(w,t,s,eb)),b,"OPERATING_ACCOUNT")
+    bridge=tuple(a-c-d for a,c,d in zip(ci,u,m))
+    require(abs(math.fsum(bridge)-float(aggregate_product_tax))<=atol,"INTERMEDIATE_VALUATION_BRIDGE")
+    net=tuple(a-b for a,b in zip(t,s))
+    ratio=lambda a: tuple(x/y for x,y in zip(a,g))
+    return {"value_added":b,"compensation":w,"other_net_production_tax":net,"surplus_mixed":eb,"intermediate_valuation_bridge":bridge,"gva_intensity":ratio(b),"compensation_intensity":ratio(w),"tax_intensity":ratio(net),"surplus_mixed_intensity":ratio(eb),"intermediate_bridge_intensity":ratio(bridge)}
 
 def effects(dg,r):
-    dg=np.asarray(dg,dtype=float)
-    require(dg.shape==r["gva_intensity"].shape and np.all(np.isfinite(dg)),"SHOCK_AXIS")
-    out={k:float(np.dot(dg,r[k+"_intensity"])) for k in ("gva","compensation","tax","surplus_mixed","intermediate_bridge")}
+    dg=vector(dg)
+    require(len(dg)==len(r["gva_intensity"]),"SHOCK_AXIS")
+    out={k:math.fsum(x*y for x,y in zip(dg,r[k+"_intensity"])) for k in ("gva","compensation","tax","surplus_mixed","intermediate_bridge")}
     require(abs(out["gva"]-out["compensation"]-out["tax"]-out["surplus_mixed"])<=1e-7*max(1,abs(out["gva"])),"SHOCK_INCOME_BALANCE")
     return {**out,"employment":None,"net_profit":None,"household_disposable_income":None,"status":"CONDITIONAL_FIXED_INTENSITY_NOT_FORECAST"}
