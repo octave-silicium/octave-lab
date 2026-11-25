@@ -1,0 +1,27 @@
+name: G4 TES A38 raw qualification
+on:
+  push:
+    paths:
+      - 'pipeline/acquire_tes_a38.py'
+      - '.github/workflows/acquire-tes-a38.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Acquire and inventory official workbook
+        run: python pipeline/acquire_tes_a38.py --output tes-a38
+      - name: Preserve raw acquisition and provenance
+        uses: actions/upload-artifact@v4
+        with:
+          name: insee-tes-a38-2022-raw
+          path: tes-a38/
+          if-no-files-found: error
+          retention-days: 30
