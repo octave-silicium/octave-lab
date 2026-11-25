@@ -1,0 +1,27 @@
+name: G4 capital changes qualification
+on:
+  push:
+    paths:
+      - 'pipeline/acquire_capital_changes.py'
+      - 'pipeline/audit_capital_changes.py'
+      - '.github/workflows/capital-changes.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install openpyxl==3.1.5
+      - run: python -m pipeline.acquire_capital_changes
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: capital-change
+          path: capital-change/
+          retention-days: 30
