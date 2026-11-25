@@ -31,7 +31,12 @@
       "dependencies": [],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "BLOCKED"
     },
     {
       "id": "LIM-D02",
@@ -58,7 +63,12 @@
       "dependencies": [],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "BLOCKED"
     },
     {
       "id": "LIM-D03",
@@ -83,10 +93,19 @@
         "E06"
       ],
       "status": "OPEN",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-D01",
+        "LIM-D02",
+        "LIM-D11"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "OPEN"
     },
     {
       "id": "LIM-D04",
@@ -113,7 +132,12 @@
       "dependencies": [],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "OPEN"
     },
     {
       "id": "LIM-D05",
@@ -146,7 +170,12 @@
       "dependencies": [],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "OPEN"
     },
     {
       "id": "LIM-D06",
@@ -173,7 +202,12 @@
       "dependencies": [],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "BLOCKED"
     },
     {
       "id": "LIM-D07",
@@ -198,10 +232,19 @@
         "E04"
       ],
       "status": "OPEN",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-D03",
+        "LIM-D09",
+        "LIM-D11"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "OPEN"
     },
     {
       "id": "LIM-D08",
@@ -223,10 +266,16 @@
         "E06"
       ],
       "status": "OPEN",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-T01",
+        "LIM-T04"
+      ],
       "closure_evidence": [],
       "publication_blocking": false,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "OPEN"
     },
     {
       "id": "LIM-D09",
@@ -254,7 +303,12 @@
       "dependencies": [],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "OPEN"
     },
     {
       "id": "LIM-D10",
@@ -280,10 +334,17 @@
         "E06"
       ],
       "status": "PARTIAL",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-D06"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "PARTIAL"
     },
     {
       "id": "LIM-D11",
@@ -310,10 +371,17 @@
         "E03"
       ],
       "status": "PARTIAL",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-D09"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "PARTIAL"
     },
     {
       "id": "LIM-D12",
@@ -336,10 +404,17 @@
         "E06"
       ],
       "status": "PARTIAL",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-D06",
+        "LIM-D10",
+        "LIM-D11"
+      ],
       "closure_evidence": [],
       "publication_blocking": false,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "PARTIAL"
     },
     {
       "id": "LIM-W01",
@@ -365,10 +440,19 @@
         "E01"
       ],
       "status": "PARTIAL",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-D06",
+        "LIM-D09",
+        "LIM-D11"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "PARTIAL"
     },
     {
       "id": "LIM-W02",
@@ -395,10 +479,17 @@
         "E04"
       ],
       "status": "OPEN",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-W01"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "OPEN"
     },
     {
       "id": "LIM-W03",
@@ -427,10 +518,17 @@
         "E04"
       ],
       "status": "OPEN",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-W02"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "OPEN"
     },
     {
       "id": "LIM-W04",
@@ -458,10 +556,18 @@
         "E04"
       ],
       "status": "PARTIAL",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-W02",
+        "LIM-W03"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "PARTIAL"
     },
     {
       "id": "LIM-W05",
@@ -488,10 +594,17 @@
         "E04"
       ],
       "status": "PARTIAL",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-W02"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "PARTIAL"
     },
     {
       "id": "LIM-W06",
@@ -521,10 +634,18 @@
         "E04"
       ],
       "status": "PARTIAL",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-W02",
+        "LIM-W04"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "PARTIAL"
     },
     {
       "id": "LIM-W07",
@@ -552,10 +673,19 @@
         "E04"
       ],
       "status": "OPEN",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-W02",
+        "LIM-W03",
+        "LIM-W05"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "OPEN"
     },
     {
       "id": "LIM-F01",
@@ -581,10 +711,17 @@
         "E05"
       ],
       "status": "PARTIAL",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-W07"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "PARTIAL"
     },
     {
       "id": "LIM-F02",
@@ -609,10 +746,18 @@
         "E05"
       ],
       "status": "OPEN",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-W06",
+        "LIM-W07"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "OPEN"
     },
     {
       "id": "LIM-F03",
@@ -637,10 +782,18 @@
         "E04"
       ],
       "status": "PARTIAL",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-W02",
+        "LIM-W03"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "PARTIAL"
     },
     {
       "id": "LIM-F04",
@@ -668,10 +821,19 @@
         "E05"
       ],
       "status": "PARTIAL",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-F01",
+        "LIM-F02",
+        "LIM-F03"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "PARTIAL"
     },
     {
       "id": "LIM-F05",
@@ -701,10 +863,17 @@
         "E05"
       ],
       "status": "PARTIAL",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-F04"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "PARTIAL"
     },
     {
       "id": "LIM-F06",
@@ -729,10 +898,18 @@
         "E05"
       ],
       "status": "PARTIAL",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-F01",
+        "LIM-F05"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "PARTIAL"
     },
     {
       "id": "LIM-F07",
@@ -760,10 +937,19 @@
         "E04"
       ],
       "status": "OPEN",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-D07",
+        "LIM-F05",
+        "LIM-F06"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "OPEN"
     },
     {
       "id": "LIM-S01",
@@ -787,10 +973,19 @@
         "E02"
       ],
       "status": "PARTIAL",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-D06",
+        "LIM-D10",
+        "LIM-D11"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "PARTIAL"
     },
     {
       "id": "LIM-S02",
@@ -814,10 +1009,17 @@
         "E04"
       ],
       "status": "PARTIAL",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-S01"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "PARTIAL"
     },
     {
       "id": "LIM-S03",
@@ -842,10 +1044,17 @@
         "E05"
       ],
       "status": "PARTIAL",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-S01"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "PARTIAL"
     },
     {
       "id": "LIM-S04",
@@ -871,10 +1080,20 @@
         "E05"
       ],
       "status": "PARTIAL",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-S01",
+        "LIM-S02",
+        "LIM-W07",
+        "LIM-F07"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "PARTIAL"
     },
     {
       "id": "LIM-S05",
@@ -899,10 +1118,19 @@
         "E05"
       ],
       "status": "PARTIAL",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-S04",
+        "LIM-F01",
+        "LIM-F06"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "PARTIAL"
     },
     {
       "id": "LIM-S06",
@@ -927,10 +1155,17 @@
         "E04"
       ],
       "status": "PARTIAL",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-S02"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "PARTIAL"
     },
     {
       "id": "LIM-S07",
@@ -954,10 +1189,18 @@
         "E05"
       ],
       "status": "PARTIAL",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-S05",
+        "LIM-S06"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "PARTIAL"
     },
     {
       "id": "LIM-S08",
@@ -982,10 +1225,19 @@
         "E04"
       ],
       "status": "PARTIAL",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-S02",
+        "LIM-S06",
+        "LIM-S07"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "PARTIAL"
     },
     {
       "id": "LIM-S09",
@@ -1011,10 +1263,19 @@
         "E05"
       ],
       "status": "PARTIAL",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-F04",
+        "LIM-S07",
+        "LIM-S08"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "PARTIAL"
     },
     {
       "id": "LIM-S10",
@@ -1041,10 +1302,19 @@
         "E05"
       ],
       "status": "PARTIAL",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-S02",
+        "LIM-S03",
+        "LIM-F05"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "PARTIAL"
     },
     {
       "id": "LIM-S11",
@@ -1070,10 +1340,18 @@
         "E05"
       ],
       "status": "OPEN",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-S10",
+        "LIM-S03"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "OPEN"
     },
     {
       "id": "LIM-S12",
@@ -1101,10 +1379,18 @@
         "E05"
       ],
       "status": "OPEN",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-S11",
+        "LIM-S09"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "OPEN"
     },
     {
       "id": "LIM-S13",
@@ -1130,10 +1416,19 @@
         "E04"
       ],
       "status": "OPEN",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-S01",
+        "LIM-S06",
+        "LIM-S10"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "OPEN"
     },
     {
       "id": "LIM-S14",
@@ -1158,10 +1453,18 @@
         "E02"
       ],
       "status": "OPEN",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-S01",
+        "LIM-D11"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "OPEN"
     },
     {
       "id": "LIM-S15",
@@ -1191,10 +1494,20 @@
         "E05"
       ],
       "status": "OPEN",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-W07",
+        "LIM-F03",
+        "LIM-S04",
+        "LIM-S13"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "OPEN"
     },
     {
       "id": "LIM-S16",
@@ -1222,10 +1535,19 @@
         "E05"
       ],
       "status": "OPEN",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-S03",
+        "LIM-S11",
+        "LIM-S12"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "OPEN"
     },
     {
       "id": "LIM-T01",
@@ -1257,10 +1579,21 @@
         "E06"
       ],
       "status": "PARTIAL",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-D12",
+        "LIM-W04",
+        "LIM-S04",
+        "LIM-S15",
+        "LIM-S16"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "PARTIAL"
     },
     {
       "id": "LIM-T02",
@@ -1290,10 +1623,19 @@
         "E06"
       ],
       "status": "OPEN",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-D03",
+        "LIM-D07",
+        "LIM-S13"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "OPEN"
     },
     {
       "id": "LIM-T03",
@@ -1321,10 +1663,17 @@
         "E06"
       ],
       "status": "OPEN",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-D05"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "OPEN"
     },
     {
       "id": "LIM-T04",
@@ -1349,10 +1698,19 @@
         "E06"
       ],
       "status": "OPEN",
-      "dependencies": [],
+      "dependencies": [
+        "LIM-D10",
+        "LIM-D06",
+        "LIM-D12"
+      ],
       "closure_evidence": [],
       "publication_blocking": true,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [
+        "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
+      ],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "OPEN"
     },
     {
       "id": "LIM-T05",
@@ -1383,7 +1741,10 @@
       "dependencies": [],
       "closure_evidence": [],
       "publication_blocking": false,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "PERMANENT"
     },
     {
       "id": "LIM-T06",
@@ -1413,7 +1774,11 @@
       "dependencies": [],
       "closure_evidence": [],
       "publication_blocking": false,
-      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu."
+      "notes": "Cible de résolution proposée; non assimilée à une échéance ferme. Aucun gate promu.",
+      "blocked_claims": [],
+      "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
+      "resolution_status": "PERMANENT"
     }
-  ]
+  ],
+  "dependency_semantics": "Dependencies constrain closure, not parallel development; not a promise of dates. Publication restrictions apply to affected claims, not blanket suppression of safe synthetic demonstrations."
 }
