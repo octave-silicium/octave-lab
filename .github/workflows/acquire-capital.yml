@@ -1,0 +1,26 @@
+name: G4 capital accounts qualification
+on:
+  push:
+    paths:
+      - 'pipeline/acquire_capital_2022.py'
+      - 'pipeline/audit_capital_2022.py'
+      - '.github/workflows/acquire-capital.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  capital:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install openpyxl==3.1.5
+      - run: python -m pipeline.acquire_capital_2022
+      - uses: actions/upload-artifact@v4
+        with:
+          name: capital-2022
+          path: capital-2022/
+          retention-days: 30
