@@ -59,3 +59,29 @@ class WorkingTests(unittest.TestCase):
     def test_invalid_terms(self):
         st,steps,a,kw=fixture();p=WorkingPolicy((),(TradeTerm("A","S","2","20",1,"fixture"),))
         with self.assertRaisesRegex(ValueError,"TRADE_SHARE"):run(st,(replace(steps[0],working=p),),a,kw)
+
+    def test_shared_credit_envelope_investment_and_working(self):
+        from pipeline.economic_shared_state import Project
+        from pipeline.economic_sector_capital import Investment
+        st,steps,a,kw=fixture("0")
+        p=Project("capital","A","S","K",None,"100","0","0","100",("DEBT",),True,2,"fixture")
+        order=Investment("capital","machine",1,1,1,"fixture")
+        policy=WorkingPolicy((Facility("A","40",1,"fixture"),))
+        step=replace(steps[0],projects=(p,),orders=(order,),working=policy)
+        close,_,r=run(st,(step,),a,dict(kw,credit_limit="60"));row=r["result"]["periods"][0]
+        self.assertEqual(row["working_credit_envelope"],"40")
+        self.assertEqual(row["projects"][0]["reserved_eur"],"20")
+        self.assertLessEqual(F(row["projects"][0]["sources"]["DEBT"])+F(row["working_credit_drawn"]),60)
+        self.assertEqual(sum(amount(x.stock) for x in close.positions if x.instrument=="LOAN"),F(row["projects"][0]["sources"]["DEBT"])+F(row["working_credit_drawn"]))
+    def test_supplier_must_finance_payroll(self):
+        st,steps,a,kw=fixture("10")
+        p=WorkingPolicy((),(TradeTerm("A","S","1","30",1,"fixture"),))
+        _,_,r=run(st,(replace(steps[0],working=p),),a,kw)
+        row=r["result"]["periods"][0]
+        self.assertEqual(row["household_consumption_eur"],"0")
+        self.assertTrue(row["input_prefunding"]["S"]["payroll_tax_prefunded"])
+    def test_duplicate_facility_refused(self):
+        st,steps,a,kw=fixture()
+        f=Facility("A","40",1,"fixture")
+        with self.assertRaisesRegex(ValueError,"DUPLICATE_WORKING_TERM"):
+            run(st,(replace(steps[0],working=WorkingPolicy((f,f))),),a,kw)
