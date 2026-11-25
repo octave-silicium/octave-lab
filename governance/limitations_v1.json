@@ -1,6 +1,6 @@
 {
   "id": "LIMITATIONS-001",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "date": "2026-11-25",
   "baseline_commit": "5bd37a858e384fdf3a159564975623b8ac957663",
   "status": "INITIAL_CONSOLIDATION_REVIEW_PENDING",
@@ -747,9 +747,16 @@
           "scope": "Compensation exacte d'obligations exigibles, impayés et dépréciation conditionnelle séparés; pas de défaut juridique, liquidation, BFR ni bilan bancaire complet.",
           "empirical_audit_path": "audits/eurostat_financial_network_2022_verified.json",
           "empirical_ci": "https://github.com/octave-silicium/octave-lab/actions/runs/45546707738"
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "COMMON-STATE-001 v0.1",
+          "path": "audits/common_economic_state_v01_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45556107766",
+          "scope": "Contrat de positions appariées et événements exacts, échéances connues/inconnues; aucune preuve de bilan complet, BFR, insolvabilité ou perte définitive."
         }
       ],
-      "remaining": "Compensation exacte d'obligations exigibles, impayés et dépréciation conditionnelle séparés; pas de défaut juridique, liquidation, BFR ni bilan bancaire complet."
+      "remaining": "Compensation exacte d'obligations exigibles, impayés et dépréciation conditionnelle séparés; pas de défaut juridique, liquidation, BFR ni bilan bancaire complet. Contrat de positions appariées et événements exacts, échéances connues/inconnues; aucune preuve de bilan complet, BFR, insolvabilité ou perte définitive."
     },
     {
       "id": "LIM-F02",
@@ -908,9 +915,16 @@
           "scope": "Rationnement du crédit sous plafond exogène et marge de fonds propres hypothétique après pertes reconnues; allocation proportionnelle entre demandeurs. Pas de choix VAN, risque calibré ou octroi effectif.",
           "empirical_audit_path": "audits/eurostat_financial_network_2022_verified.json",
           "empirical_ci": "https://github.com/octave-silicium/octave-lab/actions/runs/45546707738"
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "COMMON-STATE-001 v0.1",
+          "path": "audits/common_economic_state_v01_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45556107766",
+          "scope": "Financement cash/apport/dette, plafonds concurrents, substitution et refus; sources alternatives et décision endogène non traitées."
         }
       ],
-      "remaining": "Rationnement du crédit sous plafond exogène et marge de fonds propres hypothétique après pertes reconnues; allocation proportionnelle entre demandeurs. Pas de choix VAN, risque calibré ou octroi effectif."
+      "remaining": "Rationnement du crédit sous plafond exogène et marge de fonds propres hypothétique après pertes reconnues; allocation proportionnelle entre demandeurs. Pas de choix VAN, risque calibré ou octroi effectif. Financement cash/apport/dette, plafonds concurrents, substitution et refus; sources alternatives et décision endogène non traitées."
     },
     {
       "id": "LIM-F05",
@@ -1506,9 +1520,16 @@
           "scope": "Plafond conditionnel de crédit calculé à partir de la contagion, réutilisable dans v0.7d après mapping explicite; couplage automatique aux acquisitions et financement multi-acteurs non réalisé.",
           "empirical_audit_path": "audits/eurostat_financial_network_2022_verified.json",
           "empirical_ci": "https://github.com/octave-silicium/octave-lab/actions/runs/45546707738"
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "COMMON-STATE-001 v0.1",
+          "path": "audits/common_economic_state_v01_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45556107766",
+          "scope": "Sous-registre commun et acquisitions payées; raccord au capital productif, à la livraison et aux plafonds du réseau v0.7f non réalisé."
         }
       ],
-      "remaining": "Plafond conditionnel de crédit calculé à partir de la contagion, réutilisable dans v0.7d après mapping explicite; couplage automatique aux acquisitions et financement multi-acteurs non réalisé."
+      "remaining": "Plafond conditionnel de crédit calculé à partir de la contagion, réutilisable dans v0.7d après mapping explicite; couplage automatique aux acquisitions et financement multi-acteurs non réalisé. Sous-registre commun et acquisitions payées; raccord au capital productif, à la livraison et aux plafonds du réseau v0.7f non réalisé."
     },
     {
       "id": "LIM-S10",
@@ -2296,5 +2317,5 @@
     }
   ],
   "dependency_semantics": "Dependencies constrain closure, not parallel development; not a promise of dates. Publication restrictions apply to affected claims, not blanket suppression of safe synthetic demonstrations.",
-  "last_milestone": "G4 v0.7f"
+  "last_milestone": "COMMON-STATE-001 v0.1"
 }
