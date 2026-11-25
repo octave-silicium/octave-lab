@@ -4,6 +4,8 @@ on:
     paths:
       - 'pipeline/economic_sector_market_bridge*.py'
       - 'tests/test_economic_sector_market_bridge.py'
+      - 'pipeline/economic_sector_make_buy*.py'
+      - 'tests/test_economic_sector_make_buy.py'
       - '.github/workflows/g4-market-bridge.yml'
   workflow_dispatch:
 permissions:
@@ -25,8 +27,18 @@ jobs:
           a=json.load(open("bridge-audit.json"))
           print(json.dumps({"fixture":a["fixture"],"internalization_block":a["internalization_block"],"cases":{k:{"market":v["result"]["market"],"flows":v["result"]["flows"],"totals":v["result"]["sector"]["totals"],"sha256":v["sha256"]} for k,v in a["cases"].items()}},indent=2))
           PY
+      - run: python -m unittest discover -s tests -p test_economic_sector_make_buy.py -v
+      - run: |
+          python -m pipeline.economic_sector_make_buy_pilot > make-buy-audit.json
+          python - <<'PY'
+          import json
+          a=json.load(open("make-buy-audit.json"))
+          print(json.dumps({"fixture":a["fixture"],"cases":{k:{**{i:v["result"][i] for i in ("quantities","direct_chain","recurring_buyer_reference_mEUR","capital_separate_mEUR")},"totals":v["result"]["sector"]["totals"],"sha256":v["sha256"]} for k,v in a["cases"].items()}},indent=2))
+          PY
       - uses: actions/upload-artifact@v4
         with:
           name: g4-market-bridge-audit
-          path: bridge-audit.json
+          path: |
+            bridge-audit.json
+            make-buy-audit.json
           retention-days: 30
