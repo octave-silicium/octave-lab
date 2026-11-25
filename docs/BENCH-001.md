@@ -33,3 +33,6 @@ Registre de chaque benchmark : ID, module, référence/version/date, description
 
 ## Décision de portée 24/11/2026 : ARCH-002 v2.0
 La cible intégrale validée est [ARCH-002](ARCH-002.md) et son [registre machine-readable](../governance/economic_mechanisms_v2.json). Neuf couches, six moteurs et 64 mécanismes initiaux, statut exigences validées, méthodes/paramètres/implémentations à qualifier. Les six niveaux historiques, METH-003, BENCH-001 et gates G-M0…G-M5 restent applicables ; E-G0…E-G6 complémentaires non franchis. G3 est redéfini comme tranche micro→marché, G4 réseaux et agrégation, G5 validation/produit ; acquisition, G2 indépendant et déploiement en parallèle. Aucune preuve de différenciation ou impact nouveau.
+
+## OEM/Coface — benchmark validé (25/11/2026)
+[BENCH-OEM-001](BENCH-OEM-001.md) : quatre axes (exposition vs performance réelle, indicateur avancé indépendant, robustesse multisource/multipays, valeur décisionnelle de la refonte et du couplage économique). AI-LERT référence externe non reproduite ; jointure métier×secteur×temps à qualifier, pas de causalité ni supériorité revendiquée. VERTICAL-001 reste prioritaire ; intégrer le comparateur simple et contre-hypothèses dans V1/V2 si matériel, reporter la réplication intégrale sans données compatibles. Aucun gate promu.
