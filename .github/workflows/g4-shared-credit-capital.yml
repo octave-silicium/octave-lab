@@ -1,0 +1,32 @@
+name: G4 v0.7g shared credit and capital
+on:
+  push:
+    paths:
+      - 'pipeline/economic_shared_bridge.py'
+      - 'tests/test_economic_shared_bridge.py'
+      - 'pipeline/audit_quarterly_counterparts.py'
+      - '.github/workflows/g4-shared-credit-capital.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  bridge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest discover -s tests -p 'test_economic_shared*.py' -v
+  counterpart:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pipeline.audit_quarterly_counterparts
+      - uses: actions/upload-artifact@v4
+        with:
+          name: quarterly-counterpart-qualification
+          path: counterpart-qualification/
