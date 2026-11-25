@@ -1,0 +1,64 @@
+{
+  "study": "VERTICAL-001",
+  "phase": "V0",
+  "collected_utc": "2026-11-25T07:45:36.602549+00:00",
+  "sources": {
+    "urssaf_headcount": {
+      "url": "https://open.urssaf.fr/api/explore/v2.1/catalog/datasets/effectifs-salaries-et-masse-salariale-du-secteur-prive-france-entiere-x-na88/exports/csv?use_labels=false",
+      "historical_sha256": "9ec16fb077e554518f5a1ade579684a8c91d56f293c7b9897f07b40226833222",
+      "rights": "PUBLIC_PRODUCT_REVIEW_PENDING",
+      "lineage": "URSSAF_ADMIN",
+      "sha256": "9ec16fb077e554518f5a1ade579684a8c91d56f293c7b9897f07b40226833222",
+      "bytes": 1572724,
+      "same_bytes": true,
+      "status": "PARSED",
+      "same_selected_result": true
+    },
+    "urssaf_dpae": {
+      "url": "https://open.urssaf.fr/api/explore/v2.1/catalog/datasets/dpae-france-entiere-x-na38/exports/csv?use_labels=false",
+      "historical_sha256": "42cd99124b1ef5f0a39afc481c42e70d5adc0fbfb535a7cb53f2653dfd41f549",
+      "rights": "PUBLIC_PRODUCT_REVIEW_PENDING",
+      "lineage": "URSSAF_ADMIN",
+      "sha256": "42cd99124b1ef5f0a39afc481c42e70d5adc0fbfb535a7cb53f2653dfd41f549",
+      "bytes": 1945716,
+      "same_bytes": true,
+      "status": "PARSED",
+      "same_selected_result": true,
+      "2025_excluded": true
+    },
+    "eurostat_ai": {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/isoc_eb_ain2?geo=FR&lang=EN&sinceTimePeriod=2022",
+      "historical_sha256": "0c701942ea3d15bd1350e6938b27a5713f9d39f366b620723995b98077a469a8",
+      "rights": "PUBLIC_PRODUCT_REVIEW_PENDING",
+      "lineage": "EUROSTAT_ENTERPRISE_SURVEY",
+      "sha256": "0c701942ea3d15bd1350e6938b27a5713f9d39f366b620723995b98077a469a8",
+      "bytes": 191957,
+      "same_bytes": true,
+      "status": "PARSED",
+      "same_selected_result": true,
+      "blocked_comparisons_preserved": true
+    }
+  },
+  "parsed_sources": 3,
+  "distinct_lineages": 2,
+  "causal_identification": "NOT_IDENTIFIED",
+  "publication": "BLOCK_PUBLICATION",
+  "historical_reproduction": "SAME_BYTES_AND_RESULTS",
+  "note": "No new source values in this audit. Current acquisition is not a historical replay unless digests and selected results agree. Public/commercial rights and independent review remain open.",
+  "historical_manifest_sha256": "5abc92edd8b80389bdc568b780db30114ad961e62564d09a9d878cb65d9e9495",
+  "registry_sha256": {
+    "transversal_enrichment_v1.json": "14ecd88e76a6f08da49087dab0128ff7b80f7fbdbefff4a3581509ec5f4a99d2",
+    "multi_order_prospective_v1.json": "abd8dfeebcfa63d2bb225ce7720228c5f3fc7d63efec95b370e14b00d9c32cbc",
+    "shapiro_enrichment_v1.json": "0e79a721f25ac9bfb748d96da1b2a6d61a85c30274e723238aa0b123223034d8",
+    "limitations_v1.json": "ee21d561ed405e41d92e7e8ac418ecca6b5a7876e38cd2ef9b451c63ce682b74",
+    "economic_mechanisms_v2.json": "7f7fd86bf1a9a9f017689627dcc36dcf77cef8aaa9a6cdf017088e75f1e44694",
+    "investigation_result_v1.json": "a18023fb3ea2847425ae3190f79e55bd9d7cf1a2725135b6d0b4fd38a16653ee"
+  },
+  "ci": {
+    "run": 45570629671,
+    "job": 139056093003,
+    "conclusion": "success",
+    "tested_commit": "87ada70ea766036d0d5d2e8fae7d03939f42d8c0",
+    "test_step": "success"
+  }
+}
