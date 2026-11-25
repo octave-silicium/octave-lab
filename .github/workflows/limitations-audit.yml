@@ -1,0 +1,43 @@
+name: LIMITATIONS-001 governance audit
+on:
+  push:
+    paths:
+      - 'governance/**'
+      - 'docs/**'
+      - 'research/**'
+      - 'pipeline/**'
+      - 'README.md'
+      - 'tests/test_limitations_audit.py'
+      - '.github/workflows/limitations-audit.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest discover -s tests -p test_limitations_audit.py -v
+      - run: python -m pipeline.limitations_audit --output limitations-audit.json
+      - name: Confirm unqualified release blocked
+        run: |
+          set +e
+          python -m pipeline.limitations_audit --release-gate --output limitations-release-check.json > release.log 2>&1
+          status=$?
+          set -e
+          test "$status" -ne 0
+          grep 'BLOCK_UNQUALIFIED_PUBLICATION: scope-specific independent review required' release.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: limitations-audit
+          path: |
+            limitations-audit.json
+            limitations-release-check.json
+            release.log
+          retention-days: 30
