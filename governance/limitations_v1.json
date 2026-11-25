@@ -1,6 +1,6 @@
 {
   "id": "LIMITATIONS-001",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "date": "2026-11-25",
   "baseline_commit": "5bd37a858e384fdf3a159564975623b8ac957663",
   "status": "INITIAL_CONSOLIDATION_REVIEW_PENDING",
@@ -721,7 +721,17 @@
         "UNQUALIFIED_RELATED_EMPIRICAL_OR_PRODUCTION_CLAIM"
       ],
       "review_status": "FAMILY_CONSOLIDATED_SOURCE_TRIAGE_PENDING",
-      "resolution_status": "PARTIAL"
+      "resolution_status": "PARTIAL",
+      "progress_evidence": [
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7d",
+          "path": "audits/economic_sector_financing_v07d_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45545566719",
+          "scope": "Trésorerie et dette d'un emprunteur synthétique, intérêts, principal, arriérés séparés, réserve et apports explicites. BFR, bilan complet, contreparties, impayés clients, fiscalité, défaut/liquidation restent ouverts."
+        }
+      ],
+      "remaining": "Trésorerie et dette d'un emprunteur synthétique, intérêts, principal, arriérés séparés, réserve et apports explicites. BFR, bilan complet, contreparties, impayés clients, fiscalité, défaut/liquidation restent ouverts."
     },
     {
       "id": "LIM-F02",
@@ -855,9 +865,16 @@
           "path": "audits/insee_capital_changes_2022_verified.json",
           "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45544771040",
           "scope": "Variation de valeur patrimoniale décomposée; distinction CCF, réévaluation et autres changements. Pas de dépréciation individuelle, valeur terminale ou financement entreprise calibrés."
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7d",
+          "path": "audits/economic_sector_financing_v07d_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45545566719",
+          "scope": "Financement et service de la dette raccordés aux acquisitions effectives, conservation de trésorerie et dette vérifiée. Pas de choix optimal VAN, coût d'opportunité, échéancier complet, risque de crédit ni calibration entreprise."
         }
       ],
-      "remaining": "Variation de valeur patrimoniale décomposée; distinction CCF, réévaluation et autres changements. Pas de dépréciation individuelle, valeur terminale ou financement entreprise calibrés."
+      "remaining": "Financement et service de la dette raccordés aux acquisitions effectives, conservation de trésorerie et dette vérifiée. Pas de choix optimal VAN, coût d'opportunité, échéancier complet, risque de crédit ni calibration entreprise."
     },
     {
       "id": "LIM-F05",
@@ -1410,9 +1427,16 @@
           "path": "audits/insee_capital_changes_2022_verified.json",
           "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45544771040",
           "scope": "FBCF et CCF par actif acquises à l'échelle institutionnelle/nationale; 75 comparaisons par branche et 6 comparaisons FBCF nationale par actif dans CI. Pas de CCF branche×actif, durées de vie, services du capital, capacités, financement ni paramètres IA."
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7d",
+          "path": "audits/economic_sector_financing_v07d_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45545566719",
+          "scope": "Investissement limité par liquidité/crédit puis offre; dette tirée sur livraison, capital mis en service avec délai. Pas de financement multi-acteurs, capital importé, paramètres empiriques de capacité/efficacité/durée de vie, CCF branche×actif."
         }
       ],
-      "remaining": "FBCF et CCF par actif acquises à l'échelle institutionnelle/nationale; 75 comparaisons par branche et 6 comparaisons FBCF nationale par actif dans CI. Pas de CCF branche×actif, durées de vie, services du capital, capacités, financement ni paramètres IA."
+      "remaining": "Investissement limité par liquidité/crédit puis offre; dette tirée sur livraison, capital mis en service avec délai. Pas de financement multi-acteurs, capital importé, paramètres empiriques de capacité/efficacité/durée de vie, CCF branche×actif."
     },
     {
       "id": "LIM-S10",
@@ -1604,9 +1628,16 @@
           "path": "audits/economic_sector_capital_v07a_verified.json",
           "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45543405603",
           "scope": "Retour de l'acquisition effective sur la capacité future démontré. Boucles conjointes revenu-prix-capacité-stock-financement et calibration restent ouvertes."
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7d",
+          "path": "audits/economic_sector_financing_v07d_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45545566719",
+          "scope": "Boucle capacité→surplus proxy→trésorerie→financement→acquisition→capacité avec décalage. Pas de boucle conjointe prix/revenus/stocks, ni comptes financiers consolidés; surplus converti en cash par hypothèse explicite."
         }
       ],
-      "remaining": "Retour de l'acquisition effective sur la capacité future démontré. Boucles conjointes revenu-prix-capacité-stock-financement et calibration restent ouvertes."
+      "remaining": "Boucle capacité→surplus proxy→trésorerie→financement→acquisition→capacité avec décalage. Pas de boucle conjointe prix/revenus/stocks, ni comptes financiers consolidés; surplus converti en cash par hypothèse explicite."
     },
     {
       "id": "LIM-S13",
@@ -1806,9 +1837,16 @@
           "path": "audits/insee_capital_changes_2022_verified.json",
           "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45544771040",
           "scope": "Comptes S1/S11/S12/S13/S14 de patrimoine et variation; S15 non acquis séparément, aucune répartition conjointe branches×institutions×actifs, patrimoine financier et financement non qualifiés dans cette tranche."
+        },
+        {
+          "date": "2026-11-25",
+          "milestone": "G4 v0.7d",
+          "path": "audits/economic_sector_financing_v07d_verified.json",
+          "verification_ref": "https://github.com/octave-silicium/octave-lab/actions/runs/45545566719",
+          "scope": "Apports et dette exogènes, service et arriérés d'un seul emprunteur distingués. Pas de bilan du prêteur, de propriété des fonds propres, de patrimoine institutionnel dynamique ou d'équilibre financier."
         }
       ],
-      "remaining": "Comptes S1/S11/S12/S13/S14 de patrimoine et variation; S15 non acquis séparément, aucune répartition conjointe branches×institutions×actifs, patrimoine financier et financement non qualifiés dans cette tranche."
+      "remaining": "Apports et dette exogènes, service et arriérés d'un seul emprunteur distingués. Pas de bilan du prêteur, de propriété des fonds propres, de patrimoine institutionnel dynamique ou d'équilibre financier."
     },
     {
       "id": "LIM-T01",
@@ -2150,5 +2188,5 @@
     }
   ],
   "dependency_semantics": "Dependencies constrain closure, not parallel development; not a promise of dates. Publication restrictions apply to affected claims, not blanket suppression of safe synthetic demonstrations.",
-  "last_milestone": "G4 v0.7c"
+  "last_milestone": "G4 v0.7d"
 }
