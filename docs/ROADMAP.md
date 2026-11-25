@@ -129,3 +129,6 @@ Décision utilisateur : [UX-001](UX-001.md) et [RESULT-001](RESULT-001.md) compl
 
 ## LIMITATIONS-001 — Contrôle transversal des limites (25/11/2026)
 [Registre et gouvernance](LIMITATIONS-001.md), [JSON canonique](../governance/limitations_v1.json), [preuve](../audits/limitations_v1_verified.json). 51 familles, 131 obligations, 162 fichiers et 611 passages candidats inventoriés ; revue sémantique ouverte, 9 tests de gouvernance réussis, aucune qualification scientifique promue. Préserver OPEN-01…09 et les identifiants existants. Prochaine tranche G4 v0.6b budget et réallocation, avec suivi explicite LIM-S11/S10/S03 ; P0 et autres obligations restent ouverts.
+
+## AUDIT-TRANSVERSAL-001 — Revue avant reprise G4 v0.7g (25/11/2026)
+[Audit candidat](AUDIT-TRANSVERSAL-001.md) : 27 exigences de couverture AC01–AC27, rattachements M/LIM, contre-exemples, recettes et sources candidates. Ne pas confondre les tests locaux avec validation de l'économie couplée. Reprise proposée après revue : état commun et diversité conjointe des profils financiers (dont dette nulle et substitution des financements), qualification des contreparties trimestrielles, puis raccord crédit-capital. Maintenir P0 empirique, G2 indépendant, validation produit et LIMITATIONS-001 v1.0.10. Aucune clôture ni gate promu, 6 moteurs conservés.
