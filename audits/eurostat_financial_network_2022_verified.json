@@ -1,0 +1,103 @@
+{
+  "status": "EMPIRICAL_MARGINAL_STOCK_BOUNDS_NOT_CLEARING_INPUT",
+  "margins": {
+    "F4": {
+      "rows": {
+        "S11": "3586024.0",
+        "S12": "688916.0",
+        "S13": "387186.0",
+        "S14": "1728037.0",
+        "S15": "19811.0",
+        "S2": "1398544.0"
+      },
+      "columns": {
+        "S11": "2263682.0",
+        "S12": "4652474.0",
+        "S13": "189429.0",
+        "S14": "10862.0",
+        "S15": "0.0",
+        "S2": "692071.0"
+      },
+      "total": "7808518.0",
+      "original_row_minus_column": "0.0"
+    },
+    "F5": {
+      "rows": {
+        "S11": "10376009.0",
+        "S12": "2859146.0",
+        "S13": "31597.0",
+        "S14": "0.0",
+        "S15": "0.0",
+        "S2": "3021475.0"
+      },
+      "columns": {
+        "S11": "8040262.0",
+        "S12": "3228026.0",
+        "S13": "603893.0",
+        "S14": "1886689.0",
+        "S15": "13653.0",
+        "S2": "2515704.0"
+      },
+      "total": "16288227.0",
+      "original_row_minus_column": "0.0"
+    }
+  },
+  "F4_S11_to_S12": {
+    "row": "S11",
+    "column": "S12",
+    "lower": "429980.0",
+    "upper": "3586024.0"
+  },
+  "F5_S11_to_S14": {
+    "row": "S11",
+    "column": "S14",
+    "lower": "0",
+    "upper": "1886689.0"
+  },
+  "quarterly_counterpart": {
+    "status": "RAW_PROFILE_ONLY",
+    "source": {
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasq_10_f_cp?lang=EN&freq=Q&unit=MIO_EUR&geo=FR&time=2022-Q4",
+      "resolved_url": "https://ec.europa.eu/eurostat/api/dissemination/statistics/1.0/data/nasq_10_f_cp?lang=EN&freq=Q&unit=MIO_EUR&geo=FR&time=2022-Q4",
+      "status": 200,
+      "content_type": "application/json",
+      "bytes": 61211,
+      "sha256": "9c0193a112cf36b819da700210623ec95520bce86522c460e3f360974ad6104a",
+      "collected_utc": "2026-11-25T04:25:58.797061+00:00"
+    }
+  },
+  "quarterly_profile": {
+    "id": [
+      "freq",
+      "unit",
+      "sector2",
+      "sector",
+      "stk_flow",
+      "finpos",
+      "na_item",
+      "geo",
+      "time"
+    ],
+    "size": [
+      1,
+      1,
+      16,
+      15,
+      3,
+      2,
+      12,
+      1,
+      1
+    ],
+    "updated": "2026-10-28T11:00:00+0100",
+    "observed_values": 4309
+  },
+  "verification_receipt": {
+    "run": 45546707738,
+    "job": 138977960574,
+    "commit": "0a9b44ec1d33edd90e006df2f482dfc31aca665a",
+    "conclusion": "audit_steps_success",
+    "artifact": 14991004553,
+    "archive_digest": "sha256:b6169447a3dd8f7c64730116bbf22a56a26439817fc30a4433a853e49b1fde08"
+  }
+}
