@@ -147,3 +147,6 @@ Le 25/11/2026, validation des 27 exigences et de l'ordre de reprise. [Registre c
 
 ## G4 v0.7g3a (25/11/2026)
 [Contrat](COMMON-STATE-001.md), [preuve](../audits/common_economic_state_v04_g07g3a_verified.json). Trajectoire unifiée synthétique, 10 nouveaux tests et 35 tests partagés réussis, boucle salaire–consommation solvable et finance–capital. Suite g3b : flux interbranches/importations, fiscalité, contraintes de trésorerie et échéanciers amortissables, puis hétérogénéité et financement alternatif. Pas de gate promu.
+
+## G4 v0.7g3b (25/11/2026)
+[Contrat](COMMON-STATE-001.md), [preuve](../audits/common_economic_state_v05_g07g3b_verified.json). 10 nouveaux + 45 régression ciblée réussis. Flux interbranches, importations, taxes de production, préfinancement des achats et amortissement explicite. Suite g3c : liquidité par branche, BFR, crédit court terme et paiement fournisseur, fiscalité/revenus et sources alternatives, puis hétérogénéité; aucun gate promu.
