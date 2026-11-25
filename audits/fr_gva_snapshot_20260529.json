@@ -1,0 +1,94 @@
+{
+  "id": "P0-INSEE-VA-20260529",
+  "status": "MANUAL_SOURCE_TRANSCRIPTION_PENDING_RAW_BYTE_PIN_AND_INGESTION",
+  "source_url": "https://www.insee.fr/fr/statistiques/2830197",
+  "release_date": "2026-05-29",
+  "retrieved": "2026-11-25",
+  "unit": "EUR billion current prices",
+  "population": "France, branches, comptes nationaux base 2020",
+  "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "vintage_flags": [
+    "",
+    "",
+    "",
+    "",
+    "semi-definitive",
+    "provisional"
+  ],
+  "rows": [
+    {
+      "branch": "Agriculture",
+      "values": [
+        "33.9",
+        "36.7",
+        "45.7",
+        "40.6",
+        "37.1",
+        "41.3"
+      ]
+    },
+    {
+      "branch": "Industrie",
+      "values": [
+        "261.2",
+        "277.5",
+        "287.6",
+        "373.3",
+        "366.3",
+        "358.5"
+      ]
+    },
+    {
+      "branch": "Construction",
+      "values": [
+        "116.0",
+        "126.0",
+        "130.9",
+        "142.7",
+        "145.7",
+        "148.5"
+      ]
+    },
+    {
+      "branch": "Services principalement marchands",
+      "values": [
+        "1173.9",
+        "1270.6",
+        "1383.3",
+        "1448.8",
+        "1510.9",
+        "1536.8"
+      ]
+    },
+    {
+      "branch": "Services principalement non marchands",
+      "values": [
+        "471.6",
+        "502.0",
+        "521.1",
+        "540.2",
+        "565.0",
+        "579.8"
+      ]
+    },
+    {
+      "branch": "Ensemble",
+      "values": [
+        "2056.5",
+        "2212.8",
+        "2368.6",
+        "2545.7",
+        "2624.9",
+        "2664.9"
+      ]
+    }
+  ],
+  "limitations": "Aggregate GVA only, not input-output matrix. Current prices not real growth. Rounded values; do not force totals. No automatic admission or AI attribution."
+}

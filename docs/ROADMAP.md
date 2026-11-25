@@ -123,3 +123,6 @@ Décision utilisateur : [UX-001](UX-001.md) et [RESULT-001](RESULT-001.md) compl
 
 ## G3.4 v0.2b — Frontières du marché et chaîne de valeur
 [G3-MARKET-BOUNDARY](G3-MARKET-BOUNDARY.md) : cessation effective prolongée, entrée conditionnelle statique, contrôle commun et HHI, internalisation rejouée avec coûts et heures directs, séparation marge/markup/rente. Recette G3 réussie : 408 tests, [audit](../audits/economic_market_boundary_v02b_verified.json). Sources démographie Eurostat bd_size et historique, SIDE Insee repérées, qualification ouverte. Passage G4 via TES et comptabilité de VA à qualifier, P0 ouvert ; pas de nouveau moteur.
+
+## G4 v0.1 — Interdépendances sectorielles
+[G4-SECTOR](G4-SECTOR.md) : contrat comptable domestique et exigences de demande à coefficients fixes, benchmark ONS fictif externe, garde capacité, extrait VA Insee réel séparé. Recette à confirmer. TES symétrique réel non téléchargé, admission/bridge et propagation offre ouverts ; G4 v0.2 prioritaire.
