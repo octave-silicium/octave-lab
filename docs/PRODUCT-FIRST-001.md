@@ -29,3 +29,6 @@ Aucune clôture : reprendre par incréments selon valeur décisionnelle et dépe
 
 ## 5. Priorité immédiate
 V0 : inspecter le pilote NACE J et les contrats existants, rejouer les données et qualifier leur utilisabilité ; ensuite V1. L'architecture cible reste la destination, le premier produit exploitable est le moyen d'en vérifier la valeur. Les décisions de publication, tarification et déploiement ne sont pas prises ici.
+
+## Point d'arrêt demandé le 25/11/2026
+Interprétation opérationnelle : E-G5 (investigation reproductible, UX et droits) doit être atteint avant E-G6 (validation commerciale et exploitation durable). La condition « si c'était tout ce qui restait » n'est pas satisfaite : E-G0 à E-G5 et G-M restent partiels/non franchis. Ne pas les déclarer achevés à partir des recettes synthétiques. Poursuivre les lots V0–V4 nécessaires, conserver les critères de gate et le backlog intégral. Aucune publication ni sollicitation commerciale automatique. V0 ajoute un replay des sources indépendamment, sans nouvelles valeurs dans les logs ou artefacts publics.
