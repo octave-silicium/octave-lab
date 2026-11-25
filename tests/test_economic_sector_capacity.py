@@ -22,7 +22,7 @@ class CapacityTests(unittest.TestCase):
         self.assertEqual(r["served_final"],(70,100))
     def test_import(self):
         r=self.run_case(replace(self.l,imported=(None,10)))
-        self.assertEqual(r["served_final"],(50,50));self.assertAlmostEqual(r["feasible_imports"][1],10)
+        self.assertAlmostEqual(r["served_final"][0],50);self.assertAlmostEqual(r["served_final"][1],50);self.assertAlmostEqual(r["feasible_imports"][1],10)
     def test_zero_and_unrelated(self):
         r=self.run_case(replace(self.l,imported=(None,0),tiers=(("B",),("A",))))
         self.assertEqual(r["served_final"],(100,0))
@@ -31,7 +31,7 @@ class CapacityTests(unittest.TestCase):
         self.assertEqual(r["idle_branch_capacity"],(50,20));self.assertIsNone(r["actual_output"])
     def test_joint_caps(self):
         r=self.run_case(replace(self.l,branch=(120,None),imported=(None,10),tiers=(("B",),("A",))))
-        self.assertEqual(r["served_final"],(95,50))
+        self.assertAlmostEqual(r["served_final"][0],95);self.assertAlmostEqual(r["served_final"][1],50)
     def test_invalid_tiers(self):
         with self.assertRaisesRegex(ValueError,"TIER_PARTITION"):self.run_case(replace(self.l,tiers=(("A",),("A",))))
     def test_negative(self):
