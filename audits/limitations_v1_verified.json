@@ -1,0 +1,29 @@
+{
+  "register": "LIMITATIONS-001",
+  "baseline_commit": "5bd37a858e384fdf3a159564975623b8ac957663",
+  "checked_commit": "6bc4700c91f286eeb69e6978621f12cb49c2f94f",
+  "families": 51,
+  "by_status": {
+    "BLOCKED": 3,
+    "OPEN": 23,
+    "PARTIAL": 23,
+    "PERMANENT": 2
+  },
+  "baseline_files": 162,
+  "baseline_lines": 16032,
+  "baseline_candidates": 611,
+  "current_files": 162,
+  "current_candidates": 611,
+  "obligation_count": 131,
+  "unlinked_mechanisms": [],
+  "source_drift": [],
+  "publication_blockers": 47,
+  "release_status": "BLOCK_UNQUALIFIED_PUBLICATION",
+  "semantic_triage": "PENDING",
+  "verification_receipt": {
+    "run": 45540871293,
+    "job": 138958777990,
+    "tested_commit": "6bc4700c91f286eeb69e6978621f12cb49c2f94f",
+    "conclusion": "success"
+  }
+}
