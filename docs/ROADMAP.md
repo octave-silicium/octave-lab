@@ -153,3 +153,6 @@ Le 25/11/2026, validation des 27 exigences et de l'ordre de reprise. [Registre c
 
 ## G4 v0.7g3c1 (25/11/2026)
 [Contrat](COMMON-STATE-001.md), [preuve](../audits/common_economic_state_v06_g07g3c1_verified.json). 11 nouveaux tests + 71 régressions ciblées réussis; liquidité locale, crédit de trésorerie et fournisseur, BFR commercial partiel, partage du plafond de crédit. Suite g3c2 : affacturage, stocks, BFR complet, fiscalité/revenus et hétérogénéité. Pas de gate promu.
+
+## Décision utilisateur — PRODUCT-FIRST-001 (25/11/2026), PRIORITÉ ACTIVE
+[Contrat de réorientation](PRODUCT-FIRST-001.md). La première investigation réelle de bout en bout (VERTICAL-001, NACE J France comme périmètre opérationnel initial choisi, réversible) devient le chemin critique : V0 preuves/droits → V1 observations → V2 scénarios/RESULT → V3 UX interne → V4 démonstration autorisée → V5 validation commerciale. Les extensions G4 g3c2 et suivantes restent au backlog, à reprendre par matérialité/dépendances, sans suppression des exigences. 687 tests généraux vérifiés [45568869019](https://github.com/octave-silicium/octave-lab/actions/runs/45568869019). Aucune clôture de limitation ou promotion de gate. Cette priorité remplace la succession automatique des sous-jalons G4, pas l'architecture cible.
