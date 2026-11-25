@@ -9,7 +9,7 @@ def fixture():
     _,ms=market_fixture(); external=ms[2]; internal=ms[4]
     manual=replace(internal,id="market:make-manual",internal_production=InternalProduction("A",internal.sellers[0].reference,"Synthetic dedicated cohort, all recurring costs charged"))
     auto=replace(internal,id="market:make-auto",internal_production=InternalProduction("A",internal.sellers[0].alternative,"Synthetic dedicated cohort, all recurring costs charged"))
-    s=Structure(("SERVICE","BUYER","TECH"),((.2,.1,.05),(.1,.2,.1),(.05,.05,.2)),((.1,0,0),(0,.1,0),(0,0,.1)),((1,0,0),(0,1,0),(0,0,1)),(.35,.35,.35),(.05,.05,.05),(.02,.02,.02),(.13,.13,.13),(100,100,100),"SYNTHETIC")
+    s=Structure(("SERVICE","BUYER","TECH"),((.2,.1,.05),(.1,.2,.1),(.05,.05,.2)),((.1,0,0),(0,.08,0),(0,.02,.1)),((1,0,0),(0,1,0),(0,0,1)),(.35,.35,.35),(.05,.05,.05),(.02,.02,.02),(.13,.13,.13),(100,100,100),"SYNTHETIC")
     allocations=(Allocation("running","DOMESTIC","TECH","1/2"),Allocation("running","IMPORTED","TECH","1/2"),Allocation("intake","DOMESTIC","BUYER","1"),Allocation("error","DOMESTIC","BUYER","1"),Allocation("fixed:overhead","DOMESTIC","BUYER","1"),Allocation("fixed:license_maintenance","IMPORTED","TECH","1"))
     m=MakeBuyMapping("SERVICE","BUYER","12",500,"10",allocations,"Fictional ten independent cohorts; native 500 periods/year; payroll assumed D1; all recurring nonpayroll treated as CI at reference basic prices; 50/50 running origin and imported licence assumed; own activity ancillary, not sold; capital/transition excluded from recurring.")
     return s,external,manual,auto,m
