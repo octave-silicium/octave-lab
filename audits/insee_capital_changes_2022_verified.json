@@ -432,9 +432,12 @@
     "run": 45544771040,
     "job": 138971615498,
     "commit": "e2ca4df061541caa29a4bc851cda420460d4528c",
-    "conclusion": "audit_step_success",
+    "conclusion": "success",
     "acquisition_run": 45544475881,
     "raw_archive": "1v4uwIyu1lbHG7KKK2TbRTtqpY-L40H92",
-    "raw_archive_sha256": "0f1212ab8f4aad00435bcfe6510cba0c8253035adf22c9727b414d30b0fbcac1"
+    "raw_archive_sha256": "0f1212ab8f4aad00435bcfe6510cba0c8253035adf22c9727b414d30b0fbcac1",
+    "artifact": 14990882032,
+    "verified_archive": "1ckR3421bG_XTqXZ_E9nNZOJwAHEMUcEd",
+    "verified_archive_sha256": "567ed25d3c9ad43aaba364833ab49bd3961c4ea492f503e8e583affd029384f0"
   }
 }
