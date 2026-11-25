@@ -1,0 +1,20 @@
+name: VERTICAL-001 V2b3 local MMO contract
+on:
+  push:
+    paths:
+      - 'pipeline/vertical_mmo.py'
+      - 'pipeline/vertical_v2b3.py'
+      - 'tests/test_vertical_v2b3.py'
+      - '.github/workflows/vertical-v2b3.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest discover -s tests -p 'test_vertical_v*.py' -v

@@ -1,0 +1,34 @@
+{
+  "study": "VERTICAL-001",
+  "phase": "V2b3-MMO",
+  "local_original_execution": "SUCCESS",
+  "source_sha256": {
+    "quarterly": "bece71e53408056ce1c1b7f1d95f39ae491dc945c82caa760abe49eead0dfb92",
+    "annual": "5fc7008ad02322a5bd708f9cfc8f06ed24fce81a36c8ae6a6c59356024f4c3cf"
+  },
+  "zip_crc": "PASS_BOTH",
+  "quarterly": {
+    "sheet": "MMO_trimestriels_A17",
+    "periods": 38,
+    "first": "2017-T1",
+    "last": "2026-T2",
+    "target_periods": 30,
+    "yoy": 26
+  },
+  "annual": {
+    "sheet": "MMO_annuels",
+    "periods": 19,
+    "first": "2007",
+    "last": "2025",
+    "target_periods": 7,
+    "yoy": 6
+  },
+  "local_receipt_sha256": "29f2034d24b92e67cf51dee640e24f38b0219ddfedfb7ddb1422ee35b1a45abb",
+  "publication": "BLOCK_PUBLICATION",
+  "causal_identification": "NOT_IDENTIFIED",
+  "limitations": [
+    "Local parsing executed; combined real V2b2+MMO receipt not yet executed; V2b2 full receipt unavailable in current container.",
+    "PDF raw bytes unavailable, indexed methodological content accessible.",
+    "No public values or workbooks committed; source rights and durable private storage pending."
+  ]
+}
