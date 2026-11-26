@@ -13,6 +13,8 @@ on:
       - 'tools/repository_inventory.py'
       - 'tools/limitation_triage.py'
       - 'tests/test_limitation_triage.py'
+      - 'tests/test_validate_b2_review.py'
+      - 'tools/validate_b2_review.py'
       - '.github/workflows/limitations-audit.yml'
   workflow_dispatch:
 permissions:
@@ -37,6 +39,9 @@ jobs:
       - run: python -m unittest discover -s tests -p test_limitation_triage.py -v
       - name: Triage pinned lexical candidates
         run: python -m tools.limitation_triage --ref 29fcb7b63dd7d8e92ded50dee4b3d95ea4d97430 --output limitation-triage.json
+      - run: python -m unittest discover -s tests -p test_validate_b2_review.py -v
+      - name: Verify first-pass priority review bindings
+        run: python -m tools.validate_b2_review --output audit-b2-review.json
       - name: Confirm unqualified release blocked
         run: |
           set +e
@@ -49,6 +54,7 @@ jobs:
         with:
           name: limitations-audit
           path: |
+            audit-b2-review.json
             limitation-triage.json
             repository-inventory.json
             limitations-audit.json
