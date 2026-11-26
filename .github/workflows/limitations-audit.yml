@@ -11,6 +11,8 @@ on:
       - 'tests/test_engineering_assurance.py'
       - 'tests/test_repository_inventory.py'
       - 'tools/repository_inventory.py'
+      - 'tools/limitation_triage.py'
+      - 'tests/test_limitation_triage.py'
       - '.github/workflows/limitations-audit.yml'
   workflow_dispatch:
 permissions:
@@ -32,6 +34,9 @@ jobs:
       - name: Inventory pinned audit baseline
         run: python tools/repository_inventory.py --ref 22fba7635ffd8cafe4684c046d6e2dfd6b9ef93f --output repository-inventory.json
       - run: python -m pipeline.limitations_audit --output limitations-audit.json
+      - run: python -m unittest discover -s tests -p test_limitation_triage.py -v
+      - name: Triage pinned lexical candidates
+        run: python -m tools.limitation_triage --ref 29fcb7b63dd7d8e92ded50dee4b3d95ea4d97430 --output limitation-triage.json
       - name: Confirm unqualified release blocked
         run: |
           set +e
@@ -44,6 +49,7 @@ jobs:
         with:
           name: limitations-audit
           path: |
+            limitation-triage.json
             repository-inventory.json
             limitations-audit.json
             limitations-release-check.json
