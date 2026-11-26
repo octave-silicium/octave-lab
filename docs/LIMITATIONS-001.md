@@ -15,3 +15,7 @@ Le contrôle [limitations_audit](../pipeline/limitations_audit.py) détecte doub
 1. Revue sémantique des candidats, subdiviser familles si nécessaire, conserver historique de décisions et vérification des nouveaux IDs; rapprocher les sources Drive et contrats non présents dans Git.
 2. G4 v0.6b : LIM-S11 (budget/demande) en articulation avec S10/S03; puis S12 (revenus et boucles), S09 (capital et financement), S07/S08 (stocks, substitution), S14/S15/S16 (réseaux, travail, propriété et fiscalité). Ces travaux ne sont pas tous bloqués séquentiellement.
 3. P0, G1/G2/G3, G5 : qualification indépendante, preuves terrain, méthodes rivales, contrats de données/droits, raccord RESULT/PROSPECT, produit et validation commerciale. Ne pas confondre roadmap technique et admission scientifique.
+
+
+## Engineering assurance — 26 November 2026
+[Engineering assurance and controlled evolution](ENGINEERING-ASSURANCE-001.md) adds public technical requirements for audit, security, QA, controlled change and reproducibility. The existing requirements and gates remain in force; no publication or empirical qualification is promoted. Continue the existing PRODUCT-FIRST path with the applicable controls.

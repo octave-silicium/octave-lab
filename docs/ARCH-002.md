@@ -150,3 +150,7 @@ Les travaux R01/R03 autorisent des mécanismes concurrents, pas le postulat de c
 
 ## Extension normative validée — AUDIT-TRANSVERSAL-001 (25/11/2026)
 [Audit intégral](AUDIT-TRANSVERSAL-001.md) et [registre canonique](../governance/transversal_enrichment_v1.json) : AC01–AC27 validés par l'utilisateur, 18 P0 et 9 P1. Complément des 64 mécanismes et 21 exigences SH, neuf couches et six moteurs inchangés. État économique commun, hétérogénéité conjointe, choix de financement y compris dette nulle, boucles compensatrices et tests adversariaux obligatoires. Aucun gate ni statut scientifique promu. Le contrat économique commun précède G4 v0.7g. Évaluation explicite des AC dans RESULT/PROSPECT et recettes, intégration exécutable à réaliser.
+
+
+## Engineering assurance — 26 November 2026
+[Engineering assurance and controlled evolution](ENGINEERING-ASSURANCE-001.md) adds public technical requirements for audit, security, QA, controlled change and reproducibility. The existing requirements and gates remain in force; no publication or empirical qualification is promoted. Continue the existing PRODUCT-FIRST path with the applicable controls.
