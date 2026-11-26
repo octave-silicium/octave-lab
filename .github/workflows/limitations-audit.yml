@@ -17,6 +17,8 @@ on:
       - 'tools/validate_b2_review.py'
       - 'tools/validate_b3_review.py'
       - 'tools/requirements_matrix.py'
+      - 'tools/security_triage.py'
+      - 'tests/test_security_triage.py'
       - 'tests/test_requirements_matrix.py'
       - 'tests/test_validate_b3_review.py'
       - '.github/workflows/limitations-audit.yml'
@@ -28,10 +30,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
           fetch-depth: 0
-      - uses: actions/setup-python@v5
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: '3.11'
       - run: python -m unittest discover -s tests -p test_limitations_audit.py -v
@@ -52,6 +55,9 @@ jobs:
       - run: python -m unittest discover -s tests -p test_requirements_matrix.py -v
       - name: Build canonical requirements projection
         run: python -m tools.requirements_matrix --ref 44391d2e9eeb5546ee9ed3aa999238e96b5bf949 --output requirements-matrix.json
+      - run: python -m unittest discover -s tests -p test_security_triage.py -v
+      - name: Read-only security triage of pinned public baseline
+        run: python -m tools.security_triage --ref eb4098c138a66add3143aef3aa29428fa70047c6 --output security-triage.json
       - name: Confirm unqualified release blocked
         run: |
           set +e
@@ -60,10 +66,11 @@ jobs:
           set -e
           test "$status" -ne 0
           grep 'BLOCK_UNQUALIFIED_PUBLICATION: scope-specific independent review required' release.log
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: limitations-audit
           path: |
+            security-triage.json
             requirements-matrix.json
             audit-b3-review.json
             audit-b2-review.json
