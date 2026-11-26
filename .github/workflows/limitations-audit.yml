@@ -18,6 +18,9 @@ on:
       - 'tools/validate_b3_review.py'
       - 'tools/requirements_matrix.py'
       - 'tools/security_triage.py'
+      - 'tools/indeed_public_bundle.py'
+      - 'tests/test_indeed_public_bundle.py'
+      - '.github/workflows/collect-public-sector.yml'
       - 'tests/test_security_triage.py'
       - 'tests/test_requirements_matrix.py'
       - 'tests/test_validate_b3_review.py'
@@ -58,6 +61,7 @@ jobs:
       - run: python -m unittest discover -s tests -p test_security_triage.py -v
       - name: Read-only security triage of pinned public baseline
         run: python -m tools.security_triage --ref eb4098c138a66add3143aef3aa29428fa70047c6 --output security-triage.json
+      - run: python -m unittest discover -s tests -p test_indeed_public_bundle.py -v
       - name: Confirm unqualified release blocked
         run: |
           set +e

@@ -1,0 +1,69 @@
+{
+  "id": "SEC-001-B",
+  "date": "2026-11-26",
+  "baseline_commit": "4db7104fff0e745072887f13a02fbf46c6f0e584",
+  "publication_authorized": false,
+  "review_status": "SOURCE_READ_MIGRATION_STAGED_NOT_ACTIVATED",
+  "flows": [
+    {
+      "workflow": "audit-lot2.yml",
+      "outputs": [
+        "audits/latest_lot2.json"
+      ],
+      "risk": "DPAE/Insee source and structural previews; manifest and failure-path review required",
+      "decision": "REVIEW_PENDING"
+    },
+    {
+      "workflow": "audit-multisource.yml",
+      "outputs": [
+        "audits/latest_multisource.json",
+        "snapshots/dares-ft-monthly/"
+      ],
+      "risk": "Mixed source profiles and Dares originals; separate metadata from admitted raw source",
+      "decision": "REVIEW_PENDING"
+    },
+    {
+      "workflow": "audit-semantics.yml",
+      "outputs": [
+        "audits/latest_lot3.json"
+      ],
+      "risk": "DPAE vintage diagnostics and MMO discovery; review fields and failure path",
+      "decision": "REVIEW_PENDING"
+    },
+    {
+      "workflow": "collect-insee.yml",
+      "outputs": [
+        "data/curated/insee_employment_manifest.json",
+        "data/curated/insee_employment_sector_quarterly.csv",
+        "snapshots/insee-sector/"
+      ],
+      "risk": "Commit step always runs; validate exact current files and scoped rights before export",
+      "decision": "REVIEW_PENDING"
+    },
+    {
+      "workflow": "collect-public-sector.yml",
+      "outputs": [
+        "archive/raw/",
+        "outputs/live/",
+        "snapshots/indeed-fr/"
+      ],
+      "risk": "Broad upload and direct main write; two approved source identifiers only",
+      "decision": "READ_ONLY_CANDIDATE_STAGED",
+      "activation": "OWNER_REVIEW_AND_PERSISTENT_ARCHIVE_MIGRATION_REQUIRED"
+    },
+    {
+      "workflow": "pilot-ict.yml",
+      "outputs": [
+        "research/PILOT-001/"
+      ],
+      "risk": "Derived report and manifest include observed values; pipeline prints selected values; rights/route review before new public execution",
+      "decision": "REVIEW_PENDING"
+    }
+  ],
+  "limitations": [
+    "No legal decision from path names",
+    "Other 33 artifact workflows require review",
+    "Do not merge until persistence and collection continuity verified",
+    "No private data in public branches or artifacts"
+  ]
+}

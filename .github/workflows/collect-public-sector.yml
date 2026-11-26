@@ -1,4 +1,4 @@
-name: Collecte Indeed France
+name: Collecte Indeed France (public originals candidate)
 on:
   push:
     branches: [main]
@@ -6,60 +6,43 @@ on:
       - 'pipeline/run.py'
       - 'pipeline/sources.json'
       - 'tests/test_pipeline.py'
+      - 'tools/indeed_public_bundle.py'
+      - 'tests/test_indeed_public_bundle.py'
       - '.github/workflows/collect-public-sector.yml'
   workflow_dispatch:
   schedule:
-    - cron: '17 7 * * 2'  # Mardi UTC, selon disponibilite du fournisseur
+    - cron: '17 7 * * 2'
 concurrency:
   group: octave-indeed-fr-ingestion
   cancel-in-progress: false
 permissions:
-  contents: write
+  contents: read
 jobs:
   ingestion:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: '3.11'
       - name: Tests de controle qualite
         run: python -m unittest discover -s tests -v
-      - name: Recuperer et verifier les series Indeed (CC BY 4.0)
+      - name: Verify exact allowed public source scope
+        run: python -m tools.indeed_public_bundle --preflight
+      - name: Recuperer et verifier les series Indeed
         run: python pipeline/run.py --only-open
-      - name: Archiver les originaux CC BY en snapshot mensuel permanent
+      - name: Build exact attributed originals candidate
+        run: python -m tools.indeed_public_bundle --output indeed-public-candidate
+      - name: Preserve allowlisted originals only
         if: success()
-        shell: bash
-        run: |
-          bucket="$(date -u +%Y-%m)"
-          target="snapshots/indeed-fr/${bucket}"
-          if [ -e "$target" ]; then
-            echo "Snapshot du mois deja present, aucun doublon archive"
-            exit 0
-          fi
-          mkdir -p "$target"
-          cp archive/raw/*/indeed_fr_* "$target/"
-          printf "Source: Indeed Hiring Lab | Licence CC BY 4.0 | https://github.com/hiring-lab/job_postings_tracker\n" > "$target/ATTRIBUTION.txt"
-          cp outputs/live/manifest.json "$target/manifest.json"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config user.name "github-actions[bot]"
-          git add "$target"
-          git commit -m "data(indeed): snapshot mensuel ${bucket} (CC BY 4.0)"
-          for attempt in 1 2 3; do
-            git fetch origin main
-            git rebase -X theirs origin/main || exit 1
-            if git push origin HEAD:main; then exit 0; fi
-            sleep 2
-          done
-          exit 1
-      - name: Conserver les donnees versionnees et calculs a revoir
-        if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
-          name: octave-lab-snapshot-${{ github.run_id }}
-          path: |
-            archive/raw/
-            outputs/live/
-          if-no-files-found: warn
+          name: indeed-originals-candidate-${{ github.run_id }}
+          path: indeed-public-candidate/
+          if-no-files-found: error
           retention-days: 30
