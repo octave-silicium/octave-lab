@@ -11,51 +11,14 @@ on:
   schedule:
     - cron: '54 8 3 * *'  # Month day 3, UTC; source changes when publisher updates
 permissions:
-  contents: write
-concurrency:
-  group: octave-lab-insee-collect
-  cancel-in-progress: false
+  contents: read
 jobs:
-  collect:
+  qualification-hold:
     runs-on: ubuntu-latest
-    timeout-minutes: 13
+    timeout-minutes: 2
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      - name: Execute entire suite of data quality regression tests
-        run: python -m unittest discover -s tests -v
-      - name: Download and validate quarterly Insee employment matrix
-        run: python pipeline/ingest_insee.py
-      - name: Publish source vintage and normalized CSV only if gate allows
-        if: always()
-        shell: bash
+      - name: Refuse unqualified public collection and release
         run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          if [ -f data/curated/insee_employment_manifest.json ]; then
-            git add -f data/curated/insee_employment_manifest.json
-            if [ -f data/curated/insee_employment_sector_quarterly.csv ]; then
-              git add -f data/curated/insee_employment_sector_quarterly.csv
-            fi
-            if [ -d snapshots/insee-sector ]; then git add snapshots/insee-sector; fi
-          fi
-          if ! git diff --cached --quiet; then
-            git commit -m 'data(insee): audited employment observations with source provenance'
-            for attempt in 1 2 3; do
-              git fetch origin main
-              git rebase -X theirs origin/main || exit 1
-              if git push origin HEAD:main; then exit 0; fi
-              sleep 2
-            done
-            exit 1
-          fi
-      - name: Preserve original validation report on GitHub Actions
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: octave-insee-validator-${{ github.run_id }}
-          path: data/curated/insee_employment_manifest.json
-          retention-days: 30
-          if-no-files-found: warn
+          echo "SEC-001: route pending scoped rights and continuity review."
+          echo "No acquisition, artifact upload, or repository write performed."
+          exit 1

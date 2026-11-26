@@ -1,9 +1,9 @@
 {
   "id": "SEC-001-B",
   "date": "2026-11-26",
-  "baseline_commit": "4db7104fff0e745072887f13a02fbf46c6f0e584",
+  "baseline_commit": "b3b6cdfbed02866fce73fb0d207926e222a6c869",
   "publication_authorized": false,
-  "review_status": "SOURCE_READ_MIGRATION_STAGED_NOT_ACTIVATED",
+  "review_status": "QUARANTINE_CANDIDATES_STAGED_CONTINUITY_NOT_QUALIFIED",
   "flows": [
     {
       "workflow": "audit-lot2.yml",
@@ -11,7 +11,10 @@
         "audits/latest_lot2.json"
       ],
       "risk": "DPAE/Insee source and structural previews; manifest and failure-path review required",
-      "decision": "REVIEW_PENDING"
+      "decision": "QUARANTINE_CANDIDATE_STAGED",
+      "activation": "DO_NOT_MERGE_BEFORE_REPLACEMENT_OR_EXPLICIT_OWNER_APPROVED_PAUSE",
+      "previous_workflow_ref": "b3b6cdfbed02866fce73fb0d207926e222a6c869",
+      "live_collection": false
     },
     {
       "workflow": "audit-multisource.yml",
@@ -20,7 +23,10 @@
         "snapshots/dares-ft-monthly/"
       ],
       "risk": "Mixed source profiles and Dares originals; separate metadata from admitted raw source",
-      "decision": "REVIEW_PENDING"
+      "decision": "QUARANTINE_CANDIDATE_STAGED",
+      "activation": "DO_NOT_MERGE_BEFORE_REPLACEMENT_OR_EXPLICIT_OWNER_APPROVED_PAUSE",
+      "previous_workflow_ref": "b3b6cdfbed02866fce73fb0d207926e222a6c869",
+      "live_collection": false
     },
     {
       "workflow": "audit-semantics.yml",
@@ -28,7 +34,10 @@
         "audits/latest_lot3.json"
       ],
       "risk": "DPAE vintage diagnostics and MMO discovery; review fields and failure path",
-      "decision": "REVIEW_PENDING"
+      "decision": "QUARANTINE_CANDIDATE_STAGED",
+      "activation": "DO_NOT_MERGE_BEFORE_REPLACEMENT_OR_EXPLICIT_OWNER_APPROVED_PAUSE",
+      "previous_workflow_ref": "b3b6cdfbed02866fce73fb0d207926e222a6c869",
+      "live_collection": false
     },
     {
       "workflow": "collect-insee.yml",
@@ -38,7 +47,10 @@
         "snapshots/insee-sector/"
       ],
       "risk": "Commit step always runs; validate exact current files and scoped rights before export",
-      "decision": "REVIEW_PENDING"
+      "decision": "QUARANTINE_CANDIDATE_STAGED",
+      "activation": "DO_NOT_MERGE_BEFORE_REPLACEMENT_OR_EXPLICIT_OWNER_APPROVED_PAUSE",
+      "previous_workflow_ref": "b3b6cdfbed02866fce73fb0d207926e222a6c869",
+      "live_collection": false
     },
     {
       "workflow": "collect-public-sector.yml",
@@ -57,13 +69,16 @@
         "research/PILOT-001/"
       ],
       "risk": "Derived report and manifest include observed values; pipeline prints selected values; rights/route review before new public execution",
-      "decision": "REVIEW_PENDING"
+      "decision": "QUARANTINE_CANDIDATE_STAGED",
+      "activation": "DO_NOT_MERGE_BEFORE_REPLACEMENT_OR_EXPLICIT_OWNER_APPROVED_PAUSE",
+      "previous_workflow_ref": "b3b6cdfbed02866fce73fb0d207926e222a6c869",
+      "live_collection": false
     }
   ],
   "limitations": [
-    "No legal decision from path names",
-    "Other 33 artifact workflows require review",
-    "Do not merge until persistence and collection continuity verified",
-    "No private data in public branches or artifacts"
-  ]
+    "Quarantine candidates intentionally block five live acquisitions; main remains intact. Not a continuity-preserving migration.",
+    "Actual source and product rights, artifact content, logs and effective permissions remain pending.",
+    "No public data publication authorized by this register."
+  ],
+  "version": "1.1"
 }

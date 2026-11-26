@@ -20,6 +20,9 @@ on:
       - 'tools/security_triage.py'
       - 'tools/indeed_public_bundle.py'
       - 'tools/indeed_archive_promotion.py'
+      - 'tools/outbound_ci_inventory.py'
+      - 'tests/test_outbound_ci_inventory.py'
+      - 'tests/test_security_route_holds.py'
       - 'tests/test_indeed_archive_promotion.py'
       - 'tests/test_indeed_public_bundle.py'
       - '.github/workflows/collect-public-sector.yml'
@@ -65,6 +68,10 @@ jobs:
         run: python -m tools.security_triage --ref eb4098c138a66add3143aef3aa29428fa70047c6 --output security-triage.json
       - run: python -m unittest discover -s tests -p test_indeed_public_bundle.py -v
       - run: python -m unittest discover -s tests -p test_indeed_archive_promotion.py -v
+      - run: python -m unittest discover -s tests -p test_outbound_ci_inventory.py -v
+      - run: python -m unittest discover -s tests -p test_security_route_holds.py -v
+      - name: Inventory historical outbound paths and dependencies
+        run: python -m tools.outbound_ci_inventory --ref b3b6cdfbed02866fce73fb0d207926e222a6c869 --output outbound-ci-inventory.json
       - name: Confirm unqualified release blocked
         run: |
           set +e
@@ -77,6 +84,7 @@ jobs:
         with:
           name: limitations-audit
           path: |
+            outbound-ci-inventory.json
             security-triage.json
             requirements-matrix.json
             audit-b3-review.json
