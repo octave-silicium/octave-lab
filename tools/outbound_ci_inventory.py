@@ -21,11 +21,19 @@ def inspect(text):
         m=UPLOAD.match(line)
         if not m: continue
         use_indent=len(m[1])
-        # A same-indent next 'uses' may be in another step; end on next step or job.
+        # Named steps have uses/with at the same indentation, two spaces
+        # deeper than the list item. Locate the enclosing step first.
+        step_start=i
+        for k in range(i,-1,-1):
+            s=lines[k]
+            if s.lstrip().startswith("- ") and len(s)-len(s.lstrip())<=use_indent:
+                step_start=k
+                break
+        step_indent=len(lines[step_start])-len(lines[step_start].lstrip())
         end=i+1
         while end<len(lines):
             s=lines[end]
-            if s.strip() and len(s)-len(s.lstrip())<=use_indent and not s.lstrip().startswith("#"):
+            if s.strip() and len(s)-len(s.lstrip())<=step_indent and not s.lstrip().startswith("#"):
                 break
             end+=1
         block=lines[i+1:end]
@@ -47,12 +55,7 @@ def inspect(text):
             r=re.match(r"\s*if-no-files-found:\s*(.*)",s)
             if r:missing=r[1].strip()
         # Inspect preceding properties for if: always(); default to unknown if not detected.
-        before=[]
-        for k in range(i-1,-1,-1):
-            s=lines[k]
-            if s.strip() and len(s)-len(s.lstrip())<use_indent:break
-            before.append(s)
-            if s.lstrip().startswith("- "):break
+        before=lines[step_start:i]
         uploads.append({"line":i+1,"ref":m[2],"paths":paths,
                         "path_parse_status":"LITERAL_OR_EXPRESSION" if paths else "UNRESOLVED",
                         "directory_or_glob_indicator":any(p.endswith("/") or any(c in p for c in "*?[]") for p in paths),
