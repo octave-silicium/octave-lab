@@ -1,0 +1,68 @@
+{
+  "id": "AUDIT-MASTER-001-A",
+  "date": "2026-11-26",
+  "tested_commit": "29fcb7b63dd7d8e92ded50dee4b3d95ea4d97430",
+  "baseline": "22fba7635ffd8cafe4684c046d6e2dfd6b9ef93f",
+  "run_url": "https://github.com/octave-silicium/octave-lab/actions/runs/45740232936",
+  "job_id": 139643132505,
+  "conclusion": "success",
+  "summary": {
+    "blobs": 476,
+    "by_group": {
+      ".github": 59,
+      "audits": 97,
+      "data": 2,
+      "docs": 57,
+      "explorer": 6,
+      "governance": 12,
+      "pipeline": 140,
+      "research": 9,
+      "root": 3,
+      "snapshots": 10,
+      "tests": 81
+    },
+    "bytes": 13493520,
+    "commit": "22fba7635ffd8cafe4684c046d6e2dfd6b9ef93f",
+    "entries": 476,
+    "issues_by_kind": {},
+    "json_files": 123,
+    "markdown_files": 60,
+    "publication_authorized": false,
+    "python_files": 218,
+    "qualification": "STRUCTURAL_ONLY",
+    "tree": "4a931b17353958eec9daa3c54a12289735748bb7",
+    "workflow_external_uses": 162,
+    "workflow_unpinned_uses": 162,
+    "workflows": 59,
+    "workflows_artifact_indicators": 39,
+    "workflows_push_main_indicators": 6,
+    "workflows_write_indicators": 6
+  },
+  "tests": {
+    "limitations": 9,
+    "engineering_assurance": 3,
+    "repository_inventory": 3,
+    "total": 15
+  },
+  "artifact": [
+    {
+      "id": 15080946199,
+      "name": "limitations-audit",
+      "expires_at": "2026-12-26T02:06:58Z",
+      "digest": "sha256:ecfda3480ec42190e70f8ce3ab92f2001986c66f191203b3b006c5915d9f0485"
+    }
+  ],
+  "limits": {
+    "current_lexical_candidates": 898,
+    "current_lexical_files": 213,
+    "obligations": 131,
+    "semantic_triage": "PENDING",
+    "release_status": "BLOCK_UNQUALIFIED_PUBLICATION"
+  },
+  "qualification": "STRUCTURAL_ONLY",
+  "publication_authorized": false,
+  "notes": [
+    "Counts of workflow indicators are heuristic, not vulnerabilities or a YAML semantic audit.",
+    "No runtime model test, private artifact review, history scan, or scientific/legal/security qualification in this lot."
+  ]
+}
