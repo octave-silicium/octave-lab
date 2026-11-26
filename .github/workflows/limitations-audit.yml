@@ -15,6 +15,8 @@ on:
       - 'tests/test_limitation_triage.py'
       - 'tests/test_validate_b2_review.py'
       - 'tools/validate_b2_review.py'
+      - 'tools/validate_b3_review.py'
+      - 'tests/test_validate_b3_review.py'
       - '.github/workflows/limitations-audit.yml'
   workflow_dispatch:
 permissions:
@@ -42,6 +44,9 @@ jobs:
       - run: python -m unittest discover -s tests -p test_validate_b2_review.py -v
       - name: Verify first-pass priority review bindings
         run: python -m tools.validate_b2_review --output audit-b2-review.json
+      - run: python -m unittest discover -s tests -p test_validate_b3_review.py -v
+      - name: Route remaining groups and verify targeted review
+        run: python -m tools.validate_b3_review --output audit-b3-review.json
       - name: Confirm unqualified release blocked
         run: |
           set +e
@@ -54,6 +59,7 @@ jobs:
         with:
           name: limitations-audit
           path: |
+            audit-b3-review.json
             audit-b2-review.json
             limitation-triage.json
             repository-inventory.json
