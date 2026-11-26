@@ -2,6 +2,7 @@
 Preflight verifies the only-open collection scope; bundle emits exact attributed originals.
 Not a general release authorization or legal review."""
 import argparse
+import datetime as dt
 import hashlib
 import json
 from pathlib import Path
@@ -27,6 +28,9 @@ def preflight(registry):
         require(x.get("url")==url and x.get("license")=="CC BY 4.0"
                 and x.get("format")=="csv" and x.get("required") is True,"Source contract drift")
     return allowed
+def utc_time(value):
+    require(isinstance(value,str) and re.fullmatch(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d{1,6})?(?:Z|\+00:00)",value),"Invalid UTC collection timestamp")
+    return dt.datetime.fromisoformat(value.replace("Z","+00:00"))
 def checked_path(root,filename,sid,digest):
     require(isinstance(filename,str) and re.fullmatch(
         r"archive/raw/[0-9]{8}T[0-9]{6}Z/"+re.escape(sid)+r"_"+digest[:12]+r"\.csv",filename),"Unexpected input path")
@@ -41,6 +45,7 @@ def bundle(root,output):
     manifest=json.loads((root/"outputs/live/manifest.json").read_text())
     require(manifest.get("publish_gate","").startswith("PASS_DESCRIPTIVE_ONLY:"),"Collection gate denied")
     require(manifest.get("license_gate") is True and manifest.get("no_causal_inference") is True,"Gate flags missing")
+    run_at=utc_time(manifest.get('run_at'))
     statuses=manifest["status"]
     require(set(statuses)=={x["id"] for x in registry["sources"]},"Manifest source scope mismatch")
     require(all(x.get("result")=="SKIPPED_LICENSE_REVIEW" for k,x in statuses.items() if k not in SOURCES),"Non-approved source present")
@@ -53,21 +58,24 @@ def bundle(root,output):
         p=checked_path(root,x.get("filename"),sid,digest)
         raw=p.read_bytes()
         require(hashlib.sha256(raw).hexdigest()==digest and len(raw)==x.get("bytes"),"Content integrity mismatch")
-        selected.append((sid,url,p,raw,digest))
+        downloaded=utc_time(x.get('downloaded_at'))
+        require(dt.timedelta(0)<=downloaded-run_at<=dt.timedelta(hours=2), 'Collection time inconsistent')
+        require(p.parent.name==run_at.strftime('%Y%m%dT%H%M%SZ'),'Collection folder timestamp mismatch')
+        selected.append((sid,url,p,raw,digest,x['downloaded_at']))
     output.parent.mkdir(parents=True,exist_ok=True)
     # Publish only after all inputs are validated. Stage fresh directory and rename.
     stage=Path(tempfile.mkdtemp(prefix=".indeed-stage-",dir=output.parent))
     try:
         files=[]
-        for sid,url,p,raw,digest in selected:
+        for sid,url,p,raw,digest,downloaded in selected:
             (stage/p.name).write_bytes(raw)
             files.append({"source_id":sid,"filename":p.name,"sha256":digest,"bytes":len(raw),"url":url,
-                          "license":"CC BY 4.0"})
+                          "license":"CC BY 4.0","downloaded_at":downloaded})
         (stage/"ATTRIBUTION.txt").write_text("Source: Indeed Hiring Lab | CC BY 4.0\n"
             "https://github.com/hiring-lab/job_postings_tracker\nhttps://creativecommons.org/licenses/by/4.0/\n"
             "Original indices; occupation categories are not employer NACE sectors or employment counts.\n")
         (stage/"manifest.json").write_text(json.dumps({"scope":"INDEED_ORIGINALS_ONLY",
-            "files":files,"derived_outputs_included":False,"product_release_authorized":False},indent=2)+"\n")
+            "run_at":manifest["run_at"],"files":files,"derived_outputs_included":False,"product_release_authorized":False},indent=2)+"\n")
         stage.rename(output)
     finally:
         if stage.exists():shutil.rmtree(stage)

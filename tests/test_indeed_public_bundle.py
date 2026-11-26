@@ -10,14 +10,14 @@ class IndeedBundleTest(unittest.TestCase):
         self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup)
         self.root=Path(self.tmp.name);self.out=self.root/"bundle"
         self.reg={"sources":[]};self.m={"publish_gate":"PASS_DESCRIPTIVE_ONLY: fixture",
-            "license_gate":True,"no_causal_inference":True,"status":{}}
+            "license_gate":True,"no_causal_inference":True,"run_at":"2026-11-26T00:00:00+00:00","status":{}}
         for sid,url in SOURCES.items():
             row={"id":sid,"url":url,"license":"CC BY 4.0","public_redistribution":True,"format":"csv","required":True}
             self.reg["sources"].append(row)
             raw=b"date,index\n2026-01-01,100\n";h=hashlib.sha256(raw).hexdigest()
             name="archive/raw/20261126T000000Z/"+sid+"_"+h[:12]+".csv"
             p=self.root/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(raw)
-            self.m["status"][sid]={**row,"result":"OK","sha256":h,"filename":name,"bytes":len(raw)}
+            self.m["status"][sid]={**row,"result":"OK","sha256":h,"filename":name,"bytes":len(raw),"downloaded_at":"2026-11-26T00:00:01+00:00"}
         self.reg["sources"].append({"id":"restricted","public_redistribution":False})
         self.m["status"]["restricted"]={"result":"SKIPPED_LICENSE_REVIEW"}
         self.save()
