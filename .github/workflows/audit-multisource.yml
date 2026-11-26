@@ -19,50 +19,14 @@ on:
   schedule:
     - cron: '29 8 5 * *'  # Monthly, UTC
 permissions:
-  contents: write
-concurrency:
-  group: octave-multisource-audit
-  cancel-in-progress: false
+  contents: read
 jobs:
-  audit:
+  qualification-hold:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 2
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      - name: Test source audit logic
-        run: python -m unittest discover -s tests -v
-      - name: Fetch official source datasets and validate schemas
-        run: python pipeline/audit_multisource.py
-      - name: Archive lossless monthly Dares original under Licence Ouverte v2.0
-        run: python pipeline/archive_dares.py
-      - name: Commit audit manifest and Dares attributed monthly source archive
-        if: always()
-        shell: bash
+      - name: Refuse unqualified public collection and release
         run: |
-          if [ -s audits/latest_multisource.json ]; then
-            git config user.name 'github-actions[bot]'
-            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-            git add audits/latest_multisource.json
-            if [ -d snapshots/dares-ft-monthly ]; then git add snapshots/dares-ft-monthly; fi
-            if ! git diff --cached --quiet; then
-              git commit -m 'audit(data): source access and schema manifest'
-              for attempt in 1 2 3; do
-                git fetch origin main
-                git rebase -X theirs origin/main || exit 1
-                if git push origin HEAD:main; then exit 0; fi
-                sleep 2
-              done
-              exit 1
-            fi
-          fi
-      - name: Preserve audit report artifact
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: octave-multisource-audit-${{ github.run_id }}
-          path: audits/latest_multisource.json
-          if-no-files-found: warn
-          retention-days: 30
+          echo "SEC-001: route pending scoped rights and continuity review."
+          echo "No acquisition, artifact upload, or repository write performed."
+          exit 1

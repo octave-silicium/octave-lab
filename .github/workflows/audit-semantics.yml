@@ -10,47 +10,14 @@ on:
   schedule:
     - cron: '41 8 19 * *'  # Every 19th day of the month, UTC
 permissions:
-  contents: write
-concurrency:
-  group: octave-lab-semantic-audit
-  cancel-in-progress: false
+  contents: read
 jobs:
-  audit:
+  qualification-hold:
     runs-on: ubuntu-latest
-    timeout-minutes: 14
+    timeout-minutes: 2
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-      - name: Run all stdlib tests and governance gates
-        run: python -m unittest discover -s tests -v
-      - name: Inspect Insee headers and vintage anomalies, discover only official MMO links
-        run: python pipeline/semantic_audit.py
-      - name: Store hashes, source metadata and unresolved gates (no source raw data)
-        if: always()
-        shell: bash
+      - name: Refuse unqualified public collection and release
         run: |
-          if [ -s audits/latest_lot3.json ]; then
-            git config user.name 'github-actions[bot]'
-            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-            git add audits/latest_lot3.json
-            if ! git diff --cached --quiet; then
-              git commit -m 'audit(lot3): semantic source metadata and DPAE vintage fingerprints'
-              for attempt in 1 2 3; do
-                git fetch origin main
-                git rebase -X theirs origin/main || exit 1
-                if git push origin HEAD:main; then exit 0; fi
-                sleep 2
-              done
-              exit 1
-            fi
-          fi
-      - name: Preserve audit report for review
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: octave-semantic-audit-${{ github.run_id }}
-          path: audits/latest_lot3.json
-          retention-days: 30
-          if-no-files-found: warn
+          echo "SEC-001: route pending scoped rights and continuity review."
+          echo "No acquisition, artifact upload, or repository write performed."
+          exit 1

@@ -1,0 +1,207 @@
+{
+  "id": "AUDIT-MASTER-001-B1",
+  "date": "2026-11-26",
+  "tested_commit": "f234c01f0ea15947de69a3bf36aceeceebc4d0b8",
+  "run_url": "https://github.com/octave-silicium/octave-lab/actions/runs/45740502804",
+  "job_id": 139644033666,
+  "conclusion": "success",
+  "summary": {
+    "candidates": 898,
+    "duplicate_occurrences": 174,
+    "files": 213,
+    "groups": 724,
+    "known_families": 51,
+    "priority": {
+      "P0_REVIEW": 153,
+      "P1_REVIEW": 393,
+      "P2_REVIEW": 178
+    },
+    "publication_authorized": false,
+    "revision": "29fcb7b63dd7d8e92ded50dee4b3d95ea4d97430",
+    "routing": {
+      "EXPLICIT_REFERENCE_REVIEW": 2,
+      "FILE_ASSOCIATION_ONLY": 373,
+      "UNLINKED_REVIEW": 349
+    },
+    "semantic_pending": 724,
+    "semantic_reviewed": 0,
+    "topics": {
+      "DATA_SEMANTICS": 253,
+      "ECONOMIC_MODEL": 290,
+      "EMPIRICAL_CAUSAL": 228,
+      "GOVERNANCE": 345,
+      "PRODUCT_OPERATIONS": 153,
+      "SECURITY_RIGHTS": 153
+    }
+  },
+  "tests": {
+    "limitations": 9,
+    "engineering": 3,
+    "inventory": 3,
+    "triage": 4,
+    "total": 19
+  },
+  "artifact": [
+    {
+      "id": 15080528652,
+      "name": "limitations-audit",
+      "digest": "sha256:b57ddf014eeac1ed2cd8fccdf1ce6e2d25e8ca57890327d43fda2b9043db6634",
+      "expires_at": "2026-12-26T02:09:26Z"
+    }
+  ],
+  "targeted_review": {
+    "source_commit": "bdeea7ff53b9a257c017472ec635be5062b82860",
+    "cases": [
+      {
+        "id": "B-R01",
+        "refs": [
+          [
+            "README.md",
+            15,
+            23
+          ],
+          [
+            "docs/ROADMAP.md",
+            17,
+            18
+          ],
+          [
+            "docs/PRODUCT-FIRST-001.md",
+            84,
+            85
+          ]
+        ],
+        "finding": "README and early ROADMAP describe historical stages as if current. Later G2/G3/G4 and V3d records qualify partial implementation; no claim of empirical qualification.",
+        "classification": "HISTORICAL_STATE_DRIFT",
+        "families": [
+          "LIM-W01",
+          "LIM-T01"
+        ],
+        "action": "Version canonical status view, preserve dated records; do not promote scientific gates."
+      },
+      {
+        "id": "B-R02",
+        "refs": [
+          [
+            "README.md",
+            19,
+            19
+          ],
+          [
+            "docs/PRODUCT-FIRST-001.md",
+            54,
+            55
+          ]
+        ],
+        "finding": "General DPAE block and narrow same-vintage V1.2 descriptive admission coexist. Not a contradiction if scope is preserved.",
+        "classification": "SCOPED_EXCEPTION",
+        "families": [
+          "LIM-D01"
+        ],
+        "action": "Surface exception with scope/hash and evidence; retain general block and non-comparability."
+      },
+      {
+        "id": "B-R03",
+        "refs": [
+          [
+            "README.md",
+            19,
+            19
+          ],
+          [
+            "docs/ROADMAP.md",
+            205,
+            209
+          ],
+          [
+            "docs/PRODUCT-FIRST-001.md",
+            84,
+            85
+          ]
+        ],
+        "finding": "MMO access recovery and offline replay are recorded; they do not resolve rights or full qualification.",
+        "classification": "PARTIAL_PROGRESS_NOT_CLOSURE",
+        "families": [
+          "LIM-D02"
+        ],
+        "action": "Separate access/replay from field validation and legal authorization."
+      },
+      {
+        "id": "B-R04",
+        "refs": [
+          [
+            "docs/ROADMAP.md",
+            16,
+            16
+          ],
+          [
+            "docs/PRODUCT-FIRST-001.md",
+            84,
+            85
+          ],
+          [
+            "docs/UX-001.md",
+            20,
+            20
+          ]
+        ],
+        "finding": "Historical browser recipe and V3d static rendering are not interchangeable. V3d HTTP browser, accessibility, security and performance qualification remain open.",
+        "classification": "EVIDENCE_SCOPE",
+        "families": [
+          "LIM-D12",
+          "LIM-T04"
+        ],
+        "action": "V3e real user and browser acceptance, rights and independent review."
+      },
+      {
+        "id": "B-R05",
+        "refs": [
+          [
+            "docs/LIMITATIONS-001.md",
+            5,
+            12
+          ],
+          [
+            "docs/PRODUCT-FIRST-001.md",
+            27,
+            31
+          ]
+        ],
+        "finding": "Dated v1.0.0 counts 23 OPEN/23 PARTIAL differ from v1.0.17 current 20 OPEN/26 PARTIAL. History valid but should be labeled historical; 51 total unchanged.",
+        "classification": "HISTORICAL_STATE_DRIFT",
+        "families": [],
+        "action": "Generate current counts from canonical JSON; retain historical snapshot."
+      },
+      {
+        "id": "B-R06",
+        "refs": [
+          [
+            "pipeline/limitations_audit.py",
+            35,
+            53
+          ],
+          [
+            "docs/RESULT-001.md",
+            27,
+            30
+          ],
+          [
+            "docs/RESULT-001.md",
+            53,
+            54
+          ]
+        ],
+        "finding": "131-obligation inventory does not enumerate the AC01–AC27 or 25 engineering requirements as distinct rows; 18 result sections and prospective contracts are also separate. These registers exist and remain binding. This is an audit coverage gap, not missing implemented mechanisms.",
+        "classification": "TRACEABILITY_SCOPE_GAP",
+        "families": [
+          "LIM-T01",
+          "LIM-T04"
+        ],
+        "action": "Lot C must include the separate canonical registers with stable namespaces and coverage evidence; no summing as unique mechanisms."
+      }
+    ],
+    "scope": "Six targeted cross-document findings, not dispositions of individual queue groups. All 724 groups remain PENDING."
+  },
+  "publication_authorized": false,
+  "qualification": "TRIAGE_ONLY"
+}

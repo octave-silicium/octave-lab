@@ -1,0 +1,56 @@
+{
+  "id": "SEC-001-A",
+  "date": "2026-11-26",
+  "tested_commit": "67b77a90662409e072cdc75832d68b0c7611777b",
+  "run_url": "https://github.com/octave-silicium/octave-lab/actions/runs/45743876961",
+  "job_id": 139655131979,
+  "conclusion": "success",
+  "summary": {
+    "publication_authorized": false,
+    "qualification": "HEURISTIC_TRIAGE_ONLY",
+    "remote_action_occurrences": 162,
+    "revision": "eb4098c138a66add3143aef3aa29428fa70047c6",
+    "secret_scan": {
+      "bytes_scanned": 11929186,
+      "candidate_current": 0,
+      "candidate_historical": 0,
+      "current_pattern_counts": {},
+      "current_unique_blobs": 494,
+      "historical_pattern_counts": {},
+      "reachable_unique_blobs": 997,
+      "scan_scope": "reachable blobs from pinned public commit; pattern triage, not credential validation",
+      "scanned_current": 493,
+      "scanned_historical": 503,
+      "skipped_current": 1,
+      "skipped_historical": 0
+    },
+    "unpinned_remote_action_occurrences": 162,
+    "workflow_count": 59,
+    "workflows_artifact_indicator": 39,
+    "workflows_dependency_install_indicator": 9,
+    "workflows_direct_main_push_indicator": 6,
+    "workflows_pull_request_target_indicator": 0,
+    "workflows_without_explicit_permission_indicator": 0,
+    "workflows_write_indicator": 6
+  },
+  "tests": {
+    "limitations": 9,
+    "engineering": 3,
+    "inventory": 3,
+    "triage": 4,
+    "b2": 5,
+    "b3": 5,
+    "matrix": 7,
+    "security": 5,
+    "total": 41
+  },
+  "artifact": [
+    {
+      "id": 15082620735,
+      "digest": "sha256:7fa1d06dfc526330061ad54b96ff27e3e77ee77a3724fa9b5b4716731e81eb6b",
+      "expires_at": "2026-12-26T02:39:44Z"
+    }
+  ],
+  "qualification": "HEURISTIC_TRIAGE_ONLY",
+  "publication_authorized": false
+}

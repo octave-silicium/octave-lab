@@ -1,0 +1,63 @@
+{
+  "id": "AUDIT-MASTER-001-C1",
+  "date": "2026-11-26",
+  "tested_commit": "ae3458b107c9b1f05aa108d37c11eddfce6d0bf1",
+  "run_url": "https://github.com/octave-silicium/octave-lab/actions/runs/45742255560",
+  "job_id": 139649852754,
+  "conclusion": "success",
+  "summary": {
+    "by_namespace": {
+      "architecture": 123,
+      "engineering": 25,
+      "gate": 24,
+      "limitations": 52,
+      "prospective": 68,
+      "refresh": 14,
+      "result": 63,
+      "rights": 4,
+      "shapiro": 28,
+      "terminology": 47,
+      "transversal": 44
+    },
+    "declared_edges": 812,
+    "publication_authorized": false,
+    "qualification_promoted": 0,
+    "result_base_coverage": {
+      "engines": {
+        "missing": [],
+        "unexpected": []
+      },
+      "layers": {
+        "missing": [],
+        "unexpected": []
+      },
+      "mechanisms": {
+        "missing": [],
+        "unexpected": []
+      }
+    },
+    "revision": "44391d2e9eeb5546ee9ed3aa999238e96b5bf949",
+    "rows": 492,
+    "sources": 10,
+    "unresolved_declared_edges": 0
+  },
+  "tests": {
+    "limitations": 9,
+    "engineering": 3,
+    "inventory": 3,
+    "triage": 4,
+    "b2": 5,
+    "b3": 5,
+    "matrix": 7,
+    "total": 36
+  },
+  "artifact": [
+    {
+      "id": 15080943320,
+      "digest": "sha256:3dda73fed8df157835621c98242d54003bbf7290e852eb30f8a9d6afb2085171",
+      "expires_at": "2026-12-26T02:25:09Z"
+    }
+  ],
+  "qualification": "PUBLIC_SOURCE_PROJECTION_ONLY",
+  "publication_authorized": false
+}

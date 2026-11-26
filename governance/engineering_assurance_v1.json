@@ -1,0 +1,235 @@
+{
+  "version": "1.0.0",
+  "date": "2026-11-26",
+  "scope": "Public engineering requirements only; not an exhaustive private product roadmap or release authorization.",
+  "baseline_commit": "e4f307e1edb6e190dfb097b6bcd602ffa2ce8f94",
+  "publication_authorized": false,
+  "existing_gates_unchanged": true,
+  "requirements": [
+    {
+      "id": "AUD-01",
+      "source_ref": "A01",
+      "requirement": "Inventory pinned code, documentation, data contracts and evidence; reconcile requirements with limitations and dependencies.",
+      "acceptance": "Complete manifest, cross-reference and independent gap review",
+      "owner_ref": "AUDIT-MASTER",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "AUD-02",
+      "source_ref": "A02",
+      "requirement": "Maintain canonical current state; distinguish implemented, verified, empirical and production gates.",
+      "acceptance": "Versioned state receipt and cross-document consistency test",
+      "owner_ref": "ROADMAP",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "SEC-01",
+      "source_ref": "A03",
+      "requirement": "Classify artifacts by sensitivity; no confidential content, credentials, or restricted data in public paths.",
+      "acceptance": "Access and publication review; negative tests",
+      "owner_ref": "SEC",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "SEC-02",
+      "source_ref": "A04",
+      "requirement": "Least privilege, change review, dependency pinning, secret and supply-chain scanning.",
+      "acceptance": "Actual configuration and CI evidence",
+      "owner_ref": "SEC",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "SEC-03",
+      "source_ref": "A04",
+      "requirement": "Threat model, application security, network boundaries, incident handling, restoration.",
+      "acceptance": "Risk-based ASVS/SSDF checks and independent review",
+      "owner_ref": "SEC",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "REL-01",
+      "source_ref": "A04",
+      "requirement": "Fail closed on publication; check every output route, version releases and support rollback.",
+      "acceptance": "Negative publication tests and documented approval",
+      "owner_ref": "RELEASE",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "ARC-01",
+      "source_ref": "A05",
+      "requirement": "Prefer modular components; isolate UI, orchestration, analytic contracts and storage.",
+      "acceptance": "Dependency inventory and architecture decision records",
+      "owner_ref": "ARCH-SW",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "ARC-02",
+      "source_ref": "A05",
+      "requirement": "Persistent storage with verified backups, monitoring and recovery.",
+      "acceptance": "Restore and operational acceptance evidence",
+      "owner_ref": "RUNBOOK",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "QA-01",
+      "source_ref": "A06",
+      "requirement": "Static checks, unit, integration, contract, property, regression and negative tests proportionate to risk.",
+      "acceptance": "CI evidence pinned to commit",
+      "owner_ref": "QA",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "QA-02",
+      "source_ref": "A06",
+      "requirement": "Browser E2E, accessibility, performance and load tests with explicit budgets.",
+      "acceptance": "Measured results, manual accessibility review",
+      "owner_ref": "UX-001",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "QA-03",
+      "source_ref": "A07",
+      "requirement": "Separate numerical, conceptual, empirical and decision validity.",
+      "acceptance": "Independent data/method and acceptance evidence per scope",
+      "owner_ref": "RESULT-001",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "QA-04",
+      "source_ref": "A07",
+      "requirement": "Test units, conservation, null shocks, stability, coupling and double counting.",
+      "acceptance": "Invariant tests and sensitivity receipts",
+      "owner_ref": "ARCH-002",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "DEV-01",
+      "source_ref": "A08",
+      "requirement": "Separate implementation from adversarial review; human approval of release.",
+      "acceptance": "PR, checks, reviewed evidence and limitations",
+      "owner_ref": "BUILD",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "DEV-02",
+      "source_ref": "A08",
+      "requirement": "Benchmark assisted-development tools against accepted tasks and total cost.",
+      "acceptance": "Versioned evaluation and cost record",
+      "owner_ref": "BUILD",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "DEV-03",
+      "source_ref": "A09",
+      "requirement": "Keep first authorized end-to-end investigation as critical path.",
+      "acceptance": "Existing V3e/V4 criteria met, no implicit gate promotion",
+      "owner_ref": "PRODUCT-FIRST-001",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "PROD-01",
+      "source_ref": "B02",
+      "requirement": "Test actual user workflows, comprehension and accessible provenance; defer unvalidated features.",
+      "acceptance": "Usability and decision evidence",
+      "owner_ref": "UX-001",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "PROD-02",
+      "source_ref": "B03",
+      "requirement": "Use evidence-based staged delivery; validate before expanding scope.",
+      "acceptance": "Recorded decision and acceptance criteria",
+      "owner_ref": "PRODUCT-FIRST-001",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "COST-01",
+      "source_ref": "B05",
+      "requirement": "Track development and operational resource cost; defer unnecessary infrastructure.",
+      "acceptance": "Measured cost per accepted unit",
+      "owner_ref": "BUILD",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "AI-01",
+      "source_ref": "C01",
+      "requirement": "Analytic core remains usable without a language model; any future interface uses explicit validated contracts.",
+      "acceptance": "Deterministic replay and fallback tests",
+      "owner_ref": "ARCH-SW",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "AI-02",
+      "source_ref": "C02",
+      "requirement": "Model-independent authorization, minimal tool permissions, bounded execution and provenance.",
+      "acceptance": "Adversarial inputs, denial tests, provider failure and cost checks",
+      "owner_ref": "SEC",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "EVO-01",
+      "source_ref": "C03",
+      "requirement": "Versioned interfaces, dependency isolation, migrations, feature flags and backwards compatibility.",
+      "acceptance": "Contract/regression tests and rollback rehearsal",
+      "owner_ref": "ARCH-SW",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "EVO-02",
+      "source_ref": "C04",
+      "requirement": "Assess scientific, technical, security and maintenance impact before change.",
+      "acceptance": "ADR with acceptance/deferral and measured outcome",
+      "owner_ref": "QA",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "DATA-01",
+      "source_ref": "D03",
+      "requirement": "Distinguish measured, declared, imported, estimated, benchmark, hypothetical and unknown parameters.",
+      "acceptance": "Schema, provenance, uncertainty, missingness and refusal tests",
+      "owner_ref": "METH-003",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "DATA-02",
+      "source_ref": "D07",
+      "requirement": "Any restricted-input capability requires explicit access separation, minimal data and lifecycle controls.",
+      "acceptance": "Isolation, export/delete, retention and authorized access tests",
+      "owner_ref": "SEC",
+      "status": "OPEN",
+      "evidence": []
+    },
+    {
+      "id": "GOV-01",
+      "source_ref": "E01",
+      "requirement": "Maintain requirement-to-evidence traceability without weakening existing gates.",
+      "acceptance": "Reviewable mapping; unresolved items remain open",
+      "owner_ref": "LIMITATIONS-001",
+      "status": "OPEN",
+      "evidence": []
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "id": "SEC-001-B",
+  "date": "2026-11-26",
+  "baseline_commit": "b3b6cdfbed02866fce73fb0d207926e222a6c869",
+  "publication_authorized": false,
+  "review_status": "QUARANTINE_CANDIDATES_STAGED_CONTINUITY_NOT_QUALIFIED",
+  "flows": [
+    {
+      "workflow": "audit-lot2.yml",
+      "outputs": [
+        "audits/latest_lot2.json"
+      ],
+      "risk": "DPAE/Insee source and structural previews; manifest and failure-path review required",
+      "decision": "QUARANTINE_CANDIDATE_STAGED",
+      "activation": "DO_NOT_MERGE_BEFORE_REPLACEMENT_OR_EXPLICIT_OWNER_APPROVED_PAUSE",
+      "previous_workflow_ref": "b3b6cdfbed02866fce73fb0d207926e222a6c869",
+      "live_collection": false
+    },
+    {
+      "workflow": "audit-multisource.yml",
+      "outputs": [
+        "audits/latest_multisource.json",
+        "snapshots/dares-ft-monthly/"
+      ],
+      "risk": "Mixed source profiles and Dares originals; separate metadata from admitted raw source",
+      "decision": "QUARANTINE_CANDIDATE_STAGED",
+      "activation": "DO_NOT_MERGE_BEFORE_REPLACEMENT_OR_EXPLICIT_OWNER_APPROVED_PAUSE",
+      "previous_workflow_ref": "b3b6cdfbed02866fce73fb0d207926e222a6c869",
+      "live_collection": false
+    },
+    {
+      "workflow": "audit-semantics.yml",
+      "outputs": [
+        "audits/latest_lot3.json"
+      ],
+      "risk": "DPAE vintage diagnostics and MMO discovery; review fields and failure path",
+      "decision": "QUARANTINE_CANDIDATE_STAGED",
+      "activation": "DO_NOT_MERGE_BEFORE_REPLACEMENT_OR_EXPLICIT_OWNER_APPROVED_PAUSE",
+      "previous_workflow_ref": "b3b6cdfbed02866fce73fb0d207926e222a6c869",
+      "live_collection": false
+    },
+    {
+      "workflow": "collect-insee.yml",
+      "outputs": [
+        "data/curated/insee_employment_manifest.json",
+        "data/curated/insee_employment_sector_quarterly.csv",
+        "snapshots/insee-sector/"
+      ],
+      "risk": "Commit step always runs; validate exact current files and scoped rights before export",
+      "decision": "QUARANTINE_CANDIDATE_STAGED",
+      "activation": "DO_NOT_MERGE_BEFORE_REPLACEMENT_OR_EXPLICIT_OWNER_APPROVED_PAUSE",
+      "previous_workflow_ref": "b3b6cdfbed02866fce73fb0d207926e222a6c869",
+      "live_collection": false
+    },
+    {
+      "workflow": "collect-public-sector.yml",
+      "outputs": [
+        "archive/raw/",
+        "outputs/live/",
+        "snapshots/indeed-fr/"
+      ],
+      "risk": "Broad upload and direct main write; two approved source identifiers only",
+      "decision": "READ_ONLY_CANDIDATE_STAGED",
+      "activation": "OWNER_REVIEW_AND_PERSISTENT_ARCHIVE_MIGRATION_REQUIRED"
+    },
+    {
+      "workflow": "pilot-ict.yml",
+      "outputs": [
+        "research/PILOT-001/"
+      ],
+      "risk": "Derived report and manifest include observed values; pipeline prints selected values; rights/route review before new public execution",
+      "decision": "QUARANTINE_CANDIDATE_STAGED",
+      "activation": "DO_NOT_MERGE_BEFORE_REPLACEMENT_OR_EXPLICIT_OWNER_APPROVED_PAUSE",
+      "previous_workflow_ref": "b3b6cdfbed02866fce73fb0d207926e222a6c869",
+      "live_collection": false
+    }
+  ],
+  "limitations": [
+    "Quarantine candidates intentionally block five live acquisitions; main remains intact. Not a continuity-preserving migration.",
+    "Actual source and product rights, artifact content, logs and effective permissions remain pending.",
+    "No public data publication authorized by this register."
+  ],
+  "version": "1.1"
+}

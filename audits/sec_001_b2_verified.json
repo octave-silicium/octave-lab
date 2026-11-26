@@ -1,0 +1,34 @@
+{
+  "id": "SEC-001-B2",
+  "date": "2026-11-26",
+  "tested_commit": "c046482778a1b7fb9bb8b9c56f8136db15b58d71",
+  "run_url": "https://github.com/octave-silicium/octave-lab/actions/runs/45744902780",
+  "job_id": 139658477943,
+  "conclusion": "success",
+  "tests": {
+    "previous": 50,
+    "archive_promotion": 6,
+    "total": 56
+  },
+  "job_seconds": 20,
+  "artifact": {
+    "id": 15083021821,
+    "digest": "sha256:9be3c38a9d6b45c7a3dc979b00d0401087cf6b268aa442be39ba35ec79f7427a",
+    "expires_at": "2026-12-26T02:49:17Z"
+  },
+  "scope": {
+    "offline_existing_public_snapshot": "2026-11",
+    "legacy_reader_count_equality": true,
+    "source_hash_and_metadata_equality": true,
+    "immutable_month_conflict_rejected": true,
+    "duplicate_idempotent": true,
+    "live_collection_executed": false,
+    "main_unchanged": true,
+    "publication_authorized": false
+  },
+  "limitations": [
+    "Local cooperative lock and directory rename tested; no distributed locking or production resilience qualification.",
+    "No live collection, Git promotion or owner approval executed. Existing archive and current reader hard-coded to November remain unchanged.",
+    "Other five write routes, remaining artifacts, logs, rights and effective admin permissions remain open."
+  ]
+}

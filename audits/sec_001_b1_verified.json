@@ -1,0 +1,32 @@
+{
+  "id": "SEC-001-B1",
+  "date": "2026-11-26",
+  "tested_commit": "6b914ba7d9fff8e8ff772a954f7104470761fcb9",
+  "run_url": "https://github.com/octave-silicium/octave-lab/actions/runs/45744583645",
+  "job_id": 139657430162,
+  "conclusion": "success",
+  "tests": {
+    "previous": 41,
+    "indeed_bundle": 9,
+    "total": 50
+  },
+  "job_seconds": 15,
+  "artifact": {
+    "id": 15083335411,
+    "digest": "sha256:7bd9d32d4926c94daa33755264b06dedb92940c33e9f7ac1fbd762490b0a1345",
+    "expires_at": "2026-12-26T02:46:13Z"
+  },
+  "scope": {
+    "write_routes_reviewed": 6,
+    "staged_read_only_candidates": 1,
+    "remaining_routes": 5,
+    "live_collection_executed": false,
+    "main_unchanged": true,
+    "publication_authorized": false
+  },
+  "limitations": [
+    "Fixture tests only; no real collection or durable archive promotion recipe.",
+    "Staged migration is not activated; do not merge before durable archive and continuity qualification.",
+    "Other five write workflows, public artifacts, logs, rights and effective administrative permissions remain open."
+  ]
+}

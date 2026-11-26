@@ -1,0 +1,1778 @@
+{
+  "id": "AUDIT-MASTER-001-B2",
+  "version": "1.0",
+  "date": "2026-11-26",
+  "scope": "First-pass contextual reading of 153 priority groups; not independent full-source or evidence validation",
+  "queue_revision": "29fcb7b63dd7d8e92ded50dee4b3d95ea4d97430",
+  "queue_artifact_id": 15080528652,
+  "p0_order_sha256": "0401beda55c9a5bcd73d297c03366f96000c842b43fd49bb56e4c6e7f8982ab3",
+  "ordinal_contract": "1-based order of P0_REVIEW groups in deterministic B1 queue; digest guards against drift",
+  "publication_authorized": false,
+  "rows": [
+    {
+      "ordinal": 1,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-W01",
+        "LIM-D06"
+      ],
+      "rationale": "Initial source availability and ESCO/ROME license/version conditions; retain later native imports separately.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 2,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-D12",
+        "LIM-T04",
+        "LIM-D06"
+      ],
+      "rationale": "V3d private replay and rendering do not establish browser E2E, rights or deployment.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 3,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-S01",
+        "LIM-S09",
+        "LIM-S16"
+      ],
+      "rationale": "Capital acquisition/diagnostic evidence; not observed AI capital or calibrated services.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 4,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-D05"
+      ],
+      "rationale": "Benchmark requirement and transfer limits; apply proportionately.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 5,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-T01",
+        "LIM-D08"
+      ],
+      "rationale": "Product-first priority supersedes order, not the obligations.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 6,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-D10",
+        "LIM-D11",
+        "LIM-D06"
+      ],
+      "rationale": "S1 historical partial qualification; production, geography and rights still open.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 7,
+      "disposition": "ACTIVE_GAP",
+      "candidate_families": [
+        "LIM-D06",
+        "LIM-D02"
+      ],
+      "rationale": "ODbL and Insee/MMO usage review remains required.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 8,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-W01",
+        "LIM-D02"
+      ],
+      "rationale": "Local ESCO/FAP/MMO import not API or public admission.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 9,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-W02",
+        "LIM-W03"
+      ],
+      "rationale": "Synthetic benchmark not blind independent practitioner evidence.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 10,
+      "disposition": "ACTIVE_GAP",
+      "candidate_families": [
+        "LIM-D11",
+        "LIM-D06"
+      ],
+      "rationale": "Eurostat flags and changed AI basket require scoped comparability and rights review.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 11,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-F01",
+        "LIM-F04"
+      ],
+      "rationale": "Paid versus active time and avoidable cost; no transfer of accounting figures.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 12,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-D11",
+        "LIM-D10"
+      ],
+      "rationale": "Historical semantic v3 execution not consolidated store or qualified S1.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 13,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-W07",
+        "LIM-D05"
+      ],
+      "rationale": "SPAF reference is methodological, not certification or transferable observations.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 14,
+      "disposition": "ACTIVE_GAP",
+      "candidate_families": [
+        "LIM-S01",
+        "LIM-D06"
+      ],
+      "rationale": "TES publication vintage and workbook-specific reuse need review.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 15,
+      "disposition": "ACTIVE_GAP",
+      "candidate_families": [
+        "LIM-D09",
+        "LIM-D11"
+      ],
+      "rationale": "Apprentice scope break; wage bill separately qualified.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 16,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-F02",
+        "LIM-F04",
+        "LIM-S15"
+      ],
+      "rationale": "Transition fixture: imposed cash/attrition, unpriced redeployment, no net employment conclusion.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 17,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-D02"
+      ],
+      "rationale": "Original access block; distinguish later MMO recovery from rights.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 18,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-W04",
+        "LIM-W05",
+        "LIM-W07"
+      ],
+      "rationale": "Operations synthetic capacity and quality stress; no empirical gain.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 19,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-D04",
+        "LIM-D06"
+      ],
+      "rationale": "Candidate data plan; no presumed availability or US coefficient transfer.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 20,
+      "disposition": "ACTIVE_GAP",
+      "candidate_families": [
+        "LIM-S04",
+        "LIM-S03",
+        "LIM-F05"
+      ],
+      "rationale": "Bridge interface needs representative scale, products, costs and valuation.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 21,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-S01",
+        "LIM-S02"
+      ],
+      "rationale": "TES identities and demand-shock-only assumptions; no real admission from synthetic model.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 22,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-D10",
+        "LIM-D11",
+        "LIM-D06"
+      ],
+      "rationale": "Earlier semantic qualification tasks still relevant; verify latest state.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 23,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-T01",
+        "LIM-D11",
+        "LIM-D06"
+      ],
+      "rationale": "Cross-level units, scope, provenance and publication contract.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 24,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-T01",
+        "LIM-T02",
+        "LIM-D05",
+        "LIM-D06"
+      ],
+      "rationale": "Stop rules and independent validation requirement.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 25,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-F01",
+        "LIM-F06",
+        "LIM-F04"
+      ],
+      "rationale": "Market dynamics example conditional; missing deferred working capital and full principal service.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 26,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-D10",
+        "LIM-D06",
+        "LIM-T01"
+      ],
+      "rationale": "V2b2 real-source receipt not persistent dossier or calibrated public output.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 27,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-D12",
+        "LIM-T04"
+      ],
+      "rationale": "V3b private offline render; HTTP browser and complete security unqualified.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 28,
+      "disposition": "ACTIVE_GAP",
+      "candidate_families": [
+        "LIM-T01",
+        "LIM-D11"
+      ],
+      "rationale": "Conditional math requires semantic compatibility, not just equal units.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 29,
+      "disposition": "ACTIVE_GAP",
+      "candidate_families": [
+        "LIM-W01",
+        "LIM-D06"
+      ],
+      "rationale": "ESCO data license distinct from API software license, release confirmation required.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 30,
+      "disposition": "ACTIVE_GAP",
+      "candidate_families": [
+        "LIM-D10",
+        "LIM-T04"
+      ],
+      "rationale": "Local restore tested; encryption, retention, remote backup and durable hosting missing.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 31,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-D11",
+        "LIM-D06"
+      ],
+      "rationale": "Original Eurostat observations and changed definition; later vintages do not erase breaks.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 32,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-W04",
+        "LIM-W05",
+        "LIM-W06",
+        "LIM-T01"
+      ],
+      "rationale": "Scenario generator contract, criticality, responsibility, constraints and coupled effects.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 33,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-D02",
+        "LIM-D03",
+        "LIM-D10"
+      ],
+      "rationale": "MMO recovered and parsed; earlier combined replay gap superseded by V3c; rights remain.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 34,
+      "disposition": "ACTIVE_GAP",
+      "candidate_families": [
+        "LIM-F01",
+        "LIM-F04",
+        "LIM-W04"
+      ],
+      "rationale": "Cost ledger and quality veto; incomplete stock accounting and v0.4b bridge.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 35,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-D10",
+        "LIM-D02",
+        "LIM-T04",
+        "LIM-D06"
+      ],
+      "rationale": "V3c encrypted transfer and offline replay; private runner assurance and public rights not established.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 36,
+      "disposition": "CODE_GUARD_OR_SCOPE_DECLARATION",
+      "candidate_families": [
+        "LIM-D06",
+        "LIM-D11"
+      ],
+      "rationale": "Native bridge descriptive filter; verify every route rather than infer rights from statement.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 37,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-W02",
+        "LIM-W03",
+        "LIM-W04"
+      ],
+      "rationale": "Independent four-arm benchmark, time/cost, safety and quality criteria.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 38,
+      "disposition": "CODE_GUARD_OR_SCOPE_DECLARATION",
+      "candidate_families": [
+        "LIM-D10",
+        "LIM-D11",
+        "LIM-D06"
+      ],
+      "rationale": "Native live adapter and in-memory scope; no durable storage, rights or causal gain.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 39,
+      "disposition": "ACTIVE_GAP",
+      "candidate_families": [
+        "LIM-S10",
+        "LIM-F05",
+        "LIM-D06"
+      ],
+      "rationale": "B2B price series not W002 market; successor and source rights need qualification.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 40,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-S01",
+        "LIM-S03",
+        "LIM-S11",
+        "LIM-S12",
+        "LIM-S16"
+      ],
+      "rationale": "TEE/TES diagnostics retain residual and valuation mismatch; no institutional bridge or calibration.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 41,
+      "disposition": "ACTIVE_GAP",
+      "candidate_families": [
+        "LIM-W02",
+        "LIM-W03"
+      ],
+      "rationale": "G-M1/G-M2 not crossed; independent human/AI measurement absent.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 42,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-W02",
+        "LIM-W07"
+      ],
+      "rationale": "Proposed process anchored to native task, not observed steps or timing.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 43,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-S01"
+      ],
+      "rationale": "Historical TES retrieval failure later superseded by acquisition; verify newer vintage.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 44,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-S04",
+        "LIM-S05",
+        "LIM-S10"
+      ],
+      "rationale": "Do not map W002 revenue to final demand or capacity via Leontief inverse.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 45,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-D01",
+        "LIM-D07",
+        "LIM-D09",
+        "LIM-D11"
+      ],
+      "rationale": "V1.1 historical coverage and DPAE candidate; preserve later exception and missing Insee detail.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 46,
+      "disposition": "ACTIVE_GAP",
+      "candidate_families": [
+        "LIM-D10",
+        "LIM-T04",
+        "LIM-D12"
+      ],
+      "rationale": "Loopback runbook, pinned session and no multitenant auth; access and operations need qualification.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 47,
+      "disposition": "ACTIVE_GAP",
+      "candidate_families": [
+        "LIM-W02",
+        "LIM-W03",
+        "LIM-D06"
+      ],
+      "rationale": "Practitioner closed set and comparative evaluation still required.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 48,
+      "disposition": "ACTIVE_GAP",
+      "candidate_families": [
+        "LIM-D12",
+        "LIM-T04"
+      ],
+      "rationale": "Historical browser tests; accessibility, performance and rights remain open.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 49,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-D12",
+        "LIM-S15",
+        "LIM-F02"
+      ],
+      "rationale": "Terminology distinguishes capacity, actual throughput, hours and cash savings.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 50,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-T04",
+        "LIM-D10"
+      ],
+      "rationale": "Security, cache isolation, resource limits, dependency review and reversible operations.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 51,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-T01",
+        "LIM-D12"
+      ],
+      "rationale": "One versioned investigation, not multiple independent generated analyses.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 52,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-W03",
+        "LIM-W07"
+      ],
+      "rationale": "Experimental cost ledger tested synthetically; real cost and evidence absent.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 53,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-T04",
+        "LIM-D06",
+        "LIM-D12"
+      ],
+      "rationale": "Server-side rights, no restricted values in DOM/cache/logs/exports; test actual enforcement.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 54,
+      "disposition": "ACTIVE_GAP",
+      "candidate_families": [
+        "LIM-W02",
+        "LIM-T04",
+        "LIM-D06"
+      ],
+      "rationale": "Contribution intake only pending review; authenticity, access, storage and rights missing.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 55,
+      "disposition": "ACTIVE_GAP",
+      "candidate_families": [
+        "LIM-T01",
+        "LIM-F04",
+        "LIM-W07"
+      ],
+      "rationale": "Conditional transition assembly; graph parameter migration and empirical compatibility not done.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 56,
+      "disposition": "ACTIVE_GAP",
+      "candidate_families": [
+        "LIM-W02",
+        "LIM-T04",
+        "LIM-D06"
+      ],
+      "rationale": "Physical contribution contract; identity, authorization and import workflow absent.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 57,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-D10",
+        "LIM-T04"
+      ],
+      "rationale": "SQLite choice for local transactions, not identity/encryption or production service.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 58,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-F05",
+        "LIM-S10",
+        "LIM-F02"
+      ],
+      "rationale": "Price-volume decomposition limits and no consumer surplus or layoffs inference.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 59,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-T01",
+        "LIM-W04",
+        "LIM-W05",
+        "LIM-S04",
+        "LIM-S12",
+        "LIM-S15"
+      ],
+      "rationale": "Cross-scale chain contracts, stability, scope and feedback, no magical transmission.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 60,
+      "disposition": "CODE_GUARD_OR_SCOPE_DECLARATION",
+      "candidate_families": [
+        "LIM-T04",
+        "LIM-D12"
+      ],
+      "rationale": "Local server guardrails are not external-access authentication.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 61,
+      "disposition": "CODE_GUARD_OR_SCOPE_DECLARATION",
+      "candidate_families": [
+        "LIM-D11",
+        "LIM-D06",
+        "LIM-D12"
+      ],
+      "rationale": "Semantic facade masks restrictions and preserves native scope; no automatic joins.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 62,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-D12",
+        "LIM-T04",
+        "LIM-D06"
+      ],
+      "rationale": "UX-G2 negative tests and end-to-end rights/quality gate.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 63,
+      "disposition": "ACTIVE_GAP",
+      "candidate_families": [
+        "LIM-T01",
+        "LIM-T02",
+        "LIM-D06"
+      ],
+      "rationale": "Typed graph and provenance structural only; declared evidence not authentic or scenario recalculated.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 64,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-D05",
+        "LIM-D12"
+      ],
+      "rationale": "Benchmark requirement repeated for product; gates remain.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 65,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-D11",
+        "LIM-D06"
+      ],
+      "rationale": "Historical index and flags; no comparison inference from missing rows.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 66,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-D10",
+        "LIM-D11"
+      ],
+      "rationale": "Restore and same-vintage comparison evidence; not real later revision or persistent production.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 67,
+      "disposition": "ACTIVE_GAP",
+      "candidate_families": [
+        "LIM-T04",
+        "LIM-W01",
+        "LIM-D06"
+      ],
+      "rationale": "Read-only private API guardrails insufficient for remote authentication.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 68,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-W01",
+        "LIM-W02",
+        "LIM-D10"
+      ],
+      "rationale": "O*NET native graph counts not coverage of real labor; later work remains distinct.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 69,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-D12",
+        "LIM-T04"
+      ],
+      "rationale": "G1 Chromium evidence; stale benchmark schema and accessibility gaps.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 70,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-T01",
+        "LIM-W07",
+        "LIM-D06"
+      ],
+      "rationale": "V2a conditional scenarios and source hashes; no measured sector calibration.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 71,
+      "disposition": "SCOPED_EXCEPTION",
+      "candidate_families": [
+        "LIM-D01",
+        "LIM-D06"
+      ],
+      "rationale": "Corrected DPAE same-vintage narrow descriptive exception; general gate stays blocked.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 72,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-D07",
+        "LIM-D06",
+        "LIM-D10"
+      ],
+      "rationale": "V1 real-source receipt, not full suite or durable dossier/public authorization.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 73,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-S01",
+        "LIM-S03",
+        "LIM-D06"
+      ],
+      "rationale": "TES admission preserves signed/missing cells, identities, scope and residuals.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 74,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-D12"
+      ],
+      "rationale": "Design and accessibility contract; no demonstrated compliance.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 75,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-T04",
+        "LIM-D06",
+        "LIM-W02"
+      ],
+      "rationale": "Contributions must exclude identifying/restricted data and require authorization.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 76,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-D11",
+        "LIM-D06",
+        "LIM-D03"
+      ],
+      "rationale": "New-series provenance, rights, revisions and no automatic publication/causality.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 77,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-T02",
+        "LIM-T03",
+        "LIM-D11"
+      ],
+      "rationale": "Temporal validation and leakage avoidance.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 78,
+      "disposition": "ACTIVE_GAP",
+      "candidate_families": [
+        "LIM-D10",
+        "LIM-T04",
+        "LIM-D06"
+      ],
+      "rationale": "Transactional candidate vault; manual sources and durable operation/security unqualified.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 79,
+      "disposition": "ACTIVE_GAP",
+      "candidate_families": [
+        "LIM-W01",
+        "LIM-D06"
+      ],
+      "rationale": "ROME native license and access; no current version assumption or circumvention.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 80,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-W04",
+        "LIM-W05",
+        "LIM-W06",
+        "LIM-T01"
+      ],
+      "rationale": "Early transformation generator limitations; later partial additions do not prove E-G1.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 81,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-T01",
+        "LIM-T04",
+        "LIM-D08"
+      ],
+      "rationale": "Existing gate order and no release or automatic solicitation.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 82,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-F01",
+        "LIM-S09",
+        "LIM-S16"
+      ],
+      "rationale": "Supplier credit partial BFR, stylized terms and no calibrated defaults.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 83,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-T01",
+        "LIM-T03"
+      ],
+      "rationale": "Prospective scenario paths implemented structurally, no quantitative causal propagation.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 84,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-T01",
+        "LIM-D06",
+        "LIM-T02"
+      ],
+      "rationale": "Claim contract scope, evidence, hypotheses, rights and falsification.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 85,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-D12",
+        "LIM-D11"
+      ],
+      "rationale": "Historical browser pending; compare only same compatible native series.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 86,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-D12",
+        "LIM-T04"
+      ],
+      "rationale": "Latency and web vitals targets, not observed production metrics.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 87,
+      "disposition": "ACTIVE_GAP",
+      "candidate_families": [
+        "LIM-T01",
+        "LIM-D10",
+        "LIM-D06"
+      ],
+      "rationale": "Manifest replay, declared hash and coverage not durable storage or authentication.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 88,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-T01",
+        "LIM-T02",
+        "LIM-T03"
+      ],
+      "rationale": "Shapiro integration and rival scenarios; no predetermined outcome or added engine.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 89,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-W01",
+        "LIM-D06"
+      ],
+      "rationale": "ESCO native graph inventory, not full semantic equivalence or qualified rights.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 90,
+      "disposition": "ACTIVE_GAP",
+      "candidate_families": [
+        "LIM-W03",
+        "LIM-W02"
+      ],
+      "rationale": "Comparator cannot certify sample independence, provenance or full costs.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 91,
+      "disposition": "ACTIVE_GAP",
+      "candidate_families": [
+        "LIM-D06"
+      ],
+      "rationale": "ODbL public/commercial usages remain blocked pending review.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 92,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-D06",
+        "LIM-D11"
+      ],
+      "rationale": "License metadata not authorization; Eurostat/Insee qualification remains.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 93,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-S04",
+        "LIM-S05",
+        "LIM-F04"
+      ],
+      "rationale": "Synthetic make-buy example, no observed market or representative transfer.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 94,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-D06"
+      ],
+      "rationale": "Attribution and adapted database redistribution reviewed per use.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 95,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-T01",
+        "LIM-T02",
+        "LIM-T03"
+      ],
+      "rationale": "Shapiro arithmetic reproduction not empirical test or complete engine admission.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 96,
+      "disposition": "CODE_GUARD_OR_SCOPE_DECLARATION",
+      "candidate_families": [
+        "LIM-S04",
+        "LIM-D06"
+      ],
+      "rationale": "Synthetic bridge receipt declares block; no actual public route proof.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 97,
+      "disposition": "CODE_GUARD_OR_SCOPE_DECLARATION",
+      "candidate_families": [
+        "LIM-T02",
+        "LIM-T03",
+        "LIM-D06"
+      ],
+      "rationale": "Module scope disclaims causal and calibrated release; retain.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 98,
+      "disposition": "ACTIVE_GAP",
+      "candidate_families": [
+        "LIM-S09",
+        "LIM-S16",
+        "LIM-D06"
+      ],
+      "rationale": "Financial candidate sources and rights not qualified.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 99,
+      "disposition": "CODE_GUARD_OR_SCOPE_DECLARATION",
+      "candidate_families": [
+        "LIM-D06",
+        "LIM-D11"
+      ],
+      "rationale": "Pilot preliminary gate label not legal authorization.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 100,
+      "disposition": "CODE_GUARD_OR_SCOPE_DECLARATION",
+      "candidate_families": [
+        "LIM-D06",
+        "LIM-D11"
+      ],
+      "rationale": "Insee ingestion block path indicator; test actual denial.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 101,
+      "disposition": "LEXICAL_FALSE_POSITIVE_FOR_SECURITY",
+      "candidate_families": [
+        "LIM-F01",
+        "LIM-F04"
+      ],
+      "rationale": "License maintenance is a synthetic cost field, not a licensing violation; retain cost assumptions.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 102,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-D11"
+      ],
+      "rationale": "Pilot Eurostat published methodological restriction; preserve revised comparisons.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 103,
+      "disposition": "CODE_GUARD_OR_SCOPE_DECLARATION",
+      "candidate_families": [
+        "LIM-D11",
+        "LIM-D06"
+      ],
+      "rationale": "Current vintage snapshot not point-in-time backtest.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 104,
+      "disposition": "CODE_GUARD_OR_SCOPE_DECLARATION",
+      "candidate_families": [
+        "LIM-D06"
+      ],
+      "rationale": "ODbL mapping and fallback unqualified; code label not legal determination.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 105,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-S03",
+        "LIM-S16"
+      ],
+      "rationale": "Valuation diagnostic and marginal bounds; no behavioral bridge.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 106,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-S09",
+        "LIM-S01"
+      ],
+      "rationale": "Capital stocks diagnostic; asset flow, residual and AI-capital scope limited.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 107,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-D01",
+        "LIM-D06",
+        "LIM-D11",
+        "LIM-D03"
+      ],
+      "rationale": "V0 admission requirements, exact vintages, source compatibility.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 108,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-D06",
+        "LIM-T04"
+      ],
+      "rationale": "Public repository excludes restricted data, secrets and client records.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 109,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-W01",
+        "LIM-W02",
+        "LIM-T02",
+        "LIM-T04"
+      ],
+      "rationale": "Risk taxonomy, confidentiality and distinguish capability/adoption/impact.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 110,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-D04",
+        "LIM-D01",
+        "LIM-D02",
+        "LIM-D11"
+      ],
+      "rationale": "Old README state; corrected vintage and MMO recovery later, rights unresolved.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 111,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-D12",
+        "LIM-T04",
+        "LIM-D06"
+      ],
+      "rationale": "V3 internal product acceptance, actual E2E and rights controls.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 112,
+      "disposition": "CODE_GUARD_OR_SCOPE_DECLARATION",
+      "candidate_families": [
+        "LIM-S09",
+        "LIM-S16",
+        "LIM-F01"
+      ],
+      "rationale": "Conditional financial ledger, no actual bank capital, wealth, credit/default calibration.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 113,
+      "disposition": "CODE_GUARD_OR_SCOPE_DECLARATION",
+      "candidate_families": [
+        "LIM-W05",
+        "LIM-W04",
+        "LIM-T04"
+      ],
+      "rationale": "Scripted parallel simulation quality/deployment block; no production assurance.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 114,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-S02",
+        "LIM-S03",
+        "LIM-S04",
+        "LIM-S09"
+      ],
+      "rationale": "Empirical base with hypothetical structural shocks, no causal calibration.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 115,
+      "disposition": "CODE_GUARD_OR_SCOPE_DECLARATION",
+      "candidate_families": [
+        "LIM-S09",
+        "LIM-F01",
+        "LIM-S16"
+      ],
+      "rationale": "Financed capital path with stylized funding and missing balance sheet/rates.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 116,
+      "disposition": "CODE_GUARD_OR_SCOPE_DECLARATION",
+      "candidate_families": [
+        "LIM-W02",
+        "LIM-W05",
+        "LIM-W07"
+      ],
+      "rationale": "Proposed process receipt; no observed timing or employment.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 117,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-D01",
+        "LIM-D06",
+        "LIM-D10"
+      ],
+      "rationale": "V0 replay historic, later DPAE exception and private archive do not authorize release.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 118,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-S11",
+        "LIM-S03",
+        "LIM-S12"
+      ],
+      "rationale": "Hypothetical basket budget, not household disposable income or purchaser prices.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 119,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-D05",
+        "LIM-W03"
+      ],
+      "rationale": "OEM performance benchmark requires independent comparable evidence.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 120,
+      "disposition": "CODE_GUARD_OR_SCOPE_DECLARATION",
+      "candidate_families": [
+        "LIM-W05",
+        "LIM-W04",
+        "LIM-F02"
+      ],
+      "rationale": "Conditional event simulation; cash savings and employment unset.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 121,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-T04",
+        "LIM-D06"
+      ],
+      "rationale": "Public/private separation and release block; implement and verify controls.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 122,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-T01",
+        "LIM-T03",
+        "LIM-S16",
+        "LIM-F01"
+      ],
+      "rationale": "Backlog preservation and full traceability requirement.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 123,
+      "disposition": "CODE_GUARD_OR_SCOPE_DECLARATION",
+      "candidate_families": [
+        "LIM-D06"
+      ],
+      "rationale": "Unqualified license returns legal-review block; verify callers and outputs.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 124,
+      "disposition": "CODE_GUARD_OR_SCOPE_DECLARATION",
+      "candidate_families": [
+        "LIM-S07",
+        "LIM-S09",
+        "LIM-S08"
+      ],
+      "rationale": "Conditional import inventory and capacity; no actual output or calibration.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 125,
+      "disposition": "CODE_GUARD_OR_SCOPE_DECLARATION",
+      "candidate_families": [
+        "LIM-S09",
+        "LIM-S08",
+        "LIM-F04"
+      ],
+      "rationale": "Conditional capital path; historical cost proxy not ESA CCF, no finance link.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 126,
+      "disposition": "CODE_GUARD_OR_SCOPE_DECLARATION",
+      "candidate_families": [
+        "LIM-D02",
+        "LIM-D03",
+        "LIM-D06"
+      ],
+      "rationale": "MMO receipt non-independent, scope and rights; no causal or stock inference.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 127,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-S09",
+        "LIM-S16"
+      ],
+      "rationale": "Capital changes diagnostic; reanchoring not official series and residuals kept.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 128,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-S03",
+        "LIM-S12",
+        "LIM-D03"
+      ],
+      "rationale": "TES income diagnostics, harmonized lineage not independent, fixed coefficients.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 129,
+      "disposition": "ACTIVE_GAP",
+      "candidate_families": [
+        "LIM-S09",
+        "LIM-S16",
+        "LIM-D06"
+      ],
+      "rationale": "Financial sources pending; cross-reference same requirement as 98.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 130,
+      "disposition": "CODE_GUARD_OR_SCOPE_DECLARATION",
+      "candidate_families": [
+        "LIM-D06",
+        "LIM-D11",
+        "LIM-T02"
+      ],
+      "rationale": "Native claim descriptive and rights unqualified; no attribution.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 131,
+      "disposition": "CODE_GUARD_OR_SCOPE_DECLARATION",
+      "candidate_families": [
+        "LIM-S04",
+        "LIM-S10"
+      ],
+      "rationale": "Conditional sector-market bridge; no representative scale, prices propagated or actual capacity.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 132,
+      "disposition": "CODE_GUARD_OR_SCOPE_DECLARATION",
+      "candidate_families": [
+        "LIM-S05",
+        "LIM-S04",
+        "LIM-S09"
+      ],
+      "rationale": "Conditional make-buy; stock/capital/transition separation and no observed output.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 133,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-D08",
+        "LIM-T02",
+        "LIM-T03"
+      ],
+      "rationale": "Decision and rival scenarios; no arbitrary probabilities or IA-attributed layoffs.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 134,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-S03",
+        "LIM-S16",
+        "LIM-D03"
+      ],
+      "rationale": "TEE diagnostic, same lineage, no bilateral or behavioral admission.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 135,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-S16",
+        "LIM-S09",
+        "LIM-D03"
+      ],
+      "rationale": "Financial diagnostic, marginal aggregates not who-to-whom or loan rates.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 136,
+      "disposition": "CODE_GUARD_OR_SCOPE_DECLARATION",
+      "candidate_families": [
+        "LIM-D11"
+      ],
+      "rationale": "Report generation preserves flags and changed AI basket; compare output against contract.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 137,
+      "disposition": "CODE_GUARD_OR_SCOPE_DECLARATION",
+      "candidate_families": [
+        "LIM-D06"
+      ],
+      "rationale": "Source-specific rights fallback internal only; verify actual output routes.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 138,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-S16",
+        "LIM-S09",
+        "LIM-F01"
+      ],
+      "rationale": "Financial positions scope not complete balance sheet or ownership rights.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 139,
+      "disposition": "ACTIVE_GAP",
+      "candidate_families": [
+        "LIM-D04",
+        "LIM-D06"
+      ],
+      "rationale": "Shapiro candidate sources access/granularity/license and joins pending.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 140,
+      "disposition": "CODE_GUARD_OR_SCOPE_DECLARATION",
+      "candidate_families": [
+        "LIM-S16",
+        "LIM-S09"
+      ],
+      "rationale": "Marginal stock bounds not clearing input or specific counterpart exposures.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 141,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-D06",
+        "LIM-D11"
+      ],
+      "rationale": "Historic pilot manifest preliminary gates; no general admission.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 142,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-W01"
+      ],
+      "rationale": "Early ontology gate target; partial native graph does not establish completion.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 143,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-S16"
+      ],
+      "rationale": "Ownership matrix, votes/cash flows, indirect ownership, double-counting controls.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 144,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-T01",
+        "LIM-D06",
+        "LIM-T04"
+      ],
+      "rationale": "Product-first and backlog preservation; evidence before release.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 145,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-S12",
+        "LIM-S11",
+        "LIM-S16"
+      ],
+      "rationale": "Hypothetical income feedback not actual sector accounts or forecast.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 146,
+      "disposition": "CODE_GUARD_OR_SCOPE_DECLARATION",
+      "candidate_families": [
+        "LIM-W04",
+        "LIM-W05"
+      ],
+      "rationale": "Scripted parallel operations not regulatory or safety validation.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 147,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-S16"
+      ],
+      "rationale": "Same ownership requirement as 143 across narrative and registry.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 148,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-T02",
+        "LIM-W03",
+        "LIM-D11",
+        "LIM-D06"
+      ],
+      "rationale": "OEM estimand, pre-registration, missing joint data and descriptive scope.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 149,
+      "disposition": "CODE_GUARD_OR_SCOPE_DECLARATION",
+      "candidate_families": [
+        "LIM-D06",
+        "LIM-D10"
+      ],
+      "rationale": "Approved session pin not authorization of publication.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 150,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-D06",
+        "LIM-T04",
+        "LIM-D12"
+      ],
+      "rationale": "V4 requires authorized subset and legal/science/leakage/UX review.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 151,
+      "disposition": "BINDING_CONTRACT",
+      "candidate_families": [
+        "LIM-T04",
+        "LIM-T01"
+      ],
+      "rationale": "Audit scope limitations and incremental evidence; no certification.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 152,
+      "disposition": "HISTORICAL_OR_SCOPED_EVIDENCE",
+      "candidate_families": [
+        "LIM-D05",
+        "LIM-W03"
+      ],
+      "rationale": "OEM external method benchmark, no full report/code or microeconometric replication.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    },
+    {
+      "ordinal": 153,
+      "disposition": "ACTIVE_GAP",
+      "candidate_families": [
+        "LIM-T01",
+        "LIM-S09"
+      ],
+      "rationale": "AC coverage present in funding path only; declared evidence unauthenticated, other registers not migrated.",
+      "verification_status": "CONTEXT_AND_EVIDENCE_PENDING",
+      "closure_authorized": false
+    }
+  ]
+}
