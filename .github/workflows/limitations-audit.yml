@@ -16,6 +16,8 @@ on:
       - 'tests/test_validate_b2_review.py'
       - 'tools/validate_b2_review.py'
       - 'tools/validate_b3_review.py'
+      - 'tools/requirements_matrix.py'
+      - 'tests/test_requirements_matrix.py'
       - 'tests/test_validate_b3_review.py'
       - '.github/workflows/limitations-audit.yml'
   workflow_dispatch:
@@ -47,6 +49,9 @@ jobs:
       - run: python -m unittest discover -s tests -p test_validate_b3_review.py -v
       - name: Route remaining groups and verify targeted review
         run: python -m tools.validate_b3_review --output audit-b3-review.json
+      - run: python -m unittest discover -s tests -p test_requirements_matrix.py -v
+      - name: Build canonical requirements projection
+        run: python -m tools.requirements_matrix --ref 44391d2e9eeb5546ee9ed3aa999238e96b5bf949 --output requirements-matrix.json
       - name: Confirm unqualified release blocked
         run: |
           set +e
@@ -59,6 +64,7 @@ jobs:
         with:
           name: limitations-audit
           path: |
+            requirements-matrix.json
             audit-b3-review.json
             audit-b2-review.json
             limitation-triage.json
