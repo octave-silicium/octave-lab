@@ -1,0 +1,53 @@
+{
+  "id": "SEC-001-B3",
+  "date": "2026-11-26",
+  "tested_commit": "acdec13e50e5ba49d66afbabb6a9ac4962514633",
+  "run_url": "https://github.com/octave-silicium/octave-lab/actions/runs/45745791160",
+  "job_id": 139661400796,
+  "conclusion": "success",
+  "tests": {
+    "previous": 56,
+    "outbound_inventory": 5,
+    "route_holds": 2,
+    "total": 63
+  },
+  "job_seconds": 19,
+  "artifact": {
+    "id": 15082469826,
+    "digest": "sha256:90c3fb4eb308b4e6ae9458116cb3083fedc51bb43d0e577839298ae517b2e99c",
+    "expires_at": "2026-12-26T02:57:43Z"
+  },
+  "baseline": {
+    "revision": "b3b6cdfbed02866fce73fb0d207926e222a6c869",
+    "workflows": 59,
+    "artifact_workflows": 39,
+    "upload_steps": 39,
+    "broad_path_steps": 11,
+    "dynamic_path_steps": 2,
+    "always_steps": 5,
+    "literal_retention_missing_steps": 18,
+    "unresolved_path_steps": 0,
+    "install_workflows": 9,
+    "install_indicators": 11,
+    "direct_exact_versions": [
+      "numpy==2.2.6",
+      "openpyxl==3.1.5",
+      "playwright==1.51.0"
+    ],
+    "hash_required_indicators": 0,
+    "browser_or_os_install_indicators": 2
+  },
+  "scope": {
+    "staged_quarantine_routes": 5,
+    "staged_read_only_indeed": 1,
+    "main_unchanged": true,
+    "live_collection_executed": false,
+    "publication_authorized": false
+  },
+  "limitations": [
+    "Static workflow inspection, no artifact or log content inspection, no legal qualification.",
+    "No transitive dependency lock, SBOM or vulnerability scan.",
+    "Five quarantine candidates are fail-closed holds, not continuity-preserving replacements. Do not merge before approved replacement or explicit owner-approved pause.",
+    "No administrative protection or private repo provisioned."
+  ]
+}
