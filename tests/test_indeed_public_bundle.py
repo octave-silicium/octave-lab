@@ -34,6 +34,9 @@ class IndeedBundleTest(unittest.TestCase):
     def test_unapproved_open_source(self):
         self.reg["sources"][-1]["public_redistribution"]=True
         with self.assertRaises(ValueError):preflight(self.reg)
+    def test_non_boolean_redistribution(self):
+        self.reg['sources'][-1]['public_redistribution']='false'
+        with self.assertRaises(ValueError):preflight(self.reg)
     def test_failed_gate(self):
         self.m["publish_gate"]="BLOCKED";self.save()
         with self.assertRaises(ValueError):bundle(self.root,self.out)

@@ -19,6 +19,7 @@ def preflight(registry):
     rows=registry["sources"]
     ids=[x["id"] for x in rows]
     require(len(ids)==len(set(ids)),"Duplicate source id")
+    require(all(type(x.get("public_redistribution")) is bool for x in rows),"Non-boolean redistribution flag")
     allowed={x["id"]:x for x in rows if x.get("public_redistribution") is True}
     require(set(allowed)==set(SOURCES),"Unexpected open source scope")
     for sid,url in SOURCES.items():
