@@ -1,0 +1,37 @@
+name: POSTLAB milestone continuity
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/ROADMAP.md'
+      - 'docs/POSTLAB-FOLLOWUP-001.md'
+      - 'governance/postlab*.json'
+      - 'audits/postlab_milestones/**'
+      - 'pipeline/economic_postlab_governance.py'
+      - 'tests/test_economic_postlab_governance.py'
+      - 'AGENTS.md'
+      - '.github/workflows/postlab-followup.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  continuity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m unittest discover -s tests -p test_economic_postlab_governance.py -v
+      - name: Check inventory against preserved baseline
+        run: python -m pipeline.economic_postlab_governance --historical-baseline ee222cd1198e473002ce4cf6e90e9472b1a5d0cd
+      - name: Check roadmap modifications have a reviewed receipt
+        if: github.event_name == 'push'
+        env:
+          BEFORE: ${{ github.event.before }}
+        run: |
+          test -n "$BEFORE"
+          python -m pipeline.economic_postlab_governance --historical-baseline ee222cd1198e473002ce4cf6e90e9472b1a5d0cd --diff-base "$BEFORE"

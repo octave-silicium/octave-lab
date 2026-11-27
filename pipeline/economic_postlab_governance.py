@@ -3,6 +3,7 @@ Not an empirical validator; no publication or gate promotion.
 """
 import argparse
 import json
+import subprocess
 from pathlib import Path
 from collections import Counter
 
@@ -86,14 +87,42 @@ def validate_receipt(ledger,receipt):
             require(r["evidence"] and all(evidence_ok(x) for x in r["evidence"]),"RECEIPT_PROOF:"+r["id"])
     return {"milestone":receipt["id"],"dispositions":len(rows),"by_status":dict(Counter(r["status"] for r in rows)),"scientific_validation":False}
 
+def historical_coverage(initial,current):
+    before={e["id"]:e for e in initial["entries"]}
+    after={e["id"]:e for e in current["entries"]}
+    require(set(before)<=set(after),"HISTORICAL_OMISSION:"+str(sorted(set(before)-set(after))))
+    for i,e in before.items():
+        new=after[i]
+        require((e["kind"],e["label"])==(new["kind"],new["label"]),"HISTORICAL_REPLACEMENT:"+i)
+        require(set(e["steps"])<=set(new["steps"]),"HISTORICAL_STEP_OMISSION:"+i)
+
+def verify_changed_receipts(ledger,changed,root=ROOT):
+    if "docs/ROADMAP.md" not in changed:
+        return {"roadmap_changed":False}
+    receipts=[p for p in changed if p.startswith("audits/postlab_milestones/") and p.endswith(".json") and (root/p).is_file()]
+    require(receipts,"ROADMAP_WITHOUT_POSTLAB_RECEIPT")
+    for p in receipts:
+        validate_receipt(ledger,read(root/p))
+    return {"roadmap_changed":True,"receipts":receipts}
+
+def git(*args):
+    return subprocess.check_output(["git",*args],cwd=ROOT,text=True)
+
 def main():
     p=argparse.ArgumentParser()
     p.add_argument("--template")
     p.add_argument("--receipt")
     p.add_argument("--output")
+    p.add_argument("--historical-baseline")
+    p.add_argument("--diff-base")
     a=p.parse_args()
     ledger=read(ROOT/LEDGER)
     result=validate(read(ROOT/MAIN),read(ROOT/DETAIL),ledger)
+    if a.historical_baseline:
+        historical_coverage(json.loads(git("show",a.historical_baseline+":"+LEDGER)),ledger)
+        result["historical_baseline_checked"]=a.historical_baseline
+    if a.diff_base:
+        result["milestone_guard"]=verify_changed_receipts(ledger,git("diff","--name-only",a.diff_base,"HEAD").splitlines())
     if a.template:
         result=template(ledger,a.template)
     if a.receipt:

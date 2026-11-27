@@ -1,6 +1,6 @@
 import copy
 import unittest
-from pipeline.economic_postlab_governance import ROOT, MAIN, DETAIL, LEDGER, read, validate, template, validate_receipt
+from pipeline.economic_postlab_governance import ROOT, MAIN, DETAIL, LEDGER, read, validate, template, validate_receipt, historical_coverage, verify_changed_receipts
 
 class TestPostlabGovernance(unittest.TestCase):
     def setUp(self):
@@ -39,3 +39,18 @@ class TestPostlabGovernance(unittest.TestCase):
         self.ledger["entries"][0]["label"]="changed"
         with self.assertRaisesRegex(ValueError,"LABEL_OR_KIND_CHANGED"):
             validate(self.main,self.detail,self.ledger)
+
+    def test_historical_omission(self):
+        previous=copy.deepcopy(self.ledger)
+        self.ledger['entries'].pop()
+        with self.assertRaisesRegex(ValueError,'HISTORICAL_OMISSION'):
+            historical_coverage(previous,self.ledger)
+    def test_historical_step_omission(self):
+        previous=copy.deepcopy(self.ledger)
+        self.ledger['entries'][0]['steps'].pop(next(iter(self.ledger['entries'][0]['steps'])))
+        with self.assertRaisesRegex(ValueError,'HISTORICAL_STEP_OMISSION'):
+            historical_coverage(previous,self.ledger)
+    def test_roadmap_receipt_required(self):
+        with self.assertRaisesRegex(ValueError,'ROADMAP_WITHOUT_POSTLAB_RECEIPT'):
+            verify_changed_receipts(self.ledger,['docs/ROADMAP.md'])
+        self.assertFalse(verify_changed_receipts(self.ledger,['audits/latest_multisource.json'])['roadmap_changed'])
