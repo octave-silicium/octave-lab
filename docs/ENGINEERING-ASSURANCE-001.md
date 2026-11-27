@@ -26,3 +26,7 @@ Version interfaces and data, use dependency inversion where useful, migration te
 4. Reopen additional scientific/product capabilities by evidence and dependency, not by a checklist count.
 
 All rows in the new register are OPEN for implementation/qualification. The register test only checks its structural contract; it cannot authorize release or prove security, completeness or empirical validity.
+
+## Decision-oriented analytical outputs — 27 November 2026
+
+The analytical infrastructure is designed to produce decision-useful evidence rather than maximize feature count. Retain the complete scientific target and all existing qualification gates. For each new component, identify its investigation or reproducibility purpose, acceptance evidence, dependencies, alternatives, cost and maintenance implications, and a stopping criterion. Prefer reusable, modular analytical capabilities and documented outputs over speculative interfaces. Preserve point-in-time observations and revisions where source rights permit, and record dated prospective statements, assumptions, uncertainty, and later evaluation without rewriting historical predictions. Distinguish forecast calibration from scenarios and observations. Demonstrations must expose evidence and limitations without assuming permission to release internal implementation details, restricted assets or confidential material. Apply existing review and release controls; no new publication, scientific or commercial qualification follows from this design requirement.
