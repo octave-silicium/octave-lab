@@ -40,3 +40,7 @@ La cible intégrale validée est [ARCH-002](ARCH-002.md) et son [registre machin
 
 ## POSTLAB-CONTRADICT-001 v1.1 — Corpus à qualifier
 [Inventaire détaillé](POSTLAB-CONTRADICT-001.md) et [registre](../governance/postlab_contradictory_detail_v1.json). Les 25 notices préservent les auteurs/corpus cités. Appliquer BENCH-001 sans validation ni admission automatique.
+
+
+## POSTLAB-FOLLOWUP-001 — Contrôle obligatoire par jalon (27/11/2026)
+[Procédure normative](POSTLAB-FOLLOWUP-001.md), [registre de suivi](../governance/postlab_followup_v1.json), [règles de reprise](../AGENTS.md). Les 297 lignes sont conservées et examinées avant/après chaque jalon; sélection originale, revue scientifique, données et droits, implémentation, calibration, validation sont des obligations de suivi, jamais implicites. Reçu de couverture obligatoire avant clôture, reports motivés et prochaine action; aucune promotion de gate. PRODUCT-FIRST et V3e inchangés. Le contrôle structurel ne remplace pas la qualification empirique.

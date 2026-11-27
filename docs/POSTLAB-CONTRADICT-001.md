@@ -301,3 +301,7 @@ Registre détaillé : [postlab_contradictory_detail_v1.json](../governance/postl
 - BENCH-001: 2–4 sources originales par mécanisme, théorie rivale, hypothèses, estimand, régime, preuves, paramètres, limites et tests négatifs; titre précis à sélectionner si seule famille de travaux nommée.
 - Qualification bibliographique ≠ validation scientifique; sources candidates à identifier précisément, URL, accès/droits, unité, couverture, fréquence, millésime et admission DATA-002; aucun accès présumé.
 - Exemples illustratifs, pas prévisions; huit étapes de traitement, maturité M0–M6 et six scénarios S1–S6 restent dans registre principal. PRODUCT-FIRST, gates et droits inchangés.
+
+
+## POSTLAB-FOLLOWUP-001 — Contrôle obligatoire par jalon (27/11/2026)
+[Procédure normative](POSTLAB-FOLLOWUP-001.md), [registre de suivi](../governance/postlab_followup_v1.json), [règles de reprise](../AGENTS.md). Les 297 lignes sont conservées et examinées avant/après chaque jalon; sélection originale, revue scientifique, données et droits, implémentation, calibration, validation sont des obligations de suivi, jamais implicites. Reçu de couverture obligatoire avant clôture, reports motivés et prochaine action; aucune promotion de gate. PRODUCT-FIRST et V3e inchangés. Le contrôle structurel ne remplace pas la qualification empirique.
