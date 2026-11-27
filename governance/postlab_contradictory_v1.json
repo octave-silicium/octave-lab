@@ -1,7 +1,7 @@
 {
   "id": "POSTLAB-CONTRADICT-001",
   "date": "2026-11-27",
-  "version": "1.0",
+  "version": "1.1",
   "status": "USER_APPROVED_REQUIREMENTS_METHOD_PENDING",
   "baseline": {
     "commit": "e4f307e1edb6e190dfb097b6bcd602ffa2ce8f94",
@@ -68,7 +68,8 @@
         "LIM-S15"
       ],
       "requirement": "H=Q×h résiduelle + H nouvelles tâches/contrôle (sans double compte); H/temps ETP; coût complet, qualité, VAN et adoption; seuil gQ=gP si hypothèses uniformes.",
-      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING"
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "detail_ref": "POSTLAB-CONTRADICT-001-DETAIL/A1"
     },
     {
       "id": "A2",
@@ -101,7 +102,8 @@
         "LIM-S15"
       ],
       "requirement": "Cohortes de tâches, flux création/disparition, durées et risques de transition; tester compensation durable, réautomatisation et biais des référentiels.",
-      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING"
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "detail_ref": "POSTLAB-CONTRADICT-001-DETAIL/A2"
     },
     {
       "id": "A3",
@@ -124,7 +126,8 @@
         "LIM-S15"
       ],
       "requirement": "Distinguer perte de pratique, obsolescence technique, prix de compétence; cohortes, transitions et coût de requalification.",
-      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING"
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "detail_ref": "POSTLAB-CONTRADICT-001-DETAIL/A3"
     },
     {
       "id": "B1",
@@ -152,7 +155,8 @@
         "LIM-S16"
       ],
       "requirement": "Comptes stocks-flux, microsimulation si microdonnées admises, financement dette/actifs et incidence; recettes par assiette, prestations et déficit.",
-      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING"
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "detail_ref": "POSTLAB-CONTRADICT-001-DETAIL/B1"
     },
     {
       "id": "B2",
@@ -182,7 +186,8 @@
         "LIM-S16"
       ],
       "requirement": "Décomposer VA, coûts, marges, pouvoir de marché, rente foncière/IP/compute; profits et rentes ne sont pas synonymes.",
-      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING"
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "detail_ref": "POSTLAB-CONTRADICT-001-DETAIL/B2"
     },
     {
       "id": "B3",
@@ -212,7 +217,8 @@
         "LIM-S16"
       ],
       "requirement": "Budget/cohorte, propensions et courbes d'Engel si estimables, contraintes d'offre et épargne; boucles revenu→demande→production→revenu.",
-      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING"
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "detail_ref": "POSTLAB-CONTRADICT-001-DETAIL/B3"
     },
     {
       "id": "B4",
@@ -239,7 +245,8 @@
         "LIM-S14"
       ],
       "requirement": "Prix/quantités par secteur, foncier, énergie et capacité, coût réel du panier; comparer allocation et localisation.",
-      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING"
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "detail_ref": "POSTLAB-CONTRADICT-001-DETAIL/B4"
     },
     {
       "id": "C1",
@@ -269,7 +276,8 @@
         "LIM-S16"
       ],
       "requirement": "Propriété ultime, contrôle, dépendances, HHI et distribution; scénarios concurrentiels et institutionnels.",
-      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING"
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "detail_ref": "POSTLAB-CONTRADICT-001-DETAIL/C1"
     },
     {
       "id": "C2",
@@ -300,7 +308,8 @@
         "LIM-S09"
       ],
       "requirement": "Chocs corrélés, réseaux multiples, capacité de repli, délais, coûts de maintenance et arbitrage robustesse/productivité.",
-      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING"
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "detail_ref": "POSTLAB-CONTRADICT-001-DETAIL/C2"
     },
     {
       "id": "C3",
@@ -325,7 +334,8 @@
         "LIM-S15"
       ],
       "requirement": "Flux d'apprentissage et expertise, disponibilité mentor/évaluateur, impact opérationnel; mesure du stock critique.",
-      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING"
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "detail_ref": "POSTLAB-CONTRADICT-001-DETAIL/C3"
     },
     {
       "id": "D1",
@@ -350,7 +360,8 @@
         "LIM-T05"
       ],
       "requirement": "Études usage du temps/bien-être et comportements; motivation intrinsèque/extrinsèque; observation/scénarios qualitatifs par défaut.",
-      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING"
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "detail_ref": "POSTLAB-CONTRADICT-001-DETAIL/D1"
     },
     {
       "id": "D2",
@@ -379,7 +390,8 @@
         "LIM-T05"
       ],
       "requirement": "Projections conditionnelles par cohortes; effets incertains de fécondité/migration, coûts et participation.",
-      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING"
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "detail_ref": "POSTLAB-CONTRADICT-001-DETAIL/D2"
     }
   ],
   "entries": [
@@ -1034,5 +1046,7 @@
     "G3.3/3.4: emploi, nouvelles tâches, expertise, prix, concurrence; G4: revenus, fiscalité, propriété et raretés, hétérogénéité et fermeture état commun après priorité produit",
     "P1: résilience, foncier, maintenance et compétences; P2: observation et scénarios humains/démographiques; ne pas bloquer première vente",
     "G5: backtests, contre-exemples, restitution et revue indépendante, sans promotion de gate"
-  ]
+  ],
+  "detail_registry": "governance/postlab_contradictory_detail_v1.json",
+  "detail_status": "EXPLICIT_CANDIDATE_INVENTORY_NOT_ADMITTED"
 }

@@ -36,3 +36,7 @@ La cible intégrale validée est [ARCH-002](ARCH-002.md) et son [registre machin
 
 ## OEM/Coface — benchmark validé (25/11/2026)
 [BENCH-OEM-001](BENCH-OEM-001.md) : quatre axes (exposition vs performance réelle, indicateur avancé indépendant, robustesse multisource/multipays, valeur décisionnelle de la refonte et du couplage économique). AI-LERT référence externe non reproduite ; jointure métier×secteur×temps à qualifier, pas de causalité ni supériorité revendiquée. VERTICAL-001 reste prioritaire ; intégrer le comparateur simple et contre-hypothèses dans V1/V2 si matériel, reporter la réplication intégrale sans données compatibles. Aucun gate promu.
+
+
+## POSTLAB-CONTRADICT-001 v1.1 — Corpus à qualifier
+[Inventaire détaillé](POSTLAB-CONTRADICT-001.md) et [registre](../governance/postlab_contradictory_detail_v1.json). Les 25 notices préservent les auteurs/corpus cités. Appliquer BENCH-001 sans validation ni admission automatique.

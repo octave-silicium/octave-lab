@@ -185,3 +185,119 @@ Référence sans choc et sans adoption obligatoires; scénarios composables, non
 - Becker; Heckman; Deci & Ryan; Jahoda; North; Olson; Festinger
 
 Registre machine-readable : [postlab_contradictory_v1.json](../governance/postlab_contradictory_v1.json). Les sources détaillées, paramètres, interfaces exécutables et essais historiques restent à produire par claim et jalon. Aucune clôture de limitation ni gate promu.
+
+
+## Complément d'exhaustivité v1.1 — 27/11/2026
+Registre détaillé : [postlab_contradictory_detail_v1.json](../governance/postlab_contradictory_detail_v1.json). Les exigences ci-dessous ne constituent ni une acquisition de données ni une validation.
+
+### A1 — Substitution dynamique capital-travail
+- Phénomènes : complémentarité; substitution; élasticité demande; productivité; arbitrage CAPEX/OPEX; réorganisation; déplacement et création de tâches.
+- Modèles/méthodes : modèles par tâches Acemoglu–Restrepo; fonctions de production; optimisation sous contraintes; coûts complets de substitution.
+- Sources candidates : Insee; Dares; Urssaf; ESCO; O*NET; Eurostat; EU KLEMS; adoption technologique.
+- Sorties attendues : heures économisées par activité; ETP résiduels; seuil de rentabilité; besoins de recrutement; conditions de maintien/disparition économique du poste.
+
+### A2 — Automatisation récursive des nouveaux métiers
+- Phénomènes : création de tâches; obsolescence accélérée des compétences; automatisation de l'orchestration et du contrôle; raccourcissement du cycle de vie des métiers; réautomatisation.
+- Modèles/méthodes : cohortes de tâches; modèles de durée/survie; probabilités de transition; frontière des capacités technologiques datée.
+- Sources candidates : historiques des offres d'emploi; nouvelles compétences demandées; référentiels métiers; benchmarks IA; retours de déploiements.
+- Sorties attendues : durée de vie économique des compétences; création/destruction des tâches; solde net de travail requis.
+
+### A3 — Dépréciation du capital humain
+- Phénomènes : obsolescence; désapprentissage; perte de pratique; dévalorisation salariale; transférabilité des compétences.
+- Modèles/méthodes : stock de capital humain et taux de dépréciation différenciés; matrices de transition professionnelle; primes salariales associées aux compétences.
+- Sources candidates : PIAAC; Dares; enquêtes Formation et Emploi; rémunérations; recrutements; données longitudinales.
+- Sorties attendues : compétences en appréciation/dépréciation; coût des reconversions; durée de pertinence économique des qualifications.
+
+### B1 — Soutenabilité fiscale post-salariat
+- Phénomènes : érosion des cotisations; transformation des assiettes; dépenses sociales; fiscalité du capital; dette publique; retraites.
+- Modèles/méthodes : comptabilité macroéconomique stocks-flux; microsimulation fiscale et sociale; scénarios de redistribution; dynamique de dette.
+- Sources candidates : Insee; DGFiP; DG Trésor; Drees; Eurostat; OCDE; TEE/TES.
+- Sorties attendues : recettes par assiette; déficit; capacité de redistribution; financement des retraites; soutenabilité des revenus universels.
+
+### B2 — Formation et déplacement des rentes
+- Phénomènes : compression des marges; pouvoir de marché; propriété intellectuelle; rente foncière; rareté des infrastructures; effets de réseau.
+- Modèles/méthodes : décomposition de la valeur ajoutée; marges économiques et markups; élasticités; concurrence imparfaite; propagation intersectorielle.
+- Sources candidates : comptes d'entreprises; Ésane; FARE; comptes nationaux; prix de production; données sectorielles.
+- Sorties attendues : valeur créée/détruite/transférée/capturée par acteur et secteur.
+
+### B3 — Demande solvable et distribution des revenus
+- Phénomènes : perte de revenus salariaux; propension à consommer; épargne; redistribution; effet richesse; saturation des besoins.
+- Modèles/méthodes : fonctions de consommation hétérogènes; courbes d'Engel; systèmes de demande par catégorie de biens; boucles macroéconomiques.
+- Sources candidates : Insee Budget de famille; Filosofi; comptes des ménages; patrimoine; consommation par décile.
+- Sorties attendues : consommation par population; demande adressée aux entreprises; pouvoir d'achat réel; risque de contraction.
+
+### B4 — Raretés et inflation sectorielle
+- Phénomènes : rigidité de l'offre; déplacement de la demande; contraintes foncières, énergétiques et matérielles; effet rebond.
+- Modèles/méthodes : élasticités sectorielles; contraintes de capacité; coûts marginaux; prix d'équilibre si fermeture qualifiée; paniers de consommation différenciés.
+- Sources candidates : DVF; indices de loyers; SDES; RTE; Eurostat; prix sectoriels; tableaux entrées-sorties.
+- Sorties attendues : secteurs en déflation/inflation; coût de la vie territorial; déplacement des dépenses contraintes.
+
+### C1 — Concentration du capital et du pouvoir
+- Phénomènes : économies d'échelle; barrières à l'entrée; intégration verticale; dépendance technologique; concentration patrimoniale; verrouillage des marchés.
+- Modèles/méthodes : HHI; coefficient de Gini (variable et population explicites); graphes de propriété et dépendance; markups; coûts de changement de fournisseur.
+- Sources candidates : registres d'entreprises; SIRENE; INPI; comptes consolidés; parts de marché; patrimoine; infrastructures critiques.
+- Sorties attendues : concentration de la propriété productive; dépendances des entreprises et États; distribution du pouvoir économique.
+
+### C2 — Résilience des réseaux productifs
+- Phénomènes : défaillances en cascade; dépendances communes; absence de substituts; stocks insuffisants; contagion financière.
+- Modèles/méthodes : théorie des réseaux; matrices entrées-sorties; propagation de chocs; contraintes de capacité; stress tests.
+- Sources candidates : TES; FIGARO; commerce international; fournisseurs critiques; réseaux financiers; infrastructures énergétiques.
+- Sorties attendues : points critiques; pertes indirectes; délais de rétablissement; valeur économique de la redondance.
+
+### C3 — Transmission intergénérationnelle
+- Phénomènes : disparition des tâches juniors; rupture des parcours d'apprentissage; perte du savoir tacite; raréfaction de l'expertise humaine indépendante.
+- Modèles/méthodes : stocks de compétences par expérience; flux de formation, départs, promotion et dépréciation; besoins minimaux de redondance.
+- Sources candidates : pyramides des âges; apprentissage; formations; recrutements par séniorité; certifications; incidents opérationnels.
+- Sorties attendues : ruptures de production d'expertise; délai avant pénurie critique; coût du maintien des savoir-faire.
+
+### D1 — Motivation, statut et cohésion
+- Phénomènes : motivation intrinsèque/extrinsèque; identité professionnelle; reconnaissance sociale; compétition positionnelle; sentiment d'utilité; adaptation hédonique; autonomie; compétence; appartenance.
+- Modèles/méthodes : cadres Deci/Ryan, Jahoda, Hirsch, Festinger; comparaisons longitudinales et expériences si identification admissible; scénarios qualitatifs par défaut.
+- Sources candidates : European Social Survey (ESS); World Values Survey (WVS); Eurofound; enquêtes Emploi du temps; expérimentations de revenu garanti.
+- Sorties attendues : usages du temps; participation sociale; bien-être; engagement volontaire; déplacement des aspirations.
+
+### D2 — Démographie et culture
+- Phénomènes : fécondité; sécurité économique; coût du logement; mobilité; structure familiale; vieillissement; évolution des préférences.
+- Modèles/méthodes : projections par cohortes démographiques; scénarios de fécondité; modèles conditionnels de comportements.
+- Sources candidates : Insee; ONU; OCDE; Eurostat; Human Fertility Database (HFD).
+- Sorties attendues : population active; structure des ménages; besoins de consommation; dépenses publiques; rétroactions économiques.
+
+## Bibliographie et corpus institutionnels
+- PB01 Acemoglu & Restrepo — Automation and New Tasks (2019): displacement and reinstatement : https://www.nber.org/papers/w25684 (A1, A2; EXISTING_R01).
+- PB02 David Autor — Polarisation et économie des compétences ; titre exact à sélectionner selon BENCH-001 (A1, A3; CANDIDATE).
+- PB03 Autor & Salomons — Is Automation Labor-Displacing? : https://www.nber.org/papers/w24871 (A1, B3; EXISTING_R03).
+- PB04 William Baumol — Différentiels de productivité et maladie des coûts ; titre exact à sélectionner selon BENCH-001 (B4; CANDIDATE).
+- PB05 Wassily Leontief — Modèles entrées-sorties ; titre exact à sélectionner selon BENCH-001 (C2, B2; CANDIDATE).
+- PB06 Godley & Lavoie — Cohérence macroéconomique stocks-flux ; titre exact à sélectionner selon BENCH-001 (B1, B3; CANDIDATE).
+- PB07 Acemoglu, Carvalho, Ozdaglar & Tahbaz-Salehi — The Network Origins of Aggregate Fluctuations (2012) : https://doi.org/10.3982/ECTA9623 (C2; BIBLIOGRAPHICALLY_VERIFIED).
+- PB08 Carvalho & Tahbaz-Salehi — Production Networks: A Primer : https://doi.org/10.1146/annurev-economics-080218-030212 (C2; EXISTING_R04).
+- PB09 Joseph Schumpeter — Innovation et destruction créatrice ; titre exact à sélectionner selon BENCH-001 (A2, B2; CANDIDATE).
+- PB10 Philippe Aghion — Innovation, concurrence et croissance ; titre exact à sélectionner selon BENCH-001 (A2, B2; CANDIDATE).
+- PB11 Fred Hirsch — Raretés et biens positionnels ; titre exact à sélectionner selon BENCH-001 (B4, D1; CANDIDATE).
+- PB12 Elinor Ostrom — Gouvernance des ressources ; titre exact à sélectionner selon BENCH-001 (C1, B4; CANDIDATE).
+- PB13 Herbert Simon — Allocation de l'attention ; titre exact à sélectionner selon BENCH-001 (D1; CANDIDATE).
+- PB14 Lisanne Bainbridge — Ironies of Automation (1983) : https://doi.org/10.1016/0005-1098(83)90046-8 (A3, C2, C3; BIBLIOGRAPHICALLY_VERIFIED).
+- PB15 Gary Becker — Capital humain et économie familiale ; titre exact à sélectionner selon BENCH-001 (A3, D2; CANDIDATE).
+- PB16 James Heckman — Formation dynamique des compétences ; titre exact à sélectionner selon BENCH-001 (A3, C3; CANDIDATE).
+- PB17 Deci & Ryan — The What and Why of Goal Pursuits (2000) : https://doi.org/10.1207/S15327965PLI1104_01 (D1; BIBLIOGRAPHICALLY_VERIFIED).
+- PB18 Marie Jahoda — Fonctions psychosociales de l'emploi ; titre exact à sélectionner selon BENCH-001 (D1; CANDIDATE).
+- PB19 Leon Festinger — Comparaison sociale ; titre exact à sélectionner selon BENCH-001 (D1; CANDIDATE).
+- PB20 Douglass North — Institutions et trajectoires économiques ; titre exact à sélectionner selon BENCH-001 (B1, C1; CANDIDATE).
+- PB21 Mancur Olson — Action collective et intérêts organisés ; titre exact à sélectionner selon BENCH-001 (B1, C1; CANDIDATE).
+- PB22 FMI — Broadening the Gains from Generative AI: The Role of Fiscal Policies (2024) : https://www.imf.org/en/Publications/Staff-Discussion-Notes/Issues/2024/06/11/Broadening-the-Gains-from-Generative-AI-The-Role-of-Fiscal-Policies-549639 (B1, B3; BIBLIOGRAPHICALLY_VERIFIED).
+- PB23 OCDE — Travaux sur concentration, marges et pouvoir de marché; corpus précis à qualifier ; titre exact à sélectionner selon BENCH-001 (B2, C1; CANDIDATE).
+- PB24 OCDE — Society at a Glance 2024: OECD Social Indicators : https://www.oecd.org/en/publications/society-at-a-glance-2024_918d8db3-en.html (D2; BIBLIOGRAPHICALLY_VERIFIED).
+- PB25 Brynjolfsson, Li & Raymond — Generative AI at Work : https://doi.org/10.1093/qje/qjae044 (A3, C3; EXISTING_G3_SKILLS).
+
+## Exemples et chaîne d'investigation
+- 100 ETP, productivité ×10, volume inchangé → 10 ETP (−90 %). H1/H0=(1+gQ)/(1+gP) sous hypothèses; ETP ≠ licenciement.
+- Prix 100→20 EUR, coût complet 90→5, résultat unitaire 10→15, marge 10→75 %; tester concurrence, volume, coûts et rentes.
+- Revenu 2500→1200 EUR, dépenses 2000→500, reste à vivre 500→700; tester logement, paniers et redistribution.
+- 100 ETP, productivité ×5, volume +100 % →40 ETP; seuil maintien +400 %; aucune calibration.
+- O1 tâche/qualité/travail résiduel; O2 réorganisation, paie, marge, investissement et prix; O3 concurrence, marché, fournisseurs/clients; O4 ménages, consommation, fiscalité, finance, emploi indirect; O5 concentration, reconversion, formation; O6+ institutions, redistribution, démographie; ordres relatifs et rétroactions.
+
+## Règles d'admission
+- Inventaire des éléments nommés dans les deux réponses validées, complément sans suppression du registre HA01–HA14; modèles candidats non calibrés.
+- BENCH-001: 2–4 sources originales par mécanisme, théorie rivale, hypothèses, estimand, régime, preuves, paramètres, limites et tests négatifs; titre précis à sélectionner si seule famille de travaux nommée.
+- Qualification bibliographique ≠ validation scientifique; sources candidates à identifier précisément, URL, accès/droits, unité, couverture, fréquence, millésime et admission DATA-002; aucun accès présumé.
+- Exemples illustratifs, pas prévisions; huit étapes de traitement, maturité M0–M6 et six scénarios S1–S6 restent dans registre principal. PRODUCT-FIRST, gates et droits inchangés.

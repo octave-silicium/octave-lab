@@ -1,0 +1,670 @@
+{
+  "id": "POSTLAB-CONTRADICT-001-DETAIL",
+  "version": "1.0",
+  "date": "2026-11-27",
+  "status": "USER_APPROVED_REQUIREMENTS_METHOD_PENDING",
+  "axes": [
+    {
+      "id": "A1",
+      "phenomena": [
+        "complémentarité",
+        "substitution",
+        "élasticité demande",
+        "productivité",
+        "arbitrage CAPEX/OPEX",
+        "réorganisation",
+        "déplacement et création de tâches"
+      ],
+      "models": [
+        "modèles par tâches Acemoglu–Restrepo",
+        "fonctions de production",
+        "optimisation sous contraintes",
+        "coûts complets de substitution"
+      ],
+      "data_sources": [
+        "Insee",
+        "Dares",
+        "Urssaf",
+        "ESCO",
+        "O*NET",
+        "Eurostat",
+        "EU KLEMS",
+        "adoption technologique"
+      ],
+      "outputs": [
+        "heures économisées par activité",
+        "ETP résiduels",
+        "seuil de rentabilité",
+        "besoins de recrutement",
+        "conditions de maintien/disparition économique du poste"
+      ],
+      "status": "REQUIREMENT_ONLY_NOT_ADMITTED"
+    },
+    {
+      "id": "A2",
+      "phenomena": [
+        "création de tâches",
+        "obsolescence accélérée des compétences",
+        "automatisation de l'orchestration et du contrôle",
+        "raccourcissement du cycle de vie des métiers",
+        "réautomatisation"
+      ],
+      "models": [
+        "cohortes de tâches",
+        "modèles de durée/survie",
+        "probabilités de transition",
+        "frontière des capacités technologiques datée"
+      ],
+      "data_sources": [
+        "historiques des offres d'emploi",
+        "nouvelles compétences demandées",
+        "référentiels métiers",
+        "benchmarks IA",
+        "retours de déploiements"
+      ],
+      "outputs": [
+        "durée de vie économique des compétences",
+        "création/destruction des tâches",
+        "solde net de travail requis"
+      ],
+      "status": "REQUIREMENT_ONLY_NOT_ADMITTED"
+    },
+    {
+      "id": "A3",
+      "phenomena": [
+        "obsolescence",
+        "désapprentissage",
+        "perte de pratique",
+        "dévalorisation salariale",
+        "transférabilité des compétences"
+      ],
+      "models": [
+        "stock de capital humain et taux de dépréciation différenciés",
+        "matrices de transition professionnelle",
+        "primes salariales associées aux compétences"
+      ],
+      "data_sources": [
+        "PIAAC",
+        "Dares",
+        "enquêtes Formation et Emploi",
+        "rémunérations",
+        "recrutements",
+        "données longitudinales"
+      ],
+      "outputs": [
+        "compétences en appréciation/dépréciation",
+        "coût des reconversions",
+        "durée de pertinence économique des qualifications"
+      ],
+      "status": "REQUIREMENT_ONLY_NOT_ADMITTED"
+    },
+    {
+      "id": "B1",
+      "phenomena": [
+        "érosion des cotisations",
+        "transformation des assiettes",
+        "dépenses sociales",
+        "fiscalité du capital",
+        "dette publique",
+        "retraites"
+      ],
+      "models": [
+        "comptabilité macroéconomique stocks-flux",
+        "microsimulation fiscale et sociale",
+        "scénarios de redistribution",
+        "dynamique de dette"
+      ],
+      "data_sources": [
+        "Insee",
+        "DGFiP",
+        "DG Trésor",
+        "Drees",
+        "Eurostat",
+        "OCDE",
+        "TEE/TES"
+      ],
+      "outputs": [
+        "recettes par assiette",
+        "déficit",
+        "capacité de redistribution",
+        "financement des retraites",
+        "soutenabilité des revenus universels"
+      ],
+      "status": "REQUIREMENT_ONLY_NOT_ADMITTED"
+    },
+    {
+      "id": "B2",
+      "phenomena": [
+        "compression des marges",
+        "pouvoir de marché",
+        "propriété intellectuelle",
+        "rente foncière",
+        "rareté des infrastructures",
+        "effets de réseau"
+      ],
+      "models": [
+        "décomposition de la valeur ajoutée",
+        "marges économiques et markups",
+        "élasticités",
+        "concurrence imparfaite",
+        "propagation intersectorielle"
+      ],
+      "data_sources": [
+        "comptes d'entreprises",
+        "Ésane",
+        "FARE",
+        "comptes nationaux",
+        "prix de production",
+        "données sectorielles"
+      ],
+      "outputs": [
+        "valeur créée/détruite/transférée/capturée par acteur et secteur"
+      ],
+      "status": "REQUIREMENT_ONLY_NOT_ADMITTED"
+    },
+    {
+      "id": "B3",
+      "phenomena": [
+        "perte de revenus salariaux",
+        "propension à consommer",
+        "épargne",
+        "redistribution",
+        "effet richesse",
+        "saturation des besoins"
+      ],
+      "models": [
+        "fonctions de consommation hétérogènes",
+        "courbes d'Engel",
+        "systèmes de demande par catégorie de biens",
+        "boucles macroéconomiques"
+      ],
+      "data_sources": [
+        "Insee Budget de famille",
+        "Filosofi",
+        "comptes des ménages",
+        "patrimoine",
+        "consommation par décile"
+      ],
+      "outputs": [
+        "consommation par population",
+        "demande adressée aux entreprises",
+        "pouvoir d'achat réel",
+        "risque de contraction"
+      ],
+      "status": "REQUIREMENT_ONLY_NOT_ADMITTED"
+    },
+    {
+      "id": "B4",
+      "phenomena": [
+        "rigidité de l'offre",
+        "déplacement de la demande",
+        "contraintes foncières, énergétiques et matérielles",
+        "effet rebond"
+      ],
+      "models": [
+        "élasticités sectorielles",
+        "contraintes de capacité",
+        "coûts marginaux",
+        "prix d'équilibre si fermeture qualifiée",
+        "paniers de consommation différenciés"
+      ],
+      "data_sources": [
+        "DVF",
+        "indices de loyers",
+        "SDES",
+        "RTE",
+        "Eurostat",
+        "prix sectoriels",
+        "tableaux entrées-sorties"
+      ],
+      "outputs": [
+        "secteurs en déflation/inflation",
+        "coût de la vie territorial",
+        "déplacement des dépenses contraintes"
+      ],
+      "status": "REQUIREMENT_ONLY_NOT_ADMITTED"
+    },
+    {
+      "id": "C1",
+      "phenomena": [
+        "économies d'échelle",
+        "barrières à l'entrée",
+        "intégration verticale",
+        "dépendance technologique",
+        "concentration patrimoniale",
+        "verrouillage des marchés"
+      ],
+      "models": [
+        "HHI",
+        "coefficient de Gini (variable et population explicites)",
+        "graphes de propriété et dépendance",
+        "markups",
+        "coûts de changement de fournisseur"
+      ],
+      "data_sources": [
+        "registres d'entreprises",
+        "SIRENE",
+        "INPI",
+        "comptes consolidés",
+        "parts de marché",
+        "patrimoine",
+        "infrastructures critiques"
+      ],
+      "outputs": [
+        "concentration de la propriété productive",
+        "dépendances des entreprises et États",
+        "distribution du pouvoir économique"
+      ],
+      "status": "REQUIREMENT_ONLY_NOT_ADMITTED"
+    },
+    {
+      "id": "C2",
+      "phenomena": [
+        "défaillances en cascade",
+        "dépendances communes",
+        "absence de substituts",
+        "stocks insuffisants",
+        "contagion financière"
+      ],
+      "models": [
+        "théorie des réseaux",
+        "matrices entrées-sorties",
+        "propagation de chocs",
+        "contraintes de capacité",
+        "stress tests"
+      ],
+      "data_sources": [
+        "TES",
+        "FIGARO",
+        "commerce international",
+        "fournisseurs critiques",
+        "réseaux financiers",
+        "infrastructures énergétiques"
+      ],
+      "outputs": [
+        "points critiques",
+        "pertes indirectes",
+        "délais de rétablissement",
+        "valeur économique de la redondance"
+      ],
+      "status": "REQUIREMENT_ONLY_NOT_ADMITTED"
+    },
+    {
+      "id": "C3",
+      "phenomena": [
+        "disparition des tâches juniors",
+        "rupture des parcours d'apprentissage",
+        "perte du savoir tacite",
+        "raréfaction de l'expertise humaine indépendante"
+      ],
+      "models": [
+        "stocks de compétences par expérience",
+        "flux de formation, départs, promotion et dépréciation",
+        "besoins minimaux de redondance"
+      ],
+      "data_sources": [
+        "pyramides des âges",
+        "apprentissage",
+        "formations",
+        "recrutements par séniorité",
+        "certifications",
+        "incidents opérationnels"
+      ],
+      "outputs": [
+        "ruptures de production d'expertise",
+        "délai avant pénurie critique",
+        "coût du maintien des savoir-faire"
+      ],
+      "status": "REQUIREMENT_ONLY_NOT_ADMITTED"
+    },
+    {
+      "id": "D1",
+      "phenomena": [
+        "motivation intrinsèque/extrinsèque",
+        "identité professionnelle",
+        "reconnaissance sociale",
+        "compétition positionnelle",
+        "sentiment d'utilité",
+        "adaptation hédonique",
+        "autonomie",
+        "compétence",
+        "appartenance"
+      ],
+      "models": [
+        "cadres Deci/Ryan, Jahoda, Hirsch, Festinger",
+        "comparaisons longitudinales et expériences si identification admissible",
+        "scénarios qualitatifs par défaut"
+      ],
+      "data_sources": [
+        "European Social Survey (ESS)",
+        "World Values Survey (WVS)",
+        "Eurofound",
+        "enquêtes Emploi du temps",
+        "expérimentations de revenu garanti"
+      ],
+      "outputs": [
+        "usages du temps",
+        "participation sociale",
+        "bien-être",
+        "engagement volontaire",
+        "déplacement des aspirations"
+      ],
+      "status": "REQUIREMENT_ONLY_NOT_ADMITTED"
+    },
+    {
+      "id": "D2",
+      "phenomena": [
+        "fécondité",
+        "sécurité économique",
+        "coût du logement",
+        "mobilité",
+        "structure familiale",
+        "vieillissement",
+        "évolution des préférences"
+      ],
+      "models": [
+        "projections par cohortes démographiques",
+        "scénarios de fécondité",
+        "modèles conditionnels de comportements"
+      ],
+      "data_sources": [
+        "Insee",
+        "ONU",
+        "OCDE",
+        "Eurostat",
+        "Human Fertility Database (HFD)"
+      ],
+      "outputs": [
+        "population active",
+        "structure des ménages",
+        "besoins de consommation",
+        "dépenses publiques",
+        "rétroactions économiques"
+      ],
+      "status": "REQUIREMENT_ONLY_NOT_ADMITTED"
+    }
+  ],
+  "bibliography": [
+    {
+      "id": "PB01",
+      "author": "Acemoglu & Restrepo",
+      "title": "Automation and New Tasks (2019): displacement and reinstatement",
+      "url": "https://www.nber.org/papers/w25684",
+      "axes": [
+        "A1",
+        "A2"
+      ],
+      "status": "EXISTING_R01"
+    },
+    {
+      "id": "PB02",
+      "author": "David Autor",
+      "title": "Polarisation et économie des compétences",
+      "url": null,
+      "axes": [
+        "A1",
+        "A3"
+      ],
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "PB03",
+      "author": "Autor & Salomons",
+      "title": "Is Automation Labor-Displacing?",
+      "url": "https://www.nber.org/papers/w24871",
+      "axes": [
+        "A1",
+        "B3"
+      ],
+      "status": "EXISTING_R03"
+    },
+    {
+      "id": "PB04",
+      "author": "William Baumol",
+      "title": "Différentiels de productivité et maladie des coûts",
+      "url": null,
+      "axes": [
+        "B4"
+      ],
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "PB05",
+      "author": "Wassily Leontief",
+      "title": "Modèles entrées-sorties",
+      "url": null,
+      "axes": [
+        "C2",
+        "B2"
+      ],
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "PB06",
+      "author": "Godley & Lavoie",
+      "title": "Cohérence macroéconomique stocks-flux",
+      "url": null,
+      "axes": [
+        "B1",
+        "B3"
+      ],
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "PB07",
+      "author": "Acemoglu, Carvalho, Ozdaglar & Tahbaz-Salehi",
+      "title": "The Network Origins of Aggregate Fluctuations (2012)",
+      "url": "https://doi.org/10.3982/ECTA9623",
+      "axes": [
+        "C2"
+      ],
+      "status": "BIBLIOGRAPHICALLY_VERIFIED"
+    },
+    {
+      "id": "PB08",
+      "author": "Carvalho & Tahbaz-Salehi",
+      "title": "Production Networks: A Primer",
+      "url": "https://doi.org/10.1146/annurev-economics-080218-030212",
+      "axes": [
+        "C2"
+      ],
+      "status": "EXISTING_R04"
+    },
+    {
+      "id": "PB09",
+      "author": "Joseph Schumpeter",
+      "title": "Innovation et destruction créatrice",
+      "url": null,
+      "axes": [
+        "A2",
+        "B2"
+      ],
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "PB10",
+      "author": "Philippe Aghion",
+      "title": "Innovation, concurrence et croissance",
+      "url": null,
+      "axes": [
+        "A2",
+        "B2"
+      ],
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "PB11",
+      "author": "Fred Hirsch",
+      "title": "Raretés et biens positionnels",
+      "url": null,
+      "axes": [
+        "B4",
+        "D1"
+      ],
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "PB12",
+      "author": "Elinor Ostrom",
+      "title": "Gouvernance des ressources",
+      "url": null,
+      "axes": [
+        "C1",
+        "B4"
+      ],
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "PB13",
+      "author": "Herbert Simon",
+      "title": "Allocation de l'attention",
+      "url": null,
+      "axes": [
+        "D1"
+      ],
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "PB14",
+      "author": "Lisanne Bainbridge",
+      "title": "Ironies of Automation (1983)",
+      "url": "https://doi.org/10.1016/0005-1098(83)90046-8",
+      "axes": [
+        "A3",
+        "C2",
+        "C3"
+      ],
+      "status": "BIBLIOGRAPHICALLY_VERIFIED"
+    },
+    {
+      "id": "PB15",
+      "author": "Gary Becker",
+      "title": "Capital humain et économie familiale",
+      "url": null,
+      "axes": [
+        "A3",
+        "D2"
+      ],
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "PB16",
+      "author": "James Heckman",
+      "title": "Formation dynamique des compétences",
+      "url": null,
+      "axes": [
+        "A3",
+        "C3"
+      ],
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "PB17",
+      "author": "Deci & Ryan",
+      "title": "The What and Why of Goal Pursuits (2000)",
+      "url": "https://doi.org/10.1207/S15327965PLI1104_01",
+      "axes": [
+        "D1"
+      ],
+      "status": "BIBLIOGRAPHICALLY_VERIFIED"
+    },
+    {
+      "id": "PB18",
+      "author": "Marie Jahoda",
+      "title": "Fonctions psychosociales de l'emploi",
+      "url": null,
+      "axes": [
+        "D1"
+      ],
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "PB19",
+      "author": "Leon Festinger",
+      "title": "Comparaison sociale",
+      "url": null,
+      "axes": [
+        "D1"
+      ],
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "PB20",
+      "author": "Douglass North",
+      "title": "Institutions et trajectoires économiques",
+      "url": null,
+      "axes": [
+        "B1",
+        "C1"
+      ],
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "PB21",
+      "author": "Mancur Olson",
+      "title": "Action collective et intérêts organisés",
+      "url": null,
+      "axes": [
+        "B1",
+        "C1"
+      ],
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "PB22",
+      "author": "FMI",
+      "title": "Broadening the Gains from Generative AI: The Role of Fiscal Policies (2024)",
+      "url": "https://www.imf.org/en/Publications/Staff-Discussion-Notes/Issues/2024/06/11/Broadening-the-Gains-from-Generative-AI-The-Role-of-Fiscal-Policies-549639",
+      "axes": [
+        "B1",
+        "B3"
+      ],
+      "status": "BIBLIOGRAPHICALLY_VERIFIED"
+    },
+    {
+      "id": "PB23",
+      "author": "OCDE",
+      "title": "Travaux sur concentration, marges et pouvoir de marché; corpus précis à qualifier",
+      "url": null,
+      "axes": [
+        "B2",
+        "C1"
+      ],
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "PB24",
+      "author": "OCDE",
+      "title": "Society at a Glance 2024: OECD Social Indicators",
+      "url": "https://www.oecd.org/en/publications/society-at-a-glance-2024_918d8db3-en.html",
+      "axes": [
+        "D2"
+      ],
+      "status": "BIBLIOGRAPHICALLY_VERIFIED"
+    },
+    {
+      "id": "PB25",
+      "author": "Brynjolfsson, Li & Raymond",
+      "title": "Generative AI at Work",
+      "url": "https://doi.org/10.1093/qje/qjae044",
+      "axes": [
+        "A3",
+        "C3"
+      ],
+      "status": "EXISTING_G3_SKILLS"
+    }
+  ],
+  "examples": [
+    "100 ETP, productivité ×10, volume inchangé → 10 ETP (−90 %). H1/H0=(1+gQ)/(1+gP) sous hypothèses; ETP ≠ licenciement.",
+    "Prix 100→20 EUR, coût complet 90→5, résultat unitaire 10→15, marge 10→75 %; tester concurrence, volume, coûts et rentes.",
+    "Revenu 2500→1200 EUR, dépenses 2000→500, reste à vivre 500→700; tester logement, paniers et redistribution.",
+    "100 ETP, productivité ×5, volume +100 % →40 ETP; seuil maintien +400 %; aucune calibration.",
+    "O1 tâche/qualité/travail résiduel; O2 réorganisation, paie, marge, investissement et prix; O3 concurrence, marché, fournisseurs/clients; O4 ménages, consommation, fiscalité, finance, emploi indirect; O5 concentration, reconversion, formation; O6+ institutions, redistribution, démographie; ordres relatifs et rétroactions."
+  ],
+  "rules": [
+    "Inventaire des éléments nommés dans les deux réponses validées, complément sans suppression du registre HA01–HA14; modèles candidats non calibrés.",
+    "BENCH-001: 2–4 sources originales par mécanisme, théorie rivale, hypothèses, estimand, régime, preuves, paramètres, limites et tests négatifs; titre précis à sélectionner si seule famille de travaux nommée.",
+    "Qualification bibliographique ≠ validation scientifique; sources candidates à identifier précisément, URL, accès/droits, unité, couverture, fréquence, millésime et admission DATA-002; aucun accès présumé.",
+    "Exemples illustratifs, pas prévisions; huit étapes de traitement, maturité M0–M6 et six scénarios S1–S6 restent dans registre principal. PRODUCT-FIRST, gates et droits inchangés."
+  ]
+}
