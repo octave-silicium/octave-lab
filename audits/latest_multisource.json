@@ -1,5 +1,5 @@
 {
-  "run_at_utc": "2026-11-25T19:39:55.418560+00:00",
+  "run_at_utc": "2026-11-27T13:59:22.769192+00:00",
   "purpose": "SOURCE_ACCESS_AND_SCHEMA_AUDIT_ONLY",
   "source_registry": "pipeline/audit_multisource_sources.json",
   "no_data_fusion": true,
@@ -15,10 +15,10 @@
       "allowed_to_publish_raw": true,
       "publication_gate": "RAW_ARCHIVE_ONLY_NO_ECONOMIC_JOIN",
       "result": "FETCH_AND_SCHEMA_PASS",
-      "sha256": "1ea5f3f5a0dea3ba3c9b58f486cd965ab30802204882578b16d11b81f4b82cb7",
-      "n_bytes": 10645494,
+      "sha256": "46f33909372c21758696a37d215b03613ad15530823c9ea1c3ebc4e2c6f254c9",
+      "n_bytes": 10673966,
       "checks": {
-        "n_rows": 96252,
+        "n_rows": 96510,
         "columns": [
           "Date",
           "Code région",
@@ -36,9 +36,9 @@
       },
       "structural_profile": {
         "period_min_raw": "1996-01",
-        "period_max_raw": "2026-09",
+        "period_max_raw": "2026-10",
         "distinct_counts": {
-          "Date": 369,
+          "Date": 370,
           "Code région": 19,
           "Code département": 101,
           "Type de données": 1,
@@ -46,7 +46,7 @@
           "Type d'emploi": 4,
           "Qualification": 9
         },
-        "measure_nonempty_rows": 96252,
+        "measure_nonempty_rows": 96510,
         "measure_empty_rows": 0,
         "duplicate_industry_year_quarter_keys": null,
         "economic_join_gate": "NOT_READY: verify exact units, historical breaks, nomenclature mappings",
@@ -65,10 +65,10 @@
       "allowed_to_publish_raw": false,
       "publication_gate": "BLOCKED_PENDING_SEMANTIC_AND_LEGAL_REVIEW",
       "result": "FETCH_AND_SCHEMA_PASS",
-      "sha256": "9ec16fb077e554518f5a1ade579684a8c91d56f293c7b9897f07b40226833222",
-      "n_bytes": 1572724,
+      "sha256": "8c14394e131bbf54eaa9cf5a887049e364ca464bc80a25dd9f602bd294cc90af",
+      "n_bytes": 1586838,
       "checks": {
-        "n_rows": 9072,
+        "n_rows": 9153,
         "columns": [
           "grand_secteur_d_activite",
           "secteur_na38i",
@@ -93,7 +93,7 @@
           "secteur_na88i": 81,
           "secteur_na38i": 36
         },
-        "measure_nonempty_rows": 9072,
+        "measure_nonempty_rows": 9153,
         "measure_empty_rows": 0,
         "duplicate_industry_year_quarter_keys": 0,
         "economic_join_gate": "NOT_READY: verify exact units, historical breaks, nomenclature mappings",
