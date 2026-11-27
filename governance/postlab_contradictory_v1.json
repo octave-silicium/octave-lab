@@ -1,0 +1,1038 @@
+{
+  "id": "POSTLAB-CONTRADICT-001",
+  "date": "2026-11-27",
+  "version": "1.0",
+  "status": "USER_APPROVED_REQUIREMENTS_METHOD_PENDING",
+  "baseline": {
+    "commit": "e4f307e1edb6e190dfb097b6bcd602ffa2ce8f94",
+    "mechanisms": 64,
+    "shapiro": 21,
+    "transversal": 27,
+    "limitations": 51,
+    "limitations_version": "1.0.17",
+    "layers": 9,
+    "engines": 6,
+    "roadmap": "VERTICAL-001 V3d; next V3e"
+  },
+  "source": "Deux publications publiques du 25/11/2026, 14 objections analysées; capture fournie par utilisateur, validation explicite du programme le 27/11. Paraphrase seulement.",
+  "scope": "Crosswalk complémentaire, pas moteur, ni nouveau statut M/SH/AC/LIM, ni extension du catalogue 140 en production. Toutes les lignes non qualifiées restent ouvertes.",
+  "method": [
+    "Hypothèse testable",
+    "Mécanismes et facteurs confondants",
+    "Théories rivales",
+    "Mesures et données admises",
+    "Formalisation mathématique conditionnelle",
+    "COMMON-STATE, unités et contreparties",
+    "Scénarios contradictoires",
+    "Validation, restitution, limites"
+  ],
+  "rules": [
+    "Gates et droits inchangés",
+    "Pas de double comptage; pas de zéro implicite; calcul non admis = bloqué",
+    "Distinguer nécessité économique du travail, emploi observé, activité humaine et rareté",
+    "Distinguer prix/coût/marge/rente, richesse nominale/réelle et patrimoine/revenu",
+    "Aucun scénario avec probabilité sans calibration",
+    "P0/P1/P2 priorité scientifique, pas ordre imposé de livraison; V3e et PRODUCT-FIRST conservés",
+    "Aucun mécanisme ni étude empirique qualifié par cette décision",
+    "Les références sont des candidats BENCH-001, non une bibliographie vérifiée dans ce jalon"
+  ],
+  "axes": [
+    {
+      "id": "A1",
+      "concept": "Substitution dynamique capital-travail",
+      "priority": "P0",
+      "mechanisms": [
+        "M007",
+        "M008",
+        "M028",
+        "M030",
+        "M032",
+        "M033",
+        "M036",
+        "M049",
+        "M054"
+      ],
+      "shapiro": [
+        "SH01",
+        "SH07",
+        "SH17"
+      ],
+      "transversal": [
+        "AC08",
+        "AC11",
+        "AC14",
+        "AC23"
+      ],
+      "limitations": [
+        "LIM-F04",
+        "LIM-S15"
+      ],
+      "requirement": "H=Q×h résiduelle + H nouvelles tâches/contrôle (sans double compte); H/temps ETP; coût complet, qualité, VAN et adoption; seuil gQ=gP si hypothèses uniformes.",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING"
+    },
+    {
+      "id": "A2",
+      "concept": "Automatisation récursive des nouveaux métiers",
+      "priority": "P0",
+      "mechanisms": [
+        "M005",
+        "M007",
+        "M009",
+        "M012",
+        "M041",
+        "M049"
+      ],
+      "shapiro": [
+        "SH02",
+        "SH03",
+        "SH17"
+      ],
+      "transversal": [
+        "AC08",
+        "AC09",
+        "AC10",
+        "AC11",
+        "AC16"
+      ],
+      "limitations": [
+        "LIM-F02",
+        "LIM-F03",
+        "LIM-W08",
+        "LIM-S15"
+      ],
+      "requirement": "Cohortes de tâches, flux création/disparition, durées et risques de transition; tester compensation durable, réautomatisation et biais des référentiels.",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING"
+    },
+    {
+      "id": "A3",
+      "concept": "Dépréciation du capital humain",
+      "priority": "P1",
+      "mechanisms": [
+        "M011",
+        "M012",
+        "M050",
+        "M052"
+      ],
+      "shapiro": [
+        "SH04"
+      ],
+      "transversal": [
+        "AC09"
+      ],
+      "limitations": [
+        "LIM-F03",
+        "LIM-S15"
+      ],
+      "requirement": "Distinguer perte de pratique, obsolescence technique, prix de compétence; cohortes, transitions et coût de requalification.",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING"
+    },
+    {
+      "id": "B1",
+      "concept": "Soutenabilité fiscale post-salariat",
+      "priority": "P0",
+      "mechanisms": [
+        "M052",
+        "M053",
+        "M055",
+        "M057",
+        "M058"
+      ],
+      "shapiro": [
+        "SH12",
+        "SH13",
+        "SH18"
+      ],
+      "transversal": [
+        "AC20",
+        "AC21",
+        "AC23"
+      ],
+      "limitations": [
+        "LIM-S12",
+        "LIM-S16"
+      ],
+      "requirement": "Comptes stocks-flux, microsimulation si microdonnées admises, financement dette/actifs et incidence; recettes par assiette, prestations et déficit.",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING"
+    },
+    {
+      "id": "B2",
+      "concept": "Formation et déplacement des rentes",
+      "priority": "P0",
+      "mechanisms": [
+        "M027",
+        "M035",
+        "M037",
+        "M038",
+        "M042",
+        "M051"
+      ],
+      "shapiro": [
+        "SH10",
+        "SH11",
+        "SH14"
+      ],
+      "transversal": [
+        "AC06",
+        "AC15",
+        "AC16"
+      ],
+      "limitations": [
+        "LIM-F05",
+        "LIM-S10",
+        "LIM-S16"
+      ],
+      "requirement": "Décomposer VA, coûts, marges, pouvoir de marché, rente foncière/IP/compute; profits et rentes ne sont pas synonymes.",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING"
+    },
+    {
+      "id": "B3",
+      "concept": "Demande solvable et distribution des revenus",
+      "priority": "P0",
+      "mechanisms": [
+        "M042",
+        "M051",
+        "M052",
+        "M053",
+        "M058"
+      ],
+      "shapiro": [
+        "SH08",
+        "SH10",
+        "SH12"
+      ],
+      "transversal": [
+        "AC07",
+        "AC16",
+        "AC20",
+        "AC21"
+      ],
+      "limitations": [
+        "LIM-S11",
+        "LIM-S12",
+        "LIM-S16"
+      ],
+      "requirement": "Budget/cohorte, propensions et courbes d'Engel si estimables, contraintes d'offre et épargne; boucles revenu→demande→production→revenu.",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING"
+    },
+    {
+      "id": "B4",
+      "concept": "Raretés et inflation sectorielle",
+      "priority": "P1",
+      "mechanisms": [
+        "M045",
+        "M047",
+        "M048",
+        "M058"
+      ],
+      "shapiro": [
+        "SH09",
+        "SH14",
+        "SH15"
+      ],
+      "transversal": [
+        "AC18",
+        "AC19"
+      ],
+      "limitations": [
+        "LIM-S10",
+        "LIM-S13",
+        "LIM-S14"
+      ],
+      "requirement": "Prix/quantités par secteur, foncier, énergie et capacité, coût réel du panier; comparer allocation et localisation.",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING"
+    },
+    {
+      "id": "C1",
+      "concept": "Concentration du capital et du pouvoir",
+      "priority": "P0",
+      "mechanisms": [
+        "M023",
+        "M037",
+        "M039",
+        "M040",
+        "M042",
+        "M051"
+      ],
+      "shapiro": [
+        "SH11",
+        "SH13",
+        "SH19"
+      ],
+      "transversal": [
+        "AC05",
+        "AC06",
+        "AC15",
+        "AC21"
+      ],
+      "limitations": [
+        "LIM-F06",
+        "LIM-S16"
+      ],
+      "requirement": "Propriété ultime, contrôle, dépendances, HHI et distribution; scénarios concurrentiels et institutionnels.",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING"
+    },
+    {
+      "id": "C2",
+      "concept": "Résilience des réseaux productifs",
+      "priority": "P1",
+      "mechanisms": [
+        "M006",
+        "M017",
+        "M020",
+        "M043",
+        "M044",
+        "M045",
+        "M055"
+      ],
+      "shapiro": [
+        "SH09",
+        "SH15"
+      ],
+      "transversal": [
+        "AC04",
+        "AC12",
+        "AC18",
+        "AC23"
+      ],
+      "limitations": [
+        "LIM-W04",
+        "LIM-S06",
+        "LIM-S09"
+      ],
+      "requirement": "Chocs corrélés, réseaux multiples, capacité de repli, délais, coûts de maintenance et arbitrage robustesse/productivité.",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING"
+    },
+    {
+      "id": "C3",
+      "concept": "Transmission intergénérationnelle",
+      "priority": "P1",
+      "mechanisms": [
+        "M009",
+        "M012",
+        "M024",
+        "M033",
+        "M050"
+      ],
+      "shapiro": [
+        "SH04"
+      ],
+      "transversal": [
+        "AC09",
+        "AC11"
+      ],
+      "limitations": [
+        "LIM-F03",
+        "LIM-S15"
+      ],
+      "requirement": "Flux d'apprentissage et expertise, disponibilité mentor/évaluateur, impact opérationnel; mesure du stock critique.",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING"
+    },
+    {
+      "id": "D1",
+      "concept": "Motivation, statut et cohésion",
+      "priority": "P2",
+      "mechanisms": [
+        "M013",
+        "M023",
+        "M051",
+        "M056"
+      ],
+      "shapiro": [
+        "SH19"
+      ],
+      "transversal": [
+        "AC22",
+        "AC27"
+      ],
+      "limitations": [
+        "LIM-W09",
+        "LIM-T03",
+        "LIM-T05"
+      ],
+      "requirement": "Études usage du temps/bien-être et comportements; motivation intrinsèque/extrinsèque; observation/scénarios qualitatifs par défaut.",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING"
+    },
+    {
+      "id": "D2",
+      "concept": "Démographie et culture",
+      "priority": "P2",
+      "mechanisms": [
+        "M047",
+        "M053",
+        "M056",
+        "M057"
+      ],
+      "shapiro": [
+        "SH19",
+        "SH20"
+      ],
+      "transversal": [
+        "AC07",
+        "AC19",
+        "AC20",
+        "AC22"
+      ],
+      "limitations": [
+        "LIM-S14",
+        "LIM-S15",
+        "LIM-S16",
+        "LIM-T05"
+      ],
+      "requirement": "Projections conditionnelles par cohortes; effets incertains de fécondité/migration, coûts et participation.",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING"
+    }
+  ],
+  "entries": [
+    {
+      "id": "HA01",
+      "concept": "Raretés physiques résiduelles",
+      "axes": [
+        "B4"
+      ],
+      "priority": "P1",
+      "mechanisms": [
+        "M014",
+        "M045",
+        "M047",
+        "M048",
+        "M058"
+      ],
+      "shapiro": [
+        "SH09",
+        "SH15"
+      ],
+      "transversal": [
+        "AC10",
+        "AC18",
+        "AC19",
+        "AC21"
+      ],
+      "limitations": [
+        "LIM-S06",
+        "LIM-S13",
+        "LIM-S14"
+      ],
+      "coverage": "PARTIAL_SYNTHETIC",
+      "code_anchor": "pipeline/economic_sector_capacity.py; pipeline/economic_sector_prices.py",
+      "hypothesis": "Contraintes énergie, foncier, matériaux et capacité limitent les volumes même si le travail unitaire diminue.",
+      "formalization": "Capacité K, utilisation u, ressources R, prix relatifs, heures H; Q ≤ min(Ku,R/a); ne pas imposer coût nul.",
+      "data_candidates": "TES/FIGARO, RTE, SDES, DVF, prix et capacités; droits à vérifier.",
+      "acceptance": "Comparer offre rigide et extensible, substitution et rebond; rareté persistante compatible avec H faible; vérifier ressources, unités et rationnement.",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "publication": "NOT_A_RESULT"
+    },
+    {
+      "id": "HA02",
+      "concept": "Prix, profits et assiettes fiscales",
+      "axes": [
+        "B2",
+        "B1"
+      ],
+      "priority": "P0",
+      "mechanisms": [
+        "M027",
+        "M035",
+        "M036",
+        "M037",
+        "M038",
+        "M042",
+        "M052",
+        "M053",
+        "M057",
+        "M058"
+      ],
+      "shapiro": [
+        "SH10",
+        "SH12",
+        "SH14",
+        "SH18"
+      ],
+      "transversal": [
+        "AC15",
+        "AC16",
+        "AC20",
+        "AC21"
+      ],
+      "limitations": [
+        "LIM-F01",
+        "LIM-F05",
+        "LIM-S10",
+        "LIM-S12",
+        "LIM-S16"
+      ],
+      "coverage": "PARTIAL_SYNTHETIC",
+      "code_anchor": "pipeline/economic_market.py; pipeline/economic_sector_prices.py; pipeline/economic_sector_income_feedback.py",
+      "hypothesis": "Baisse des prix comprime ou déplace les profits et assiettes selon coûts, quantités, concurrence et propriété.",
+      "formalization": "CA=pQ; résultat d'exploitation=CA−CI−D1−taxes nettes−amortissements selon périmètre; distinguer surplus brut, net, fiscal et cash.",
+      "data_candidates": "Ésane/FARE, comptes nationaux, DGFiP, prix sectoriels.",
+      "acceptance": "Cas prix bas/marge haute, marge nulle, volumes et rentes alternatives; réconcilier valeur ajoutée, impôts, profits et transactions; ne pas taxer un surplus fictif.",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "publication": "NOT_A_RESULT"
+    },
+    {
+      "id": "HA03",
+      "concept": "Allocation des biens rares et gouvernance sans prix",
+      "axes": [
+        "B4",
+        "C1"
+      ],
+      "priority": "P1",
+      "mechanisms": [
+        "M014",
+        "M015",
+        "M023",
+        "M025",
+        "M037",
+        "M045",
+        "M047",
+        "M057"
+      ],
+      "shapiro": [
+        "SH15",
+        "SH19"
+      ],
+      "transversal": [
+        "AC12",
+        "AC13",
+        "AC15",
+        "AC19",
+        "AC21"
+      ],
+      "limitations": [
+        "LIM-S06",
+        "LIM-S14",
+        "LIM-S16"
+      ],
+      "coverage": "PARTIAL_SYNTHETIC",
+      "code_anchor": "pipeline/economic_market.py; pipeline/economic_sector_structural.py",
+      "hypothesis": "Prix, quotas, files, loteries et droits peuvent coexister; aucun régime n'est présumé optimal.",
+      "formalization": "Quantités allouées ≤ capacité; coûts d'attente et accès par cohorte; critères pluralistes et règles institutionnelles explicites.",
+      "data_candidates": "Prix et quantités, délais, règles d'accès, données de rationnement; études de cas.",
+      "acceptance": "Comparer règles à offre identique, efficacité, équité, temps et capture; si préférences non mesurées refuser optimum; pas d'assimilation post-travail à abolition des marchés.",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "publication": "NOT_A_RESULT"
+    },
+    {
+      "id": "HA04",
+      "concept": "Logement, foncier et pouvoir d'achat territorial",
+      "axes": [
+        "B4",
+        "B3"
+      ],
+      "priority": "P1",
+      "mechanisms": [
+        "M047",
+        "M051",
+        "M053",
+        "M058"
+      ],
+      "shapiro": [
+        "SH12",
+        "SH14",
+        "SH15"
+      ],
+      "transversal": [
+        "AC07",
+        "AC19",
+        "AC21"
+      ],
+      "limitations": [
+        "LIM-S11",
+        "LIM-S14",
+        "LIM-S16"
+      ],
+      "coverage": "GAP_EXPLICIT",
+      "code_anchor": "pipeline/economic_sector_budget.py (budget agrégé, pas logement territorial)",
+      "hypothesis": "Offre foncière rigide peut capitaliser les transferts et accroître les écarts réels.",
+      "formalization": "Budget par cohorte et zone: Ydisp−loyer−dépenses essentielles; élasticités offre/demande locales et mobilité; distinguer loyer, prix d'actif et service.",
+      "data_candidates": "DVF, SDES, observatoires de loyers, Insee Budget de famille, Filosofi.",
+      "acceptance": "Scénarios offre élastique/rigide, mobilité, redistribution uniforme/ciblée; mesurer incidence propriétaire/locataire, pas inflation mécanique.",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "publication": "NOT_A_RESULT"
+    },
+    {
+      "id": "HA05",
+      "concept": "Motivations et activité non rémunérée",
+      "axes": [
+        "D1"
+      ],
+      "priority": "P2",
+      "mechanisms": [
+        "M013",
+        "M051",
+        "M056",
+        "M064"
+      ],
+      "shapiro": [
+        "SH19"
+      ],
+      "transversal": [
+        "AC22",
+        "AC27"
+      ],
+      "limitations": [
+        "LIM-W09",
+        "LIM-T03",
+        "LIM-T05"
+      ],
+      "coverage": "GAP_EXPLICIT",
+      "code_anchor": "Pas de moteur comportemental qualifié identifié dans les fichiers examinés.",
+      "hypothesis": "Perte de revenu, structure du temps et motivation intrinsèque distinctes; effets sur bien-être et engagement de signe inconnu.",
+      "formalization": "Indicateurs temps, autonomie, compétence, lien, engagement, satisfaction; pas de fonction universelle ni coefficient inventé.",
+      "data_candidates": "ESS, WVS, Eurofound, Emploi du temps, essais revenu garanti; Deci/Ryan, Jahoda.",
+      "acceptance": "Comparer emploi contraint, chômage involontaire, temps libéré avec sécurité; contrôler sélection et contexte; exclure extrapolation à société entière.",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "publication": "NOT_A_RESULT"
+    },
+    {
+      "id": "HA06",
+      "concept": "Atrophie cognitive et erreurs invisibles",
+      "axes": [
+        "A3",
+        "C3",
+        "C2"
+      ],
+      "priority": "P1",
+      "mechanisms": [
+        "M006",
+        "M011",
+        "M012",
+        "M017",
+        "M020",
+        "M025"
+      ],
+      "shapiro": [
+        "SH04"
+      ],
+      "transversal": [
+        "AC09",
+        "AC11",
+        "AC12"
+      ],
+      "limitations": [
+        "LIM-W03",
+        "LIM-W04",
+        "LIM-F03"
+      ],
+      "coverage": "PARTIAL_SYNTHETIC",
+      "code_anchor": "pipeline/economic_skills.py; pipeline/economic_operations.py",
+      "hypothesis": "Perte de pratique et erreurs corrélées peuvent rendre la reprise humaine coûteuse.",
+      "formalization": "Stock de compétence S(t+1)=(1−δ)S(t)+apprentissage sous contraintes; taux de reprise, temps de détection, erreurs corrélées; δ non estimé.",
+      "data_candidates": "Tests de rétention, journaux incidents et contrôles, PIAAC, cas de formation; Bainbridge 1983.",
+      "acceptance": "Choc nul, apprentissage accéléré vs oubli, panne commune, contrôle indépendant, repli automatisé et humain; pas de baisse cognitive globale supposée.",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "publication": "NOT_A_RESULT"
+    },
+    {
+      "id": "HA07",
+      "concept": "Gouvernance, maintenance et décisions de production",
+      "axes": [
+        "C1",
+        "C2"
+      ],
+      "priority": "P1",
+      "mechanisms": [
+        "M020",
+        "M021",
+        "M023",
+        "M025",
+        "M028",
+        "M032",
+        "M041"
+      ],
+      "shapiro": [
+        "SH19"
+      ],
+      "transversal": [
+        "AC06",
+        "AC12",
+        "AC13",
+        "AC14",
+        "AC21"
+      ],
+      "limitations": [
+        "LIM-W06",
+        "LIM-F04",
+        "LIM-S09",
+        "LIM-S16"
+      ],
+      "coverage": "PARTIAL_SYNTHETIC",
+      "code_anchor": "pipeline/economic_shared_state.py; pipeline/economic_sector_capital.py",
+      "hypothesis": "Maintien des droits de décision et entretien du capital sont nécessaires sans garantir emploi de masse.",
+      "formalization": "Droits de décision séparés de la propriété financière; stock capital K(t+1)=K(t)−retraits+mise en service; budget maintenance, indisponibilité, contrôle/repli.",
+      "data_candidates": "Comptes, gouvernance, maintenance et incidents; Ostrom/North comme pistes.",
+      "acceptance": "Comparer contrôle décentralisé, centralisé, humain et automatisé; maintenance sous-financée, coût du repli; pas de mandat politique implicite.",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "publication": "NOT_A_RESULT"
+    },
+    {
+      "id": "HA08",
+      "concept": "Financement du revenu universel et ordres de grandeur",
+      "axes": [
+        "B1",
+        "B3"
+      ],
+      "priority": "P0",
+      "mechanisms": [
+        "M042",
+        "M051",
+        "M052",
+        "M053",
+        "M055",
+        "M057",
+        "M058"
+      ],
+      "shapiro": [
+        "SH10",
+        "SH12",
+        "SH13",
+        "SH18"
+      ],
+      "transversal": [
+        "AC06",
+        "AC07",
+        "AC20",
+        "AC21",
+        "AC23"
+      ],
+      "limitations": [
+        "LIM-S11",
+        "LIM-S12",
+        "LIM-S16",
+        "LIM-F01"
+      ],
+      "coverage": "PARTIAL_SYNTHETIC",
+      "code_anchor": "pipeline/economic_sector_income_feedback.py; pipeline/economic_institutional_bridge.py; pipeline/economic_shared_state.py",
+      "hypothesis": "Transferts soutenables dépendent de la base réelle/nominale, bénéficiaires, propriété, prix et financement.",
+      "formalization": "Coût brut b×N×périodes; coût net=brut−prestations remplacées−recettes additionnelles effectivement modélisées; dette et actifs publics séparés, budget par acteur.",
+      "data_candidates": "Insee TEE, Drees, DGFiP, Eurostat, OCDE; règles et droits.",
+      "acceptance": "Scénarios cotisations, fiscalité capital/consommation, dividende citoyen, fonds souverain, services en nature; identité budget/contreparties; pas de double financement ni montant futur garanti.",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "publication": "NOT_A_RESULT"
+    },
+    {
+      "id": "HA09",
+      "concept": "Concentration du capital et du contrôle",
+      "axes": [
+        "C1",
+        "B2"
+      ],
+      "priority": "P0",
+      "mechanisms": [
+        "M023",
+        "M037",
+        "M039",
+        "M040",
+        "M042",
+        "M051",
+        "M055"
+      ],
+      "shapiro": [
+        "SH11",
+        "SH13",
+        "SH19"
+      ],
+      "transversal": [
+        "AC05",
+        "AC06",
+        "AC15",
+        "AC20",
+        "AC21"
+      ],
+      "limitations": [
+        "LIM-F05",
+        "LIM-F06",
+        "LIM-S16"
+      ],
+      "coverage": "PARTIAL_SYNTHETIC",
+      "code_anchor": "pipeline/economic_market.py; pipeline/economic_shared_state.py (equity ≠ droits de vote)",
+      "hypothesis": "Production abondante peut coexister avec concentration de propriété, fournisseurs et contrôle.",
+      "formalization": "HHI=Σparts² par marché défini; concentration de patrimoine, bénéficiaire ultime, dépendance commune et vote distincts.",
+      "data_candidates": "SIRENE, INPI, comptes consolidés, patrimoine, parts de marché et infra; accès/droits.",
+      "acceptance": "Concurrence, accès ouvert, intégration verticale, monopole; HHI seul ≠ pouvoir de marché; ne pas transformer actions financières en vote.",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "publication": "NOT_A_RESULT"
+    },
+    {
+      "id": "HA10",
+      "concept": "Fragilité systémique et défaillances communes",
+      "axes": [
+        "C2"
+      ],
+      "priority": "P1",
+      "mechanisms": [
+        "M006",
+        "M017",
+        "M020",
+        "M034",
+        "M043",
+        "M044",
+        "M045",
+        "M048",
+        "M055"
+      ],
+      "shapiro": [
+        "SH09",
+        "SH15"
+      ],
+      "transversal": [
+        "AC03",
+        "AC04",
+        "AC12",
+        "AC18",
+        "AC23"
+      ],
+      "limitations": [
+        "LIM-W04",
+        "LIM-S06",
+        "LIM-S07",
+        "LIM-S08",
+        "LIM-S09",
+        "LIM-S14"
+      ],
+      "coverage": "PARTIAL_SYNTHETIC",
+      "code_anchor": "pipeline/economic_financial_network.py; pipeline/economic_sector_structural.py; pipeline/economic_finance_work_scenarios.py",
+      "hypothesis": "Dépendances communes peuvent amplifier chocs et coûts de continuité, même avec automatisation avancée.",
+      "formalization": "Réseaux productifs, financiers, technologiques distincts; capacité de secours, temps de reprise, chocs corrélés; pertes par trajectoire et pas somme des chemins.",
+      "data_candidates": "TES/FIGARO, données contreparties, incidents et fournisseurs critiques; Acemoglu/Carvalho.",
+      "acceptance": "Panne commune vs indépendante, substitution, stocks, liquidité, redondance; stress tests sans probabilités inventées, conservation stock/flux.",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "publication": "NOT_A_RESULT"
+    },
+    {
+      "id": "HA11",
+      "concept": "Incitations à innover et entretien long terme",
+      "axes": [
+        "A2",
+        "B2",
+        "C2"
+      ],
+      "priority": "P1",
+      "mechanisms": [
+        "M005",
+        "M023",
+        "M024",
+        "M028",
+        "M031",
+        "M038",
+        "M041",
+        "M055"
+      ],
+      "shapiro": [
+        "SH06",
+        "SH08",
+        "SH09",
+        "SH19"
+      ],
+      "transversal": [
+        "AC10",
+        "AC13",
+        "AC14",
+        "AC15",
+        "AC16",
+        "AC21"
+      ],
+      "limitations": [
+        "LIM-F04",
+        "LIM-F08",
+        "LIM-W08",
+        "LIM-S09"
+      ],
+      "coverage": "GAP_EXPLICIT",
+      "code_anchor": "pipeline/economic_sector_capital.py et economic_market.py (capital et marché, pas innovation endogène qualifiée)",
+      "hypothesis": "Rendement privé, concurrence, financement public, recherche ouverte et motivation intrinsèque peuvent soutenir innovation/entretien; signe conditionnel.",
+      "formalization": "Flux R&D/maintenance et capital immatériel, délais, retours privés/sociaux; pas de loi de progrès supposée.",
+      "data_candidates": "Insee R&D, OCDE MSTI, comptes firmes, brevets et publications; Schumpeter/Aghion.",
+      "acceptance": "Comparer rente faible/forte, financement public/privé, open source, obsolescence et maintenance; mesurer qualité et délais, pas brevet=innovation.",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "publication": "NOT_A_RESULT"
+    },
+    {
+      "id": "HA12",
+      "concept": "Cohésion sociale et compétition de statut",
+      "axes": [
+        "D1"
+      ],
+      "priority": "P2",
+      "mechanisms": [
+        "M013",
+        "M023",
+        "M051",
+        "M056",
+        "M064"
+      ],
+      "shapiro": [
+        "SH19"
+      ],
+      "transversal": [
+        "AC22",
+        "AC27"
+      ],
+      "limitations": [
+        "LIM-W09",
+        "LIM-T03",
+        "LIM-T05"
+      ],
+      "coverage": "GAP_EXPLICIT",
+      "code_anchor": "Pas de module causal de statut/cohésion identifié.",
+      "hypothesis": "La compétition positionnelle peut se déplacer vers attention, reconnaissance, patrimoine; aggravation non nécessaire.",
+      "formalization": "Indices d'accès, confiance, participation, dispersion de statut et usage du temps; variables distinctes, pas score composite.",
+      "data_candidates": "ESS, WVS, Eurofound, Emploi du temps; Hirsch/Festinger.",
+      "acceptance": "Comparer groupes/cohortes et trajectoires, contrôler sélection/confondants; aucune conclusion civilisationnelle à partir d'une corrélation.",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "publication": "NOT_A_RESULT"
+    },
+    {
+      "id": "HA13",
+      "concept": "Transmission intergénérationnelle du savoir",
+      "axes": [
+        "C3",
+        "A3",
+        "A2"
+      ],
+      "priority": "P1",
+      "mechanisms": [
+        "M009",
+        "M011",
+        "M012",
+        "M024",
+        "M033",
+        "M049",
+        "M050"
+      ],
+      "shapiro": [
+        "SH02",
+        "SH04",
+        "SH17"
+      ],
+      "transversal": [
+        "AC08",
+        "AC09",
+        "AC11"
+      ],
+      "limitations": [
+        "LIM-F02",
+        "LIM-F03",
+        "LIM-S15"
+      ],
+      "coverage": "PARTIAL_SYNTHETIC",
+      "code_anchor": "pipeline/economic_skills.py; docs/G3-SKILLS.md",
+      "hypothesis": "Disparition de tâches juniors peut réduire le renouvellement des experts, ou IA accélérer l'apprentissage.",
+      "formalization": "Stocks par compétence/expérience, entrants, sorties, promotion, mentorat, évaluation, oubli; demande distincte d'expertise et impact qualité/débit.",
+      "data_candidates": "Dares, formations, recrutements par séniorité, PIAAC, panels de pratique; Brynjolfsson/Li/Raymond.",
+      "acceptance": "Rejouer gel/classique/accéléré; introduire oubli, évaluateur, pénurie→qualité, maintien volontaire; aucun temps universel ni prime salariale inventée.",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "publication": "NOT_A_RESULT"
+    },
+    {
+      "id": "HA14",
+      "concept": "Démographie et dynamiques culturelles",
+      "axes": [
+        "D2"
+      ],
+      "priority": "P2",
+      "mechanisms": [
+        "M047",
+        "M050",
+        "M051",
+        "M053",
+        "M056",
+        "M057"
+      ],
+      "shapiro": [
+        "SH19",
+        "SH20"
+      ],
+      "transversal": [
+        "AC07",
+        "AC08",
+        "AC19",
+        "AC20",
+        "AC22",
+        "AC27"
+      ],
+      "limitations": [
+        "LIM-S14",
+        "LIM-S15",
+        "LIM-S16",
+        "LIM-T03",
+        "LIM-T05"
+      ],
+      "coverage": "GAP_EXPLICIT",
+      "code_anchor": "Pas de projection fécondité/cohortes qualifiée identifiée.",
+      "hypothesis": "Sécurité, logement, âge, normes, politiques et choix modifient fécondité et offre de travail; effet post-travail indéterminé.",
+      "formalization": "Cohortes âge×temps, survie, naissances, migration; paramètres conditionnels et incertitude; pas d'attribution à appartenance culturelle.",
+      "data_candidates": "Insee, Eurostat, ONU, HFD, enquêtes; qualification de la causalité séparée.",
+      "acceptance": "Rejouer variantes fécondité/migration/participation avec données et bornes; tester facteurs concurrents; ne pas prédire composition culturelle à partir d'intuitions.",
+      "status": "USER_APPROVED_REQUIREMENT_METHOD_PENDING",
+      "evidence_status": "TO_QUALIFY_BY_CLAIM",
+      "publication": "NOT_A_RESULT"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "S1",
+      "name": "Complémentarité durable",
+      "condition": "Création de tâches et expansion de demande ≥ déplacement, sans postuler ce résultat."
+    },
+    {
+      "id": "S2",
+      "name": "Substitution progressive",
+      "condition": "Travail par unité diminue plus vite que demande et nouvelles tâches."
+    },
+    {
+      "id": "S3",
+      "name": "Substitution accélérée",
+      "condition": "Réautomatisation des tâches créées; vérifier contraintes et financement."
+    },
+    {
+      "id": "S4",
+      "name": "Crise de demande solvable",
+      "condition": "Revenus réels/transferts insuffisants, boucles dépenses/production."
+    },
+    {
+      "id": "S5",
+      "name": "Blocage structurel",
+      "condition": "Qualité, capital, réglementation, énergie ou expertise contraignent adoption."
+    },
+    {
+      "id": "S6",
+      "name": "Post-travail viable",
+      "condition": "Travail marginal, accès aux biens et distribution soutenables sous régimes alternatifs."
+    }
+  ],
+  "validation": [
+    "BENCH-001: 2–4 sources directes par mécanisme, contre-théories, estimand, régime, tests négatifs",
+    "Admission sources et droits, millésimes, unité, couverture",
+    "Rejeu historique point-in-time et comparaison indépendante; NON_IDENTIFIABLE si besoin",
+    "Tests invariants, choc nul, absence adoption, seuils, interactions et non-convergence",
+    "M0 identifié; M1 sources qualifiées; M2 formalisé; M3 données admises; M4 calibré; M5 validé indépendamment; M6 exploitable, aucune promotion automatique",
+    "RESULT D12/D13/D15/D16/D17/D18 et PROSPECT O0–O4+; ordre relatif et délai distincts"
+  ],
+  "references_candidates": [
+    "Acemoglu & Restrepo, Automation and New Tasks, NBER 25684",
+    "Autor & Salomons; Baumol; Leontief; Godley & Lavoie; Acemoglu & Carvalho",
+    "Schumpeter; Aghion; Hirsch; Ostrom; Herbert Simon; Bainbridge (Ironies of Automation, 1983)",
+    "Becker; Heckman; Deci & Ryan; Jahoda; North; Olson; Festinger"
+  ],
+  "roadmap": [
+    "Préserver V3e et qualification juridique, technique, commerciale, publication bloquée",
+    "P0: rattacher les axes aux investigations et gaps existants, choisir étude à valeur décisionnelle, P0 empirique/G2 en parallèle",
+    "G3.3/3.4: emploi, nouvelles tâches, expertise, prix, concurrence; G4: revenus, fiscalité, propriété et raretés, hétérogénéité et fermeture état commun après priorité produit",
+    "P1: résilience, foncier, maintenance et compétences; P2: observation et scénarios humains/démographiques; ne pas bloquer première vente",
+    "G5: backtests, contre-exemples, restitution et revue indépendante, sans promotion de gate"
+  ]
+}

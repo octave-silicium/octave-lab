@@ -183,3 +183,7 @@ Chantier / sources candidates : PROSPECT transversal; aucune conclusion prédét
 
 ## Décision d'intégration validée
 [Registre canonique AC01–AC27](../governance/transversal_enrichment_v1.json) : 18 P0, 9 P1, liens contrôlés vers 60 mécanismes et 35 familles de limitations existants. Exigences complémentaires à M001–M064 et SH01–SH21, à évaluer explicitement pour chaque investigation et avant chaque jalon. Pas de nouveau moteur, aucune clôture, aucune promotion scientifique. Le raccordement automatique du registre aux contrôles exécutables reste à réaliser.
+
+
+## POSTLAB-CONTRADICT-001 — Programme contradictoire post-travail (27/11/2026)
+[Décision et matrice des 14 objections / 12 axes](POSTLAB-CONTRADICT-001.md), [registre machine-readable](../governance/postlab_contradictory_v1.json). Exigences utilisateur validées; méthode, preuves, paramètres et implémentation à qualifier. Raccord M/SH/AC/LIM, aucun nouveau moteur, aucun changement de statut ni gate promu. P0 substitution récursive, rentes, fiscalité, demande solvable et concentration; P1 raretés, capital humain, résilience, transmission et entretien; P2 motivation/statut/démographie exploratoires. Six scénarios concurrents composables, sans probabilité imposée. PRODUCT-FIRST et VERTICAL-001 V3e demeurent prioritaires, publication bloquée; pas de réouverture automatique de G4. BENCH-001, COMMON-STATE et PROSPECT/RESULT obligatoires. Les écarts deviennent chantiers à qualifier, pas résultats.
