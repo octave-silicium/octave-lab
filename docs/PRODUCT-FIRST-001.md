@@ -87,3 +87,7 @@ Prototype privé OCTAVE_LAB_V3b_interne.zip remis dans le chat et enregistré da
 
 ## POSTLAB-FOLLOWUP-001 — Contrôle obligatoire par jalon (27/11/2026)
 [Procédure normative](POSTLAB-FOLLOWUP-001.md), [registre de suivi](../governance/postlab_followup_v1.json), [règles de reprise](../AGENTS.md). Les 297 lignes sont conservées et examinées avant/après chaque jalon; sélection originale, revue scientifique, données et droits, implémentation, calibration, validation sont des obligations de suivi, jamais implicites. Reçu de couverture obligatoire avant clôture, reports motivés et prochaine action; aucune promotion de gate. PRODUCT-FIRST et V3e inchangés. Le contrôle structurel ne remplace pas la qualification empirique.
+
+
+## Complément stratégique du 28/11/2026
+[OPERATING-001](OPERATING-001.md) et [STRATEGY-001](STRATEGY-001.md) intègrent le cycle investigation → résultats autorisés → réseau primaire → valeur professionnelle → capitalisation. [NETWORK-001](NETWORK-001.md) N0 et [COMMERCIAL-001](COMMERCIAL-001.md) B0 préparatoires en parallèle, sans déplacer V3e, promouvoir E-G5/E-G6, ni autoriser collecte réelle ou publication avant gates. Préserver intégralement ARCH-002, RESULT, PROSPECT, UX, BENCH, POSTLAB et limites. Pas d'abonnement, portail, nouvelle architecture ou automatisation avant besoin et preuve ; garder backlog motivé. Aucun résultat commercial ou scientifique nouveau.

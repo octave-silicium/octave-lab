@@ -158,3 +158,7 @@ Les travaux R01/R03 autorisent des mécanismes concurrents, pas le postulat de c
 
 ## POSTLAB-FOLLOWUP-001 — Contrôle obligatoire par jalon (27/11/2026)
 [Procédure normative](POSTLAB-FOLLOWUP-001.md), [registre de suivi](../governance/postlab_followup_v1.json), [règles de reprise](../AGENTS.md). Les 297 lignes sont conservées et examinées avant/après chaque jalon; sélection originale, revue scientifique, données et droits, implémentation, calibration, validation sont des obligations de suivi, jamais implicites. Reçu de couverture obligatoire avant clôture, reports motivés et prochaine action; aucune promotion de gate. PRODUCT-FIRST et V3e inchangés. Le contrôle structurel ne remplace pas la qualification empirique.
+
+
+## Raccord organisationnel du 28/11/2026
+[STRATEGY-001](STRATEGY-001.md) et [OPERATING-001](OPERATING-001.md) : DATA/NETWORK/CORE/OBSERVATORY/INTELLIGENCE/SILICIUM sont fonctions d'exploitation, non couches ou moteurs supplémentaires. Le périmètre initial France ne supprime aucune exigence, référence internationale ni dépendance qualifiée. NETWORK fournit des observations et assertions typées, pas des effets causaux par défaut ; [DATA-ACQUISITION-001](DATA-ACQUISITION-001.md) précise les droits et admissions. Six moteurs, neuf couches, registres, interfaces, gates et règles de preuve inchangés.

@@ -1,0 +1,2090 @@
+{
+  "id": "STRATEGY-INTEGRATION-001",
+  "status": "REVIEWED",
+  "date": "2026-11-28",
+  "reviewer": "Assistant — revue administrative de périmètre, pas revue scientifique indépendante",
+  "scope": "Formalisation stratégique et raccord documentaire, aucune modification de données, équations, méthodes, mécanismes, paramètres ou preuves empiriques. Chaque ligne conservée et hors périmètre matériel de ce jalon.",
+  "baseline_commit": "6afb7183ffddbfac1bdf149935a4035a9ba888ac",
+  "next_milestone": "VERTICAL-001 V3e; N0/B0 préparatoires si indépendants des gates",
+  "dispositions": [
+    {
+      "id": "A1-PH01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A1-PH02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A1-PH03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A1-PH04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A1-PH05",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A1-PH06",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A1-PH07",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A1-MO01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A1-MO02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A1-MO03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A1-MO04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A1-DA01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A1-DA02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A1-DA03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A1-DA04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A1-DA05",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A1-DA06",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A1-DA07",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A1-DA08",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A1-OU01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A1-OU02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A1-OU03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A1-OU04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A1-OU05",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A2-PH01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G2/G3.3/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A2-PH02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G2/G3.3/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A2-PH03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G2/G3.3/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A2-PH04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G2/G3.3/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A2-PH05",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G2/G3.3/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A2-MO01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G2/G3.3/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A2-MO02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G2/G3.3/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A2-MO03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G2/G3.3/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A2-MO04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G2/G3.3/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A2-DA01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G2/G3.3/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A2-DA02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G2/G3.3/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A2-DA03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G2/G3.3/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A2-DA04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G2/G3.3/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A2-DA05",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G2/G3.3/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A2-OU01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G2/G3.3/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A2-OU02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G2/G3.3/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A2-OU03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G2/G3.3/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A3-PH01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A3-PH02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A3-PH03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A3-PH04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A3-PH05",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A3-MO01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A3-MO02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A3-MO03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A3-DA01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A3-DA02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A3-DA03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A3-DA04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A3-DA05",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A3-DA06",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A3-OU01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A3-OU02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A3-OU03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B1-PH01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B1-PH02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B1-PH03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B1-PH04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B1-PH05",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B1-PH06",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B1-MO01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B1-MO02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B1-MO03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B1-MO04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B1-DA01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B1-DA02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B1-DA03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B1-DA04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B1-DA05",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B1-DA06",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B1-DA07",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B1-OU01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B1-OU02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B1-OU03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B1-OU04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B1-OU05",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B2-PH01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B2-PH02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B2-PH03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B2-PH04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B2-PH05",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B2-PH06",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B2-MO01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B2-MO02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B2-MO03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B2-MO04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B2-MO05",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B2-DA01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B2-DA02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B2-DA03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B2-DA04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B2-DA05",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B2-DA06",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B2-OU01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B3-PH01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B3-PH02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B3-PH03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B3-PH04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B3-PH05",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B3-PH06",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B3-MO01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B3-MO02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B3-MO03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B3-MO04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B3-DA01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B3-DA02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B3-DA03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B3-DA04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B3-DA05",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B3-OU01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B3-OU02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B3-OU03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B3-OU04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B4-PH01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B4-PH02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B4-PH03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B4-PH04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B4-MO01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B4-MO02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B4-MO03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B4-MO04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B4-MO05",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B4-DA01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B4-DA02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B4-DA03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B4-DA04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B4-DA05",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B4-DA06",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B4-DA07",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B4-OU01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B4-OU02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B4-OU03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C1-PH01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C1-PH02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C1-PH03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C1-PH04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C1-PH05",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C1-PH06",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C1-MO01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C1-MO02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C1-MO03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C1-MO04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C1-MO05",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C1-DA01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C1-DA02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C1-DA03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C1-DA04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C1-DA05",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C1-DA06",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C1-DA07",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C1-OU01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C1-OU02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C1-OU03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C2-PH01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C2-PH02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C2-PH03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C2-PH04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C2-PH05",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C2-MO01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C2-MO02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C2-MO03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C2-MO04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C2-MO05",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C2-DA01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C2-DA02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C2-DA03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C2-DA04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C2-DA05",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C2-DA06",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C2-OU01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C2-OU02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C2-OU03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C2-OU04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C3-PH01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C3-PH02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C3-PH03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C3-PH04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C3-MO01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C3-MO02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C3-MO03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C3-DA01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C3-DA02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C3-DA03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C3-DA04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C3-DA05",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C3-DA06",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C3-OU01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C3-OU02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C3-OU03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D1-PH01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G5 exploratory conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D1-PH02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G5 exploratory conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D1-PH03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G5 exploratory conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D1-PH04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G5 exploratory conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D1-PH05",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G5 exploratory conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D1-PH06",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G5 exploratory conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D1-PH07",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G5 exploratory conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D1-PH08",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G5 exploratory conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D1-PH09",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G5 exploratory conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D1-MO01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G5 exploratory conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D1-MO02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G5 exploratory conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D1-MO03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G5 exploratory conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D1-DA01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G5 exploratory conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D1-DA02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G5 exploratory conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D1-DA03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G5 exploratory conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D1-DA04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G5 exploratory conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D1-DA05",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G5 exploratory conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D1-OU01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G5 exploratory conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D1-OU02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G5 exploratory conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D1-OU03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G5 exploratory conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D1-OU04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G5 exploratory conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D1-OU05",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G5 exploratory conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D2-PH01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 exploratory conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D2-PH02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 exploratory conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D2-PH03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 exploratory conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D2-PH04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 exploratory conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D2-PH05",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 exploratory conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D2-PH06",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 exploratory conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D2-PH07",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature phenomenon; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 exploratory conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D2-MO01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 exploratory conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D2-MO02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 exploratory conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D2-MO03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature model; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 exploratory conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D2-DA01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 exploratory conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D2-DA02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 exploratory conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D2-DA03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 exploratory conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D2-DA04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 exploratory conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D2-DA05",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature data; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 exploratory conservée.",
+      "next_action": "dataset_identification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D2-OU01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 exploratory conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D2-OU02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 exploratory conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D2-OU03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 exploratory conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D2-OU04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 exploratory conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D2-OU05",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature output; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 exploratory conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "PB01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature bibliography; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5, G2/G3.3/G5 conservée.",
+      "next_action": "original_publication_selection; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "PB02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature bibliography; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5, G3.3/G5 conservée.",
+      "next_action": "original_publication_selection; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "PB03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature bibliography; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5, G4/G5 conservée.",
+      "next_action": "original_publication_selection; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "PB04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature bibliography; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_publication_selection; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "PB05",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature bibliography; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5, G3.4/G4/G5 conservée.",
+      "next_action": "original_publication_selection; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "PB06",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature bibliography; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_publication_selection; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "PB07",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature bibliography; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_publication_selection; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "PB08",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature bibliography; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_publication_selection; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "PB09",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature bibliography; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G2/G3.3/G5, G3.4/G4/G5 conservée.",
+      "next_action": "original_publication_selection; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "PB10",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature bibliography; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G2/G3.3/G5, G3.4/G4/G5 conservée.",
+      "next_action": "original_publication_selection; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "PB11",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature bibliography; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5, G5 exploratory conservée.",
+      "next_action": "original_publication_selection; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "PB12",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature bibliography; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5, G4/G5 conservée.",
+      "next_action": "original_publication_selection; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "PB13",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature bibliography; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G5 exploratory conservée.",
+      "next_action": "original_publication_selection; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "PB14",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature bibliography; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5, G4/G5 conservée.",
+      "next_action": "original_publication_selection; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "PB15",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature bibliography; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5, G4/G5 exploratory conservée.",
+      "next_action": "original_publication_selection; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "PB16",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature bibliography; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "original_publication_selection; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "PB17",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature bibliography; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G5 exploratory conservée.",
+      "next_action": "original_publication_selection; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "PB18",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature bibliography; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G5 exploratory conservée.",
+      "next_action": "original_publication_selection; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "PB19",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature bibliography; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G5 exploratory conservée.",
+      "next_action": "original_publication_selection; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "PB20",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature bibliography; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5, G3.4/G4/G5 conservée.",
+      "next_action": "original_publication_selection; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "PB21",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature bibliography; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5, G3.4/G4/G5 conservée.",
+      "next_action": "original_publication_selection; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "PB22",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature bibliography; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_publication_selection; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "PB23",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature bibliography; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "original_publication_selection; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "PB24",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature bibliography; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 exploratory conservée.",
+      "next_action": "original_publication_selection; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "PB25",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature bibliography; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "original_publication_selection; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "EX01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature example; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5, G2/G3.3/G5, G3.3/G5, G4/G5, G3.4/G4/G5, G5 exploratory, G4/G5 exploratory conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "EX02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature example; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5, G2/G3.3/G5, G3.3/G5, G4/G5, G3.4/G4/G5, G5 exploratory, G4/G5 exploratory conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "EX03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature example; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5, G2/G3.3/G5, G3.3/G5, G4/G5, G3.4/G4/G5, G5 exploratory, G4/G5 exploratory conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "EX04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature example; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5, G2/G3.3/G5, G3.3/G5, G4/G5, G3.4/G4/G5, G5 exploratory, G4/G5 exploratory conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "EX05",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature example; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5, G2/G3.3/G5, G3.3/G5, G4/G5, G3.4/G4/G5, G5 exploratory, G4/G5 exploratory conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A1",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature axis; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5 conservée.",
+      "next_action": "coverage_review; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A2",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature axis; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G2/G3.3/G5 conservée.",
+      "next_action": "coverage_review; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "A3",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature axis; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "coverage_review; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B1",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature axis; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "coverage_review; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B2",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature axis; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "coverage_review; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B3",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature axis; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "coverage_review; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "B4",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature axis; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "coverage_review; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C1",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature axis; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "coverage_review; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C2",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature axis; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "coverage_review; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "C3",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature axis; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5 conservée.",
+      "next_action": "coverage_review; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D1",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature axis; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G5 exploratory conservée.",
+      "next_action": "coverage_review; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "D2",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature axis; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 exploratory conservée.",
+      "next_action": "coverage_review; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "HA01",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature objection; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "HA02",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature objection; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5, G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "HA03",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature objection; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5, G3.4/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "HA04",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature objection; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "HA05",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature objection; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G5 exploratory conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "HA06",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature objection; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5, G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "HA07",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature objection; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5, G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "HA08",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature objection; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "HA09",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature objection; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.4/G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "HA10",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature objection; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "HA11",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature objection; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G2/G3.3/G5, G3.4/G4/G5, G4/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "HA12",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature objection; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G5 exploratory conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "HA13",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature objection; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G5, G2/G3.3/G5 conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "HA14",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature objection; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G4/G5 exploratory conservée.",
+      "next_action": "original_references; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "S1",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature scenario; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5, G2/G3.3/G5, G3.3/G5, G4/G5, G3.4/G4/G5, G5 exploratory, G4/G5 exploratory conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "S2",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature scenario; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5, G2/G3.3/G5, G3.3/G5, G4/G5, G3.4/G4/G5, G5 exploratory, G4/G5 exploratory conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "S3",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature scenario; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5, G2/G3.3/G5, G3.3/G5, G4/G5, G3.4/G4/G5, G5 exploratory, G4/G5 exploratory conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "S4",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature scenario; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5, G2/G3.3/G5, G3.3/G5, G4/G5, G3.4/G4/G5, G5 exploratory, G4/G5 exploratory conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "S5",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature scenario; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5, G2/G3.3/G5, G3.3/G5, G4/G5, G3.4/G4/G5, G5 exploratory, G4/G5 exploratory conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    },
+    {
+      "id": "S6",
+      "status": "OUT_OF_SCOPE",
+      "reason": "Nature scenario; la formalisation documentaire ne traite pas la qualification scientifique de cette entrée. Cible existante G3.3/G4/G5, G2/G3.3/G5, G3.3/G5, G4/G5, G3.4/G4/G5, G5 exploratory, G4/G5 exploratory conservée.",
+      "next_action": "specification; réexaminer la matérialité avant V3e et au déclencheur NEXT_MILESTONE_PRE_AND_POST; V3e relevance only; execute when material or scheduled in target stage",
+      "evidence": []
+    }
+  ]
+}

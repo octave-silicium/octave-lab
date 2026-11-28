@@ -25,3 +25,7 @@ Par source : URL officielle, version/dernière publication, fréquence attendue 
 
 ## Implémentation v0.1
 [Data Observatory](DATA-OBSERVATORY.md) : registre 14 entrées, workflow quotidien configuré et recette réelle réalisée ; supervision de métadonnées, pas de promotion automatique. Insee échec réseau initial ; correction et recette complémentaire. Les rapports et résultats des runs sont référencés dans la documentation.
+
+
+## Complément 28/11/2026
+[DATA-ACQUISITION-001](DATA-ACQUISITION-001.md) complète les règles de découverte, acquisition et contrôle d'usage. Révision des droits avant collecte/promotion/sortie, pas de contournement, aucun nouveau candidat admis automatiquement. Conserver historisation et provenance. Ne pas confondre surveillance de métadonnées et droit de conservation ou diffusion.

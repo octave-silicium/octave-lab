@@ -10,3 +10,7 @@ Coffre privé versionné et historique durable, contrôle des révisions, file d
 
 ## v0.3
 [Maintenance et API privée](DATA-MAINTENANCE.md) : sauvegarde/restauration, orchestration locale et comparateurs natifs vérifiés ; planificateur de production non déployé.
+
+
+## Extension de portée 28/11/2026
+[DATA-ACQUISITION-001](DATA-ACQUISITION-001.md) ajoute découverte par publications, analyse des asymétries, six voies d'acquisition, droits par opération et sortie, stratégies de partenariats et revue des achats. Le catalogue DATA-002, les pipelines, versions et règles de promotion restent canoniques ; aucune source nouvellement admise, aucun scraping ni workflow supplémentaire activé. Priorité aux besoins de VERTICAL-001 V3e et aux droits.

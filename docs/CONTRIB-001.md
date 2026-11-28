@@ -8,3 +8,7 @@ Objectif : enrichir la description des activités réelles sans transformer un t
 5. Contradictions, cas atypiques, variantes et inconnues.
 ## Traitement
 Admission structurée par pipeline/economic_contributions.py : PENDING_INDEPENDENT_REVIEW exclusivement. Une empreinte déclarée n'est pas une preuve contrôlée, ni un contributeur authentifié. Revue métier indépendante, vérification des sources et méthode, conflit d'intérêts, représentativité, qualité, droits, anonymisation, correction et versionnement requis avant promotion dans G2/G3. Conserver désaccords et scope distincts; pas de moyenne de témoignages incompatibles. Aucun résultat public ou extrapolation automatique. Workflow de revue, authentification, stockage et interface à réaliser. 
+
+
+## Extension validée 28/11/2026
+[NETWORK-001](NETWORK-001.md) étend la collecte interne à un programme participatif progressif SIGNALS/PANEL/DATA/RESEARCH/FORECAST ; pas de collecte publique activée. N0 sécurité, droits, confidentialité, revue et stockage avant N1. Le contrat interne et PENDING_INDEPENDENT_REVIEW demeurent obligatoires, notamment pour processus et mesures. Aucun changement de code ni de statut de preuve.
