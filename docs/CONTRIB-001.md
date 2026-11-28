@@ -12,3 +12,7 @@ Admission structurée par pipeline/economic_contributions.py : PENDING_INDEPENDE
 
 ## Extension validée 28/11/2026
 [NETWORK-001](NETWORK-001.md) étend la collecte interne à un programme participatif progressif SIGNALS/PANEL/DATA/RESEARCH/FORECAST ; pas de collecte publique activée. N0 sécurité, droits, confidentialité, revue et stockage avant N1. Le contrat interne et PENDING_INDEPENDENT_REVIEW demeurent obligatoires, notamment pour processus et mesures. Aucun changement de code ni de statut de preuve.
+
+
+## Complément réciprocité — 28/11/2026
+NETWORK-001 v1.1 : observation de l'absence de changement avec contexte et période distincte de l'inconnu et de la non-réponse ; suivi de statut, demande de complément/correction, restitution qualifiée et reconnaissance consentie. Préserver PENDING_INDEPENDENT_REVIEW et limites de représentativité/causalité ; aucune publication automatique, identité publique ou prime au volume. Collecte réelle uniquement après N0.
